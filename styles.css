@@ -78,33 +78,54 @@ h1, h2, h3, h4 {
     color: var(--white);
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-banner.jpg') center/cover no-repeat;
-    color: var(--white);
-    text-align: center;
-    padding: 100px 20px;
+/* Auto-Rotating Hero Slider */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    max-height: 550px;
+    overflow: hidden;
+    background-color: #000;
 }
 
-.hero .sub-title {
-    letter-spacing: 4px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 600;
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
-.hero h2 {
-    font-size: 2.8rem;
-    margin: 15px 0;
-    font-weight: 600;
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
-.hero p {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-    font-weight: 300;
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-dots .dot.active {
+    background-color: var(--accent);
 }
 
 /* Container & Grid */
@@ -201,6 +222,111 @@ h1, h2, h3, h4 {
 
 .add-to-cart-btn:hover {
     background: var(--accent);
+}
+
+/* Comprehensive Footer */
+.site-footer {
+    background-color: #0b132b;
+    color: #e0e0e0;
+    padding: 60px 5% 20px;
+    margin-top: 80px;
+    border-top: 3px solid var(--accent);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-col h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+.footer-logo {
+    max-width: 140px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    border-radius: 50%;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: var(--accent);
+    margin-top: 4px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #909090;
 }
 
 /* Cart Drawer */
