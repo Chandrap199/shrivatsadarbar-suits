@@ -10,56 +10,175 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .page-header {
+        .page-header-container {
             text-align: center;
-            padding: 60px 20px 20px;
+            padding: 50px 20px 20px;
+            background-color: var(--bg-cream);
         }
-        .page-header h2 {
+        .page-header-container h2 {
             font-size: 2.5rem;
-            letter-spacing: 1px;
+            color: #2c1810;
+            font-family: 'Playfair Display', serif;
             margin-bottom: 10px;
         }
-        .faq-container {
-            max-width: 800px;
+        .page-header-container p {
+            color: #666;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        
+        /* Main Grid Layout matching Reference Design */
+        .faq-layout-grid {
+            max-width: 1200px;
             margin: 40px auto 80px;
             padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
         }
-        .faq-item {
-            background: var(--white);
-            border: 1px solid #eaeaea;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            overflow: hidden;
-            transition: var(--transition);
+
+        @media(max-width: 900px) {
+            .faq-layout-grid {
+                grid-template-columns: 1fr;
+            }
         }
-        .faq-question {
-            padding: 20px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
+
+        /* Left Content Column */
+        .faq-main-content {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .faq-card-item {
+            position: relative;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .faq-card-item span.faq-number {
+            font-size: 0.8rem;
+            color: #b8860b;
+            font-weight: 600;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .faq-card-item h3 {
+            font-size: 1.3rem;
+            color: #2c1810;
             font-family: 'Playfair Display', serif;
+            margin-bottom: 12px;
         }
-        .faq-question i {
-            color: var(--accent);
-            transition: transform 0.3s ease;
-        }
-        .faq-answer {
-            padding: 0 20px 20px;
-            color: var(--text-muted);
+
+        .faq-card-item p {
+            color: #555;
             font-size: 0.95rem;
             line-height: 1.7;
-            display: none;
-            border-top: 1px solid #f4f4f4;
         }
-        .faq-item.active .faq-answer {
-            display: block;
-            padding-top: 15px;
+
+        /* Right Sticky Sidebar Cards matching Reference */
+        .faq-sidebar {
+            position: sticky;
+            top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
+
+        .sidebar-glance-card {
+            background: var(--white);
+            border: 1px solid #f0e6d2;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .sidebar-glance-card h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #b8860b;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .sidebar-glance-card h3 {
+            font-size: 1.2rem;
+            color: #2c1810;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-glance-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sidebar-glance-card ul li {
+            font-size: 0.9rem;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.4;
+        }
+
+        .sidebar-glance-card ul li i {
+            color: #2e7d32;
+            margin-top: 3px;
+        }
+
+        /* Help Box Card (Dark Maroon matching reference) */
+        .sidebar-help-card {
+            background: #58111a;
+            color: var(--white);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-help-card h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #f3c68f;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .sidebar-help-card h3 {
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 12px;
+        }
+
+        .sidebar-help-card p {
+            font-size: 0.9rem;
+            color: #f0d5d8;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .help-action-btn {
+            display: inline-block;
+            background: var(--white);
+            color: #58111a;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85srem;
+            transition: var(--transition);
+        }
+
+        .help-action-btn:hover {
+            background: #fbf9f5;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -92,86 +211,88 @@
     </header>
 
     <!-- Page Header -->
-    <div class="page-header">
+    <div class="page-header-container">
         <h2>Frequently Asked Questions</h2>
         <div class="divider"></div>
-        <p class="section-subtitle">Everything you need to know about our handcrafted luxury collection</p>
+        <p>Everything you need to know about our handcrafted luxury collection</p>
     </div>
 
-    <!-- FAQ Accordion Section -->
-    <main class="faq-container">
+    <!-- Main Content Layout Grid -->
+    <div class="faq-layout-grid">
         
-        <div class="faq-item active">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <span>1. Are your Banarasi sarees and readymade suits authentic and handcrafted?</span>
-                <i class="fa-solid fa-chevron-down"></i>
+        <!-- Left Column: Numbered FAQ Entries -->
+        <div class="faq-main-content">
+            
+            <div class="faq-card-item">
+                <span class="faq-number">01</span>
+                <h3>Are your Banarasi sarees and readymade suits authentic and handcrafted?</h3>
+                <p>Yes. Every creation at Shri Vatsa Darbar is authentically crafted by master artisans in Varanasi, utilizing genuine zari, pure katan silk, and premium georgette and chiffon fabrics.</p>
             </div>
-            <div class="faq-answer">
-                Yes. Every creation at Shri Vatsa Darbar is authentically crafted by master artisans in Varanasi, utilizing genuine zari, pure katan silk, and premium georgette and chiffon fabrics.
+
+            <div class="faq-card-item">
+                <span class="faq-number">02</span>
+                <h3>What sizing options are available for your readymade suits?</h3>
+                <p>Our designer suits are precision-tailored in readymade standard sizes ranging from Small (S) to Double XL (XXL). Each product page features a detailed size guide to ensure a flawless fit.</p>
             </div>
+
+            <div class="faq-card-item">
+                <span class="faq-number">03</span>
+                <h3>Do you provide custom tailoring or made-to-order services?</h3>
+                <p>We specialize exclusively in ready-to-wear designer suits and handcrafted sarees to maintain our rigorous luxury finish. Custom tailoring services are not offered at this time.</p>
+            </div>
+
+            <div class="faq-card-item">
+                <span class="faq-number">04</span>
+                <h3>How should I care for my Banarasi silk sarees and delicate georgette/chiffon suits?</h3>
+                <p>Due to the delicate nature of pure silk, zari work, and fine chiffon/georgette weaves, we strictly recommend dry clean only. Store your pieces wrapped in muslin cloth in a dry, cool place away from direct sunlight.</p>
+            </div>
+
+            <div class="faq-card-item">
+                <span class="faq-number">05</span>
+                <h3>What is the delivery timeline for orders across India?</h3>
+                <p>Standard dispatch from our Varanasi atelier takes 2–4 business days, and delivery across India typically takes 4–7 business days depending on your destination.</p>
+            </div>
+
+            <div class="faq-card-item">
+                <span class="faq-number">06</span>
+                <h3>How does the WhatsApp Inquiry and Checkout process work?</h3>
+                <p>You can browse our masterclass collections, add your preferred items to your Inquiry Cart, and click "Proceed Inquiry via WhatsApp". This instantly shares your exact item selection with our concierge team for immediate order confirmation and shipping updates.</p>
+            </div>
+
+            <div class="faq-card-item">
+                <span class="faq-number">07</span>
+                <h3>Is an unboxing video required in case of a return or transit issue?</h3>
+                <p>Yes. To ensure a transparent resolution for any rare transit damages or incorrect items, we require a continuous, unedited unboxing video starting from the sealed outer package. Please review our Return & Refund policy for full instructions.</p>
+            </div>
+
         </div>
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <span>2. What sizing options are available for your readymade suits?</span>
-                <i class="fa-solid fa-chevron-down"></i>
+        <!-- Right Column: Sticky Sidebar Cards (Matching Reference Layout) -->
+        <aside class="faq-sidebar">
+            
+            <!-- At a Glance Card -->
+            <div class="sidebar-glance-card">
+                <h4>Shopping at a Glance</h4>
+                <h3>Transparent & Secure Care</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Pure Katan Silk & Authentic Banarasi Weaves</li>
+                    <li><i class="fa-solid fa-check"></i> Readymade Sizes from Small to Double XL</li>
+                    <li><i class="fa-solid fa-check"></i> Complimentary Shipping on Prepaid & WhatsApp Orders</li>
+                    <li><i class="fa-solid fa-check"></i> Direct Concierge Assistance via WhatsApp</li>
+                </ul>
             </div>
-            <div class="faq-answer">
-                Our designer suits are precision-tailored in readymade standard sizes ranging from Small (S) to Double XL (XXL). Each product page features a detailed size guide to ensure a flawless fit.
-            </div>
-        </div>
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <span>3. Do you provide custom tailoring or made-to-order services?</span>
-                <i class="fa-solid fa-chevron-down"></i>
+            <!-- Help Box Card -->
+            <div class="sidebar-help-card">
+                <h4>Need Help?</h4>
+                <h3>We're Here to Help</h3>
+                <p>Have a specific question about an outfit, sizing, or delivery? Our styling concierge team is ready to assist you.</p>
+                <a href="contact.html" class="help-action-btn">Contact Concierge</a>
             </div>
-            <div class="faq-answer">
-                We specialize exclusively in ready-to-wear designer suits and handcrafted sarees to maintain our rigorous luxury finish. Custom tailoring services are not offered at this time.
-            </div>
-        </div>
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <span>4. How should I care for my Banarasi silk sarees and delicate georgette/chiffon suits?</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                Due to the delicate nature of pure silk, zari work, and fine chiffon/georgette weaves, we strictly recommend dry clean only. Store your pieces wrapped in muslin cloth in a dry, cool place away from direct sunlight.
-            </div>
-        </div>
+        </aside>
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <span>5. What is the delivery timeline for orders across India?</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                Standard dispatch from our Varanasi atelier takes 2–4 business days, and delivery across India typically takes 4–7 business days depending on your destination.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <span>6. How does the WhatsApp Inquiry and Checkout process work?</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                You can browse our masterclass collections, add your preferred items to your Inquiry Cart, and click "Proceed Inquiry via WhatsApp". This instantly shares your exact item selection with our concierge team for immediate order confirmation and shipping updates.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <span>7. Is an unboxing video required in case of a return or transit issue?</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                Yes. To ensure a transparent resolution for any rare transit damages or incorrect items, we require a continuous, unedited unboxing video starting from the sealed outer package. Please review our Return & Refund policy for full instructions.
-            </div>
-        </div>
-
-    </main>
+    </div>
 
     <!-- Professional Footer -->
     <footer class="site-footer">
@@ -264,23 +385,6 @@
     </div>
     <div class="overlay" id="overlay" onclick="toggleCart()"></div>
 
-    <!-- FAQ Accordion Script -->
-    <script>
-        function toggleFaq(element) {
-            const item = element.parentElement;
-            const isActive = item.classList.contains('active');
-            
-            // Close all items
-            document.querySelectorAll('.faq-item').forEach(faq => {
-                faq.classList.remove('active');
-            });
-
-            // Open clicked item if it wasn't already open
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        }
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
