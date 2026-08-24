@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shri Vatsa Darbar | Haute Couture Suits & Sarees</title>
+    <title>Shri Vatsa Darbar | Exquisite Suits & Sarees</title>
     <!-- Google Fonts for Editorial Luxury Look -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -23,58 +23,66 @@
             <h1>SHRI VATSA DARBAR</h1>
             <span>Exquisite Suits & Sarees</span>
         </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="collections/collections.html">Collections</a>
+            <a href="about.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
         <div class="header-actions">
-            <button class="cart-btn" onclick="toggleCart()">
+            <button class="cart-btn" onclick="toggleCart()" aria-label="Inquiry Cart">
                 <i class="fa-solid fa-bag-shopping"></i>
                 <span id="cart-count">0</span>
             </button>
         </div>
     </header>
 
-    <!-- Auto-Rotating Hero Banner -->
+    <!-- Cinematic Auto-Rotating Hero Slider -->
     <section class="hero-slider">
         <div class="slides-container">
-            <div class="slide active"><img src="images/banners/hero-01.webp" alt="ShriVatsaDarbar Banner 1"></div>
-            <div class="slide"><img src="images/banners/hero-02.webp" alt="ShriVatsaDarbar Banner 2"></div>
-            <div class="slide"><img src="images/banners/hero-03.webp" alt="ShriVatsaDarbar Banner 3"></div>
-            <div class="slide"><img src="images/banners/hero-04.webp" alt="ShriVatsaDarbar Banner 4"></div>
-            <div class="slide"><img src="images/banners/hero-05.webp" alt="ShriVatsaDarbar Banner 5"></div>
+            <div class="slide active"><img src="images/banners/hero-01.webp" alt="ShriVatsaDarbar Heritage Saree 1"></div>
+            <div class="slide"><img src="images/banners/hero-02.webp" alt="ShriVatsaDarbar Elite Suit 2"></div>
+            <div class="slide"><img src="images/banners/hero-03.webp" alt="ShriVatsaDarbar Banarasi Collection 3"></div>
+            <div class="slide"><img src="images/banners/hero-04.webp" alt="ShriVatsaDarbar Royal Weaves 4"></div>
+            <div class="slide"><img src="images/banners/hero-05.webp" alt="ShriVatsaDarbar Bridal Edition 5"></div>
         </div>
         
-        <!-- Navigation Dots -->
+        <!-- Interactive Navigation Dots -->
         <div class="slider-dots">
-            <span class="dot active" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot active" onclick="currentSlide(0)" title="Slide 1"></span>
+            <span class="dot" onclick="currentSlide(1)" title="Slide 2"></span>
+            <span class="dot" onclick="currentSlide(2)" title="Slide 3"></span>
+            <span class="dot" onclick="currentSlide(3)" title="Slide 4"></span>
+            <span class="dot" onclick="currentSlide(4)" title="Slide 5"></span>
         </div>
     </section>
 
-    <!-- Product Grid Section -->
+    <!-- Most Loved / Best Sellers Section -->
     <main class="container">
         <div class="section-title">
-            <h3>Featured Collection</h3>
+            <h3>Most Loved Best Sellers</h3>
             <div class="divider"></div>
+            <p class="section-subtitle">Handcrafted masterpieces from the loom of Varanasi</p>
         </div>
 
         <div class="product-grid" id="product-grid">
-            <!-- Products will be dynamically loaded via script.js -->
+            <!-- Dynamically populated via script.js -->
         </div>
     </main>
 
-    <!-- Comprehensive Footer -->
+    <!-- Professional Footer -->
     <footer class="site-footer">
         <div class="footer-container">
             
             <!-- Column 1: Brand Info -->
             <div class="footer-col brand-info">
                 <img src="images/logos/logo-white.webp" alt="ShriVatsaDarbar Logo" class="footer-logo">
-                <p>Serving devotees across India with handcrafted Laddu Gopal Shringar made with devotion, love and premium craftsmanship from Varanasi.</p>
+                <p>Curating elite Banarasi katan silk sarees, georgette anarkalis, and heirloom ethnic wear with heritage craftsmanship from Varanasi.</p>
                 <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -82,35 +90,36 @@
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/collections">Collections</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/faq">FAQ</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections/collections.html">Collections</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
             <!-- Column 3: Collections -->
             <div class="footer-col">
-                <h3>Collections</h3>
+                <h3>Masterpieces</h3>
                 <ul>
-                    <li><a href="/collections/premium-poshak">Premium Poshak</a></li>
-                    <li><a href="/collections/royal-mukut">Royal Mukut</a></li>
-                    <li><a href="/collections/necklace">Necklace Collection</a></li>
-                    <li><a href="/collections/earrings">Earrings Collection</a></li>
-                    <li><a href="/collections/accessories">Accessories</a></li>
+                    <li><a href="collections/collections.html">Banarasi Katan Silk</a></li>
+                    <li><a href="collections/collections.html">Georgette Anarkali</a></li>
+                    <li><a href="collections/collections.html">Organza Tissue Sarees</a></li>
+                    <li><a href="collections/collections.html">Palazzo Suits</a></li>
+                    <li><a href="collections/collections.html">Heirloom Edit</a></li>
                 </ul>
             </div>
 
-            <!-- Column 4: Policies (All Visible) -->
+            <!-- Column 4: Policies (Linked to your explicit directory structure) -->
             <div class="footer-col">
                 <h3>Policies</h3>
                 <ul>
-                    <li><a href="/policies/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="/policies/shipping-policy">Shipping Policy</a></li>
-                    <li><a href="/policies/return-refund">Return & Refund</a></li>
-                    <li><a href="/policies/cancellation-policy">Cancellation Policy</a></li>
-                    <li><a href="/policies/terms-conditions">Terms & Conditions</a></li>
+                    <li><a href="policies/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="policies/shipping-policy.html">Shipping Policy</a></li>
+                    <li><a href="policies/return-refund.html">Return & Refund</a></li>
+                    <li><a href="policies/cancellation-policy.html">Cancellation Policy</a></li>
+                    <li><a href="policies/terms-conditions.html">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -128,15 +137,15 @@
         <!-- Bottom Bar -->
         <div class="footer-bottom">
             <p>&copy; 2026 <strong>ShriVatsaDarbar</strong>. All Rights Reserved.</p>
-            <p>Made with ❤️ and devotion in Varanasi.</p>
+            <p>Crafted with devotion and luxury in Varanasi.</p>
         </div>
     </footer>
 
-    <!-- Slide-out Cart Drawer -->
+    <!-- Slide-out Inquiry Cart Drawer -->
     <div class="cart-drawer" id="cart-drawer">
         <div class="cart-header">
             <h3>Your Selection</h3>
-            <button onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+            <button onclick="toggleCart()" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="cart-items" id="cart-items">
             <!-- Cart items populated dynamically -->
@@ -147,13 +156,13 @@
                 <span id="cart-total-price">₹0</span>
             </div>
             <button class="whatsapp-checkout-btn" onclick="sendToWhatsApp()">
-                <i class="fa-brands fa-whatsapp"></i> Send Inquiry via WhatsApp
+                <i class="fa-brands fa-whatsapp"></i> Proceed Inquiry via WhatsApp
             </button>
         </div>
     </div>
     <div class="overlay" id="overlay" onclick="toggleCart()"></div>
 
-    <!-- Script for Cart and Slider Auto-Rotation Logic -->
+    <!-- Hero Auto-Rotation Controller Script -->
     <script>
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide');
@@ -188,7 +197,7 @@
         }
 
         function startTimer() {
-            slideInterval = setInterval(nextSlide, 3000); // changes image every 3 seconds
+            slideInterval = setInterval(nextSlide, 3000); // 3-second auto rotation
         }
 
         function resetTimer() {
