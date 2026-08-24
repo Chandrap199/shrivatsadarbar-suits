@@ -1,1 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Shri Vatsa Darbar</title>
+    <!-- Google Fonts for Editorial Luxury Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 20px;
+        }
+        .page-header h2 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+        }
+        .faq-item {
+            background: var(--white);
+            border: 1px solid #eaeaea;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .faq-question {
+            padding: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+        }
+        .faq-question i {
+            color: var(--accent);
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            display: none;
+            border-top: 1px solid #f4f4f4;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+            padding-top: 15px;
+        }
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Complimentary Shipping on All Prepaid & WhatsApp Orders Across India ✨
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="logo">
+            <h1>SHRI VATSA DARBAR</h1>
+            <span>Exquisite Suits & Sarees</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="collections/collections.html">Collections</a>
+            <a href="about.html">About Us</a>
+            <a href="faq.html" class="active">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button class="cart-btn" onclick="toggleCart()" aria-label="Inquiry Cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h2>Frequently Asked Questions</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Everything you need to know about our handcrafted luxury collection</p>
+    </div>
+
+    <!-- FAQ Accordion Section -->
+    <main class="faq-container">
+        
+        <div class="faq-item active">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>1. Are your Banarasi sarees and readymade suits authentic and handcrafted?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Yes. Every creation at Shri Vatsa Darbar is authentically crafted by master artisans in Varanasi, utilizing genuine zari, pure katan silk, and premium georgette and chiffon fabrics.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>2. What sizing options are available for your readymade suits?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Our designer suits are precision-tailored in readymade standard sizes ranging from Small (S) to Double XL (XXL). Each product page features a detailed size guide to ensure a flawless fit.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>3. Do you provide custom tailoring or made-to-order services?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                We specialize exclusively in ready-to-wear designer suits and handcrafted sarees to maintain our rigorous luxury finish. Custom tailoring services are not offered at this time.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>4. How should I care for my Banarasi silk sarees and delicate georgette/chiffon suits?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Due to the delicate nature of pure silk, zari work, and fine chiffon/georgette weaves, we strictly recommend dry clean only. Store your pieces wrapped in muslin cloth in a dry, cool place away from direct sunlight.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>5. What is the delivery timeline for orders across India?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Standard dispatch from our Varanasi atelier takes 2–4 business days, and delivery across India typically takes 4–7 business days depending on your destination.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>6. How does the WhatsApp Inquiry and Checkout process work?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                You can browse our masterclass collections, add your preferred items to your Inquiry Cart, and click "Proceed Inquiry via WhatsApp". This instantly shares your exact item selection with our concierge team for immediate order confirmation and shipping updates.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>7. Is an unboxing video required in case of a return or transit issue?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Yes. To ensure a transparent resolution for any rare transit damages or incorrect items, we require a continuous, unedited unboxing video starting from the sealed outer package. Please review our Return & Refund policy for full instructions.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col brand-info">
+                <img src="images/logos/logo-white.webp" alt="ShriVatsaDarbar Logo" class="footer-logo">
+                <p>Curating elite Banarasi katan silk sarees, georgette anarkalis, and heirloom ethnic wear with heritage craftsmanship from Varanasi.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections/collections.html">Collections</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Collections -->
+            <div class="footer-col">
+                <h3>Masterpieces</h3>
+                <ul>
+                    <li><a href="collections/collections.html">Banarasi Katan Silk</a></li>
+                    <li><a href="collections/collections.html">Georgette Anarkali</a></li>
+                    <li><a href="collections/collections.html">Organza Tissue Sarees</a></li>
+                    <li><a href="collections/collections.html">Palazzo Suits</a></li>
+                    <li><a href="collections/collections.html">Heirloom Edit</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Policies -->
+            <div class="footer-col">
+                <h3>Policies</h3>
+                <ul>
+                    <li><a href="policies/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="policies/shipping-policy.html">Shipping Policy</a></li>
+                    <li><a href="policies/return-refund.html">Return & Refund</a></li>
+                    <li><a href="policies/cancellation-policy.html">Cancellation Policy</a></li>
+                    <li><a href="policies/terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 5: Contact Info -->
+            <div class="footer-col contact-info">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Varanasi, Uttar Pradesh, India</p>
+                <p><i class="fas fa-envelope"></i> shrivatsadarbar@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i> +91 88261 96544</p>
+                <p><i class="fas fa-clock"></i> Support: 10:00 AM – 8:00 PM</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>ShriVatsaDarbar</strong>. All Rights Reserved.</p>
+            <p>Crafted with devotion and luxury in Varanasi.</p>
+        </div>
+    </footer>
+
+    <!-- Slide-out Inquiry Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Selection</h3>
+            <button onclick="toggleCart()" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items populated dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Estimated Total:</span>
+                <span id="cart-total-price">₹0</span>
+            </div>
+            <button class="whatsapp-checkout-btn" onclick="sendToWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i> Proceed Inquiry via WhatsApp
+            </button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+            });
+
+            // Open clicked item if it wasn't already open
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
