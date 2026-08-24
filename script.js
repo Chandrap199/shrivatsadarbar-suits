@@ -1,4 +1,4 @@
-// Sample Luxury Product Catalog (Updated for ShriVatsaDarbar)
+// Elite Saree & Suit Collection for Shri Vatsa Darbar
 const products = [
     {
         id: 1,
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         grid.innerHTML = products.map(p => `
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="${p.image}" alt="${p.name}" onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80'">
+                    <img src="${p.image}" alt="${p.name}" onerror="this.src='images/banners/hero-01.webp'">
                 </div>
                 <div class="product-info">
                     <h4>${p.name}</h4>
@@ -89,7 +89,7 @@ function updateCartUI() {
         totalPrice += item.price * item.quantity;
         return `
             <div class="cart-item">
-                <img src="${item.image}" onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=200&q=80'">
+                <img src="${item.image}" onerror="this.src='images/banners/hero-01.webp'">
                 <div class="cart-item-details">
                     <h5>${item.name}</h5>
                     <p>₹${item.price.toLocaleString('en-IN')} x ${item.quantity}</p>
@@ -107,9 +107,7 @@ function sendToWhatsApp() {
         return;
     }
     
-    // Configured with your direct business WhatsApp number
     const phoneNumber = "918892439980";
-    
     let message = "Hello Shri Vatsa Darbar! I would like to place an inquiry/order for the following items:\n\n";
     
     cart.forEach((item, index) => {
