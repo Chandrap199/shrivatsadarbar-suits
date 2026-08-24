@@ -1,28 +1,28 @@
-// Sample Luxury Product Catalog (Replace with your actual suit & saree items)
+// Sample Luxury Product Catalog (Updated for ShriVatsaDarbar)
 const products = [
     {
         id: 1,
         name: "Royal Crimson Banarasi Katan Silk Saree",
         price: 18500,
-        image: "assets/saree-1.jpg"
+        image: "images/banners/hero-01.webp"
     },
     {
         id: 2,
         name: "Ivory Georgette Embroidered Anarkali Suit",
         price: 14200,
-        image: "assets/suit-1.jpg"
+        image: "images/banners/hero-02.webp"
     },
     {
         id: 3,
         name: "Emerald Green Organza Tissue Saree",
         price: 12800,
-        image: "assets/saree-2.jpg"
+        image: "images/banners/hero-03.webp"
     },
     {
         id: 4,
         name: "Pastel Mint Hand-Worked Palazzo Suit",
         price: 16000,
-        image: "assets/suit-2.jpg"
+        image: "images/banners/hero-04.webp"
     }
 ];
 
@@ -31,23 +31,27 @@ let cart = [];
 // Initialize storefront display
 document.addEventListener("DOMContentLoaded", () => {
     const grid = document.getElementById("product-grid");
-    grid.innerHTML = products.map(p => `
-        <div class="product-card">
-            <div class="product-img-wrapper">
-                <img src="${p.image}" alt="${p.name}" onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80'">
+    if (grid) {
+        grid.innerHTML = products.map(p => `
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="${p.image}" alt="${p.name}" onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <div class="product-info">
+                    <h4>${p.name}</h4>
+                    <div class="price">₹${p.price.toLocaleString('en-IN')}</div>
+                    <button class="add-to-cart-btn" onclick="addToCart(${p.id})">Add to Inquiry Cart</button>
+                </div>
             </div>
-            <div class="product-info">
-                <h4>${p.name}</h4>
-                <div class="price">₹${p.price.toLocaleString('en-IN')}</div>
-                <button class="add-to-cart-btn" onclick="addToCart(${p.id})">Add to Inquiry Cart</button>
-            </div>
-        </div>
-    `).join('');
+        `).join('');
+    }
 });
 
 function toggleCart() {
-    document.getElementById("cart-drawer").classList.toggle("open");
-    document.getElementById("overlay").classList.toggle("active");
+    const drawer = document.getElementById("cart-drawer");
+    const overlay = document.getElementById("overlay");
+    if (drawer) drawer.classList.toggle("open");
+    if (overlay) overlay.classList.toggle("active");
 }
 
 function addToCart(productId) {
@@ -70,8 +74,10 @@ function updateCartUI() {
     const totalEl = document.getElementById("cart-total-price");
     
     const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-    countEl.innerText = totalCount;
+    if (countEl) countEl.innerText = totalCount;
     
+    if (!itemsEl || !totalEl) return;
+
     if (cart.length === 0) {
         itemsEl.innerHTML = `<p style="text-align:center; color:#888; margin-top:40px;">Your cart is empty.</p>`;
         totalEl.innerText = `₹0`;
@@ -101,7 +107,7 @@ function sendToWhatsApp() {
         return;
     }
     
-    // Replace with your active business WhatsApp number (with country code, e.g., 918892439980)
+    // Configured with your direct business WhatsApp number
     const phoneNumber = "918892439980";
     
     let message = "Hello Shri Vatsa Darbar! I would like to place an inquiry/order for the following items:\n\n";
