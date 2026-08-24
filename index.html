@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Vatsa Darbar | Haute Couture Suits & Sarees</title>
+    <!-- Google Fonts for Editorial Luxury Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Complimentary Shipping on All Prepaid & WhatsApp Orders Across India ✨
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="logo">
+            <h1>SHRI VATSA DARBAR</h1>
+            <span>Exquisite Suits & Sarees</span>
+        </div>
+        <div class="header-actions">
+            <button class="cart-btn" onclick="toggleCart()">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="sub-title">The Royal Ethnic Edit</span>
+            <h2>Handcrafted Elegance for Every Celebration</h2>
+            <p>Explore our masterclass collection of Banarasi sarees, designer Anarkalis, and heirloom suits.</p>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <main class="container">
+        <div class="section-title">
+            <h3>Featured Collection</h3>
+            <div class="divider"></div>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be dynamically loaded via script.js -->
+        </div>
+    </main>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Selection</h3>
+            <button onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items populated dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Estimated Total:</span>
+                <span id="cart-total-price">₹0</span>
+            </div>
+            <button class="whatsapp-checkout-btn" onclick="sendToWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i> Send Inquiry via WhatsApp
+            </button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
