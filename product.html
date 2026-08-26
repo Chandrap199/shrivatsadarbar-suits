@@ -46,7 +46,9 @@
 </title>
 
 
-<!-- GOOGLE FONTS -->
+<!-- =========================================================
+     GOOGLE FONTS
+========================================================= -->
 
 <link rel="preconnect"
       href="https://fonts.googleapis.com">
@@ -59,13 +61,17 @@
       rel="stylesheet">
 
 
-<!-- FONT AWESOME -->
+<!-- =========================================================
+     FONT AWESOME
+========================================================= -->
 
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-<!-- MAIN CSS -->
+<!-- =========================================================
+     MAIN CSS
+========================================================= -->
 
 <link rel="stylesheet"
       href="styles.css">
@@ -1609,7 +1615,9 @@
             </div>
 
 
-            <!-- PURCHASE -->
+            <!-- =================================================
+                 PURCHASE
+            ================================================== -->
 
             <div class="product-purchase">
 
@@ -1699,7 +1707,9 @@
             </div>
 
 
-            <!-- TRUST -->
+            <!-- =================================================
+                 TRUST
+            ================================================== -->
 
             <div class="product-trust">
 
@@ -2171,275 +2181,914 @@
 
 /* =========================================================
    PRODUCT DATABASE
-=========================================================
 
-   IMPORTANT IMAGE RULE
+   IMPORTANT IMAGE NAMING RULE
 
-   BOTH SAREES AND SUITS USE:
+   SAREES 001–010:
+   The folder uses three digits, but the filename uses
+   TWO digits.
 
-   1. lifestyle
-   2. main product image
-   3. close embroidery
+   Example:
+   images/sarees/saree-001/sarees-01-lifestyle.webp
 
-   NO hero.webp
-   NO detail.webp
-   NO favicon fallback
+   SAREES 011–014:
+   The folder AND filename use THREE digits.
+
+   Example:
+   images/sarees/saree-011/sarees-011-lifestyle.webp
+
+   SUITS 001–014:
+   The folder AND filename use THREE digits.
+
+   Example:
+   images/suits/suit-001/suits-001-lifestyle.webp
+
+   THERE IS NO:
+   - hero.webp
+   - detail.webp
+   - favicon fallback
 ========================================================= */
 
 
-const products = {};
-
-
-/* =========================================================
-   PRODUCT NAMES
-========================================================= */
-
-const sareeNames = {
-
-    "001": "Elegant Saree 001",
-    "002": "Signature Saree 002",
-    "003": "Festive Saree 003",
-    "004": "Premium Saree 004",
-    "005": "Signature Saree 005",
-    "006": "Festive Saree 006",
-    "007": "Royal Saree 007",
-    "008": "Noor Saree",
-    "009": "Aarna Saree",
-    "010": "Sitara Saree",
-    "011": "Riwa Saree",
-    "012": "Aadhya Saree",
-    "013": "Meera Saree",
-    "014": "Ziva Saree"
-
-};
-
-
-const suitNames = {
-
-    "001": "Elegant Suit 001",
-    "002": "Signature Suit 002",
-    "003": "Festive Suit 003",
-    "004": "Bamboo Silk Elegance 004",
-    "005": "Signature Suit 005",
-    "006": "Festive Suit 006",
-    "007": "Royal Suit 007",
-    "008": "Meher Suit",
-    "009": "Zara Suit",
-    "010": "Aayat Suit",
-    "011": "Inaya Suit",
-    "012": "Elara Suit",
-    "013": "Noorvi Suit",
-    "014": "Ruhani Suit"
-
-};
-
-
-/* =========================================================
-   SAREE SUBTITLES
-========================================================= */
-
-const sareeSubtitles = {
-
-    "001":
-        "A timeless piece curated for graceful celebrations and beautiful everyday moments.",
-
-    "002":
-        "A graceful saree selected for timeless elegance, refined detailing and beautiful occasions.",
-
-    "003":
-        "A beautiful festive saree curated for celebrations, gatherings and memorable moments.",
-
-    "004":
-        "An elegant saree thoughtfully selected for sophisticated Indian styling.",
-
-    "005":
-        "A sophisticated saree curated for celebrations and elegant everyday occasions.",
-
-    "006":
-        "A festive expression of elegance curated for beautiful celebrations.",
-
-    "007":
-        "A statement saree curated for timeless sophistication and special occasions.",
-
-    "008":
-        "A beautifully curated saree from the ShriVatsaDarbar collection.",
-
-    "009":
-        "A graceful saree selected for beautiful occasions and timeless style.",
-
-    "010":
-        "An elegant saree curated for celebrations and graceful everyday moments.",
-
-    "011":
-        "A sophisticated saree selected for effortless elegance.",
-
-    "012":
-        "A timeless saree curated for elegant occasions.",
-
-    "013":
-        "A refined saree curated for memorable celebrations.",
-
-    "014":
-        "A beautiful final piece in the ShriVatsaDarbar saree edit."
-
-};
-
-
-/* =========================================================
-   SUIT SUBTITLES
-========================================================= */
-
-const suitSubtitles = {
-
-    "001":
-        "An elegant poly-cotton two-piece suit curated for effortless everyday style.",
-
-    "002":
-        "A refined poly-cotton two-piece suit designed for comfort and timeless elegance.",
-
-    "003":
-        "A comfortable poly-cotton two-piece suit curated for graceful occasions.",
-
-    "004":
-        "A refined bamboo silk three-piece suit with beautiful embroidery detailing.",
-
-    "005":
-        "A graceful suit curated for sophisticated everyday dressing and special occasions.",
-
-    "006":
-        "A beautiful festive suit selected for celebrations and elegant occasions.",
-
-    "007":
-        "A statement suit curated for sophisticated style and special occasions.",
-
-    "008":
-        "A beautifully curated suit from the ShriVatsaDarbar collection.",
-
-    "009":
-        "A graceful suit selected for beautiful occasions and everyday elegance.",
-
-    "010":
-        "An elegant suit curated for celebrations and graceful everyday moments.",
-
-    "011":
-        "A sophisticated suit selected for effortless elegance.",
-
-    "012":
-        "A timeless suit curated for elegant occasions.",
-
-    "013":
-        "A refined suit curated for memorable celebrations.",
-
-    "014":
-        "A beautiful final piece in the ShriVatsaDarbar suit edit."
-
-};
-
-
-/* =========================================================
-   BUILD PRODUCT DATABASE
-========================================================= */
-
-for (let i = 1; i <= 14; i++) {
-
-    const n =
-        String(i).padStart(3, "0");
+const products = {
 
 
     /* =====================================================
-       SAREE
+       SAREE 001
     ===================================================== */
 
-    products["saree-" + n] = {
+    "saree-001": {
 
         category: "Saree",
 
-        title:
-            sareeNames[n],
+        title: "Elegant Saree 001",
 
-        code:
-            "SVD-SAREE-" + n,
+        code: "SVD-SAREE-001",
 
         images: [
 
-            "images/sarees/saree-" +
-            n +
-            "/sarees-" +
-            n +
-            "-lifestyle.webp",
+            "images/sarees/saree-001/sarees-01-lifestyle.webp",
 
-            "images/sarees/saree-" +
-            n +
-            "/sarees-" +
-            n +
-            ".webp",
+            "images/sarees/saree-001/sarees-01.webp",
 
-            "images/sarees/saree-" +
-            n +
-            "/sarees-" +
-            n +
-            "-close-embroidery.webp"
+            "images/sarees/saree-001/sarees-01-close-embroidery.webp"
 
         ],
 
         subtitle:
-            sareeSubtitles[n],
+            "A timeless piece curated for graceful celebrations and beautiful everyday moments.",
 
         collection:
             "ShriVatsa Collection"
 
-    };
+    },
 
 
     /* =====================================================
-       SUIT
+       SAREE 002
     ===================================================== */
 
-    products["suit-" + n] = {
+    "saree-002": {
 
-        category: "Suit",
+        category: "Saree",
 
-        title:
-            suitNames[n],
+        title: "Signature Saree 002",
 
-        code:
-            "SVD-SUIT-" + n,
+        code: "SVD-SAREE-002",
 
         images: [
 
-            "images/suits/suit-" +
-            n +
-            "/suits-" +
-            n +
-            "-lifestyle.webp",
+            "images/sarees/saree-002/sarees-02-lifestyle.webp",
 
-            "images/suits/suit-" +
-            n +
-            "/suits-" +
-            n +
-            ".webp",
+            "images/sarees/saree-002/sarees-02.webp",
 
-            "images/suits/suit-" +
-            n +
-            "/suits-" +
-            n +
-            "-close-embroidery.webp"
+            "images/sarees/saree-002/sarees-02-close-embroidery.webp"
 
         ],
 
         subtitle:
-            suitSubtitles[n],
+            "A graceful saree selected for timeless elegance, refined detailing and beautiful occasions.",
 
         collection:
             "ShriVatsa Collection"
 
-    };
+    },
 
-}
+
+    /* =====================================================
+       SAREE 003
+    ===================================================== */
+
+    "saree-003": {
+
+        category: "Saree",
+
+        title: "Festive Saree 003",
+
+        code: "SVD-SAREE-003",
+
+        images: [
+
+            "images/sarees/saree-003/sarees-03-lifestyle.webp",
+
+            "images/sarees/saree-003/sarees-03.webp",
+
+            "images/sarees/saree-003/sarees-03-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A beautiful festive saree curated for celebrations, gatherings and memorable moments.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 004
+    ===================================================== */
+
+    "saree-004": {
+
+        category: "Saree",
+
+        title: "Premium Saree 004",
+
+        code: "SVD-SAREE-004",
+
+        images: [
+
+            "images/sarees/saree-004/sarees-04-lifestyle.webp",
+
+            "images/sarees/saree-004/sarees-04.webp",
+
+            "images/sarees/saree-004/sarees-04-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "An elegant saree thoughtfully selected for sophisticated Indian styling.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 005
+    ===================================================== */
+
+    "saree-005": {
+
+        category: "Saree",
+
+        title: "Signature Saree 005",
+
+        code: "SVD-SAREE-005",
+
+        images: [
+
+            "images/sarees/saree-005/sarees-05-lifestyle.webp",
+
+            "images/sarees/saree-005/sarees-05.webp",
+
+            "images/sarees/saree-005/sarees-05-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A sophisticated saree curated for celebrations and elegant everyday occasions.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 006
+    ===================================================== */
+
+    "saree-006": {
+
+        category: "Saree",
+
+        title: "Festive Saree 006",
+
+        code: "SVD-SAREE-006",
+
+        images: [
+
+            "images/sarees/saree-006/sarees-06-lifestyle.webp",
+
+            "images/sarees/saree-006/sarees-06.webp",
+
+            "images/sarees/saree-006/sarees-06-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A festive expression of elegance curated for beautiful celebrations.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 007
+    ===================================================== */
+
+    "saree-007": {
+
+        category: "Saree",
+
+        title: "Royal Saree 007",
+
+        code: "SVD-SAREE-007",
+
+        images: [
+
+            "images/sarees/saree-007/sarees-07-lifestyle.webp",
+
+            "images/sarees/saree-007/sarees-07.webp",
+
+            "images/sarees/saree-007/sarees-07-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A statement saree curated for timeless sophistication and special occasions.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 008
+    ===================================================== */
+
+    "saree-008": {
+
+        category: "Saree",
+
+        title: "Noor Saree",
+
+        code: "SVD-SAREE-008",
+
+        images: [
+
+            "images/sarees/saree-008/sarees-08-lifestyle.webp",
+
+            "images/sarees/saree-008/sarees-08.webp",
+
+            "images/sarees/saree-008/sarees-08-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A beautifully curated saree from the ShriVatsaDarbar collection.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 009
+    ===================================================== */
+
+    "saree-009": {
+
+        category: "Saree",
+
+        title: "Aarna Saree",
+
+        code: "SVD-SAREE-009",
+
+        images: [
+
+            "images/sarees/saree-009/sarees-09-lifestyle.webp",
+
+            "images/sarees/saree-009/sarees-09.webp",
+
+            "images/sarees/saree-009/sarees-09-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A graceful saree selected for beautiful occasions and timeless style.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 010
+    ===================================================== */
+
+    "saree-010": {
+
+        category: "Saree",
+
+        title: "Sitara Saree",
+
+        code: "SVD-SAREE-010",
+
+        images: [
+
+            "images/sarees/saree-010/sarees-10-lifestyle.webp",
+
+            "images/sarees/saree-010/sarees-10.webp",
+
+            "images/sarees/saree-010/sarees-10-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "An elegant saree curated for celebrations and graceful everyday moments.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 011
+       THREE-DIGIT FILENAMES
+    ===================================================== */
+
+    "saree-011": {
+
+        category: "Saree",
+
+        title: "Riwa Saree",
+
+        code: "SVD-SAREE-011",
+
+        images: [
+
+            "images/sarees/saree-011/sarees-011-lifestyle.webp",
+
+            "images/sarees/saree-011/sarees-011.webp",
+
+            "images/sarees/saree-011/sarees-011-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A sophisticated saree selected for effortless elegance.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 012
+       THREE-DIGIT FILENAMES
+    ===================================================== */
+
+    "saree-012": {
+
+        category: "Saree",
+
+        title: "Aadhya Saree",
+
+        code: "SVD-SAREE-012",
+
+        images: [
+
+            "images/sarees/saree-012/sarees-012-lifestyle.webp",
+
+            "images/sarees/saree-012/sarees-012.webp",
+
+            "images/sarees/saree-012/sarees-012-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A timeless saree curated for elegant occasions.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 013
+       THREE-DIGIT FILENAMES
+    ===================================================== */
+
+    "saree-013": {
+
+        category: "Saree",
+
+        title: "Meera Saree",
+
+        code: "SVD-SAREE-013",
+
+        images: [
+
+            "images/sarees/saree-013/sarees-013-lifestyle.webp",
+
+            "images/sarees/saree-013/sarees-013.webp",
+
+            "images/sarees/saree-013/sarees-013-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A refined saree curated for memorable celebrations.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SAREE 014
+       THREE-DIGIT FILENAMES
+    ===================================================== */
+
+    "saree-014": {
+
+        category: "Saree",
+
+        title: "Ziva Saree",
+
+        code: "SVD-SAREE-014",
+
+        images: [
+
+            "images/sarees/saree-014/sarees-014-lifestyle.webp",
+
+            "images/sarees/saree-014/sarees-014.webp",
+
+            "images/sarees/saree-014/sarees-014-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A beautiful final piece in the ShriVatsaDarbar saree edit.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 001
+    ===================================================== */
+
+    "suit-001": {
+
+        category: "Suit",
+
+        title: "Elegant Suit 001",
+
+        code: "SVD-SUIT-001",
+
+        images: [
+
+            "images/suits/suit-001/suits-001-lifestyle.webp",
+
+            "images/suits/suit-001/suits-001.webp",
+
+            "images/suits/suit-001/suits-001-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "An elegant poly-cotton two-piece suit curated for effortless everyday style.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 002
+    ===================================================== */
+
+    "suit-002": {
+
+        category: "Suit",
+
+        title: "Signature Suit 002",
+
+        code: "SVD-SUIT-002",
+
+        images: [
+
+            "images/suits/suit-002/suits-002-lifestyle.webp",
+
+            "images/suits/suit-002/suits-002.webp",
+
+            "images/suits/suit-002/suits-002-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A refined poly-cotton two-piece suit designed for comfort and timeless elegance.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 003
+    ===================================================== */
+
+    "suit-003": {
+
+        category: "Suit",
+
+        title: "Festive Suit 003",
+
+        code: "SVD-SUIT-003",
+
+        images: [
+
+            "images/suits/suit-003/suits-003-lifestyle.webp",
+
+            "images/suits/suit-003/suits-003.webp",
+
+            "images/suits/suit-003/suits-003-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A comfortable poly-cotton two-piece suit curated for graceful occasions.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 004
+    ===================================================== */
+
+    "suit-004": {
+
+        category: "Suit",
+
+        title: "Bamboo Silk Elegance 004",
+
+        code: "SVD-SUIT-004",
+
+        images: [
+
+            "images/suits/suit-004/suits-004-lifestyle.webp",
+
+            "images/suits/suit-004/suits-004.webp",
+
+            "images/suits/suit-004/suits-004-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A refined bamboo silk three-piece suit with beautiful embroidery detailing.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 005
+    ===================================================== */
+
+    "suit-005": {
+
+        category: "Suit",
+
+        title: "Signature Suit 005",
+
+        code: "SVD-SUIT-005",
+
+        images: [
+
+            "images/suits/suit-005/suits-005-lifestyle.webp",
+
+            "images/suits/suit-005/suits-005.webp",
+
+            "images/suits/suit-005/suits-005-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A graceful suit curated for sophisticated everyday dressing and special occasions.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 006
+    ===================================================== */
+
+    "suit-006": {
+
+        category: "Suit",
+
+        title: "Festive Suit 006",
+
+        code: "SVD-SUIT-006",
+
+        images: [
+
+            "images/suits/suit-006/suits-006-lifestyle.webp",
+
+            "images/suits/suit-006/suits-006.webp",
+
+            "images/suits/suit-006/suits-006-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A beautiful festive suit selected for celebrations and elegant occasions.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 007
+    ===================================================== */
+
+    "suit-007": {
+
+        category: "Suit",
+
+        title: "Royal Suit 007",
+
+        code: "SVD-SUIT-007",
+
+        images: [
+
+            "images/suits/suit-007/suits-007-lifestyle.webp",
+
+            "images/suits/suit-007/suits-007.webp",
+
+            "images/suits/suit-007/suits-007-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A statement suit curated for sophisticated style and special occasions.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 008
+    ===================================================== */
+
+    "suit-008": {
+
+        category: "Suit",
+
+        title: "Meher Suit",
+
+        code: "SVD-SUIT-008",
+
+        images: [
+
+            "images/suits/suit-008/suits-008-lifestyle.webp",
+
+            "images/suits/suit-008/suits-008.webp",
+
+            "images/suits/suit-008/suits-008-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A beautifully curated suit from the ShriVatsaDarbar collection.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 009
+    ===================================================== */
+
+    "suit-009": {
+
+        category: "Suit",
+
+        title: "Zara Suit",
+
+        code: "SVD-SUIT-009",
+
+        images: [
+
+            "images/suits/suit-009/suits-009-lifestyle.webp",
+
+            "images/suits/suit-009/suits-009.webp",
+
+            "images/suits/suit-009/suits-009-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A graceful suit selected for beautiful occasions and everyday elegance.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 010
+    ===================================================== */
+
+    "suit-010": {
+
+        category: "Suit",
+
+        title: "Aayat Suit",
+
+        code: "SVD-SUIT-010",
+
+        images: [
+
+            "images/suits/suit-010/suits-010-lifestyle.webp",
+
+            "images/suits/suit-010/suits-010.webp",
+
+            "images/suits/suit-010/suits-010-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "An elegant suit curated for celebrations and graceful everyday moments.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 011
+    ===================================================== */
+
+    "suit-011": {
+
+        category: "Suit",
+
+        title: "Inaya Suit",
+
+        code: "SVD-SUIT-011",
+
+        images: [
+
+            "images/suits/suit-011/suits-011-lifestyle.webp",
+
+            "images/suits/suit-011/suits-011.webp",
+
+            "images/suits/suit-011/suits-011-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A sophisticated suit selected for effortless elegance.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 012
+    ===================================================== */
+
+    "suit-012": {
+
+        category: "Suit",
+
+        title: "Elara Suit",
+
+        code: "SVD-SUIT-012",
+
+        images: [
+
+            "images/suits/suit-012/suits-012-lifestyle.webp",
+
+            "images/suits/suit-012/suits-012.webp",
+
+            "images/suits/suit-012/suits-012-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A timeless suit curated for elegant occasions.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 013
+    ===================================================== */
+
+    "suit-013": {
+
+        category: "Suit",
+
+        title: "Noorvi Suit",
+
+        code: "SVD-SUIT-013",
+
+        images: [
+
+            "images/suits/suit-013/suits-013-lifestyle.webp",
+
+            "images/suits/suit-013/suits-013.webp",
+
+            "images/suits/suit-013/suits-013-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A refined suit curated for memorable celebrations.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    },
+
+
+    /* =====================================================
+       SUIT 014
+    ===================================================== */
+
+    "suit-014": {
+
+        category: "Suit",
+
+        title: "Ruhani Suit",
+
+        code: "SVD-SUIT-014",
+
+        images: [
+
+            "images/suits/suit-014/suits-014-lifestyle.webp",
+
+            "images/suits/suit-014/suits-014.webp",
+
+            "images/suits/suit-014/suits-014-close-embroidery.webp"
+
+        ],
+
+        subtitle:
+            "A beautiful final piece in the ShriVatsaDarbar suit edit.",
+
+        collection:
+            "ShriVatsa Collection"
+
+    }
+
+};
 
 
 /* =========================================================
-   PAGE / GALLERY
+   PAGE VARIABLES
 ========================================================= */
 
 let currentGalleryIndex = 0;
@@ -2647,7 +3296,9 @@ function loadProduct() {
 function renderGallery() {
 
     if (!currentProduct) {
+
         return;
+
     }
 
 
@@ -2668,16 +3319,14 @@ function renderGallery() {
 
 
     if (!images.length) {
+
         return;
+
     }
 
 
-    /*
-     IMPORTANT:
-     No fallback to favicon.
-     If a real product image is missing,
-     we leave the product image path untouched.
-    */
+    mainImage.style.opacity = "1";
+
 
     mainImage.onerror = function () {
 
@@ -2703,7 +3352,8 @@ function renderGallery() {
         currentProduct.title;
 
 
-    thumbnails.innerHTML = "";
+    thumbnails.innerHTML =
+        "";
 
 
     images.forEach(
@@ -2756,13 +3406,6 @@ function renderGallery() {
             image.loading =
                 "lazy";
 
-
-            /*
-             IMPORTANT:
-             Missing images remain missing.
-             The ShriVatsaDarbar logo is NEVER
-             inserted as a fallback.
-            */
 
             image.onerror =
                 function () {
@@ -2847,7 +3490,9 @@ function renderGallery() {
 function moveGallery(direction) {
 
     if (!currentProduct) {
+
         return;
+
     }
 
 
@@ -3127,6 +3772,42 @@ document.getElementById(
 
 
 /* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHtml(value) {
+
+    return String(value || "")
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================================================
    RENDER CART
 ========================================================= */
 
@@ -3308,7 +3989,9 @@ function renderCart() {
 
 
                     if (!item) {
+
                         return;
+
                     }
 
 
@@ -3355,14 +4038,18 @@ function renderCart() {
                 "click",
                 function () {
 
+                    const id =
+                        this.dataset.remove;
+
+
                     cart =
                         cart.filter(
                             function (item) {
 
                                 return item.id !==
-                                    this.dataset.remove;
+                                    id;
 
-                            }.bind(this)
+                            }
                         );
 
 
@@ -3377,42 +4064,6 @@ function renderCart() {
 
         }
     );
-
-}
-
-
-/* =========================================================
-   ESCAPE HTML
-========================================================= */
-
-function escapeHtml(value) {
-
-    return String(value || "")
-
-        .replace(
-            /&/g,
-            "&amp;"
-        )
-
-        .replace(
-            /</g,
-            "&lt;"
-        )
-
-        .replace(
-            />/g,
-            "&gt;"
-        )
-
-        .replace(
-            /"/g,
-            "&quot;"
-        )
-
-        .replace(
-            /'/g,
-            "&#039;"
-        );
 
 }
 
@@ -3520,7 +4171,9 @@ document.getElementById(
     function () {
 
         if (!cart.length) {
+
             return;
+
         }
 
 
@@ -3592,7 +4245,9 @@ document.getElementById(
     function () {
 
         if (!currentProduct) {
+
             return;
+
         }
 
 
@@ -3705,7 +4360,9 @@ renderCart();
 </script>
 
 
-<!-- MAIN JAVASCRIPT -->
+<!-- =========================================================
+     MAIN JAVASCRIPT
+========================================================= -->
 
 <script src="script.js"></script>
 
