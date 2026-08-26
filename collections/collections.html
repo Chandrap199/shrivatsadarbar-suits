@@ -1,1 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#4b0713">
+
+    <meta name="description"
+          content="Explore the curated ShreevatsaDharwa collection of premium sarees and elegant suits, crafted for celebrations, occasions and timeless style.">
+
+    <meta name="keywords"
+          content="ShreevatsaDharwa sarees, ShreevatsaDharwa suits, premium sarees, designer sarees, women's suits, ethnic wear">
+
+    <meta name="author"
+          content="ShreevatsaDharwa">
+
+    <meta property="og:title"
+          content="Collections | ShreevatsaDharwa">
+
+    <meta property="og:description"
+          content="Explore premium sarees and elegant suits from ShreevatsaDharwa.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://suit.shrivatsadarbar.com/collections/collections.html">
+
+    <link rel="canonical"
+          href="https://suit.shrivatsadarbar.com/collections/collections.html">
+
+    <link rel="icon"
+          type="image/webp"
+          href="../images/logos/favicon.webp">
+
+    <title>Collections | ShreevatsaDharwa</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- MAIN CSS -->
+
+    <link rel="stylesheet"
+          href="../styles.css">
+
+
+    <!-- COLLECTION PAGE CSS -->
+
+    <style>
+
+        /* =====================================================
+           COLLECTION PAGE
+        ===================================================== */
+
+        .collection-page {
+            background: #fffdf9;
+        }
+
+
+        /* =====================================================
+           COLLECTION HERO
+        ===================================================== */
+
+        .collection-hero {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #f3e8dc;
+        }
+
+        .collection-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .collection-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,249,241,.96) 0%,
+                    rgba(255,249,241,.88) 36%,
+                    rgba(255,249,241,.30) 72%,
+                    rgba(255,249,241,.08) 100%
+                );
+        }
+
+        .collection-hero-content {
+            position: relative;
+            z-index: 2;
+            width: min(1180px, 92%);
+            margin: auto;
+            padding: 70px 0;
+        }
+
+        .collection-hero-eyebrow {
+            margin: 0 0 12px;
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: #aa7a26;
+        }
+
+        .collection-hero h1 {
+            margin: 0;
+            max-width: 600px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: .95;
+            font-weight: 500;
+            color: #241b17;
+        }
+
+        .collection-hero h1 span {
+            display: block;
+            color: #b88932;
+        }
+
+        .collection-hero-description {
+            max-width: 520px;
+            margin: 24px 0 0;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 19px;
+            line-height: 1.6;
+            color: #5e5047;
+        }
+
+
+        /* =====================================================
+           BREADCRUMB
+        ===================================================== */
+
+        .collection-breadcrumb {
+            width: min(1180px, 92%);
+            margin: auto;
+            padding: 22px 0 0;
+            font-size: 13px;
+            color: #85756b;
+        }
+
+        .collection-breadcrumb a {
+            color: #aa7a26;
+            text-decoration: none;
+        }
+
+        .collection-breadcrumb span {
+            margin: 0 9px;
+            color: #c4b29f;
+        }
+
+
+        /* =====================================================
+           COLLECTION INTRO
+        ===================================================== */
+
+        .collection-intro {
+            width: min(1180px, 92%);
+            margin: auto;
+            padding: 55px 0 35px;
+            text-align: center;
+        }
+
+        .collection-intro-eyebrow {
+            margin: 0 0 10px;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #aa7a26;
+        }
+
+        .collection-intro h2 {
+            margin: 0;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(36px, 4vw, 52px);
+            font-weight: 500;
+            color: #241b17;
+        }
+
+        .collection-intro p {
+            max-width: 650px;
+            margin: 15px auto 0;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #74665d;
+        }
+
+
+        /* =====================================================
+           CATEGORY SWITCHER
+        ===================================================== */
+
+        .collection-tabs {
+            width: min(1180px, 92%);
+            margin: 15px auto 45px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .collection-tab {
+            border: 1px solid #d8c49d;
+            background: transparent;
+            padding: 13px 28px;
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #5c4a3e;
+            cursor: pointer;
+            transition: .25s ease;
+        }
+
+        .collection-tab:hover,
+        .collection-tab.active {
+            background: #4b0713;
+            border-color: #4b0713;
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           PRODUCTS
+        ===================================================== */
+
+        .collection-products {
+            width: min(1180px, 92%);
+            margin: 0 auto 80px;
+        }
+
+        .collection-product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .collection-product {
+            background: #fff;
+            border: 1px solid #eee5da;
+            transition: transform .3s ease,
+                        box-shadow .3s ease;
+        }
+
+        .collection-product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(75,7,19,.08);
+        }
+
+        .collection-product-image {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            aspect-ratio: 4 / 5;
+            background: #f5eee6;
+        }
+
+        .collection-product-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform .6s ease;
+        }
+
+        .collection-product:hover .collection-product-image img {
+            transform: scale(1.035);
+        }
+
+        .collection-product-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            z-index: 2;
+            padding: 6px 10px;
+            background: #b88932;
+            color: #fff;
+            font-size: 9px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .collection-product-wishlist {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 3;
+            width: 38px;
+            height: 38px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,.94);
+            color: #4b0713;
+            cursor: pointer;
+        }
+
+        .collection-product-info {
+            padding: 20px 18px 24px;
+            text-align: center;
+        }
+
+        .collection-product-category {
+            margin: 0 0 7px;
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #aa7a26;
+        }
+
+        .collection-product-info h3 {
+            margin: 0;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 23px;
+            font-weight: 600;
+            color: #30241e;
+        }
+
+        .collection-product-info p {
+            margin: 7px 0 0;
+            font-size: 12px;
+            color: #887a70;
+        }
+
+        .collection-product-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            padding: 9px 16px;
+            border: 1px solid #c79b4a;
+            color: #7d5a22;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: .25s ease;
+        }
+
+        .collection-product-cta:hover {
+            background: #4b0713;
+            border-color: #4b0713;
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           FEATURE BANNER
+        ===================================================== */
+
+        .collection-feature {
+            width: min(1180px, 92%);
+            margin: 0 auto 80px;
+        }
+
+        .collection-feature-inner {
+            position: relative;
+            min-height: 260px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .collection-feature-inner img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .collection-feature-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(60,4,15,.94),
+                rgba(60,4,15,.62),
+                rgba(60,4,15,.18)
+            );
+        }
+
+        .collection-feature-content {
+            position: relative;
+            z-index: 2;
+            padding: 45px 55px;
+            color: #fff;
+        }
+
+        .collection-feature-content p {
+            margin: 0 0 8px;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #d9b66b;
+        }
+
+        .collection-feature-content h2 {
+            margin: 0;
+            max-width: 570px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(32px, 4vw, 50px);
+            font-weight: 500;
+        }
+
+        .collection-feature-content a {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 12px 23px;
+            background: #c2953d;
+            color: #fff;
+            text-decoration: none;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           EMPTY / FUTURE PRODUCTS
+        ===================================================== */
+
+        .collection-note {
+            margin-top: 35px;
+            text-align: center;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 18px;
+            color: #8b7b70;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .collection-product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+
+            .collection-hero {
+                min-height: 330px;
+            }
+
+            .collection-hero-content {
+                padding: 55px 0;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .collection-hero {
+                min-height: 390px;
+            }
+
+            .collection-hero-overlay {
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(255,249,241,.95),
+                        rgba(255,249,241,.55)
+                    );
+            }
+
+            .collection-hero-content {
+                padding: 45px 0;
+            }
+
+            .collection-hero-description {
+                font-size: 17px;
+                max-width: 340px;
+            }
+
+            .collection-product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .collection-product-info {
+                padding: 14px 8px 18px;
+            }
+
+            .collection-product-info h3 {
+                font-size: 19px;
+            }
+
+            .collection-product-cta {
+                padding: 8px 10px;
+                font-size: 8px;
+            }
+
+            .collection-feature-inner {
+                min-height: 300px;
+            }
+
+            .collection-feature-content {
+                padding: 35px 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="collection-page">
+
+
+<!-- =========================================================
+     ANNOUNCEMENT BAR
+========================================================= -->
+
+<div class="announcement-bar">
+
+    <div class="announcement-inner">
+
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            FREE SHIPPING on Prepaid Orders
+        </span>
+
+        <span class="announcement-divider">|</span>
+
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            Premium Quality Fabrics
+        </span>
+
+        <span class="announcement-divider">|</span>
+
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            Easy Returns & Exchanges
+        </span>
+
+        <a href="https://wa.me/918826196544"
+           target="_blank"
+           rel="noopener"
+           class="announcement-whatsapp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            Order on WhatsApp
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <a href="../index.html"
+           class="brand">
+
+            <img src="../images/logos/logo.webp"
+                 alt="ShreevatsaDharwa logo">
+
+        </a>
+
+
+        <button class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <nav class="main-navigation"
+             id="mainNavigation">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="collections.html"
+               class="active">
+                Sarees
+            </a>
+
+            <a href="collections.html">
+                Suits
+            </a>
+
+            <a href="collections.html">
+                New Arrivals
+            </a>
+
+            <a href="collections.html">
+                Best Sellers
+            </a>
+
+            <a href="../about.html">
+                About Us
+            </a>
+
+            <a href="../contact.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button class="icon-button"
+                    id="searchButton"
+                    aria-label="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+            <button class="icon-button"
+                    aria-label="Wishlist"
+                    onclick="showComingSoon('Wishlist')">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+            <button class="icon-button"
+                    aria-label="Account"
+                    onclick="showComingSoon('Account')">
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+            <button class="icon-button bag-button"
+                    aria-label="Shopping bag"
+                    onclick="showComingSoon('Shopping Bag')">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="bag-count">0</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     SEARCH OVERLAY
+========================================================= -->
+
+<div class="search-overlay"
+     id="searchOverlay">
+
+    <button class="search-close"
+            id="searchClose"
+            aria-label="Close search">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+    <div class="search-box">
+
+        <span>Search our collection</span>
+
+        <input type="search"
+               id="siteSearch"
+               placeholder="Search sarees, suits..."
+               autocomplete="off">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     COLLECTION HERO
+========================================================= -->
+
+<main>
+
+<section class="collection-hero">
+
+    <img src="../images/banners/hero-05.webp"
+         alt="ShreevatsaDharwa premium ethnic wear collection">
+
+    <div class="collection-hero-overlay"></div>
+
+    <div class="collection-hero-content">
+
+        <p class="collection-hero-eyebrow">
+            THE SHREEVATSA COLLECTION
+        </p>
+
+        <h1>
+            Curated for
+            <span>Every Occasion</span>
+        </h1>
+
+        <p class="collection-hero-description">
+            Discover timeless sarees and elegant suits,
+            thoughtfully selected for celebrations,
+            gatherings and beautiful everyday moments.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BREADCRUMB
+========================================================= -->
+
+<div class="collection-breadcrumb">
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <span>
+        /
+    </span>
+
+    Collections
+
+</div>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="collection-intro">
+
+    <p class="collection-intro-eyebrow">
+        EXPLORE OUR EDIT
+    </p>
+
+    <h2>
+        Timeless Pieces. Beautifully Curated.
+    </h2>
+
+    <p>
+        From graceful sarees to sophisticated suits,
+        explore our growing collection of premium
+        ethnic wear created for the modern Indian woman.
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     CATEGORY TABS
+========================================================= -->
+
+<div class="collection-tabs">
+
+    <button class="collection-tab active"
+            onclick="filterProducts('all', this)">
+        All Collections
+    </button>
+
+    <button class="collection-tab"
+            onclick="filterProducts('saree', this)">
+        Sarees
+    </button>
+
+    <button class="collection-tab"
+            onclick="filterProducts('suit', this)">
+        Suits
+    </button>
+
+</div>
+
+
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
+
+<section class="collection-products">
+
+    <div class="collection-product-grid">
+
+
+        <!-- SAREE 001 -->
+
+        <article class="collection-product"
+                 data-category="saree">
+
+            <a href="#"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-product-wishlist"
+                        type="button"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
+                        aria-label="Add Saree 001 to wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/sarees/saree-001/sarees-01.webp"
+                     alt="ShreevatsaDharwa Saree 001"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    SAREE
+                </p>
+
+                <h3>
+                    Elegant Saree 001
+                </h3>
+
+                <p>
+                    Premium curated collection
+                </p>
+
+                <a href="#"
+                   class="collection-product-cta">
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SUIT 001 -->
+
+        <article class="collection-product"
+                 data-category="suit">
+
+            <a href="#"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-product-wishlist"
+                        type="button"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
+                        aria-label="Add Suit 001 to wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/suits/suit-001/suits-001.webp"
+                     alt="ShreevatsaDharwa Suit 001"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    SUIT
+                </p>
+
+                <h3>
+                    Elegant Suit 001
+                </h3>
+
+                <p>
+                    Premium curated collection
+                </p>
+
+                <a href="#"
+                   class="collection-product-cta">
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SAREE 002 -->
+
+        <article class="collection-product"
+                 data-category="saree">
+
+            <a href="#"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-product-wishlist"
+                        type="button"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
+                        aria-label="Add Saree 002 to wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/sarees/saree-002/sarees-02.webp"
+                     alt="ShreevatsaDharwa Saree 002"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    SAREE
+                </p>
+
+                <h3>
+                    Signature Saree 002
+                </h3>
+
+                <p>
+                    Premium curated collection
+                </p>
+
+                <a href="#"
+                   class="collection-product-cta">
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SUIT 002 -->
+
+        <article class="collection-product"
+                 data-category="suit">
+
+            <a href="#"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-product-wishlist"
+                        type="button"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
+                        aria-label="Add Suit 002 to wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/suits/suit-002/suits-002.webp"
+                     alt="ShreevatsaDharwa Suit 002"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    SUIT
+                </p>
+
+                <h3>
+                    Signature Suit 002
+                </h3>
+
+                <p>
+                    Premium curated collection
+                </p>
+
+                <a href="#"
+                   class="collection-product-cta">
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SAREE 003 -->
+
+        <article class="collection-product"
+                 data-category="saree">
+
+            <a href="#"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-product-wishlist"
+                        type="button"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
+                        aria-label="Add Saree 003 to wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/sarees/saree-003/sarees-03.webp"
+                     alt="ShreevatsaDharwa Saree 003"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    SAREE
+                </p>
+
+                <h3>
+                    Festive Saree 003
+                </h3>
+
+                <p>
+                    Premium curated collection
+                </p>
+
+                <a href="#"
+                   class="collection-product-cta">
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SUIT 003 -->
+
+        <article class="collection-product"
+                 data-category="suit">
+
+            <a href="#"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-product-wishlist"
+                        type="button"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
+                        aria-label="Add Suit 003 to wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/suits/suit-003/suits-003.webp"
+                     alt="ShreevatsaDharwa Suit 003"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    SUIT
+                </p>
+
+                <h3>
+                    Festive Suit 003
+                </h3>
+
+                <p>
+                    Premium curated collection
+                </p>
+
+                <a href="#"
+                   class="collection-product-cta">
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <p class="collection-note">
+        More beautiful pieces are being added to our collection.
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURE BANNER
+========================================================= -->
+
+<section class="collection-feature">
+
+    <div class="collection-feature-inner">
+
+        <img src="../images/banners/hero-05.webp"
+             alt="ShreevatsaDharwa festive collection"
+             loading="lazy">
+
+        <div class="collection-feature-overlay"></div>
+
+        <div class="collection-feature-content">
+
+            <p>
+                FESTIVE COLLECTION
+            </p>
+
+            <h2>
+                Celebrate every beautiful
+                moment in style.
+            </h2>
+
+            <a href="collections.html">
+                Explore Collection
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a href="../index.html"
+               class="footer-logo">
+
+                <img src="../images/logos/logo.webp"
+                     alt="ShreevatsaDharwa">
+
+            </a>
+
+            <p>
+                Premium sarees and suits curated
+                with timeless elegance, quality
+                and grace in every thread.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="#"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#"
+                   aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#"
+                   aria-label="Pinterest">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </a>
+
+                <a href="#"
+                   aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHOP -->
+
+        <div class="footer-column">
+
+            <h3>
+                SHOP
+            </h3>
+
+            <a href="collections.html">
+                Sarees
+            </a>
+
+            <a href="collections.html">
+                Suits
+            </a>
+
+            <a href="collections.html">
+                New Arrivals
+            </a>
+
+            <a href="collections.html">
+                Best Sellers
+            </a>
+
+            <a href="collections.html">
+                All Collections
+            </a>
+
+        </div>
+
+
+        <!-- CUSTOMER CARE -->
+
+        <div class="footer-column">
+
+            <h3>
+                CUSTOMER CARE
+            </h3>
+
+            <a href="../contact.html">
+                Contact Us
+            </a>
+
+            <a href="../policies/shipping-policy.html">
+                Shipping Policy
+            </a>
+
+            <a href="../policies/return-refund-policy.html">
+                Return & Refund
+            </a>
+
+            <a href="../faq.html">
+                FAQs
+            </a>
+
+            <a href="../contact.html">
+                Size Guide
+            </a>
+
+        </div>
+
+
+        <!-- ABOUT -->
+
+        <div class="footer-column">
+
+            <h3>
+                ABOUT US
+            </h3>
+
+            <a href="../our-story.html">
+                Our Story
+            </a>
+
+            <a href="../about.html">
+                About Us
+            </a>
+
+            <a href="../policies/privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            <a href="../policies/terms-conditions.html">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column footer-contact">
+
+            <h3>
+                CONTACT US
+            </h3>
+
+            <a href="tel:+918826196544">
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 88261 96544
+
+            </a>
+
+            <a href="mailto:shrivatsadarbar@gmail.com">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                shrivatsadarbar@gmail.com
+
+            </a>
+
+            <span>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Bhola and Prabha Niwas,
+                Ratanpur, Padao,
+                Varanasi, Uttar Pradesh
+                221008
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container footer-bottom-inner">
+
+            <p>
+                © 2026 ShreevatsaDharwa.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Grace in Every Thread
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     WHATSAPP
+========================================================= -->
+
+<a href="https://wa.me/918826196544"
+   target="_blank"
+   rel="noopener"
+   class="whatsapp-float"
+   aria-label="Chat with ShreevatsaDharwa on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div class="site-toast"
+     id="siteToast"
+     role="status"
+     aria-live="polite">
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="../script.js"></script>
+
+<script>
+
+    function filterProducts(category, button) {
+
+        const products =
+            document.querySelectorAll(".collection-product");
+
+        const tabs =
+            document.querySelectorAll(".collection-tab");
+
+
+        tabs.forEach(function(tab) {
+
+            tab.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        products.forEach(function(product) {
+
+            const productCategory =
+                product.getAttribute("data-category");
+
+
+            if (
+                category === "all" ||
+                productCategory === category
+            ) {
+
+                product.style.display = "";
+
+            } else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+</body>
+</html>
