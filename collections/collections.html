@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -11,25 +12,19 @@
           content="#4b0713">
 
     <meta name="description"
-          content="Explore the curated ShreevatsaDharwa collection of premium sarees and elegant suits, crafted for celebrations, occasions and timeless style.">
-
-    <meta name="keywords"
-          content="ShreevatsaDharwa sarees, ShreevatsaDharwa suits, premium sarees, designer sarees, women's suits, ethnic wear">
+          content="Explore the ShriVatsaDarbar collection of premium sarees and elegant suits, thoughtfully curated for every occasion.">
 
     <meta name="author"
-          content="ShreevatsaDharwa">
+          content="ShriVatsaDarbar">
 
     <meta property="og:title"
-          content="Collections | ShreevatsaDharwa">
+          content="Collections | ShriVatsaDarbar">
 
     <meta property="og:description"
-          content="Explore premium sarees and elegant suits from ShreevatsaDharwa.">
+          content="Discover premium sarees and elegant suits curated by ShriVatsaDarbar.">
 
     <meta property="og:type"
           content="website">
-
-    <meta property="og:url"
-          content="https://suit.shrivatsadarbar.com/collections/collections.html">
 
     <link rel="canonical"
           href="https://suit.shrivatsadarbar.com/collections/collections.html">
@@ -38,7 +33,7 @@
           type="image/webp"
           href="../images/logos/favicon.webp">
 
-    <title>Collections | ShreevatsaDharwa</title>
+    <title>Collections | ShriVatsaDarbar</title>
 
 
     <!-- GOOGLE FONTS -->
@@ -66,8 +61,6 @@
           href="../styles.css">
 
 
-    <!-- COLLECTION PAGE CSS -->
-
     <style>
 
         /* =====================================================
@@ -75,7 +68,7 @@
         ===================================================== */
 
         .collection-page {
-            background: #fffdf9;
+            background: #fff;
         }
 
 
@@ -85,73 +78,94 @@
 
         .collection-hero {
             position: relative;
-            min-height: 360px;
+            min-height: 280px;
+
             display: flex;
             align-items: center;
+
             overflow: hidden;
-            background: #f3e8dc;
+
+            background: #f5eee5;
         }
 
         .collection-hero img {
             position: absolute;
             inset: 0;
+
             width: 100%;
             height: 100%;
+
             object-fit: cover;
         }
 
         .collection-hero-overlay {
             position: absolute;
             inset: 0;
+
             background:
                 linear-gradient(
                     90deg,
-                    rgba(255,249,241,.96) 0%,
-                    rgba(255,249,241,.88) 36%,
-                    rgba(255,249,241,.30) 72%,
-                    rgba(255,249,241,.08) 100%
+                    rgba(250,243,233,.96) 0%,
+                    rgba(250,243,233,.82) 42%,
+                    rgba(250,243,233,.20) 100%
                 );
         }
 
         .collection-hero-content {
             position: relative;
             z-index: 2;
-            width: min(1180px, 92%);
-            margin: auto;
-            padding: 70px 0;
+
+            width: 100%;
+            max-width: 1200px;
+
+            margin: 0 auto;
+            padding: 55px 30px;
         }
 
-        .collection-hero-eyebrow {
-            margin: 0 0 12px;
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 4px;
-            color: #aa7a26;
+        .collection-eyebrow {
+            margin: 0 0 10px;
+
+            color: #a47d32;
+
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
         .collection-hero h1 {
             margin: 0;
-            max-width: 600px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(48px, 6vw, 78px);
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: clamp(48px, 6vw, 72px);
             line-height: .95;
             font-weight: 500;
-            color: #241b17;
+
+            color: #241d19;
         }
 
         .collection-hero h1 span {
             display: block;
-            color: #b88932;
+            color: #b88a2d;
         }
 
-        .collection-hero-description {
-            max-width: 520px;
-            margin: 24px 0 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 19px;
-            line-height: 1.6;
-            color: #5e5047;
+        .collection-hero p {
+            max-width: 500px;
+
+            margin: 20px 0 0;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 18px;
+            line-height: 1.5;
+
+            color: #6d625a;
         }
 
 
@@ -160,21 +174,30 @@
         ===================================================== */
 
         .collection-breadcrumb {
-            width: min(1180px, 92%);
-            margin: auto;
-            padding: 22px 0 0;
-            font-size: 13px;
-            color: #85756b;
+            background: #faf7f2;
+
+            border-bottom:
+                1px solid #eee5d8;
+        }
+
+        .collection-breadcrumb-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+
+            padding: 15px 30px;
+
+            font-size: 12px;
+            color: #8c8176;
         }
 
         .collection-breadcrumb a {
-            color: #aa7a26;
+            color: #9a7a35;
             text-decoration: none;
         }
 
         .collection-breadcrumb span {
-            margin: 0 9px;
-            color: #c4b29f;
+            margin: 0 10px;
+            color: #b5a99b;
         }
 
 
@@ -183,69 +206,130 @@
         ===================================================== */
 
         .collection-intro {
-            width: min(1180px, 92%);
-            margin: auto;
-            padding: 55px 0 35px;
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            padding: 70px 30px 35px;
+
             text-align: center;
         }
 
         .collection-intro-eyebrow {
-            margin: 0 0 10px;
-            font-size: 11px;
-            letter-spacing: 4px;
-            color: #aa7a26;
+            margin: 0 0 12px;
+
+            color: #a47d32;
+
+            font-size: 10px;
+            letter-spacing: 3px;
         }
 
         .collection-intro h2 {
             margin: 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(36px, 4vw, 52px);
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: clamp(38px, 5vw, 52px);
+            line-height: 1;
+
             font-weight: 500;
-            color: #241b17;
+
+            color: #241e1a;
         }
 
         .collection-intro p {
-            max-width: 650px;
-            margin: 15px auto 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #74665d;
+            max-width: 700px;
+
+            margin: 20px auto 0;
+
+            font-size: 14px;
+            line-height: 1.8;
+
+            color: #776d65;
         }
 
 
         /* =====================================================
-           CATEGORY SWITCHER
+           ORNAMENT
         ===================================================== */
 
-        .collection-tabs {
-            width: min(1180px, 92%);
-            margin: 15px auto 45px;
+        .collection-ornament {
             display: flex;
+
+            align-items: center;
             justify-content: center;
-            gap: 12px;
+
+            gap: 9px;
+
+            margin-top: 22px;
+        }
+
+        .collection-ornament span {
+            width: 42px;
+            height: 1px;
+
+            background: #c5a05a;
+        }
+
+        .collection-ornament i {
+            color: #b88a2d;
+            font-size: 7px;
+        }
+
+
+        /* =====================================================
+           FILTERS
+        ===================================================== */
+
+        .collection-filters {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 8px;
+
+            margin: 20px auto 40px;
+            padding: 0 20px;
+
             flex-wrap: wrap;
         }
 
-        .collection-tab {
-            border: 1px solid #d8c49d;
-            background: transparent;
-            padding: 13px 28px;
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 600;
+        .collection-filter {
+            border: 1px solid #dcd0bf;
+
+            background: #fff;
+
+            color: #5d5148;
+
+            padding: 12px 25px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
+
             letter-spacing: 1.5px;
+
             text-transform: uppercase;
-            color: #5c4a3e;
+
             cursor: pointer;
-            transition: .25s ease;
+
+            transition:
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease;
         }
 
-        .collection-tab:hover,
-        .collection-tab.active {
+        .collection-filter:hover,
+        .collection-filter.active {
             background: #4b0713;
-            border-color: #4b0713;
             color: #fff;
+            border-color: #4b0713;
         }
 
 
@@ -254,204 +338,264 @@
         ===================================================== */
 
         .collection-products {
-            width: min(1180px, 92%);
-            margin: 0 auto 80px;
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 0 30px 90px;
         }
 
         .collection-product-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
         }
 
-        .collection-product {
+
+        /* =====================================================
+           PRODUCT CARD
+        ===================================================== */
+
+        .collection-product-card {
             background: #fff;
-            border: 1px solid #eee5da;
-            transition: transform .3s ease,
-                        box-shadow .3s ease;
+
+            border:
+                1px solid #ebe3d9;
+
+            overflow: hidden;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
         }
 
-        .collection-product:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(75,7,19,.08);
+        .collection-product-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 14px 35px rgba(67, 45, 25, .09);
         }
 
         .collection-product-image {
             position: relative;
+
             display: block;
+
+            background: #f5eee5;
+
             overflow: hidden;
-            aspect-ratio: 4 / 5;
-            background: #f5eee6;
+
+            text-decoration: none;
         }
 
         .collection-product-image img {
             width: 100%;
-            height: 100%;
+
             display: block;
+
+            aspect-ratio: 4 / 5;
+
             object-fit: cover;
-            transition: transform .6s ease;
+
+            transition:
+                transform .5s ease;
         }
 
-        .collection-product:hover .collection-product-image img {
-            transform: scale(1.035);
+        .collection-product-card:hover
+        .collection-product-image img {
+            transform: scale(1.025);
         }
+
+
+        /* =====================================================
+           BADGE
+        ===================================================== */
 
         .collection-product-badge {
             position: absolute;
+
             top: 14px;
             left: 14px;
-            z-index: 2;
-            padding: 6px 10px;
-            background: #b88932;
+
+            z-index: 3;
+
+            padding: 7px 11px;
+
+            background: #b88a2d;
             color: #fff;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 9px;
+
             letter-spacing: 1px;
-            font-weight: 600;
         }
 
-        .collection-product-wishlist {
+
+        /* =====================================================
+           WISHLIST
+        ===================================================== */
+
+        .collection-wishlist {
             position: absolute;
+
             top: 12px;
             right: 12px;
+
             z-index: 3;
-            width: 38px;
-            height: 38px;
+
+            width: 34px;
+            height: 34px;
+
             border: 0;
+
             border-radius: 50%;
+
             background: rgba(255,255,255,.94);
-            color: #4b0713;
+
+            color: #5b4039;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
             cursor: pointer;
         }
 
+        .collection-wishlist:hover {
+            color: #4b0713;
+        }
+
+
+        /* =====================================================
+           PRODUCT INFO
+        ===================================================== */
+
         .collection-product-info {
-            padding: 20px 18px 24px;
+            padding: 22px 18px 24px;
+
             text-align: center;
         }
 
         .collection-product-category {
-            margin: 0 0 7px;
+            margin: 0 0 8px;
+
+            color: #a47d32;
+
             font-size: 9px;
-            letter-spacing: 2px;
-            color: #aa7a26;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
         }
 
         .collection-product-info h3 {
             margin: 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 23px;
-            font-weight: 600;
-            color: #30241e;
-        }
 
-        .collection-product-info p {
-            margin: 7px 0 0;
-            font-size: 12px;
-            color: #887a70;
-        }
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
 
-        .collection-product-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 15px;
-            padding: 9px 16px;
-            border: 1px solid #c79b4a;
-            color: #7d5a22;
-            font-size: 10px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: .25s ease;
-        }
+            font-size: 22px;
 
-        .collection-product-cta:hover {
-            background: #4b0713;
-            border-color: #4b0713;
-            color: #fff;
-        }
+            line-height: 1.1;
 
-
-        /* =====================================================
-           FEATURE BANNER
-        ===================================================== */
-
-        .collection-feature {
-            width: min(1180px, 92%);
-            margin: 0 auto 80px;
-        }
-
-        .collection-feature-inner {
-            position: relative;
-            min-height: 260px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
-
-        .collection-feature-inner img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .collection-feature-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                90deg,
-                rgba(60,4,15,.94),
-                rgba(60,4,15,.62),
-                rgba(60,4,15,.18)
-            );
-        }
-
-        .collection-feature-content {
-            position: relative;
-            z-index: 2;
-            padding: 45px 55px;
-            color: #fff;
-        }
-
-        .collection-feature-content p {
-            margin: 0 0 8px;
-            font-size: 10px;
-            letter-spacing: 3px;
-            color: #d9b66b;
-        }
-
-        .collection-feature-content h2 {
-            margin: 0;
-            max-width: 570px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(32px, 4vw, 50px);
             font-weight: 500;
+
+            color: #2b2420;
         }
 
-        .collection-feature-content a {
-            display: inline-block;
-            margin-top: 22px;
-            padding: 12px 23px;
-            background: #c2953d;
-            color: #fff;
+        .collection-product-description {
+            margin: 9px 0 16px;
+
+            font-size: 11px;
+
+            color: #93887e;
+        }
+
+        .collection-view-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 10px 17px;
+
+            border:
+                1px solid #cfc2af;
+
+            color: #5d5047;
+
             text-decoration: none;
-            font-size: 10px;
+
+            font-size: 9px;
+
             letter-spacing: 1px;
+
             text-transform: uppercase;
+
+            transition:
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease;
+        }
+
+        .collection-view-button:hover {
+            background: #4b0713;
+
+            color: #fff;
+
+            border-color: #4b0713;
         }
 
 
         /* =====================================================
-           EMPTY / FUTURE PRODUCTS
+           NO RESULTS
         ===================================================== */
 
-        .collection-note {
-            margin-top: 35px;
+        .collection-empty {
+            display: none;
+
             text-align: center;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 18px;
-            color: #8b7b70;
+
+            padding: 50px 20px;
+
+            color: #82766d;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 22px;
+        }
+
+
+        /* =====================================================
+           BOTTOM MESSAGE
+        ===================================================== */
+
+        .collection-bottom-message {
+            text-align: center;
+
+            margin-top: 35px;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 17px;
+
+            color: #8a7e73;
         }
 
 
@@ -462,16 +606,8 @@
         @media (max-width: 900px) {
 
             .collection-product-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 18px;
-            }
-
-            .collection-hero {
-                min-height: 330px;
-            }
-
-            .collection-hero-content {
-                padding: 55px 0;
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
             }
 
         }
@@ -480,51 +616,72 @@
         @media (max-width: 600px) {
 
             .collection-hero {
-                min-height: 390px;
-            }
-
-            .collection-hero-overlay {
-                background:
-                    linear-gradient(
-                        90deg,
-                        rgba(255,249,241,.95),
-                        rgba(255,249,241,.55)
-                    );
+                min-height: 230px;
             }
 
             .collection-hero-content {
-                padding: 45px 0;
+                padding: 45px 20px;
             }
 
-            .collection-hero-description {
-                font-size: 17px;
-                max-width: 340px;
+            .collection-hero h1 {
+                font-size: 48px;
+            }
+
+            .collection-hero p {
+                font-size: 16px;
+            }
+
+            .collection-breadcrumb-inner {
+                padding: 13px 18px;
+            }
+
+            .collection-intro {
+                padding: 55px 20px 25px;
+            }
+
+            .collection-intro h2 {
+                font-size: 38px;
+            }
+
+            .collection-products {
+                padding: 0 15px 60px;
             }
 
             .collection-product-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
+                grid-template-columns: 1fr 1fr;
+
+                gap: 10px;
             }
 
             .collection-product-info {
-                padding: 14px 8px 18px;
+                padding: 15px 8px 18px;
             }
 
             .collection-product-info h3 {
-                font-size: 19px;
+                font-size: 18px;
             }
 
-            .collection-product-cta {
-                padding: 8px 10px;
+            .collection-product-description {
+                font-size: 10px;
+            }
+
+            .collection-view-button {
+                padding: 9px 10px;
                 font-size: 8px;
             }
 
-            .collection-feature-inner {
-                min-height: 300px;
+            .collection-product-badge {
+                top: 8px;
+                left: 8px;
+                padding: 5px 8px;
             }
 
-            .collection-feature-content {
-                padding: 35px 25px;
+            .collection-wishlist {
+                top: 7px;
+                right: 7px;
+
+                width: 30px;
+                height: 30px;
             }
 
         }
@@ -534,7 +691,7 @@
 </head>
 
 
-<body class="collection-page">
+<body>
 
 
 <!-- =========================================================
@@ -579,6 +736,7 @@
 </div>
 
 
+
 <!-- =========================================================
      HEADER
 ========================================================= -->
@@ -591,7 +749,7 @@
            class="brand">
 
             <img src="../images/logos/logo-white.webp"
-                 alt="ShreevatsaDharwa logo">
+                 alt="ShriVatsaDarbar logo">
 
         </a>
 
@@ -613,12 +771,12 @@
                 Home
             </a>
 
-            <a href="collections.html"
+            <a href="collections.html?category=saree"
                class="active">
                 Sarees
             </a>
 
-            <a href="collections.html">
+            <a href="collections.html?category=suit">
                 Suits
             </a>
 
@@ -684,8 +842,9 @@
 </header>
 
 
+
 <!-- =========================================================
-     SEARCH OVERLAY
+     SEARCH
 ========================================================= -->
 
 <div class="search-overlay"
@@ -715,23 +874,22 @@
 </div>
 
 
+
 <!-- =========================================================
      COLLECTION HERO
 ========================================================= -->
 
-<main>
-
 <section class="collection-hero">
 
     <img src="../images/banners/hero-05.webp"
-         alt="ShreevatsaDharwa premium ethnic wear collection">
+         alt="ShriVatsaDarbar premium ethnic wear collection">
 
     <div class="collection-hero-overlay"></div>
 
     <div class="collection-hero-content">
 
-        <p class="collection-hero-eyebrow">
-            THE SHREEVATSA COLLECTION
+        <p class="collection-eyebrow">
+            THE SHRIVATSA COLLECTION
         </p>
 
         <h1>
@@ -739,7 +897,7 @@
             <span>Every Occasion</span>
         </h1>
 
-        <p class="collection-hero-description">
+        <p>
             Discover timeless sarees and elegant suits,
             thoughtfully selected for celebrations,
             gatherings and beautiful everyday moments.
@@ -750,23 +908,27 @@
 </section>
 
 
+
 <!-- =========================================================
      BREADCRUMB
 ========================================================= -->
 
 <div class="collection-breadcrumb">
 
-    <a href="../index.html">
-        Home
-    </a>
+    <div class="collection-breadcrumb-inner">
 
-    <span>
-        /
-    </span>
+        <a href="../index.html">
+            Home
+        </a>
 
-    Collections
+        <span>/</span>
+
+        Collections
+
+    </div>
 
 </div>
+
 
 
 <!-- =========================================================
@@ -789,31 +951,49 @@
         ethnic wear created for the modern Indian woman.
     </p>
 
+    <div class="collection-ornament">
+
+        <span></span>
+
+        <i class="fa-solid fa-diamond"></i>
+
+        <span></span>
+
+    </div>
+
 </section>
 
 
+
 <!-- =========================================================
-     CATEGORY TABS
+     FILTERS
 ========================================================= -->
 
-<div class="collection-tabs">
+<div class="collection-filters">
 
-    <button class="collection-tab active"
-            onclick="filterProducts('all', this)">
+    <button class="collection-filter active"
+            data-filter="all">
+
         All Collections
+
     </button>
 
-    <button class="collection-tab"
-            onclick="filterProducts('saree', this)">
+    <button class="collection-filter"
+            data-filter="saree">
+
         Sarees
+
     </button>
 
-    <button class="collection-tab"
-            onclick="filterProducts('suit', this)">
+    <button class="collection-filter"
+            data-filter="suit">
+
         Suits
+
     </button>
 
 </div>
+
 
 
 <!-- =========================================================
@@ -822,32 +1002,35 @@
 
 <section class="collection-products">
 
-    <div class="collection-product-grid">
+    <div class="collection-product-grid"
+         id="collectionProductGrid">
 
 
-        <!-- SAREE 001 -->
+        <!-- =================================================
+             SAREE 001
+        ================================================== -->
 
-        <article class="collection-product"
+        <article class="collection-product-card"
                  data-category="saree">
 
-            <a href="#"
+            <a href="../product.html?product=saree-001"
                class="collection-product-image">
 
                 <span class="collection-product-badge">
                     NEW
                 </span>
 
-                <button class="collection-product-wishlist"
+                <button class="collection-wishlist"
                         type="button"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
-                        aria-label="Add Saree 001 to wishlist">
+                        aria-label="Add Saree 001 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
 
                     <i class="fa-regular fa-heart"></i>
 
                 </button>
 
-                <img src="../images/sarees/saree-001/sarees-01.webp"
-                     alt="ShreevatsaDharwa Saree 001"
+                <img src="../images/sarees/saree-001/sarees-01-lifestyle.webp"
+                     alt="Elegant Saree 001"
                      loading="lazy">
 
             </a>
@@ -855,21 +1038,23 @@
             <div class="collection-product-info">
 
                 <p class="collection-product-category">
-                    SAREE
+                    Saree
                 </p>
 
                 <h3>
                     Elegant Saree 001
                 </h3>
 
-                <p>
+                <p class="collection-product-description">
                     Premium curated collection
                 </p>
 
-                <a href="#"
-                   class="collection-product-cta">
+                <a href="../product.html?product=saree-001"
+                   class="collection-view-button">
+
                     View Collection
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -877,29 +1062,32 @@
         </article>
 
 
-        <!-- SUIT 001 -->
 
-        <article class="collection-product"
+        <!-- =================================================
+             SUIT 001
+        ================================================== -->
+
+        <article class="collection-product-card"
                  data-category="suit">
 
-            <a href="#"
+            <a href="../product.html?product=suit-001"
                class="collection-product-image">
 
                 <span class="collection-product-badge">
                     NEW
                 </span>
 
-                <button class="collection-product-wishlist"
+                <button class="collection-wishlist"
                         type="button"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
-                        aria-label="Add Suit 001 to wishlist">
+                        aria-label="Add Suit 001 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
 
                     <i class="fa-regular fa-heart"></i>
 
                 </button>
 
-                <img src="../images/suits/suit-001/suits-001.webp"
-                     alt="ShreevatsaDharwa Suit 001"
+                <img src="../images/suits/suit-001/suits-001-lifestyle.webp"
+                     alt="Elegant Suit 001"
                      loading="lazy">
 
             </a>
@@ -907,21 +1095,23 @@
             <div class="collection-product-info">
 
                 <p class="collection-product-category">
-                    SUIT
+                    Suit
                 </p>
 
                 <h3>
                     Elegant Suit 001
                 </h3>
 
-                <p>
+                <p class="collection-product-description">
                     Premium curated collection
                 </p>
 
-                <a href="#"
-                   class="collection-product-cta">
+                <a href="../product.html?product=suit-001"
+                   class="collection-view-button">
+
                     View Collection
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -929,29 +1119,32 @@
         </article>
 
 
-        <!-- SAREE 002 -->
 
-        <article class="collection-product"
+        <!-- =================================================
+             SAREE 002
+        ================================================== -->
+
+        <article class="collection-product-card"
                  data-category="saree">
 
-            <a href="#"
+            <a href="../product.html?product=saree-002"
                class="collection-product-image">
 
                 <span class="collection-product-badge">
                     NEW
                 </span>
 
-                <button class="collection-product-wishlist"
+                <button class="collection-wishlist"
                         type="button"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
-                        aria-label="Add Saree 002 to wishlist">
+                        aria-label="Add Saree 002 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
 
                     <i class="fa-regular fa-heart"></i>
 
                 </button>
 
-                <img src="../images/sarees/saree-002/sarees-02.webp"
-                     alt="ShreevatsaDharwa Saree 002"
+                <img src="../images/sarees/saree-002/sarees-02-lifestyle.webp"
+                     alt="Signature Saree 002"
                      loading="lazy">
 
             </a>
@@ -959,21 +1152,23 @@
             <div class="collection-product-info">
 
                 <p class="collection-product-category">
-                    SAREE
+                    Saree
                 </p>
 
                 <h3>
                     Signature Saree 002
                 </h3>
 
-                <p>
+                <p class="collection-product-description">
                     Premium curated collection
                 </p>
 
-                <a href="#"
-                   class="collection-product-cta">
+                <a href="../product.html?product=saree-002"
+                   class="collection-view-button">
+
                     View Collection
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -981,29 +1176,32 @@
         </article>
 
 
-        <!-- SUIT 002 -->
 
-        <article class="collection-product"
+        <!-- =================================================
+             SUIT 002
+        ================================================== -->
+
+        <article class="collection-product-card"
                  data-category="suit">
 
-            <a href="#"
+            <a href="../product.html?product=suit-002"
                class="collection-product-image">
 
                 <span class="collection-product-badge">
                     NEW
                 </span>
 
-                <button class="collection-product-wishlist"
+                <button class="collection-wishlist"
                         type="button"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
-                        aria-label="Add Suit 002 to wishlist">
+                        aria-label="Add Suit 002 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
 
                     <i class="fa-regular fa-heart"></i>
 
                 </button>
 
-                <img src="../images/suits/suit-002/suits-002.webp"
-                     alt="ShreevatsaDharwa Suit 002"
+                <img src="../images/suits/suit-002/suits-002-lifestyle.webp"
+                     alt="Signature Suit 002"
                      loading="lazy">
 
             </a>
@@ -1011,21 +1209,23 @@
             <div class="collection-product-info">
 
                 <p class="collection-product-category">
-                    SUIT
+                    Suit
                 </p>
 
                 <h3>
                     Signature Suit 002
                 </h3>
 
-                <p>
+                <p class="collection-product-description">
                     Premium curated collection
                 </p>
 
-                <a href="#"
-                   class="collection-product-cta">
+                <a href="../product.html?product=suit-002"
+                   class="collection-view-button">
+
                     View Collection
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1033,29 +1233,32 @@
         </article>
 
 
-        <!-- SAREE 003 -->
 
-        <article class="collection-product"
+        <!-- =================================================
+             SAREE 003
+        ================================================== -->
+
+        <article class="collection-product-card"
                  data-category="saree">
 
-            <a href="#"
+            <a href="../product.html?product=saree-003"
                class="collection-product-image">
 
                 <span class="collection-product-badge">
                     NEW
                 </span>
 
-                <button class="collection-product-wishlist"
+                <button class="collection-wishlist"
                         type="button"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
-                        aria-label="Add Saree 003 to wishlist">
+                        aria-label="Add Saree 003 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
 
                     <i class="fa-regular fa-heart"></i>
 
                 </button>
 
-                <img src="../images/sarees/saree-003/sarees-03.webp"
-                     alt="ShreevatsaDharwa Saree 003"
+                <img src="../images/sarees/saree-003/sarees-03-lifestyle.webp"
+                     alt="Festive Saree 003"
                      loading="lazy">
 
             </a>
@@ -1063,21 +1266,23 @@
             <div class="collection-product-info">
 
                 <p class="collection-product-category">
-                    SAREE
+                    Saree
                 </p>
 
                 <h3>
                     Festive Saree 003
                 </h3>
 
-                <p>
+                <p class="collection-product-description">
                     Premium curated collection
                 </p>
 
-                <a href="#"
-                   class="collection-product-cta">
+                <a href="../product.html?product=saree-003"
+                   class="collection-view-button">
+
                     View Collection
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1085,29 +1290,32 @@
         </article>
 
 
-        <!-- SUIT 003 -->
 
-        <article class="collection-product"
+        <!-- =================================================
+             SUIT 003
+        ================================================== -->
+
+        <article class="collection-product-card"
                  data-category="suit">
 
-            <a href="#"
+            <a href="../product.html?product=suit-003"
                class="collection-product-image">
 
                 <span class="collection-product-badge">
                     NEW
                 </span>
 
-                <button class="collection-product-wishlist"
+                <button class="collection-wishlist"
                         type="button"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')"
-                        aria-label="Add Suit 003 to wishlist">
+                        aria-label="Add Suit 003 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
 
                     <i class="fa-regular fa-heart"></i>
 
                 </button>
 
-                <img src="../images/suits/suit-003/suits-003.webp"
-                     alt="ShreevatsaDharwa Suit 003"
+                <img src="../images/suits/suit-003/suits-003-lifestyle.webp"
+                     alt="Festive Suit 003"
                      loading="lazy">
 
             </a>
@@ -1115,21 +1323,479 @@
             <div class="collection-product-info">
 
                 <p class="collection-product-category">
-                    SUIT
+                    Suit
                 </p>
 
                 <h3>
                     Festive Suit 003
                 </h3>
 
-                <p>
+                <p class="collection-product-description">
                     Premium curated collection
                 </p>
 
-                <a href="#"
-                   class="collection-product-cta">
+                <a href="../product.html?product=suit-003"
+                   class="collection-view-button">
+
                     View Collection
                     <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SAREE 004
+        ================================================== -->
+
+        <article class="collection-product-card"
+                 data-category="saree">
+
+            <a href="../product.html?product=saree-004"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-wishlist"
+                        type="button"
+                        aria-label="Add Saree 004 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/sarees/saree-004/sarees-04-lifestyle.webp"
+                     alt="Signature Saree 004"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    Saree
+                </p>
+
+                <h3>
+                    Signature Saree 004
+                </h3>
+
+                <p class="collection-product-description">
+                    Premium curated collection
+                </p>
+
+                <a href="../product.html?product=saree-004"
+                   class="collection-view-button">
+
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SUIT 004
+        ================================================== -->
+
+        <article class="collection-product-card"
+                 data-category="suit">
+
+            <a href="../product.html?product=suit-004"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-wishlist"
+                        type="button"
+                        aria-label="Add Suit 004 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/suits/suit-004/suits-004-lifestyle.webp"
+                     alt="Signature Suit 004"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    Suit
+                </p>
+
+                <h3>
+                    Signature Suit 004
+                </h3>
+
+                <p class="collection-product-description">
+                    Premium curated collection
+                </p>
+
+                <a href="../product.html?product=suit-004"
+                   class="collection-view-button">
+
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SAREE 005
+        ================================================== -->
+
+        <article class="collection-product-card"
+                 data-category="saree">
+
+            <a href="../product.html?product=saree-005"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-wishlist"
+                        type="button"
+                        aria-label="Add Saree 005 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/sarees/saree-005/sarees-05-lifestyle.webp"
+                     alt="Signature Saree 005"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    Saree
+                </p>
+
+                <h3>
+                    Signature Saree 005
+                </h3>
+
+                <p class="collection-product-description">
+                    Premium curated collection
+                </p>
+
+                <a href="../product.html?product=saree-005"
+                   class="collection-view-button">
+
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SUIT 005
+        ================================================== -->
+
+        <article class="collection-product-card"
+                 data-category="suit">
+
+            <a href="../product.html?product=suit-005"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-wishlist"
+                        type="button"
+                        aria-label="Add Suit 005 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/suits/suit-005/suits-005-lifestyle.webp"
+                     alt="Signature Suit 005"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    Suit
+                </p>
+
+                <h3>
+                    Signature Suit 005
+                </h3>
+
+                <p class="collection-product-description">
+                    Premium curated collection
+                </p>
+
+                <a href="../product.html?product=suit-005"
+                   class="collection-view-button">
+
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SAREE 006
+        ================================================== -->
+
+        <article class="collection-product-card"
+                 data-category="saree">
+
+            <a href="../product.html?product=saree-006"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-wishlist"
+                        type="button"
+                        aria-label="Add Saree 006 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/sarees/saree-006/sarees-06-lifestyle.webp"
+                     alt="Festive Saree 006"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    Saree
+                </p>
+
+                <h3>
+                    Festive Saree 006
+                </h3>
+
+                <p class="collection-product-description">
+                    Premium curated collection
+                </p>
+
+                <a href="../product.html?product=saree-006"
+                   class="collection-view-button">
+
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SUIT 006
+        ================================================== -->
+
+        <article class="collection-product-card"
+                 data-category="suit">
+
+            <a href="../product.html?product=suit-006"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-wishlist"
+                        type="button"
+                        aria-label="Add Suit 006 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/suits/suit-006/suits-006-lifestyle.webp"
+                     alt="Festive Suit 006"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    Suit
+                </p>
+
+                <h3>
+                    Festive Suit 006
+                </h3>
+
+                <p class="collection-product-description">
+                    Premium curated collection
+                </p>
+
+                <a href="../product.html?product=suit-006"
+                   class="collection-view-button">
+
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SAREE 007
+        ================================================== -->
+
+        <article class="collection-product-card"
+                 data-category="saree">
+
+            <a href="../product.html?product=saree-007"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-wishlist"
+                        type="button"
+                        aria-label="Add Saree 007 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/sarees/saree-007/sarees-07-lifestyle.webp"
+                     alt="Premium Saree 007"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    Saree
+                </p>
+
+                <h3>
+                    Premium Saree 007
+                </h3>
+
+                <p class="collection-product-description">
+                    Premium curated collection
+                </p>
+
+                <a href="../product.html?product=saree-007"
+                   class="collection-view-button">
+
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SUIT 007
+        ================================================== -->
+
+        <article class="collection-product-card"
+                 data-category="suit">
+
+            <a href="../product.html?product=suit-007"
+               class="collection-product-image">
+
+                <span class="collection-product-badge">
+                    NEW
+                </span>
+
+                <button class="collection-wishlist"
+                        type="button"
+                        aria-label="Add Suit 007 to wishlist"
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                <img src="../images/suits/suit-007/suits-007-lifestyle.webp"
+                     alt="Premium Suit 007"
+                     loading="lazy">
+
+            </a>
+
+            <div class="collection-product-info">
+
+                <p class="collection-product-category">
+                    Suit
+                </p>
+
+                <h3>
+                    Premium Suit 007
+                </h3>
+
+                <p class="collection-product-description">
+                    Premium curated collection
+                </p>
+
+                <a href="../product.html?product=suit-007"
+                   class="collection-view-button">
+
+                    View Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1140,49 +1806,20 @@
     </div>
 
 
-    <p class="collection-note">
+    <div class="collection-empty"
+         id="collectionEmpty">
+
+        No products found in this collection.
+
+    </div>
+
+
+    <p class="collection-bottom-message">
         More beautiful pieces are being added to our collection.
     </p>
 
 </section>
 
-
-<!-- =========================================================
-     FEATURE BANNER
-========================================================= -->
-
-<section class="collection-feature">
-
-    <div class="collection-feature-inner">
-
-        <img src="../images/banners/hero-05.webp"
-             alt="ShreevatsaDharwa festive collection"
-             loading="lazy">
-
-        <div class="collection-feature-overlay"></div>
-
-        <div class="collection-feature-content">
-
-            <p>
-                FESTIVE COLLECTION
-            </p>
-
-            <h2>
-                Celebrate every beautiful
-                moment in style.
-            </h2>
-
-            <a href="collections.html">
-                Explore Collection
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
 
 
 <!-- =========================================================
@@ -1202,7 +1839,7 @@
                class="footer-logo">
 
                 <img src="../images/logos/logo.webp"
-                     alt="ShreevatsaDharwa">
+                     alt="ShriVatsaDarbar">
 
             </a>
 
@@ -1212,26 +1849,35 @@
                 and grace in every thread.
             </p>
 
+
             <div class="footer-socials">
 
                 <a href="#"
                    aria-label="Instagram">
+
                     <i class="fa-brands fa-instagram"></i>
+
                 </a>
 
                 <a href="#"
                    aria-label="Facebook">
+
                     <i class="fa-brands fa-facebook-f"></i>
+
                 </a>
 
                 <a href="#"
                    aria-label="Pinterest">
+
                     <i class="fa-brands fa-pinterest-p"></i>
+
                 </a>
 
                 <a href="#"
                    aria-label="YouTube">
+
                     <i class="fa-brands fa-youtube"></i>
+
                 </a>
 
             </div>
@@ -1243,15 +1889,13 @@
 
         <div class="footer-column">
 
-            <h3>
-                SHOP
-            </h3>
+            <h3>SHOP</h3>
 
-            <a href="collections.html">
+            <a href="collections.html?category=saree">
                 Sarees
             </a>
 
-            <a href="collections.html">
+            <a href="collections.html?category=suit">
                 Suits
             </a>
 
@@ -1274,9 +1918,7 @@
 
         <div class="footer-column">
 
-            <h3>
-                CUSTOMER CARE
-            </h3>
+            <h3>CUSTOMER CARE</h3>
 
             <a href="../contact.html">
                 Contact Us
@@ -1305,9 +1947,7 @@
 
         <div class="footer-column">
 
-            <h3>
-                ABOUT US
-            </h3>
+            <h3>ABOUT US</h3>
 
             <a href="../our-story.html">
                 Our Story
@@ -1332,9 +1972,7 @@
 
         <div class="footer-column footer-contact">
 
-            <h3>
-                CONTACT US
-            </h3>
+            <h3>CONTACT US</h3>
 
             <a href="tel:+918826196544">
 
@@ -1375,7 +2013,7 @@
         <div class="container footer-bottom-inner">
 
             <p>
-                © 2026 ShreevatsaDharwa.
+                © 2026 ShriVatsaDarbar.
                 All Rights Reserved.
             </p>
 
@@ -1390,6 +2028,7 @@
 </footer>
 
 
+
 <!-- =========================================================
      WHATSAPP
 ========================================================= -->
@@ -1398,11 +2037,12 @@
    target="_blank"
    rel="noopener"
    class="whatsapp-float"
-   aria-label="Chat with ShreevatsaDharwa on WhatsApp">
+   aria-label="Chat with ShriVatsaDarbar on WhatsApp">
 
     <i class="fa-brands fa-whatsapp"></i>
 
 </a>
+
 
 
 <!-- =========================================================
@@ -1416,34 +2056,31 @@
 </div>
 
 
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
 
-<script src="../script.js"></script>
+<!-- =========================================================
+     FILTER SCRIPT
+========================================================= -->
 
 <script>
 
-    function filterProducts(category, button) {
+document.addEventListener("DOMContentLoaded", function () {
 
-        const products =
-            document.querySelectorAll(".collection-product");
+    const filters =
+        document.querySelectorAll(".collection-filter");
 
-        const tabs =
-            document.querySelectorAll(".collection-tab");
+    const products =
+        document.querySelectorAll(".collection-product-card");
 
-
-        tabs.forEach(function(tab) {
-
-            tab.classList.remove("active");
-
-        });
+    const emptyMessage =
+        document.getElementById("collectionEmpty");
 
 
-        button.classList.add("active");
+    function applyFilter(category) {
+
+        let visibleCount = 0;
 
 
-        products.forEach(function(product) {
+        products.forEach(function (product) {
 
             const productCategory =
                 product.getAttribute("data-category");
@@ -1456,6 +2093,8 @@
 
                 product.style.display = "";
 
+                visibleCount++;
+
             } else {
 
                 product.style.display = "none";
@@ -1464,72 +2103,125 @@
 
         });
 
+
+        if (emptyMessage) {
+
+            emptyMessage.style.display =
+                visibleCount === 0
+                    ? "block"
+                    : "none";
+
+        }
+
     }
 
-</script>
 
-    <!-- =========================================================
-     SHREEVATSA PRODUCT PAGE LINKS
-     Connect all fashion products to the master product.html
-========================================================= -->
+    filters.forEach(function (button) {
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+        button.addEventListener("click", function () {
 
-    const productLinks = document.querySelectorAll(
-        'a[href*="collections/collections.html"], a.view-details-btn'
-    );
+            filters.forEach(function (item) {
 
-    productLinks.forEach(function (link) {
+                item.classList.remove("active");
 
-        const card =
-            link.closest(".product-card") ||
-            link.closest(".collection-product-card") ||
-            link.closest("article") ||
-            link.parentElement;
+            });
 
-        if (!card) return;
 
-        const image = card.querySelector("img");
+            button.classList.add("active");
 
-        if (!image) return;
 
-        const src = image.getAttribute("src") || "";
+            const category =
+                button.getAttribute("data-filter");
 
-        let productId = "";
 
-        if (src.includes("saree-001")) {
-            productId = "saree-001";
-        }
+            applyFilter(category);
 
-        else if (src.includes("saree-002")) {
-            productId = "saree-002";
-        }
 
-        else if (src.includes("saree-003")) {
-            productId = "saree-003";
-        }
+            const url =
+                new URL(window.location.href);
 
-        else if (src.includes("suit-001")) {
-            productId = "suit-001";
-        }
 
-        else if (src.includes("suit-002")) {
-            productId = "suit-002";
-        }
+            if (category === "all") {
 
-        else if (src.includes("suit-003")) {
-            productId = "suit-003";
-        }
+                url.searchParams.delete("category");
 
-        if (productId) {
-            link.href = "../product.html?product=" + productId;
-        }
+            } else {
+
+                url.searchParams.set(
+                    "category",
+                    category
+                );
+
+            }
+
+
+            window.history.replaceState(
+                {},
+                "",
+                url
+            );
+
+        });
 
     });
 
+
+    /* =====================================================
+       READ CATEGORY FROM URL
+    ===================================================== */
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const requestedCategory =
+        params.get("category");
+
+
+    if (
+        requestedCategory === "saree" ||
+        requestedCategory === "suit"
+    ) {
+
+        const matchingFilter =
+            document.querySelector(
+                '.collection-filter[data-filter="' +
+                requestedCategory +
+                '"]'
+            );
+
+
+        if (matchingFilter) {
+
+            filters.forEach(function (item) {
+
+                item.classList.remove("active");
+
+            });
+
+
+            matchingFilter.classList.add("active");
+
+        }
+
+
+        applyFilter(requestedCategory);
+
+    } else {
+
+        applyFilter("all");
+
+    }
+
 });
+
 </script>
 
+
+<script src="../script.js"></script>
+
+
 </body>
+
 </html>
