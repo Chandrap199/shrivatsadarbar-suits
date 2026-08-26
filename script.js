@@ -1,123 +1,541 @@
-// Elite Saree & Suit Collection for Shri Vatsa Darbar
-const products = [
-    {
-        id: 1,
-        name: "Royal Crimson Banarasi Katan Silk Saree",
-        price: 18500,
-        image: "images/banners/hero-01.webp"
-    },
-    {
-        id: 2,
-        name: "Ivory Georgette Embroidered Anarkali Suit",
-        price: 14200,
-        image: "images/banners/hero-02.webp"
-    },
-    {
-        id: 3,
-        name: "Emerald Green Organza Tissue Saree",
-        price: 12800,
-        image: "images/banners/hero-03.webp"
-    },
-    {
-        id: 4,
-        name: "Pastel Mint Hand-Worked Palazzo Suit",
-        price: 16000,
-        image: "images/banners/hero-04.webp"
-    }
-];
+/* =========================================================
+   SHREEVATSIDHARWA
+   MASTER JAVASCRIPT
+========================================================= */
 
-let cart = [];
-
-// Initialize storefront display
 document.addEventListener("DOMContentLoaded", () => {
-    const grid = document.getElementById("product-grid");
-    if (grid) {
-        grid.innerHTML = products.map(p => `
-            <div class="product-card">
-                <div class="product-img-wrapper">
-                    <img src="${p.image}" alt="${p.name}" onerror="this.src='images/banners/hero-01.webp'">
-                </div>
-                <div class="product-info">
-                    <h4>${p.name}</h4>
-                    <div class="price">₹${p.price.toLocaleString('en-IN')}</div>
-                    <button class="add-to-cart-btn" onclick="addToCart(${p.id})">Add to Inquiry Cart</button>
-                </div>
-            </div>
-        `).join('');
-    }
+
+    initMobileMenu();
+
+    initHeroSlider();
+
+    initSearch();
+
 });
 
-function toggleCart() {
-    const drawer = document.getElementById("cart-drawer");
-    const overlay = document.getElementById("overlay");
-    if (drawer) drawer.classList.toggle("open");
-    if (overlay) overlay.classList.toggle("active");
-}
 
-function addToCart(productId) {
-    const product = products.find(p => p.id === productId);
-    const existing = cart.find(item => item.id === productId);
-    
-    if (existing) {
-        existing.quantity += 1;
-    } else {
-        cart.push({ ...product, quantity: 1 });
-    }
-    
-    updateCartUI();
-    toggleCart();
-}
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
-function updateCartUI() {
-    const countEl = document.getElementById("cart-count");
-    const itemsEl = document.getElementById("cart-items");
-    const totalEl = document.getElementById("cart-total-price");
-    
-    const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-    if (countEl) countEl.innerText = totalCount;
-    
-    if (!itemsEl || !totalEl) return;
+function initMobileMenu() {
 
-    if (cart.length === 0) {
-        itemsEl.innerHTML = `<p style="text-align:center; color:#888; margin-top:40px;">Your cart is empty.</p>`;
-        totalEl.innerText = `₹0`;
+    const button =
+        document.getElementById("mobileMenuButton");
+
+    const navigation =
+        document.getElementById("mainNavigation");
+
+    if (!button || !navigation) {
         return;
     }
-    
-    let totalPrice = 0;
-    itemsEl.innerHTML = cart.map(item => {
-        totalPrice += item.price * item.quantity;
-        return `
-            <div class="cart-item">
-                <img src="${item.image}" onerror="this.src='images/banners/hero-01.webp'">
-                <div class="cart-item-details">
-                    <h5>${item.name}</h5>
-                    <p>₹${item.price.toLocaleString('en-IN')} x ${item.quantity}</p>
-                </div>
-            </div>
-        `;
-    }).join('');
-    
-    totalEl.innerText = `₹${totalPrice.toLocaleString('en-IN')}`;
-}
 
-function sendToWhatsApp() {
-    if (cart.length === 0) {
-        alert("Please add at least one item to inquire.");
-        return;
-    }
-    
-    const phoneNumber = "918892439980";
-    let message = "Hello Shri Vatsa Darbar! I would like to place an inquiry/order for the following items:\n\n";
-    
-    cart.forEach((item, index) => {
-        message += `${index + 1}. *${item.name}*\n   Quantity: ${item.quantity}\n   Price: ₹${(item.price * item.quantity).toLocaleString('en-IN')}\n\n`;
+    button.addEventListener("click", () => {
+
+        const isOpen =
+            navigation.classList.toggle("open");
+
+        button.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+        document.body.classList.toggle(
+            "menu-open",
+            isOpen
+        );
+
+        const icon =
+            button.querySelector("i");
+
+        if (icon) {
+
+            icon.className =
+                isOpen
+                    ? "fa-solid fa-xmark"
+                    : "fa-solid fa-bars";
+
+        }
+
     });
-    
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    message += `*Estimated Grand Total: ₹${total.toLocaleString('en-IN')}*\n\n`;
-    message += "Please let me know about availability and shipping details.";
-    
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+
+
+    navigation
+        .querySelectorAll("a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navigation.classList.remove("open");
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                document.body.classList.remove(
+                    "menu-open"
+                );
+
+                const icon =
+                    button.querySelector("i");
+
+                if (icon) {
+                    icon.className =
+                        "fa-solid fa-bars";
+                }
+
+            });
+
+        });
+
 }
+
+
+/* =========================================================
+   HERO SLIDER
+========================================================= */
+
+function initHeroSlider() {
+
+    const slider =
+        document.getElementById("heroSlider");
+
+    if (!slider) {
+        return;
+    }
+
+    const slides =
+        slider.querySelectorAll(".hero-slide");
+
+    const dotsContainer =
+        document.getElementById("sliderDots");
+
+    const previous =
+        document.getElementById("sliderPrev");
+
+    const next =
+        document.getElementById("sliderNext");
+
+    if (!slides.length) {
+        return;
+    }
+
+    let current = 0;
+
+    let autoplay;
+
+
+    /* Create dots */
+
+    slides.forEach((slide, index) => {
+
+        const dot =
+            document.createElement("button");
+
+        dot.className =
+            "slider-dot";
+
+        dot.setAttribute(
+            "aria-label",
+            `Go to slide ${index + 1}`
+        );
+
+        dot.addEventListener(
+            "click",
+            () => {
+
+                goToSlide(index);
+
+                restartAutoplay();
+
+            }
+        );
+
+        dotsContainer.appendChild(dot);
+
+    });
+
+
+    const dots =
+        dotsContainer.querySelectorAll(
+            ".slider-dot"
+        );
+
+
+    function goToSlide(index) {
+
+        slides[current].classList.remove(
+            "active"
+        );
+
+        dots[current].classList.remove(
+            "active"
+        );
+
+        current =
+            (index + slides.length) %
+            slides.length;
+
+        slides[current].classList.add(
+            "active"
+        );
+
+        dots[current].classList.add(
+            "active"
+        );
+
+    }
+
+
+    function nextSlide() {
+
+        goToSlide(current + 1);
+
+    }
+
+
+    function previousSlide() {
+
+        goToSlide(current - 1);
+
+    }
+
+
+    function startAutoplay() {
+
+        autoplay =
+            setInterval(
+                nextSlide,
+                5500
+            );
+
+    }
+
+
+    function restartAutoplay() {
+
+        clearInterval(autoplay);
+
+        startAutoplay();
+
+    }
+
+
+    if (next) {
+
+        next.addEventListener(
+            "click",
+            () => {
+
+                nextSlide();
+
+                restartAutoplay();
+
+            }
+        );
+
+    }
+
+
+    if (previous) {
+
+        previous.addEventListener(
+            "click",
+            () => {
+
+                previousSlide();
+
+                restartAutoplay();
+
+            }
+        );
+
+    }
+
+
+    /* Keyboard support */
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "ArrowRight"
+            ) {
+
+                nextSlide();
+
+                restartAutoplay();
+
+            }
+
+            if (
+                event.key === "ArrowLeft"
+            ) {
+
+                previousSlide();
+
+                restartAutoplay();
+
+            }
+
+        }
+    );
+
+
+    /* Touch swipe */
+
+    let touchStartX = 0;
+
+    let touchEndX = 0;
+
+
+    slider.addEventListener(
+        "touchstart",
+        event => {
+
+            touchStartX =
+                event.changedTouches[0].screenX;
+
+        },
+        { passive: true }
+    );
+
+
+    slider.addEventListener(
+        "touchend",
+        event => {
+
+            touchEndX =
+                event.changedTouches[0].screenX;
+
+            const difference =
+                touchStartX - touchEndX;
+
+            if (Math.abs(difference) < 50) {
+                return;
+            }
+
+            if (difference > 0) {
+                nextSlide();
+            } else {
+                previousSlide();
+            }
+
+            restartAutoplay();
+
+        },
+        { passive: true }
+    );
+
+
+    /* Start */
+
+    goToSlide(0);
+
+    startAutoplay();
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+function initSearch() {
+
+    const searchButton =
+        document.getElementById("searchButton");
+
+    const searchOverlay =
+        document.getElementById("searchOverlay");
+
+    const searchClose =
+        document.getElementById("searchClose");
+
+    const searchInput =
+        document.getElementById("siteSearch");
+
+
+    if (
+        !searchButton ||
+        !searchOverlay
+    ) {
+        return;
+    }
+
+
+    searchButton.addEventListener(
+        "click",
+        () => {
+
+            searchOverlay.classList.add(
+                "open"
+            );
+
+            document.body.classList.add(
+                "menu-open"
+            );
+
+            setTimeout(
+                () => {
+
+                    if (searchInput) {
+                        searchInput.focus();
+                    }
+
+                },
+                250
+            );
+
+        }
+    );
+
+
+    function closeSearch() {
+
+        searchOverlay.classList.remove(
+            "open"
+        );
+
+        document.body.classList.remove(
+            "menu-open"
+        );
+
+    }
+
+
+    if (searchClose) {
+
+        searchClose.addEventListener(
+            "click",
+            closeSearch
+        );
+
+    }
+
+
+    searchOverlay.addEventListener(
+        "click",
+        event => {
+
+            if (
+                event.target ===
+                searchOverlay
+            ) {
+
+                closeSearch();
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeSearch();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   COMING SOON
+========================================================= */
+
+function showComingSoon(feature) {
+
+    const toast =
+        document.getElementById("siteToast");
+
+    if (!toast) {
+        return;
+    }
+
+    toast.textContent =
+        `${feature} will be available soon.`;
+
+    toast.classList.add("show");
+
+    setTimeout(
+        () => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        2500
+    );
+
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+function handleNewsletter(event) {
+
+    event.preventDefault();
+
+    const email =
+        document.getElementById(
+            "newsletterEmail"
+        );
+
+    if (!email || !email.value) {
+        return;
+    }
+
+    const toast =
+        document.getElementById(
+            "siteToast"
+        );
+
+    if (toast) {
+
+        toast.textContent =
+            "Thank you for joining us.";
+
+        toast.classList.add("show");
+
+        setTimeout(
+            () => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            },
+            3000
+        );
+
+    }
+
+    email.value = "";
+
+}
+
+
+/* =========================================================
+   EXPOSE FUNCTIONS
+========================================================= */
+
+window.showComingSoon =
+    showComingSoon;
+
+window.handleNewsletter =
+    handleNewsletter;
