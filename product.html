@@ -1,1323 +1,1245 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color"
-          content="#4b0713">
+<meta name="theme-color"
+      content="#4b0713">
 
-    <meta name="description"
-          id="metaDescription"
-          content="Discover premium ethnic wear curated by ShriVatsaDarbar.">
+<meta name="description"
+      id="metaDescription"
+      content="Discover premium ethnic wear curated by ShriVatsaDarbar.">
 
-    <meta name="author"
-          content="ShriVatsaDarbar">
+<meta name="author"
+      content="ShriVatsaDarbar">
 
-    <meta property="og:title"
-          id="ogTitle"
-          content="ShriVatsaDarbar | Premium Ethnic Wear">
+<meta property="og:title"
+      id="ogTitle"
+      content="ShriVatsaDarbar | Premium Ethnic Wear">
 
-    <meta property="og:description"
-          id="ogDescription"
-          content="Discover premium sarees and suits curated with timeless elegance.">
+<meta property="og:description"
+      id="ogDescription"
+      content="Discover premium sarees and suits curated with timeless elegance.">
 
-    <meta property="og:type"
-          content="product">
+<meta property="og:type"
+      content="product">
 
-    <meta property="og:url"
-          id="ogUrl"
-          content="https://suit.shrivatsadarbar.com/product.html">
+<meta property="og:url"
+      id="ogUrl"
+      content="https://suit.shrivatsadarbar.com/product.html">
 
-    <link rel="canonical"
-          id="canonicalUrl"
-          href="https://suit.shrivatsadarbar.com/product.html">
+<link rel="canonical"
+      id="canonicalUrl"
+      href="https://suit.shrivatsadarbar.com/product.html">
 
-    <link rel="icon"
-          type="image/webp"
-          href="images/logos/favicon.webp">
+<link rel="icon"
+      type="image/webp"
+      href="images/logos/favicon.webp">
 
-    <title id="pageTitle">
-        ShriVatsaDarbar | Premium Ethnic Wear
-    </title>
+<title id="pageTitle">
+    ShriVatsaDarbar | Premium Ethnic Wear
+</title>
 
 
-    <!-- GOOGLE FONTS -->
+<!-- =========================================================
+     GOOGLE FONTS
+========================================================= -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
-          rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet">
 
 
-    <!-- FONT AWESOME -->
+<!-- =========================================================
+     FONT AWESOME
+========================================================= -->
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <!-- MAIN CSS -->
+<!-- =========================================================
+     MAIN CSS
+========================================================= -->
 
-    <link rel="stylesheet"
-          href="styles.css">
+<link rel="stylesheet"
+      href="styles.css">
 
 
-    <style>
+<style>
 
-        /* =====================================================
-           PRODUCT PAGE
-        ===================================================== */
+/* =========================================================
+   PRODUCT PAGE
+========================================================= */
 
-        .product-page {
-            background: #fff;
-        }
+.product-page {
+    background: #fff;
+}
 
 
-        /* =====================================================
-           BREADCRUMB
-        ===================================================== */
+/* =========================================================
+   BREADCRUMB
+========================================================= */
 
-        .product-breadcrumb {
-            padding: 22px 0;
-            background: #faf7f2;
-            border-bottom: 1px solid #eee5d8;
-        }
+.product-breadcrumb {
+    padding: 22px 0;
+    background: #faf7f2;
+    border-bottom: 1px solid #eee5d8;
+}
 
-        .product-breadcrumb-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 30px;
+.product-breadcrumb-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
 
-            font-size: 12px;
-            color: #8c8176;
-        }
+    font-size: 12px;
+    color: #8c8176;
+}
 
-        .product-breadcrumb a {
-            color: #9a7a35;
-            text-decoration: none;
-        }
+.product-breadcrumb a {
+    color: #9a7a35;
+    text-decoration: none;
+}
 
-        .product-breadcrumb span {
-            margin: 0 10px;
-            color: #b5a99b;
-        }
+.product-breadcrumb span {
+    margin: 0 10px;
+    color: #b5a99b;
+}
 
 
-        /* =====================================================
-           PRODUCT MAIN
-        ===================================================== */
+/* =========================================================
+   PRODUCT DETAIL
+========================================================= */
 
-        .product-detail {
-            max-width: 1200px;
+.product-detail {
+    max-width: 1200px;
+    margin: 0 auto;
 
-            margin: 0 auto;
+    padding: 70px 30px 90px;
 
-            padding: 70px 30px 90px;
+    display: grid;
 
-            display: grid;
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(360px, .92fr);
 
-            grid-template-columns:
-                minmax(0, 1.08fr)
-                minmax(360px, 0.92fr);
+    gap: 70px;
 
-            gap: 70px;
+    align-items: start;
+}
 
-            align-items: start;
-        }
 
+/* =========================================================
+   PRODUCT GALLERY
+========================================================= */
 
-        /* =====================================================
-           PRODUCT GALLERY
-        ===================================================== */
+.product-gallery {
+    position: relative;
+}
 
-        .product-gallery {
-            position: relative;
-        }
+.product-main-image {
+    position: relative;
 
-        .product-main-image {
-            position: relative;
+    background: #f5eee5;
 
-            background: #f5eee5;
+    overflow: hidden;
+}
 
-            overflow: hidden;
-        }
+.product-main-image img {
+    width: 100%;
 
-        .product-main-image img {
-            width: 100%;
+    display: block;
 
-            display: block;
+    aspect-ratio: 4 / 5;
 
-            aspect-ratio: 4 / 5;
+    object-fit: cover;
 
-            object-fit: cover;
+    transition:
+        opacity .2s ease,
+        transform .3s ease;
+}
 
-            transition:
-                opacity .2s ease,
-                transform .3s ease;
-        }
+.product-gallery-badge {
+    position: absolute;
 
-        .product-gallery-badge {
-            position: absolute;
+    top: 18px;
+    left: 18px;
 
-            top: 18px;
-            left: 18px;
+    z-index: 5;
 
-            z-index: 5;
+    background: #b88a2d;
 
-            background: #b88a2d;
-            color: #fff;
+    color: #fff;
 
-            padding: 8px 14px;
+    padding: 8px 14px;
 
-            font-family:
-                "DM Sans",
-                sans-serif;
+    font:
+        600 10px
+        "DM Sans",
+        sans-serif;
 
-            font-size: 10px;
+    letter-spacing: 1.5px;
+}
 
-            letter-spacing: 1.5px;
 
-            font-weight: 600;
-        }
+/* =========================================================
+   GALLERY ARROWS
+========================================================= */
 
+.gallery-arrow {
+    position: absolute;
 
-        /* =====================================================
-           GALLERY NAVIGATION
-        ===================================================== */
+    top: 50%;
 
-        .gallery-arrow {
-            position: absolute;
+    transform:
+        translateY(-50%);
 
-            top: 50%;
+    z-index: 5;
 
-            transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
 
-            z-index: 5;
+    border: 0;
 
-            width: 42px;
-            height: 42px;
+    border-radius: 50%;
 
-            border: 0;
+    background:
+        rgba(255,255,255,.94);
 
-            border-radius: 50%;
+    color: #4b0713;
 
-            background: rgba(255,255,255,.94);
+    display: flex;
 
-            color: #4b0713;
+    align-items: center;
+    justify-content: center;
 
-            display: flex;
+    cursor: pointer;
 
-            align-items: center;
-            justify-content: center;
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.08);
+}
 
-            cursor: pointer;
+.gallery-arrow:hover {
+    background: #4b0713;
+    color: #fff;
+}
 
-            box-shadow:
-                0 5px 18px rgba(0,0,0,.08);
+.gallery-arrow-left {
+    left: 15px;
+}
 
-            transition:
-                background .25s ease,
-                transform .25s ease;
-        }
+.gallery-arrow-right {
+    right: 15px;
+}
 
-        .gallery-arrow:hover {
-            background: #4b0713;
-            color: #fff;
-        }
 
-        .gallery-arrow-left {
-            left: 15px;
-        }
+/* =========================================================
+   PRODUCT THUMBNAILS
+========================================================= */
 
-        .gallery-arrow-right {
-            right: 15px;
-        }
+.product-thumbnails {
+    display: grid;
 
+    grid-template-columns:
+        repeat(3, 1fr);
 
-        /* =====================================================
-           THUMBNAILS
-        ===================================================== */
+    gap: 10px;
 
-        .product-thumbnails {
-            display: grid;
+    margin-top: 12px;
+}
 
-            grid-template-columns:
-                repeat(3, 1fr);
+.product-thumbnail {
+    position: relative;
 
-            gap: 10px;
+    padding: 0;
 
-            margin-top: 12px;
-        }
+    border:
+        1px solid #e3d8ca;
 
-        .product-thumbnail {
-            position: relative;
+    background: #f5eee5;
 
-            padding: 0;
+    cursor: pointer;
 
-            border:
-                1px solid #e3d8ca;
+    overflow: hidden;
+}
 
-            background: #f5eee5;
+.product-thumbnail.active {
+    border-color: #b88a2d;
 
-            cursor: pointer;
+    box-shadow:
+        0 0 0 1px #b88a2d;
+}
 
-            overflow: hidden;
+.product-thumbnail img {
+    width: 100%;
 
-            transition:
-                border-color .25s ease,
-                transform .25s ease;
-        }
+    display: block;
 
-        .product-thumbnail:hover {
-            transform: translateY(-2px);
-        }
+    aspect-ratio: 1 / 1.12;
 
-        .product-thumbnail.active {
-            border-color: #b88a2d;
+    object-fit: cover;
+}
 
-            box-shadow:
-                0 0 0 1px #b88a2d;
-        }
+.product-thumbnail-label {
+    position: absolute;
 
-        .product-thumbnail img {
-            width: 100%;
+    left: 6px;
+    bottom: 6px;
 
-            display: block;
+    padding: 4px 7px;
 
-            aspect-ratio: 1 / 1.12;
+    background:
+        rgba(75,7,19,.88);
 
-            object-fit: cover;
-        }
+    color: #fff;
 
-        .product-thumbnail-label {
-            position: absolute;
+    font-size: 8px;
 
-            left: 6px;
-            bottom: 6px;
+    letter-spacing: 1px;
 
-            padding: 4px 7px;
+    text-transform: uppercase;
+}
 
-            background: rgba(75,7,19,.88);
 
-            color: #fff;
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
 
-            font-size: 8px;
+.product-information {
+    padding-top: 8px;
+}
 
-            letter-spacing: 1px;
+.product-category-label {
+    margin: 0 0 12px;
 
-            text-transform: uppercase;
-        }
+    color: #a47d32;
 
+    font-size: 11px;
 
-        /* =====================================================
-           PRODUCT INFORMATION
-        ===================================================== */
+    letter-spacing: 3px;
 
-        .product-information {
-            padding-top: 8px;
-        }
+    text-transform: uppercase;
+}
 
-        .product-category-label {
-            margin: 0 0 12px;
+.product-title {
+    margin: 0;
 
-            color: #a47d32;
+    font:
+        500
+        clamp(40px,5vw,62px)
+        /.98
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            font-size: 11px;
+    color: #201b18;
+}
 
-            letter-spacing: 3px;
+.product-subtitle {
+    margin: 18px 0 0;
 
-            text-transform: uppercase;
-        }
+    font:
+        20px/1.5
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-        .product-title {
-            margin: 0;
+    color: #776d65;
+}
 
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
 
-            font-size:
-                clamp(40px, 5vw, 62px);
+/* =========================================================
+   ORNAMENT
+========================================================= */
 
-            line-height: .98;
+.product-ornament {
+    display: flex;
 
-            font-weight: 500;
+    align-items: center;
 
-            color: #201b18;
-        }
+    gap: 10px;
 
-        .product-subtitle {
-            margin: 18px 0 0;
+    margin: 25px 0;
+}
 
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
+.product-ornament span {
+    width: 42px;
+    height: 1px;
 
-            font-size: 20px;
+    background: #c5a05a;
+}
 
-            line-height: 1.5;
+.product-ornament i {
+    font-size: 8px;
+    color: #b88a2d;
+}
 
-            color: #776d65;
-        }
 
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
-        /* =====================================================
-           ORNAMENT
-        ===================================================== */
+.product-description {
+    font-size: 15px;
 
-        .product-ornament {
-            display: flex;
+    line-height: 1.8;
 
-            align-items: center;
+    color: #625a54;
 
-            gap: 10px;
+    max-width: 580px;
+}
 
-            margin: 25px 0;
-        }
 
-        .product-ornament span {
-            width: 42px;
+/* =========================================================
+   PRODUCT META
+========================================================= */
 
-            height: 1px;
+.product-meta {
+    margin-top: 30px;
 
-            background: #c5a05a;
-        }
+    padding: 22px 0;
 
-        .product-ornament i {
-            font-size: 8px;
+    border-top:
+        1px solid #e9e0d5;
 
-            color: #b88a2d;
-        }
+    border-bottom:
+        1px solid #e9e0d5;
+}
 
+.product-meta-row {
+    display: flex;
 
-        /* =====================================================
-           DESCRIPTION
-        ===================================================== */
+    justify-content: space-between;
 
-        .product-description {
-            font-size: 15px;
+    gap: 20px;
 
-            line-height: 1.8;
+    padding: 9px 0;
 
-            color: #625a54;
+    font-size: 13px;
+}
 
-            max-width: 580px;
-        }
+.product-meta-row strong {
+    color: #332a25;
+    font-weight: 600;
+}
 
+.product-meta-row span {
+    color: #766c63;
+    text-align: right;
+}
 
-        /* =====================================================
-           PRODUCT META
-        ===================================================== */
 
-        .product-meta {
-            margin-top: 30px;
+/* =========================================================
+   PURCHASE
+========================================================= */
 
-            padding: 22px 0;
+.product-purchase {
+    margin-top: 30px;
+}
 
-            border-top:
-                1px solid #e9e0d5;
+.quantity-heading {
+    margin-bottom: 9px;
 
-            border-bottom:
-                1px solid #e9e0d5;
-        }
+    font-size: 10px;
 
-        .product-meta-row {
-            display: flex;
+    letter-spacing: 1.5px;
 
-            justify-content: space-between;
+    text-transform: uppercase;
 
-            gap: 20px;
+    color: #766b62;
+}
 
-            padding: 9px 0;
+.quantity-row {
+    display: flex;
 
-            font-size: 13px;
-        }
+    align-items: center;
 
-        .product-meta-row strong {
-            color: #332a25;
+    gap: 10px;
+}
 
-            font-weight: 600;
-        }
+.quantity-control {
+    display: flex;
 
-        .product-meta-row span {
-            color: #766c63;
+    align-items: center;
 
-            text-align: right;
-        }
+    border:
+        1px solid #d8cbbb;
 
+    background: #fff;
+}
 
-        /* =====================================================
-           QUANTITY
-        ===================================================== */
+.quantity-button {
+    width: 43px;
+    height: 43px;
 
-        .product-purchase {
-            margin-top: 30px;
-        }
+    border: 0;
 
-        .quantity-heading {
-            margin-bottom: 9px;
+    background: transparent;
 
-            font-size: 10px;
+    color: #4b0713;
 
-            letter-spacing: 1.5px;
+    font-size: 16px;
 
-            text-transform: uppercase;
+    cursor: pointer;
+}
 
-            color: #766b62;
-        }
+.quantity-value {
+    min-width: 40px;
 
-        .quantity-row {
-            display: flex;
+    text-align: center;
 
-            align-items: center;
+    font:
+        600 13px
+        "DM Sans",
+        sans-serif;
 
-            gap: 10px;
-        }
+    color: #332a25;
+}
 
-        .quantity-control {
-            display: flex;
+.quantity-reset {
+    height: 43px;
 
-            align-items: center;
+    padding: 0 15px;
 
-            border:
-                1px solid #d8cbbb;
+    border:
+        1px solid #d8cbbb;
 
-            background: #fff;
-        }
+    background: #fff;
 
-        .quantity-button {
-            width: 43px;
-            height: 43px;
+    color: #766b62;
 
-            border: 0;
+    font:
+        9px
+        "DM Sans",
+        sans-serif;
 
-            background: transparent;
+    letter-spacing: 1px;
 
-            color: #4b0713;
+    text-transform: uppercase;
 
-            font-size: 16px;
+    cursor: pointer;
+}
 
-            cursor: pointer;
 
-            transition:
-                background .2s ease;
-        }
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
 
-        .quantity-button:hover {
-            background: #faf5ee;
-        }
+.product-action-buttons {
+    display: grid;
 
-        .quantity-value {
-            min-width: 40px;
+    grid-template-columns:
+        1fr 1fr;
 
-            text-align: center;
+    gap: 10px;
 
-            font-family:
-                "DM Sans",
-                sans-serif;
+    margin-top: 15px;
+}
 
-            font-size: 13px;
+.product-add-cart-button,
+.product-order-button {
 
-            font-weight: 600;
+    min-height: 54px;
 
-            color: #332a25;
-        }
+    display: flex;
 
-        .quantity-reset {
-            height: 43px;
+    align-items: center;
+    justify-content: center;
 
-            padding: 0 15px;
+    gap: 10px;
 
-            border:
-                1px solid #d8cbbb;
+    padding: 14px 18px;
 
-            background: #fff;
+    text-decoration: none;
 
-            color: #766b62;
+    font:
+        600 11px
+        "DM Sans",
+        sans-serif;
 
-            font-family:
-                "DM Sans",
-                sans-serif;
+    letter-spacing: 1px;
 
-            font-size: 9px;
+    text-transform: uppercase;
 
-            letter-spacing: 1px;
+    cursor: pointer;
+}
 
-            text-transform: uppercase;
+.product-add-cart-button {
+    border:
+        1px solid #4b0713;
 
-            cursor: pointer;
+    background: #fff;
 
-            transition:
-                background .2s ease,
-                color .2s ease;
-        }
+    color: #4b0713;
+}
 
-        .quantity-reset:hover {
-            background: #4b0713;
+.product-add-cart-button:hover {
+    background: #4b0713;
+    color: #fff;
+}
 
-            color: #fff;
+.product-order-button {
+    border:
+        1px solid #4b0713;
 
-            border-color: #4b0713;
-        }
+    background: #4b0713;
 
+    color: #fff;
+}
 
-        /* =====================================================
-           ACTION BUTTONS
-        ===================================================== */
+.product-order-button:hover {
+    background: #65091a;
+}
 
-        .product-action-buttons {
-            display: grid;
+.product-order-note {
+    margin: 12px 0 0;
 
-            grid-template-columns:
-                1fr 1fr;
+    text-align: center;
 
-            gap: 10px;
+    font-size: 12px;
 
-            margin-top: 15px;
-        }
+    color: #8a8077;
+}
 
-        .product-add-cart-button,
-        .product-order-button {
-            min-height: 54px;
 
-            display: flex;
+/* =========================================================
+   TRUST FEATURES
+========================================================= */
 
-            align-items: center;
+.product-trust {
+    margin-top: 35px;
 
-            justify-content: center;
+    display: grid;
 
-            gap: 10px;
+    grid-template-columns:
+        repeat(2,1fr);
 
-            padding: 14px 18px;
+    border-top:
+        1px solid #e9e0d5;
+}
 
-            text-decoration: none;
+.product-trust-item {
+    display: flex;
 
-            font-family:
-                "DM Sans",
-                sans-serif;
+    align-items: center;
 
-            font-size: 11px;
+    gap: 13px;
 
-            font-weight: 600;
+    padding: 18px 12px 18px 0;
 
-            letter-spacing: 1px;
+    border-bottom:
+        1px solid #e9e0d5;
+}
 
-            text-transform: uppercase;
+.product-trust-item:nth-child(even) {
+    padding-left: 15px;
 
-            cursor: pointer;
+    border-left:
+        1px solid #e9e0d5;
+}
 
-            transition:
-                background .25s ease,
-                color .25s ease,
-                transform .25s ease;
-        }
+.product-trust-icon {
+    color: #b88a2d;
 
-        .product-add-cart-button {
-            border:
-                1px solid #4b0713;
+    font-size: 17px;
 
-            background: #fff;
+    min-width: 22px;
+}
 
-            color: #4b0713;
-        }
+.product-trust-text strong {
+    display: block;
 
-        .product-add-cart-button:hover {
-            background: #4b0713;
+    font:
+        15px
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            color: #fff;
+    color: #352c27;
+}
 
-            transform: translateY(-2px);
-        }
+.product-trust-text span {
+    display: block;
 
-        .product-order-button {
-            border:
-                1px solid #4b0713;
+    margin-top: 3px;
 
-            background: #4b0713;
+    font-size: 11px;
 
-            color: #fff;
-        }
+    color: #877d74;
+}
 
-        .product-order-button:hover {
-            background: #65091a;
 
-            border-color: #65091a;
+/* =========================================================
+   PRODUCT STORY
+========================================================= */
 
-            transform: translateY(-2px);
-        }
+.product-story {
+    background: #faf6ef;
 
-        .product-add-cart-button i,
-        .product-order-button i {
-            font-size: 16px;
-        }
+    border-top:
+        1px solid #eee4d7;
 
-        .product-order-note {
-            margin: 12px 0 0;
+    border-bottom:
+        1px solid #eee4d7;
+}
 
-            text-align: center;
+.product-story-inner {
+    max-width: 900px;
 
-            font-size: 12px;
+    margin: 0 auto;
 
-            color: #8a8077;
-        }
+    padding: 75px 30px;
 
+    text-align: center;
+}
 
-        /* =====================================================
-           TRUST ITEMS
-        ===================================================== */
+.product-story-eyebrow {
+    margin: 0 0 12px;
 
-        .product-trust {
-            margin-top: 35px;
+    font-size: 10px;
 
-            display: grid;
+    letter-spacing: 3px;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+    color: #a47d32;
+}
 
-            border-top:
-                1px solid #e9e0d5;
-        }
+.product-story h2 {
+    margin: 0;
 
-        .product-trust-item {
-            display: flex;
+    font:
+        500
+        clamp(34px,5vw,48px)
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            align-items: center;
+    color: #241e1a;
+}
 
-            gap: 13px;
+.product-story p {
+    max-width: 700px;
 
-            padding: 18px 12px 18px 0;
+    margin: 22px auto 0;
 
-            border-bottom:
-                1px solid #e9e0d5;
-        }
+    font-size: 15px;
 
-        .product-trust-item:nth-child(even) {
-            padding-left: 15px;
+    line-height: 1.9;
 
-            border-left:
-                1px solid #e9e0d5;
-        }
+    color: #6e655e;
+}
 
-        .product-trust-icon {
-            color: #b88a2d;
 
-            font-size: 17px;
+/* =========================================================
+   PRODUCT ERROR
+========================================================= */
 
-            min-width: 22px;
-        }
+.product-error {
+    max-width: 800px;
 
-        .product-trust-text strong {
-            display: block;
+    margin: 80px auto;
 
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
+    padding: 60px 30px;
 
-            font-size: 15px;
+    text-align: center;
+}
 
-            color: #352c27;
-        }
+.product-error h1 {
+    font:
+        500 48px
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-        .product-trust-text span {
-            display: block;
+    color: #241e1a;
+}
 
-            margin-top: 3px;
+.product-error p {
+    color: #756c64;
 
-            font-size: 11px;
+    margin: 15px 0 30px;
+}
 
-            color: #877d74;
-        }
+.product-error a {
+    display: inline-block;
 
+    padding: 14px 28px;
 
-        /* =====================================================
-           PRODUCT STORY
-        ===================================================== */
+    background: #4b0713;
 
-        .product-story {
-            background: #faf6ef;
+    color: #fff;
 
-            border-top:
-                1px solid #eee4d7;
+    text-decoration: none;
 
-            border-bottom:
-                1px solid #eee4d7;
-        }
+    font-size: 12px;
 
-        .product-story-inner {
-            max-width: 900px;
+    letter-spacing: 1px;
 
-            margin: 0 auto;
+    text-transform: uppercase;
+}
 
-            padding: 75px 30px;
 
-            text-align: center;
-        }
+/* =========================================================
+   CART OVERLAY
+========================================================= */
 
-        .product-story-eyebrow {
-            margin: 0 0 12px;
+.cart-overlay {
+    position: fixed;
 
-            font-size: 10px;
+    inset: 0;
 
-            letter-spacing: 3px;
+    z-index: 9998;
 
-            color: #a47d32;
-        }
+    background:
+        rgba(30,20,15,.45);
 
-        .product-story h2 {
-            margin: 0;
+    opacity: 0;
 
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
+    visibility: hidden;
 
-            font-size:
-                clamp(34px, 5vw, 48px);
+    transition: .3s;
+}
 
-            font-weight: 500;
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
 
-            color: #241e1a;
-        }
 
-        .product-story p {
-            max-width: 700px;
+/* =========================================================
+   CART DRAWER
+========================================================= */
 
-            margin: 22px auto 0;
+.cart-drawer {
+    position: fixed;
 
-            font-size: 15px;
+    top: 0;
+    right: 0;
 
-            line-height: 1.9;
+    z-index: 9999;
 
-            color: #6e655e;
-        }
+    width:
+        min(440px,100%);
 
+    height: 100vh;
 
-        /* =====================================================
-           ERROR
-        ===================================================== */
+    background: #fff;
 
-        .product-error {
-            max-width: 800px;
+    display: flex;
 
-            margin: 80px auto;
+    flex-direction: column;
 
-            padding: 60px 30px;
+    transform:
+        translateX(100%);
 
-            text-align: center;
-        }
+    transition:
+        transform .35s ease;
 
-        .product-error h1 {
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
+    box-shadow:
+        -10px 0 35px rgba(0,0,0,.12);
+}
 
-            font-size: 48px;
+.cart-drawer.active {
+    transform:
+        translateX(0);
+}
 
-            font-weight: 500;
 
-            color: #241e1a;
-        }
+/* =========================================================
+   CART HEADER
+========================================================= */
 
-        .product-error p {
-            color: #756c64;
+.cart-header {
+    display: flex;
 
-            margin: 15px 0 30px;
-        }
+    align-items: center;
+    justify-content: space-between;
 
-        .product-error a {
-            display: inline-block;
+    padding: 22px 25px;
 
-            padding: 14px 28px;
+    border-bottom:
+        1px solid #e9e0d5;
+}
 
-            background: #4b0713;
+.cart-header h2 {
+    margin: 0;
 
-            color: #fff;
+    font:
+        500 30px
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            text-decoration: none;
+    color: #241e1a;
+}
 
-            font-size: 12px;
+.cart-close {
+    width: 38px;
+    height: 38px;
 
-            letter-spacing: 1px;
+    border: 0;
 
-            text-transform: uppercase;
-        }
+    background: #faf6ef;
 
+    color: #4b0713;
 
-        /* =====================================================
-           CART DRAWER
-        ===================================================== */
+    border-radius: 50%;
 
-        .cart-overlay {
-            position: fixed;
+    cursor: pointer;
+}
 
-            inset: 0;
 
-            z-index: 9998;
+/* =========================================================
+   CART BODY
+========================================================= */
 
-            background:
-                rgba(30,20,15,.45);
+.cart-body {
+    flex: 1;
 
-            opacity: 0;
+    overflow-y: auto;
 
-            visibility: hidden;
+    padding: 20px 25px;
+}
 
-            transition:
-                opacity .3s ease,
-                visibility .3s ease;
-        }
+.cart-empty {
+    text-align: center;
 
-        .cart-overlay.active {
-            opacity: 1;
+    padding: 70px 20px;
 
-            visibility: visible;
-        }
+    color: #82766d;
+}
 
-        .cart-drawer {
-            position: fixed;
+.cart-empty i {
+    display: block;
 
-            top: 0;
-            right: 0;
+    margin-bottom: 18px;
 
-            z-index: 9999;
+    font-size: 38px;
 
-            width:
-                min(440px, 100%);
+    color: #b88a2d;
+}
 
-            height: 100vh;
+.cart-empty strong {
+    display: block;
 
-            background: #fff;
+    font:
+        500 26px
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            display: flex;
+    color: #342b26;
+}
 
-            flex-direction: column;
+.cart-empty span {
+    display: block;
 
-            transform:
-                translateX(100%);
+    margin-top: 8px;
 
-            transition:
-                transform .35s ease;
+    font-size: 12px;
+}
 
-            box-shadow:
-                -10px 0 35px rgba(0,0,0,.12);
-        }
 
-        .cart-drawer.active {
-            transform:
-                translateX(0);
-        }
+/* =========================================================
+   CART ITEM
+========================================================= */
 
-        .cart-header {
-            display: flex;
+.cart-item {
+    display: grid;
 
-            align-items: center;
+    grid-template-columns:
+        75px 1fr auto;
 
-            justify-content: space-between;
+    gap: 13px;
 
-            padding: 22px 25px;
+    padding: 15px 0;
 
-            border-bottom:
-                1px solid #e9e0d5;
-        }
+    border-bottom:
+        1px solid #eee5db;
+}
 
-        .cart-header h2 {
-            margin: 0;
+.cart-item-image {
+    width: 75px;
+    height: 90px;
 
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
+    object-fit: cover;
 
-            font-size: 30px;
+    background: #f5eee5;
+}
 
-            font-weight: 500;
+.cart-item-details h3 {
+    margin: 0 0 5px;
 
-            color: #241e1a;
-        }
+    font:
+        500 19px/1.1
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-        .cart-close {
-            width: 38px;
-            height: 38px;
+    color: #302722;
+}
 
-            border: 0;
+.cart-item-code {
+    font-size: 9px;
 
-            background: #faf6ef;
+    color: #988c82;
 
-            color: #4b0713;
+    letter-spacing: .7px;
+}
 
-            border-radius: 50%;
+.cart-item-controls {
+    display: flex;
 
-            cursor: pointer;
+    align-items: center;
 
-            font-size: 16px;
-        }
+    margin-top: 12px;
+}
 
-        .cart-body {
-            flex: 1;
+.cart-qty-button {
+    width: 28px;
+    height: 28px;
 
-            overflow-y: auto;
+    border:
+        1px solid #ddd0c0;
 
-            padding: 20px 25px;
-        }
+    background: #fff;
 
-        .cart-empty {
-            text-align: center;
+    color: #4b0713;
 
-            padding: 70px 20px;
+    cursor: pointer;
+}
 
-            color: #82766d;
-        }
+.cart-qty-value {
+    min-width: 30px;
 
-        .cart-empty i {
-            display: block;
+    text-align: center;
 
-            margin-bottom: 18px;
+    font-size: 11px;
+}
 
-            font-size: 38px;
+.cart-remove {
+    border: 0;
 
-            color: #b88a2d;
-        }
+    background: transparent;
 
-        .cart-empty strong {
-            display: block;
+    color: #9a8d82;
 
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
+    cursor: pointer;
+}
 
-            font-size: 26px;
 
-            font-weight: 500;
+/* =========================================================
+   CART FOOTER
+========================================================= */
 
-            color: #342b26;
-        }
+.cart-footer {
+    border-top:
+        1px solid #e9e0d5;
 
-        .cart-empty span {
-            display: block;
+    padding: 18px 25px;
+}
 
-            margin-top: 8px;
+.cart-summary {
+    display: flex;
 
-            font-size: 12px;
-        }
+    justify-content: space-between;
 
-        .cart-item {
-            display: grid;
+    margin-bottom: 14px;
 
-            grid-template-columns: 75px 1fr auto;
+    font-size: 12px;
 
-            gap: 13px;
+    color: #6f655d;
+}
 
-            padding: 15px 0;
+.cart-whatsapp {
+    width: 100%;
 
-            border-bottom:
-                1px solid #eee5db;
-        }
+    padding: 14px;
 
-        .cart-item-image {
-            width: 75px;
-            height: 90px;
+    border: 0;
 
-            object-fit: cover;
+    background: #4b0713;
 
-            background: #f5eee5;
-        }
+    color: #fff;
 
-        .cart-item-details h3 {
-            margin: 0 0 5px;
+    font:
+        10px
+        "DM Sans",
+        sans-serif;
 
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
+    letter-spacing: 1px;
 
-            font-size: 19px;
+    text-transform: uppercase;
 
-            font-weight: 500;
+    cursor: pointer;
+}
 
-            line-height: 1.1;
+.cart-clear {
+    width: 100%;
 
-            color: #302722;
-        }
+    margin-top: 8px;
 
-        .cart-item-code {
-            font-size: 9px;
+    border: 0;
 
-            color: #988c82;
+    background: transparent;
 
-            letter-spacing: .7px;
-        }
+    color: #8a7c71;
 
-        .cart-item-controls {
-            display: flex;
+    padding: 9px;
 
-            align-items: center;
+    font-size: 9px;
 
-            margin-top: 12px;
-        }
+    letter-spacing: 1px;
 
-        .cart-qty-button {
-            width: 28px;
-            height: 28px;
+    text-transform: uppercase;
 
-            border:
-                1px solid #ddd0c0;
+    cursor: pointer;
+}
 
-            background: #fff;
 
-            color: #4b0713;
+/* =========================================================
+   BAG COUNT
+========================================================= */
 
-            cursor: pointer;
-        }
+.bag-count {
+    position: absolute;
 
-        .cart-qty-value {
-            min-width: 34px;
+    top: -4px;
+    right: -5px;
 
-            text-align: center;
+    min-width: 17px;
+    height: 17px;
 
-            font-size: 11px;
+    padding: 0 4px;
 
-            font-weight: 600;
+    display: flex;
 
-            color: #3d332d;
-        }
+    align-items: center;
+    justify-content: center;
 
-        .cart-remove {
-            align-self: start;
+    border-radius: 50%;
 
-            border: 0;
+    background: #b88a2d;
 
-            background: transparent;
+    color: #fff;
 
-            color: #9a8e84;
+    font-size: 8px;
+}
 
-            cursor: pointer;
+.bag-button {
+    position: relative;
+}
 
-            font-size: 13px;
-        }
 
-        .cart-remove:hover {
-            color: #4b0713;
-        }
+/* =========================================================
+   TOAST
+========================================================= */
 
-        .cart-footer {
-            padding: 20px 25px 25px;
+.site-toast {
+    position: fixed;
 
-            border-top:
-                1px solid #e9e0d5;
+    left: 50%;
 
-            background: #fff;
-        }
+    bottom: 25px;
 
-        .cart-summary {
-            display: flex;
+    z-index: 10001;
 
-            justify-content: space-between;
+    transform:
+        translate(-50%,20px);
 
-            margin-bottom: 15px;
+    opacity: 0;
 
-            font-size: 12px;
+    visibility: hidden;
 
-            color: #756a61;
-        }
+    padding: 12px 18px;
 
-        .cart-summary strong {
-            color: #332923;
-        }
+    background: #4b0713;
 
-        .cart-whatsapp {
-            width: 100%;
+    color: #fff;
 
-            min-height: 50px;
+    font-size: 11px;
 
-            border: 0;
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.18);
 
-            background: #4b0713;
+    transition: .25s;
+}
 
-            color: #fff;
+.site-toast.active {
+    opacity: 1;
 
-            display: flex;
+    visibility: visible;
 
-            align-items: center;
+    transform:
+        translate(-50%,0);
+}
 
-            justify-content: center;
 
-            gap: 10px;
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-            font-family:
-                "DM Sans",
-                sans-serif;
+@media (max-width: 900px) {
 
-            font-size: 11px;
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
 
-            font-weight: 600;
+    .product-information {
+        padding-top: 0;
+    }
 
-            letter-spacing: 1px;
+}
 
-            text-transform: uppercase;
 
-            cursor: pointer;
-        }
+@media (max-width: 600px) {
 
-        .cart-whatsapp:hover {
-            background: #65091a;
-        }
+    .product-detail {
+        padding: 45px 15px 60px;
+    }
 
-        .cart-clear {
-            width: 100%;
+    .product-breadcrumb-inner {
+        padding: 0 18px;
+    }
 
-            margin-top: 9px;
+    .product-title {
+        font-size: 45px;
+    }
 
-            padding: 11px;
+    .product-subtitle {
+        font-size: 18px;
+    }
 
-            border: 0;
+    .product-action-buttons {
+        grid-template-columns: 1fr;
+    }
 
-            background: transparent;
+    .product-trust {
+        grid-template-columns: 1fr;
+    }
 
-            color: #887c73;
+    .product-trust-item:nth-child(even) {
+        padding-left: 0;
+        border-left: 0;
+    }
 
-            font-size: 10px;
+    .cart-drawer {
+        width: 100%;
+    }
 
-            letter-spacing: 1px;
+}
 
-            text-transform: uppercase;
-
-            cursor: pointer;
-        }
-
-        .cart-clear:hover {
-            color: #4b0713;
-        }
-
-
-        /* =====================================================
-           CART COUNT
-        ===================================================== */
-
-        .bag-button {
-            position: relative;
-        }
-
-        .bag-count {
-            position: absolute;
-
-            top: -3px;
-            right: -3px;
-
-            min-width: 17px;
-            height: 17px;
-
-            padding: 0 4px;
-
-            border-radius: 50%;
-
-            background: #b88a2d;
-
-            color: #fff;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            font-size: 8px;
-
-            font-weight: 600;
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 900px) {
-
-            .product-detail {
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-
-                padding-top: 45px;
-            }
-
-            .product-information {
-                padding-top: 0;
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            .product-breadcrumb-inner {
-                padding: 0 18px;
-            }
-
-            .product-detail {
-                padding: 35px 18px 60px;
-
-                gap: 35px;
-            }
-
-            .product-title {
-                font-size: 43px;
-            }
-
-            .product-subtitle {
-                font-size: 18px;
-            }
-
-            .product-description {
-                font-size: 14px;
-            }
-
-            .product-trust {
-                grid-template-columns: 1fr;
-            }
-
-            .product-trust-item,
-            .product-trust-item:nth-child(even) {
-                padding-left: 0;
-
-                border-left: 0;
-            }
-
-            .product-story-inner {
-                padding: 55px 22px;
-            }
-
-            .product-action-buttons {
-                grid-template-columns: 1fr;
-            }
-
-            .product-thumbnails {
-                gap: 7px;
-            }
-
-            .gallery-arrow {
-                width: 36px;
-                height: 36px;
-            }
-
-            .cart-drawer {
-                width: 100%;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -1338,14 +1260,18 @@
             FREE SHIPPING on Prepaid Orders
         </span>
 
-        <span class="announcement-divider">|</span>
+        <span class="announcement-divider">
+            |
+        </span>
 
         <span>
             <i class="fa-solid fa-sparkles"></i>
             Premium Quality Fabrics
         </span>
 
-        <span class="announcement-divider">|</span>
+        <span class="announcement-divider">
+            |
+        </span>
 
         <span>
             <i class="fa-solid fa-sparkles"></i>
@@ -1358,7 +1284,6 @@
            class="announcement-whatsapp">
 
             <i class="fa-brands fa-whatsapp"></i>
-
             Order on WhatsApp
 
         </a>
@@ -1440,7 +1365,6 @@
 
             </button>
 
-
             <button class="icon-button"
                     aria-label="Wishlist"
                     onclick="showComingSoon('Wishlist')">
@@ -1448,7 +1372,6 @@
                 <i class="fa-regular fa-heart"></i>
 
             </button>
-
 
             <button class="icon-button"
                     aria-label="Account"
@@ -1458,10 +1381,10 @@
 
             </button>
 
-
             <button class="icon-button bag-button"
-                    id="cartButton"
-                    aria-label="Shopping bag">
+                    id="shoppingBagButton"
+                    aria-label="Open shopping bag"
+                    type="button">
 
                 <i class="fa-solid fa-bag-shopping"></i>
 
@@ -1479,6 +1402,7 @@
 </header>
 
 
+
 <!-- =========================================================
      SEARCH
 ========================================================= -->
@@ -1493,7 +1417,6 @@
         <i class="fa-solid fa-xmark"></i>
 
     </button>
-
 
     <div class="search-box">
 
@@ -1530,7 +1453,9 @@
 
         <a id="breadcrumbCategoryLink"
            href="collections/collections.html">
+
             Collection
+
         </a>
 
         <span>/</span>
@@ -1546,29 +1471,26 @@
 
 
 <!-- =========================================================
-     PRODUCT CONTENT
+     PRODUCT PAGE
 ========================================================= -->
 
 <main class="product-page"
       id="productPage">
 
-
     <section class="product-detail">
 
 
         <!-- =================================================
-             GALLERY
-        ================================================= -->
+             PRODUCT GALLERY
+        ================================================== -->
 
         <div class="product-gallery">
-
 
             <div class="product-main-image">
 
                 <span class="product-gallery-badge">
                     NEW
                 </span>
-
 
                 <button class="gallery-arrow gallery-arrow-left"
                         id="galleryPrev"
@@ -1579,11 +1501,9 @@
 
                 </button>
 
-
                 <img id="productImage"
                      src=""
                      alt="">
-
 
                 <button class="gallery-arrow gallery-arrow-right"
                         id="galleryNext"
@@ -1607,22 +1527,19 @@
 
         <!-- =================================================
              PRODUCT INFORMATION
-        ================================================= -->
+        ================================================== -->
 
         <div class="product-information">
 
-
             <p class="product-category-label"
                id="productCategory">
-                Saree
+                SAREE
             </p>
-
 
             <h1 class="product-title"
                 id="productTitle">
                 Product
             </h1>
-
 
             <p class="product-subtitle"
                id="productSubtitle">
@@ -1640,15 +1557,12 @@
             </div>
 
 
-            <p class="product-description"
-               id="productDescription">
-            </p>
+            <div class="product-description"
+                 id="productDescription">
+            </div>
 
-
-            <!-- META -->
 
             <div class="product-meta">
-
 
                 <div class="product-meta-row">
 
@@ -1657,6 +1571,7 @@
                     </strong>
 
                     <span id="productCollection">
+                        ShriVatsa Collection
                     </span>
 
                 </div>
@@ -1701,16 +1616,16 @@
             </div>
 
 
+
             <!-- =================================================
-                 PURCHASE
-            ================================================= -->
+                 QUANTITY + ACTIONS
+            ================================================== -->
 
             <div class="product-purchase">
 
                 <div class="quantity-heading">
                     Quantity
                 </div>
-
 
                 <div class="quantity-row">
 
@@ -1721,23 +1636,23 @@
                                 type="button"
                                 aria-label="Decrease quantity">
 
-                            <i class="fa-solid fa-minus"></i>
+                            −
 
                         </button>
 
-
                         <span class="quantity-value"
                               id="quantityValue">
-                            1
-                        </span>
 
+                            1
+
+                        </span>
 
                         <button class="quantity-button"
                                 id="quantityPlus"
                                 type="button"
                                 aria-label="Increase quantity">
 
-                            <i class="fa-solid fa-plus"></i>
+                            +
 
                         </button>
 
@@ -1757,7 +1672,6 @@
 
                 <div class="product-action-buttons">
 
-
                     <button class="product-add-cart-button"
                             id="addToCartButton"
                             type="button">
@@ -1769,17 +1683,15 @@
                     </button>
 
 
-                    <a id="productWhatsapp"
-                       href="#"
-                       target="_blank"
-                       rel="noopener"
-                       class="product-order-button">
+                    <button class="product-order-button"
+                            id="whatsappProductButton"
+                            type="button">
 
                         <i class="fa-brands fa-whatsapp"></i>
 
                         Enquire on WhatsApp
 
-                    </a>
+                    </button>
 
                 </div>
 
@@ -1787,27 +1699,24 @@
                 <p class="product-order-note">
 
                     Our team will share price,
-                    availability and complete product details.
+                    availability and complete
+                    product details.
 
                 </p>
 
             </div>
 
 
+
             <!-- =================================================
                  TRUST
-            ================================================= -->
+            ================================================== -->
 
             <div class="product-trust">
 
-
                 <div class="product-trust-item">
 
-                    <div class="product-trust-icon">
-
-                        <i class="fa-solid fa-gem"></i>
-
-                    </div>
+                    <i class="fa-solid fa-gem product-trust-icon"></i>
 
                     <div class="product-trust-text">
 
@@ -1826,11 +1735,7 @@
 
                 <div class="product-trust-item">
 
-                    <div class="product-trust-icon">
-
-                        <i class="fa-solid fa-heart"></i>
-
-                    </div>
+                    <i class="fa-solid fa-heart product-trust-icon"></i>
 
                     <div class="product-trust-text">
 
@@ -1849,11 +1754,7 @@
 
                 <div class="product-trust-item">
 
-                    <div class="product-trust-icon">
-
-                        <i class="fa-solid fa-truck-fast"></i>
-
-                    </div>
+                    <i class="fa-solid fa-truck-fast product-trust-icon"></i>
 
                     <div class="product-trust-text">
 
@@ -1872,11 +1773,7 @@
 
                 <div class="product-trust-item">
 
-                    <div class="product-trust-icon">
-
-                        <i class="fa-solid fa-rotate-left"></i>
-
-                    </div>
+                    <i class="fa-solid fa-rotate-left product-trust-icon"></i>
 
                     <div class="product-trust-text">
 
@@ -1892,7 +1789,6 @@
 
                 </div>
 
-
             </div>
 
         </div>
@@ -1903,7 +1799,7 @@
 
     <!-- =====================================================
          PRODUCT STORY
-    ===================================================== -->
+    ====================================================== -->
 
     <section class="product-story">
 
@@ -1923,9 +1819,11 @@
                 with an eye for elegance, quality and timeless
                 Indian craftsmanship.
 
-                We believe ethnic wear should not simply be worn —
-                it should make you feel beautiful, confident
-                and effortlessly yourself.
+                <br><br>
+
+                We believe ethnic wear should not simply be
+                worn — it should make you feel beautiful,
+                confident and effortlessly yourself.
 
             </p>
 
@@ -1933,18 +1831,17 @@
 
     </section>
 
-
 </main>
 
 
 
 <!-- =========================================================
-     ERROR
+     PRODUCT ERROR
 ========================================================= -->
 
 <section class="product-error"
          id="productError"
-         style="display:none;">
+         style="display:none">
 
     <h1>
         Product Not Found
@@ -1963,18 +1860,13 @@
 
 
 <!-- =========================================================
-     CART OVERLAY
+     CART
 ========================================================= -->
 
 <div class="cart-overlay"
      id="cartOverlay">
 </div>
 
-
-
-<!-- =========================================================
-     CART DRAWER
-========================================================= -->
 
 <aside class="cart-drawer"
        id="cartDrawer"
@@ -2064,13 +1956,10 @@
 
             </a>
 
-
             <p>
-
-                Premium sarees and suits curated
-                with timeless elegance, quality
-                and grace in every thread.
-
+                Premium sarees and suits curated with
+                timeless elegance, quality and grace
+                in every thread.
             </p>
 
 
@@ -2198,7 +2087,6 @@
                 CONTACT US
             </h3>
 
-
             <a href="tel:+918826196544">
 
                 <i class="fa-solid fa-phone"></i>
@@ -2207,7 +2095,6 @@
 
             </a>
 
-
             <a href="mailto:shrivatsadarbar@gmail.com">
 
                 <i class="fa-regular fa-envelope"></i>
@@ -2215,7 +2102,6 @@
                 shrivatsadarbar@gmail.com
 
             </a>
-
 
             <span>
 
@@ -2283,529 +2169,348 @@
 
 
 <!-- =========================================================
-     PRODUCT DATABASE
+     PRODUCT + CART JAVASCRIPT
 ========================================================= -->
 
 <script>
 
-const products = {
+/* =========================================================
+   PRODUCT DATABASE
 
-    /* =====================================================
-       SAREES 001–014
-    ===================================================== */
+   IMPORTANT:
 
-    "saree-001": {
-        category: "Saree",
-        title: "Elegant Saree 001",
-        code: "SVD-SAREE-001",
-        images: [
-            "images/sarees/saree-001/sarees-01-lifestyle.webp",
-            "images/sarees/saree-001/sarees-01-hero.webp",
-            "images/sarees/saree-001/sarees-01-detail.webp"
-        ],
-        subtitle:
-            "A timeless piece curated for graceful celebrations and beautiful everyday moments.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Discover the elegance of ShriVatsaDarbar. This beautifully curated saree has been selected for its graceful character, refined detailing and timeless appeal.<br><br>Each piece is carefully chosen to bring together quality, comfort and effortless Indian elegance."
-    },
+   - Suit image paths are unchanged.
+   - Saree 001–010 image paths are unchanged.
+   - Saree 011–014 use the ACTUAL filenames in GitHub.
+========================================================= */
+
+const products = {};
 
 
-    "saree-002": {
-        category: "Saree",
-        title: "Signature Saree 002",
-        code: "SVD-SAREE-002",
-        images: [
-            "images/sarees/saree-002/sarees-02-lifestyle.webp",
-            "images/sarees/saree-002/sarees-02-hero.webp",
-            "images/sarees/saree-002/sarees-02-detail.webp"
-        ],
-        subtitle:
-            "A graceful saree selected for timeless elegance, refined detailing and beautiful occasions.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Discover the refined charm of ShriVatsaDarbar Saree 002. Carefully selected for its beautiful character, elegant detailing and effortless appeal.<br><br>A versatile piece created to bring grace and confidence to your wardrobe."
-    },
+/* =========================================================
+   PRODUCT NAMES
+========================================================= */
+
+const sareeNames = {
+
+    "001": "Elegant Saree 001",
+    "002": "Signature Saree 002",
+    "003": "Festive Saree 003",
+    "004": "Premium Saree 004",
+    "005": "Signature Saree 005",
+    "006": "Festive Saree 006",
+    "007": "Royal Saree 007",
+    "008": "Saree 008",
+    "009": "Saree 009",
+    "010": "Saree 010",
+    "011": "Saree 011",
+    "012": "Saree 012",
+    "013": "Saree 013",
+    "014": "Saree 014"
+
+};
 
 
-    "saree-003": {
-        category: "Saree",
-        title: "Festive Saree 003",
-        code: "SVD-SAREE-003",
-        images: [
-            "images/sarees/saree-003/sarees-03-lifestyle.webp",
-            "images/sarees/saree-003/sarees-03-hero.webp",
-            "images/sarees/saree-003/sarees-03-detail.webp"
-        ],
-        subtitle:
-            "A beautiful festive saree curated for celebrations, gatherings and memorable moments.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Saree 003 brings together graceful styling, beautiful fabric character and timeless Indian elegance.<br><br>Selected with care for festive occasions and moments when you want to make an impression."
-    },
+const suitNames = {
 
-
-    "saree-004": {
-        category: "Saree",
-        title: "Premium Saree 004",
-        code: "SVD-SAREE-004",
-        images: [
-            "images/sarees/saree-004/sarees-04-lifestyle.webp",
-            "images/sarees/saree-004/sarees-04-hero.webp",
-            "images/sarees/saree-004/sarees-04-detail.webp"
-        ],
-        subtitle:
-            "An elegant saree thoughtfully selected for sophisticated Indian styling.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Saree 004 is part of the growing ShriVatsaDarbar collection of carefully curated ethnic wear.<br><br>Designed to bring together elegance, comfort and timeless Indian character."
-    },
-
-
-    "saree-005": {
-        category: "Saree",
-        title: "Signature Saree 005",
-        code: "SVD-SAREE-005",
-        images: [
-            "images/sarees/saree-005/sarees-05-lifestyle.webp",
-            "images/sarees/saree-005/sarees-05-hero.webp",
-            "images/sarees/saree-005/sarees-05-detail.webp"
-        ],
-        subtitle:
-            "A sophisticated saree curated for celebrations and elegant everyday occasions.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Saree 005 reflects the ShriVatsaDarbar approach to beautiful ethnic wear — refined, graceful and thoughtfully selected.<br><br>A timeless addition for your wardrobe."
-    },
-
-
-    "saree-006": {
-        category: "Saree",
-        title: "Festive Saree 006",
-        code: "SVD-SAREE-006",
-        images: [
-            "images/sarees/saree-006/sarees-06-lifestyle.webp",
-            "images/sarees/saree-006/sarees-06-hero.webp",
-            "images/sarees/saree-006/sarees-06-detail.webp"
-        ],
-        subtitle:
-            "A festive expression of elegance curated for beautiful celebrations.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Saree 006 has been selected for its graceful styling and festive character.<br><br>Perfect for celebrations, family occasions and memorable gatherings."
-    },
-
-
-    "saree-007": {
-        category: "Saree",
-        title: "Royal Saree 007",
-        code: "SVD-SAREE-007",
-        images: [
-            "images/sarees/saree-007/sarees-07-lifestyle.webp",
-            "images/sarees/saree-007/sarees-07-hero.webp",
-            "images/sarees/saree-007/sarees-07-detail.webp"
-        ],
-        subtitle:
-            "A statement saree curated for timeless sophistication and special occasions.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Saree 007 completes the first seven-piece saree edit of ShriVatsaDarbar.<br><br>Thoughtfully selected for women who appreciate refined Indian elegance and timeless style."
-    },
-
-
-    "saree-008": {
-        category: "Saree",
-        title: "Saree 008",
-        code: "SVD-SAREE-008",
-        images: [
-            "images/sarees/saree-008/sarees-08-lifestyle.webp",
-            "images/sarees/saree-008/sarees-08-hero.webp",
-            "images/sarees/saree-008/sarees-08-detail.webp"
-        ],
-        subtitle:
-            "A beautifully curated saree from the ShriVatsaDarbar collection.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A thoughtfully selected saree bringing together graceful styling, timeless Indian elegance and effortless appeal."
-    },
-
-
-    "saree-009": {
-        category: "Saree",
-        title: "Saree 009",
-        code: "SVD-SAREE-009",
-        images: [
-            "images/sarees/saree-009/sarees-09-lifestyle.webp",
-            "images/sarees/saree-009/sarees-09-hero.webp",
-            "images/sarees/saree-009/sarees-09-detail.webp"
-        ],
-        subtitle:
-            "A graceful saree selected for beautiful occasions and timeless style.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A refined addition to the ShriVatsaDarbar collection, selected for its elegant character and versatile Indian styling."
-    },
-
-
-    "saree-010": {
-        category: "Saree",
-        title: "Saree 010",
-        code: "SVD-SAREE-010",
-        images: [
-            "images/sarees/saree-010/sarees-10-lifestyle.webp",
-            "images/sarees/saree-010/sarees-10-hero.webp",
-            "images/sarees/saree-010/sarees-10-detail.webp"
-        ],
-        subtitle:
-            "An elegant saree curated for celebrations and graceful everyday moments.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Thoughtfully curated ethnic wear selected for quality, comfort and timeless Indian elegance."
-    },
-
-
-    "saree-011": {
-        category: "Saree",
-        title: "Saree 011",
-        code: "SVD-SAREE-011",
-        images: [
-            "images/sarees/saree-011/sarees-11-lifestyle.webp",
-            "images/sarees/saree-011/sarees-11-hero.webp",
-            "images/sarees/saree-011/sarees-11-detail.webp"
-        ],
-        subtitle:
-            "A sophisticated saree selected for effortless elegance.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A beautiful piece selected to complement the modern Indian wardrobe with grace and timeless appeal."
-    },
-
-
-    "saree-012": {
-        category: "Saree",
-        title: "Saree 012",
-        code: "SVD-SAREE-012",
-        images: [
-            "images/sarees/saree-012/sarees-12-lifestyle.webp",
-            "images/sarees/saree-012/sarees-12-hero.webp",
-            "images/sarees/saree-012/sarees-12-detail.webp"
-        ],
-        subtitle:
-            "A timeless saree curated for elegant occasions.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Selected with care for its graceful character, versatile styling and beautiful Indian appeal."
-    },
-
-
-    "saree-013": {
-        category: "Saree",
-        title: "Saree 013",
-        code: "SVD-SAREE-013",
-        images: [
-            "images/sarees/saree-013/sarees-13-lifestyle.webp",
-            "images/sarees/saree-013/sarees-13-hero.webp",
-            "images/sarees/saree-013/sarees-13-detail.webp"
-        ],
-        subtitle:
-            "A refined saree curated for memorable celebrations.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A graceful ethnic piece selected to bring together comfort, elegance and timeless Indian style."
-    },
-
-
-    "saree-014": {
-        category: "Saree",
-        title: "Saree 014",
-        code: "SVD-SAREE-014",
-        images: [
-            "images/sarees/saree-014/sarees-14-lifestyle.webp",
-            "images/sarees/saree-014/sarees-14-hero.webp",
-            "images/sarees/saree-014/sarees-14-detail.webp"
-        ],
-        subtitle:
-            "A beautiful final piece in the ShriVatsaDarbar saree edit.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Thoughtfully selected for women who appreciate refined Indian elegance, beautiful styling and timeless grace."
-    },
-
-
-    /* =====================================================
-       SUITS 001–014
-    ===================================================== */
-
-    "suit-001": {
-        category: "Suit",
-        title: "Elegant Suit 001",
-        code: "SVD-SUIT-001",
-        images: [
-            "images/suits/suit-001/suits-001-lifestyle.webp",
-            "images/suits/suit-001/suits-001-hero.webp",
-            "images/suits/suit-001/suits-001-detail.webp"
-        ],
-        subtitle:
-            "An elegant poly-cotton two-piece suit curated for effortless everyday style.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A beautifully curated two-piece suit featuring a kurti and pant. Selected for its comfortable fabric, graceful styling and versatile Indian appeal.<br><br>Available in M, L, XL and XXL."
-    },
-
-
-    "suit-002": {
-        category: "Suit",
-        title: "Signature Suit 002",
-        code: "SVD-SUIT-002",
-        images: [
-            "images/suits/suit-002/suits-002-lifestyle.webp",
-            "images/suits/suit-002/suits-002-hero.webp",
-            "images/suits/suit-002/suits-002-detail.webp"
-        ],
-        subtitle:
-            "A refined poly-cotton two-piece suit designed for comfort and timeless elegance.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A graceful two-piece kurti and pant set selected for comfortable everyday styling and beautiful Indian character.<br><br>Available in M, L, XL and XXL."
-    },
-
-
-    "suit-003": {
-        category: "Suit",
-        title: "Festive Suit 003",
-        code: "SVD-SUIT-003",
-        images: [
-            "images/suits/suit-003/suits-003-lifestyle.webp",
-            "images/suits/suit-003/suits-003-hero.webp",
-            "images/suits/suit-003/suits-003-detail.webp"
-        ],
-        subtitle:
-            "A comfortable poly-cotton two-piece suit curated for graceful occasions.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A two-piece kurti and pant ensemble bringing together comfortable poly-cotton fabric and elegant Indian styling.<br><br>Available in M, L, XL and XXL."
-    },
-
-
-    "suit-004": {
-        category: "Suit",
-        title: "Bamboo Silk Elegance 004",
-        code: "SVD-SUIT-004",
-        images: [
-            "images/suits/suit-004/suits-004-lifestyle.webp",
-            "images/suits/suit-004/suits-004-hero.webp",
-            "images/suits/suit-004/suits-004-detail.webp"
-        ],
-        subtitle:
-            "A refined bamboo silk three-piece suit with beautiful embroidery detailing.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A sophisticated three-piece ensemble featuring a kurti, pant and dupatta, crafted in bamboo silk with embroidery work.<br><br>Available in L, XL, XXL and 3XL."
-    },
-
-
-    "suit-005": {
-        category: "Suit",
-        title: "Signature Suit 005",
-        code: "SVD-SUIT-005",
-        images: [
-            "images/suits/suit-005/suits-005-lifestyle.webp",
-            "images/suits/suit-005/suits-005-hero.webp",
-            "images/suits/suit-005/suits-005-detail.webp"
-        ],
-        subtitle:
-            "A graceful suit curated for sophisticated everyday dressing and special occasions.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Suit 005 reflects the ShriVatsaDarbar philosophy of thoughtful curation, beautiful styling and timeless elegance."
-    },
-
-
-    "suit-006": {
-        category: "Suit",
-        title: "Festive Suit 006",
-        code: "SVD-SUIT-006",
-        images: [
-            "images/suits/suit-006/suits-006-lifestyle.webp",
-            "images/suits/suit-006/suits-006-hero.webp",
-            "images/suits/suit-006/suits-006-detail.webp"
-        ],
-        subtitle:
-            "A beautiful festive suit selected for celebrations and elegant occasions.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Suit 006 is curated with celebrations in mind, bringing together graceful styling and comfortable Indian elegance."
-    },
-
-
-    "suit-007": {
-        category: "Suit",
-        title: "Royal Suit 007",
-        code: "SVD-SUIT-007",
-        images: [
-            "images/suits/suit-007/suits-007-lifestyle.webp",
-            "images/suits/suit-007/suits-007-hero.webp",
-            "images/suits/suit-007/suits-007-detail.webp"
-        ],
-        subtitle:
-            "A statement suit curated for sophisticated style and special occasions.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A refined suit selected for women who appreciate elegant design, comfortable wear and timeless Indian styling."
-    },
-
-
-    "suit-008": {
-        category: "Suit",
-        title: "Suit 008",
-        code: "SVD-SUIT-008",
-        images: [
-            "images/suits/suit-008/suits-008-lifestyle.webp",
-            "images/suits/suit-008/suits-008-hero.webp",
-            "images/suits/suit-008/suits-008-detail.webp"
-        ],
-        subtitle:
-            "A beautifully curated suit from the ShriVatsaDarbar collection.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A thoughtfully selected suit bringing together graceful styling, comfort and timeless Indian elegance."
-    },
-
-
-    "suit-009": {
-        category: "Suit",
-        title: "Suit 009",
-        code: "SVD-SUIT-009",
-        images: [
-            "images/suits/suit-009/suits-009-lifestyle.webp",
-            "images/suits/suit-009/suits-009-hero.webp",
-            "images/suits/suit-009/suits-009-detail.webp"
-        ],
-        subtitle:
-            "A graceful suit selected for beautiful occasions and everyday elegance.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A refined addition to the ShriVatsaDarbar collection, selected for its elegant character and versatile styling."
-    },
-
-
-    "suit-010": {
-        category: "Suit",
-        title: "Suit 010",
-        code: "SVD-SUIT-010",
-        images: [
-            "images/suits/suit-010/suits-010-lifestyle.webp",
-            "images/suits/suit-010/suits-010-hero.webp",
-            "images/suits/suit-010/suits-010-detail.webp"
-        ],
-        subtitle:
-            "An elegant suit curated for celebrations and graceful everyday moments.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Thoughtfully curated ethnic wear selected for quality, comfort and timeless Indian elegance."
-    },
-
-
-    "suit-011": {
-        category: "Suit",
-        title: "Suit 011",
-        code: "SVD-SUIT-011",
-        images: [
-            "images/suits/suit-011/suits-011-lifestyle.webp",
-            "images/suits/suit-011/suits-011-hero.webp",
-            "images/suits/suit-011/suits-011-detail.webp"
-        ],
-        subtitle:
-            "A sophisticated suit selected for effortless elegance.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A beautiful piece selected to complement the modern Indian wardrobe with grace and timeless appeal."
-    },
-
-
-    "suit-012": {
-        category: "Suit",
-        title: "Suit 012",
-        code: "SVD-SUIT-012",
-        images: [
-            "images/suits/suit-012/suits-012-lifestyle.webp",
-            "images/suits/suit-012/suits-012-hero.webp",
-            "images/suits/suit-012/suits-012-detail.webp"
-        ],
-        subtitle:
-            "A timeless suit curated for elegant occasions.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Selected with care for its graceful character, versatile styling and beautiful Indian appeal."
-    },
-
-
-    "suit-013": {
-        category: "Suit",
-        title: "Suit 013",
-        code: "SVD-SUIT-013",
-        images: [
-            "images/suits/suit-013/suits-013-lifestyle.webp",
-            "images/suits/suit-013/suits-013-hero.webp",
-            "images/suits/suit-013/suits-013-detail.webp"
-        ],
-        subtitle:
-            "A refined suit curated for memorable celebrations.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "A graceful ethnic piece selected to bring together comfort, elegance and timeless Indian style."
-    },
-
-
-    "suit-014": {
-        category: "Suit",
-        title: "Suit 014",
-        code: "SVD-SUIT-014",
-        images: [
-            "images/suits/suit-014/suits-014-lifestyle.webp",
-            "images/suits/suit-014/suits-014-hero.webp",
-            "images/suits/suit-014/suits-014-detail.webp"
-        ],
-        subtitle:
-            "A beautiful final piece in the ShriVatsaDarbar suit edit.",
-        collection:
-            "ShriVatsa Collection",
-        description:
-            "Thoughtfully selected for women who appreciate refined Indian elegance, beautiful styling and timeless grace."
-    }
+    "001": "Elegant Suit 001",
+    "002": "Signature Suit 002",
+    "003": "Festive Suit 003",
+    "004": "Bamboo Silk Elegance 004",
+    "005": "Signature Suit 005",
+    "006": "Festive Suit 006",
+    "007": "Royal Suit 007",
+    "008": "Suit 008",
+    "009": "Suit 009",
+    "010": "Suit 010",
+    "011": "Suit 011",
+    "012": "Suit 012",
+    "013": "Suit 013",
+    "014": "Suit 014"
 
 };
 
 
 /* =========================================================
-   GALLERY
+   SAREE SUBTITLES
+========================================================= */
+
+const sareeSubtitles = {
+
+    "001":
+        "A timeless piece curated for graceful celebrations and beautiful everyday moments.",
+
+    "002":
+        "A graceful saree selected for timeless elegance, refined detailing and beautiful occasions.",
+
+    "003":
+        "A beautiful festive saree curated for celebrations, gatherings and memorable moments.",
+
+    "004":
+        "An elegant saree thoughtfully selected for sophisticated Indian styling.",
+
+    "005":
+        "A sophisticated saree curated for celebrations and elegant everyday occasions.",
+
+    "006":
+        "A festive expression of elegance curated for beautiful celebrations.",
+
+    "007":
+        "A statement saree curated for timeless sophistication and special occasions.",
+
+    "008":
+        "A beautifully curated saree from the ShriVatsaDarbar collection.",
+
+    "009":
+        "A graceful saree selected for beautiful occasions and timeless style.",
+
+    "010":
+        "An elegant saree curated for celebrations and graceful everyday moments.",
+
+    "011":
+        "A sophisticated saree selected for effortless elegance.",
+
+    "012":
+        "A timeless saree curated for elegant occasions.",
+
+    "013":
+        "A refined saree curated for memorable celebrations.",
+
+    "014":
+        "A beautiful final piece in the ShriVatsaDarbar saree edit."
+
+};
+
+
+/* =========================================================
+   SUIT SUBTITLES
+========================================================= */
+
+const suitSubtitles = {
+
+    "001":
+        "An elegant poly-cotton two-piece suit curated for effortless everyday style.",
+
+    "002":
+        "A refined poly-cotton two-piece suit designed for comfort and timeless elegance.",
+
+    "003":
+        "A comfortable poly-cotton two-piece suit curated for graceful occasions.",
+
+    "004":
+        "A refined bamboo silk three-piece suit with beautiful embroidery detailing.",
+
+    "005":
+        "A graceful suit curated for sophisticated everyday dressing and special occasions.",
+
+    "006":
+        "A beautiful festive suit selected for celebrations and elegant occasions.",
+
+    "007":
+        "A statement suit curated for sophisticated style and special occasions.",
+
+    "008":
+        "A beautifully curated suit from the ShriVatsaDarbar collection.",
+
+    "009":
+        "A graceful suit selected for beautiful occasions and everyday elegance.",
+
+    "010":
+        "An elegant suit curated for celebrations and graceful everyday moments.",
+
+    "011":
+        "A sophisticated suit selected for effortless elegance.",
+
+    "012":
+        "A timeless suit curated for elegant occasions.",
+
+    "013":
+        "A refined suit curated for memorable celebrations.",
+
+    "014":
+        "A beautiful final piece in the ShriVatsaDarbar suit edit."
+
+};
+
+
+/* =========================================================
+   BUILD PRODUCT DATABASE
+========================================================= */
+
+for (
+    let i = 1;
+    i <= 14;
+    i++
+) {
+
+    const n =
+        String(i).padStart(3, "0");
+
+    const short =
+        String(i).padStart(2, "0");
+
+
+    /* =====================================================
+       SAREES 001–010
+       Existing filenames remain unchanged.
+    ===================================================== */
+
+    if (i <= 10) {
+
+        products["saree-" + n] = {
+
+            category:
+                "Saree",
+
+            title:
+                sareeNames[n],
+
+            code:
+                "SVD-SAREE-" + n,
+
+            images: [
+
+                "images/sarees/saree-" +
+                n +
+                "/sarees-" +
+                short +
+                "-lifestyle.webp",
+
+                "images/sarees/saree-" +
+                n +
+                "/sarees-" +
+                short +
+                "-hero.webp",
+
+                "images/sarees/saree-" +
+                n +
+                "/sarees-" +
+                short +
+                "-detail.webp"
+
+            ],
+
+            subtitle:
+                sareeSubtitles[n],
+
+            collection:
+                "ShriVatsa Collection"
+
+        };
+
+    }
+
+
+    /* =====================================================
+       SAREES 011–014
+       
+       CORRECT ACTUAL FILENAMES:
+       
+       sarees-011-lifestyle.webp
+       sarees-011.webp
+       sarees-011-close-embroidery.webp
+       
+       Same pattern for 012–014.
+    ===================================================== */
+
+    else {
+
+        products["saree-" + n] = {
+
+            category:
+                "Saree",
+
+            title:
+                sareeNames[n],
+
+            code:
+                "SVD-SAREE-" + n,
+
+            images: [
+
+                "images/sarees/saree-" +
+                n +
+                "/sarees-" +
+                n +
+                "-lifestyle.webp",
+
+                "images/sarees/saree-" +
+                n +
+                "/sarees-" +
+                n +
+                ".webp",
+
+                "images/sarees/saree-" +
+                n +
+                "/sarees-" +
+                n +
+                "-close-embroidery.webp"
+
+            ],
+
+            subtitle:
+                sareeSubtitles[n],
+
+            collection:
+                "ShriVatsa Collection"
+
+        };
+
+    }
+
+
+    /* =====================================================
+       SUITS
+       
+       SUIT PATHS ARE DELIBERATELY UNCHANGED.
+    ===================================================== */
+
+    products["suit-" + n] = {
+
+        category:
+            "Suit",
+
+        title:
+            suitNames[n],
+
+        code:
+            "SVD-SUIT-" + n,
+
+        images: [
+
+            "images/suits/suit-" +
+            n +
+            "/suits-" +
+            n +
+            "-lifestyle.webp",
+
+            "images/suits/suit-" +
+            n +
+            "/suits-" +
+            n +
+            "-hero.webp",
+
+            "images/suits/suit-" +
+            n +
+            "/suits-" +
+            n +
+            "-detail.webp"
+
+        ],
+
+        subtitle:
+            suitSubtitles[n],
+
+        collection:
+            "ShriVatsa Collection"
+
+    };
+
+}
+
+
+/* =========================================================
+   PAGE / GALLERY
 ========================================================= */
 
 let currentGalleryIndex = 0;
@@ -2817,24 +2522,198 @@ let currentProductKey = null;
 let quantity = 1;
 
 
-function getAvailableImages(product) {
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
 
-    const available = [];
+const productKey =
+    params.get("product");
 
-    if (!product || !product.images) {
-        return available;
-    }
 
-    product.images.forEach(function (image) {
+/* =========================================================
+   PRODUCT ERROR
+========================================================= */
 
-        available.push(image);
+function showProductError() {
 
-    });
+    document.getElementById(
+        "productPage"
+    ).style.display = "none";
 
-    return available;
+    document.getElementById(
+        "productError"
+    ).style.display = "block";
 
 }
 
+
+/* =========================================================
+   SET TEXT
+========================================================= */
+
+function setText(
+    id,
+    value
+) {
+
+    const el =
+        document.getElementById(id);
+
+    if (el) {
+
+        el.textContent =
+            value || "";
+
+    }
+
+}
+
+
+/* =========================================================
+   LOAD PRODUCT
+========================================================= */
+
+function loadProduct() {
+
+    if (
+        !productKey ||
+        !products[productKey]
+    ) {
+
+        showProductError();
+
+        return;
+
+    }
+
+
+    currentProductKey =
+        productKey;
+
+    currentProduct =
+        products[productKey];
+
+
+    document.title =
+        currentProduct.title +
+        " | ShriVatsaDarbar";
+
+
+    setText(
+        "productCategory",
+        currentProduct.category.toUpperCase()
+    );
+
+    setText(
+        "productTitle",
+        currentProduct.title
+    );
+
+    setText(
+        "productSubtitle",
+        currentProduct.subtitle
+    );
+
+    setText(
+        "productCollection",
+        currentProduct.collection
+    );
+
+    setText(
+        "productMetaCategory",
+        currentProduct.category
+    );
+
+    setText(
+        "productCode",
+        currentProduct.code
+    );
+
+    setText(
+        "breadcrumbProduct",
+        currentProduct.title
+    );
+
+
+    const categoryLink =
+        document.getElementById(
+            "breadcrumbCategoryLink"
+        );
+
+
+    categoryLink.textContent =
+        currentProduct.category + "s";
+
+
+    categoryLink.href =
+        "collections/collections.html?category=" +
+        currentProduct.category.toLowerCase();
+
+
+    document.getElementById(
+        "productDescription"
+    ).innerHTML =
+
+        "Discover the refined charm of ShriVatsaDarbar. " +
+
+        "This beautifully curated " +
+
+        currentProduct.category.toLowerCase() +
+
+        " has been selected for its graceful character, " +
+
+        "refined detailing and timeless appeal." +
+
+        "<br><br>" +
+
+        currentProduct.subtitle;
+
+
+    const canonical =
+        "https://suit.shrivatsadarbar.com/product.html?product=" +
+        encodeURIComponent(productKey);
+
+
+    document.getElementById(
+        "canonicalUrl"
+    ).href = canonical;
+
+
+    document.getElementById(
+        "ogUrl"
+    ).content = canonical;
+
+
+    document.getElementById(
+        "metaDescription"
+    ).content =
+        currentProduct.subtitle;
+
+
+    document.getElementById(
+        "ogTitle"
+    ).content =
+        currentProduct.title +
+        " | ShriVatsaDarbar";
+
+
+    document.getElementById(
+        "ogDescription"
+    ).content =
+        currentProduct.subtitle;
+
+
+    currentGalleryIndex = 0;
+
+    renderGallery();
+
+}
+
+
+/* =========================================================
+   RENDER GALLERY
+========================================================= */
 
 function renderGallery() {
 
@@ -2842,14 +2721,21 @@ function renderGallery() {
         return;
     }
 
-    const images =
-        getAvailableImages(currentProduct);
 
     const mainImage =
-        document.getElementById("productImage");
+        document.getElementById(
+            "productImage"
+        );
+
 
     const thumbnails =
-        document.getElementById("productThumbnails");
+        document.getElementById(
+            "productThumbnails"
+        );
+
+
+    const images =
+        currentProduct.images;
 
 
     if (!images.length) {
@@ -2857,108 +2743,207 @@ function renderGallery() {
     }
 
 
-    if (
-        currentGalleryIndex < 0 ||
-        currentGalleryIndex >= images.length
-    ) {
-        currentGalleryIndex = 0;
-    }
+    const setImage =
+        (
+            img,
+            src,
+            alt
+        ) => {
+
+            img.src = src;
+
+            img.alt = alt;
+
+        };
 
 
-    mainImage.style.opacity = "0";
+    setImage(
+        mainImage,
+        images[currentGalleryIndex],
+        currentProduct.title
+    );
 
 
-    setTimeout(function () {
+    mainImage.onerror =
+        function () {
 
-        mainImage.src =
-            images[currentGalleryIndex];
+            this.onerror = null;
 
-        mainImage.alt =
-            currentProduct.title;
+            this.src =
+                "images/logos/favicon.webp";
 
-        mainImage.style.opacity = "1";
-
-    }, 100);
+        };
 
 
     thumbnails.innerHTML = "";
 
 
-    images.forEach(function (image, index) {
+    images.forEach(
+        function (
+            src,
+            index
+        ) {
 
-        const button =
-            document.createElement("button");
+            const button =
+                document.createElement(
+                    "button"
+                );
 
-        button.type = "button";
 
-        button.className =
-            "product-thumbnail" +
-            (
-                index === currentGalleryIndex
-                    ? " active"
-                    : ""
+            button.type =
+                "button";
+
+
+            button.className =
+                "product-thumbnail" +
+                (
+                    index ===
+                    currentGalleryIndex
+                        ? " active"
+                        : ""
+                );
+
+
+            button.setAttribute(
+                "aria-label",
+                "View product image " +
+                (index + 1)
             );
 
 
-        button.setAttribute(
-            "aria-label",
-            "View product image " +
-            (index + 1)
-        );
+            const image =
+                document.createElement(
+                    "img"
+                );
 
 
-        const imageElement =
-            document.createElement("img");
-
-        imageElement.src = image;
-
-        imageElement.alt =
-            currentProduct.title +
-            " view " +
-            (index + 1);
-
-        imageElement.loading =
-            "lazy";
+            image.src =
+                src;
 
 
-        const label =
-            document.createElement("span");
+            image.alt =
+                currentProduct.title +
+                " view " +
+                (index + 1);
 
-        label.className =
-            "product-thumbnail-label";
 
-        if (index === 0) {
-            label.textContent = "Lifestyle";
-        } else if (index === 1) {
-            label.textContent = "View";
-        } else {
-            label.textContent = "Detail";
+            image.loading =
+                "lazy";
+
+
+            image.onerror =
+                function () {
+
+                    this.onerror = null;
+
+                    this.src =
+                        "images/logos/favicon.webp";
+
+                };
+
+
+            const label =
+                document.createElement(
+                    "span"
+                );
+
+
+            label.className =
+                "product-thumbnail-label";
+
+
+            label.textContent =
+                index === 0
+                    ? "Lifestyle"
+                    : index === 1
+                        ? "View"
+                        : "Detail";
+
+
+            button.appendChild(
+                image
+            );
+
+            button.appendChild(
+                label
+            );
+
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    currentGalleryIndex =
+                        index;
+
+                    renderGallery();
+
+                }
+            );
+
+
+            thumbnails.appendChild(
+                button
+            );
+
         }
-
-
-        button.appendChild(imageElement);
-
-        button.appendChild(label);
-
-
-        button.addEventListener(
-            "click",
-            function () {
-
-                currentGalleryIndex =
-                    index;
-
-                renderGallery();
-
-            }
-        );
-
-
-        thumbnails.appendChild(button);
-
-    });
+    );
 
 }
+
+
+/* =========================================================
+   GALLERY NAVIGATION
+========================================================= */
+
+function moveGallery(
+    direction
+) {
+
+    if (!currentProduct) {
+        return;
+    }
+
+
+    const count =
+        currentProduct.images.length;
+
+
+    currentGalleryIndex =
+        (
+            currentGalleryIndex +
+            direction +
+            count
+        ) % count;
+
+
+    renderGallery();
+
+}
+
+
+document.getElementById(
+    "galleryPrev"
+).addEventListener(
+    "click",
+    function () {
+
+        moveGallery(-1);
+
+    }
+);
+
+
+document.getElementById(
+    "galleryNext"
+).addEventListener(
+    "click",
+    function () {
+
+        moveGallery(1);
+
+    }
+);
 
 
 /* =========================================================
@@ -2967,174 +2952,94 @@ function renderGallery() {
 
 function updateQuantityDisplay() {
 
-    document
-        .getElementById("quantityValue")
-        .textContent = quantity;
+    document.getElementById(
+        "quantityValue"
+    ).textContent =
+        quantity;
 
 }
 
 
-document
-    .getElementById("quantityMinus")
-    .addEventListener(
-        "click",
-        function () {
+document.getElementById(
+    "quantityMinus"
+).addEventListener(
+    "click",
+    function () {
 
-            if (quantity > 1) {
+        if (quantity > 1) {
 
-                quantity--;
-
-                updateQuantityDisplay();
-
-            }
-
-        }
-    );
-
-
-document
-    .getElementById("quantityPlus")
-    .addEventListener(
-        "click",
-        function () {
-
-            if (quantity < 99) {
-
-                quantity++;
-
-                updateQuantityDisplay();
-
-            }
-
-        }
-    );
-
-
-document
-    .getElementById("quantityReset")
-    .addEventListener(
-        "click",
-        function () {
-
-            quantity = 1;
+            quantity--;
 
             updateQuantityDisplay();
 
         }
-    );
+
+    }
+);
+
+
+document.getElementById(
+    "quantityPlus"
+).addEventListener(
+    "click",
+    function () {
+
+        if (quantity < 99) {
+
+            quantity++;
+
+            updateQuantityDisplay();
+
+        }
+
+    }
+);
+
+
+document.getElementById(
+    "quantityReset"
+).addEventListener(
+    "click",
+    function () {
+
+        quantity = 1;
+
+        updateQuantityDisplay();
+
+    }
+);
 
 
 /* =========================================================
-   GALLERY ARROWS
-========================================================= */
-
-document
-    .getElementById("galleryPrev")
-    .addEventListener(
-        "click",
-        function () {
-
-            if (!currentProduct) {
-                return;
-            }
-
-            const images =
-                getAvailableImages(
-                    currentProduct
-                );
-
-            if (!images.length) {
-                return;
-            }
-
-            currentGalleryIndex--;
-
-            if (currentGalleryIndex < 0) {
-
-                currentGalleryIndex =
-                    images.length - 1;
-
-            }
-
-            renderGallery();
-
-        }
-    );
-
-
-document
-    .getElementById("galleryNext")
-    .addEventListener(
-        "click",
-        function () {
-
-            if (!currentProduct) {
-                return;
-            }
-
-            const images =
-                getAvailableImages(
-                    currentProduct
-                );
-
-            if (!images.length) {
-                return;
-            }
-
-            currentGalleryIndex++;
-
-            if (
-                currentGalleryIndex >=
-                images.length
-            ) {
-
-                currentGalleryIndex = 0;
-
-            }
-
-            renderGallery();
-
-        }
-    );
-
-
-/* =========================================================
-   CART STORAGE
+   CART
 ========================================================= */
 
 const CART_STORAGE_KEY =
-    "shriVatsaDarbarCart";
+    "shrivatsaDarbarFashionCart";
 
 
 let cart = [];
 
 
-function loadCart() {
+try {
 
-    try {
-
-        const saved =
+    cart =
+        JSON.parse(
             localStorage.getItem(
                 CART_STORAGE_KEY
-            );
+            )
+        ) || [];
 
-        cart =
-            saved
-                ? JSON.parse(saved)
-                : [];
+} catch (e) {
 
-        if (!Array.isArray(cart)) {
-            cart = [];
-        }
-
-    } catch (error) {
-
-        cart = [];
-
-    }
+    cart = [];
 
 }
 
+
+/* =========================================================
+   SAVE CART
+========================================================= */
 
 function saveCart() {
 
@@ -3153,10 +3058,15 @@ function saveCart() {
 function getCartItemCount() {
 
     return cart.reduce(
-        function (total, item) {
+        function (
+            total,
+            item
+        ) {
 
             return total +
-                Number(item.quantity || 0);
+                Number(
+                    item.quantity || 0
+                );
 
         },
         0
@@ -3170,25 +3080,19 @@ function updateCartCount() {
     const count =
         getCartItemCount();
 
-    const bagCount =
-        document.getElementById(
-            "bagCount"
-        );
 
-    if (bagCount) {
-
-        bagCount.textContent =
-            count > 99
-                ? "99+"
-                : count;
-
-    }
+    document.getElementById(
+        "bagCount"
+    ).textContent =
+        count > 99
+            ? "99+"
+            : count;
 
 }
 
 
 /* =========================================================
-   ADD TO CART
+   ADD CURRENT PRODUCT
 ========================================================= */
 
 function addCurrentProductToCart() {
@@ -3197,7 +3101,9 @@ function addCurrentProductToCart() {
         !currentProduct ||
         !currentProductKey
     ) {
+
         return;
+
     }
 
 
@@ -3252,52 +3158,57 @@ function addCurrentProductToCart() {
 
     openCart();
 
-    showCartToast();
+
+    quantity = 1;
+
+    updateQuantityDisplay();
+
+    showToast(
+        "Product added to your collection"
+    );
 
 }
 
 
-document
-    .getElementById("addToCartButton")
-    .addEventListener(
-        "click",
-        addCurrentProductToCart
-    );
+document.getElementById(
+    "addToCartButton"
+).addEventListener(
+    "click",
+    addCurrentProductToCart
+);
 
 
 /* =========================================================
-   CART RENDER
+   RENDER CART
 ========================================================= */
 
 function renderCart() {
 
-    const cartBody =
+    const body =
         document.getElementById(
             "cartBody"
         );
 
-    const cartFooter =
+
+    const footer =
         document.getElementById(
             "cartFooter"
         );
 
-    const totalItems =
+
+    const total =
         document.getElementById(
             "cartTotalItems"
         );
 
 
-    const itemCount =
+    total.textContent =
         getCartItemCount();
-
-
-    totalItems.textContent =
-        itemCount;
 
 
     if (!cart.length) {
 
-        cartBody.innerHTML = `
+        body.innerHTML = `
 
             <div class="cart-empty">
 
@@ -3315,19 +3226,21 @@ function renderCart() {
 
         `;
 
-        cartFooter.style.display =
+
+        footer.style.display =
             "none";
+
 
         return;
 
     }
 
 
-    cartFooter.style.display =
+    footer.style.display =
         "block";
 
 
-    cartBody.innerHTML = "";
+    body.innerHTML = "";
 
 
     cart.forEach(
@@ -3338,6 +3251,7 @@ function renderCart() {
                     "article"
                 );
 
+
             article.className =
                 "cart-item";
 
@@ -3346,18 +3260,18 @@ function renderCart() {
 
                 <img
                     class="cart-item-image"
-                    src="${item.image}"
-                    alt="${item.title}"
+                    src="${escapeHtml(item.image)}"
+                    alt="${escapeHtml(item.title)}"
                 >
 
                 <div class="cart-item-details">
 
                     <h3>
-                        ${item.title}
+                        ${escapeHtml(item.title)}
                     </h3>
 
                     <div class="cart-item-code">
-                        ${item.code}
+                        ${escapeHtml(item.code)}
                     </div>
 
                     <div class="cart-item-controls">
@@ -3366,25 +3280,25 @@ function renderCart() {
                             class="cart-qty-button"
                             type="button"
                             data-action="minus"
-                            data-id="${item.id}"
-                            aria-label="Decrease quantity">
+                            data-id="${escapeHtml(item.id)}">
 
-                            <i class="fa-solid fa-minus"></i>
+                            −
 
                         </button>
 
                         <span class="cart-qty-value">
+
                             ${item.quantity}
+
                         </span>
 
                         <button
                             class="cart-qty-button"
                             type="button"
                             data-action="plus"
-                            data-id="${item.id}"
-                            aria-label="Increase quantity">
+                            data-id="${escapeHtml(item.id)}">
 
-                            <i class="fa-solid fa-plus"></i>
+                            +
 
                         </button>
 
@@ -3395,19 +3309,119 @@ function renderCart() {
                 <button
                     class="cart-remove"
                     type="button"
-                    data-action="remove"
-                    data-id="${item.id}"
+                    data-remove="${escapeHtml(item.id)}"
                     aria-label="Remove item">
 
-                    <i class="fa-solid fa-trash-can"></i>
+                    <i class="fa-solid fa-trash"></i>
 
                 </button>
 
             `;
 
 
-            cartBody.appendChild(
+            body.appendChild(
                 article
+            );
+
+        }
+    );
+
+
+    body.querySelectorAll(
+        "[data-action]"
+    ).forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const id =
+                        this.dataset.id;
+
+
+                    const change =
+                        this.dataset.action ===
+                        "plus"
+                            ? 1
+                            : -1;
+
+
+                    const item =
+                        cart.find(
+                            function (product) {
+
+                                return product.id === id;
+
+                            }
+                        );
+
+
+                    if (!item) {
+                        return;
+                    }
+
+
+                    item.quantity +=
+                        change;
+
+
+                    if (
+                        item.quantity <= 0
+                    ) {
+
+                        cart =
+                            cart.filter(
+                                function (product) {
+
+                                    return product.id !== id;
+
+                                }
+                            );
+
+                    }
+
+
+                    saveCart();
+
+                    updateCartCount();
+
+                    renderCart();
+
+                }
+            );
+
+        }
+    );
+
+
+    body.querySelectorAll(
+        "[data-remove]"
+    ).forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    cart =
+                        cart.filter(
+                            function (item) {
+
+                                return item.id !==
+                                    this.dataset.remove;
+
+                            }.bind(this)
+                        );
+
+
+                    saveCart();
+
+                    updateCartCount();
+
+                    renderCart();
+
+                }
             );
 
         }
@@ -3417,101 +3431,43 @@ function renderCart() {
 
 
 /* =========================================================
-   CART ITEM ACTIONS
+   ESCAPE HTML
 ========================================================= */
 
-document
-    .getElementById("cartBody")
-    .addEventListener(
-        "click",
-        function (event) {
+function escapeHtml(
+    value
+) {
 
-            const button =
-                event.target.closest(
-                    "[data-action]"
-                );
+    return String(
+        value || ""
+    )
 
+    .replace(
+        /&/g,
+        "&amp;"
+    )
 
-            if (!button) {
-                return;
-            }
+    .replace(
+        /</g,
+        "&lt;"
+    )
 
+    .replace(
+        />/g,
+        "&gt;"
+    )
 
-            const id =
-                button.getAttribute(
-                    "data-id"
-                );
+    .replace(
+        /"/g,
+        "&quot;"
+    )
 
-            const action =
-                button.getAttribute(
-                    "data-action"
-                );
-
-
-            const item =
-                cart.find(
-                    function (cartItem) {
-
-                        return cartItem.id === id;
-
-                    }
-                );
-
-
-            if (!item) {
-                return;
-            }
-
-
-            if (action === "plus") {
-
-                item.quantity++;
-
-            }
-
-
-            if (action === "minus") {
-
-                item.quantity--;
-
-                if (item.quantity <= 0) {
-
-                    cart =
-                        cart.filter(
-                            function (cartItem) {
-
-                                return cartItem.id !== id;
-
-                            }
-                        );
-
-                }
-
-            }
-
-
-            if (action === "remove") {
-
-                cart =
-                    cart.filter(
-                        function (cartItem) {
-
-                            return cartItem.id !== id;
-
-                        }
-                    );
-
-            }
-
-
-            saveCart();
-
-            updateCartCount();
-
-            renderCart();
-
-        }
+    .replace(
+        /'/g,
+        "&#039;"
     );
+
+}
 
 
 /* =========================================================
@@ -3520,29 +3476,44 @@ document
 
 function openCart() {
 
-    document
-        .getElementById("cartDrawer")
-        .classList.add("active");
+    document.getElementById(
+        "cartDrawer"
+    ).classList.add(
+        "active"
+    );
 
-    document
-        .getElementById("cartOverlay")
-        .classList.add("active");
+
+    document.getElementById(
+        "cartOverlay"
+    ).classList.add(
+        "active"
+    );
+
 
     document.body.style.overflow =
         "hidden";
+
+
+    renderCart();
 
 }
 
 
 function closeCart() {
 
-    document
-        .getElementById("cartDrawer")
-        .classList.remove("active");
+    document.getElementById(
+        "cartDrawer"
+    ).classList.remove(
+        "active"
+    );
 
-    document
-        .getElementById("cartOverlay")
-        .classList.remove("active");
+
+    document.getElementById(
+        "cartOverlay"
+    ).classList.remove(
+        "active"
+    );
+
 
     document.body.style.overflow =
         "";
@@ -3550,41 +3521,38 @@ function closeCart() {
 }
 
 
-document
-    .getElementById("cartButton")
-    .addEventListener(
-        "click",
-        function () {
-
-            renderCart();
-
-            openCart();
-
-        }
-    );
+document.getElementById(
+    "shoppingBagButton"
+).addEventListener(
+    "click",
+    openCart
+);
 
 
-document
-    .getElementById("cartClose")
-    .addEventListener(
-        "click",
-        closeCart
-    );
+document.getElementById(
+    "cartClose"
+).addEventListener(
+    "click",
+    closeCart
+);
 
 
-document
-    .getElementById("cartOverlay")
-    .addEventListener(
-        "click",
-        closeCart
-    );
+document.getElementById(
+    "cartOverlay"
+).addEventListener(
+    "click",
+    closeCart
+);
 
 
 document.addEventListener(
     "keydown",
     function (event) {
 
-        if (event.key === "Escape") {
+        if (
+            event.key ===
+            "Escape"
+        ) {
 
             closeCart();
 
@@ -3598,92 +3566,165 @@ document.addEventListener(
    CLEAR CART
 ========================================================= */
 
-document
-    .getElementById("cartClear")
-    .addEventListener(
-        "click",
-        function () {
+document.getElementById(
+    "cartClear"
+).addEventListener(
+    "click",
+    function () {
 
-            if (!cart.length) {
-                return;
-            }
-
-
-            cart = [];
-
-            saveCart();
-
-            updateCartCount();
-
-            renderCart();
-
+        if (!cart.length) {
+            return;
         }
-    );
+
+
+        cart = [];
+
+
+        saveCart();
+
+        updateCartCount();
+
+        renderCart();
+
+        showToast(
+            "Your collection has been cleared"
+        );
+
+    }
+);
 
 
 /* =========================================================
-   CART WHATSAPP
+   WHATSAPP
 ========================================================= */
 
-document
-    .getElementById("cartWhatsapp")
-    .addEventListener(
-        "click",
-        function () {
+function buildWhatsAppUrl(
+    items
+) {
 
-            if (!cart.length) {
-
-                showCartToast(
-                    "Your collection is empty."
-                );
-
-                return;
-
-            }
+    let message =
+        "Hello ShriVatsaDarbar,\n\n";
 
 
-            let message =
-                "Hello ShriVatsaDarbar,%0A%0A" +
-                "I am interested in the following products:%0A%0A";
+    message +=
+        "I would like to enquire about the following products:\n\n";
 
 
-            cart.forEach(
-                function (item, index) {
-
-                    message +=
-                        (index + 1) +
-                        ". " +
-                        item.title +
-                        " (" +
-                        item.code +
-                        ")" +
-                        " — Quantity: " +
-                        item.quantity +
-                        "%0A";
-
-                }
-            );
-
+    items.forEach(
+        function (
+            item,
+            index
+        ) {
 
             message +=
-                "%0APlease share the price, availability and complete details.";
+                (
+                    index + 1
+                ) +
 
-            window.open(
-                "https://wa.me/918826196544?text=" +
-                message,
-                "_blank"
-            );
+                ". " +
+
+                item.title +
+
+                " (" +
+
+                item.code +
+
+                ") × " +
+
+                item.quantity +
+
+                "\n";
 
         }
     );
+
+
+    message +=
+        "\nPlease share the price, availability, size options and final details.\n\nThank you.";
+
+
+    return (
+        "https://wa.me/918826196544?text=" +
+        encodeURIComponent(
+            message
+        )
+    );
+
+}
+
+
+document.getElementById(
+    "whatsappProductButton"
+).addEventListener(
+    "click",
+    function () {
+
+        if (!currentProduct) {
+            return;
+        }
+
+
+        const item = [
+
+            {
+
+                title:
+                    currentProduct.title,
+
+                code:
+                    currentProduct.code,
+
+                quantity:
+                    quantity
+
+            }
+
+        ];
+
+
+        window.open(
+            buildWhatsAppUrl(item),
+            "_blank",
+            "noopener"
+        );
+
+    }
+);
+
+
+document.getElementById(
+    "cartWhatsapp"
+).addEventListener(
+    "click",
+    function () {
+
+        if (!cart.length) {
+
+            showToast(
+                "Your collection is empty"
+            );
+
+            return;
+
+        }
+
+
+        window.open(
+            buildWhatsAppUrl(cart),
+            "_blank",
+            "noopener"
+        );
+
+    }
+);
 
 
 /* =========================================================
    TOAST
 ========================================================= */
 
-function showCartToast(
-    customMessage
+function showToast(
+    message
 ) {
 
     const toast =
@@ -3692,312 +3733,54 @@ function showCartToast(
         );
 
 
-    if (!toast) {
-        return;
-    }
-
-
     toast.textContent =
-        customMessage ||
-        "Added to your collection.";
+        message;
 
 
     toast.classList.add(
-        "show"
+        "active"
     );
 
 
-    setTimeout(
-        function () {
-
-            toast.classList.remove(
-                "show"
-            );
-
-        },
-        2200
+    clearTimeout(
+        window.shrivatsaToastTimer
     );
+
+
+    window.shrivatsaToastTimer =
+        setTimeout(
+            function () {
+
+                toast.classList.remove(
+                    "active"
+                );
+
+            },
+            2200
+        );
 
 }
 
 
 /* =========================================================
-   LOAD PRODUCT
+   INITIALISATION
 ========================================================= */
 
-function loadProduct() {
+loadProduct();
 
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
+updateCartCount();
 
-
-    const productKey =
-        params.get("product");
-
-
-    const product =
-        products[productKey];
-
-
-    if (!product) {
-
-        document
-            .getElementById("productPage")
-            .style.display =
-            "none";
-
-
-        document
-            .getElementById("productError")
-            .style.display =
-            "block";
-
-
-        document.title =
-            "Product Not Found | ShriVatsaDarbar";
-
-
-        return;
-
-    }
-
-
-    currentProduct =
-        product;
-
-    currentProductKey =
-        productKey;
-
-
-    /* =====================================================
-       BASIC CONTENT
-    ===================================================== */
-
-    document
-        .getElementById("productCategory")
-        .textContent =
-        product.category;
-
-
-    document
-        .getElementById("productTitle")
-        .textContent =
-        product.title;
-
-
-    document
-        .getElementById("productSubtitle")
-        .textContent =
-        product.subtitle;
-
-
-    document
-        .getElementById("productDescription")
-        .innerHTML =
-        product.description;
-
-
-    document
-        .getElementById("productCollection")
-        .textContent =
-        product.collection;
-
-
-    document
-        .getElementById("productMetaCategory")
-        .textContent =
-        product.category;
-
-
-    document
-        .getElementById("productCode")
-        .textContent =
-        product.code;
-
-
-    /* =====================================================
-       BREADCRUMB
-    ===================================================== */
-
-    const categorySlug =
-        product.category.toLowerCase();
-
-
-    document
-        .getElementById(
-            "breadcrumbCategoryLink"
-        )
-        .textContent =
-        product.category + "s";
-
-
-    document
-        .getElementById(
-            "breadcrumbCategoryLink"
-        )
-        .href =
-        "collections/collections.html?category=" +
-        (
-            categorySlug === "saree"
-                ? "saree"
-                : "suit"
-        );
-
-
-    document
-        .getElementById(
-            "breadcrumbProduct"
-        )
-        .textContent =
-        product.title;
-
-
-    /* =====================================================
-       WHATSAPP
-    ===================================================== */
-
-    const whatsappMessage =
-        "Hello ShriVatsaDarbar, I am interested in " +
-        product.title +
-        " (" +
-        product.code +
-        "). Please share the price and details.";
-
-
-    document
-        .getElementById(
-            "productWhatsapp"
-        )
-        .href =
-        "https://wa.me/918826196544?text=" +
-        encodeURIComponent(
-            whatsappMessage
-        );
-
-
-    /* =====================================================
-       SEO
-    ===================================================== */
-
-    const seoTitle =
-        product.title +
-        " | ShriVatsaDarbar";
-
-
-    const seoDescription =
-        "Discover " +
-        product.title +
-        " by ShriVatsaDarbar — premium ethnic wear curated with timeless elegance, quality and grace.";
-
-
-    document.title =
-        seoTitle;
-
-
-    document
-        .getElementById("pageTitle")
-        .textContent =
-        seoTitle;
-
-
-    document
-        .getElementById("metaDescription")
-        .setAttribute(
-            "content",
-            seoDescription
-        );
-
-
-    document
-        .getElementById("ogTitle")
-        .setAttribute(
-            "content",
-            seoTitle
-        );
-
-
-    document
-        .getElementById("ogDescription")
-        .setAttribute(
-            "content",
-            seoDescription
-        );
-
-
-    /* =====================================================
-       CANONICAL
-    ===================================================== */
-
-    const currentUrl =
-        window.location.href;
-
-
-    document
-        .getElementById("canonicalUrl")
-        .setAttribute(
-            "href",
-            currentUrl
-        );
-
-
-    document
-        .getElementById("ogUrl")
-        .setAttribute(
-            "content",
-            currentUrl
-        );
-
-
-    /* =====================================================
-       GALLERY
-    ===================================================== */
-
-    currentGalleryIndex = 0;
-
-    renderGallery();
-
-
-    /* =====================================================
-       RESET QUANTITY
-    ===================================================== */
-
-    quantity = 1;
-
-    updateQuantityDisplay();
-
-}
-
-
-/* =========================================================
-   INITIALISE
-========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        loadCart();
-
-        updateCartCount();
-
-        renderCart();
-
-        loadProduct();
-
-    }
-);
+renderCart();
 
 </script>
 
 
-
-<!-- MAIN JAVASCRIPT -->
+<!-- =========================================================
+     MAIN SITE SCRIPT
+========================================================= -->
 
 <script src="script.js"></script>
 
 
 </body>
-
 </html>
