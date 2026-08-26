@@ -1468,5 +1468,68 @@
 
 </script>
 
+    <!-- =========================================================
+     SHREEVATSA PRODUCT PAGE LINKS
+     Connect all fashion products to the master product.html
+========================================================= -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const productLinks = document.querySelectorAll(
+        'a[href*="collections/collections.html"], a.view-details-btn'
+    );
+
+    productLinks.forEach(function (link) {
+
+        const card =
+            link.closest(".product-card") ||
+            link.closest(".collection-product-card") ||
+            link.closest("article") ||
+            link.parentElement;
+
+        if (!card) return;
+
+        const image = card.querySelector("img");
+
+        if (!image) return;
+
+        const src = image.getAttribute("src") || "";
+
+        let productId = "";
+
+        if (src.includes("saree-001")) {
+            productId = "saree-001";
+        }
+
+        else if (src.includes("saree-002")) {
+            productId = "saree-002";
+        }
+
+        else if (src.includes("saree-003")) {
+            productId = "saree-003";
+        }
+
+        else if (src.includes("suit-001")) {
+            productId = "suit-001";
+        }
+
+        else if (src.includes("suit-002")) {
+            productId = "suit-002";
+        }
+
+        else if (src.includes("suit-003")) {
+            productId = "suit-003";
+        }
+
+        if (productId) {
+            link.href = "../product.html?product=" + productId;
+        }
+
+    });
+
+});
+</script>
+
 </body>
 </html>
