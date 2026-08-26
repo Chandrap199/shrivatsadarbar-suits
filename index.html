@@ -2,213 +2,1459 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shri Vatsa Darbar | Exquisite Suits & Sarees</title>
-    <!-- Google Fonts for Editorial Luxury Look -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#4b0713">
+
+    <meta name="description"
+          content="Discover premium sarees and elegant suits at ShreevatsaDharwa. Curated ethnic wear crafted for timeless style, celebrations and every special moment.">
+
+    <meta name="keywords"
+          content="premium sarees, designer sarees, women's suits, ethnic wear, Indian ethnic wear, sarees online, suits online, ShreevatsaDharwa">
+
+    <meta name="author"
+          content="ShreevatsaDharwa">
+
+    <meta property="og:title"
+          content="ShreevatsaDharwa | Grace in Every Thread">
+
+    <meta property="og:description"
+          content="Premium sarees and elegant suits, curated for every occasion.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://suit.shrivatsadarbar.com/">
+
+    <link rel="canonical"
+          href="https://suit.shrivatsadarbar.com/">
+
+    <link rel="icon"
+          type="image/webp"
+          href="images/logos/favicon.webp">
+
+    <title>ShreevatsaDharwa | Premium Sarees & Suits</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="styles.css">
 </head>
+
 <body>
 
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        Complimentary Shipping on All Prepaid & WhatsApp Orders Across India ✨
-    </div>
+<!-- =========================================================
+     ANNOUNCEMENT BAR
+========================================================= -->
 
-    <!-- Navigation Header -->
-    <header class="site-header">
-        <div class="logo">
-            <h1>SHRI VATSA DARBAR</h1>
-            <span>Exquisite Suits & Sarees</span>
-        </div>
-        <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="collections/collections.html">Collections</a>
-            <a href="about.html">About Us</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact.html">Contact</a>
+<div class="announcement-bar">
+    <div class="announcement-inner">
+
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            FREE SHIPPING on Prepaid Orders
+        </span>
+
+        <span class="announcement-divider">|</span>
+
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            Premium Quality Fabrics
+        </span>
+
+        <span class="announcement-divider">|</span>
+
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            Easy Returns & Exchanges
+        </span>
+
+        <a href="https://wa.me/918826196544"
+           target="_blank"
+           rel="noopener"
+           class="announcement-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            Order on WhatsApp
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <a href="index.html"
+           class="brand">
+
+            <img src="images/logos/logo.webp"
+                 alt="ShreevatsaDharwa logo">
+
+        </a>
+
+
+        <button class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <nav class="main-navigation"
+             id="mainNavigation">
+
+            <a href="index.html"
+               class="active">
+                Home
+            </a>
+
+            <a href="collections/collections.html">
+                Sarees
+            </a>
+
+            <a href="collections/collections.html">
+                Suits
+            </a>
+
+            <a href="collections/collections.html">
+                New Arrivals
+            </a>
+
+            <a href="collections/collections.html">
+                Best Sellers
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
         </nav>
+
+
         <div class="header-actions">
-            <button class="cart-btn" onclick="toggleCart()" aria-label="Inquiry Cart">
+
+            <button class="icon-button"
+                    id="searchButton"
+                    aria-label="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+            <button class="icon-button"
+                    aria-label="Wishlist"
+                    onclick="showComingSoon('Wishlist')">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+            <button class="icon-button"
+                    aria-label="Account"
+                    onclick="showComingSoon('Account')">
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+            <button class="icon-button bag-button"
+                    aria-label="Shopping bag"
+                    onclick="showComingSoon('Shopping Bag')">
+
                 <i class="fa-solid fa-bag-shopping"></i>
-                <span id="cart-count">0</span>
+
+                <span class="bag-count">0</span>
+
             </button>
-        </div>
-    </header>
-
-    <!-- Cinematic Auto-Rotating Hero Slider -->
-    <section class="hero-slider">
-        <div class="slides-container">
-            <div class="slide active"><img src="images/banners/hero-01.webp" alt="ShriVatsaDarbar Heritage Saree 1"></div>
-            <div class="slide"><img src="images/banners/hero-02.webp" alt="ShriVatsaDarbar Elite Suit 2"></div>
-            <div class="slide"><img src="images/banners/hero-03.webp" alt="ShriVatsaDarbar Banarasi Collection 3"></div>
-            <div class="slide"><img src="images/banners/hero-04.webp" alt="ShriVatsaDarbar Royal Weaves 4"></div>
-            <div class="slide"><img src="images/banners/hero-05.webp" alt="ShriVatsaDarbar Bridal Edition 5"></div>
-        </div>
-        
-        <!-- Interactive Navigation Dots -->
-        <div class="slider-dots">
-            <span class="dot active" onclick="currentSlide(0)" title="Slide 1"></span>
-            <span class="dot" onclick="currentSlide(1)" title="Slide 2"></span>
-            <span class="dot" onclick="currentSlide(2)" title="Slide 3"></span>
-            <span class="dot" onclick="currentSlide(3)" title="Slide 4"></span>
-            <span class="dot" onclick="currentSlide(4)" title="Slide 5"></span>
-        </div>
-    </section>
-
-    <!-- Most Loved / Best Sellers Section -->
-    <main class="container">
-        <div class="section-title">
-            <h3>Most Loved Best Sellers</h3>
-            <div class="divider"></div>
-            <p class="section-subtitle">Handcrafted masterpieces from the loom of Varanasi</p>
-        </div>
-
-        <div class="product-grid" id="product-grid">
-            <!-- Dynamically populated via script.js -->
-        </div>
-    </main>
-
-    <!-- Professional Footer -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            
-            <!-- Column 1: Brand Info -->
-            <div class="footer-col brand-info">
-                <img src="images/logos/logo-white.webp" alt="ShriVatsaDarbar Logo" class="footer-logo">
-                <p>Curating elite Banarasi katan silk sarees, georgette anarkalis, and heirloom ethnic wear with heritage craftsmanship from Varanasi.</p>
-                <div class="social-icons">
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-
-            <!-- Column 2: Quick Links -->
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="collections/collections.html">Collections</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="our-story.html">Our Story</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 3: Collections -->
-            <div class="footer-col">
-                <h3>Masterpieces</h3>
-                <ul>
-                    <li><a href="collections/collections.html">Banarasi Katan Silk</a></li>
-                    <li><a href="collections/collections.html">Georgette Anarkali</a></li>
-                    <li><a href="collections/collections.html">Organza Tissue Sarees</a></li>
-                    <li><a href="collections/collections.html">Palazzo Suits</a></li>
-                    <li><a href="collections/collections.html">Heirloom Edit</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Policies (Linked to your explicit directory structure) -->
-            <div class="footer-col">
-                <h3>Policies</h3>
-                <ul>
-                    <li><a href="policies/privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="policies/shipping-policy.html">Shipping Policy</a></li>
-                    <li><a href="policies/return-refund.html">Return & Refund</a></li>
-                    <li><a href="policies/cancellation-policy.html">Cancellation Policy</a></li>
-                    <li><a href="policies/terms-conditions.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 5: Contact Info -->
-            <div class="footer-col contact-info">
-                <h3>Contact</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Varanasi, Uttar Pradesh, India</p>
-                <p><i class="fas fa-envelope"></i> shrivatsadarbar@gmail.com</p>
-                <p><i class="fas fa-phone-alt"></i> +91 88261 96544</p>
-                <p><i class="fas fa-clock"></i> Support: 10:00 AM – 8:00 PM</p>
-            </div>
 
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-            <p>&copy; 2026 <strong>ShriVatsaDarbar</strong>. All Rights Reserved.</p>
-            <p>Crafted with devotion and luxury in Varanasi.</p>
-        </div>
-    </footer>
-
-    <!-- Slide-out Inquiry Cart Drawer -->
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h3>Your Selection</h3>
-            <button onclick="toggleCart()" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="cart-items" id="cart-items">
-            <!-- Cart items populated dynamically -->
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Estimated Total:</span>
-                <span id="cart-total-price">₹0</span>
-            </div>
-            <button class="whatsapp-checkout-btn" onclick="sendToWhatsApp()">
-                <i class="fa-brands fa-whatsapp"></i> Proceed Inquiry via WhatsApp
-            </button>
-        </div>
     </div>
-    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
 
-    <!-- Hero Auto-Rotation Controller Script -->
-    <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-        let slideInterval;
+</header>
 
-        function showSlide(index) {
-            if (index >= slides.length) slideIndex = 0;
-            if (index < 0) slideIndex = slides.length - 1;
-            
-            const container = document.querySelector('.slides-container');
-            if (container) {
-                container.style.transform = `translateX(-${slideIndex * 100}%)`;
-            }
 
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
+<!-- =========================================================
+     SEARCH OVERLAY
+========================================================= -->
 
-            if (slides[slideIndex]) slides[slideIndex].classList.add('active');
-            if (dots[slideIndex]) dots[slideIndex].classList.add('active');
-        }
+<div class="search-overlay"
+     id="searchOverlay">
 
-        function nextSlide() {
-            slideIndex++;
-            showSlide(slideIndex);
-        }
+    <button class="search-close"
+            id="searchClose"
+            aria-label="Close search">
 
-        function currentSlide(index) {
-            slideIndex = index;
-            showSlide(slideIndex);
-            resetTimer();
-        }
+        <i class="fa-solid fa-xmark"></i>
 
-        function startTimer() {
-            slideInterval = setInterval(nextSlide, 3000); // 3-second auto rotation
-        }
+    </button>
 
-        function resetTimer() {
-            clearInterval(slideInterval);
-            startTimer();
-        }
+    <div class="search-box">
 
-        if (slides.length > 0) {
-            startTimer();
-        }
-    </script>
-    <script src="script.js"></script>
+        <span>Search our collection</span>
+
+        <input type="search"
+               id="siteSearch"
+               placeholder="Search sarees, suits..."
+               autocomplete="off">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="hero-section">
+
+    <div class="hero-slider"
+         id="heroSlider">
+
+        <!-- HERO 01 -->
+
+        <div class="hero-slide active">
+
+            <img src="images/banners/hero-01.webp"
+                 alt="ShreevatsaDharwa premium ethnic wear collection">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    ETHNIC WEAR COLLECTION
+                </p>
+
+                <h1>
+                    Timeless Elegance,
+                    <span>Made for You</span>
+                </h1>
+
+                <div class="ornament">
+                    <span></span>
+                    <i class="fa-solid fa-diamond"></i>
+                    <span></span>
+                </div>
+
+                <p class="hero-description">
+                    Discover our curated collection of premium
+                    sarees and elegant suits crafted for every occasion.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="collections/collections.html"
+                       class="button button-primary">
+                        Shop Sarees
+                    </a>
+
+                    <a href="collections/collections.html"
+                       class="button button-outline">
+                        Shop Suits
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO 02 -->
+
+        <div class="hero-slide">
+
+            <img src="images/banners/hero-02.webp"
+                 alt="Elegant Indian ethnic fashion">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    CURATED WITH LOVE
+                </p>
+
+                <h2>
+                    Grace in Every
+                    <span>Thread</span>
+                </h2>
+
+                <div class="ornament">
+                    <span></span>
+                    <i class="fa-solid fa-diamond"></i>
+                    <span></span>
+                </div>
+
+                <p class="hero-description">
+                    Refined silhouettes, beautiful fabrics and
+                    timeless Indian craftsmanship.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="collections/collections.html"
+                       class="button button-primary">
+                        Explore Collection
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO 03 -->
+
+        <div class="hero-slide">
+
+            <img src="images/banners/hero-03.webp"
+                 alt="Premium saree collection">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    THE SAREE EDIT
+                </p>
+
+                <h2>
+                    Draped in
+                    <span>Elegance</span>
+                </h2>
+
+                <div class="ornament">
+                    <span></span>
+                    <i class="fa-solid fa-diamond"></i>
+                    <span></span>
+                </div>
+
+                <p class="hero-description">
+                    Discover sarees designed to make every
+                    celebration unforgettable.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="collections/collections.html"
+                       class="button button-primary">
+                        Shop Sarees
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO 04 -->
+
+        <div class="hero-slide">
+
+            <img src="images/banners/hero-04.webp"
+                 alt="Premium women's suit collection">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    THE SUIT EDIT
+                </p>
+
+                <h2>
+                    Effortless
+                    <span>Sophistication</span>
+                </h2>
+
+                <div class="ornament">
+                    <span></span>
+                    <i class="fa-solid fa-diamond"></i>
+                    <span></span>
+                </div>
+
+                <p class="hero-description">
+                    Elegant suits created for modern Indian women.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="collections/collections.html"
+                       class="button button-primary">
+                        Shop Suits
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO 05 -->
+
+        <div class="hero-slide">
+
+            <img src="images/banners/hero-05.webp"
+                 alt="Festive ethnic wear collection">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    FESTIVE COLLECTION
+                </p>
+
+                <h2>
+                    Celebrate Every
+                    <span>Beautiful Moment</span>
+                </h2>
+
+                <div class="ornament">
+                    <span></span>
+                    <i class="fa-solid fa-diamond"></i>
+                    <span></span>
+                </div>
+
+                <p class="hero-description">
+                    Handpicked styles for celebrations,
+                    gatherings and unforgettable occasions.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="collections/collections.html"
+                       class="button button-primary">
+                        Explore Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button class="slider-arrow slider-prev"
+                id="sliderPrev"
+                aria-label="Previous slide">
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+        </button>
+
+        <button class="slider-arrow slider-next"
+                id="sliderNext"
+                aria-label="Next slide">
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </button>
+
+
+        <div class="slider-dots"
+             id="sliderDots">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRUST STRIP
+========================================================= -->
+
+<section class="trust-strip">
+
+    <div class="container trust-grid">
+
+        <div class="trust-item">
+
+            <div class="trust-icon">
+                <i class="fa-solid fa-gem"></i>
+            </div>
+
+            <div>
+                <strong>Premium Quality Fabrics</strong>
+                <span>Finest materials</span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <div class="trust-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+
+            <div>
+                <strong>Elegant Designs</strong>
+                <span>Curated with love</span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <div class="trust-icon">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div>
+                <strong>Secure Payments</strong>
+                <span>100% safe & secure</span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <div class="trust-icon">
+                <i class="fa-solid fa-rotate-left"></i>
+            </div>
+
+            <div>
+                <strong>Easy Returns</strong>
+                <span>Hassle-free returns</span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <div class="trust-icon">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+
+            <div>
+                <strong>Fast Shipping</strong>
+                <span>Delivered with care</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SHOP BY CATEGORY
+========================================================= -->
+
+<section class="category-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-eyebrow">
+                OUR COLLECTION
+            </p>
+
+            <h2>
+                Shop by Category
+            </h2>
+
+            <div class="heading-ornament">
+                <span></span>
+                <i class="fa-solid fa-diamond"></i>
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <div class="category-grid">
+
+            <a href="collections/collections.html"
+               class="category-card">
+
+                <img src="images/banners/hero-03.webp"
+                     alt="Premium Sarees">
+
+                <div class="category-card-overlay"></div>
+
+                <div class="category-content">
+
+                    <p>SAREES</p>
+
+                    <h3>
+                        Graceful. Timeless. Elegant.
+                    </h3>
+
+                    <span class="category-link">
+                        Explore Sarees
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <a href="collections/collections.html"
+               class="category-card">
+
+                <img src="images/banners/hero-04.webp"
+                     alt="Premium Suits">
+
+                <div class="category-card-overlay"></div>
+
+                <div class="category-content">
+
+                    <p>SUITS</p>
+
+                    <h3>
+                        Stylish. Comfortable. You.
+                    </h3>
+
+                    <span class="category-link">
+                        Explore Suits
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FRESH ARRIVALS
+========================================================= -->
+
+<section class="products-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading section-heading-row">
+
+            <div>
+
+                <p class="section-eyebrow">
+                    NEW ARRIVALS
+                </p>
+
+                <h2>
+                    Fresh Arrivals
+                </h2>
+
+                <div class="heading-ornament">
+                    <span></span>
+                    <i class="fa-solid fa-diamond"></i>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <a href="collections/collections.html"
+               class="view-all-link">
+
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <!-- PRODUCT 001 -->
+
+            <article class="product-card">
+
+                <a href="collections/collections.html"
+                   class="product-image">
+
+                    <span class="product-badge">
+                        NEW
+                    </span>
+
+                    <button class="product-wishlist"
+                            type="button"
+                            aria-label="Add to wishlist"
+                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                    <img src="images/sarees/saree-001/saree-001.webp"
+                         alt="Premium Saree 001">
+
+                </a>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        SAREE
+                    </p>
+
+                    <h3>
+                        Elegant Saree Collection
+                    </h3>
+
+                    <p class="product-price">
+                        Enquire on WhatsApp
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 002 -->
+
+            <article class="product-card">
+
+                <a href="collections/collections.html"
+                   class="product-image">
+
+                    <span class="product-badge">
+                        NEW
+                    </span>
+
+                    <button class="product-wishlist"
+                            type="button"
+                            aria-label="Add to wishlist"
+                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                    <img src="images/suits/suit-001/suit-001.webp"
+                         alt="Premium Suit 001">
+
+                </a>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        SUIT
+                    </p>
+
+                    <h3>
+                        Elegant Suit Collection
+                    </h3>
+
+                    <p class="product-price">
+                        Enquire on WhatsApp
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 003 -->
+
+            <article class="product-card">
+
+                <a href="collections/collections.html"
+                   class="product-image">
+
+                    <span class="product-badge">
+                        NEW
+                    </span>
+
+                    <button class="product-wishlist"
+                            type="button"
+                            aria-label="Add to wishlist"
+                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                    <img src="images/sarees/saree-002/saree-002.webp"
+                         alt="Premium Saree 002">
+
+                </a>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        SAREE
+                    </p>
+
+                    <h3>
+                        Signature Saree Collection
+                    </h3>
+
+                    <p class="product-price">
+                        Enquire on WhatsApp
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 004 -->
+
+            <article class="product-card">
+
+                <a href="collections/collections.html"
+                   class="product-image">
+
+                    <span class="product-badge">
+                        NEW
+                    </span>
+
+                    <button class="product-wishlist"
+                            type="button"
+                            aria-label="Add to wishlist"
+                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                    <img src="images/suits/suit-002/suit-002.webp"
+                         alt="Premium Suit 002">
+
+                </a>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        SUIT
+                    </p>
+
+                    <h3>
+                        Signature Suit Collection
+                    </h3>
+
+                    <p class="product-price">
+                        Enquire on WhatsApp
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 005 -->
+
+            <article class="product-card">
+
+                <a href="collections/collections.html"
+                   class="product-image">
+
+                    <span class="product-badge">
+                        NEW
+                    </span>
+
+                    <button class="product-wishlist"
+                            type="button"
+                            aria-label="Add to wishlist"
+                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                    <img src="images/sarees/saree-003/saree-003.webp"
+                         alt="Premium Saree 003">
+
+                </a>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        SAREE
+                    </p>
+
+                    <h3>
+                        Festive Saree Collection
+                    </h3>
+
+                    <p class="product-price">
+                        Enquire on WhatsApp
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 006 -->
+
+            <article class="product-card">
+
+                <a href="collections/collections.html"
+                   class="product-image">
+
+                    <span class="product-badge">
+                        NEW
+                    </span>
+
+                    <button class="product-wishlist"
+                            type="button"
+                            aria-label="Add to wishlist"
+                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                    <img src="images/suits/suit-003/suit-003.webp"
+                         alt="Premium Suit 003">
+
+                </a>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        SUIT
+                    </p>
+
+                    <h3>
+                        Festive Suit Collection
+                    </h3>
+
+                    <p class="product-price">
+                        Enquire on WhatsApp
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FESTIVE COLLECTION
+========================================================= -->
+
+<section class="campaign-section">
+
+    <div class="container">
+
+        <div class="campaign-banner">
+
+            <img src="images/banners/hero-05.webp"
+                 alt="Festive Collection">
+
+            <div class="campaign-overlay"></div>
+
+            <div class="campaign-content">
+
+                <p>
+                    FESTIVE COLLECTION
+                </p>
+
+                <h2>
+                    Celebrate every moment
+                    <span>in style</span>
+                </h2>
+
+                <a href="collections/collections.html"
+                   class="button button-gold">
+                    Shop Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BRAND VALUES
+========================================================= -->
+
+<section class="values-section section-padding">
+
+    <div class="container values-grid">
+
+        <div class="value-item">
+
+            <div class="value-icon">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <h3>
+                Handpicked With Love
+            </h3>
+
+            <p>
+                Every piece is carefully selected
+                for you.
+            </p>
+
+        </div>
+
+
+        <div class="value-item">
+
+            <div class="value-icon">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <h3>
+                Thoughtfully Curated
+            </h3>
+
+            <p>
+                We care about quality, detail
+                and timeless style.
+            </p>
+
+        </div>
+
+
+        <div class="value-item">
+
+            <div class="value-icon">
+                <i class="fa-solid fa-user-heart"></i>
+            </div>
+
+            <h3>
+                Customer First
+            </h3>
+
+            <p>
+                We're here to make your
+                shopping experience special.
+            </p>
+
+        </div>
+
+
+        <div class="value-item">
+
+            <div class="value-icon">
+                <i class="fa-solid fa-medal"></i>
+            </div>
+
+            <h3>
+                Premium Quality
+            </h3>
+
+            <p>
+                Beautiful products chosen
+                with uncompromising care.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INSTAGRAM
+========================================================= -->
+
+<section class="instagram-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-eyebrow">
+                FOLLOW OUR JOURNEY
+            </p>
+
+            <h2>
+                Follow Us on Instagram
+            </h2>
+
+            <p class="instagram-handle">
+                @shrivatsadarbar
+            </p>
+
+            <div class="heading-ornament">
+                <span></span>
+                <i class="fa-solid fa-diamond"></i>
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <div class="instagram-grid">
+
+            <div>
+                <img src="images/sarees/saree-001/saree-001-lifestyle.webp"
+                     alt="ShreevatsaDharwa Instagram fashion">
+            </div>
+
+            <div>
+                <img src="images/suits/suit-001/suit-001-lifestyle.webp"
+                     alt="ShreevatsaDharwa Instagram suit">
+            </div>
+
+            <div>
+                <img src="images/sarees/saree-002/saree-002-lifestyle.webp"
+                     alt="ShreevatsaDharwa Instagram saree">
+            </div>
+
+            <div>
+                <img src="images/suits/suit-002/suit-002-lifestyle.webp"
+                     alt="ShreevatsaDharwa Instagram suit">
+            </div>
+
+            <div>
+                <img src="images/sarees/saree-003/saree-003-lifestyle.webp"
+                     alt="ShreevatsaDharwa Instagram collection">
+            </div>
+
+            <div>
+                <img src="images/suits/suit-003/suit-003-lifestyle.webp"
+                     alt="ShreevatsaDharwa Instagram collection">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEWSLETTER
+========================================================= -->
+
+<section class="newsletter-section">
+
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <div class="newsletter-icon">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+
+            <div class="newsletter-copy">
+
+                <p>
+                    STAY UPDATED
+                </p>
+
+                <h2>
+                    Be the first to discover what's new.
+                </h2>
+
+                <span>
+                    New arrivals, curated collections and
+                    special offers — delivered occasionally.
+                </span>
+
+            </div>
+
+
+            <form class="newsletter-form"
+                  onsubmit="handleNewsletter(event)">
+
+                <input type="email"
+                       id="newsletterEmail"
+                       placeholder="Enter your email address"
+                       required>
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a href="index.html"
+               class="footer-logo">
+
+                <img src="images/logos/logo.webp"
+                     alt="ShreevatsaDharwa">
+
+            </a>
+
+            <p>
+                Premium sarees and suits curated
+                with timeless elegance, quality
+                and grace in every thread.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="#"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#"
+                   aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#"
+                   aria-label="Pinterest">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </a>
+
+                <a href="#"
+                   aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHOP -->
+
+        <div class="footer-column">
+
+            <h3>SHOP</h3>
+
+            <a href="collections/collections.html">
+                Sarees
+            </a>
+
+            <a href="collections/collections.html">
+                Suits
+            </a>
+
+            <a href="collections/collections.html">
+                New Arrivals
+            </a>
+
+            <a href="collections/collections.html">
+                Best Sellers
+            </a>
+
+            <a href="collections/collections.html">
+                All Collections
+            </a>
+
+        </div>
+
+
+        <!-- CUSTOMER CARE -->
+
+        <div class="footer-column">
+
+            <h3>CUSTOMER CARE</h3>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <a href="policies/shipping-policy.html">
+                Shipping Policy
+            </a>
+
+            <a href="policies/return-refund-policy.html">
+                Return & Refund
+            </a>
+
+            <a href="faq.html">
+                FAQs
+            </a>
+
+            <a href="contact.html">
+                Size Guide
+            </a>
+
+        </div>
+
+
+        <!-- ABOUT -->
+
+        <div class="footer-column">
+
+            <h3>ABOUT US</h3>
+
+            <a href="our-story.html">
+                Our Story
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="policies/privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            <a href="policies/terms-conditions.html">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column footer-contact">
+
+            <h3>CONTACT US</h3>
+
+            <a href="tel:+918826196544">
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 88261 96544
+
+            </a>
+
+            <a href="mailto:shrivatsadarbar@gmail.com">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                shrivatsadarbar@gmail.com
+
+            </a>
+
+            <span>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Bhola and Prabha Niwas,
+                Ratanpur, Padao,
+                Varanasi, Uttar Pradesh
+                221008
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container footer-bottom-inner">
+
+            <p>
+                © 2026 ShreevatsaDharwa.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Grace in Every Thread
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     WHATSAPP FLOAT
+========================================================= -->
+
+<a href="https://wa.me/918826196544"
+   target="_blank"
+   rel="noopener"
+   class="whatsapp-float"
+   aria-label="Chat with ShreevatsaDharwa on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div class="site-toast"
+     id="siteToast"
+     role="status"
+     aria-live="polite">
+
+</div>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
