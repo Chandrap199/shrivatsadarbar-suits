@@ -447,7 +447,7 @@
             top: 12px;
             right: 12px;
 
-            z-index: 3;
+            z-index: 5;
 
             width: 34px;
             height: 34px;
@@ -520,21 +520,39 @@
             color: #93887e;
         }
 
-        .collection-view-button {
-            display: inline-flex;
+
+        /* =====================================================
+           PRODUCT BUTTONS
+        ===================================================== */
+
+        .collection-product-actions {
+            display: flex;
 
             align-items: center;
+            justify-content: center;
 
             gap: 8px;
 
-            padding: 10px 17px;
+            flex-wrap: wrap;
+        }
 
-            border:
-                1px solid #cfc2af;
+        .collection-view-button,
+        .collection-add-button {
 
-            color: #5d5047;
+            display: inline-flex;
 
-            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+
+            gap: 7px;
+
+            min-height: 38px;
+
+            padding: 10px 14px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
 
             font-size: 9px;
 
@@ -542,18 +560,63 @@
 
             text-transform: uppercase;
 
+            cursor: pointer;
+
+            text-decoration: none;
+
             transition:
                 background .25s ease,
                 color .25s ease,
-                border-color .25s ease;
+                border-color .25s ease,
+                transform .2s ease;
+        }
+
+
+        .collection-view-button {
+
+            border:
+                1px solid #cfc2af;
+
+            background: #fff;
+
+            color: #5d5047;
         }
 
         .collection-view-button:hover {
+
             background: #4b0713;
 
             color: #fff;
 
             border-color: #4b0713;
+        }
+
+
+        .collection-add-button {
+
+            border:
+                1px solid #4b0713;
+
+            background: #4b0713;
+
+            color: #fff;
+        }
+
+        .collection-add-button:hover {
+
+            background: #690b1b;
+
+            border-color: #690b1b;
+
+            transform: translateY(-1px);
+        }
+
+
+        .collection-add-button.added {
+
+            background: #8b6a2d;
+
+            border-color: #8b6a2d;
         }
 
 
@@ -600,12 +663,528 @@
 
 
         /* =====================================================
+           CART OVERLAY
+        ===================================================== */
+
+        .cart-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(25, 15, 10, .48);
+
+            z-index: 9998;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition:
+                opacity .25s ease,
+                visibility .25s ease;
+        }
+
+        .cart-overlay.active {
+
+            opacity: 1;
+
+            visibility: visible;
+        }
+
+
+        /* =====================================================
+           CART DRAWER
+        ===================================================== */
+
+        .cart-drawer {
+
+            position: fixed;
+
+            top: 0;
+            right: 0;
+
+            width: min(430px, 100%);
+
+            height: 100vh;
+
+            background: #fff;
+
+            z-index: 9999;
+
+            display: flex;
+
+            flex-direction: column;
+
+            box-shadow:
+                -10px 0 35px rgba(0,0,0,.15);
+
+            transform:
+                translateX(100%);
+
+            transition:
+                transform .3s ease;
+        }
+
+        .cart-drawer.active {
+
+            transform:
+                translateX(0);
+        }
+
+
+        /* =====================================================
+           CART HEADER
+        ===================================================== */
+
+        .cart-header {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 22px 22px;
+
+            border-bottom:
+                1px solid #eee4d8;
+        }
+
+        .cart-header h2 {
+
+            margin: 0;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 30px;
+
+            font-weight: 500;
+
+            color: #2b2420;
+        }
+
+        .cart-close {
+
+            width: 36px;
+            height: 36px;
+
+            border: 0;
+
+            border-radius: 50%;
+
+            background: #f7f2ec;
+
+            color: #4b0713;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* =====================================================
+           CART CONTENT
+        ===================================================== */
+
+        .cart-items {
+
+            flex: 1;
+
+            overflow-y: auto;
+
+            padding: 10px 20px 20px;
+        }
+
+
+        .cart-empty {
+
+            min-height: 300px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            color: #8a7e73;
+        }
+
+        .cart-empty i {
+
+            font-size: 42px;
+
+            color: #c6a76a;
+
+            margin-bottom: 15px;
+        }
+
+        .cart-empty h3 {
+
+            margin: 0 0 6px;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 25px;
+
+            font-weight: 500;
+
+            color: #3b302a;
+        }
+
+        .cart-empty p {
+
+            margin: 0;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           CART ITEM
+        ===================================================== */
+
+        .cart-item {
+
+            display: grid;
+
+            grid-template-columns: 72px 1fr auto;
+
+            gap: 12px;
+
+            padding: 15px 0;
+
+            border-bottom:
+                1px solid #eee5da;
+        }
+
+        .cart-item-image {
+
+            width: 72px;
+            height: 88px;
+
+            overflow: hidden;
+
+            background: #f5eee5;
+        }
+
+        .cart-item-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .cart-item-info {
+
+            min-width: 0;
+        }
+
+        .cart-item-category {
+
+            margin: 0 0 4px;
+
+            font-size: 8px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            color: #a47d32;
+        }
+
+        .cart-item-name {
+
+            margin: 0;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 19px;
+
+            line-height: 1.1;
+
+            color: #302722;
+        }
+
+        .cart-item-id {
+
+            margin: 5px 0 9px;
+
+            font-size: 9px;
+
+            color: #968b82;
+        }
+
+
+        /* =====================================================
+           CART QUANTITY
+        ===================================================== */
+
+        .cart-quantity {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            border:
+                1px solid #dcd0c1;
+        }
+
+        .cart-quantity button {
+
+            width: 27px;
+            height: 27px;
+
+            border: 0;
+
+            background: #faf7f2;
+
+            color: #4b0713;
+
+            cursor: pointer;
+        }
+
+        .cart-quantity span {
+
+            min-width: 28px;
+
+            text-align: center;
+
+            font-size: 11px;
+
+            color: #51463e;
+        }
+
+
+        .cart-item-remove {
+
+            align-self: start;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #a5978c;
+
+            cursor: pointer;
+
+            padding: 4px;
+        }
+
+        .cart-item-remove:hover {
+
+            color: #4b0713;
+        }
+
+
+        /* =====================================================
+           CART FOOTER
+        ===================================================== */
+
+        .cart-footer {
+
+            border-top:
+                1px solid #eee4d8;
+
+            padding: 18px 20px 22px;
+
+            background: #fff;
+        }
+
+        .cart-footer-note {
+
+            margin: 0 0 14px;
+
+            font-size: 10px;
+
+            line-height: 1.5;
+
+            color: #8b7f75;
+
+            text-align: center;
+        }
+
+
+        .cart-whatsapp-button {
+
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 14px 18px;
+
+            border: 0;
+
+            background: #4b0713;
+
+            color: #fff;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 1.4px;
+
+            text-transform: uppercase;
+
+            cursor: pointer;
+
+            transition:
+                background .25s ease;
+        }
+
+        .cart-whatsapp-button:hover {
+
+            background: #690b1b;
+        }
+
+
+        .cart-clear-button {
+
+            width: 100%;
+
+            margin-top: 9px;
+
+            padding: 10px;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #8a7c71;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            cursor: pointer;
+        }
+
+        .cart-clear-button:hover {
+
+            color: #4b0713;
+        }
+
+
+        /* =====================================================
+           CART COUNT
+        ===================================================== */
+
+        .bag-button {
+
+            position: relative;
+        }
+
+        .bag-count {
+
+            position: absolute;
+
+            top: -4px;
+            right: -5px;
+
+            min-width: 17px;
+            height: 17px;
+
+            padding: 0 4px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #b88a2d;
+
+            color: #fff;
+
+            font-size: 8px;
+
+            line-height: 1;
+        }
+
+
+        /* =====================================================
+           TOAST
+        ===================================================== */
+
+        .site-toast {
+
+            position: fixed;
+
+            left: 50%;
+
+            bottom: 25px;
+
+            z-index: 10001;
+
+            transform:
+                translate(-50%, 20px);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            padding: 12px 18px;
+
+            background: #4b0713;
+
+            color: #fff;
+
+            font-size: 11px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.18);
+
+            transition:
+                opacity .25s ease,
+                transform .25s ease,
+                visibility .25s ease;
+        }
+
+        .site-toast.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+            transform:
+                translate(-50%, 0);
+        }
+
+
+        /* =====================================================
            MOBILE
         ===================================================== */
 
         @media (max-width: 900px) {
 
             .collection-product-grid {
+
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
             }
@@ -616,72 +1195,106 @@
         @media (max-width: 600px) {
 
             .collection-hero {
+
                 min-height: 230px;
             }
 
             .collection-hero-content {
+
                 padding: 45px 20px;
             }
 
             .collection-hero h1 {
+
                 font-size: 48px;
             }
 
             .collection-hero p {
+
                 font-size: 16px;
             }
 
             .collection-breadcrumb-inner {
+
                 padding: 13px 18px;
             }
 
             .collection-intro {
+
                 padding: 55px 20px 25px;
             }
 
             .collection-intro h2 {
+
                 font-size: 38px;
             }
 
             .collection-products {
+
                 padding: 0 15px 60px;
             }
 
             .collection-product-grid {
+
                 grid-template-columns: 1fr 1fr;
 
                 gap: 10px;
             }
 
             .collection-product-info {
+
                 padding: 15px 8px 18px;
             }
 
             .collection-product-info h3 {
+
                 font-size: 18px;
             }
 
             .collection-product-description {
+
                 font-size: 10px;
             }
 
-            .collection-view-button {
-                padding: 9px 10px;
-                font-size: 8px;
+            .collection-product-actions {
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 6px;
+            }
+
+            .collection-view-button,
+            .collection-add-button {
+
+                width: 100%;
+
+                padding: 9px 6px;
+
+                font-size: 7.5px;
             }
 
             .collection-product-badge {
+
                 top: 8px;
                 left: 8px;
+
                 padding: 5px 8px;
             }
 
             .collection-wishlist {
+
                 top: 7px;
                 right: 7px;
 
                 width: 30px;
                 height: 30px;
+            }
+
+            .cart-drawer {
+
+                width: 100%;
             }
 
         }
@@ -825,13 +1438,21 @@
 
             </button>
 
+            <!-- SHOPPING BAG -->
+
             <button class="icon-button bag-button"
-                    aria-label="Shopping bag"
-                    onclick="showComingSoon('Shopping Bag')">
+                    id="shoppingBagButton"
+                    aria-label="Open shopping bag"
+                    type="button">
 
                 <i class="fa-solid fa-bag-shopping"></i>
 
-                <span class="bag-count">0</span>
+                <span class="bag-count"
+                      id="bagCount">
+
+                    0
+
+                </span>
 
             </button>
 
@@ -1011,7 +1632,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="saree">
+                 data-category="saree"
+                 data-product-id="saree-001"
+                 data-product-name="Elegant Saree 001"
+                 data-product-category="Saree">
 
             <a href="../product.html?product=saree-001"
                class="collection-product-image">
@@ -1049,13 +1673,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=saree-001"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=saree-001"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1068,7 +1705,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="suit">
+                 data-category="suit"
+                 data-product-id="suit-001"
+                 data-product-name="Elegant Suit 001"
+                 data-product-category="Suit">
 
             <a href="../product.html?product=suit-001"
                class="collection-product-image">
@@ -1106,13 +1746,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=suit-001"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=suit-001"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1125,7 +1778,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="saree">
+                 data-category="saree"
+                 data-product-id="saree-002"
+                 data-product-name="Signature Saree 002"
+                 data-product-category="Saree">
 
             <a href="../product.html?product=saree-002"
                class="collection-product-image">
@@ -1163,13 +1819,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=saree-002"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=saree-002"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1182,7 +1851,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="suit">
+                 data-category="suit"
+                 data-product-id="suit-002"
+                 data-product-name="Signature Suit 002"
+                 data-product-category="Suit">
 
             <a href="../product.html?product=suit-002"
                class="collection-product-image">
@@ -1220,13 +1892,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=suit-002"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=suit-002"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1239,7 +1924,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="saree">
+                 data-category="saree"
+                 data-product-id="saree-003"
+                 data-product-name="Festive Saree 003"
+                 data-product-category="Saree">
 
             <a href="../product.html?product=saree-003"
                class="collection-product-image">
@@ -1277,13 +1965,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=saree-003"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=saree-003"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1296,7 +1997,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="suit">
+                 data-category="suit"
+                 data-product-id="suit-003"
+                 data-product-name="Festive Suit 003"
+                 data-product-category="Suit">
 
             <a href="../product.html?product=suit-003"
                class="collection-product-image">
@@ -1334,13 +2038,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=suit-003"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=suit-003"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1353,7 +2070,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="saree">
+                 data-category="saree"
+                 data-product-id="saree-004"
+                 data-product-name="Signature Saree 004"
+                 data-product-category="Saree">
 
             <a href="../product.html?product=saree-004"
                class="collection-product-image">
@@ -1391,13 +2111,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=saree-004"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=saree-004"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1410,7 +2143,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="suit">
+                 data-category="suit"
+                 data-product-id="suit-004"
+                 data-product-name="Signature Suit 004"
+                 data-product-category="Suit">
 
             <a href="../product.html?product=suit-004"
                class="collection-product-image">
@@ -1448,13 +2184,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=suit-004"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=suit-004"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1467,7 +2216,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="saree">
+                 data-category="saree"
+                 data-product-id="saree-005"
+                 data-product-name="Signature Saree 005"
+                 data-product-category="Saree">
 
             <a href="../product.html?product=saree-005"
                class="collection-product-image">
@@ -1505,13 +2257,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=saree-005"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=saree-005"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1524,7 +2289,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="suit">
+                 data-category="suit"
+                 data-product-id="suit-005"
+                 data-product-name="Signature Suit 005"
+                 data-product-category="Suit">
 
             <a href="../product.html?product=suit-005"
                class="collection-product-image">
@@ -1562,13 +2330,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=suit-005"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=suit-005"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1581,7 +2362,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="saree">
+                 data-category="saree"
+                 data-product-id="saree-006"
+                 data-product-name="Festive Saree 006"
+                 data-product-category="Saree">
 
             <a href="../product.html?product=saree-006"
                class="collection-product-image">
@@ -1619,13 +2403,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=saree-006"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=saree-006"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1638,7 +2435,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="suit">
+                 data-category="suit"
+                 data-product-id="suit-006"
+                 data-product-name="Festive Suit 006"
+                 data-product-category="Suit">
 
             <a href="../product.html?product=suit-006"
                class="collection-product-image">
@@ -1676,13 +2476,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=suit-006"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=suit-006"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1695,7 +2508,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="saree">
+                 data-category="saree"
+                 data-product-id="saree-007"
+                 data-product-name="Premium Saree 007"
+                 data-product-category="Saree">
 
             <a href="../product.html?product=saree-007"
                class="collection-product-image">
@@ -1733,13 +2549,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=saree-007"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=saree-007"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1752,7 +2581,10 @@
         ================================================== -->
 
         <article class="collection-product-card"
-                 data-category="suit">
+                 data-category="suit"
+                 data-product-id="suit-007"
+                 data-product-name="Premium Suit 007"
+                 data-product-category="Suit">
 
             <a href="../product.html?product=suit-007"
                class="collection-product-image">
@@ -1790,13 +2622,26 @@
                     Premium curated collection
                 </p>
 
-                <a href="../product.html?product=suit-007"
-                   class="collection-view-button">
+                <div class="collection-product-actions">
 
-                    View Collection
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="../product.html?product=suit-007"
+                       class="collection-view-button">
 
-                </a>
+                        View Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <button class="collection-add-button"
+                            type="button"
+                            onclick="addToCartFromCard(this)">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -1819,6 +2664,83 @@
     </p>
 
 </section>
+
+
+
+<!-- =========================================================
+     CART OVERLAY
+========================================================= -->
+
+<div class="cart-overlay"
+     id="cartOverlay"></div>
+
+
+
+<!-- =========================================================
+     CART DRAWER
+========================================================= -->
+
+<aside class="cart-drawer"
+       id="cartDrawer"
+       aria-label="Shopping bag">
+
+    <div class="cart-header">
+
+        <h2>
+            Your Bag
+        </h2>
+
+        <button class="cart-close"
+                id="cartClose"
+                type="button"
+                aria-label="Close shopping bag">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="cart-items"
+         id="cartItems">
+
+        <!-- CART CONTENT GENERATED BY JAVASCRIPT -->
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <p class="cart-footer-note">
+
+            Prices and final availability will be confirmed
+            with you on WhatsApp.
+
+        </p>
+
+        <button class="cart-whatsapp-button"
+                id="cartWhatsappButton"
+                type="button">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Enquire on WhatsApp
+
+        </button>
+
+
+        <button class="cart-clear-button"
+                id="cartClearButton"
+                type="button">
+
+            Clear Bag
+
+        </button>
+
+    </div>
+
+</aside>
 
 
 
@@ -2058,12 +2980,17 @@
 
 
 <!-- =========================================================
-     FILTER SCRIPT
+     COLLECTION + CART SCRIPT
 ========================================================= -->
 
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =====================================================
+       FILTERS
+    ===================================================== */
 
     const filters =
         document.querySelectorAll(".collection-filter");
@@ -2213,6 +3140,690 @@ document.addEventListener("DOMContentLoaded", function () {
         applyFilter("all");
 
     }
+
+
+
+    /* =====================================================
+       CART
+    ===================================================== */
+
+    const CART_KEY =
+        "shrivatsaDarbarFashionCart";
+
+
+    let cart = [];
+
+
+    try {
+
+        cart =
+            JSON.parse(
+                localStorage.getItem(CART_KEY)
+            ) || [];
+
+    } catch (error) {
+
+        cart = [];
+
+    }
+
+
+    const cartDrawer =
+        document.getElementById("cartDrawer");
+
+    const cartOverlay =
+        document.getElementById("cartOverlay");
+
+    const cartClose =
+        document.getElementById("cartClose");
+
+    const shoppingBagButton =
+        document.getElementById("shoppingBagButton");
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const bagCount =
+        document.getElementById("bagCount");
+
+    const cartWhatsappButton =
+        document.getElementById("cartWhatsappButton");
+
+    const cartClearButton =
+        document.getElementById("cartClearButton");
+
+
+    /* =====================================================
+       SAVE CART
+    ===================================================== */
+
+    function saveCart() {
+
+        localStorage.setItem(
+            CART_KEY,
+            JSON.stringify(cart)
+        );
+
+    }
+
+
+    /* =====================================================
+       CART COUNT
+    ===================================================== */
+
+    function updateCartCount() {
+
+        const total =
+            cart.reduce(
+                function (sum, item) {
+
+                    return sum + item.quantity;
+
+                },
+                0
+            );
+
+
+        if (bagCount) {
+
+            bagCount.textContent =
+                total;
+
+        }
+
+    }
+
+
+    /* =====================================================
+       OPEN CART
+    ===================================================== */
+
+    function openCart() {
+
+        if (!cartDrawer || !cartOverlay) {
+            return;
+        }
+
+
+        cartDrawer.classList.add("active");
+
+        cartOverlay.classList.add("active");
+
+        document.body.style.overflow =
+            "hidden";
+
+
+        renderCart();
+
+    }
+
+
+    /* =====================================================
+       CLOSE CART
+    ===================================================== */
+
+    function closeCart() {
+
+        if (!cartDrawer || !cartOverlay) {
+            return;
+        }
+
+
+        cartDrawer.classList.remove("active");
+
+        cartOverlay.classList.remove("active");
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+
+    if (shoppingBagButton) {
+
+        shoppingBagButton.addEventListener(
+            "click",
+            openCart
+        );
+
+    }
+
+
+    if (cartClose) {
+
+        cartClose.addEventListener(
+            "click",
+            closeCart
+        );
+
+    }
+
+
+    if (cartOverlay) {
+
+        cartOverlay.addEventListener(
+            "click",
+            closeCart
+        );
+
+    }
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                closeCart();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       ADD PRODUCT
+    ===================================================== */
+
+    window.addToCartFromCard =
+        function (button) {
+
+            const card =
+                button.closest(
+                    ".collection-product-card"
+                );
+
+
+            if (!card) {
+                return;
+            }
+
+
+            const productId =
+                card.getAttribute(
+                    "data-product-id"
+                );
+
+            const productName =
+                card.getAttribute(
+                    "data-product-name"
+                );
+
+            const productCategory =
+                card.getAttribute(
+                    "data-product-category"
+                );
+
+
+            const image =
+                card.querySelector(
+                    ".collection-product-image img"
+                );
+
+
+            const imageSrc =
+                image
+                    ? image.getAttribute("src")
+                    : "";
+
+
+            const existingItem =
+                cart.find(
+                    function (item) {
+
+                        return item.id === productId;
+
+                    }
+                );
+
+
+            if (existingItem) {
+
+                existingItem.quantity += 1;
+
+            } else {
+
+                cart.push({
+
+                    id: productId,
+
+                    name: productName,
+
+                    category: productCategory,
+
+                    image: imageSrc,
+
+                    quantity: 1
+
+                });
+
+            }
+
+
+            saveCart();
+
+            updateCartCount();
+
+            renderCart();
+
+
+            button.classList.add("added");
+
+            button.innerHTML =
+                '<i class="fa-solid fa-check"></i> Added';
+
+
+            showToast(
+                productName +
+                " added to your bag"
+            );
+
+
+            setTimeout(
+                function () {
+
+                    button.classList.remove("added");
+
+                    button.innerHTML =
+                        '<i class="fa-solid fa-bag-shopping"></i> Add to Cart';
+
+                },
+                1500
+            );
+
+        };
+
+
+    /* =====================================================
+       RENDER CART
+    ===================================================== */
+
+    function renderCart() {
+
+        if (!cartItems) {
+            return;
+        }
+
+
+        if (cart.length === 0) {
+
+            cartItems.innerHTML = `
+
+                <div class="cart-empty">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <h3>
+                        Your bag is empty
+                    </h3>
+
+                    <p>
+                        Add something beautiful to your collection.
+                    </p>
+
+                </div>
+
+            `;
+
+            updateCartCount();
+
+            return;
+
+        }
+
+
+        cartItems.innerHTML =
+            cart.map(
+                function (item) {
+
+                    return `
+
+                        <div class="cart-item">
+
+                            <div class="cart-item-image">
+
+                                <img
+                                    src="${escapeHtml(item.image)}"
+                                    alt="${escapeHtml(item.name)}"
+                                >
+
+                            </div>
+
+
+                            <div class="cart-item-info">
+
+                                <p class="cart-item-category">
+
+                                    ${escapeHtml(item.category)}
+
+                                </p>
+
+                                <h3 class="cart-item-name">
+
+                                    ${escapeHtml(item.name)}
+
+                                </h3>
+
+                                <p class="cart-item-id">
+
+                                    Product:
+                                    ${escapeHtml(item.id)}
+
+                                </p>
+
+
+                                <div class="cart-quantity">
+
+                                    <button
+                                        type="button"
+                                        onclick="changeCartQuantity('${item.id}', -1)"
+                                        aria-label="Decrease quantity">
+
+                                        −
+
+                                    </button>
+
+                                    <span>
+
+                                        ${item.quantity}
+
+                                    </span>
+
+                                    <button
+                                        type="button"
+                                        onclick="changeCartQuantity('${item.id}', 1)"
+                                        aria-label="Increase quantity">
+
+                                        +
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="cart-item-remove"
+                                type="button"
+                                onclick="removeFromCart('${item.id}')"
+                                aria-label="Remove ${escapeHtml(item.name)}">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </div>
+
+                    `;
+
+                }
+            ).join("");
+
+
+        updateCartCount();
+
+    }
+
+
+    /* =====================================================
+       CHANGE QUANTITY
+    ===================================================== */
+
+    window.changeCartQuantity =
+        function (productId, change) {
+
+            const item =
+                cart.find(
+                    function (product) {
+
+                        return product.id === productId;
+
+                    }
+                );
+
+
+            if (!item) {
+                return;
+            }
+
+
+            item.quantity += change;
+
+
+            if (item.quantity <= 0) {
+
+                cart =
+                    cart.filter(
+                        function (product) {
+
+                            return product.id !== productId;
+
+                        }
+                    );
+
+            }
+
+
+            saveCart();
+
+            renderCart();
+
+        };
+
+
+    /* =====================================================
+       REMOVE FROM CART
+    ===================================================== */
+
+    window.removeFromCart =
+        function (productId) {
+
+            const item =
+                cart.find(
+                    function (product) {
+
+                        return product.id === productId;
+
+                    }
+                );
+
+
+            cart =
+                cart.filter(
+                    function (product) {
+
+                        return product.id !== productId;
+
+                    }
+                );
+
+
+            saveCart();
+
+            renderCart();
+
+
+            if (item) {
+
+                showToast(
+                    item.name +
+                    " removed from your bag"
+                );
+
+            }
+
+        };
+
+
+    /* =====================================================
+       CLEAR CART
+    ===================================================== */
+
+    if (cartClearButton) {
+
+        cartClearButton.addEventListener(
+            "click",
+            function () {
+
+                if (cart.length === 0) {
+                    return;
+                }
+
+
+                cart = [];
+
+                saveCart();
+
+                renderCart();
+
+                showToast(
+                    "Your bag has been cleared"
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       WHATSAPP CART ENQUIRY
+    ===================================================== */
+
+    if (cartWhatsappButton) {
+
+        cartWhatsappButton.addEventListener(
+            "click",
+            function () {
+
+                if (cart.length === 0) {
+
+                    showToast(
+                        "Your bag is empty"
+                    );
+
+                    return;
+
+                }
+
+
+                let message =
+                    "Hello ShriVatsaDarbar,%0A%0A" +
+                    "I would like to enquire about the following products:%0A%0A";
+
+
+                cart.forEach(
+                    function (item, index) {
+
+                        message +=
+                            (index + 1) +
+                            ". " +
+                            item.name +
+                            " (" +
+                            item.id +
+                            ")" +
+                            " × " +
+                            item.quantity +
+                            "%0A";
+
+                    }
+                );
+
+
+                message +=
+                    "%0APlease share the price, availability, size options and final details for these products.%0A%0A" +
+                    "Thank you.";
+
+
+                const whatsappUrl =
+                    "https://wa.me/918826196544?text=" +
+                    message;
+
+
+                window.open(
+                    whatsappUrl,
+                    "_blank",
+                    "noopener"
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       ESCAPE HTML
+    ===================================================== */
+
+    function escapeHtml(value) {
+
+        return String(value || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* =====================================================
+       TOAST
+    ===================================================== */
+
+    function showToast(message) {
+
+        const toast =
+            document.getElementById(
+                "siteToast"
+            );
+
+
+        if (!toast) {
+            return;
+        }
+
+
+        toast.textContent =
+            message;
+
+
+        toast.classList.add(
+            "active"
+        );
+
+
+        clearTimeout(
+            window.shrivatsaToastTimer
+        );
+
+
+        window.shrivatsaToastTimer =
+            setTimeout(
+                function () {
+
+                    toast.classList.remove(
+                        "active"
+                    );
+
+                },
+                2200
+            );
+
+    }
+
+
+    /* =====================================================
+       INITIAL CART RENDER
+    ===================================================== */
+
+    updateCartCount();
+
+    renderCart();
 
 });
 
