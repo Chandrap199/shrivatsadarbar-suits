@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initMasterFooter();
 
+    initContactForm();
+
 });
 
 
@@ -600,18 +602,129 @@ function handleNewsletter(event) {
 
 
 /* =========================================================
+   CONTACT FORM → WHATSAPP
+========================================================= */
+
+function initContactForm() {
+
+    const form =
+        document.getElementById("contactForm");
+
+
+    if (!form) {
+        return;
+    }
+
+
+    form.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+
+            const name =
+                document
+                    .getElementById(
+                        "contactName"
+                    )
+                    .value
+                    .trim();
+
+
+            const email =
+                document
+                    .getElementById(
+                        "contactEmail"
+                    )
+                    .value
+                    .trim();
+
+
+            const phone =
+                document
+                    .getElementById(
+                        "contactPhone"
+                    )
+                    .value
+                    .trim();
+
+
+            const subject =
+                document
+                    .getElementById(
+                        "contactSubject"
+                    )
+                    .value;
+
+
+            const message =
+                document
+                    .getElementById(
+                        "contactMessage"
+                    )
+                    .value
+                    .trim();
+
+
+            if (
+                !name ||
+                !email ||
+                !subject ||
+                !message
+            ) {
+
+                form.reportValidity();
+
+                return;
+
+            }
+
+
+            const whatsappMessage =
+
+`Hello ShriVatsaDarbar,
+
+I would like assistance with the following enquiry:
+
+Name: ${name}
+
+Email: ${email}
+
+Phone: ${phone || "Not provided"}
+
+Enquiry: ${subject}
+
+Message:
+${message}`;
+
+
+            const whatsappURL =
+
+                "https://wa.me/918826196544?text=" +
+
+                encodeURIComponent(
+                    whatsappMessage
+                );
+
+
+            window.open(
+                whatsappURL,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
    MASTER FOOTER
 ========================================================= */
 
 async function initMasterFooter() {
-
-    /*
-       Find an existing footer automatically.
-
-       This allows the master footer system
-       to replace old footers without manually
-       editing every page.
-    */
 
     const existingFooter =
         document.querySelector("footer");
@@ -620,11 +733,6 @@ async function initMasterFooter() {
     const footerPlaceholder =
         document.getElementById("site-footer");
 
-
-    /*
-       If there is no footer at all,
-       there is nothing to replace.
-    */
 
     if (
         !existingFooter &&
@@ -643,11 +751,6 @@ async function initMasterFooter() {
         const path =
             window.location.pathname;
 
-
-        /*
-           Pages inside these folders need
-           to go back one level.
-        */
 
         if (
             path.includes("/policies/") ||
@@ -670,10 +773,6 @@ async function initMasterFooter() {
 
     try {
 
-        /* =================================================
-           LOAD MASTER FOOTER
-        ================================================== */
-
         const response =
             await fetch(
                 `${base}footer.html`
@@ -693,11 +792,6 @@ async function initMasterFooter() {
             await response.text();
 
 
-        /*
-           Replace {{BASE}} in footer.html
-           with the correct path automatically.
-        */
-
         footerHTML =
             footerHTML.replace(
                 /\{\{BASE\}\}/g,
@@ -705,27 +799,12 @@ async function initMasterFooter() {
             );
 
 
-        /* =================================================
-           APPLY MASTER FOOTER
-        ================================================== */
-
-        /*
-           Preferred:
-           Use #site-footer if present.
-        */
-
         if (footerPlaceholder) {
 
             footerPlaceholder.outerHTML =
                 footerHTML;
 
         }
-
-
-        /*
-           Otherwise:
-           Automatically replace the old footer.
-        */
 
         else if (existingFooter) {
 
