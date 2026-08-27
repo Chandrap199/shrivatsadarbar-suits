@@ -5,7 +5,7 @@
 
 
 /* =========================================================
-   INITIALIZATION
+   INITIALIZE WEBSITE
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initMasterFooter();
 
 });
+
 
 
 /* =========================================================
@@ -111,6 +112,7 @@ function initMobileMenu() {
 }
 
 
+
 /* =========================================================
    HERO SLIDER
 ========================================================= */
@@ -152,7 +154,10 @@ function initHeroSlider() {
     let autoplay;
 
 
-    /* Create dots */
+
+    /* =====================================================
+       CREATE DOTS
+    ====================================================== */
 
     if (dotsContainer) {
 
@@ -193,11 +198,14 @@ function initHeroSlider() {
 
     const dots =
         dotsContainer
-            ? dotsContainer.querySelectorAll(
-                ".slider-dot"
-            )
+            ? dotsContainer.querySelectorAll(".slider-dot")
             : [];
 
+
+
+    /* =====================================================
+       GO TO SLIDE
+    ====================================================== */
 
     function goToSlide(index) {
 
@@ -236,6 +244,11 @@ function initHeroSlider() {
     }
 
 
+
+    /* =====================================================
+       NEXT SLIDE
+    ====================================================== */
+
     function nextSlide() {
 
         goToSlide(current + 1);
@@ -243,12 +256,22 @@ function initHeroSlider() {
     }
 
 
+
+    /* =====================================================
+       PREVIOUS SLIDE
+    ====================================================== */
+
     function previousSlide() {
 
         goToSlide(current - 1);
 
     }
 
+
+
+    /* =====================================================
+       AUTOPLAY
+    ====================================================== */
 
     function startAutoplay() {
 
@@ -270,6 +293,11 @@ function initHeroSlider() {
     }
 
 
+
+    /* =====================================================
+       NEXT BUTTON
+    ====================================================== */
+
     if (next) {
 
         next.addEventListener(
@@ -285,6 +313,11 @@ function initHeroSlider() {
 
     }
 
+
+
+    /* =====================================================
+       PREVIOUS BUTTON
+    ====================================================== */
 
     if (previous) {
 
@@ -302,15 +335,16 @@ function initHeroSlider() {
     }
 
 
-    /* Keyboard support */
+
+    /* =====================================================
+       KEYBOARD SUPPORT
+    ====================================================== */
 
     document.addEventListener(
         "keydown",
         event => {
 
-            if (
-                event.key === "ArrowRight"
-            ) {
+            if (event.key === "ArrowRight") {
 
                 nextSlide();
 
@@ -319,9 +353,7 @@ function initHeroSlider() {
             }
 
 
-            if (
-                event.key === "ArrowLeft"
-            ) {
+            if (event.key === "ArrowLeft") {
 
                 previousSlide();
 
@@ -333,7 +365,10 @@ function initHeroSlider() {
     );
 
 
-    /* Touch swipe */
+
+    /* =====================================================
+       TOUCH / SWIPE SUPPORT
+    ====================================================== */
 
     let touchStartX = 0;
 
@@ -373,7 +408,9 @@ function initHeroSlider() {
 
                 nextSlide();
 
-            } else {
+            }
+
+            else {
 
                 previousSlide();
 
@@ -387,13 +424,17 @@ function initHeroSlider() {
     );
 
 
-    /* Start slider */
+
+    /* =====================================================
+       START SLIDER
+    ====================================================== */
 
     goToSlide(0);
 
     startAutoplay();
 
 }
+
 
 
 /* =========================================================
@@ -426,6 +467,11 @@ function initSearch() {
     }
 
 
+
+    /* =====================================================
+       OPEN SEARCH
+    ====================================================== */
+
     searchButton.addEventListener(
         "click",
         () => {
@@ -457,6 +503,11 @@ function initSearch() {
     );
 
 
+
+    /* =====================================================
+       CLOSE SEARCH
+    ====================================================== */
+
     function closeSearch() {
 
         searchOverlay.classList.remove(
@@ -471,6 +522,11 @@ function initSearch() {
     }
 
 
+
+    /* =====================================================
+       CLOSE BUTTON
+    ====================================================== */
+
     if (searchClose) {
 
         searchClose.addEventListener(
@@ -480,6 +536,11 @@ function initSearch() {
 
     }
 
+
+
+    /* =====================================================
+       CLICK OUTSIDE
+    ====================================================== */
 
     searchOverlay.addEventListener(
         "click",
@@ -498,13 +559,16 @@ function initSearch() {
     );
 
 
+
+    /* =====================================================
+       ESCAPE KEY
+    ====================================================== */
+
     document.addEventListener(
         "keydown",
         event => {
 
-            if (
-                event.key === "Escape"
-            ) {
+            if (event.key === "Escape") {
 
                 closeSearch();
 
@@ -514,6 +578,7 @@ function initSearch() {
     );
 
 }
+
 
 
 /* =========================================================
@@ -541,15 +606,14 @@ function showComingSoon(feature) {
     setTimeout(
         () => {
 
-            toast.classList.remove(
-                "show"
-            );
+            toast.classList.remove("show");
 
         },
         2500
     );
 
 }
+
 
 
 /* =========================================================
@@ -590,9 +654,7 @@ function handleNewsletter(event) {
         setTimeout(
             () => {
 
-                toast.classList.remove(
-                    "show"
-                );
+                toast.classList.remove("show");
 
             },
             3000
@@ -606,53 +668,73 @@ function handleNewsletter(event) {
 }
 
 
+
 /* =========================================================
    MASTER FOOTER
 ========================================================= */
 
 async function initMasterFooter() {
 
-    /*
-       Look for either:
 
-       1. The recommended placeholder:
-          <div id="site-footer"></div>
-
-       OR
-
-       2. An existing old footer.
-    */
+    /* =====================================================
+       FIND FOOTER PLACEHOLDER
+    ====================================================== */
 
     const footerPlaceholder =
         document.getElementById("site-footer");
 
 
-    const existingFooter =
-        document.querySelector("footer");
-
-
     /*
-       If neither exists,
-       there is nothing to load.
+       If there is no placeholder,
+       do nothing.
+
+       The placeholder is:
+
+       <div id="site-footer"></div>
     */
 
-    if (
-        !footerPlaceholder &&
-        !existingFooter
-    ) {
+    if (!footerPlaceholder) {
         return;
     }
 
 
-    try {
 
-        /*
-           Load the single master footer file.
-        */
+    /* =====================================================
+       DETERMINE CURRENT PAGE DEPTH
+    ====================================================== */
+
+    const path =
+        window.location.pathname;
+
+
+    let base = "";
+
+
+    /*
+       Pages inside these folders
+       need to go back one level.
+    */
+
+    if (
+        path.includes("/collections/") ||
+        path.includes("/policies/")
+    ) {
+
+        base = "../";
+
+    }
+
+
+
+    /* =====================================================
+       LOAD MASTER FOOTER
+    ====================================================== */
+
+    try {
 
         const response =
             await fetch(
-                "footer.html"
+                `${base}footer.html`
             );
 
 
@@ -665,36 +747,32 @@ async function initMasterFooter() {
         }
 
 
-        const footerHTML =
+        let footerHTML =
             await response.text();
 
 
-        /*
-           Preferred method:
-           Replace the placeholder content.
-        */
 
-        if (footerPlaceholder) {
+        /* =================================================
+           REPLACE BASE PATH PLACEHOLDER
+        ================================================== */
 
-            footerPlaceholder.innerHTML =
-                footerHTML;
+        footerHTML =
+            footerHTML.replace(
+                /{{BASE}}/g,
+                base
+            );
 
-        }
 
 
-        /*
-           Automatic fallback:
-           Replace an existing old footer.
-        */
+        /* =================================================
+           INSERT MASTER FOOTER
+        ================================================== */
 
-        else if (existingFooter) {
-
-            existingFooter.outerHTML =
-                footerHTML;
-
-        }
+        footerPlaceholder.innerHTML =
+            footerHTML;
 
     }
+
 
     catch (error) {
 
@@ -706,6 +784,7 @@ async function initMasterFooter() {
     }
 
 }
+
 
 
 /* =========================================================
