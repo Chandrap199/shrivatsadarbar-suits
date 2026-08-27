@@ -3,11 +3,6 @@
    MASTER JAVASCRIPT
 ========================================================= */
 
-
-/* =========================================================
-   INITIALIZE WEBSITE
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
     initMobileMenu();
@@ -19,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initMasterFooter();
 
 });
-
 
 
 /* =========================================================
@@ -112,7 +106,6 @@ function initMobileMenu() {
 }
 
 
-
 /* =========================================================
    HERO SLIDER
 ========================================================= */
@@ -152,7 +145,6 @@ function initHeroSlider() {
     let current = 0;
 
     let autoplay;
-
 
 
     /* =====================================================
@@ -202,25 +194,20 @@ function initHeroSlider() {
             : [];
 
 
-
-    /* =====================================================
-       GO TO SLIDE
-    ====================================================== */
-
     function goToSlide(index) {
 
-        slides[current].classList.remove(
-            "active"
-        );
+        slides.forEach(slide => {
+
+            slide.classList.remove("active");
+
+        });
 
 
-        if (dots[current]) {
+        dots.forEach(dot => {
 
-            dots[current].classList.remove(
-                "active"
-            );
+            dot.classList.remove("active");
 
-        }
+        });
 
 
         current =
@@ -244,11 +231,6 @@ function initHeroSlider() {
     }
 
 
-
-    /* =====================================================
-       NEXT SLIDE
-    ====================================================== */
-
     function nextSlide() {
 
         goToSlide(current + 1);
@@ -256,22 +238,12 @@ function initHeroSlider() {
     }
 
 
-
-    /* =====================================================
-       PREVIOUS SLIDE
-    ====================================================== */
-
     function previousSlide() {
 
         goToSlide(current - 1);
 
     }
 
-
-
-    /* =====================================================
-       AUTOPLAY
-    ====================================================== */
 
     function startAutoplay() {
 
@@ -293,11 +265,6 @@ function initHeroSlider() {
     }
 
 
-
-    /* =====================================================
-       NEXT BUTTON
-    ====================================================== */
-
     if (next) {
 
         next.addEventListener(
@@ -314,11 +281,6 @@ function initHeroSlider() {
     }
 
 
-
-    /* =====================================================
-       PREVIOUS BUTTON
-    ====================================================== */
-
     if (previous) {
 
         previous.addEventListener(
@@ -333,7 +295,6 @@ function initHeroSlider() {
         );
 
     }
-
 
 
     /* =====================================================
@@ -365,9 +326,8 @@ function initHeroSlider() {
     );
 
 
-
     /* =====================================================
-       TOUCH / SWIPE SUPPORT
+       TOUCH SWIPE
     ====================================================== */
 
     let touchStartX = 0;
@@ -424,7 +384,6 @@ function initHeroSlider() {
     );
 
 
-
     /* =====================================================
        START SLIDER
     ====================================================== */
@@ -434,7 +393,6 @@ function initHeroSlider() {
     startAutoplay();
 
 }
-
 
 
 /* =========================================================
@@ -467,11 +425,6 @@ function initSearch() {
     }
 
 
-
-    /* =====================================================
-       OPEN SEARCH
-    ====================================================== */
-
     searchButton.addEventListener(
         "click",
         () => {
@@ -503,11 +456,6 @@ function initSearch() {
     );
 
 
-
-    /* =====================================================
-       CLOSE SEARCH
-    ====================================================== */
-
     function closeSearch() {
 
         searchOverlay.classList.remove(
@@ -522,11 +470,6 @@ function initSearch() {
     }
 
 
-
-    /* =====================================================
-       CLOSE BUTTON
-    ====================================================== */
-
     if (searchClose) {
 
         searchClose.addEventListener(
@@ -536,11 +479,6 @@ function initSearch() {
 
     }
 
-
-
-    /* =====================================================
-       CLICK OUTSIDE
-    ====================================================== */
 
     searchOverlay.addEventListener(
         "click",
@@ -559,11 +497,6 @@ function initSearch() {
     );
 
 
-
-    /* =====================================================
-       ESCAPE KEY
-    ====================================================== */
-
     document.addEventListener(
         "keydown",
         event => {
@@ -578,7 +511,6 @@ function initSearch() {
     );
 
 }
-
 
 
 /* =========================================================
@@ -613,7 +545,6 @@ function showComingSoon(feature) {
     );
 
 }
-
 
 
 /* =========================================================
@@ -668,69 +599,80 @@ function handleNewsletter(event) {
 }
 
 
-
 /* =========================================================
    MASTER FOOTER
 ========================================================= */
 
 async function initMasterFooter() {
 
+    /*
+       Find an existing footer automatically.
 
-    /* =====================================================
-       FIND FOOTER PLACEHOLDER
-    ====================================================== */
+       This allows the master footer system
+       to replace old footers without manually
+       editing every page.
+    */
+
+    const existingFooter =
+        document.querySelector("footer");
+
 
     const footerPlaceholder =
         document.getElementById("site-footer");
 
 
     /*
-       If there is no placeholder,
-       do nothing.
-
-       The placeholder is:
-
-       <div id="site-footer"></div>
+       If there is no footer at all,
+       there is nothing to replace.
     */
 
-    if (!footerPlaceholder) {
+    if (
+        !existingFooter &&
+        !footerPlaceholder
+    ) {
         return;
     }
 
 
-
     /* =====================================================
-       DETERMINE CURRENT PAGE DEPTH
+       DETERMINE BASE PATH
     ====================================================== */
 
-    const path =
-        window.location.pathname;
+    function getBasePath() {
+
+        const path =
+            window.location.pathname;
 
 
-    let base = "";
+        /*
+           Pages inside these folders need
+           to go back one level.
+        */
+
+        if (
+            path.includes("/policies/") ||
+            path.includes("/collections/")
+        ) {
+
+            return "../";
+
+        }
 
 
-    /*
-       Pages inside these folders
-       need to go back one level.
-    */
-
-    if (
-        path.includes("/collections/") ||
-        path.includes("/policies/")
-    ) {
-
-        base = "../";
+        return "";
 
     }
 
 
+    const base =
+        getBasePath();
 
-    /* =====================================================
-       LOAD MASTER FOOTER
-    ====================================================== */
 
     try {
+
+        /* =================================================
+           LOAD MASTER FOOTER
+        ================================================== */
 
         const response =
             await fetch(
@@ -751,28 +693,48 @@ async function initMasterFooter() {
             await response.text();
 
 
-
-        /* =================================================
-           REPLACE BASE PATH PLACEHOLDER
-        ================================================== */
+        /*
+           Replace {{BASE}} in footer.html
+           with the correct path automatically.
+        */
 
         footerHTML =
             footerHTML.replace(
-                /{{BASE}}/g,
+                /\{\{BASE\}\}/g,
                 base
             );
 
 
-
         /* =================================================
-           INSERT MASTER FOOTER
+           APPLY MASTER FOOTER
         ================================================== */
 
-        footerPlaceholder.innerHTML =
-            footerHTML;
+        /*
+           Preferred:
+           Use #site-footer if present.
+        */
+
+        if (footerPlaceholder) {
+
+            footerPlaceholder.outerHTML =
+                footerHTML;
+
+        }
+
+
+        /*
+           Otherwise:
+           Automatically replace the old footer.
+        */
+
+        else if (existingFooter) {
+
+            existingFooter.outerHTML =
+                footerHTML;
+
+        }
 
     }
-
 
     catch (error) {
 
@@ -784,7 +746,6 @@ async function initMasterFooter() {
     }
 
 }
-
 
 
 /* =========================================================
