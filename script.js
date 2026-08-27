@@ -539,3 +539,412 @@ window.showComingSoon =
 
 window.handleNewsletter =
     handleNewsletter;
+
+
+
+
+
+/* =========================================================
+   SHRI VATSADARBAR — MASTER FOOTER
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const footerPlaceholder = document.getElementById("site-footer");
+
+    if (!footerPlaceholder) return;
+
+
+    /* =====================================================
+       DETERMINE WEBSITE BASE PATH
+    ====================================================== */
+
+    function getBasePath() {
+
+        const path = window.location.pathname;
+
+        /*
+        Pages inside folders such as:
+
+        /policies/
+        /collections/
+
+        need one level back.
+        */
+
+        if (
+            path.includes("/policies/") ||
+            path.includes("/collections/")
+        ) {
+            return "../";
+        }
+
+        return "";
+    }
+
+
+    const base = getBasePath();
+
+
+    /* =====================================================
+       MASTER FOOTER HTML
+    ====================================================== */
+
+    footerPlaceholder.innerHTML = `
+
+        <footer class="svd-footer">
+
+
+            <!-- =============================================
+                 FOOTER MAIN
+            ============================================== -->
+
+            <div class="svd-footer-main">
+
+
+                <!-- =========================================
+                     BRAND
+                ========================================== -->
+
+                <div class="svd-footer-brand">
+
+                    <a href="${base}index.html"
+                       class="svd-footer-logo">
+
+                        <img
+                            src="${base}images/logos/logo.webp"
+                            alt="ShriVatsaDarbar">
+
+                    </a>
+
+
+                    <p>
+
+                        Premium sarees and suits curated with
+                        timeless elegance, quality and grace
+                        in every thread.
+
+                    </p>
+
+
+                    <div class="svd-footer-socials">
+
+
+                        <!-- INSTAGRAM -->
+
+                        <a href="#"
+                           aria-label="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+
+                        <!-- FACEBOOK -->
+
+                        <a href="#"
+                           aria-label="Facebook">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+
+                        <!-- PINTEREST -->
+
+                        <a href="#"
+                           aria-label="Pinterest">
+
+                            <i class="fa-brands fa-pinterest-p"></i>
+
+                        </a>
+
+
+                        <!-- YOUTUBE -->
+
+                        <a href="#"
+                           aria-label="YouTube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     SHOP
+                ========================================== -->
+
+                <div class="svd-footer-column">
+
+                    <h4>
+                        Shop
+                    </h4>
+
+
+                    <a href="${base}collections/collections.html?category=saree">
+
+                        Sarees
+
+                    </a>
+
+
+                    <a href="${base}collections/collections.html?category=suit">
+
+                        Suits
+
+                    </a>
+
+
+                    <a href="${base}collections/collections.html">
+
+                        New Arrivals
+
+                    </a>
+
+
+                    <a href="${base}collections/collections.html">
+
+                        Best Sellers
+
+                    </a>
+
+
+                    <a href="${base}collections/collections.html">
+
+                        All Collections
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     CUSTOMER CARE
+                ========================================== -->
+
+                <div class="svd-footer-column">
+
+                    <h4>
+                        Customer Care
+                    </h4>
+
+
+                    <a href="${base}contact.html">
+
+                        Contact Us
+
+                    </a>
+
+
+                    <a href="${base}faq.html">
+
+                        FAQ
+
+                    </a>
+
+
+                    <a href="${base}size-guide.html">
+
+                        Size Guide
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     POLICIES
+                ========================================== -->
+
+                <div class="svd-footer-column">
+
+                    <h4>
+                        Policies
+                    </h4>
+
+
+                    <a href="${base}policies/privacy-policy.html">
+
+                        Privacy Policy
+
+                    </a>
+
+
+                    <a href="${base}policies/shipping-policy.html">
+
+                        Shipping Policy
+
+                    </a>
+
+
+                    <a href="${base}policies/return-refund-policy.html">
+
+                        Return & Refund
+
+                    </a>
+
+
+                    <a href="${base}policies/exchange-policy.html">
+
+                        Exchange Policy
+
+                    </a>
+
+
+                    <a href="${base}policies/cancellation-policy.html">
+
+                        Cancellation Policy
+
+                    </a>
+
+
+                    <a href="${base}policies/terms-conditions.html">
+
+                        Terms & Conditions
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     ABOUT
+                ========================================== -->
+
+                <div class="svd-footer-column">
+
+                    <h4>
+                        About Us
+                    </h4>
+
+
+                    <a href="${base}our-story.html">
+
+                        Our Story
+
+                    </a>
+
+
+                    <a href="${base}about.html">
+
+                        About ShriVatsaDarbar
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     CONTACT
+                ========================================== -->
+
+                <div class="svd-footer-column svd-footer-contact">
+
+                    <h4>
+                        Contact Us
+                    </h4>
+
+
+                    <div class="svd-footer-contact-item">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+
+                            +91 88261 96544
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="svd-footer-contact-item">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <a href="mailto:shrivatsadarbar@gmail.com">
+
+                            shrivatsadarbar@gmail.com
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="svd-footer-contact-item svd-footer-address">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+
+                            Bhola and Prabha Niwas,
+                            Ratanpur, Padao,
+                            Varanasi, Uttar Pradesh
+                            221008
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="svd-footer-contact-item">
+
+                        <i class="fa-regular fa-clock"></i>
+
+                        <span>
+
+                            Support:
+                            10:00 AM – 8:00 PM
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =============================================
+                 FOOTER BOTTOM
+            ============================================== -->
+
+            <div class="svd-footer-bottom">
+
+
+                <p>
+
+                    © 2026
+                    <strong>ShriVatsaDarbar</strong>.
+                    All Rights Reserved.
+
+                </p>
+
+
+                <p>
+
+                    Grace in Every Thread
+
+                </p>
+
+
+            </div>
+
+
+        </footer>
+
+    `;
+
+});
