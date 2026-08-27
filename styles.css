@@ -2564,3 +2564,429 @@ button {
     }
 
 }
+
+
+
+
+/* =========================================================
+   SHRI VATSADARBAR — MASTER FOOTER V2
+========================================================= */
+
+.svd-footer-v2 {
+    width: 100%;
+    background: #f7f2e9;
+    border-top: 1px solid rgba(169, 132, 69, 0.18);
+    color: #4a4036;
+}
+
+.svd-footer-v2__inner {
+    width: min(1400px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 70px 0 28px;
+}
+
+
+/* =========================================================
+   FOOTER MAIN GRID
+========================================================= */
+
+.svd-footer-v2__main {
+    display: grid;
+    grid-template-columns:
+        minmax(190px, 1.35fr)
+        minmax(110px, 0.8fr)
+        minmax(130px, 0.9fr)
+        minmax(120px, 0.9fr)
+        minmax(150px, 1fr)
+        minmax(190px, 1.2fr);
+
+    gap: 0;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.svd-footer-v2__brand {
+    padding-right: 36px;
+}
+
+.svd-footer-v2__logo {
+    display: block;
+    width: 150px;
+    margin-bottom: 22px;
+}
+
+.svd-footer-v2__logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.svd-footer-v2__description {
+    margin: 0;
+    max-width: 260px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #75695d;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.svd-footer-v2__socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.svd-footer-v2__socials a {
+    width: 36px;
+    height: 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(169, 132, 69, 0.25);
+    border-radius: 50%;
+
+    color: #765e36;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.svd-footer-v2__socials a:hover {
+    background: #a88445;
+    color: #ffffff;
+    border-color: #a88445;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.svd-footer-v2__column,
+.svd-footer-v2__contact {
+    min-height: 205px;
+    padding: 0 26px;
+
+    border-left:
+        1px solid rgba(169, 132, 69, 0.16);
+}
+
+.svd-footer-v2__column h4,
+.svd-footer-v2__contact h4 {
+    margin: 0 0 22px;
+
+    color: #4a4036;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.svd-footer-v2__column a {
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 13px;
+
+    color: #75695d;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.svd-footer-v2__column a:hover {
+    color: #a88445;
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.svd-footer-v2__contact-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    color: #75695d;
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.svd-footer-v2__contact-item i {
+    width: 15px;
+
+    margin-top: 4px;
+
+    color: #a88445;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+.svd-footer-v2__contact-item a {
+    color: #75695d;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.svd-footer-v2__contact-item a:hover {
+    color: #a88445;
+}
+
+.svd-footer-v2__address span {
+    max-width: 230px;
+}
+
+
+/* =========================================================
+   DECORATIVE DIVIDER
+========================================================= */
+
+.svd-footer-v2__divider {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 58px 0 25px;
+}
+
+.svd-footer-v2__divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(169, 132, 69, 0.35)
+        );
+}
+
+.svd-footer-v2__divider span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(169, 132, 69, 0.35),
+            transparent
+        );
+}
+
+.svd-footer-v2__divider i {
+    color: #a88445;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.svd-footer-v2__bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #8a7d70;
+
+    font-size: 12px;
+}
+
+.svd-footer-v2__bottom p {
+    margin: 0;
+}
+
+.svd-footer-v2__tagline {
+    color: #a88445;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .svd-footer-v2__main {
+        grid-template-columns:
+            minmax(190px, 1.4fr)
+            repeat(3, minmax(130px, 1fr));
+
+        row-gap: 42px;
+    }
+
+    .svd-footer-v2__contact {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .svd-footer-v2__inner {
+        width: min(100% - 36px, 600px);
+
+        padding:
+            52px 0
+            24px;
+    }
+
+
+    .svd-footer-v2__main {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 0;
+    }
+
+
+    .svd-footer-v2__brand {
+        grid-column: 1 / -1;
+
+        padding: 0 0 38px;
+
+        border-bottom:
+            1px solid rgba(169, 132, 69, 0.16);
+
+        margin-bottom: 30px;
+    }
+
+
+    .svd-footer-v2__logo {
+        width: 130px;
+    }
+
+
+    .svd-footer-v2__description {
+        max-width: 300px;
+    }
+
+
+    .svd-footer-v2__column,
+    .svd-footer-v2__contact {
+        min-height: auto;
+
+        padding:
+            0 18px
+            28px;
+
+        margin-bottom: 28px;
+
+        border-left: none;
+
+        border-bottom:
+            1px solid rgba(169, 132, 69, 0.16);
+    }
+
+
+    .svd-footer-v2__column:nth-of-type(2),
+    .svd-footer-v2__column:nth-of-type(4) {
+        border-right:
+            1px solid rgba(169, 132, 69, 0.16);
+    }
+
+
+    .svd-footer-v2__contact {
+        grid-column: 1 / -1;
+    }
+
+
+    .svd-footer-v2__divider {
+        margin:
+            28px 0
+            20px;
+    }
+
+
+    .svd-footer-v2__bottom {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .svd-footer-v2__main {
+        grid-template-columns: 1fr;
+    }
+
+
+    .svd-footer-v2__column,
+    .svd-footer-v2__contact {
+        grid-column: auto;
+
+        padding-left: 0;
+        padding-right: 0;
+
+        border-right: none !important;
+    }
+
+
+    .svd-footer-v2__brand {
+        grid-column: auto;
+    }
+
+}
