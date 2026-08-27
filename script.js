@@ -586,11 +586,80 @@ document.addEventListener("DOMContentLoaded", function () {
     const base = getBasePath();
 
 
+
+   /* =========================================================
+   SHRI VATSADARBAR — MASTER FOOTER
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =====================================================
+       FIND EXISTING FOOTER AUTOMATICALLY
+    ====================================================== */
+
+    const existingFooter =
+        document.querySelector("footer");
+
+    const footerPlaceholder =
+        document.getElementById("site-footer");
+
+
+    /*
+       If a page has neither a footer nor the placeholder,
+       do nothing.
+    */
+
+    if (
+        !existingFooter &&
+        !footerPlaceholder
+    ) {
+        return;
+    }
+
+
+    /* =====================================================
+       DETERMINE CORRECT BASE PATH
+    ====================================================== */
+
+    function getBasePath() {
+
+        const path =
+            window.location.pathname;
+
+        /*
+           Pages inside folders need to go
+           back to the website root.
+
+           Examples:
+
+           /policies/privacy-policy.html
+           → ../
+
+           /collections/collections.html
+           → ../
+        */
+
+        if (
+            path.includes("/policies/") ||
+            path.includes("/collections/")
+        ) {
+            return "../";
+        }
+
+        return "";
+
+    }
+
+
+    const base =
+        getBasePath();
+
+
     /* =====================================================
        MASTER FOOTER HTML
     ====================================================== */
 
-    footerPlaceholder.innerHTML = `
+    const masterFooter = `
 
         <footer class="svd-footer">
 
@@ -629,9 +698,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <div class="svd-footer-socials">
 
-
-                        <!-- INSTAGRAM -->
-
                         <a href="#"
                            aria-label="Instagram">
 
@@ -639,8 +705,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         </a>
 
-
-                        <!-- FACEBOOK -->
 
                         <a href="#"
                            aria-label="Facebook">
@@ -650,8 +714,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         </a>
 
 
-                        <!-- PINTEREST -->
-
                         <a href="#"
                            aria-label="Pinterest">
 
@@ -660,15 +722,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         </a>
 
 
-                        <!-- YOUTUBE -->
-
                         <a href="#"
                            aria-label="YouTube">
 
                             <i class="fa-brands fa-youtube"></i>
 
                         </a>
-
 
                     </div>
 
@@ -682,43 +741,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <div class="svd-footer-column">
 
-                    <h4>
-                        Shop
-                    </h4>
+                    <h4>Shop</h4>
 
 
                     <a href="${base}collections/collections.html?category=saree">
-
                         Sarees
-
                     </a>
 
 
                     <a href="${base}collections/collections.html?category=suit">
-
                         Suits
-
                     </a>
 
 
                     <a href="${base}collections/collections.html">
-
                         New Arrivals
-
                     </a>
 
 
                     <a href="${base}collections/collections.html">
-
                         Best Sellers
-
                     </a>
 
 
                     <a href="${base}collections/collections.html">
-
                         All Collections
-
                     </a>
 
                 </div>
@@ -731,29 +778,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <div class="svd-footer-column">
 
-                    <h4>
-                        Customer Care
-                    </h4>
+                    <h4>Customer Care</h4>
 
 
                     <a href="${base}contact.html">
-
                         Contact Us
-
                     </a>
 
 
                     <a href="${base}faq.html">
-
-                        FAQ
-
+                        FAQs
                     </a>
 
 
                     <a href="${base}size-guide.html">
-
                         Size Guide
-
                     </a>
 
                 </div>
@@ -766,50 +805,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <div class="svd-footer-column">
 
-                    <h4>
-                        Policies
-                    </h4>
+                    <h4>Policies</h4>
 
 
                     <a href="${base}policies/privacy-policy.html">
-
                         Privacy Policy
-
                     </a>
 
 
                     <a href="${base}policies/shipping-policy.html">
-
                         Shipping Policy
-
                     </a>
 
 
                     <a href="${base}policies/return-refund-policy.html">
-
-                        Return & Refund
-
+                        Return & Refund Policy
                     </a>
 
 
                     <a href="${base}policies/exchange-policy.html">
-
                         Exchange Policy
-
                     </a>
 
 
                     <a href="${base}policies/cancellation-policy.html">
-
                         Cancellation Policy
-
                     </a>
 
 
                     <a href="${base}policies/terms-conditions.html">
-
                         Terms & Conditions
-
                     </a>
 
                 </div>
@@ -817,27 +842,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 <!-- =========================================
-                     ABOUT
+                     ABOUT US
                 ========================================== -->
 
                 <div class="svd-footer-column">
 
-                    <h4>
-                        About Us
-                    </h4>
+                    <h4>About Us</h4>
 
 
                     <a href="${base}our-story.html">
-
                         Our Story
-
                     </a>
 
 
                     <a href="${base}about.html">
-
                         About ShriVatsaDarbar
-
                     </a>
 
                 </div>
@@ -850,20 +869,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <div class="svd-footer-column svd-footer-contact">
 
-                    <h4>
-                        Contact Us
-                    </h4>
+                    <h4>Contact Us</h4>
 
 
                     <div class="svd-footer-contact-item">
 
                         <i class="fa-solid fa-phone"></i>
 
-                        <span>
-
+                        <a href="tel:+918826196544">
                             +91 88261 96544
-
-                        </span>
+                        </a>
 
                     </div>
 
@@ -873,9 +888,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <i class="fa-regular fa-envelope"></i>
 
                         <a href="mailto:shrivatsadarbar@gmail.com">
-
                             shrivatsadarbar@gmail.com
-
                         </a>
 
                     </div>
@@ -902,10 +915,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <i class="fa-regular fa-clock"></i>
 
                         <span>
-
-                            Support:
-                            10:00 AM – 8:00 PM
-
+                            Support: 10:00 AM – 8:00 PM
                         </span>
 
                     </div>
@@ -923,7 +933,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="svd-footer-bottom">
 
-
                 <p>
 
                     © 2026
@@ -934,11 +943,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 <p>
-
                     Grace in Every Thread
-
                 </p>
-
 
             </div>
 
@@ -947,4 +953,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     `;
 
+
+    /* =====================================================
+       APPLY MASTER FOOTER
+    ====================================================== */
+
+
+    /*
+       Priority 1:
+       If #site-footer exists, use it.
+    */
+
+    if (footerPlaceholder) {
+
+        footerPlaceholder.outerHTML =
+            masterFooter;
+
+        return;
+
+    }
+
+
+    /*
+       Priority 2:
+       Automatically replace the existing footer.
+
+       This means existing pages do NOT need
+       manual footer removal.
+    */
+
+    if (existingFooter) {
+
+        existingFooter.outerHTML =
+            masterFooter;
+
+    }
+
 });
+
+                          
