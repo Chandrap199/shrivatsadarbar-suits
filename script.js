@@ -1,6 +1,11 @@
 /* =========================================================
-   SHREEVATSIDHARWA
+   SHRI VATSADARBAR
    MASTER JAVASCRIPT
+========================================================= */
+
+
+/* =========================================================
+   INITIALIZATION
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initHeroSlider();
 
     initSearch();
+
+    initMasterFooter();
 
 });
 
@@ -26,27 +33,33 @@ function initMobileMenu() {
     const navigation =
         document.getElementById("mainNavigation");
 
+
     if (!button || !navigation) {
         return;
     }
+
 
     button.addEventListener("click", () => {
 
         const isOpen =
             navigation.classList.toggle("open");
 
+
         button.setAttribute(
             "aria-expanded",
             isOpen ? "true" : "false"
         );
+
 
         document.body.classList.toggle(
             "menu-open",
             isOpen
         );
 
+
         const icon =
             button.querySelector("i");
+
 
         if (icon) {
 
@@ -68,21 +81,27 @@ function initMobileMenu() {
 
                 navigation.classList.remove("open");
 
+
                 button.setAttribute(
                     "aria-expanded",
                     "false"
                 );
 
+
                 document.body.classList.remove(
                     "menu-open"
                 );
 
+
                 const icon =
                     button.querySelector("i");
 
+
                 if (icon) {
+
                     icon.className =
                         "fa-solid fa-bars";
+
                 }
 
             });
@@ -101,25 +120,32 @@ function initHeroSlider() {
     const slider =
         document.getElementById("heroSlider");
 
+
     if (!slider) {
         return;
     }
 
+
     const slides =
         slider.querySelectorAll(".hero-slide");
+
 
     const dotsContainer =
         document.getElementById("sliderDots");
 
+
     const previous =
         document.getElementById("sliderPrev");
+
 
     const next =
         document.getElementById("sliderNext");
 
+
     if (!slides.length) {
         return;
     }
+
 
     let current = 0;
 
@@ -128,39 +154,49 @@ function initHeroSlider() {
 
     /* Create dots */
 
-    slides.forEach((slide, index) => {
+    if (dotsContainer) {
 
-        const dot =
-            document.createElement("button");
+        slides.forEach((slide, index) => {
 
-        dot.className =
-            "slider-dot";
+            const dot =
+                document.createElement("button");
 
-        dot.setAttribute(
-            "aria-label",
-            `Go to slide ${index + 1}`
-        );
 
-        dot.addEventListener(
-            "click",
-            () => {
+            dot.className =
+                "slider-dot";
 
-                goToSlide(index);
 
-                restartAutoplay();
+            dot.setAttribute(
+                "aria-label",
+                `Go to slide ${index + 1}`
+            );
 
-            }
-        );
 
-        dotsContainer.appendChild(dot);
+            dot.addEventListener(
+                "click",
+                () => {
 
-    });
+                    goToSlide(index);
+
+                    restartAutoplay();
+
+                }
+            );
+
+
+            dotsContainer.appendChild(dot);
+
+        });
+
+    }
 
 
     const dots =
-        dotsContainer.querySelectorAll(
-            ".slider-dot"
-        );
+        dotsContainer
+            ? dotsContainer.querySelectorAll(
+                ".slider-dot"
+            )
+            : [];
 
 
     function goToSlide(index) {
@@ -169,21 +205,33 @@ function initHeroSlider() {
             "active"
         );
 
-        dots[current].classList.remove(
-            "active"
-        );
+
+        if (dots[current]) {
+
+            dots[current].classList.remove(
+                "active"
+            );
+
+        }
+
 
         current =
             (index + slides.length) %
             slides.length;
 
+
         slides[current].classList.add(
             "active"
         );
 
-        dots[current].classList.add(
-            "active"
-        );
+
+        if (dots[current]) {
+
+            dots[current].classList.add(
+                "active"
+            );
+
+        }
 
     }
 
@@ -270,6 +318,7 @@ function initHeroSlider() {
 
             }
 
+
             if (
                 event.key === "ArrowLeft"
             ) {
@@ -310,18 +359,26 @@ function initHeroSlider() {
             touchEndX =
                 event.changedTouches[0].screenX;
 
+
             const difference =
                 touchStartX - touchEndX;
+
 
             if (Math.abs(difference) < 50) {
                 return;
             }
 
+
             if (difference > 0) {
+
                 nextSlide();
+
             } else {
+
                 previousSlide();
+
             }
+
 
             restartAutoplay();
 
@@ -330,7 +387,7 @@ function initHeroSlider() {
     );
 
 
-    /* Start */
+    /* Start slider */
 
     goToSlide(0);
 
@@ -348,11 +405,14 @@ function initSearch() {
     const searchButton =
         document.getElementById("searchButton");
 
+
     const searchOverlay =
         document.getElementById("searchOverlay");
 
+
     const searchClose =
         document.getElementById("searchClose");
+
 
     const searchInput =
         document.getElementById("siteSearch");
@@ -374,15 +434,19 @@ function initSearch() {
                 "open"
             );
 
+
             document.body.classList.add(
                 "menu-open"
             );
+
 
             setTimeout(
                 () => {
 
                     if (searchInput) {
+
                         searchInput.focus();
+
                     }
 
                 },
@@ -398,6 +462,7 @@ function initSearch() {
         searchOverlay.classList.remove(
             "open"
         );
+
 
         document.body.classList.remove(
             "menu-open"
@@ -460,14 +525,18 @@ function showComingSoon(feature) {
     const toast =
         document.getElementById("siteToast");
 
+
     if (!toast) {
         return;
     }
 
+
     toast.textContent =
         `${feature} will be available soon.`;
 
+
     toast.classList.add("show");
+
 
     setTimeout(
         () => {
@@ -491,26 +560,32 @@ function handleNewsletter(event) {
 
     event.preventDefault();
 
+
     const email =
         document.getElementById(
             "newsletterEmail"
         );
 
+
     if (!email || !email.value) {
         return;
     }
+
 
     const toast =
         document.getElementById(
             "siteToast"
         );
 
+
     if (toast) {
 
         toast.textContent =
             "Thank you for joining us.";
 
+
         toast.classList.add("show");
+
 
         setTimeout(
             () => {
@@ -525,7 +600,110 @@ function handleNewsletter(event) {
 
     }
 
+
     email.value = "";
+
+}
+
+
+/* =========================================================
+   MASTER FOOTER
+========================================================= */
+
+async function initMasterFooter() {
+
+    /*
+       Look for either:
+
+       1. The recommended placeholder:
+          <div id="site-footer"></div>
+
+       OR
+
+       2. An existing old footer.
+    */
+
+    const footerPlaceholder =
+        document.getElementById("site-footer");
+
+
+    const existingFooter =
+        document.querySelector("footer");
+
+
+    /*
+       If neither exists,
+       there is nothing to load.
+    */
+
+    if (
+        !footerPlaceholder &&
+        !existingFooter
+    ) {
+        return;
+    }
+
+
+    try {
+
+        /*
+           Load the single master footer file.
+        */
+
+        const response =
+            await fetch(
+                "footer.html"
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Unable to load footer.html"
+            );
+
+        }
+
+
+        const footerHTML =
+            await response.text();
+
+
+        /*
+           Preferred method:
+           Replace the placeholder content.
+        */
+
+        if (footerPlaceholder) {
+
+            footerPlaceholder.innerHTML =
+                footerHTML;
+
+        }
+
+
+        /*
+           Automatic fallback:
+           Replace an existing old footer.
+        */
+
+        else if (existingFooter) {
+
+            existingFooter.outerHTML =
+                footerHTML;
+
+        }
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Master footer error:",
+            error
+        );
+
+    }
 
 }
 
@@ -537,458 +715,6 @@ function handleNewsletter(event) {
 window.showComingSoon =
     showComingSoon;
 
+
 window.handleNewsletter =
     handleNewsletter;
-
-
-
-
-
-/* =========================================================
-   SHRI VATSADARBAR — MASTER FOOTER
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const footerPlaceholder = document.getElementById("site-footer");
-
-    if (!footerPlaceholder) return;
-
-
-    /* =====================================================
-       DETERMINE WEBSITE BASE PATH
-    ====================================================== */
-
-    function getBasePath() {
-
-        const path = window.location.pathname;
-
-        /*
-        Pages inside folders such as:
-
-        /policies/
-        /collections/
-
-        need one level back.
-        */
-
-        if (
-            path.includes("/policies/") ||
-            path.includes("/collections/")
-        ) {
-            return "../";
-        }
-
-        return "";
-    }
-
-
-    const base = getBasePath();
-
-
-
-   /* =========================================================
-   SHRI VATSADARBAR — MASTER FOOTER
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    /* =====================================================
-       FIND EXISTING FOOTER AUTOMATICALLY
-    ====================================================== */
-
-    const existingFooter =
-        document.querySelector("footer");
-
-    const footerPlaceholder =
-        document.getElementById("site-footer");
-
-
-    /*
-       If a page has neither a footer nor the placeholder,
-       do nothing.
-    */
-
-    if (
-        !existingFooter &&
-        !footerPlaceholder
-    ) {
-        return;
-    }
-
-
-    /* =====================================================
-       DETERMINE CORRECT BASE PATH
-    ====================================================== */
-
-    function getBasePath() {
-
-        const path =
-            window.location.pathname;
-
-        /*
-           Pages inside folders need to go
-           back to the website root.
-
-           Examples:
-
-           /policies/privacy-policy.html
-           → ../
-
-           /collections/collections.html
-           → ../
-        */
-
-        if (
-            path.includes("/policies/") ||
-            path.includes("/collections/")
-        ) {
-            return "../";
-        }
-
-        return "";
-
-    }
-
-
-    const base =
-        getBasePath();
-
-
-    /* =====================================================
-       MASTER FOOTER HTML
-    ====================================================== */
-
-    const masterFooter = `
-
-        <footer class="svd-footer">
-
-
-            <!-- =============================================
-                 FOOTER MAIN
-            ============================================== -->
-
-            <div class="svd-footer-main">
-
-
-                <!-- =========================================
-                     BRAND
-                ========================================== -->
-
-                <div class="svd-footer-brand">
-
-                    <a href="${base}index.html"
-                       class="svd-footer-logo">
-
-                        <img
-                            src="${base}images/logos/logo.webp"
-                            alt="ShriVatsaDarbar">
-
-                    </a>
-
-
-                    <p>
-
-                        Premium sarees and suits curated with
-                        timeless elegance, quality and grace
-                        in every thread.
-
-                    </p>
-
-
-                    <div class="svd-footer-socials">
-
-                        <a href="#"
-                           aria-label="Instagram">
-
-                            <i class="fa-brands fa-instagram"></i>
-
-                        </a>
-
-
-                        <a href="#"
-                           aria-label="Facebook">
-
-                            <i class="fa-brands fa-facebook-f"></i>
-
-                        </a>
-
-
-                        <a href="#"
-                           aria-label="Pinterest">
-
-                            <i class="fa-brands fa-pinterest-p"></i>
-
-                        </a>
-
-
-                        <a href="#"
-                           aria-label="YouTube">
-
-                            <i class="fa-brands fa-youtube"></i>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     SHOP
-                ========================================== -->
-
-                <div class="svd-footer-column">
-
-                    <h4>Shop</h4>
-
-
-                    <a href="${base}collections/collections.html?category=saree">
-                        Sarees
-                    </a>
-
-
-                    <a href="${base}collections/collections.html?category=suit">
-                        Suits
-                    </a>
-
-
-                    <a href="${base}collections/collections.html">
-                        New Arrivals
-                    </a>
-
-
-                    <a href="${base}collections/collections.html">
-                        Best Sellers
-                    </a>
-
-
-                    <a href="${base}collections/collections.html">
-                        All Collections
-                    </a>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     CUSTOMER CARE
-                ========================================== -->
-
-                <div class="svd-footer-column">
-
-                    <h4>Customer Care</h4>
-
-
-                    <a href="${base}contact.html">
-                        Contact Us
-                    </a>
-
-
-                    <a href="${base}faq.html">
-                        FAQs
-                    </a>
-
-
-                    <a href="${base}size-guide.html">
-                        Size Guide
-                    </a>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     POLICIES
-                ========================================== -->
-
-                <div class="svd-footer-column">
-
-                    <h4>Policies</h4>
-
-
-                    <a href="${base}policies/privacy-policy.html">
-                        Privacy Policy
-                    </a>
-
-
-                    <a href="${base}policies/shipping-policy.html">
-                        Shipping Policy
-                    </a>
-
-
-                    <a href="${base}policies/return-refund-policy.html">
-                        Return & Refund Policy
-                    </a>
-
-
-                    <a href="${base}policies/exchange-policy.html">
-                        Exchange Policy
-                    </a>
-
-
-                    <a href="${base}policies/cancellation-policy.html">
-                        Cancellation Policy
-                    </a>
-
-
-                    <a href="${base}policies/terms-conditions.html">
-                        Terms & Conditions
-                    </a>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     ABOUT US
-                ========================================== -->
-
-                <div class="svd-footer-column">
-
-                    <h4>About Us</h4>
-
-
-                    <a href="${base}our-story.html">
-                        Our Story
-                    </a>
-
-
-                    <a href="${base}about.html">
-                        About ShriVatsaDarbar
-                    </a>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     CONTACT
-                ========================================== -->
-
-                <div class="svd-footer-column svd-footer-contact">
-
-                    <h4>Contact Us</h4>
-
-
-                    <div class="svd-footer-contact-item">
-
-                        <i class="fa-solid fa-phone"></i>
-
-                        <a href="tel:+918826196544">
-                            +91 88261 96544
-                        </a>
-
-                    </div>
-
-
-                    <div class="svd-footer-contact-item">
-
-                        <i class="fa-regular fa-envelope"></i>
-
-                        <a href="mailto:shrivatsadarbar@gmail.com">
-                            shrivatsadarbar@gmail.com
-                        </a>
-
-                    </div>
-
-
-                    <div class="svd-footer-contact-item svd-footer-address">
-
-                        <i class="fa-solid fa-location-dot"></i>
-
-                        <span>
-
-                            Bhola and Prabha Niwas,
-                            Ratanpur, Padao,
-                            Varanasi, Uttar Pradesh
-                            221008
-
-                        </span>
-
-                    </div>
-
-
-                    <div class="svd-footer-contact-item">
-
-                        <i class="fa-regular fa-clock"></i>
-
-                        <span>
-                            Support: 10:00 AM – 8:00 PM
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =============================================
-                 FOOTER BOTTOM
-            ============================================== -->
-
-            <div class="svd-footer-bottom">
-
-                <p>
-
-                    © 2026
-                    <strong>ShriVatsaDarbar</strong>.
-                    All Rights Reserved.
-
-                </p>
-
-
-                <p>
-                    Grace in Every Thread
-                </p>
-
-            </div>
-
-
-        </footer>
-
-    `;
-
-
-    /* =====================================================
-       APPLY MASTER FOOTER
-    ====================================================== */
-
-
-    /*
-       Priority 1:
-       If #site-footer exists, use it.
-    */
-
-    if (footerPlaceholder) {
-
-        footerPlaceholder.outerHTML =
-            masterFooter;
-
-        return;
-
-    }
-
-
-    /*
-       Priority 2:
-       Automatically replace the existing footer.
-
-       This means existing pages do NOT need
-       manual footer removal.
-    */
-
-    if (existingFooter) {
-
-        existingFooter.outerHTML =
-            masterFooter;
-
-    }
-
-});
-
-                          
