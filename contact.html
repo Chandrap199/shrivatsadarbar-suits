@@ -1,1 +1,2194 @@
+<!DOCTYPE html>
 
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Contact Us | ShriVatsaDarbar
+    </title>
+
+
+    <meta
+        name="description"
+        content="Contact ShriVatsaDarbar for saree and suit enquiries, size assistance, orders, exchanges, refunds, shipping and customer support."
+    >
+
+
+    <!-- =====================================================
+         MAIN WEBSITE CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CONTACT PAGE STYLES
+    ====================================================== -->
+
+    <style>
+
+
+        /* =================================================
+           CONTACT PAGE
+        ================================================= */
+
+        .svd-contact-page {
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #ffffff 0%,
+                    #fcfaf6 45%,
+                    #f7f1e6 100%
+                );
+
+            color: #2f2924;
+
+            overflow: hidden;
+
+        }
+
+
+        /* =================================================
+           HEADER
+        ================================================= */
+
+        .svd-contact-header {
+
+            background: #ffffff;
+
+            border-bottom:
+                1px solid rgba(180, 140, 70, 0.12);
+
+            position: relative;
+
+            z-index: 100;
+
+        }
+
+
+        .svd-contact-header-inner {
+
+            width: min(1440px, 94%);
+
+            margin: auto;
+
+            min-height: 150px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+        }
+
+
+        .svd-contact-logo {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .svd-contact-logo img {
+
+            width: 145px;
+
+            height: auto;
+
+            display: block;
+
+        }
+
+
+        .svd-contact-navigation {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 28px;
+
+            flex: 1;
+
+        }
+
+
+        .svd-contact-navigation a {
+
+            text-decoration: none;
+
+            color: #3c3732;
+
+            font-size: 12px;
+
+            letter-spacing: 0.03em;
+
+            text-transform: uppercase;
+
+            transition: 0.25s ease;
+
+            position: relative;
+
+            padding: 10px 0;
+
+        }
+
+
+        .svd-contact-navigation a:hover {
+
+            color: #a57a2b;
+
+        }
+
+
+        .svd-contact-navigation a.active {
+
+            color: #a57a2b;
+
+        }
+
+
+        .svd-contact-navigation a.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 0;
+
+            transform: translateX(-50%);
+
+            width: 28px;
+
+            height: 1px;
+
+            background: #b28a3e;
+
+        }
+
+
+        .svd-contact-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 22px;
+
+        }
+
+
+        .svd-contact-actions a {
+
+            color: #332f2b;
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .svd-contact-actions a:hover {
+
+            color: #b38a3d;
+
+        }
+
+
+        /* =================================================
+           HERO
+        ================================================= */
+
+        .svd-contact-hero {
+
+            position: relative;
+
+            text-align: center;
+
+            padding:
+                90px 20px
+                85px;
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 50%,
+                    rgba(191, 148, 70, 0.10),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 90% 50%,
+                    rgba(191, 148, 70, 0.12),
+                    transparent 28%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #faf7f1,
+                    #ffffff,
+                    #f6efe3
+                );
+
+            border-bottom:
+                1px solid rgba(180, 140, 70, 0.12);
+
+        }
+
+
+        .svd-contact-hero::before {
+
+            content: "✦";
+
+            position: absolute;
+
+            left: 7%;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            font-size: 180px;
+
+            color: rgba(180, 138, 61, 0.05);
+
+            pointer-events: none;
+
+        }
+
+
+        .svd-contact-eyebrow {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            color: #a77d32;
+
+            font-size: 11px;
+
+            letter-spacing: 0.28em;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .svd-contact-eyebrow::before,
+        .svd-contact-eyebrow::after {
+
+            content: "";
+
+            width: 42px;
+
+            height: 1px;
+
+            background: #c9aa70;
+
+        }
+
+
+        .svd-contact-hero h1 {
+
+            margin: 0;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(
+                38px,
+                5vw,
+                64px
+            );
+
+            font-weight: 400;
+
+            line-height: 1.15;
+
+            color: #302923;
+
+        }
+
+
+        .svd-contact-hero p {
+
+            max-width: 650px;
+
+            margin:
+                22px auto 0;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            color: #6c635b;
+
+        }
+
+
+        .svd-contact-ornament {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin-top: 30px;
+
+            color: #ae8438;
+
+        }
+
+
+        .svd-contact-ornament span {
+
+            width: 60px;
+
+            height: 1px;
+
+            background: #cfb179;
+
+        }
+
+
+        /* =================================================
+           MAIN CONTENT
+        ================================================= */
+
+        .svd-contact-section {
+
+            width: min(1320px, 92%);
+
+            margin: auto;
+
+            padding:
+                75px 0
+                90px;
+
+        }
+
+
+        .svd-contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.25fr)
+                minmax(380px, 0.85fr);
+
+            gap: 28px;
+
+        }
+
+
+        /* =================================================
+           CARDS
+        ================================================= */
+
+        .svd-contact-card {
+
+            background:
+                rgba(255, 255, 255, 0.78);
+
+            border:
+                1px solid rgba(180, 140, 70, 0.20);
+
+            border-radius: 18px;
+
+            padding: 38px;
+
+            box-shadow:
+                0 18px 60px
+                rgba(77, 59, 30, 0.06);
+
+        }
+
+
+        .svd-contact-card-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 16px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .svd-contact-card-icon {
+
+            width: 56px;
+
+            height: 56px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border:
+                1px solid #d4b778;
+
+            color: #ae8336;
+
+            font-size: 20px;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .svd-contact-card h2 {
+
+            margin: 0;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-weight: 400;
+
+            font-size: 29px;
+
+            color: #342d27;
+
+        }
+
+
+        .svd-contact-card-intro {
+
+            margin:
+                0 0 30px;
+
+            color: #746b63;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =================================================
+           FORM
+        ================================================= */
+
+        .svd-contact-form {
+
+            display: grid;
+
+            gap: 18px;
+
+        }
+
+
+        .svd-contact-form-row {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
+
+        }
+
+
+        .svd-field {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+
+        }
+
+
+        .svd-field label {
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            color: #4c443d;
+
+            letter-spacing: 0.02em;
+
+        }
+
+
+        .svd-required {
+
+            color: #ad8135;
+
+        }
+
+
+        .svd-field input,
+        .svd-field select,
+        .svd-field textarea {
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+            border:
+                1px solid
+                rgba(171, 134, 65, 0.26);
+
+            background: #ffffff;
+
+            border-radius: 8px;
+
+            padding:
+                15px 16px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            color: #3c342e;
+
+            outline: none;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .svd-field textarea {
+
+            min-height: 145px;
+
+            resize: vertical;
+
+        }
+
+
+        .svd-field input:focus,
+        .svd-field select:focus,
+        .svd-field textarea:focus {
+
+            border-color: #b58a3c;
+
+            box-shadow:
+                0 0 0 4px
+                rgba(181, 138, 60, 0.09);
+
+        }
+
+
+        /* =================================================
+           ENQUIRY OPTIONS
+        ================================================= */
+
+        .svd-enquiry-help {
+
+            margin-top: 2px;
+
+            padding: 16px 18px;
+
+            border-radius: 9px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(245, 236, 216, 0.72),
+                    rgba(255, 255, 255, 0.5)
+                );
+
+            border-left:
+                3px solid #b78d40;
+
+            color: #766a5d;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =================================================
+           BUTTON
+        ================================================= */
+
+        .svd-send-button {
+
+            border: none;
+
+            border-radius: 8px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #9d7328,
+                    #bd9547
+                );
+
+            color: white;
+
+            padding:
+                17px 25px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            letter-spacing: 0.06em;
+
+            text-transform: uppercase;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            width: 100%;
+
+        }
+
+
+        .svd-send-button:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 12px 28px
+                rgba(142, 102, 35, 0.22);
+
+        }
+
+
+        .svd-contact-privacy {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 9px;
+
+            font-size: 11px;
+
+            color: #82786e;
+
+            line-height: 1.6;
+
+        }
+
+
+        .svd-contact-privacy i {
+
+            color: #ae8438;
+
+            margin-top: 2px;
+
+        }
+
+
+        /* =================================================
+           CONTACT INFORMATION
+        ================================================= */
+
+        .svd-contact-info-list {
+
+            display: grid;
+
+            gap: 24px;
+
+            margin-top: 28px;
+
+        }
+
+
+        .svd-contact-info-item {
+
+            display: grid;
+
+            grid-template-columns:
+                56px 1fr;
+
+            gap: 16px;
+
+            align-items: start;
+
+        }
+
+
+        .svd-contact-info-item-icon {
+
+            width: 54px;
+
+            height: 54px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid #d4b778;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #ae8336;
+
+            font-size: 19px;
+
+        }
+
+
+        .svd-contact-info-item h3 {
+
+            margin:
+                3px 0 8px;
+
+            font-size: 14px;
+
+            color: #3d352f;
+
+        }
+
+
+        .svd-contact-info-item p,
+        .svd-contact-info-item a {
+
+            margin: 0;
+
+            color: #70665d;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            line-height: 1.75;
+
+        }
+
+
+        .svd-contact-info-item a:hover {
+
+            color: #aa7e32;
+
+        }
+
+
+        /* =================================================
+           MAP
+        ================================================= */
+
+        .svd-contact-map {
+
+            margin-top: 32px;
+
+            overflow: hidden;
+
+            border-radius: 12px;
+
+            border:
+                1px solid rgba(180, 140, 70, 0.18);
+
+            height: 340px;
+
+            background: #f4eee3;
+
+        }
+
+
+        .svd-contact-map iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: 0;
+
+        }
+
+
+        .svd-map-link {
+
+            margin-top: 15px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: #a87d31;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+        }
+
+
+        .svd-map-link:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =================================================
+           SUPPORT CARDS
+        ================================================= */
+
+        .svd-contact-support {
+
+            width: min(1320px, 92%);
+
+            margin:
+                0 auto 75px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            border:
+                1px solid
+                rgba(180, 140, 70, 0.15);
+
+            background:
+                rgba(255, 255, 255, 0.55);
+
+        }
+
+
+        .svd-support-item {
+
+            text-align: center;
+
+            padding:
+                35px 22px;
+
+            border-right:
+                1px solid
+                rgba(180, 140, 70, 0.15);
+
+        }
+
+
+        .svd-support-item:last-child {
+
+            border-right: none;
+
+        }
+
+
+        .svd-support-item i {
+
+            font-size: 23px;
+
+            color: #ad8336;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .svd-support-item h3 {
+
+            margin:
+                0 0 9px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-weight: 400;
+
+            font-size: 18px;
+
+            color: #3d352e;
+
+        }
+
+
+        .svd-support-item p {
+
+            margin: 0;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            color: #746a60;
+
+        }
+
+
+        /* =================================================
+           WHATSAPP FLOATING BUTTON
+        ================================================= */
+
+        .svd-contact-whatsapp {
+
+            position: fixed;
+
+            right: 24px;
+
+            bottom: 24px;
+
+            width: 58px;
+
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: #25d366;
+
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-decoration: none;
+
+            font-size: 28px;
+
+            box-shadow:
+                0 12px 30px
+                rgba(0, 0, 0, 0.18);
+
+            z-index: 999;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .svd-contact-whatsapp:hover {
+
+            transform:
+                translateY(-3px)
+                scale(1.04);
+
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+        ================================================= */
+
+        @media (max-width: 1050px) {
+
+
+            .svd-contact-header-inner {
+
+                min-height: 120px;
+
+            }
+
+
+            .svd-contact-logo img {
+
+                width: 115px;
+
+            }
+
+
+            .svd-contact-navigation {
+
+                gap: 16px;
+
+            }
+
+
+            .svd-contact-navigation a {
+
+                font-size: 10px;
+
+            }
+
+
+            .svd-contact-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .svd-contact-support {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .svd-support-item:nth-child(2) {
+
+                border-right: none;
+
+            }
+
+
+        }
+
+
+        @media (max-width: 700px) {
+
+
+            .svd-contact-header-inner {
+
+                width: 94%;
+
+                min-height: auto;
+
+                padding:
+                    14px 0;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+            .svd-contact-logo {
+
+                width: 100%;
+
+                justify-content: center;
+
+            }
+
+
+            .svd-contact-logo img {
+
+                width: 120px;
+
+            }
+
+
+            .svd-contact-navigation {
+
+                width: 100%;
+
+                order: 3;
+
+                gap: 15px;
+
+                overflow-x: auto;
+
+                justify-content: flex-start;
+
+                padding-bottom: 5px;
+
+            }
+
+
+            .svd-contact-navigation a {
+
+                white-space: nowrap;
+
+                font-size: 9px;
+
+            }
+
+
+            .svd-contact-actions {
+
+                position: absolute;
+
+                right: 18px;
+
+                top: 28px;
+
+                gap: 15px;
+
+            }
+
+
+            .svd-contact-hero {
+
+                padding:
+                    65px 18px;
+
+            }
+
+
+            .svd-contact-hero h1 {
+
+                font-size: 39px;
+
+            }
+
+
+            .svd-contact-hero p {
+
+                font-size: 14px;
+
+            }
+
+
+            .svd-contact-section {
+
+                width: 92%;
+
+                padding:
+                    45px 0
+                    55px;
+
+            }
+
+
+            .svd-contact-card {
+
+                padding: 24px 18px;
+
+                border-radius: 14px;
+
+            }
+
+
+            .svd-contact-card h2 {
+
+                font-size: 24px;
+
+            }
+
+
+            .svd-contact-form-row {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .svd-contact-support {
+
+                width: 92%;
+
+                grid-template-columns: 1fr;
+
+                margin-bottom: 50px;
+
+            }
+
+
+            .svd-support-item {
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid
+                    rgba(180, 140, 70, 0.15);
+
+            }
+
+
+            .svd-support-item:last-child {
+
+                border-bottom: none;
+
+            }
+
+
+            .svd-contact-map {
+
+                height: 300px;
+
+            }
+
+
+            .svd-contact-whatsapp {
+
+                width: 54px;
+
+                height: 54px;
+
+                right: 18px;
+
+                bottom: 18px;
+
+            }
+
+
+        }
+
+
+    </style>
+
+
+</head>
+
+
+<body class="svd-contact-page">
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="svd-contact-header">
+
+        <div class="svd-contact-header-inner">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="svd-contact-logo"
+                aria-label="ShriVatsaDarbar Home"
+            >
+
+                <img
+                    src="images/logos/logo.webp"
+                    alt="ShriVatsaDarbar"
+                >
+
+            </a>
+
+
+
+            <!-- NAVIGATION -->
+
+            <nav
+                class="svd-contact-navigation"
+                aria-label="Main Navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a
+                    href="collections/collections.html?category=saree"
+                >
+                    Sarees
+                </a>
+
+
+                <a
+                    href="collections/collections.html?category=suit"
+                >
+                    Suits
+                </a>
+
+
+                <a href="collections/collections.html">
+                    New Arrivals
+                </a>
+
+
+                <a href="collections/collections.html">
+                    Best Sellers
+                </a>
+
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="active"
+                >
+                    Contact Us
+                </a>
+
+            </nav>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="svd-contact-actions">
+
+                <a
+                    href="#"
+                    aria-label="Search"
+                    onclick="showComingSoon('Search'); return false;"
+                >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="Wishlist"
+                    onclick="showComingSoon('Wishlist'); return false;"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="Account"
+                    onclick="showComingSoon('Account'); return false;"
+                >
+                    <i class="fa-regular fa-user"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="Shopping Bag"
+                    onclick="showComingSoon('Shopping Bag'); return false;"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="svd-contact-hero">
+
+
+        <div class="svd-contact-eyebrow">
+
+            Get In Touch
+
+        </div>
+
+
+        <h1>
+            We Would Love to Hear From You
+        </h1>
+
+
+        <p>
+
+            Whether you need assistance with a saree, suit,
+            order, size, delivery or any other enquiry,
+            our team is here to help you.
+
+        </p>
+
+
+        <div class="svd-contact-ornament">
+
+            <span></span>
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <span></span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT CONTENT
+    ====================================================== -->
+
+    <main class="svd-contact-section">
+
+
+        <div class="svd-contact-grid">
+
+
+
+            <!-- =================================================
+                 CONTACT FORM
+            ================================================== -->
+
+            <section class="svd-contact-card">
+
+
+                <div class="svd-contact-card-title">
+
+                    <div class="svd-contact-card-icon">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                    </div>
+
+
+                    <h2>
+                        Send Us a Message
+                    </h2>
+
+                </div>
+
+
+                <p class="svd-contact-card-intro">
+
+                    Tell us how we can help you.
+                    Our team will review your enquiry and
+                    get back to you as soon as possible.
+
+                </p>
+
+
+
+                <form
+                    class="svd-contact-form"
+                    id="contactForm"
+                >
+
+
+                    <!-- NAME + EMAIL -->
+
+                    <div class="svd-contact-form-row">
+
+
+                        <div class="svd-field">
+
+                            <label>
+
+                                Full Name
+
+                                <span class="svd-required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <div class="svd-field">
+
+                            <label>
+
+                                Email Address
+
+                                <span class="svd-required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                placeholder="Enter your email address"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="svd-field">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+
+                        <input
+                            type="tel"
+                            id="contactPhone"
+                            placeholder="Enter your phone number"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ENQUIRY -->
+
+                    <div class="svd-field">
+
+                        <label>
+
+                            What is your enquiry about?
+
+                            <span class="svd-required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <select
+                            id="contactSubject"
+                            required
+                        >
+
+                            <option value="">
+                                Select an enquiry
+                            </option>
+
+
+                            <option value="Saree Information">
+                                Saree Information / Product Details
+                            </option>
+
+
+                            <option value="Suit Information">
+                                Suit Information / Product Details
+                            </option>
+
+
+                            <option value="Size and Fit Assistance">
+                                Size & Fit Assistance
+                            </option>
+
+
+                            <option value="Order Related Enquiry">
+                                Order Related Enquiry
+                            </option>
+
+
+                            <option value="Order Status">
+                                Order Status / Tracking
+                            </option>
+
+
+                            <option value="Shipping and Delivery">
+                                Shipping & Delivery
+                            </option>
+
+
+                            <option value="Exchange Request">
+                                Exchange Request
+                            </option>
+
+
+                            <option value="Return Request">
+                                Return / Return Assistance
+                            </option>
+
+
+                            <option value="Refund Related Issue">
+                                Refund Related Issue
+                            </option>
+
+
+                            <option value="Payment Related Issue">
+                                Payment Related Issue
+                            </option>
+
+
+                            <option value="Damaged or Incorrect Product">
+                                Damaged / Incorrect Product Received
+                            </option>
+
+
+                            <option value="Discount or Offer">
+                                Discount / Offer Related Enquiry
+                            </option>
+
+
+                            <option value="Bulk Order">
+                                Bulk Order Enquiry
+                            </option>
+
+
+                            <option value="Other Enquiry">
+                                Other Enquiry
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div class="svd-enquiry-help">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        Please select the option closest to your
+                        enquiry so our team can assist you faster.
+
+                    </div>
+
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="svd-field">
+
+                        <label>
+
+                            Your Message
+
+                            <span class="svd-required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <textarea
+                            id="contactMessage"
+                            placeholder="Please tell us how we can help you..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- SEND -->
+
+                    <button
+                        type="submit"
+                        class="svd-send-button"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        Send Enquiry on WhatsApp
+
+                    </button>
+
+
+
+                    <div class="svd-contact-privacy">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>
+
+                            Your information is used only to assist
+                            you with your enquiry. We never share
+                            your details.
+
+                        </span>
+
+                    </div>
+
+
+                </form>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONTACT INFORMATION
+            ================================================== -->
+
+            <aside class="svd-contact-card">
+
+
+                <div class="svd-contact-card-title">
+
+                    <div class="svd-contact-card-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+
+                    <h2>
+                        Our Contact Information
+                    </h2>
+
+                </div>
+
+
+
+                <div class="svd-contact-info-list">
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="svd-contact-info-item">
+
+                        <div class="svd-contact-info-item-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Phone & WhatsApp
+                            </h3>
+
+
+                            <a href="tel:+918826196544">
+
+                                +91 88261 96544
+
+                            </a>
+
+
+                            <p>
+
+                                10:00 AM – 8:00 PM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="svd-contact-info-item">
+
+                        <div class="svd-contact-info-item-icon">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Email
+                            </h3>
+
+
+                            <a
+                                href="mailto:shrivatsadarbar@gmail.com"
+                            >
+
+                                shrivatsadarbar@gmail.com
+
+                            </a>
+
+
+                            <p>
+                                We aim to respond within 24 hours.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="svd-contact-info-item">
+
+                        <div class="svd-contact-info-item-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                ShriVatsaDarbar
+                            </h3>
+
+
+                            <p>
+
+                                Bhola and Prabha Niwas,<br>
+
+                                Ratanpur Rd, Lakshmi Nagar,<br>
+
+                                Jalil Pur, Padao,<br>
+
+                                Varanasi, Uttar Pradesh<br>
+
+                                221008, India
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SUPPORT -->
+
+                    <div class="svd-contact-info-item">
+
+                        <div class="svd-contact-info-item-icon">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Support Hours
+                            </h3>
+
+
+                            <p>
+
+                                Monday – Sunday<br>
+
+                                10:00 AM – 8:00 PM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MAP -->
+
+                <div class="svd-contact-map">
+
+                    <iframe
+
+                        src="https://www.google.com/maps?q=25.3077256,83.0374335&z=16&output=embed"
+
+                        loading="lazy"
+
+                        referrerpolicy="no-referrer-when-downgrade"
+
+                        title="ShriVatsaDarbar Location"
+
+                    ></iframe>
+
+                </div>
+
+
+
+                <a
+                    href="https://maps.app.goo.gl/FnZJnkLWMKWbEhdaA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="svd-map-link"
+                >
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Open ShriVatsaDarbar in Google Maps
+
+                </a>
+
+
+            </aside>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         BRAND VALUES
+    ====================================================== -->
+
+    <section class="svd-contact-support">
+
+
+        <div class="svd-support-item">
+
+            <i class="fa-regular fa-heart"></i>
+
+            <h3>
+                Handpicked With Love
+            </h3>
+
+            <p>
+                Every piece is carefully selected for you.
+            </p>
+
+        </div>
+
+
+
+        <div class="svd-support-item">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <h3>
+                Thoughtfully Curated
+            </h3>
+
+            <p>
+                We care about quality, detail and timeless style.
+            </p>
+
+        </div>
+
+
+
+        <div class="svd-support-item">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>
+                Customer First
+            </h3>
+
+            <p>
+                We're here to make your shopping experience special.
+            </p>
+
+        </div>
+
+
+
+        <div class="svd-support-item">
+
+            <i class="fa-solid fa-medal"></i>
+
+            <h3>
+                Premium Quality
+            </h3>
+
+            <p>
+                Beautiful products chosen with uncompromising care.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MASTER FOOTER
+    ====================================================== -->
+
+    <div id="site-footer"></div>
+
+
+
+    <!-- =====================================================
+         WHATSAPP BUTTON
+    ====================================================== -->
+
+    <a
+        href="https://wa.me/918826196544"
+        class="svd-contact-whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with ShriVatsaDarbar on WhatsApp"
+    >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+
+    <!-- =====================================================
+         MASTER JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+
+    <!-- =====================================================
+         CONTACT FORM → WHATSAPP
+    ====================================================== -->
+
+    <script>
+
+
+        document
+            .getElementById("contactForm")
+            .addEventListener(
+                "submit",
+                function (event) {
+
+
+                    event.preventDefault();
+
+
+                    const name =
+                        document
+                            .getElementById(
+                                "contactName"
+                            )
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById(
+                                "contactEmail"
+                            )
+                            .value
+                            .trim();
+
+
+                    const phone =
+                        document
+                            .getElementById(
+                                "contactPhone"
+                            )
+                            .value
+                            .trim();
+
+
+                    const subject =
+                        document
+                            .getElementById(
+                                "contactSubject"
+                            )
+                            .value;
+
+
+                    const message =
+                        document
+                            .getElementById(
+                                "contactMessage"
+                            )
+                            .value
+                            .trim();
+
+
+                    const whatsappMessage =
+
+`Hello ShriVatsaDarbar,
+
+I would like assistance with the following enquiry:
+
+Name: ${name}
+
+Email: ${email}
+
+Phone: ${phone || "Not provided"}
+
+Enquiry: ${subject}
+
+Message:
+${message}`;
+
+
+                    const whatsappURL =
+
+                        "https://wa.me/918826196544?text=" +
+
+                        encodeURIComponent(
+                            whatsappMessage
+                        );
+
+
+                    window.open(
+                        whatsappURL,
+                        "_blank"
+                    );
+
+
+                }
+            );
+
+
+    </script>
+
+
+</body>
+
+</html>
