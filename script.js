@@ -1,6 +1,14 @@
 /* =========================================================
    SHRI VATSADARBAR
    MASTER JAVASCRIPT
+   STABLE CORE ARCHITECTURE
+========================================================= */
+
+"use strict";
+
+
+/* =========================================================
+   APPLICATION STARTUP
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,11 +19,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initSearch();
 
-    initMasterFooter();
-
     initContactForm();
 
+    initMasterFooter();
+
 });
+
+
+/* =========================================================
+   BODY SCROLL LOCK
+========================================================= */
+
+function lockBody() {
+
+    document.body.classList.add(
+        "menu-open"
+    );
+
+}
+
+
+function unlockBody() {
+
+    const navigation =
+        document.getElementById(
+            "mainNavigation"
+        );
+
+
+    const searchOverlay =
+        document.getElementById(
+            "searchOverlay"
+        );
+
+
+    const menuIsOpen =
+        navigation &&
+        navigation.classList.contains(
+            "open"
+        );
+
+
+    const searchIsOpen =
+        searchOverlay &&
+        searchOverlay.classList.contains(
+            "open"
+        );
+
+
+    if (
+        !menuIsOpen &&
+        !searchIsOpen
+    ) {
+
+        document.body.classList.remove(
+            "menu-open"
+        );
+
+    }
+
+}
 
 
 /* =========================================================
@@ -25,85 +88,140 @@ document.addEventListener("DOMContentLoaded", () => {
 function initMobileMenu() {
 
     const button =
-        document.getElementById("mobileMenuButton");
+        document.getElementById(
+            "mobileMenuButton"
+        );
+
 
     const navigation =
-        document.getElementById("mainNavigation");
+        document.getElementById(
+            "mainNavigation"
+        );
 
 
-    if (!button || !navigation) {
+    if (
+        !button ||
+        !navigation
+    ) {
         return;
     }
 
 
-    button.addEventListener("click", () => {
+    const icon =
+        button.querySelector("i");
 
-        const isOpen =
-            navigation.classList.toggle("open");
+
+    function openMenu() {
+
+        navigation.classList.add(
+            "open"
+        );
 
 
         button.setAttribute(
             "aria-expanded",
-            isOpen ? "true" : "false"
+            "true"
         );
 
 
-        document.body.classList.toggle(
-            "menu-open",
-            isOpen
-        );
-
-
-        const icon =
-            button.querySelector("i");
+        lockBody();
 
 
         if (icon) {
 
             icon.className =
-                isOpen
-                    ? "fa-solid fa-xmark"
-                    : "fa-solid fa-bars";
+                "fa-solid fa-xmark";
 
         }
 
-    });
+    }
+
+
+    function closeMenu() {
+
+        navigation.classList.remove(
+            "open"
+        );
+
+
+        button.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+
+        unlockBody();
+
+
+        if (icon) {
+
+            icon.className =
+                "fa-solid fa-bars";
+
+        }
+
+    }
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                navigation.classList.contains(
+                    "open"
+                );
+
+
+            if (isOpen) {
+
+                closeMenu();
+
+            }
+
+            else {
+
+                openMenu();
+
+            }
+
+        }
+    );
 
 
     navigation
         .querySelectorAll("a")
         .forEach(link => {
 
-            link.addEventListener("click", () => {
+            link.addEventListener(
+                "click",
+                () => {
 
-                navigation.classList.remove("open");
-
-
-                button.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-
-                document.body.classList.remove(
-                    "menu-open"
-                );
-
-
-                const icon =
-                    button.querySelector("i");
-
-
-                if (icon) {
-
-                    icon.className =
-                        "fa-solid fa-bars";
+                    closeMenu();
 
                 }
-
-            });
+            );
 
         });
+
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (
+                window.innerWidth > 800 &&
+                navigation.classList.contains(
+                    "open"
+                )
+            ) {
+
+                closeMenu();
+
+            }
+
+        }
+    );
 
 }
 
@@ -115,7 +233,9 @@ function initMobileMenu() {
 function initHeroSlider() {
 
     const slider =
-        document.getElementById("heroSlider");
+        document.getElementById(
+            "heroSlider"
+        );
 
 
     if (!slider) {
@@ -124,19 +244,9 @@ function initHeroSlider() {
 
 
     const slides =
-        slider.querySelectorAll(".hero-slide");
-
-
-    const dotsContainer =
-        document.getElementById("sliderDots");
-
-
-    const previous =
-        document.getElementById("sliderPrev");
-
-
-    const next =
-        document.getElementById("sliderNext");
+        slider.querySelectorAll(
+            ".hero-slide"
+        );
 
 
     if (!slides.length) {
@@ -144,113 +254,163 @@ function initHeroSlider() {
     }
 
 
+    const dotsContainer =
+        document.getElementById(
+            "sliderDots"
+        );
+
+
+    const previous =
+        document.getElementById(
+            "sliderPrev"
+        );
+
+
+    const next =
+        document.getElementById(
+            "sliderNext"
+        );
+
+
     let current = 0;
 
-    let autoplay;
+    let autoplay = null;
 
 
     /* =====================================================
-       CREATE DOTS
+       CREATE SLIDER DOTS
     ====================================================== */
 
     if (dotsContainer) {
 
-        slides.forEach((slide, index) => {
-
-            const dot =
-                document.createElement("button");
+        dotsContainer.innerHTML = "";
 
 
-            dot.className =
-                "slider-dot";
+        slides.forEach(
+            (slide, index) => {
+
+                const dot =
+                    document.createElement(
+                        "button"
+                    );
 
 
-            dot.setAttribute(
-                "aria-label",
-                `Go to slide ${index + 1}`
-            );
+                dot.type =
+                    "button";
 
 
-            dot.addEventListener(
-                "click",
-                () => {
-
-                    goToSlide(index);
-
-                    restartAutoplay();
-
-                }
-            );
+                dot.className =
+                    "slider-dot";
 
 
-            dotsContainer.appendChild(dot);
+                dot.setAttribute(
+                    "aria-label",
+                    `Go to slide ${index + 1}`
+                );
 
-        });
+
+                dot.addEventListener(
+                    "click",
+                    () => {
+
+                        goToSlide(
+                            index
+                        );
+
+
+                        restartAutoplay();
+
+                    }
+                );
+
+
+                dotsContainer.appendChild(
+                    dot
+                );
+
+            }
+        );
 
     }
 
 
     const dots =
         dotsContainer
-            ? dotsContainer.querySelectorAll(".slider-dot")
+            ? dotsContainer.querySelectorAll(
+                ".slider-dot"
+            )
             : [];
 
 
+    /* =====================================================
+       GO TO SLIDE
+    ====================================================== */
+
     function goToSlide(index) {
 
-        slides.forEach(slide => {
-
-            slide.classList.remove("active");
-
-        });
-
-
-        dots.forEach(dot => {
-
-            dot.classList.remove("active");
-
-        });
-
-
         current =
-            (index + slides.length) %
+            (
+                index +
+                slides.length
+            ) %
             slides.length;
 
 
-        slides[current].classList.add(
-            "active"
+        slides.forEach(
+            (slide, slideIndex) => {
+
+                slide.classList.toggle(
+                    "active",
+                    slideIndex === current
+                );
+
+            }
         );
 
 
-        if (dots[current]) {
+        dots.forEach(
+            (dot, dotIndex) => {
 
-            dots[current].classList.add(
-                "active"
-            );
+                dot.classList.toggle(
+                    "active",
+                    dotIndex === current
+                );
 
-        }
+            }
+        );
 
     }
 
 
     function nextSlide() {
 
-        goToSlide(current + 1);
+        goToSlide(
+            current + 1
+        );
 
     }
 
 
     function previousSlide() {
 
-        goToSlide(current - 1);
+        goToSlide(
+            current - 1
+        );
 
     }
 
 
+    /* =====================================================
+       AUTOPLAY
+    ====================================================== */
+
     function startAutoplay() {
 
+        stopAutoplay();
+
+
         autoplay =
-            setInterval(
+            window.setInterval(
                 nextSlide,
                 5500
             );
@@ -258,14 +418,34 @@ function initHeroSlider() {
     }
 
 
+    function stopAutoplay() {
+
+        if (autoplay) {
+
+            clearInterval(
+                autoplay
+            );
+
+
+            autoplay = null;
+
+        }
+
+    }
+
+
     function restartAutoplay() {
 
-        clearInterval(autoplay);
+        stopAutoplay();
 
         startAutoplay();
 
     }
 
+
+    /* =====================================================
+       ARROW CONTROLS
+    ====================================================== */
 
     if (next) {
 
@@ -300,14 +480,25 @@ function initHeroSlider() {
 
 
     /* =====================================================
-       KEYBOARD SUPPORT
+       KEYBOARD CONTROLS
     ====================================================== */
 
     document.addEventListener(
         "keydown",
         event => {
 
-            if (event.key === "ArrowRight") {
+            if (
+                !document.body.contains(
+                    slider
+                )
+            ) {
+                return;
+            }
+
+
+            if (
+                event.key === "ArrowRight"
+            ) {
 
                 nextSlide();
 
@@ -316,7 +507,9 @@ function initHeroSlider() {
             }
 
 
-            if (event.key === "ArrowLeft") {
+            if (
+                event.key === "ArrowLeft"
+            ) {
 
                 previousSlide();
 
@@ -334,8 +527,6 @@ function initHeroSlider() {
 
     let touchStartX = 0;
 
-    let touchEndX = 0;
-
 
     slider.addEventListener(
         "touchstart",
@@ -345,7 +536,9 @@ function initHeroSlider() {
                 event.changedTouches[0].screenX;
 
         },
-        { passive: true }
+        {
+            passive: true
+        }
     );
 
 
@@ -353,20 +546,27 @@ function initHeroSlider() {
         "touchend",
         event => {
 
-            touchEndX =
+            const touchEndX =
                 event.changedTouches[0].screenX;
 
 
             const difference =
-                touchStartX - touchEndX;
+                touchStartX -
+                touchEndX;
 
 
-            if (Math.abs(difference) < 50) {
+            if (
+                Math.abs(
+                    difference
+                ) < 50
+            ) {
                 return;
             }
 
 
-            if (difference > 0) {
+            if (
+                difference > 0
+            ) {
 
                 nextSlide();
 
@@ -382,12 +582,40 @@ function initHeroSlider() {
             restartAutoplay();
 
         },
-        { passive: true }
+        {
+            passive: true
+        }
     );
 
 
     /* =====================================================
-       START SLIDER
+       PAUSE WHEN TAB IS NOT ACTIVE
+    ====================================================== */
+
+    document.addEventListener(
+        "visibilitychange",
+        () => {
+
+            if (
+                document.hidden
+            ) {
+
+                stopAutoplay();
+
+            }
+
+            else {
+
+                startAutoplay();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       INITIALIZE
     ====================================================== */
 
     goToSlide(0);
@@ -398,25 +626,33 @@ function initHeroSlider() {
 
 
 /* =========================================================
-   SEARCH
+   SEARCH OVERLAY
 ========================================================= */
 
 function initSearch() {
 
     const searchButton =
-        document.getElementById("searchButton");
+        document.getElementById(
+            "searchButton"
+        );
 
 
     const searchOverlay =
-        document.getElementById("searchOverlay");
+        document.getElementById(
+            "searchOverlay"
+        );
 
 
     const searchClose =
-        document.getElementById("searchClose");
+        document.getElementById(
+            "searchClose"
+        );
 
 
     const searchInput =
-        document.getElementById("siteSearch");
+        document.getElementById(
+            "siteSearch"
+        );
 
 
     if (
@@ -427,35 +663,32 @@ function initSearch() {
     }
 
 
-    searchButton.addEventListener(
-        "click",
-        () => {
+    function openSearch() {
 
-            searchOverlay.classList.add(
-                "open"
-            );
+        searchOverlay.classList.add(
+            "open"
+        );
 
 
-            document.body.classList.add(
-                "menu-open"
-            );
+        lockBody();
 
 
-            setTimeout(
-                () => {
+        setTimeout(
+            () => {
 
-                    if (searchInput) {
+                if (
+                    searchInput
+                ) {
 
-                        searchInput.focus();
+                    searchInput.focus();
 
-                    }
+                }
 
-                },
-                250
-            );
+            },
+            250
+        );
 
-        }
-    );
+    }
 
 
     function closeSearch() {
@@ -465,11 +698,15 @@ function initSearch() {
         );
 
 
-        document.body.classList.remove(
-            "menu-open"
-        );
+        unlockBody();
 
     }
+
+
+    searchButton.addEventListener(
+        "click",
+        openSearch
+    );
 
 
     if (searchClose) {
@@ -503,7 +740,12 @@ function initSearch() {
         "keydown",
         event => {
 
-            if (event.key === "Escape") {
+            if (
+                event.key === "Escape" &&
+                searchOverlay.classList.contains(
+                    "open"
+                )
+            ) {
 
                 closeSearch();
 
@@ -516,13 +758,18 @@ function initSearch() {
 
 
 /* =========================================================
-   COMING SOON
+   COMING SOON TOAST
 ========================================================= */
+
+let toastTimer = null;
+
 
 function showComingSoon(feature) {
 
     const toast =
-        document.getElementById("siteToast");
+        document.getElementById(
+            "siteToast"
+        );
 
 
     if (!toast) {
@@ -530,21 +777,35 @@ function showComingSoon(feature) {
     }
 
 
+    if (toastTimer) {
+
+        clearTimeout(
+            toastTimer
+        );
+
+    }
+
+
     toast.textContent =
         `${feature} will be available soon.`;
 
 
-    toast.classList.add("show");
-
-
-    setTimeout(
-        () => {
-
-            toast.classList.remove("show");
-
-        },
-        2500
+    toast.classList.add(
+        "show"
     );
+
+
+    toastTimer =
+        setTimeout(
+            () => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            },
+            2500
+        );
 
 }
 
@@ -564,8 +825,15 @@ function handleNewsletter(event) {
         );
 
 
-    if (!email || !email.value) {
+    if (
+        !email ||
+        !email.value.trim()
+    ) {
+
+        email?.focus();
+
         return;
+
     }
 
 
@@ -578,16 +846,20 @@ function handleNewsletter(event) {
     if (toast) {
 
         toast.textContent =
-            "Thank you for joining us.";
+            "Thank you for joining ShriVatsaDarbar.";
 
 
-        toast.classList.add("show");
+        toast.classList.add(
+            "show"
+        );
 
 
         setTimeout(
             () => {
 
-                toast.classList.remove("show");
+                toast.classList.remove(
+                    "show"
+                );
 
             },
             3000
@@ -608,7 +880,9 @@ function handleNewsletter(event) {
 function initContactForm() {
 
     const form =
-        document.getElementById("contactForm");
+        document.getElementById(
+            "contactForm"
+        );
 
 
     if (!form) {
@@ -623,55 +897,8 @@ function initContactForm() {
             event.preventDefault();
 
 
-            const name =
-                document
-                    .getElementById(
-                        "contactName"
-                    )
-                    .value
-                    .trim();
-
-
-            const email =
-                document
-                    .getElementById(
-                        "contactEmail"
-                    )
-                    .value
-                    .trim();
-
-
-            const phone =
-                document
-                    .getElementById(
-                        "contactPhone"
-                    )
-                    .value
-                    .trim();
-
-
-            const subject =
-                document
-                    .getElementById(
-                        "contactSubject"
-                    )
-                    .value;
-
-
-            const message =
-                document
-                    .getElementById(
-                        "contactMessage"
-                    )
-                    .value
-                    .trim();
-
-
             if (
-                !name ||
-                !email ||
-                !subject ||
-                !message
+                !form.checkValidity()
             ) {
 
                 form.reportValidity();
@@ -681,8 +908,41 @@ function initContactForm() {
             }
 
 
-            const whatsappMessage =
+            const name =
+                document.getElementById(
+                    "contactName"
+                )?.value
+                    .trim() || "";
 
+
+            const email =
+                document.getElementById(
+                    "contactEmail"
+                )?.value
+                    .trim() || "";
+
+
+            const phone =
+                document.getElementById(
+                    "contactPhone"
+                )?.value
+                    .trim() || "";
+
+
+            const subject =
+                document.getElementById(
+                    "contactSubject"
+                )?.value || "";
+
+
+            const message =
+                document.getElementById(
+                    "contactMessage"
+                )?.value
+                    .trim() || "";
+
+
+            const whatsappMessage =
 `Hello ShriVatsaDarbar,
 
 I would like assistance with the following enquiry:
@@ -700,9 +960,7 @@ ${message}`;
 
 
             const whatsappURL =
-
                 "https://wa.me/918826196544?text=" +
-
                 encodeURIComponent(
                     whatsappMessage
                 );
@@ -726,24 +984,19 @@ ${message}`;
 
 async function initMasterFooter() {
 
-    const existingFooter =
-        document.querySelector("footer");
-
-
     const footerPlaceholder =
-        document.getElementById("site-footer");
+        document.getElementById(
+            "site-footer"
+        );
 
 
-    if (
-        !existingFooter &&
-        !footerPlaceholder
-    ) {
+    if (!footerPlaceholder) {
         return;
     }
 
 
     /* =====================================================
-       DETERMINE BASE PATH
+       DETERMINE PAGE DEPTH
     ====================================================== */
 
     function getBasePath() {
@@ -752,9 +1005,31 @@ async function initMasterFooter() {
             window.location.pathname;
 
 
+        const normalizedPath =
+            path.replace(
+                /^\/+/,
+                ""
+            );
+
+
+        const segments =
+            normalizedPath
+                .split("/")
+                .filter(Boolean);
+
+
+        /*
+           Root pages:
+           /index.html
+           /about.html
+
+           Folder pages:
+           /collections/sarees.html
+           /policies/privacy.html
+        */
+
         if (
-            path.includes("/policies/") ||
-            path.includes("/collections/")
+            segments.length > 1
         ) {
 
             return "../";
@@ -779,10 +1054,12 @@ async function initMasterFooter() {
             );
 
 
-        if (!response.ok) {
+        if (
+            !response.ok
+        ) {
 
             throw new Error(
-                "Unable to load footer.html"
+                `Footer could not be loaded (${response.status})`
             );
 
         }
@@ -799,19 +1076,8 @@ async function initMasterFooter() {
             );
 
 
-        if (footerPlaceholder) {
-
-            footerPlaceholder.outerHTML =
-                footerHTML;
-
-        }
-
-        else if (existingFooter) {
-
-            existingFooter.outerHTML =
-                footerHTML;
-
-        }
+        footerPlaceholder.outerHTML =
+            footerHTML;
 
     }
 
@@ -828,7 +1094,7 @@ async function initMasterFooter() {
 
 
 /* =========================================================
-   EXPOSE FUNCTIONS
+   GLOBAL FUNCTION EXPORTS
 ========================================================= */
 
 window.showComingSoon =
