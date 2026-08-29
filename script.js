@@ -11,19 +11,22 @@
    APPLICATION STARTUP
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-    initMobileMenu();
+        initMobileMenu();
 
-    initHeroSlider();
+        initHeroSlider();
 
-    initSearch();
+        initSearch();
 
-    initContactForm();
+        initContactForm();
 
-    initMasterFooter();
+        initMasterFooter();
 
-});
+    }
+);
 
 
 /* =========================================================
@@ -108,7 +111,9 @@ function initMobileMenu() {
 
 
     const icon =
-        button.querySelector("i");
+        button.querySelector(
+            "i"
+        );
 
 
     function openMenu() {
@@ -190,19 +195,23 @@ function initMobileMenu() {
 
 
     navigation
-        .querySelectorAll("a")
-        .forEach(link => {
+        .querySelectorAll(
+            "a"
+        )
+        .forEach(
+            link => {
 
-            link.addEventListener(
-                "click",
-                () => {
+                link.addEventListener(
+                    "click",
+                    () => {
 
-                    closeMenu();
+                        closeMenu();
 
-                }
-            );
+                    }
+                );
 
-        });
+            }
+        );
 
 
     window.addEventListener(
@@ -618,7 +627,10 @@ function initHeroSlider() {
        INITIALIZE
     ====================================================== */
 
-    goToSlide(0);
+    goToSlide(
+        0
+    );
+
 
     startAutoplay();
 
@@ -676,9 +688,7 @@ function initSearch() {
         setTimeout(
             () => {
 
-                if (
-                    searchInput
-                ) {
+                if (searchInput) {
 
                     searchInput.focus();
 
@@ -830,7 +840,12 @@ function handleNewsletter(event) {
         !email.value.trim()
     ) {
 
-        email?.focus();
+        if (email) {
+
+            email.focus();
+
+        }
+
 
         return;
 
@@ -995,68 +1010,100 @@ async function initMasterFooter() {
     }
 
 
-    /* =====================================================
-       DETERMINE PAGE DEPTH
-    ====================================================== */
+    /*
+       IMPORTANT:
 
-    function getBasePath() {
+       The footer URL is determined from the actual
+       location of script.js.
 
-        const path =
-            window.location.pathname;
+       This works correctly on:
+
+       Root pages:
+       index.html
+       about.html
+       contact.html
+
+       Nested pages:
+       collections/...
+       policies/...
+
+       It also works correctly on GitHub Pages where
+       the repository name is part of the URL.
+    */
 
 
-        const normalizedPath =
-            path.replace(
-                /^\/+/,
-                ""
+    const scripts =
+        Array.from(
+            document.querySelectorAll(
+                "script[src]"
+            )
+        );
+
+
+    const mainScript =
+        scripts.find(
+            script => {
+
+                const source =
+                    script.getAttribute(
+                        "src"
+                    ) || "";
+
+
+                return (
+                    source === "script.js" ||
+                    source.endsWith(
+                        "/script.js"
+                    ) ||
+                    source.endsWith(
+                        "../script.js"
+                    )
+                );
+
+            }
+        );
+
+
+    let footerURL;
+
+
+    if (mainScript && mainScript.src) {
+
+        footerURL =
+            new URL(
+                "footer.html",
+                mainScript.src
             );
-
-
-        const segments =
-            normalizedPath
-                .split("/")
-                .filter(Boolean);
-
-
-        /*
-           Root pages:
-           /index.html
-           /about.html
-
-           Folder pages:
-           /collections/sarees.html
-           /policies/privacy.html
-        */
-
-        if (
-            segments.length > 1
-        ) {
-
-            return "../";
-
-        }
-
-
-        return "";
 
     }
 
+    else {
 
-    const base =
-        getBasePath();
+        /*
+           Fallback for the root website.
+        */
+
+        footerURL =
+            new URL(
+                "footer.html",
+                window.location.href
+            );
+
+    }
 
 
     try {
 
         const response =
             await fetch(
-                `${base}footer.html`
+                footerURL.href,
+                {
+                    cache: "no-cache"
+                }
             );
 
 
-        if (
-            !response.ok
-        ) {
+        if (!response.ok) {
 
             throw new Error(
                 `Footer could not be loaded (${response.status})`
@@ -1069,15 +1116,77 @@ async function initMasterFooter() {
             await response.text();
 
 
-        footerHTML =
-            footerHTML.replace(
-                /\{\{BASE\}\}/g,
-                base
+        /*
+           Calculate the website root from the
+           actual script.js location.
+        */
+
+        const scriptURL =
+            mainScript && mainScript.src
+                ? new URL(
+                    mainScript.src
+                )
+                : new URL(
+                    window.location.href
+                );
+
+
+        const siteRoot =
+            scriptURL.href.substring(
+                0,
+                scriptURL.href.lastIndexOf(
+                    "/"
+                ) + 1
             );
 
 
-        footerPlaceholder.outerHTML =
+        /*
+           footer.html contains {{BASE}}.
+
+           Replace it with the correct absolute
+           website root so every footer link works
+           from every page and folder.
+        */
+
+        footerHTML =
+            footerHTML.replace(
+                /\{\{BASE\}\}/g,
+                siteRoot
+            );
+
+
+        /*
+           Insert the complete footer into the
+           existing placeholder.
+        */
+
+        footerPlaceholder.innerHTML =
             footerHTML;
+
+
+        /*
+           The placeholder is no longer needed as
+           a layout wrapper after the footer loads.
+        */
+
+        const loadedFooter =
+            footerPlaceholder.querySelector(
+                "footer"
+            );
+
+
+        if (loadedFooter) {
+
+            footerPlaceholder.replaceWith(
+                loadedFooter
+            );
+
+        }
+
+
+        console.log(
+            "Master footer loaded successfully."
+        );
 
     }
 
@@ -1087,6 +1196,25 @@ async function initMasterFooter() {
             "Master footer error:",
             error
         );
+
+
+        /*
+           Keep a visible fallback message in case
+           the footer cannot be loaded.
+        */
+
+        footerPlaceholder.innerHTML =
+            `
+            <div style="
+                padding: 30px;
+                text-align: center;
+                background: #4b0713;
+                color: white;
+                font-family: sans-serif;
+            ">
+                Footer could not be loaded.
+            </div>
+            `;
 
     }
 
