@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#4b0713">
+    <meta name="theme-color"
+          content="#4b0713">
 
     <meta name="description"
           content="Discover premium sarees and elegant suits at ShreevatsaDharwa. Curated ethnic wear crafted for timeless style, celebrations and every special moment.">
@@ -36,9 +39,15 @@
           type="image/webp"
           href="images/logos/favicon.webp">
 
-    <title>ShreevatsaDharwa | Premium Sarees & Suits</title>
+    <title>
+        ShreevatsaDharwa | Premium Sarees & Suits
+    </title>
 
-    <!-- Google Fonts -->
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================= -->
+
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -49,53 +58,92 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
           rel="stylesheet">
 
-    <!-- Font Awesome -->
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================= -->
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Main CSS -->
+
+    <!-- =========================================================
+         MAIN CSS
+    ========================================================= -->
+
     <link rel="stylesheet"
           href="styles.css">
+
 </head>
 
+
 <body>
+
 
 <!-- =========================================================
      ANNOUNCEMENT BAR
 ========================================================= -->
 
 <div class="announcement-bar">
+
     <div class="announcement-inner">
 
         <span>
+
             <i class="fa-solid fa-sparkles"></i>
+
             FREE SHIPPING on Prepaid Orders
+
         </span>
 
-        <span class="announcement-divider">|</span>
+
+        <span class="announcement-divider">
+
+            |
+
+        </span>
+
 
         <span>
+
             <i class="fa-solid fa-sparkles"></i>
+
             Premium Quality Fabrics
+
         </span>
 
-        <span class="announcement-divider">|</span>
+
+        <span class="announcement-divider">
+
+            |
+
+        </span>
+
 
         <span>
+
             <i class="fa-solid fa-sparkles"></i>
+
             Easy Returns & Exchanges
+
         </span>
+
 
         <a href="https://wa.me/918826196544"
            target="_blank"
            rel="noopener"
            class="announcement-whatsapp">
+
             <i class="fa-brands fa-whatsapp"></i>
+
             Order on WhatsApp
+
         </a>
 
     </div>
+
 </div>
+
 
 
 <!-- =========================================================
@@ -106,6 +154,11 @@
 
     <div class="header-container">
 
+
+        <!-- =====================================================
+             BRAND LOGO
+        ====================================================== -->
+
         <a href="index.html"
            class="brand">
 
@@ -114,6 +167,11 @@
 
         </a>
 
+
+
+        <!-- =====================================================
+             MOBILE MENU BUTTON
+        ====================================================== -->
 
         <button class="mobile-menu-button"
                 id="mobileMenuButton"
@@ -125,42 +183,75 @@
         </button>
 
 
+
+        <!-- =====================================================
+             MAIN NAVIGATION
+        ====================================================== -->
+
         <nav class="main-navigation"
              id="mainNavigation">
 
             <a href="index.html"
                class="active">
+
                 Home
+
             </a>
 
+
             <a href="collections/collections.html">
+
                 Sarees
+
             </a>
 
+
             <a href="collections/collections.html">
+
                 Suits
+
             </a>
 
+
             <a href="collections/collections.html">
+
                 New Arrivals
+
             </a>
 
+
             <a href="collections/collections.html">
+
                 Best Sellers
+
             </a>
+
 
             <a href="about.html">
+
                 About Us
+
             </a>
 
+
             <a href="contact.html">
+
                 Contact Us
+
             </a>
 
         </nav>
 
 
+
+        <!-- =====================================================
+             HEADER ACTIONS
+        ====================================================== -->
+
         <div class="header-actions">
+
+
+            <!-- SEARCH -->
 
             <button class="icon-button"
                     id="searchButton"
@@ -170,6 +261,10 @@
 
             </button>
 
+
+
+            <!-- WISHLIST -->
+
             <button class="icon-button"
                     aria-label="Wishlist"
                     onclick="showComingSoon('Wishlist')">
@@ -177,6 +272,10 @@
                 <i class="fa-regular fa-heart"></i>
 
             </button>
+
+
+
+            <!-- ACCOUNT -->
 
             <button class="icon-button"
                     aria-label="Account"
@@ -186,13 +285,21 @@
 
             </button>
 
+
+
+            <!-- SHOPPING BAG -->
+
             <button class="icon-button bag-button"
                     aria-label="Shopping bag"
                     onclick="showComingSoon('Shopping Bag')">
 
                 <i class="fa-solid fa-bag-shopping"></i>
 
-                <span class="bag-count">0</span>
+                <span class="bag-count">
+
+                    0
+
+                </span>
 
             </button>
 
@@ -203,12 +310,16 @@
 </header>
 
 
+
 <!-- =========================================================
      SEARCH OVERLAY
 ========================================================= -->
 
 <div class="search-overlay"
      id="searchOverlay">
+
+
+    <!-- CLOSE BUTTON -->
 
     <button class="search-close"
             id="searchClose"
@@ -218,14 +329,24 @@
 
     </button>
 
+
+
+    <!-- SEARCH BOX -->
+
     <div class="search-box">
 
-        <span>Search our collection</span>
+        <span>
+
+            Search our collection
+
+        </span>
+
 
         <input type="search"
                id="siteSearch"
                placeholder="Search sarees, suits..."
                autocomplete="off">
+
 
         <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -234,59 +355,99 @@
 </div>
 
 
+
 <!-- =========================================================
-     HERO
+     MAIN CONTENT
 ========================================================= -->
 
 <main>
+
+
+
+<!-- =========================================================
+     HERO SECTION
+========================================================= -->
 
 <section class="hero-section">
 
     <div class="hero-slider"
          id="heroSlider">
 
-        <!-- HERO 01 -->
+
+
+        <!-- =====================================================
+             HERO 01
+        ====================================================== -->
 
         <div class="hero-slide active">
 
             <img src="images/banners/hero-01.webp"
                  alt="ShreevatsaDharwa premium ethnic wear collection">
 
+
             <div class="hero-overlay"></div>
+
 
             <div class="hero-content">
 
+
                 <p class="eyebrow">
+
                     ETHNIC WEAR COLLECTION
+
                 </p>
+
 
                 <h1>
+
                     Timeless Elegance,
-                    <span>Made for You</span>
+
+                    <span>
+
+                        Made for You
+
+                    </span>
+
                 </h1>
 
+
                 <div class="ornament">
+
                     <span></span>
+
                     <i class="fa-solid fa-diamond"></i>
+
                     <span></span>
+
                 </div>
 
+
                 <p class="hero-description">
+
                     Discover our curated collection of premium
                     sarees and elegant suits crafted for every occasion.
+
                 </p>
+
 
                 <div class="hero-buttons">
 
+
                     <a href="collections/collections.html"
                        class="button button-primary">
+
                         Shop Sarees
+
                     </a>
+
 
                     <a href="collections/collections.html"
                        class="button button-outline">
+
                         Shop Suits
+
                     </a>
+
 
                 </div>
 
@@ -295,42 +456,69 @@
         </div>
 
 
-        <!-- HERO 02 -->
+
+        <!-- =====================================================
+             HERO 02
+        ====================================================== -->
 
         <div class="hero-slide">
 
             <img src="images/banners/hero-02.webp"
                  alt="Elegant Indian ethnic fashion">
 
+
             <div class="hero-overlay"></div>
+
 
             <div class="hero-content">
 
+
                 <p class="eyebrow">
+
                     CURATED WITH LOVE
+
                 </p>
+
 
                 <h2>
+
                     Grace in Every
-                    <span>Thread</span>
+
+                    <span>
+
+                        Thread
+
+                    </span>
+
                 </h2>
 
+
                 <div class="ornament">
+
                     <span></span>
+
                     <i class="fa-solid fa-diamond"></i>
+
                     <span></span>
+
                 </div>
 
+
                 <p class="hero-description">
+
                     Refined silhouettes, beautiful fabrics and
                     timeless Indian craftsmanship.
+
                 </p>
+
 
                 <div class="hero-buttons">
 
                     <a href="collections/collections.html"
                        class="button button-primary">
+
                         Explore Collection
+
                     </a>
 
                 </div>
@@ -340,42 +528,69 @@
         </div>
 
 
-        <!-- HERO 03 -->
+
+        <!-- =====================================================
+             HERO 03
+        ====================================================== -->
 
         <div class="hero-slide">
 
             <img src="images/banners/hero-03.webp"
                  alt="Premium saree collection">
 
+
             <div class="hero-overlay"></div>
+
 
             <div class="hero-content">
 
+
                 <p class="eyebrow">
+
                     THE SAREE EDIT
+
                 </p>
+
 
                 <h2>
+
                     Draped in
-                    <span>Elegance</span>
+
+                    <span>
+
+                        Elegance
+
+                    </span>
+
                 </h2>
 
+
                 <div class="ornament">
+
                     <span></span>
+
                     <i class="fa-solid fa-diamond"></i>
+
                     <span></span>
+
                 </div>
 
+
                 <p class="hero-description">
+
                     Discover sarees designed to make every
                     celebration unforgettable.
+
                 </p>
+
 
                 <div class="hero-buttons">
 
                     <a href="collections/collections.html"
                        class="button button-primary">
+
                         Shop Sarees
+
                     </a>
 
                 </div>
@@ -385,41 +600,68 @@
         </div>
 
 
-        <!-- HERO 04 -->
+
+        <!-- =====================================================
+             HERO 04
+        ====================================================== -->
 
         <div class="hero-slide">
 
             <img src="images/banners/hero-04.webp"
                  alt="Premium women's suit collection">
 
+
             <div class="hero-overlay"></div>
+
 
             <div class="hero-content">
 
+
                 <p class="eyebrow">
+
                     THE SUIT EDIT
+
                 </p>
+
 
                 <h2>
+
                     Effortless
-                    <span>Sophistication</span>
+
+                    <span>
+
+                        Sophistication
+
+                    </span>
+
                 </h2>
 
+
                 <div class="ornament">
+
                     <span></span>
+
                     <i class="fa-solid fa-diamond"></i>
+
                     <span></span>
+
                 </div>
 
+
                 <p class="hero-description">
+
                     Elegant suits created for modern Indian women.
+
                 </p>
+
 
                 <div class="hero-buttons">
 
                     <a href="collections/collections.html"
                        class="button button-primary">
+
                         Shop Suits
+
                     </a>
 
                 </div>
@@ -429,42 +671,69 @@
         </div>
 
 
-        <!-- HERO 05 -->
+
+        <!-- =====================================================
+             HERO 05
+        ====================================================== -->
 
         <div class="hero-slide">
 
             <img src="images/banners/hero-05.webp"
                  alt="Festive ethnic wear collection">
 
+
             <div class="hero-overlay"></div>
+
 
             <div class="hero-content">
 
+
                 <p class="eyebrow">
+
                     FESTIVE COLLECTION
+
                 </p>
+
 
                 <h2>
+
                     Celebrate Every
-                    <span>Beautiful Moment</span>
+
+                    <span>
+
+                        Beautiful Moment
+
+                    </span>
+
                 </h2>
 
+
                 <div class="ornament">
+
                     <span></span>
+
                     <i class="fa-solid fa-diamond"></i>
+
                     <span></span>
+
                 </div>
 
+
                 <p class="hero-description">
+
                     Handpicked styles for celebrations,
                     gatherings and unforgettable occasions.
+
                 </p>
+
 
                 <div class="hero-buttons">
 
                     <a href="collections/collections.html"
                        class="button button-primary">
+
                         Explore Now
+
                     </a>
 
                 </div>
@@ -473,6 +742,11 @@
 
         </div>
 
+
+
+        <!-- =====================================================
+             SLIDER PREVIOUS BUTTON
+        ====================================================== -->
 
         <button class="slider-arrow slider-prev"
                 id="sliderPrev"
@@ -481,6 +755,12 @@
             <i class="fa-solid fa-chevron-left"></i>
 
         </button>
+
+
+
+        <!-- =====================================================
+             SLIDER NEXT BUTTON
+        ====================================================== -->
 
         <button class="slider-arrow slider-next"
                 id="sliderNext"
@@ -491,14 +771,21 @@
         </button>
 
 
+
+        <!-- =====================================================
+             SLIDER DOTS
+        ====================================================== -->
+
         <div class="slider-dots"
              id="sliderDots">
 
         </div>
 
+
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -509,78 +796,165 @@
 
     <div class="container trust-grid">
 
+
+        <!-- PREMIUM QUALITY -->
+
         <div class="trust-item">
 
             <div class="trust-icon">
+
                 <i class="fa-solid fa-gem"></i>
+
             </div>
 
+
             <div>
-                <strong>Premium Quality Fabrics</strong>
-                <span>Finest materials</span>
+
+                <strong>
+
+                    Premium Quality Fabrics
+
+                </strong>
+
+                <span>
+
+                    Finest materials
+
+                </span>
+
             </div>
 
         </div>
 
 
+
+        <!-- ELEGANT DESIGNS -->
+
         <div class="trust-item">
 
             <div class="trust-icon">
+
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
+
             </div>
 
+
             <div>
-                <strong>Elegant Designs</strong>
-                <span>Curated with love</span>
+
+                <strong>
+
+                    Elegant Designs
+
+                </strong>
+
+                <span>
+
+                    Curated with love
+
+                </span>
+
             </div>
 
         </div>
 
 
+
+        <!-- SECURE PAYMENTS -->
+
         <div class="trust-item">
 
             <div class="trust-icon">
+
                 <i class="fa-solid fa-lock"></i>
+
             </div>
 
+
             <div>
-                <strong>Secure Payments</strong>
-                <span>100% safe & secure</span>
+
+                <strong>
+
+                    Secure Payments
+
+                </strong>
+
+                <span>
+
+                    100% safe & secure
+
+                </span>
+
             </div>
 
         </div>
 
 
+
+        <!-- EASY RETURNS -->
+
         <div class="trust-item">
 
             <div class="trust-icon">
+
                 <i class="fa-solid fa-rotate-left"></i>
+
             </div>
 
+
             <div>
-                <strong>Easy Returns</strong>
-                <span>Hassle-free returns</span>
+
+                <strong>
+
+                    Easy Returns
+
+                </strong>
+
+                <span>
+
+                    Hassle-free returns
+
+                </span>
+
             </div>
 
         </div>
 
+
+
+        <!-- FAST SHIPPING -->
 
         <div class="trust-item">
 
             <div class="trust-icon">
+
                 <i class="fa-solid fa-truck-fast"></i>
+
             </div>
 
+
             <div>
-                <strong>Fast Shipping</strong>
-                <span>Delivered with care</span>
+
+                <strong>
+
+                    Fast Shipping
+
+                </strong>
+
+                <span>
+
+                    Delivered with care
+
+                </span>
+
             </div>
 
         </div>
+
 
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -591,26 +965,47 @@
 
     <div class="container">
 
+
+        <!-- SECTION HEADING -->
+
         <div class="section-heading">
 
+
             <p class="section-eyebrow">
+
                 OUR COLLECTION
+
             </p>
 
+
             <h2>
+
                 Shop by Category
+
             </h2>
 
+
             <div class="heading-ornament">
+
                 <span></span>
+
                 <i class="fa-solid fa-diamond"></i>
+
                 <span></span>
+
             </div>
 
         </div>
 
 
+
+        <!-- CATEGORY GRID -->
+
         <div class="category-grid">
+
+
+
+            <!-- SAREES -->
 
             <a href="collections/collections.html"
                class="category-card">
@@ -618,25 +1013,42 @@
                 <img src="images/banners/hero-01.webp"
                      alt="Premium Sarees">
 
+
                 <div class="category-card-overlay"></div>
+
 
                 <div class="category-content">
 
-                    <p>SAREES</p>
+
+                    <p>
+
+                        SAREES
+
+                    </p>
+
 
                     <h3>
+
                         Graceful. Timeless. Elegant.
+
                     </h3>
 
+
                     <span class="category-link">
+
                         Explore Sarees
+
                         <i class="fa-solid fa-arrow-right"></i>
+
                     </span>
 
                 </div>
 
             </a>
 
+
+
+            <!-- SUITS -->
 
             <a href="collections/collections.html"
                class="category-card">
@@ -644,30 +1056,46 @@
                 <img src="images/banners/hero-03.webp"
                      alt="Premium Suits">
 
+
                 <div class="category-card-overlay"></div>
+
 
                 <div class="category-content">
 
-                    <p>SUITS</p>
+
+                    <p>
+
+                        SUITS
+
+                    </p>
+
 
                     <h3>
+
                         Stylish. Comfortable. You.
+
                     </h3>
 
+
                     <span class="category-link">
+
                         Explore Suits
+
                         <i class="fa-solid fa-arrow-right"></i>
+
                     </span>
 
                 </div>
 
             </a>
 
+
         </div>
 
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -678,41 +1106,67 @@
 
     <div class="container">
 
+
+        <!-- SECTION HEADING -->
+
         <div class="section-heading section-heading-row">
+
 
             <div>
 
+
                 <p class="section-eyebrow">
+
                     NEW ARRIVALS
+
                 </p>
 
+
                 <h2>
+
                     Fresh Arrivals
+
                 </h2>
 
+
                 <div class="heading-ornament">
+
                     <span></span>
+
                     <i class="fa-solid fa-diamond"></i>
+
                     <span></span>
+
                 </div>
 
+
             </div>
+
+
 
             <a href="collections/collections.html"
                class="view-all-link">
 
                 View All
+
                 <i class="fa-solid fa-arrow-right"></i>
 
             </a>
 
+
         </div>
 
+
+
+        <!-- PRODUCT GRID -->
 
         <div class="product-grid">
 
 
-            <!-- PRODUCT 001 -->
+
+            <!-- =================================================
+                 PRODUCT 001
+            ================================================== -->
 
             <article class="product-card">
 
@@ -720,8 +1174,11 @@
                    class="product-image">
 
                     <span class="product-badge">
+
                         NEW
+
                     </span>
+
 
                     <button class="product-wishlist"
                             type="button"
@@ -731,32 +1188,47 @@
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/sarees/saree-001/sarees-01-lifestyle.webp"
                          alt="Premium Saree 001">
 
                 </a>
 
+
                 <div class="product-info">
 
+
                     <p class="product-category">
+
                         SAREE
+
                     </p>
+
 
                     <h3>
+
                         Elegant Saree Collection
+
                     </h3>
 
+
                     <p class="product-price">
+
                         Enquire on WhatsApp
+
                     </p>
+
 
                 </div>
 
             </article>
 
 
-            <!-- PRODUCT 002 -->
+
+            <!-- =================================================
+                 PRODUCT 002
+            ================================================== -->
 
             <article class="product-card">
 
@@ -764,8 +1236,11 @@
                    class="product-image">
 
                     <span class="product-badge">
+
                         NEW
+
                     </span>
+
 
                     <button class="product-wishlist"
                             type="button"
@@ -775,32 +1250,47 @@
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/suits/suit-001/suits-001-lifestyle.webp"
                          alt="Premium Suit 001">
 
                 </a>
 
+
                 <div class="product-info">
 
+
                     <p class="product-category">
+
                         SUIT
+
                     </p>
+
 
                     <h3>
+
                         Elegant Suit Collection
+
                     </h3>
 
+
                     <p class="product-price">
+
                         Enquire on WhatsApp
+
                     </p>
+
 
                 </div>
 
             </article>
 
 
-            <!-- PRODUCT 003 -->
+
+            <!-- =================================================
+                 PRODUCT 003
+            ================================================== -->
 
             <article class="product-card">
 
@@ -808,8 +1298,11 @@
                    class="product-image">
 
                     <span class="product-badge">
+
                         NEW
+
                     </span>
+
 
                     <button class="product-wishlist"
                             type="button"
@@ -819,32 +1312,47 @@
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/sarees/saree-002/sarees-02-lifestyle.webp"
                          alt="Premium Saree 002">
 
                 </a>
 
+
                 <div class="product-info">
 
+
                     <p class="product-category">
+
                         SAREE
+
                     </p>
+
 
                     <h3>
+
                         Signature Saree Collection
+
                     </h3>
 
+
                     <p class="product-price">
+
                         Enquire on WhatsApp
+
                     </p>
+
 
                 </div>
 
             </article>
 
 
-            <!-- PRODUCT 004 -->
+
+            <!-- =================================================
+                 PRODUCT 004
+            ================================================== -->
 
             <article class="product-card">
 
@@ -852,8 +1360,11 @@
                    class="product-image">
 
                     <span class="product-badge">
+
                         NEW
+
                     </span>
+
 
                     <button class="product-wishlist"
                             type="button"
@@ -863,32 +1374,47 @@
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/suits/suit-002/suits-002-lifestyle.webp"
                          alt="Premium Suit 002">
 
                 </a>
 
+
                 <div class="product-info">
 
+
                     <p class="product-category">
+
                         SUIT
+
                     </p>
+
 
                     <h3>
+
                         Signature Suit Collection
+
                     </h3>
 
+
                     <p class="product-price">
+
                         Enquire on WhatsApp
+
                     </p>
+
 
                 </div>
 
             </article>
 
 
-            <!-- PRODUCT 005 -->
+
+            <!-- =================================================
+                 PRODUCT 005
+            ================================================== -->
 
             <article class="product-card">
 
@@ -896,8 +1422,11 @@
                    class="product-image">
 
                     <span class="product-badge">
+
                         NEW
+
                     </span>
+
 
                     <button class="product-wishlist"
                             type="button"
@@ -907,32 +1436,47 @@
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/sarees/saree-003/sarees-03-lifestyle.webp"
                          alt="Premium Saree 003">
 
                 </a>
 
+
                 <div class="product-info">
 
+
                     <p class="product-category">
+
                         SAREE
+
                     </p>
+
 
                     <h3>
+
                         Festive Saree Collection
+
                     </h3>
 
+
                     <p class="product-price">
+
                         Enquire on WhatsApp
+
                     </p>
+
 
                 </div>
 
             </article>
 
 
-            <!-- PRODUCT 006 -->
+
+            <!-- =================================================
+                 PRODUCT 006
+            ================================================== -->
 
             <article class="product-card">
 
@@ -940,8 +1484,11 @@
                    class="product-image">
 
                     <span class="product-badge">
+
                         NEW
+
                     </span>
+
 
                     <button class="product-wishlist"
                             type="button"
@@ -952,34 +1499,48 @@
 
                     </button>
 
+
                     <img src="images/suits/suit-003/suits-003-lifestyle.webp"
                          alt="Premium Suit 003">
 
                 </a>
 
+
                 <div class="product-info">
 
+
                     <p class="product-category">
+
                         SUIT
+
                     </p>
+
 
                     <h3>
+
                         Festive Suit Collection
+
                     </h3>
 
+
                     <p class="product-price">
+
                         Enquire on WhatsApp
+
                     </p>
+
 
                 </div>
 
             </article>
+
 
         </div>
 
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -990,28 +1551,47 @@
 
     <div class="container">
 
+
         <div class="campaign-banner">
+
 
             <img src="images/banners/hero-05.webp"
                  alt="Festive Collection">
 
+
             <div class="campaign-overlay"></div>
+
 
             <div class="campaign-content">
 
+
                 <p>
+
                     FESTIVE COLLECTION
+
                 </p>
 
+
                 <h2>
+
                     Celebrate every moment
-                    <span>in style</span>
+
+                    <span>
+
+                        in style
+
+                    </span>
+
                 </h2>
+
 
                 <a href="collections/collections.html"
                    class="button button-gold">
+
                     Shop Now
+
                 </a>
+
 
             </div>
 
@@ -1020,6 +1600,7 @@
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -1030,80 +1611,126 @@
 
     <div class="container values-grid">
 
+
+        <!-- HANDPICKED WITH LOVE -->
+
         <div class="value-item">
 
             <div class="value-icon">
+
                 <i class="fa-regular fa-heart"></i>
+
             </div>
 
+
             <h3>
+
                 Handpicked With Love
+
             </h3>
 
+
             <p>
+
                 Every piece is carefully selected
                 for you.
+
             </p>
 
         </div>
 
 
+
+        <!-- THOUGHTFULLY CURATED -->
+
         <div class="value-item">
 
             <div class="value-icon">
+
                 <i class="fa-solid fa-leaf"></i>
+
             </div>
 
+
             <h3>
+
                 Thoughtfully Curated
+
             </h3>
 
+
             <p>
+
                 We care about quality, detail
                 and timeless style.
+
             </p>
 
         </div>
 
 
+
+        <!-- CUSTOMER FIRST -->
+
         <div class="value-item">
 
             <div class="value-icon">
+
                 <i class="fa-solid fa-user-heart"></i>
+
             </div>
 
+
             <h3>
+
                 Customer First
+
             </h3>
 
+
             <p>
+
                 We're here to make your
                 shopping experience special.
+
             </p>
 
         </div>
 
+
+
+        <!-- PREMIUM QUALITY -->
 
         <div class="value-item">
 
             <div class="value-icon">
+
                 <i class="fa-solid fa-medal"></i>
+
             </div>
 
+
             <h3>
+
                 Premium Quality
+
             </h3>
 
+
             <p>
+
                 Beautiful products chosen
                 with uncompromising care.
+
             </p>
 
         </div>
+
 
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -1114,66 +1741,107 @@
 
     <div class="container">
 
+
+        <!-- SECTION HEADING -->
+
         <div class="section-heading">
 
+
             <p class="section-eyebrow">
+
                 FOLLOW OUR JOURNEY
+
             </p>
+
 
             <h2>
+
                 Follow Us on Instagram
+
             </h2>
 
+
             <p class="instagram-handle">
+
                 @shrivatsadarbar
+
             </p>
 
+
             <div class="heading-ornament">
+
                 <span></span>
+
                 <i class="fa-solid fa-diamond"></i>
+
                 <span></span>
+
             </div>
+
 
         </div>
 
 
+
+        <!-- INSTAGRAM GRID -->
+
         <div class="instagram-grid">
 
+
             <div>
+
                 <img src="images/sarees/saree-001/sarees-01-lifestyle.webp"
                      alt="ShreevatsaDharwa Instagram fashion">
+
             </div>
 
+
             <div>
+
                 <img src="images/suits/suit-001/suits-001-lifestyle.webp"
                      alt="ShreevatsaDharwa Instagram suit">
+
             </div>
 
+
             <div>
+
                 <img src="images/sarees/saree-002/sarees-02-lifestyle.webp"
                      alt="ShreevatsaDharwa Instagram saree">
+
             </div>
 
+
             <div>
+
                 <img src="images/suits/suit-002/suits-002-lifestyle.webp"
                      alt="ShreevatsaDharwa Instagram suit">
+
             </div>
 
+
             <div>
+
                 <img src="images/sarees/saree-003/sarees-03-lifestyle.webp"
                      alt="ShreevatsaDharwa Instagram collection">
+
             </div>
 
+
             <div>
+
                 <img src="images/suits/suit-003/suits-003-lifestyle.webp"
                      alt="ShreevatsaDharwa Instagram collection">
+
             </div>
+
 
         </div>
 
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -1184,43 +1852,72 @@
 
     <div class="container">
 
+
         <div class="newsletter-box">
 
+
+            <!-- NEWSLETTER ICON -->
+
             <div class="newsletter-icon">
+
                 <i class="fa-regular fa-envelope"></i>
+
             </div>
+
+
+
+            <!-- NEWSLETTER TEXT -->
 
             <div class="newsletter-copy">
 
+
                 <p>
+
                     STAY UPDATED
+
                 </p>
 
+
                 <h2>
+
                     Be the first to discover what's new.
+
                 </h2>
 
+
                 <span>
+
                     New arrivals, curated collections and
                     special offers — delivered occasionally.
+
                 </span>
+
 
             </div>
 
 
+
+            <!-- NEWSLETTER FORM -->
+
             <form class="newsletter-form"
                   onsubmit="handleNewsletter(event)">
+
 
                 <input type="email"
                        id="newsletterEmail"
                        placeholder="Enter your email address"
                        required>
 
+
                 <button type="submit">
+
                     Subscribe
+
                 </button>
 
+
             </form>
+
 
         </div>
 
@@ -1228,376 +1925,24 @@
 
 </section>
 
+
+
 </main>
 
 
 
-        <!-- =========================================================
-     SHRI VATSADARBAR — MASTER FOOTER
-     FILE: footer.html
+<!-- =========================================================
+     MASTER FOOTER
 ========================================================= -->
 
-<footer class="svd-footer svd-footer-v2">
+<div id="site-footer">
 
-    <div class="svd-footer-v2__inner">
+</div>
 
-
-        <!-- =================================================
-             FOOTER MAIN
-        ================================================== -->
-
-        <div class="svd-footer-v2__main">
-
-
-            <!-- =============================================
-                 BRAND
-            ============================================== -->
-
-            <div class="svd-footer-v2__brand">
-
-                <a
-                    href="{{BASE}}index.html"
-                    class="svd-footer-v2__logo"
-                    aria-label="ShriVatsaDarbar Home"
-                >
-                    <img
-                        src="{{BASE}}images/logos/logo.webp"
-                        alt="ShriVatsaDarbar"
-                    >
-                </a>
-
-
-                <p class="svd-footer-v2__description">
-
-                    Premium sarees and suits curated with
-                    timeless elegance, quality and grace
-                    in every thread.
-
-                </p>
-
-
-                <div class="svd-footer-v2__socials">
-
-
-                    <a
-                        href="#"
-                        aria-label="Instagram"
-                    >
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        aria-label="Facebook"
-                    >
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        aria-label="Pinterest"
-                    >
-                        <i class="fa-brands fa-pinterest-p"></i>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        aria-label="YouTube"
-                    >
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-
-
-                </div>
-
-            </div>
-
-
-
-            <!-- =============================================
-                 SHOP
-            ============================================== -->
-
-            <div class="svd-footer-v2__column">
-
-                <h4>Shop</h4>
-
-
-                <a href="{{BASE}}collections/collections.html?category=saree">
-
-                    Sarees
-
-                </a>
-
-
-                <a href="{{BASE}}collections/collections.html?category=suit">
-
-                    Suits
-
-                </a>
-
-
-                <a href="{{BASE}}collections/collections.html">
-
-                    New Arrivals
-
-                </a>
-
-
-                <a href="{{BASE}}collections/collections.html">
-
-                    Best Sellers
-
-                </a>
-
-
-                <a href="{{BASE}}collections/collections.html">
-
-                    All Collections
-
-                </a>
-
-            </div>
-
-
-
-            <!-- =============================================
-                 CUSTOMER CARE
-            ============================================== -->
-
-            <div class="svd-footer-v2__column">
-
-                <h4>Customer Care</h4>
-
-
-                <a href="{{BASE}}contact.html">
-
-                    Contact Us
-
-                </a>
-
-
-                <a href="{{BASE}}faq.html">
-
-                    FAQ
-
-                </a>
-
-
-                <a href="{{BASE}}size-guide.html">
-
-                    Size Guide
-
-                </a>
-
-            </div>
-
-
-
-            <!-- =============================================
-                 ABOUT US
-            ============================================== -->
-
-            <div class="svd-footer-v2__column">
-
-                <h4>About Us</h4>
-
-
-                <a href="{{BASE}}our-story.html">
-
-                    Our Story
-
-                </a>
-
-
-                <a href="{{BASE}}about.html">
-
-                    About Us
-
-                </a>
-
-            </div>
-
-
-
-            <!-- =============================================
-                 POLICIES
-            ============================================== -->
-
-            <div class="svd-footer-v2__column">
-
-                <h4>Policies</h4>
-
-
-                <a href="{{BASE}}policies/privacy-policy.html">
-
-                    Privacy Policy
-
-                </a>
-
-
-                <a href="{{BASE}}policies/shipping-policy.html">
-
-                    Shipping Policy
-
-                </a>
-
-
-                <a href="{{BASE}}policies/return-refund-policy.html">
-
-                    Return &amp; Refund Policy
-
-                </a>
-
-
-                <a href="{{BASE}}policies/exchange-policy.html">
-
-                    Exchange Policy
-
-                </a>
-
-
-                <a href="{{BASE}}policies/cancellation-policy.html">
-
-                    Cancellation Policy
-
-                </a>
-
-
-                <a href="{{BASE}}policies/terms-conditions.html">
-
-                    Terms &amp; Conditions
-
-                </a>
-
-            </div>
-
-
-
-            <!-- =============================================
-                 CONTACT US
-            ============================================== -->
-
-            <div class="svd-footer-v2__contact">
-
-                <h4>Contact Us</h4>
-
-
-                <div class="svd-footer-v2__contact-item">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                    <a href="tel:+918826196544">
-
-                        +91 88261 96544
-
-                    </a>
-
-                </div>
-
-
-
-                <div class="svd-footer-v2__contact-item">
-
-                    <i class="fa-regular fa-envelope"></i>
-
-                    <a href="mailto:shrivatsadarbar@gmail.com">
-
-                        shrivatsadarbar@gmail.com
-
-                    </a>
-
-                </div>
-
-
-
-                <div class="svd-footer-v2__contact-item svd-footer-v2__address">
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    <span>
-
-                        Bhola and Prabha Niwas,<br>
-                        Ratanpur, Padao,<br>
-                        Varanasi, Uttar Pradesh<br>
-                        221008
-
-                    </span>
-
-                </div>
-
-
-
-                <div class="svd-footer-v2__contact-item">
-
-                    <i class="fa-regular fa-clock"></i>
-
-                    <span>
-
-                        Support: 10:00 AM – 8:00 PM
-
-                    </span>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-
-        <!-- =================================================
-             FOOTER DIVIDER
-        ================================================== -->
-
-        <div class="svd-footer-v2__divider">
-
-            <span></span>
-
-            <i class="fa-solid fa-leaf"></i>
-
-            <span></span>
-
-        </div>
-
-
-
-        <!-- =================================================
-             FOOTER BOTTOM
-        ================================================== -->
-
-        <div class="svd-footer-v2__bottom">
-
-
-            <p>
-
-                © 2026 ShriVatsaDarbar.
-                All Rights Reserved.
-
-            </p>
-
-
-            <p class="svd-footer-v2__tagline">
-
-                Grace in Every Thread
-
-            </p>
-
-
-        </div>
-
-
-    </div>
-
-</footer>
 
 
 <!-- =========================================================
-     WHATSAPP FLOAT
+     WHATSAPP FLOAT BUTTON
 ========================================================= -->
 
 <a href="https://wa.me/918826196544"
@@ -1611,8 +1956,9 @@
 </a>
 
 
+
 <!-- =========================================================
-     TOAST
+     SITE TOAST
 ========================================================= -->
 
 <div class="site-toast"
@@ -1623,7 +1969,14 @@
 </div>
 
 
+
+<!-- =========================================================
+     MAIN JAVASCRIPT
+========================================================= -->
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
