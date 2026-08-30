@@ -4130,3 +4130,676 @@ button {
     }
 
 }
+
+
+
+
+
+
+
+/* =========================================================
+   SHRI VATSADARBAR — MASTER FOOTER
+========================================================= */
+
+.svd-footer-v2 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2c241e 0%,
+            #171310 50%,
+            #2a211b 100%
+        );
+
+    color: #f5efe5;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 0;
+
+}
+
+
+/* =========================================================
+   FOOTER INNER
+========================================================= */
+
+.svd-footer-v2__inner {
+
+    width: min(1400px, 92%);
+
+    margin: auto;
+
+    padding: 75px 0 35px;
+
+}
+
+
+.svd-footer-v2__main {
+
+    display: grid;
+
+    grid-template-columns:
+        1.7fr
+        1fr
+        1fr
+        1fr
+        1fr
+        1.5fr;
+
+    gap: 35px;
+
+    align-items: start;
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.svd-footer-v2__brand {
+
+    padding-right: 15px;
+
+}
+
+
+.svd-footer-v2__logo {
+
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+}
+
+
+.svd-footer-v2__logo img {
+
+    display: block;
+
+    width: 155px;
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+.svd-footer-v2__description {
+
+    margin: 0;
+
+    max-width: 290px;
+
+    color: rgba(245, 239, 229, 0.68);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.svd-footer-v2__socials {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 24px;
+
+}
+
+
+.svd-footer-v2__socials a {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: #d8b56b;
+
+    border:
+        1px solid
+        rgba(216, 181, 107, 0.35);
+
+    transition: 0.25s ease;
+
+}
+
+
+.svd-footer-v2__socials a:hover {
+
+    color: #ffffff;
+
+    background: #a77b2d;
+
+    border-color: #a77b2d;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.svd-footer-v2__column,
+.svd-footer-v2__contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+.svd-footer-v2 h4 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   HEADING ORNAMENT
+========================================================= */
+
+.svd-footer-v2__heading-ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin:
+        13px 0
+        20px;
+
+    color: #caa154;
+
+    font-size: 8px;
+
+}
+
+
+.svd-footer-v2__heading-ornament span {
+
+    width: 22px;
+
+    height: 1px;
+
+    background:
+        rgba(202, 161, 84, 0.55);
+
+}
+
+
+.svd-footer-v2__column a {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: rgba(245, 239, 229, 0.68);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    transition: 0.25s ease;
+
+}
+
+
+.svd-footer-v2__column a:hover {
+
+    color: #d9b76e;
+
+    transform: translateX(3px);
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.svd-footer-v2__contact-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    color: rgba(245, 239, 229, 0.68);
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+}
+
+
+.svd-footer-v2__contact-item i {
+
+    color: #d4ad61;
+
+    width: 15px;
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+
+}
+
+
+.svd-footer-v2__contact-item a {
+
+    color: rgba(245, 239, 229, 0.72);
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+
+}
+
+
+.svd-footer-v2__contact-item a:hover {
+
+    color: #d9b76e;
+
+}
+
+
+/* =========================================================
+   DECORATIVE DIVIDER
+========================================================= */
+
+.svd-footer-v2__divider {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 55px;
+
+}
+
+
+.svd-footer-v2__divider > span {
+
+    width: min(260px, 30vw);
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(204, 166, 89, 0.55),
+            transparent
+        );
+
+}
+
+
+.svd-footer-v2__divider-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(204, 166, 89, 0.38);
+
+    color: #d4ad61;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+========================================================= */
+
+.svd-footer-v2__bottom-bar {
+
+    border-top:
+
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(0, 0, 0, 0.16);
+
+}
+
+
+.svd-footer-v2__bottom {
+
+    width: min(1400px, 92%);
+
+    min-height: 75px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    position: relative;
+
+}
+
+
+.svd-footer-v2__bottom > p {
+
+    margin: 0;
+
+    color: rgba(245, 239, 229, 0.55);
+
+    font-size: 11px;
+
+}
+
+
+.svd-footer-v2__bottom-tagline {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #d3aa5d;
+
+}
+
+
+.svd-footer-v2__bottom-tagline span {
+
+    width: 28px;
+
+    height: 1px;
+
+    background:
+        rgba(211, 170, 93, 0.45);
+
+}
+
+
+.svd-footer-v2__bottom-tagline p {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.svd-footer-v2__bottom-corner {
+
+    color: rgba(211, 170, 93, 0.45);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+
+    .svd-footer-v2__main {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 45px 30px;
+
+    }
+
+
+    .svd-footer-v2__brand {
+
+        grid-column:
+            span 3;
+
+    }
+
+
+    .svd-footer-v2__description {
+
+        max-width: 500px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+    .svd-footer-v2__inner {
+
+        width: 88%;
+
+        padding:
+            55px 0
+            30px;
+
+    }
+
+
+    .svd-footer-v2__main {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 38px 25px;
+
+    }
+
+
+    .svd-footer-v2__brand {
+
+        grid-column:
+            span 2;
+
+        padding-right: 0;
+
+    }
+
+
+    .svd-footer-v2__logo img {
+
+        width: 135px;
+
+    }
+
+
+    .svd-footer-v2__description {
+
+        font-size: 12px;
+
+    }
+
+
+    .svd-footer-v2__contact {
+
+        grid-column:
+            span 2;
+
+    }
+
+
+    .svd-footer-v2 h4 {
+
+        font-size: 17px;
+
+    }
+
+
+    .svd-footer-v2__column a {
+
+        font-size: 11px;
+
+    }
+
+
+    .svd-footer-v2__divider {
+
+        margin-top: 42px;
+
+    }
+
+
+    .svd-footer-v2__divider > span {
+
+        width: 70px;
+
+    }
+
+
+    .svd-footer-v2__bottom {
+
+        padding:
+            22px 0;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 13px;
+
+    }
+
+
+    .svd-footer-v2__bottom-corner {
+
+        display: none;
+
+    }
+
+
+    .svd-footer-v2__bottom-tagline {
+
+        order: -1;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+
+    .svd-footer-v2__main {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .svd-footer-v2__brand,
+    .svd-footer-v2__contact {
+
+        grid-column: auto;
+
+    }
+
+
+    .svd-footer-v2__column {
+
+        width: 100%;
+
+    }
+
+
+    .svd-footer-v2__contact {
+
+        width: 100%;
+
+    }
+
+       }
