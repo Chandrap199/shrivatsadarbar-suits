@@ -1,1 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#4b0713">
+
+    <meta name="description"
+          content="Explore elegant women's suits at ShreevatsaDharwa. Discover beautifully curated ethnic suits for celebrations, occasions and everyday elegance.">
+
+    <meta name="keywords"
+          content="women's suits, ethnic suits, designer suits, Indian suits, premium suits, ladies suits online">
+
+    <title>
+        Suits | ShreevatsaDharwa
+    </title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- MAIN CSS -->
+
+    <link rel="stylesheet"
+          href="styles.css">
+
+
+    <style>
+
+
+        /* =====================================================
+           SUITS PAGE
+        ===================================================== */
+
+        .collection-page {
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(194, 151, 72, 0.10),
+                    transparent 35%
+                ),
+                #f8f7f4;
+
+            min-height: 100vh;
+
+            padding-bottom: 80px;
+
+        }
+
+
+        /* =====================================================
+           COLLECTION HERO
+        ===================================================== */
+
+        .collection-hero {
+
+            text-align: center;
+
+            padding: 90px 20px 60px;
+
+        }
+
+
+        .collection-eyebrow {
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            color: #9b762e;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .collection-hero h1 {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(42px, 6vw, 70px);
+
+            font-weight: 500;
+
+            color: #2d2926;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .collection-description {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            color: #6d6863;
+
+        }
+
+
+        /* =====================================================
+           COLLECTION ORNAMENT
+        ===================================================== */
+
+        .collection-ornament {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin: 25px auto;
+
+        }
+
+
+        .collection-ornament span {
+
+            width: 45px;
+
+            height: 1px;
+
+            background: #c5a15a;
+
+        }
+
+
+        .collection-ornament i {
+
+            font-size: 8px;
+
+            color: #b58a37;
+
+        }
+
+
+        /* =====================================================
+           COLLECTION FILTER BAR
+        ===================================================== */
+
+        .collection-toolbar {
+
+            max-width: 1250px;
+
+            margin: 0 auto 40px;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+        }
+
+
+        .collection-count {
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 13px;
+
+            color: #77716b;
+
+        }
+
+
+        .collection-filter {
+
+            border: 1px solid rgba(0, 0, 0, 0.12);
+
+            background: #ffffff;
+
+            padding: 12px 18px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 12px;
+
+            color: #3b3733;
+
+            outline: none;
+
+        }
+
+
+        /* =====================================================
+           SUITS GRID
+        ===================================================== */
+
+        .suits-grid {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 0 25px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 28px;
+
+        }
+
+
+        /* =====================================================
+           SUIT CARD
+        ===================================================== */
+
+        .suit-card {
+
+            background: #ffffff;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+        }
+
+
+        .suit-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 18px 45px
+                rgba(0, 0, 0, 0.10);
+
+        }
+
+
+        .suit-image {
+
+            position: relative;
+
+            overflow: hidden;
+
+            aspect-ratio: 0.78;
+
+            display: block;
+
+            background: #ece9e5;
+
+        }
+
+
+        .suit-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.6s ease;
+
+        }
+
+
+        .suit-card:hover .suit-image img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        /* BADGE */
+
+        .suit-badge {
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 15px;
+
+            z-index: 2;
+
+            background: #4b0713;
+
+            color: #ffffff;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            padding: 8px 11px;
+
+        }
+
+
+        /* WISHLIST */
+
+        .suit-wishlist {
+
+            position: absolute;
+
+            top: 14px;
+
+            right: 14px;
+
+            z-index: 2;
+
+            width: 38px;
+
+            height: 38px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            color: #4b0713;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        /* =====================================================
+           PRODUCT INFORMATION
+        ===================================================== */
+
+        .suit-info {
+
+            padding: 20px;
+
+            text-align: center;
+
+        }
+
+
+        .suit-category {
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            color: #a47b31;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .suit-info h2 {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 24px;
+
+            font-weight: 600;
+
+            color: #2f2a26;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .suit-price {
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 12px;
+
+            color: #77716b;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .suits-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 18px;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .collection-hero {
+
+                padding:
+                    65px 20px
+                    40px;
+
+            }
+
+
+            .collection-toolbar {
+
+                padding: 0 18px;
+
+            }
+
+
+            .suits-grid {
+
+                padding: 0 12px;
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 12px;
+
+            }
+
+
+            .suit-info {
+
+                padding: 14px 8px 18px;
+
+            }
+
+
+            .suit-info h2 {
+
+                font-size: 20px;
+
+            }
+
+
+            .suit-wishlist {
+
+                width: 34px;
+
+                height: 34px;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================================================
+     ANNOUNCEMENT BAR
+========================================================= -->
+
+<div class="announcement-bar">
+
+    <div class="announcement-inner">
+
+        <span>
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            FREE SHIPPING on Prepaid Orders
+
+        </span>
+
+
+        <span class="announcement-divider">
+
+            |
+
+        </span>
+
+
+        <span>
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            Premium Quality Fabrics
+
+        </span>
+
+
+        <span class="announcement-divider">
+
+            |
+
+        </span>
+
+
+        <span>
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            Easy Returns & Exchanges
+
+        </span>
+
+
+        <a href="https://wa.me/918826196544"
+           target="_blank"
+           rel="noopener"
+           class="announcement-whatsapp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Order on WhatsApp
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="brand">
+
+            <img src="images/logos/logo-white.webp"
+                 alt="ShreevatsaDharwa logo">
+
+        </a>
+
+
+
+        <!-- MOBILE MENU -->
+
+        <button class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-navigation"
+             id="mainNavigation">
+
+            <a href="index.html">
+
+                Home
+
+            </a>
+
+
+            <a href="sarees.html">
+
+                Sarees
+
+            </a>
+
+
+            <a href="suits.html"
+               class="active">
+
+                Suits
+
+            </a>
+
+
+            <a href="new-arrivals.html">
+
+                New Arrivals
+
+            </a>
+
+
+            <a href="best-sellers.html">
+
+                Best Sellers
+
+            </a>
+
+
+            <a href="about.html">
+
+                About Us
+
+            </a>
+
+
+            <a href="contact.html">
+
+                Contact Us
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <button class="icon-button"
+                    id="searchButton"
+                    aria-label="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+
+            <button class="icon-button"
+                    aria-label="Wishlist"
+                    onclick="showComingSoon('Wishlist')">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+
+            <button class="icon-button"
+                    aria-label="Account"
+                    onclick="showComingSoon('Account')">
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+
+            <button class="icon-button bag-button"
+                    aria-label="Shopping bag"
+                    onclick="showComingSoon('Shopping Bag')">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="bag-count">
+
+                    0
+
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     SEARCH OVERLAY
+========================================================= -->
+
+<div class="search-overlay"
+     id="searchOverlay">
+
+
+    <button class="search-close"
+            id="searchClose"
+            aria-label="Close search">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <div class="search-box">
+
+        <span>
+
+            Search our collection
+
+        </span>
+
+
+        <input type="search"
+               id="siteSearch"
+               placeholder="Search sarees, suits..."
+               autocomplete="off">
+
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main class="collection-page">
+
+
+
+    <!-- =====================================================
+         COLLECTION HERO
+    ====================================================== -->
+
+    <section class="collection-hero">
+
+
+        <p class="collection-eyebrow">
+
+            EXPLORE THE COLLECTION
+
+        </p>
+
+
+        <h1>
+
+            Find Your Perfect Suit
+
+        </h1>
+
+
+        <div class="collection-ornament">
+
+            <span></span>
+
+            <i class="fa-solid fa-diamond"></i>
+
+            <span></span>
+
+        </div>
+
+
+        <p class="collection-description">
+
+            Explore our growing collection and discover elegant
+            suits selected to bring confidence, comfort and
+            timeless beauty to every occasion.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COLLECTION TOOLBAR
+    ====================================================== -->
+
+    <div class="collection-toolbar">
+
+
+        <div class="collection-count">
+
+            Our Suit Collection
+
+        </div>
+
+
+        <select class="collection-filter"
+                aria-label="Sort suits">
+
+            <option>
+
+                Featured
+
+            </option>
+
+            <option>
+
+                Newest
+
+            </option>
+
+            <option>
+
+                Popular
+
+            </option>
+
+        </select>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SUITS GRID
+    ====================================================== -->
+
+    <section class="suits-grid">
+
+
+
+        <!-- =================================================
+             SUIT 001
+        ================================================== -->
+
+        <article class="suit-card">
+
+
+            <a href="#"
+               class="suit-image">
+
+                <span class="suit-badge">
+
+                    NEW
+
+                </span>
+
+
+                <button class="suit-wishlist"
+                        type="button"
+                        aria-label="Add to wishlist"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img src="images/suits/suit-001/suits-001-lifestyle.webp"
+                     alt="Elegant women's suit">
+
+            </a>
+
+
+            <div class="suit-info">
+
+
+                <p class="suit-category">
+
+                    SUIT
+
+                </p>
+
+
+                <h2>
+
+                    Elegant Suit Collection
+
+                </h2>
+
+
+                <p class="suit-price">
+
+                    Enquire on WhatsApp
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SUIT 002
+        ================================================== -->
+
+        <article class="suit-card">
+
+
+            <a href="#"
+               class="suit-image">
+
+                <span class="suit-badge">
+
+                    NEW
+
+                </span>
+
+
+                <button class="suit-wishlist"
+                        type="button"
+                        aria-label="Add to wishlist"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img src="images/suits/suit-002/suits-002-lifestyle.webp"
+                     alt="Premium women's suit">
+
+            </a>
+
+
+            <div class="suit-info">
+
+
+                <p class="suit-category">
+
+                    SUIT
+
+                </p>
+
+
+                <h2>
+
+                    Signature Suit Collection
+
+                </h2>
+
+
+                <p class="suit-price">
+
+                    Enquire on WhatsApp
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SUIT 003
+        ================================================== -->
+
+        <article class="suit-card">
+
+
+            <a href="#"
+               class="suit-image">
+
+                <span class="suit-badge">
+
+                    NEW
+
+                </span>
+
+
+                <button class="suit-wishlist"
+                        type="button"
+                        aria-label="Add to wishlist"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img src="images/suits/suit-003/suits-003-lifestyle.webp"
+                     alt="Festive women's suit">
+
+            </a>
+
+
+            <div class="suit-info">
+
+
+                <p class="suit-category">
+
+                    SUIT
+
+                </p>
+
+
+                <h2>
+
+                    Festive Suit Collection
+
+                </h2>
+
+
+                <p class="suit-price">
+
+                    Enquire on WhatsApp
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     MASTER FOOTER
+========================================================= -->
+
+<div id="site-footer">
+
+</div>
+
+
+
+<!-- =========================================================
+     WHATSAPP FLOAT BUTTON
+========================================================= -->
+
+<a href="https://wa.me/918826196544"
+   target="_blank"
+   rel="noopener"
+   class="whatsapp-float"
+   aria-label="Chat with ShreevatsaDharwa on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =========================================================
+     SITE TOAST
+========================================================= -->
+
+<div class="site-toast"
+     id="siteToast"
+     role="status"
+     aria-live="polite">
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
