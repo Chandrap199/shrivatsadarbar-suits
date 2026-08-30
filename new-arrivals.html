@@ -1,1 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#4b0713">
+
+    <meta name="description"
+          content="Discover the latest arrivals at ShreevatsaDharwa. Explore newly added premium sarees and elegant suits curated for every occasion.">
+
+    <meta name="keywords"
+          content="new sarees, new suits, latest ethnic wear, new arrivals, designer sarees, women's suits">
+
+    <title>
+        New Arrivals | ShreevatsaDharwa
+    </title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- MAIN CSS -->
+
+    <link rel="stylesheet"
+          href="styles.css">
+
+
+    <style>
+
+
+        /* =====================================================
+           NEW ARRIVALS PAGE
+        ===================================================== */
+
+        .collection-page {
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(194, 151, 72, 0.10),
+                    transparent 35%
+                ),
+                #f8f7f4;
+
+            min-height: 100vh;
+
+            padding-bottom: 80px;
+
+        }
+
+
+        /* =====================================================
+           COLLECTION HERO
+        ===================================================== */
+
+        .collection-hero {
+
+            text-align: center;
+
+            padding: 90px 20px 60px;
+
+        }
+
+
+        .collection-eyebrow {
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            color: #9b762e;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .collection-hero h1 {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(42px, 6vw, 70px);
+
+            font-weight: 500;
+
+            color: #2d2926;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .collection-description {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            color: #6d6863;
+
+        }
+
+
+        /* =====================================================
+           COLLECTION ORNAMENT
+        ===================================================== */
+
+        .collection-ornament {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin: 25px auto;
+
+        }
+
+
+        .collection-ornament span {
+
+            width: 45px;
+
+            height: 1px;
+
+            background: #c5a15a;
+
+        }
+
+
+        .collection-ornament i {
+
+            font-size: 8px;
+
+            color: #b58a37;
+
+        }
+
+
+        /* =====================================================
+           COLLECTION TOOLBAR
+        ===================================================== */
+
+        .collection-toolbar {
+
+            max-width: 1250px;
+
+            margin: 0 auto 40px;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+        }
+
+
+        .collection-count {
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 13px;
+
+            color: #77716b;
+
+        }
+
+
+        .collection-filter {
+
+            border: 1px solid rgba(0, 0, 0, 0.12);
+
+            background: #ffffff;
+
+            padding: 12px 18px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 12px;
+
+            color: #3b3733;
+
+            outline: none;
+
+        }
+
+
+        /* =====================================================
+           PRODUCT GRID
+        ===================================================== */
+
+        .arrivals-grid {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 0 25px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 28px;
+
+        }
+
+
+        /* =====================================================
+           PRODUCT CARD
+        ===================================================== */
+
+        .arrival-card {
+
+            background: #ffffff;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+        }
+
+
+        .arrival-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 18px 45px
+                rgba(0, 0, 0, 0.10);
+
+        }
+
+
+        .arrival-image {
+
+            position: relative;
+
+            overflow: hidden;
+
+            aspect-ratio: 0.78;
+
+            display: block;
+
+            background: #ece9e5;
+
+        }
+
+
+        .arrival-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.6s ease;
+
+        }
+
+
+        .arrival-card:hover .arrival-image img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        /* =====================================================
+           BADGE
+        ===================================================== */
+
+        .arrival-badge {
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 15px;
+
+            z-index: 2;
+
+            background: #4b0713;
+
+            color: #ffffff;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            padding: 8px 11px;
+
+        }
+
+
+        /* =====================================================
+           WISHLIST
+        ===================================================== */
+
+        .arrival-wishlist {
+
+            position: absolute;
+
+            top: 14px;
+
+            right: 14px;
+
+            z-index: 2;
+
+            width: 38px;
+
+            height: 38px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            color: #4b0713;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        /* =====================================================
+           PRODUCT INFORMATION
+        ===================================================== */
+
+        .arrival-info {
+
+            padding: 20px;
+
+            text-align: center;
+
+        }
+
+
+        .arrival-category {
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            color: #a47b31;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .arrival-info h2 {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 24px;
+
+            font-weight: 600;
+
+            color: #2f2a26;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .arrival-price {
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 12px;
+
+            color: #77716b;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .arrivals-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 18px;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .collection-hero {
+
+                padding:
+                    65px 20px
+                    40px;
+
+            }
+
+
+            .collection-toolbar {
+
+                padding: 0 18px;
+
+            }
+
+
+            .arrivals-grid {
+
+                padding: 0 12px;
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 12px;
+
+            }
+
+
+            .arrival-info {
+
+                padding: 14px 8px 18px;
+
+            }
+
+
+            .arrival-info h2 {
+
+                font-size: 20px;
+
+            }
+
+
+            .arrival-wishlist {
+
+                width: 34px;
+
+                height: 34px;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================================================
+     ANNOUNCEMENT BAR
+========================================================= -->
+
+<div class="announcement-bar">
+
+    <div class="announcement-inner">
+
+        <span>
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            FREE SHIPPING on Prepaid Orders
+
+        </span>
+
+
+        <span class="announcement-divider">
+
+            |
+
+        </span>
+
+
+        <span>
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            Premium Quality Fabrics
+
+        </span>
+
+
+        <span class="announcement-divider">
+
+            |
+
+        </span>
+
+
+        <span>
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            Easy Returns & Exchanges
+
+        </span>
+
+
+        <a href="https://wa.me/918826196544"
+           target="_blank"
+           rel="noopener"
+           class="announcement-whatsapp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Order on WhatsApp
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="brand">
+
+            <img src="images/logos/logo-white.webp"
+                 alt="ShreevatsaDharwa logo">
+
+        </a>
+
+
+
+        <!-- MOBILE MENU -->
+
+        <button class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-navigation"
+             id="mainNavigation">
+
+            <a href="index.html">
+
+                Home
+
+            </a>
+
+
+            <a href="sarees.html">
+
+                Sarees
+
+            </a>
+
+
+            <a href="suits.html">
+
+                Suits
+
+            </a>
+
+
+            <a href="new-arrivals.html"
+               class="active">
+
+                New Arrivals
+
+            </a>
+
+
+            <a href="best-sellers.html">
+
+                Best Sellers
+
+            </a>
+
+
+            <a href="about.html">
+
+                About Us
+
+            </a>
+
+
+            <a href="contact.html">
+
+                Contact Us
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <button class="icon-button"
+                    id="searchButton"
+                    aria-label="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+
+            <button class="icon-button"
+                    aria-label="Wishlist"
+                    onclick="showComingSoon('Wishlist')">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+
+            <button class="icon-button"
+                    aria-label="Account"
+                    onclick="showComingSoon('Account')">
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+
+            <button class="icon-button bag-button"
+                    aria-label="Shopping bag"
+                    onclick="showComingSoon('Shopping Bag')">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="bag-count">
+
+                    0
+
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     SEARCH OVERLAY
+========================================================= -->
+
+<div class="search-overlay"
+     id="searchOverlay">
+
+
+    <button class="search-close"
+            id="searchClose"
+            aria-label="Close search">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <div class="search-box">
+
+        <span>
+
+            Search our collection
+
+        </span>
+
+
+        <input type="search"
+               id="siteSearch"
+               placeholder="Search sarees, suits..."
+               autocomplete="off">
+
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main class="collection-page">
+
+
+
+    <!-- =====================================================
+         COLLECTION HERO
+    ====================================================== -->
+
+    <section class="collection-hero">
+
+
+        <p class="collection-eyebrow">
+
+            JUST IN
+
+        </p>
+
+
+        <h1>
+
+            New Arrivals
+
+        </h1>
+
+
+        <div class="collection-ornament">
+
+            <span></span>
+
+            <i class="fa-solid fa-diamond"></i>
+
+            <span></span>
+
+        </div>
+
+
+        <p class="collection-description">
+
+            Discover our newest additions — freshly curated sarees
+            and elegant suits selected to bring something beautiful
+            and special to your wardrobe.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COLLECTION TOOLBAR
+    ====================================================== -->
+
+    <div class="collection-toolbar">
+
+
+        <div class="collection-count">
+
+            Freshly Added Styles
+
+        </div>
+
+
+        <select class="collection-filter"
+                aria-label="Sort new arrivals">
+
+            <option>
+
+                Newest First
+
+            </option>
+
+            <option>
+
+                Featured
+
+            </option>
+
+            <option>
+
+                Popular
+
+            </option>
+
+        </select>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         NEW ARRIVALS GRID
+    ====================================================== -->
+
+    <section class="arrivals-grid">
+
+
+
+        <!-- =================================================
+             ARRIVAL 001 — SAREE
+        ================================================== -->
+
+        <article class="arrival-card">
+
+
+            <a href="#"
+               class="arrival-image">
+
+                <span class="arrival-badge">
+
+                    NEW
+
+                </span>
+
+
+                <button class="arrival-wishlist"
+                        type="button"
+                        aria-label="Add to wishlist"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img src="images/sarees/saree-001/sarees-01-lifestyle.webp"
+                     alt="New premium saree">
+
+            </a>
+
+
+            <div class="arrival-info">
+
+
+                <p class="arrival-category">
+
+                    SAREE
+
+                </p>
+
+
+                <h2>
+
+                    Elegant Saree Collection
+
+                </h2>
+
+
+                <p class="arrival-price">
+
+                    Enquire on WhatsApp
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARRIVAL 002 — SUIT
+        ================================================== -->
+
+        <article class="arrival-card">
+
+
+            <a href="#"
+               class="arrival-image">
+
+                <span class="arrival-badge">
+
+                    NEW
+
+                </span>
+
+
+                <button class="arrival-wishlist"
+                        type="button"
+                        aria-label="Add to wishlist"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img src="images/suits/suit-001/suits-001-lifestyle.webp"
+                     alt="New elegant women's suit">
+
+            </a>
+
+
+            <div class="arrival-info">
+
+
+                <p class="arrival-category">
+
+                    SUIT
+
+                </p>
+
+
+                <h2>
+
+                    Elegant Suit Collection
+
+                </h2>
+
+
+                <p class="arrival-price">
+
+                    Enquire on WhatsApp
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARRIVAL 003 — SAREE
+        ================================================== -->
+
+        <article class="arrival-card">
+
+
+            <a href="#"
+               class="arrival-image">
+
+                <span class="arrival-badge">
+
+                    NEW
+
+                </span>
+
+
+                <button class="arrival-wishlist"
+                        type="button"
+                        aria-label="Add to wishlist"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img src="images/sarees/saree-002/sarees-02-lifestyle.webp"
+                     alt="New signature saree">
+
+            </a>
+
+
+            <div class="arrival-info">
+
+
+                <p class="arrival-category">
+
+                    SAREE
+
+                </p>
+
+
+                <h2>
+
+                    Signature Saree Collection
+
+                </h2>
+
+
+                <p class="arrival-price">
+
+                    Enquire on WhatsApp
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARRIVAL 004 — SUIT
+        ================================================== -->
+
+        <article class="arrival-card">
+
+
+            <a href="#"
+               class="arrival-image">
+
+                <span class="arrival-badge">
+
+                    NEW
+
+                </span>
+
+
+                <button class="arrival-wishlist"
+                        type="button"
+                        aria-label="Add to wishlist"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img src="images/suits/suit-002/suits-002-lifestyle.webp"
+                     alt="New signature women's suit">
+
+            </a>
+
+
+            <div class="arrival-info">
+
+
+                <p class="arrival-category">
+
+                    SUIT
+
+                </p>
+
+
+                <h2>
+
+                    Signature Suit Collection
+
+                </h2>
+
+
+                <p class="arrival-price">
+
+                    Enquire on WhatsApp
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARRIVAL 005 — SAREE
+        ================================================== -->
+
+        <article class="arrival-card">
+
+
+            <a href="#"
+               class="arrival-image">
+
+                <span class="arrival-badge">
+
+                    NEW
+
+                </span>
+
+
+                <button class="arrival-wishlist"
+                        type="button"
+                        aria-label="Add to wishlist"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img src="images/sarees/saree-003/sarees-03-lifestyle.webp"
+                     alt="New festive saree">
+
+            </a>
+
+
+            <div class="arrival-info">
+
+
+                <p class="arrival-category">
+
+                    SAREE
+
+                </p>
+
+
+                <h2>
+
+                    Festive Saree Collection
+
+                </h2>
+
+
+                <p class="arrival-price">
+
+                    Enquire on WhatsApp
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ARRIVAL 006 — SUIT
+        ================================================== -->
+
+        <article class="arrival-card">
+
+
+            <a href="#"
+               class="arrival-image">
+
+                <span class="arrival-badge">
+
+                    NEW
+
+                </span>
+
+
+                <button class="arrival-wishlist"
+                        type="button"
+                        aria-label="Add to wishlist"
+                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img src="images/suits/suit-003/suits-003-lifestyle.webp"
+                     alt="New festive women's suit">
+
+            </a>
+
+
+            <div class="arrival-info">
+
+
+                <p class="arrival-category">
+
+                    SUIT
+
+                </p>
+
+
+                <h2>
+
+                    Festive Suit Collection
+
+                </h2>
+
+
+                <p class="arrival-price">
+
+                    Enquire on WhatsApp
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     MASTER FOOTER
+========================================================= -->
+
+<div id="site-footer">
+
+</div>
+
+
+
+<!-- =========================================================
+     WHATSAPP FLOAT BUTTON
+========================================================= -->
+
+<a href="https://wa.me/918826196544"
+   target="_blank"
+   rel="noopener"
+   class="whatsapp-float"
+   aria-label="Chat with ShreevatsaDharwa on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =========================================================
+     SITE TOAST
+========================================================= -->
+
+<div class="site-toast"
+     id="siteToast"
+     role="status"
+     aria-live="polite">
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
