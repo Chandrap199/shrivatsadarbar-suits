@@ -12,13 +12,13 @@
           content="#4b0713">
 
     <meta name="description"
-          content="Explore elegant women's suits at ShreevatsaDharwa. Discover beautifully curated ethnic suits for celebrations, occasions and everyday elegance.">
+          content="Explore elegant women's suits at ShriVatsaDarbar. Discover beautifully curated ethnic suits for celebrations, occasions and everyday elegance.">
 
     <meta name="keywords"
           content="women's suits, ethnic suits, designer suits, Indian suits, premium suits, ladies suits online">
 
     <title>
-        Suits | ShreevatsaDharwa
+        Suits | ShriVatsaDarbar
     </title>
 
 
@@ -173,7 +173,7 @@
 
 
         /* =====================================================
-           COLLECTION FILTER BAR
+           COLLECTION TOOLBAR
         ===================================================== */
 
         .collection-toolbar {
@@ -208,38 +208,38 @@
 
         .collection-status {
 
-    display: inline-flex;
+            display: inline-flex;
 
-    align-items: center;
+            align-items: center;
 
-    gap: 8px;
+            gap: 8px;
 
-    border: 1px solid rgba(181, 138, 55, 0.25);
+            border: 1px solid rgba(181, 138, 55, 0.25);
 
-    background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.75);
 
-    padding: 11px 16px;
+            padding: 11px 16px;
 
-    font-family: "DM Sans", sans-serif;
+            font-family: "DM Sans", sans-serif;
 
-    font-size: 11px;
+            font-size: 11px;
 
-    font-weight: 500;
+            font-weight: 500;
 
-    letter-spacing: 0.5px;
+            letter-spacing: 0.5px;
 
-    color: #7d632d;
+            color: #7d632d;
 
-}
+        }
 
 
-.collection-status i {
+        .collection-status i {
 
-    font-size: 10px;
+            font-size: 10px;
 
-    color: #b58a37;
+            color: #b58a37;
 
-}
+        }
 
 
         /* =====================================================
@@ -302,6 +302,8 @@
 
             background: #ece9e5;
 
+            text-decoration: none;
+
         }
 
 
@@ -327,7 +329,9 @@
         }
 
 
-        /* BADGE */
+        /* =====================================================
+           BADGE
+        ===================================================== */
 
         .suit-badge {
 
@@ -356,7 +360,9 @@
         }
 
 
-        /* WISHLIST */
+        /* =====================================================
+           WISHLIST
+        ===================================================== */
 
         .suit-wishlist {
 
@@ -366,7 +372,7 @@
 
             right: 14px;
 
-            z-index: 2;
+            z-index: 3;
 
             width: 38px;
 
@@ -443,6 +449,34 @@
             font-size: 12px;
 
             color: #77716b;
+
+            text-decoration: none;
+
+        }
+
+
+        .suit-enquire {
+
+            display: inline-block;
+
+            margin-top: 4px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 12px;
+
+            color: #77716b;
+
+            text-decoration: none;
+
+            transition: color 0.2s ease;
+
+        }
+
+
+        .suit-enquire:hover {
+
+            color: #a47b31;
 
         }
 
@@ -537,6 +571,7 @@
 
     <div class="announcement-inner">
 
+
         <span>
 
             <i class="fa-solid fa-sparkles"></i>
@@ -589,6 +624,7 @@
 
         </a>
 
+
     </div>
 
 </div>
@@ -610,7 +646,7 @@
            class="brand">
 
             <img src="images/logos/logo-white.webp"
-                 alt="ShreevatsaDharwa logo">
+                 alt="ShriVatsaDarbar logo">
 
         </a>
 
@@ -633,6 +669,7 @@
 
         <nav class="main-navigation"
              id="mainNavigation">
+
 
             <a href="index.html">
 
@@ -682,6 +719,7 @@
                 Contact Us
 
             </a>
+
 
         </nav>
 
@@ -736,6 +774,7 @@
 
         </div>
 
+
     </div>
 
 </header>
@@ -761,6 +800,7 @@
 
     <div class="search-box">
 
+
         <span>
 
             Search our collection
@@ -775,6 +815,7 @@
 
 
         <i class="fa-solid fa-magnifying-glass"></i>
+
 
     </div>
 
@@ -839,25 +880,26 @@
          COLLECTION TOOLBAR
     ====================================================== -->
 
-    
-<div class="collection-toolbar">
+    <div class="collection-toolbar">
 
-    <div class="collection-count">
 
-        Our Suit Collection
+        <div class="collection-count">
+
+            Our Suit Collection
+
+        </div>
+
+
+        <div class="collection-status">
+
+            <i class="fa-solid fa-gem"></i>
+
+            Curated Collection
+
+        </div>
+
 
     </div>
-
-
-    <div class="collection-status">
-
-        <i class="fa-solid fa-gem"></i>
-
-        Curated Collection
-
-    </div>
-
-</div>
 
 
 
@@ -876,8 +918,11 @@
         <article class="suit-card">
 
 
-            <a href="#"
+            <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Elegant%20Suit%20Collection."
+               target="_blank"
+               rel="noopener"
                class="suit-image">
+
 
                 <span class="suit-badge">
 
@@ -889,7 +934,7 @@
                 <button class="suit-wishlist"
                         type="button"
                         aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
 
                     <i class="fa-regular fa-heart"></i>
 
@@ -897,7 +942,8 @@
 
 
                 <img src="images/suits/suit-001/suits-001-lifestyle.webp"
-                     alt="Elegant women's suit">
+                     alt="Elegant women's suit from ShriVatsaDarbar">
+
 
             </a>
 
@@ -919,14 +965,18 @@
                 </h2>
 
 
-                <p class="suit-price">
+                <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Elegant%20Suit%20Collection."
+                   target="_blank"
+                   rel="noopener"
+                   class="suit-enquire">
 
                     Enquire on WhatsApp
 
-                </p>
+                </a>
 
 
             </div>
+
 
         </article>
 
@@ -939,8 +989,11 @@
         <article class="suit-card">
 
 
-            <a href="#"
+            <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Signature%20Suit%20Collection."
+               target="_blank"
+               rel="noopener"
                class="suit-image">
+
 
                 <span class="suit-badge">
 
@@ -952,7 +1005,7 @@
                 <button class="suit-wishlist"
                         type="button"
                         aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
 
                     <i class="fa-regular fa-heart"></i>
 
@@ -960,7 +1013,8 @@
 
 
                 <img src="images/suits/suit-002/suits-002-lifestyle.webp"
-                     alt="Premium women's suit">
+                     alt="Signature women's suit from ShriVatsaDarbar">
+
 
             </a>
 
@@ -982,14 +1036,18 @@
                 </h2>
 
 
-                <p class="suit-price">
+                <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Signature%20Suit%20Collection."
+                   target="_blank"
+                   rel="noopener"
+                   class="suit-enquire">
 
                     Enquire on WhatsApp
 
-                </p>
+                </a>
 
 
             </div>
+
 
         </article>
 
@@ -1002,8 +1060,11 @@
         <article class="suit-card">
 
 
-            <a href="#"
+            <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Festive%20Suit%20Collection."
+               target="_blank"
+               rel="noopener"
                class="suit-image">
+
 
                 <span class="suit-badge">
 
@@ -1015,7 +1076,7 @@
                 <button class="suit-wishlist"
                         type="button"
                         aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
+                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
 
                     <i class="fa-regular fa-heart"></i>
 
@@ -1023,7 +1084,8 @@
 
 
                 <img src="images/suits/suit-003/suits-003-lifestyle.webp"
-                     alt="Festive women's suit">
+                     alt="Festive women's suit from ShriVatsaDarbar">
+
 
             </a>
 
@@ -1045,17 +1107,20 @@
                 </h2>
 
 
-                <p class="suit-price">
+                <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Festive%20Suit%20Collection."
+                   target="_blank"
+                   rel="noopener"
+                   class="suit-enquire">
 
                     Enquire on WhatsApp
 
-                </p>
+                </a>
 
 
             </div>
 
-        </article>
 
+        </article>
 
 
     </section>
@@ -1069,9 +1134,7 @@
      MASTER FOOTER
 ========================================================= -->
 
-<div id="site-footer">
-
-</div>
+<div id="site-footer"></div>
 
 
 
@@ -1083,7 +1146,7 @@
    target="_blank"
    rel="noopener"
    class="whatsapp-float"
-   aria-label="Chat with ShreevatsaDharwa on WhatsApp">
+   aria-label="Chat with ShriVatsaDarbar on WhatsApp">
 
     <i class="fa-brands fa-whatsapp"></i>
 
