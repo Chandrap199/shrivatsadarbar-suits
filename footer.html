@@ -1,6 +1,5 @@
 <!-- =========================================================
      SHRI VATSADARBAR – MASTER FOOTER
-     Replace the entire existing footer.html with this file
 ========================================================= -->
 
 <style>
@@ -18,6 +17,7 @@
     position: relative;
     overflow: hidden;
 }
+
 
 /* Decorative background */
 
@@ -52,6 +52,7 @@
     padding: 65px 35px 45px;
 
     display: grid;
+
     grid-template-columns:
         minmax(230px, 1.6fr)
         repeat(4, minmax(130px, 1fr))
@@ -173,9 +174,7 @@
 
 .svd-footer-column > a {
     display: block;
-
     width: fit-content;
-
     margin-bottom: 10px;
 
     font-size: 14px;
@@ -238,10 +237,6 @@
 
 .svd-footer-contact-item a:hover {
     color: #a57b31;
-}
-
-.svd-footer-contact-item span {
-    color: #655b52;
 }
 
 
@@ -341,7 +336,7 @@
 
 
 /* =========================================================
-   TABLET RESPONSIVE
+   TABLET
 ========================================================= */
 
 @media (max-width: 1200px) {
@@ -355,30 +350,23 @@
         grid-column: span 3;
     }
 
-    .svd-footer-column {
-        padding-left: 20px;
-    }
-
 }
 
 
 /* =========================================================
-   MOBILE FOOTER
+   MOBILE
 ========================================================= */
 
 @media (max-width: 768px) {
 
     .svd-footer-main {
         display: block;
-
         padding: 45px 22px 30px;
     }
 
     .svd-footer-brand {
         text-align: center;
-
         padding: 0;
-
         margin-bottom: 35px;
     }
 
@@ -402,24 +390,11 @@
     .svd-footer-column {
         border-left: none;
 
-        border-top: 1px solid rgba(181, 140, 65, 0.16);
+        border-top:
+            1px solid rgba(181, 140, 65, 0.16);
 
         padding: 22px 0;
-
         margin: 0;
-    }
-
-    .svd-footer-column h4 {
-        font-size: 17px;
-        margin-bottom: 16px;
-    }
-
-    .svd-footer-column h4::after {
-        width: 30px;
-    }
-
-    .svd-footer-contact-item {
-        font-size: 13.5px;
     }
 
     .svd-footer-divider {
@@ -442,39 +417,15 @@
 
 }
 
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 420px) {
-
-    .svd-footer-main {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .svd-footer-bottom {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .svd-footer-tagline {
-        font-size: 14px !important;
-    }
-
-}
-
 </style>
 
 
+
 <!-- =========================================================
-     FOOTER HTML
+     FOOTER
 ========================================================= -->
 
 <footer class="svd-footer">
-
-    <!-- MAIN FOOTER -->
 
     <div class="svd-footer-main">
 
@@ -483,10 +434,11 @@
 
         <div class="svd-footer-brand">
 
-            <a href="/index.html" class="svd-footer-logo">
+            <a href="{{BASE}}index.html"
+               class="svd-footer-logo">
 
                 <img
-                    src="/images/logos/logo.webp"
+                    src="{{BASE}}images/logos/logo.webp"
                     alt="ShriVatsaDarbar – Sarees and Suits"
                 >
 
@@ -498,50 +450,50 @@
             </p>
 
 
-            <!-- SOCIAL MEDIA -->
-
             <div class="svd-footer-socials">
 
-                <a
-                    href="https://www.instagram.com/shrivatsadarbar/"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Instagram"
-                >
+                <a href="https://www.instagram.com/shrivatsadarbar/"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="Instagram">
+
                     <i class="fa-brands fa-instagram"></i>
+
                 </a>
 
 
-                <a
-                    href="https://www.facebook.com/share/1b3UynPJ7a/"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Facebook"
-                >
+                <a href="https://www.facebook.com/share/1b3UynPJ7a/"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="Facebook">
+
                     <i class="fa-brands fa-facebook-f"></i>
+
                 </a>
 
 
-                <a
-                    href="#"
-                    aria-label="Pinterest"
-                >
+                <a href="#"
+                   data-coming-soon="Pinterest"
+                   aria-label="Pinterest">
+
                     <i class="fa-brands fa-pinterest-p"></i>
+
                 </a>
 
 
-                <a
-                    href="https://youtube.com/@shrivatsadarbar"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="YouTube"
-                >
+                <a href="https://youtube.com/@shrivatsadarbar"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="YouTube">
+
                     <i class="fa-brands fa-youtube"></i>
+
                 </a>
 
             </div>
 
         </div>
+
 
 
         <!-- SHOP -->
@@ -550,27 +502,24 @@
 
             <h4>Shop</h4>
 
-            <a href="/collections/collections.html?category=saree">
+            <a href="{{BASE}}sarees.html">
                 Sarees
             </a>
 
-            <a href="/collections/collections.html?category=suit">
+            <a href="{{BASE}}suits.html">
                 Suits
             </a>
 
-            <a href="/collections/collections.html">
+            <a href="{{BASE}}new-arrivals.html">
                 New Arrivals
             </a>
 
-            <a href="/collections/collections.html">
+            <a href="{{BASE}}best-sellers.html">
                 Best Sellers
             </a>
 
-            <a href="/collections/collections.html">
-                All Collections
-            </a>
-
         </div>
+
 
 
         <!-- CUSTOMER CARE -->
@@ -579,36 +528,38 @@
 
             <h4>Customer Care</h4>
 
-            <a href="/contact.html">
+            <a href="{{BASE}}contact.html">
                 Contact Us
             </a>
 
-            <a href="/faq.html">
+            <a href="{{BASE}}faq.html">
                 FAQs
             </a>
 
-            <a href="/size-guide.html">
+            <a href="{{BASE}}size-guide.html">
                 Size Guide
             </a>
 
         </div>
 
 
-        <!-- ABOUT US -->
+
+        <!-- ABOUT -->
 
         <div class="svd-footer-column">
 
             <h4>About Us</h4>
 
-            <a href="/our-story.html">
+            <a href="{{BASE}}our-story.html">
                 Our Story
             </a>
 
-            <a href="/about.html">
+            <a href="{{BASE}}about.html">
                 About Us
             </a>
 
         </div>
+
 
 
         <!-- POLICIES -->
@@ -617,31 +568,32 @@
 
             <h4>Policies</h4>
 
-            <a href="/policies/privacy-policy.html">
+            <a href="{{BASE}}policies/privacy-policy.html">
                 Privacy Policy
             </a>
 
-            <a href="/policies/shipping-policy.html">
+            <a href="{{BASE}}policies/shipping-policy.html">
                 Shipping Policy
             </a>
 
-            <a href="/policies/return-refund-policy.html">
+            <a href="{{BASE}}policies/return-refund-policy.html">
                 Return &amp; Refund Policy
             </a>
 
-            <a href="/policies/exchange-policy.html">
+            <a href="{{BASE}}policies/exchange-policy.html">
                 Exchange Policy
             </a>
 
-            <a href="/policies/cancellation-policy.html">
+            <a href="{{BASE}}policies/cancellation-policy.html">
                 Cancellation Policy
             </a>
 
-            <a href="/policies/terms-conditions.html">
+            <a href="{{BASE}}policies/terms-conditions.html">
                 Terms &amp; Conditions
             </a>
 
         </div>
+
 
 
         <!-- CONTACT -->
@@ -702,19 +654,16 @@
     </div>
 
 
-    <!-- DECORATIVE DIVIDER -->
 
     <div class="svd-footer-divider"></div>
 
 
-    <!-- BOTTOM FOOTER -->
 
     <div class="svd-footer-bottom">
 
         <p>
             © 2026 ShriVatsaDarbar. All Rights Reserved.
         </p>
-
 
         <p class="svd-footer-tagline">
             Grace in Every Thread
