@@ -12,17 +12,17 @@
           content="#4b0713">
 
     <meta name="description"
-          content="Explore elegant women's suits at ShriVatsaDarbar. Discover beautifully curated ethnic suits for celebrations, occasions and everyday elegance.">
+          content="Explore elegant women's suits at ShriVatsaDarbar. Discover a thoughtfully curated collection of premium ethnic suits for celebrations, occasions and everyday elegance.">
 
     <meta name="keywords"
-          content="women's suits, ethnic suits, designer suits, Indian suits, premium suits, ladies suits online">
+          content="women's suits, ethnic suits, Indian suits, premium suits, ladies suits, ShriVatsaDarbar">
 
-    <title>
-        Suits | ShriVatsaDarbar
-    </title>
+    <title>Suits | ShriVatsaDarbar — Premium Sarees & Suits</title>
 
 
-    <!-- GOOGLE FONTS -->
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -35,109 +35,65 @@
           rel="stylesheet">
 
 
-    <!-- FONT AWESOME -->
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <!-- MAIN CSS -->
+    <!-- =========================================================
+         MAIN SITE CSS
+    ========================================================== -->
 
     <link rel="stylesheet"
           href="styles.css">
 
 
+    <!-- =========================================================
+         SUITS PAGE STYLES
+    ========================================================== -->
+
     <style>
 
-
         /* =====================================================
-           SUITS PAGE
+           PAGE FOUNDATION
         ===================================================== */
 
-        .collection-page {
+        .suits-page {
 
             background:
                 radial-gradient(
-                    circle at top,
-                    rgba(194, 151, 72, 0.10),
-                    transparent 35%
+                    circle at top center,
+                    rgba(194, 151, 72, 0.08),
+                    transparent 34%
                 ),
-                #f8f7f4;
+                #f9f7f2;
 
             min-height: 100vh;
-
-            padding-bottom: 80px;
-
         }
 
 
         /* =====================================================
-           COLLECTION HERO
+           HERO
         ===================================================== */
 
-        .collection-hero {
+        .suits-hero {
 
             text-align: center;
 
-            padding: 90px 20px 60px;
+            padding:
+                92px 20px
+                68px;
 
+            border-bottom:
+                1px solid
+                rgba(181, 138, 55, 0.12);
         }
 
 
-        .collection-eyebrow {
-
-            font-family: "DM Sans", sans-serif;
-
-            font-size: 10px;
-
-            font-weight: 600;
-
-            letter-spacing: 4px;
-
-            color: #9b762e;
-
-            margin-bottom: 18px;
-
-        }
-
-
-        .collection-hero h1 {
-
-            font-family: "Cormorant Garamond", serif;
-
-            font-size: clamp(42px, 6vw, 70px);
-
-            font-weight: 500;
-
-            color: #2d2926;
-
-            margin-bottom: 18px;
-
-        }
-
-
-        .collection-description {
-
-            max-width: 650px;
-
-            margin: auto;
-
-            font-family: "DM Sans", sans-serif;
-
-            font-size: 14px;
-
-            line-height: 1.9;
-
-            color: #6d6863;
-
-        }
-
-
-        /* =====================================================
-           COLLECTION ORNAMENT
-        ===================================================== */
-
-        .collection-ornament {
+        .suits-eyebrow {
 
             display: flex;
 
@@ -147,216 +103,435 @@
 
             gap: 12px;
 
-            margin: 25px auto;
+            margin-bottom: 20px;
 
-        }
-
-
-        .collection-ornament span {
-
-            width: 45px;
-
-            height: 1px;
-
-            background: #c5a15a;
-
-        }
-
-
-        .collection-ornament i {
-
-            font-size: 8px;
-
-            color: #b58a37;
-
-        }
-
-
-        /* =====================================================
-           COLLECTION TOOLBAR
-        ===================================================== */
-
-        .collection-toolbar {
-
-            max-width: 1250px;
-
-            margin: 0 auto 40px;
-
-            padding: 0 25px;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 20px;
-
-        }
-
-
-        .collection-count {
-
-            font-family: "DM Sans", sans-serif;
-
-            font-size: 13px;
-
-            color: #77716b;
-
-        }
-
-
-        .collection-status {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 8px;
-
-            border: 1px solid rgba(181, 138, 55, 0.25);
-
-            background: rgba(255, 255, 255, 0.75);
-
-            padding: 11px 16px;
-
-            font-family: "DM Sans", sans-serif;
-
-            font-size: 11px;
-
-            font-weight: 500;
-
-            letter-spacing: 0.5px;
-
-            color: #7d632d;
-
-        }
-
-
-        .collection-status i {
+            font-family:
+                "DM Sans",
+                sans-serif;
 
             font-size: 10px;
 
-            color: #b58a37;
+            font-weight: 600;
 
+            letter-spacing: 4px;
+
+            color: #9b762e;
+
+            text-transform: uppercase;
+        }
+
+
+        .suits-eyebrow::before,
+        .suits-eyebrow::after {
+
+            content: "";
+
+            width: 42px;
+
+            height: 1px;
+
+            background:
+                #c5a15a;
+        }
+
+
+        .suits-hero h1 {
+
+            max-width: 760px;
+
+            margin:
+                0 auto 20px;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(
+                    46px,
+                    7vw,
+                    76px
+                );
+
+            line-height: 0.98;
+
+            font-weight: 500;
+
+            color: #302a27;
+        }
+
+
+        .suits-hero h1 span {
+
+            color: #9b762e;
+        }
+
+
+        .suits-hero-description {
+
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            color: #716b65;
         }
 
 
         /* =====================================================
-           SUITS GRID
+           INTRODUCTION
+        ===================================================== */
+
+        .suits-intro {
+
+            max-width: 1050px;
+
+            margin: 0 auto;
+
+            padding:
+                78px 25px
+                62px;
+
+            text-align: center;
+        }
+
+
+        .suits-section-eyebrow {
+
+            margin-bottom: 14px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            color: #a07b37;
+
+            text-transform: uppercase;
+        }
+
+
+        .suits-intro h2 {
+
+            margin:
+                0 auto 20px;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(
+                    38px,
+                    5vw,
+                    54px
+                );
+
+            line-height: 1.05;
+
+            font-weight: 500;
+
+            color: #4b0713;
+        }
+
+
+        .suits-intro p {
+
+            max-width: 760px;
+
+            margin: 0 auto;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 13px;
+
+            line-height: 1.95;
+
+            color: #716b65;
+        }
+
+
+        .suits-ornament {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            margin-top: 26px;
+        }
+
+
+        .suits-ornament span {
+
+            width: 42px;
+
+            height: 1px;
+
+            background: #c9ab69;
+        }
+
+
+        .suits-ornament i {
+
+            font-size: 7px;
+
+            color: #b18a40;
+        }
+
+
+        /* =====================================================
+           COLLECTION HEADER
+        ===================================================== */
+
+        .suits-collection-header {
+
+            max-width: 1280px;
+
+            margin: 0 auto;
+
+            padding:
+                0 24px
+                32px;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+
+        .suits-collection-heading {
+
+            text-align: left;
+        }
+
+
+        .suits-collection-heading h2 {
+
+            margin: 0;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(
+                    34px,
+                    4vw,
+                    48px
+                );
+
+            font-weight: 500;
+
+            color: #302a27;
+        }
+
+
+        .suits-count {
+
+            margin-top: 5px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #9a8a74;
+        }
+
+
+        .suits-collection-note {
+
+            padding:
+                10px 15px;
+
+            border:
+                1px solid
+                rgba(181, 138, 55, 0.24);
+
+            background:
+                rgba(255,255,255,0.68);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 0.7px;
+
+            color: #80652f;
+
+            white-space: nowrap;
+        }
+
+
+        .suits-collection-note i {
+
+            margin-right: 6px;
+
+            color: #b18a40;
+        }
+
+
+        /* =====================================================
+           PRODUCTS GRID
         ===================================================== */
 
         .suits-grid {
 
-            max-width: 1250px;
+            max-width: 1280px;
 
-            margin: auto;
+            margin: 0 auto;
 
-            padding: 0 25px;
+            padding:
+                0 24px
+                82px;
 
             display: grid;
 
             grid-template-columns:
-                repeat(3, minmax(0, 1fr));
+                repeat(
+                    3,
+                    minmax(0, 1fr)
+                );
 
             gap: 28px;
-
         }
 
 
         /* =====================================================
-           SUIT CARD
+           PRODUCT CARD
         ===================================================== */
 
         .suit-card {
 
+            position: relative;
+
             background: #ffffff;
+
+            border:
+                1px solid
+                rgba(65, 35, 20, 0.08);
 
             transition:
                 transform 0.35s ease,
                 box-shadow 0.35s ease;
-
         }
 
 
         .suit-card:hover {
 
-            transform: translateY(-6px);
+            transform:
+                translateY(-5px);
 
             box-shadow:
-                0 18px 45px
-                rgba(0, 0, 0, 0.10);
-
+                0 18px 42px
+                rgba(52, 30, 18, 0.09);
         }
 
 
-        .suit-image {
+        /* =====================================================
+           IMAGE AREA
+        ===================================================== */
+
+        .suit-image-link {
 
             position: relative;
+
+            display: block;
 
             overflow: hidden;
 
             aspect-ratio: 0.78;
 
-            display: block;
-
-            background: #ece9e5;
+            background: #eee9e2;
 
             text-decoration: none;
-
         }
 
 
-        .suit-image img {
+        .suit-image-link img {
 
             width: 100%;
 
             height: 100%;
 
-            object-fit: cover;
-
             display: block;
 
-            transition: transform 0.6s ease;
+            object-fit: cover;
 
+            transition:
+                transform 0.65s ease;
         }
 
 
-        .suit-card:hover .suit-image img {
+        .suit-card:hover
+        .suit-image-link img {
 
-            transform: scale(1.05);
-
+            transform:
+                scale(1.035);
         }
 
 
         /* =====================================================
-           BADGE
+           NEW BADGE
         ===================================================== */
 
         .suit-badge {
 
             position: absolute;
 
-            top: 15px;
+            top: 14px;
 
-            left: 15px;
+            left: 14px;
 
             z-index: 2;
+
+            padding:
+                7px 10px;
 
             background: #4b0713;
 
             color: #ffffff;
 
-            font-family: "DM Sans", sans-serif;
+            font-family:
+                "DM Sans",
+                sans-serif;
 
-            font-size: 9px;
+            font-size: 8px;
 
             font-weight: 600;
 
-            letter-spacing: 1px;
+            letter-spacing: 1.4px;
 
-            padding: 8px 11px;
-
+            text-transform: uppercase;
         }
 
 
@@ -368,9 +543,9 @@
 
             position: absolute;
 
-            top: 14px;
+            top: 12px;
 
-            right: 14px;
+            right: 12px;
 
             z-index: 3;
 
@@ -378,15 +553,16 @@
 
             height: 38px;
 
-            border: none;
+            border:
+                1px solid
+                rgba(75, 7, 19, 0.10);
 
             border-radius: 50%;
 
-            background: rgba(255, 255, 255, 0.95);
+            background:
+                rgba(255,255,255,0.96);
 
             color: #4b0713;
-
-            cursor: pointer;
 
             display: flex;
 
@@ -394,6 +570,19 @@
 
             justify-content: center;
 
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease;
+        }
+
+
+        .suit-wishlist:hover {
+
+            background: #4b0713;
+
+            color: #ffffff;
         }
 
 
@@ -403,81 +592,661 @@
 
         .suit-info {
 
-            padding: 20px;
+            padding:
+                22px 18px
+                24px;
 
             text-align: center;
-
         }
 
 
         .suit-category {
 
-            font-family: "DM Sans", sans-serif;
+            margin:
+                0 0 8px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 8px;
+
+            font-weight: 600;
+
+            letter-spacing: 2.5px;
+
+            color: #a27d3b;
+
+            text-transform: uppercase;
+        }
+
+
+        .suit-info h3 {
+
+            margin:
+                0 0 9px;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 26px;
+
+            line-height: 1.05;
+
+            font-weight: 600;
+
+            color: #332c28;
+        }
+
+
+        .suit-description {
+
+            min-height: 43px;
+
+            margin:
+                0 auto 17px;
+
+            max-width: 310px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 11px;
+
+            line-height: 1.65;
+
+            color: #77716c;
+        }
+
+
+        .suit-code {
+
+            margin:
+                0 0 16px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 8px;
+
+            letter-spacing: 1.2px;
+
+            color: #aaa19a;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           ACTIONS
+        ===================================================== */
+
+        .suit-actions {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 8px;
+        }
+
+
+        .suit-view-button,
+        .suit-add-button {
+
+            min-height: 42px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            padding:
+                9px 10px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
 
             font-size: 9px;
 
             font-weight: 600;
 
-            letter-spacing: 2px;
+            letter-spacing: 0.6px;
 
-            color: #a47b31;
+            text-transform: uppercase;
 
-            margin-bottom: 9px;
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+
+        .suit-view-button {
+
+            border:
+                1px solid
+                #ded6ca;
+
+            background: #ffffff;
+
+            color: #5f5852;
+        }
+
+
+        .suit-view-button:hover {
+
+            border-color: #4b0713;
+
+            color: #4b0713;
+        }
+
+
+        .suit-add-button {
+
+            border:
+                1px solid
+                #4b0713;
+
+            background: #4b0713;
+
+            color: #ffffff;
+        }
+
+
+        .suit-add-button:hover {
+
+            background: #68101e;
+
+            border-color: #68101e;
+        }
+
+
+        .suit-add-button.added {
+
+            background: #80652f;
+
+            border-color: #80652f;
+        }
+
+
+        /* =====================================================
+           BOTTOM MESSAGE
+        ===================================================== */
+
+        .suits-bottom {
+
+            padding:
+                0 20px
+                80px;
+
+            text-align: center;
+        }
+
+
+        .suits-bottom p {
+
+            margin: 0;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 21px;
+
+            font-style: italic;
+
+            color: #8b8177;
+        }
+
+
+        /* =====================================================
+           CART DRAWER
+        ===================================================== */
+
+        .suits-cart-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9998;
+
+            background:
+                rgba(25, 15, 12, 0.42);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition:
+                opacity 0.25s ease,
+                visibility 0.25s ease;
+        }
+
+
+        .suits-cart-overlay.active {
+
+            opacity: 1;
+
+            visibility: visible;
+        }
+
+
+        .suits-cart-drawer {
+
+            position: fixed;
+
+            top: 0;
+
+            right: 0;
+
+            z-index: 9999;
+
+            width:
+                min(
+                    430px,
+                    100%
+                );
+
+            height: 100vh;
+
+            background: #fbf8f2;
+
+            box-shadow:
+                -12px 0 40px
+                rgba(0,0,0,0.14);
+
+            transform:
+                translateX(100%);
+
+            transition:
+                transform 0.3s ease;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        .suits-cart-drawer.active {
+
+            transform:
+                translateX(0);
+        }
+
+
+        .suits-cart-header {
+
+            padding:
+                22px 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            border-bottom:
+                1px solid
+                #e7dfd2;
+        }
+
+
+        .suits-cart-header h2 {
+
+            margin: 0;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 30px;
+
+            font-weight: 500;
+
+            color: #4b0713;
+        }
+
+
+        .suits-cart-close {
+
+            width: 36px;
+
+            height: 36px;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #4b0713;
+
+            font-size: 18px;
+
+            cursor: pointer;
+        }
+
+
+        .suits-cart-items {
+
+            flex: 1;
+
+            overflow-y: auto;
+
+            padding: 18px;
+        }
+
+
+        .suits-cart-empty {
+
+            min-height: 55vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: #82786e;
+        }
+
+
+        .suits-cart-empty i {
+
+            margin-bottom: 14px;
+
+            font-size: 28px;
+
+            color: #b18a40;
+        }
+
+
+        .suits-cart-empty h3 {
+
+            margin:
+                0 0 7px;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 25px;
+
+            font-weight: 500;
+
+            color: #4b0713;
+        }
+
+
+        .suits-cart-empty p {
+
+            margin: 0;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 11px;
 
         }
 
 
-        .suit-info h2 {
+        .suits-cart-item {
 
-            font-family: "Cormorant Garamond", serif;
+            display: grid;
 
-            font-size: 24px;
+            grid-template-columns:
+                72px 1fr auto;
+
+            gap: 12px;
+
+            padding:
+                12px 0;
+
+            border-bottom:
+                1px solid
+                #e9e1d5;
+        }
+
+
+        .suits-cart-item-image {
+
+            width: 72px;
+
+            height: 92px;
+
+            overflow: hidden;
+
+            background: #eee8df;
+        }
+
+
+        .suits-cart-item-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .suits-cart-item-info {
+
+            min-width: 0;
+        }
+
+
+        .suits-cart-item-category {
+
+            margin:
+                0 0 3px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 8px;
+
+            letter-spacing: 1.5px;
+
+            color: #a17d3b;
+
+            text-transform: uppercase;
+        }
+
+
+        .suits-cart-item-name {
+
+            margin:
+                0 0 5px;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 19px;
+
+            line-height: 1.1;
+
+            color: #3b302b;
+        }
+
+
+        .suits-cart-item-code {
+
+            margin:
+                0 0 10px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 8px;
+
+            color: #999089;
+        }
+
+
+        .suits-cart-quantity {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            border:
+                1px solid
+                #dcd2c3;
+        }
+
+
+        .suits-cart-quantity button {
+
+            width: 27px;
+
+            height: 27px;
+
+            border: 0;
+
+            background: #ffffff;
+
+            color: #4b0713;
+
+            cursor: pointer;
+        }
+
+
+        .suits-cart-quantity span {
+
+            min-width: 28px;
+
+            text-align: center;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
+
+            color: #4b0713;
+        }
+
+
+        .suits-cart-remove {
+
+            align-self: start;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #9a8f86;
+
+            cursor: pointer;
+
+            padding: 5px;
+        }
+
+
+        .suits-cart-footer {
+
+            padding:
+                18px;
+
+            border-top:
+                1px solid
+                #e4dbce;
+
+            background:
+                #f7f2e9;
+        }
+
+
+        .suits-cart-note {
+
+            margin:
+                0 0 14px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
+
+            line-height: 1.6;
+
+            color: #81766d;
+
+        }
+
+
+        .suits-cart-whatsapp {
+
+            width: 100%;
+
+            min-height: 45px;
+
+            border: 0;
+
+            background: #4b0713;
+
+            color: #ffffff;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
 
             font-weight: 600;
 
-            color: #2f2a26;
+            letter-spacing: 0.7px;
 
-            margin-bottom: 10px;
+            text-transform: uppercase;
 
+            cursor: pointer;
         }
 
 
-        .suit-price {
+        .suits-cart-clear {
 
-            font-family: "DM Sans", sans-serif;
+            width: 100%;
 
-            font-size: 12px;
+            margin-top: 8px;
 
-            color: #77716b;
+            min-height: 38px;
 
-            text-decoration: none;
+            border:
+                1px solid
+                #d9cfc0;
 
-        }
+            background: transparent;
 
+            color: #766d65;
 
-        .suit-enquire {
+            font-family:
+                "DM Sans",
+                sans-serif;
 
-            display: inline-block;
+            font-size: 9px;
 
-            margin-top: 4px;
-
-            font-family: "DM Sans", sans-serif;
-
-            font-size: 12px;
-
-            color: #77716b;
-
-            text-decoration: none;
-
-            transition: color 0.2s ease;
-
-        }
-
-
-        .suit-enquire:hover {
-
-            color: #a47b31;
-
+            cursor: pointer;
         }
 
 
@@ -485,79 +1254,241 @@
            RESPONSIVE
         ===================================================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
 
             .suits-grid {
 
                 grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
+                    repeat(
+                        2,
+                        minmax(0, 1fr)
+                    );
 
                 gap: 18px;
-
             }
-
         }
 
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
 
-            .collection-hero {
+            .suits-hero {
 
                 padding:
-                    65px 20px
-                    40px;
-
+                    66px 18px
+                    52px;
             }
 
 
-            .collection-toolbar {
+            .suits-hero h1 {
 
-                padding: 0 18px;
+                font-size:
+                    clamp(
+                        43px,
+                        12vw,
+                        60px
+                    );
+            }
 
+
+            .suits-hero-description {
+
+                font-size: 12px;
+
+                line-height: 1.8;
+            }
+
+
+            .suits-intro {
+
+                padding:
+                    58px 18px
+                    48px;
+            }
+
+
+            .suits-intro h2 {
+
+                font-size:
+                    clamp(
+                        34px,
+                        10vw,
+                        46px
+                    );
+            }
+
+
+            .suits-collection-header {
+
+                padding:
+                    0 16px
+                    25px;
+
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+
+            .suits-collection-note {
+
+                white-space: normal;
             }
 
 
             .suits-grid {
 
-                padding: 0 12px;
+                padding:
+                    0 12px
+                    55px;
 
                 grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
+                    repeat(
+                        2,
+                        minmax(0, 1fr)
+                    );
 
                 gap: 12px;
-
             }
 
 
-            .suit-info {
+            .suit-image-link {
 
-                padding: 14px 8px 18px;
-
+                aspect-ratio: 0.72;
             }
 
 
-            .suit-info h2 {
+            .suit-badge {
 
-                font-size: 20px;
+                top: 9px;
 
+                left: 9px;
+
+                padding:
+                    6px 8px;
+
+                font-size: 7px;
             }
 
 
             .suit-wishlist {
 
-                width: 34px;
+                top: 8px;
 
-                height: 34px;
+                right: 8px;
 
+                width: 32px;
+
+                height: 32px;
+
+                font-size: 12px;
+            }
+
+
+            .suit-info {
+
+                padding:
+                    15px 8px
+                    17px;
+            }
+
+
+            .suit-info h3 {
+
+                font-size: 20px;
+            }
+
+
+            .suit-description {
+
+                min-height: 50px;
+
+                font-size: 9px;
+
+                line-height: 1.55;
+            }
+
+
+            .suit-code {
+
+                font-size: 7px;
+
+                letter-spacing: 0.8px;
+            }
+
+
+            .suit-actions {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .suit-view-button,
+            .suit-add-button {
+
+                min-height: 38px;
+
+                font-size: 8px;
+            }
+
+
+            .suits-bottom {
+
+                padding:
+                    0 18px
+                    60px;
+            }
+
+
+            .suits-bottom p {
+
+                font-size: 18px;
             }
 
         }
 
 
+        @media (max-width: 420px) {
+
+            .suits-grid {
+
+                gap: 9px;
+
+                padding-left: 9px;
+
+                padding-right: 9px;
+            }
+
+
+            .suit-info h3 {
+
+                font-size: 18px;
+            }
+
+
+            .suit-description {
+
+                font-size: 8px;
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .suit-card,
+            .suit-image-link img,
+            .suits-cart-overlay,
+            .suits-cart-drawer {
+
+                transition: none;
+            }
+
+        }
+
     </style>
 
 </head>
-
 
 
 <body>
@@ -565,53 +1496,31 @@
 
 <!-- =========================================================
      ANNOUNCEMENT BAR
-========================================================= -->
+========================================================== -->
 
 <div class="announcement-bar">
 
     <div class="announcement-inner">
 
-
         <span>
-
-            <i class="fa-solid fa-sparkles"></i>
-
-            FREE SHIPPING on Prepaid Orders
-
+            Premium Ethnic Wear
         </span>
-
 
         <span class="announcement-divider">
-
             |
-
         </span>
-
 
         <span>
-
-            <i class="fa-solid fa-sparkles"></i>
-
-            Premium Quality Fabrics
-
+            Curated With Care
         </span>
-
 
         <span class="announcement-divider">
-
             |
-
         </span>
-
 
         <span>
-
-            <i class="fa-solid fa-sparkles"></i>
-
-            Easy Returns & Exchanges
-
+            Order Directly on WhatsApp
         </span>
-
 
         <a href="https://wa.me/918826196544"
            target="_blank"
@@ -624,23 +1533,19 @@
 
         </a>
 
-
     </div>
 
 </div>
 
 
-
 <!-- =========================================================
      HEADER
-========================================================= -->
+========================================================== -->
 
 <header class="site-header">
 
     <div class="header-container">
 
-
-        <!-- LOGO -->
 
         <a href="index.html"
            class="brand">
@@ -651,11 +1556,9 @@
         </a>
 
 
-
-        <!-- MOBILE MENU -->
-
         <button class="mobile-menu-button"
                 id="mobileMenuButton"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false">
 
@@ -664,74 +1567,48 @@
         </button>
 
 
-
-        <!-- NAVIGATION -->
-
         <nav class="main-navigation"
-             id="mainNavigation">
-
+             id="mainNavigation"
+             aria-label="Main Navigation">
 
             <a href="index.html">
-
                 Home
-
             </a>
-
 
             <a href="sarees.html">
-
                 Sarees
-
             </a>
-
 
             <a href="suits.html"
                class="active">
-
                 Suits
-
             </a>
-
 
             <a href="new-arrivals.html">
-
                 New Arrivals
-
             </a>
-
 
             <a href="best-sellers.html">
-
                 Best Sellers
-
             </a>
-
 
             <a href="about.html">
-
                 About Us
-
             </a>
-
 
             <a href="contact.html">
-
                 Contact Us
-
             </a>
-
 
         </nav>
 
-
-
-        <!-- HEADER ACTIONS -->
 
         <div class="header-actions">
 
 
             <button class="icon-button"
                     id="searchButton"
+                    type="button"
                     aria-label="Search">
 
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -740,6 +1617,7 @@
 
 
             <button class="icon-button"
+                    type="button"
                     aria-label="Wishlist"
                     onclick="showComingSoon('Wishlist')">
 
@@ -749,6 +1627,7 @@
 
 
             <button class="icon-button"
+                    type="button"
                     aria-label="Account"
                     onclick="showComingSoon('Account')">
 
@@ -758,15 +1637,15 @@
 
 
             <button class="icon-button bag-button"
-                    aria-label="Shopping bag"
-                    onclick="showComingSoon('Shopping Bag')">
+                    id="shoppingBagButton"
+                    type="button"
+                    aria-label="Open shopping bag">
 
                 <i class="fa-solid fa-bag-shopping"></i>
 
-                <span class="bag-count">
-
+                <span class="bag-count"
+                      id="bagCount">
                     0
-
                 </span>
 
             </button>
@@ -774,23 +1653,21 @@
 
         </div>
 
-
     </div>
 
 </header>
 
 
-
 <!-- =========================================================
      SEARCH OVERLAY
-========================================================= -->
+========================================================== -->
 
 <div class="search-overlay"
      id="searchOverlay">
 
-
     <button class="search-close"
             id="searchClose"
+            type="button"
             aria-label="Close search">
 
         <i class="fa-solid fa-xmark"></i>
@@ -800,59 +1677,75 @@
 
     <div class="search-box">
 
-
         <span>
-
             Search our collection
-
         </span>
-
 
         <input type="search"
                id="siteSearch"
                placeholder="Search sarees, suits..."
                autocomplete="off">
 
-
         <i class="fa-solid fa-magnifying-glass"></i>
-
 
     </div>
 
 </div>
 
 
-
 <!-- =========================================================
-     MAIN CONTENT
-========================================================= -->
+     MAIN
+========================================================== -->
 
-<main class="collection-page">
-
+<main class="suits-page">
 
 
     <!-- =====================================================
-         COLLECTION HERO
+         HERO
     ====================================================== -->
 
-    <section class="collection-hero">
+    <section class="suits-hero">
 
-
-        <p class="collection-eyebrow">
-
-            EXPLORE THE COLLECTION
-
+        <p class="suits-eyebrow">
+            The ShriVatsa Collection
         </p>
 
-
         <h1>
-
-            Find Your Perfect Suit
-
+            Suits That Feel
+            <span>Effortless.</span>
         </h1>
 
+        <p class="suits-hero-description">
+            Discover a thoughtfully curated collection of elegant
+            suits selected for comfort, confidence and timeless
+            Indian style.
+        </p>
 
-        <div class="collection-ornament">
+    </section>
+
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <section class="suits-intro">
+
+        <p class="suits-section-eyebrow">
+            Grace in Every Layer
+        </p>
+
+        <h2>
+            Designed for Beautiful Moments
+        </h2>
+
+        <p>
+            From graceful everyday styles to pieces made for
+            celebrations, each suit is selected with an eye for
+            fabric, detail, comfort and the feeling it creates
+            when you wear it.
+        </p>
+
+        <div class="suits-ornament">
 
             <span></span>
 
@@ -862,266 +1755,64 @@
 
         </div>
 
+    </section>
 
-        <p class="collection-description">
 
-            Explore our growing collection and discover elegant
-            suits selected to bring confidence, comfort and
-            timeless beauty to every occasion.
+    <!-- =====================================================
+         COLLECTION HEADING
+    ====================================================== -->
 
-        </p>
+    <section class="suits-collection-header">
 
+        <div class="suits-collection-heading">
+
+            <p class="suits-section-eyebrow">
+                Explore the Edit
+            </p>
+
+            <h2>
+                The Suit Collection
+            </h2>
+
+            <p class="suits-count"
+               id="suitsCount">
+                Curated pieces
+            </p>
+
+        </div>
+
+
+        <div class="suits-collection-note">
+
+            <i class="fa-solid fa-gem"></i>
+
+            Thoughtfully Curated
+
+        </div>
 
     </section>
 
 
-
     <!-- =====================================================
-         COLLECTION TOOLBAR
+         PRODUCT GRID
     ====================================================== -->
 
-    <div class="collection-toolbar">
+    <section class="suits-grid"
+             id="suitsGrid"
+             aria-label="Suit collection">
 
-
-        <div class="collection-count">
-
-            Our Suit Collection
-
-        </div>
-
-
-        <div class="collection-status">
-
-            <i class="fa-solid fa-gem"></i>
-
-            Curated Collection
-
-        </div>
-
-
-    </div>
-
+    </section>
 
 
     <!-- =====================================================
-         SUITS GRID
+         BOTTOM MESSAGE
     ====================================================== -->
 
-    <section class="suits-grid">
-
-
-
-        <!-- =================================================
-             SUIT 001
-        ================================================== -->
-
-        <article class="suit-card">
-
-
-            <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Elegant%20Suit%20Collection."
-               target="_blank"
-               rel="noopener"
-               class="suit-image">
-
-
-                <span class="suit-badge">
-
-                    NEW
-
-                </span>
-
-
-                <button class="suit-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/suits/suit-001/suits-001-lifestyle.webp"
-                     alt="Elegant women's suit from ShriVatsaDarbar">
-
-
-            </a>
-
-
-            <div class="suit-info">
-
-
-                <p class="suit-category">
-
-                    SUIT
-
-                </p>
-
-
-                <h2>
-
-                    Elegant Suit Collection
-
-                </h2>
-
-
-                <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Elegant%20Suit%20Collection."
-                   target="_blank"
-                   rel="noopener"
-                   class="suit-enquire">
-
-                    Enquire on WhatsApp
-
-                </a>
-
-
-            </div>
-
-
-        </article>
-
-
-
-        <!-- =================================================
-             SUIT 002
-        ================================================== -->
-
-        <article class="suit-card">
-
-
-            <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Signature%20Suit%20Collection."
-               target="_blank"
-               rel="noopener"
-               class="suit-image">
-
-
-                <span class="suit-badge">
-
-                    NEW
-
-                </span>
-
-
-                <button class="suit-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/suits/suit-002/suits-002-lifestyle.webp"
-                     alt="Signature women's suit from ShriVatsaDarbar">
-
-
-            </a>
-
-
-            <div class="suit-info">
-
-
-                <p class="suit-category">
-
-                    SUIT
-
-                </p>
-
-
-                <h2>
-
-                    Signature Suit Collection
-
-                </h2>
-
-
-                <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Signature%20Suit%20Collection."
-                   target="_blank"
-                   rel="noopener"
-                   class="suit-enquire">
-
-                    Enquire on WhatsApp
-
-                </a>
-
-
-            </div>
-
-
-        </article>
-
-
-
-        <!-- =================================================
-             SUIT 003
-        ================================================== -->
-
-        <article class="suit-card">
-
-
-            <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Festive%20Suit%20Collection."
-               target="_blank"
-               rel="noopener"
-               class="suit-image">
-
-
-                <span class="suit-badge">
-
-                    NEW
-
-                </span>
-
-
-                <button class="suit-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); event.stopPropagation(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/suits/suit-003/suits-003-lifestyle.webp"
-                     alt="Festive women's suit from ShriVatsaDarbar">
-
-
-            </a>
-
-
-            <div class="suit-info">
-
-
-                <p class="suit-category">
-
-                    SUIT
-
-                </p>
-
-
-                <h2>
-
-                    Festive Suit Collection
-
-                </h2>
-
-
-                <a href="https://wa.me/918826196544?text=Hello%20ShriVatsaDarbar%2C%20I%20would%20like%20to%20enquire%20about%20the%20Festive%20Suit%20Collection."
-                   target="_blank"
-                   rel="noopener"
-                   class="suit-enquire">
-
-                    Enquire on WhatsApp
-
-                </a>
-
-
-            </div>
-
-
-        </article>
-
+    <section class="suits-bottom">
+
+        <p>
+            More beautiful pieces are being added to our collection.
+        </p>
 
     </section>
 
@@ -1129,18 +1820,91 @@
 </main>
 
 
+<!-- =========================================================
+     CART OVERLAY
+========================================================== -->
+
+<div class="suits-cart-overlay"
+     id="cartOverlay">
+</div>
+
+
+<!-- =========================================================
+     CART DRAWER
+========================================================== -->
+
+<aside class="suits-cart-drawer"
+       id="cartDrawer"
+       aria-label="Shopping bag">
+
+
+    <div class="suits-cart-header">
+
+        <h2>
+            Your Collection
+        </h2>
+
+        <button class="suits-cart-close"
+                id="cartClose"
+                type="button"
+                aria-label="Close shopping bag">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="suits-cart-items"
+         id="cartItems">
+    </div>
+
+
+    <div class="suits-cart-footer">
+
+        <p class="suits-cart-note">
+
+            Prices and final availability will be confirmed
+            with you on WhatsApp.
+
+        </p>
+
+
+        <button class="suits-cart-whatsapp"
+                id="cartWhatsappButton"
+                type="button">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Enquire on WhatsApp
+
+        </button>
+
+
+        <button class="suits-cart-clear"
+                id="cartClearButton"
+                type="button">
+
+            Clear Bag
+
+        </button>
+
+    </div>
+
+</aside>
+
 
 <!-- =========================================================
      MASTER FOOTER
-========================================================= -->
+========================================================== -->
 
 <div id="site-footer"></div>
 
 
-
 <!-- =========================================================
-     WHATSAPP FLOAT BUTTON
-========================================================= -->
+     WHATSAPP FLOAT
+========================================================== -->
 
 <a href="https://wa.me/918826196544"
    target="_blank"
@@ -1153,23 +1917,1056 @@
 </a>
 
 
-
 <!-- =========================================================
-     SITE TOAST
-========================================================= -->
+     TOAST
+========================================================== -->
 
 <div class="site-toast"
      id="siteToast"
      role="status"
      aria-live="polite">
-
 </div>
 
 
+<!-- =========================================================
+     PRODUCT DATABASE
+========================================================== -->
+
+<script src="products.js"></script>
+
 
 <!-- =========================================================
-     MAIN JAVASCRIPT
-========================================================= -->
+     SUITS PAGE CONTROLLER
+========================================================== -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* =====================================================
+       ELEMENTS
+    ====================================================== */
+
+    const grid =
+        document.getElementById("suitsGrid");
+
+    const count =
+        document.getElementById("suitsCount");
+
+    const bagCount =
+        document.getElementById("bagCount");
+
+    const cartDrawer =
+        document.getElementById("cartDrawer");
+
+    const cartOverlay =
+        document.getElementById("cartOverlay");
+
+    const cartClose =
+        document.getElementById("cartClose");
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const cartWhatsappButton =
+        document.getElementById("cartWhatsappButton");
+
+    const cartClearButton =
+        document.getElementById("cartClearButton");
+
+    const shoppingBagButton =
+        document.getElementById("shoppingBagButton");
+
+
+    /* =====================================================
+       CONSTANTS
+    ====================================================== */
+
+    const CART_KEY =
+        "shrivatsaDarbarFashionCart";
+
+    const WHATSAPP_NUMBER =
+        "918826196544";
+
+
+    /* =====================================================
+       CART
+    ====================================================== */
+
+    let cart = [];
+
+
+    try {
+
+        cart =
+            JSON.parse(
+                localStorage.getItem(
+                    CART_KEY
+                )
+            ) || [];
+
+    } catch (error) {
+
+        cart = [];
+
+    }
+
+
+    /* =====================================================
+       ESCAPE HTML
+    ====================================================== */
+
+    function escapeHtml(value) {
+
+        return String(value || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* =====================================================
+       SAVE CART
+    ====================================================== */
+
+    function saveCart() {
+
+        localStorage.setItem(
+            CART_KEY,
+            JSON.stringify(cart)
+        );
+
+    }
+
+
+    /* =====================================================
+       CART COUNT
+    ====================================================== */
+
+    function updateCartCount() {
+
+        const total =
+            cart.reduce(
+                function (sum, item) {
+
+                    return sum +
+                        Number(
+                            item.quantity || 0
+                        );
+
+                },
+                0
+            );
+
+
+        if (bagCount) {
+
+            bagCount.textContent =
+                total > 99
+                    ? "99+"
+                    : total;
+
+        }
+
+    }
+
+
+    /* =====================================================
+       TOAST
+    ====================================================== */
+
+    function toast(message) {
+
+        if (
+            typeof window.showToast ===
+            "function"
+        ) {
+
+            window.showToast(message);
+
+        }
+
+    }
+
+
+    /* =====================================================
+       ADD TO CART
+    ====================================================== */
+
+    function addToCart(productId, button) {
+
+        const product =
+            window.getSVDProduct
+                ? window.getSVDProduct(productId)
+                : null;
+
+
+        if (!product) {
+
+            return;
+
+        }
+
+
+        const existing =
+            cart.find(
+                function (item) {
+
+                    return item.id ===
+                        productId;
+
+                }
+            );
+
+
+        if (existing) {
+
+            existing.quantity += 1;
+
+        } else {
+
+            cart.push({
+
+                id:
+                    productId,
+
+                title:
+                    product.title,
+
+                code:
+                    product.code,
+
+                category:
+                    product.category,
+
+                image:
+                    product.images[0],
+
+                quantity:
+                    1
+
+            });
+
+        }
+
+
+        saveCart();
+
+        updateCartCount();
+
+        renderCart();
+
+
+        if (button) {
+
+            button.classList.add("added");
+
+            button.innerHTML =
+                '<i class="fa-solid fa-check"></i> Added';
+
+
+            setTimeout(
+                function () {
+
+                    button.classList.remove("added");
+
+                    button.innerHTML =
+                        '<i class="fa-solid fa-bag-shopping"></i> Add to Bag';
+
+                },
+                1500
+            );
+
+        }
+
+
+        toast(
+            product.title +
+            " added to your bag"
+        );
+
+    }
+
+
+    /* =====================================================
+       RENDER CART
+    ====================================================== */
+
+    function renderCart() {
+
+        updateCartCount();
+
+
+        if (!cartItems) {
+
+            return;
+
+        }
+
+
+        if (!cart.length) {
+
+            cartItems.innerHTML = `
+
+                <div class="suits-cart-empty">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <h3>
+                        Your bag is empty
+                    </h3>
+
+                    <p>
+                        Add something beautiful to your collection.
+                    </p>
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        cartItems.innerHTML =
+            cart.map(
+                function (item) {
+
+                    return `
+
+                        <article
+                            class="suits-cart-item">
+
+                            <div
+                                class="suits-cart-item-image">
+
+                                <img
+                                    src="${escapeHtml(item.image)}"
+                                    alt="${escapeHtml(item.title)}">
+
+                            </div>
+
+
+                            <div
+                                class="suits-cart-item-info">
+
+                                <p
+                                    class="suits-cart-item-category">
+
+                                    ${escapeHtml(item.category)}
+
+                                </p>
+
+
+                                <h3
+                                    class="suits-cart-item-name">
+
+                                    ${escapeHtml(item.title)}
+
+                                </h3>
+
+
+                                <p
+                                    class="suits-cart-item-code">
+
+                                    ${escapeHtml(item.code)}
+
+                                </p>
+
+
+                                <div
+                                    class="suits-cart-quantity">
+
+                                    <button
+                                        type="button"
+                                        data-cart-minus="${escapeHtml(item.id)}"
+                                        aria-label="Decrease quantity">
+
+                                        −
+
+                                    </button>
+
+
+                                    <span>
+                                        ${item.quantity}
+                                    </span>
+
+
+                                    <button
+                                        type="button"
+                                        data-cart-plus="${escapeHtml(item.id)}"
+                                        aria-label="Increase quantity">
+
+                                        +
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="suits-cart-remove"
+                                type="button"
+                                data-cart-remove="${escapeHtml(item.id)}"
+                                aria-label="Remove item">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </article>
+
+                    `;
+
+                }
+            ).join("");
+
+
+        cartItems
+            .querySelectorAll(
+                "[data-cart-minus]"
+            )
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            changeQuantity(
+                                this.dataset.cartMinus,
+                                -1
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        cartItems
+            .querySelectorAll(
+                "[data-cart-plus]"
+            )
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            changeQuantity(
+                                this.dataset.cartPlus,
+                                1
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        cartItems
+            .querySelectorAll(
+                "[data-cart-remove]"
+            )
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            removeFromCart(
+                                this.dataset.cartRemove
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+    }
+
+
+    /* =====================================================
+       CHANGE QUANTITY
+    ====================================================== */
+
+    function changeQuantity(
+        productId,
+        change
+    ) {
+
+        const item =
+            cart.find(
+                function (product) {
+
+                    return product.id ===
+                        productId;
+
+                }
+            );
+
+
+        if (!item) {
+
+            return;
+
+        }
+
+
+        item.quantity += change;
+
+
+        if (item.quantity <= 0) {
+
+            cart =
+                cart.filter(
+                    function (product) {
+
+                        return product.id !==
+                            productId;
+
+                    }
+                );
+
+        }
+
+
+        saveCart();
+
+        renderCart();
+
+    }
+
+
+    /* =====================================================
+       REMOVE
+    ====================================================== */
+
+    function removeFromCart(productId) {
+
+        const item =
+            cart.find(
+                function (product) {
+
+                    return product.id ===
+                        productId;
+
+                }
+            );
+
+
+        cart =
+            cart.filter(
+                function (product) {
+
+                    return product.id !==
+                        productId;
+
+                }
+            );
+
+
+        saveCart();
+
+        renderCart();
+
+
+        if (item) {
+
+            toast(
+                item.title +
+                " removed from your bag"
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
+       OPEN CART
+    ====================================================== */
+
+    function openCart() {
+
+        if (!cartDrawer || !cartOverlay) {
+
+            return;
+
+        }
+
+
+        cartDrawer.classList.add("active");
+
+        cartOverlay.classList.add("active");
+
+        document.body.style.overflow =
+            "hidden";
+
+        renderCart();
+
+    }
+
+
+    /* =====================================================
+       CLOSE CART
+    ====================================================== */
+
+    function closeCart() {
+
+        if (!cartDrawer || !cartOverlay) {
+
+            return;
+
+        }
+
+
+        cartDrawer.classList.remove("active");
+
+        cartOverlay.classList.remove("active");
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+
+    /* =====================================================
+       WHATSAPP MESSAGE
+    ====================================================== */
+
+    function buildWhatsAppUrl() {
+
+        if (!cart.length) {
+
+            return "";
+
+        }
+
+
+        let message =
+            "Hello ShriVatsaDarbar,\n\n";
+
+        message +=
+            "I would like to enquire about the following products:\n\n";
+
+
+        cart.forEach(
+            function (item, index) {
+
+                message +=
+                    (index + 1) +
+                    ". " +
+                    item.title +
+                    " (" +
+                    item.code +
+                    ") × " +
+                    item.quantity +
+                    "\n";
+
+            }
+        );
+
+
+        message +=
+            "\nPlease share the price, availability, size options and final details for these products.\n\nThank you.";
+
+
+        return (
+            "https://wa.me/" +
+            WHATSAPP_NUMBER +
+            "?text=" +
+            encodeURIComponent(message)
+        );
+
+    }
+
+
+    /* =====================================================
+       RENDER PRODUCTS
+    ====================================================== */
+
+    function renderProducts() {
+
+        if (!grid) {
+
+            return;
+
+        }
+
+
+        const products =
+            window.getSVDProductsByCategory
+                ? window.getSVDProductsByCategory("Suit")
+                : [];
+
+
+        const activeProducts =
+            products.filter(
+                function (product) {
+
+                    return product.status ===
+                        "active";
+
+                }
+            );
+
+
+        if (count) {
+
+            count.textContent =
+                activeProducts.length +
+                " curated pieces";
+
+        }
+
+
+        if (!activeProducts.length) {
+
+            grid.innerHTML = `
+
+                <p>
+                    Our suit collection is being updated.
+                </p>
+
+            `;
+
+            return;
+
+        }
+
+
+        grid.innerHTML =
+            activeProducts.map(
+                function (product) {
+
+                    const productId =
+                        escapeHtml(
+                            product.id
+                        );
+
+                    const title =
+                        escapeHtml(
+                            product.title
+                        );
+
+                    const code =
+                        escapeHtml(
+                            product.code
+                        );
+
+                    const subtitle =
+                        escapeHtml(
+                            product.subtitle
+                        );
+
+                    const image =
+                        escapeHtml(
+                            product.images[0]
+                        );
+
+
+                    return `
+
+                        <article
+                            class="suit-card"
+                            data-product-id="${productId}">
+
+
+                            <a
+                                href="product.html?product=${encodeURIComponent(product.id)}"
+                                class="suit-image-link"
+                                aria-label="View ${title}">
+
+                                <span class="suit-badge">
+                                    Suit
+                                </span>
+
+
+                                <button
+                                    class="suit-wishlist"
+                                    type="button"
+                                    aria-label="Add ${title} to wishlist">
+
+                                    <i class="fa-regular fa-heart"></i>
+
+                                </button>
+
+
+                                <img
+                                    src="${image}"
+                                    alt="${title}"
+                                    loading="lazy">
+
+                            </a>
+
+
+                            <div class="suit-info">
+
+                                <p class="suit-category">
+                                    Suit
+                                </p>
+
+
+                                <h3>
+                                    ${title}
+                                </h3>
+
+
+                                <p class="suit-description">
+                                    ${subtitle}
+                                </p>
+
+
+                                <p class="suit-code">
+                                    ${code}
+                                </p>
+
+
+                                <div class="suit-actions">
+
+                                    <a
+                                        href="product.html?product=${encodeURIComponent(product.id)}"
+                                        class="suit-view-button">
+
+                                        View Details
+
+                                        <i class="fa-solid fa-arrow-right"></i>
+
+                                    </a>
+
+
+                                    <button
+                                        class="suit-add-button"
+                                        type="button"
+                                        data-add-product="${productId}">
+
+                                        <i class="fa-solid fa-bag-shopping"></i>
+
+                                        Add to Bag
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                        </article>
+
+                    `;
+
+                }
+            ).join("");
+
+
+        grid
+            .querySelectorAll(
+                "[data-add-product]"
+            )
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            addToCart(
+                                this.dataset.addProduct,
+                                this
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        grid
+            .querySelectorAll(
+                ".suit-wishlist"
+            )
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function (event) {
+
+                            event.preventDefault();
+
+                            event.stopPropagation();
+
+                            showComingSoon(
+                                "Wishlist"
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+    }
+
+
+    /* =====================================================
+       CART EVENTS
+    ====================================================== */
+
+    if (shoppingBagButton) {
+
+        shoppingBagButton.addEventListener(
+            "click",
+            openCart
+        );
+
+    }
+
+
+    if (cartClose) {
+
+        cartClose.addEventListener(
+            "click",
+            closeCart
+        );
+
+    }
+
+
+    if (cartOverlay) {
+
+        cartOverlay.addEventListener(
+            "click",
+            closeCart
+        );
+
+    }
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key ===
+                "Escape"
+            ) {
+
+                closeCart();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       CLEAR CART
+    ====================================================== */
+
+    if (cartClearButton) {
+
+        cartClearButton.addEventListener(
+            "click",
+            function () {
+
+                if (!cart.length) {
+
+                    return;
+
+                }
+
+
+                cart = [];
+
+                saveCart();
+
+                renderCart();
+
+                toast(
+                    "Your bag has been cleared"
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       WHATSAPP CART
+    ====================================================== */
+
+    if (cartWhatsappButton) {
+
+        cartWhatsappButton.addEventListener(
+            "click",
+            function () {
+
+                if (!cart.length) {
+
+                    toast(
+                        "Your bag is empty"
+                    );
+
+                    return;
+
+                }
+
+
+                const url =
+                    buildWhatsAppUrl();
+
+
+                if (url) {
+
+                    window.open(
+                        url,
+                        "_blank",
+                        "noopener"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       INITIALIZE
+    ====================================================== */
+
+    renderProducts();
+
+    renderCart();
+
+})();
+
+</script>
+
+
+<!-- =========================================================
+     SHARED SITE CONTROLLER
+========================================================== -->
 
 <script src="script.js"></script>
 
