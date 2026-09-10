@@ -12,17 +12,17 @@
           content="#4b0713">
 
     <meta name="description"
-          content="Discover the latest arrivals at ShreevatsaDharwa. Explore newly added premium sarees and elegant suits curated for every occasion.">
+          content="Explore the latest curated sarees and suits from ShriVatsaDarbar. Discover thoughtfully selected new additions for every occasion.">
 
     <meta name="keywords"
-          content="new sarees, new suits, latest ethnic wear, new arrivals, designer sarees, women's suits">
+          content="new arrivals sarees, new arrivals suits, latest sarees, latest suits, women's ethnic wear, ShriVatsaDarbar">
 
-    <title>
-        New Arrivals | ShreevatsaDharwa
-    </title>
+    <title>New Arrivals | ShriVatsaDarbar</title>
 
 
-    <!-- GOOGLE FONTS -->
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -35,56 +35,67 @@
           rel="stylesheet">
 
 
-    <!-- FONT AWESOME -->
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <!-- MAIN CSS -->
+    <!-- =====================================================
+         MAIN STYLESHEET
+    ====================================================== -->
 
     <link rel="stylesheet"
           href="styles.css">
 
 
-    <style>
+    <!-- =====================================================
+         PAGE-SPECIFIC STYLES
+    ====================================================== -->
 
+    <style>
 
         /* =====================================================
            NEW ARRIVALS PAGE
-        ===================================================== */
+        ====================================================== */
 
-        .collection-page {
+        .new-arrivals-page {
+
+            min-height: 100vh;
 
             background:
                 radial-gradient(
                     circle at top,
-                    rgba(194, 151, 72, 0.10),
-                    transparent 35%
+                    rgba(194, 151, 72, 0.08),
+                    transparent 34%
                 ),
                 #f8f7f4;
 
-            min-height: 100vh;
-
-            padding-bottom: 80px;
+            padding-bottom: 90px;
 
         }
 
 
         /* =====================================================
-           COLLECTION HERO
-        ===================================================== */
+           HERO
+        ====================================================== */
 
-        .collection-hero {
+        .new-arrivals-hero {
 
             text-align: center;
 
-            padding: 90px 20px 60px;
+            padding:
+                88px 20px
+                58px;
 
         }
 
 
-        .collection-eyebrow {
+        .new-arrivals-eyebrow {
+
+            margin: 0 0 16px;
 
             font-family: "DM Sans", sans-serif;
 
@@ -94,33 +105,70 @@
 
             letter-spacing: 4px;
 
-            color: #9b762e;
+            text-transform: uppercase;
 
-            margin-bottom: 18px;
+            color: #9b762e;
 
         }
 
 
-        .collection-hero h1 {
+        .new-arrivals-hero h1 {
+
+            margin: 0;
 
             font-family: "Cormorant Garamond", serif;
 
             font-size: clamp(42px, 6vw, 70px);
 
+            line-height: 1;
+
             font-weight: 500;
 
             color: #2d2926;
 
-            margin-bottom: 18px;
+        }
+
+
+        .new-arrivals-ornament {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin: 24px auto 20px;
 
         }
 
 
-        .collection-description {
+        .new-arrivals-ornament span {
+
+            width: 45px;
+
+            height: 1px;
+
+            background: #c5a15a;
+
+        }
+
+
+        .new-arrivals-ornament i {
+
+            font-size: 8px;
+
+            color: #b58a37;
+
+        }
+
+
+        .new-arrivals-description {
 
             max-width: 650px;
 
-            margin: auto;
+            margin: 0 auto;
 
             font-family: "DM Sans", sans-serif;
 
@@ -134,10 +182,166 @@
 
 
         /* =====================================================
-           COLLECTION ORNAMENT
-        ===================================================== */
+           EDITORIAL NOTE
+        ====================================================== */
 
-        .collection-ornament {
+        .new-arrivals-note {
+
+            max-width: 1120px;
+
+            margin: 0 auto 34px;
+
+            padding: 0 24px;
+
+        }
+
+
+        .new-arrivals-note-inner {
+
+            border: 1px solid rgba(155, 118, 46, 0.20);
+
+            background: rgba(255, 255, 255, 0.62);
+
+            padding: 13px 18px;
+
+            text-align: center;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+
+            letter-spacing: 0.2px;
+
+            color: #77716b;
+
+        }
+
+
+        /* =====================================================
+           COLLECTION SELECTOR
+        ====================================================== */
+
+        .new-arrivals-selector {
+
+            max-width: 620px;
+
+            margin: 0 auto;
+
+            padding: 0 20px;
+
+            text-align: center;
+
+        }
+
+
+        .new-arrivals-selector-eyebrow {
+
+            margin: 0 0 8px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: #9b762e;
+
+        }
+
+
+        .new-arrivals-selector h2 {
+
+            margin: 0 0 18px;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 32px;
+
+            line-height: 1.1;
+
+            font-weight: 500;
+
+            color: #332d29;
+
+        }
+
+
+        .new-arrivals-select {
+
+            width: 100%;
+
+            max-width: 260px;
+
+            height: 48px;
+
+            padding: 0 42px 0 16px;
+
+            border: 1px solid rgba(155, 118, 46, 0.40);
+
+            border-radius: 0;
+
+            background: #ffffff;
+
+            color: #4b0713;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 1.2px;
+
+            text-transform: uppercase;
+
+            outline: none;
+
+            cursor: pointer;
+
+        }
+
+
+        .new-arrivals-select:focus {
+
+            border-color: #9b762e;
+
+            box-shadow:
+                0 0 0 2px
+                rgba(155, 118, 46, 0.08);
+
+        }
+
+
+        /* =====================================================
+           EMPTY STATE
+        ====================================================== */
+
+        .new-arrivals-empty {
+
+            max-width: 650px;
+
+            margin: 42px auto 0;
+
+            padding: 0 24px;
+
+            text-align: center;
+
+        }
+
+
+        .new-arrivals-empty-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            margin: 0 auto 20px;
 
             display: flex;
 
@@ -145,97 +349,123 @@
 
             justify-content: center;
 
-            gap: 12px;
+            border: 1px solid rgba(155, 118, 46, 0.25);
 
-            margin: 25px auto;
-
-        }
-
-
-        .collection-ornament span {
-
-            width: 45px;
-
-            height: 1px;
-
-            background: #c5a15a;
-
-        }
-
-
-        .collection-ornament i {
-
-            font-size: 8px;
+            border-radius: 50%;
 
             color: #b58a37;
 
-        }
-
-
-        /* =====================================================
-           COLLECTION TOOLBAR
-        ===================================================== */
-
-        .collection-toolbar {
-
-            max-width: 1250px;
-
-            margin: 0 auto 40px;
-
-            padding: 0 25px;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 20px;
+            background: rgba(255, 255, 255, 0.50);
 
         }
 
 
-        .collection-count {
+        .new-arrivals-empty h3 {
+
+            margin: 0 0 10px;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 29px;
+
+            font-weight: 500;
+
+            color: #332d29;
+
+        }
+
+
+        .new-arrivals-empty p {
+
+            margin: 0;
 
             font-family: "DM Sans", sans-serif;
 
-            font-size: 13px;
+            font-size: 11px;
+
+            line-height: 1.8;
 
             color: #77716b;
 
         }
 
 
-        .collection-filter {
+        /* =====================================================
+           RESULTS AREA
+        ====================================================== */
 
-            border: 1px solid rgba(0, 0, 0, 0.12);
+        .new-arrivals-results {
 
-            background: #ffffff;
+            display: none;
 
-            padding: 12px 18px;
+            max-width: 1250px;
+
+            margin: 58px auto 0;
+
+            padding: 0 25px;
+
+        }
+
+
+        .new-arrivals-results.is-visible {
+
+            display: block;
+
+        }
+
+
+        .new-arrivals-results-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .new-arrivals-results-label {
+
+            margin: 0;
 
             font-family: "DM Sans", sans-serif;
 
-            font-size: 12px;
+            font-size: 9px;
 
-            color: #3b3733;
+            font-weight: 600;
 
-            outline: none;
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            color: #7b746e;
+
+        }
+
+
+        .new-arrivals-results-count {
+
+            margin: 0;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 10px;
+
+            color: #8b837b;
 
         }
 
 
         /* =====================================================
            PRODUCT GRID
-        ===================================================== */
+        ====================================================== */
 
-        .arrivals-grid {
-
-            max-width: 1250px;
-
-            margin: auto;
-
-            padding: 0 25px;
+        .new-arrivals-grid {
 
             display: grid;
 
@@ -249,11 +479,13 @@
 
         /* =====================================================
            PRODUCT CARD
-        ===================================================== */
+        ====================================================== */
 
-        .arrival-card {
+        .new-arrival-card {
 
             background: #ffffff;
+
+            border: 1px solid rgba(0, 0, 0, 0.07);
 
             transition:
                 transform 0.35s ease,
@@ -262,59 +494,65 @@
         }
 
 
-        .arrival-card:hover {
+        .new-arrival-card:hover {
 
-            transform: translateY(-6px);
+            transform: translateY(-5px);
 
             box-shadow:
-                0 18px 45px
-                rgba(0, 0, 0, 0.10);
+                0 18px 42px
+                rgba(0, 0, 0, 0.09);
 
         }
 
 
-        .arrival-image {
+        /* =====================================================
+           IMAGE
+        ====================================================== */
+
+        .new-arrival-image {
 
             position: relative;
+
+            display: block;
 
             overflow: hidden;
 
             aspect-ratio: 0.78;
-
-            display: block;
 
             background: #ece9e5;
 
         }
 
 
-        .arrival-image img {
+        .new-arrival-image img {
 
             width: 100%;
 
             height: 100%;
 
-            object-fit: cover;
-
             display: block;
 
-            transition: transform 0.6s ease;
+            object-fit: cover;
+
+            transition:
+                transform 0.6s ease;
 
         }
 
 
-        .arrival-card:hover .arrival-image img {
+        .new-arrival-card:hover
+        .new-arrival-image img {
 
-            transform: scale(1.05);
+            transform: scale(1.04);
 
         }
 
 
         /* =====================================================
-           BADGE
-        ===================================================== */
+           NEW BADGE
+        ====================================================== */
 
-        .arrival-badge {
+        .new-arrival-badge {
 
             position: absolute;
 
@@ -324,50 +562,42 @@
 
             z-index: 2;
 
+            padding: 7px 10px;
+
             background: #4b0713;
 
             color: #ffffff;
 
             font-family: "DM Sans", sans-serif;
 
-            font-size: 9px;
+            font-size: 8px;
 
             font-weight: 600;
 
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
 
-            padding: 8px 11px;
+            text-transform: uppercase;
 
         }
 
 
         /* =====================================================
            WISHLIST
-        ===================================================== */
+        ====================================================== */
 
-        .arrival-wishlist {
+        .new-arrival-wishlist {
 
             position: absolute;
 
-            top: 14px;
+            top: 13px;
 
-            right: 14px;
+            right: 13px;
 
-            z-index: 2;
+            z-index: 3;
 
             width: 38px;
 
             height: 38px;
-
-            border: none;
-
-            border-radius: 50%;
-
-            background: rgba(255, 255, 255, 0.95);
-
-            color: #4b0713;
-
-            cursor: pointer;
 
             display: flex;
 
@@ -375,72 +605,221 @@
 
             justify-content: center;
 
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            color: #4b0713;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+
+        }
+
+
+        .new-arrival-wishlist:hover {
+
+            transform: scale(1.06);
+
+            background: #ffffff;
+
         }
 
 
         /* =====================================================
-           PRODUCT INFORMATION
-        ===================================================== */
+           PRODUCT INFO
+        ====================================================== */
 
-        .arrival-info {
+        .new-arrival-info {
 
-            padding: 20px;
+            padding:
+                20px 18px
+                18px;
 
             text-align: center;
 
         }
 
 
-        .arrival-category {
+        .new-arrival-category {
+
+            margin: 0 0 8px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 8px;
+
+            font-weight: 600;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            color: #a47b31;
+
+        }
+
+
+        .new-arrival-title {
+
+            margin: 0 0 8px;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 25px;
+
+            line-height: 1.1;
+
+            font-weight: 600;
+
+            color: #302a26;
+
+        }
+
+
+        .new-arrival-code {
+
+            margin: 0 0 16px;
 
             font-family: "DM Sans", sans-serif;
 
             font-size: 9px;
 
-            font-weight: 600;
+            letter-spacing: 1px;
 
-            letter-spacing: 2px;
-
-            color: #a47b31;
-
-            margin-bottom: 9px;
+            color: #9a938c;
 
         }
 
 
-        .arrival-info h2 {
+        .new-arrival-actions {
 
-            font-family: "Cormorant Garamond", serif;
+            display: grid;
 
-            font-size: 24px;
+            grid-template-columns: 1fr 1fr;
 
-            font-weight: 600;
-
-            color: #2f2a26;
-
-            margin-bottom: 10px;
+            gap: 8px;
 
         }
 
 
-        .arrival-price {
+        .new-arrival-view,
+        .new-arrival-add {
+
+            min-height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 9px 8px;
+
+            text-decoration: none;
 
             font-family: "DM Sans", sans-serif;
 
-            font-size: 12px;
+            font-size: 8px;
 
-            color: #77716b;
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            cursor: pointer;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease;
+
+        }
+
+
+        .new-arrival-view {
+
+            border: 1px solid #8b746f;
+
+            background: #ffffff;
+
+            color: #4b0713;
+
+        }
+
+
+        .new-arrival-view:hover {
+
+            background: #f8f3ec;
+
+            border-color: #4b0713;
+
+        }
+
+
+        .new-arrival-add {
+
+            border: 1px solid #4b0713;
+
+            background: #4b0713;
+
+            color: #ffffff;
+
+        }
+
+
+        .new-arrival-add:hover {
+
+            background: #650b1a;
+
+        }
+
+
+        .new-arrival-add i {
+
+            margin-right: 6px;
+
+            font-size: 9px;
 
         }
 
 
         /* =====================================================
-           RESPONSIVE
-        ===================================================== */
+           FOOTER GAP / FINAL MESSAGE
+        ====================================================== */
+
+        .new-arrivals-end-note {
+
+            margin: 55px auto 0;
+
+            padding: 0 20px;
+
+            text-align: center;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 18px;
+
+            font-style: italic;
+
+            color: #8a8179;
+
+        }
+
+
+        /* =====================================================
+           TABLET
+        ====================================================== */
 
         @media (max-width: 900px) {
 
-            .arrivals-grid {
+            .new-arrivals-grid {
 
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
@@ -452,27 +831,77 @@
         }
 
 
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
         @media (max-width: 600px) {
 
-            .collection-hero {
+            .new-arrivals-page {
 
-                padding:
-                    65px 20px
-                    40px;
+                padding-bottom: 60px;
 
             }
 
 
-            .collection-toolbar {
+            .new-arrivals-hero {
+
+                padding:
+                    64px 20px
+                    42px;
+
+            }
+
+
+            .new-arrivals-description {
+
+                font-size: 12px;
+
+                line-height: 1.8;
+
+            }
+
+
+            .new-arrivals-note {
+
+                padding: 0 18px;
+
+                margin-bottom: 30px;
+
+            }
+
+
+            .new-arrivals-selector {
 
                 padding: 0 18px;
 
             }
 
 
-            .arrivals-grid {
+            .new-arrivals-selector h2 {
+
+                font-size: 29px;
+
+            }
+
+
+            .new-arrivals-results {
+
+                margin-top: 48px;
 
                 padding: 0 12px;
+
+            }
+
+
+            .new-arrivals-results-header {
+
+                padding: 0 6px;
+
+            }
+
+
+            .new-arrivals-grid {
 
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
@@ -482,35 +911,119 @@
             }
 
 
-            .arrival-info {
+            .new-arrival-info {
 
-                padding: 14px 8px 18px;
+                padding:
+                    14px 8px
+                    16px;
 
             }
 
 
-            .arrival-info h2 {
+            .new-arrival-title {
 
                 font-size: 20px;
 
             }
 
 
-            .arrival-wishlist {
+            .new-arrival-code {
+
+                font-size: 7px;
+
+                margin-bottom: 12px;
+
+            }
+
+
+            .new-arrival-actions {
+
+                gap: 5px;
+
+            }
+
+
+            .new-arrival-view,
+            .new-arrival-add {
+
+                min-height: 36px;
+
+                padding:
+                    8px 4px;
+
+                font-size: 7px;
+
+                letter-spacing: 0.7px;
+
+            }
+
+
+            .new-arrival-add i {
+
+                margin-right: 4px;
+
+                font-size: 8px;
+
+            }
+
+
+            .new-arrival-wishlist {
 
                 width: 34px;
 
                 height: 34px;
+
+                top: 10px;
+
+                right: 10px;
+
+            }
+
+
+            .new-arrival-badge {
+
+                top: 10px;
+
+                left: 10px;
+
+                padding:
+                    6px 8px;
+
+                font-size: 7px;
+
+            }
+
+
+            .new-arrivals-end-note {
+
+                margin-top: 42px;
+
+                font-size: 16px;
 
             }
 
         }
 
 
+        /* =====================================================
+           REDUCED MOTION
+        ====================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .new-arrival-card,
+            .new-arrival-image img,
+            .new-arrival-wishlist {
+
+                transition: none;
+
+            }
+
+        }
+
     </style>
 
 </head>
-
 
 
 <body>
@@ -525,43 +1038,23 @@
     <div class="announcement-inner">
 
         <span>
-
-            <i class="fa-solid fa-sparkles"></i>
-
-            FREE SHIPPING on Prepaid Orders
-
+            ShriVatsaDarbar
         </span>
-
 
         <span class="announcement-divider">
-
             |
-
         </span>
-
 
         <span>
-
-            <i class="fa-solid fa-sparkles"></i>
-
-            Premium Quality Fabrics
-
+            Premium Sarees &amp; Suits
         </span>
-
 
         <span class="announcement-divider">
-
             |
-
         </span>
 
-
         <span>
-
-            <i class="fa-solid fa-sparkles"></i>
-
-            Easy Returns & Exchanges
-
+            Order on WhatsApp
         </span>
 
 
@@ -581,7 +1074,6 @@
 </div>
 
 
-
 <!-- =========================================================
      HEADER
 ========================================================= -->
@@ -591,22 +1083,18 @@
     <div class="header-container">
 
 
-        <!-- LOGO -->
-
         <a href="index.html"
            class="brand">
 
             <img src="images/logos/logo-white.webp"
-                 alt="ShreevatsaDharwa logo">
+                 alt="ShriVatsaDarbar logo">
 
         </a>
 
 
-
-        <!-- MOBILE MENU -->
-
         <button class="mobile-menu-button"
                 id="mobileMenuButton"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false">
 
@@ -615,72 +1103,48 @@
         </button>
 
 
-
-        <!-- NAVIGATION -->
-
         <nav class="main-navigation"
-             id="mainNavigation">
+             id="mainNavigation"
+             aria-label="Main navigation">
 
             <a href="index.html">
-
                 Home
-
             </a>
-
 
             <a href="sarees.html">
-
                 Sarees
-
             </a>
-
 
             <a href="suits.html">
-
                 Suits
-
             </a>
-
 
             <a href="new-arrivals.html"
                class="active">
-
                 New Arrivals
-
             </a>
-
 
             <a href="best-sellers.html">
-
                 Best Sellers
-
             </a>
-
 
             <a href="about.html">
-
                 About Us
-
             </a>
 
-
             <a href="contact.html">
-
                 Contact Us
-
             </a>
 
         </nav>
 
-
-
-        <!-- HEADER ACTIONS -->
 
         <div class="header-actions">
 
 
             <button class="icon-button"
                     id="searchButton"
+                    type="button"
                     aria-label="Search">
 
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -689,6 +1153,7 @@
 
 
             <button class="icon-button"
+                    type="button"
                     aria-label="Wishlist"
                     onclick="showComingSoon('Wishlist')">
 
@@ -698,6 +1163,7 @@
 
 
             <button class="icon-button"
+                    type="button"
                     aria-label="Account"
                     onclick="showComingSoon('Account')">
 
@@ -707,26 +1173,24 @@
 
 
             <button class="icon-button bag-button"
+                    type="button"
                     aria-label="Shopping bag"
-                    onclick="showComingSoon('Shopping Bag')">
+                    id="shoppingBagButton">
 
                 <i class="fa-solid fa-bag-shopping"></i>
 
-                <span class="bag-count">
-
+                <span class="bag-count"
+                      id="bagCount">
                     0
-
                 </span>
 
             </button>
-
 
         </div>
 
     </div>
 
 </header>
-
 
 
 <!-- =========================================================
@@ -736,9 +1200,9 @@
 <div class="search-overlay"
      id="searchOverlay">
 
-
     <button class="search-close"
             id="searchClose"
+            type="button"
             aria-label="Close search">
 
         <i class="fa-solid fa-xmark"></i>
@@ -749,17 +1213,13 @@
     <div class="search-box">
 
         <span>
-
             Search our collection
-
         </span>
-
 
         <input type="search"
                id="siteSearch"
                placeholder="Search sarees, suits..."
                autocomplete="off">
-
 
         <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -768,37 +1228,28 @@
 </div>
 
 
-
 <!-- =========================================================
-     MAIN CONTENT
+     MAIN
 ========================================================= -->
 
-<main class="collection-page">
-
+<main class="new-arrivals-page">
 
 
     <!-- =====================================================
-         COLLECTION HERO
+         HERO
     ====================================================== -->
 
-    <section class="collection-hero">
+    <section class="new-arrivals-hero">
 
-
-        <p class="collection-eyebrow">
-
-            JUST IN
-
+        <p class="new-arrivals-eyebrow">
+            THE LATEST EDIT
         </p>
 
-
         <h1>
-
             New Arrivals
-
         </h1>
 
-
-        <div class="collection-ornament">
+        <div class="new-arrivals-ornament">
 
             <span></span>
 
@@ -808,478 +1259,157 @@
 
         </div>
 
+        <p class="new-arrivals-description">
 
-        <p class="collection-description">
-
-            Discover our newest additions — freshly curated sarees
-            and elegant suits selected to bring something beautiful
-            and special to your wardrobe.
+            Discover thoughtfully selected new additions to
+            the ShriVatsaDarbar collection, presented as a
+            refined edit of sarees and elegant suits.
 
         </p>
-
 
     </section>
 
 
-
     <!-- =====================================================
-         COLLECTION TOOLBAR
+         EDITORIAL NOTE
     ====================================================== -->
 
-    <div class="collection-toolbar">
+    <div class="new-arrivals-note">
 
+        <div class="new-arrivals-note-inner">
 
-        <div class="collection-count">
-
-            Freshly Added Styles
+            Our New Arrivals page is an editorial selection.
+            The featured edit can evolve as new pieces are added
+            to the ShriVatsaDarbar collection.
 
         </div>
-
-
-        <select class="collection-filter"
-                aria-label="Sort new arrivals">
-
-            <option>
-
-                Newest First
-
-            </option>
-
-            <option>
-
-                Featured
-
-            </option>
-
-            <option>
-
-                Popular
-
-            </option>
-
-        </select>
-
 
     </div>
 
 
-
     <!-- =====================================================
-         NEW ARRIVALS GRID
+         COLLECTION SELECTOR
     ====================================================== -->
 
-    <section class="arrivals-grid">
+    <section class="new-arrivals-selector"
+             aria-labelledby="newArrivalsSelectorTitle">
 
+        <p class="new-arrivals-selector-eyebrow">
+            Explore The Edit
+        </p>
 
+        <h2 id="newArrivalsSelectorTitle">
+            Choose Your Collection
+        </h2>
 
-        <!-- =================================================
-             ARRIVAL 001 — SAREE
-        ================================================== -->
 
-        <article class="arrival-card">
+        <select class="new-arrivals-select"
+                id="newArrivalsSelect"
+                aria-label="Choose sarees or suits">
 
+            <option value="">
+                Select Sarees or Suits
+            </option>
 
-            <a href="#"
-               class="arrival-image">
+            <option value="saree">
+                Sarees
+            </option>
 
-                <span class="arrival-badge">
+            <option value="suit">
+                Suits
+            </option>
 
-                    NEW
-
-                </span>
-
-
-                <button class="arrival-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/sarees/saree-001/sarees-01-lifestyle.webp"
-                     alt="New premium saree">
-
-            </a>
-
-
-            <div class="arrival-info">
-
-
-                <p class="arrival-category">
-
-                    SAREE
-
-                </p>
-
-
-                <h2>
-
-                    Elegant Saree Collection
-
-                </h2>
-
-
-                <p class="arrival-price">
-
-                    Enquire on WhatsApp
-
-                </p>
-
-
-            </div>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARRIVAL 002 — SUIT
-        ================================================== -->
-
-        <article class="arrival-card">
-
-
-            <a href="#"
-               class="arrival-image">
-
-                <span class="arrival-badge">
-
-                    NEW
-
-                </span>
-
-
-                <button class="arrival-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/suits/suit-001/suits-001-lifestyle.webp"
-                     alt="New elegant women's suit">
-
-            </a>
-
-
-            <div class="arrival-info">
-
-
-                <p class="arrival-category">
-
-                    SUIT
-
-                </p>
-
-
-                <h2>
-
-                    Elegant Suit Collection
-
-                </h2>
-
-
-                <p class="arrival-price">
-
-                    Enquire on WhatsApp
-
-                </p>
-
-
-            </div>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARRIVAL 003 — SAREE
-        ================================================== -->
-
-        <article class="arrival-card">
-
-
-            <a href="#"
-               class="arrival-image">
-
-                <span class="arrival-badge">
-
-                    NEW
-
-                </span>
-
-
-                <button class="arrival-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/sarees/saree-002/sarees-02-lifestyle.webp"
-                     alt="New signature saree">
-
-            </a>
-
-
-            <div class="arrival-info">
-
-
-                <p class="arrival-category">
-
-                    SAREE
-
-                </p>
-
-
-                <h2>
-
-                    Signature Saree Collection
-
-                </h2>
-
-
-                <p class="arrival-price">
-
-                    Enquire on WhatsApp
-
-                </p>
-
-
-            </div>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARRIVAL 004 — SUIT
-        ================================================== -->
-
-        <article class="arrival-card">
-
-
-            <a href="#"
-               class="arrival-image">
-
-                <span class="arrival-badge">
-
-                    NEW
-
-                </span>
-
-
-                <button class="arrival-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/suits/suit-002/suits-002-lifestyle.webp"
-                     alt="New signature women's suit">
-
-            </a>
-
-
-            <div class="arrival-info">
-
-
-                <p class="arrival-category">
-
-                    SUIT
-
-                </p>
-
-
-                <h2>
-
-                    Signature Suit Collection
-
-                </h2>
-
-
-                <p class="arrival-price">
-
-                    Enquire on WhatsApp
-
-                </p>
-
-
-            </div>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARRIVAL 005 — SAREE
-        ================================================== -->
-
-        <article class="arrival-card">
-
-
-            <a href="#"
-               class="arrival-image">
-
-                <span class="arrival-badge">
-
-                    NEW
-
-                </span>
-
-
-                <button class="arrival-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/sarees/saree-003/sarees-03-lifestyle.webp"
-                     alt="New festive saree">
-
-            </a>
-
-
-            <div class="arrival-info">
-
-
-                <p class="arrival-category">
-
-                    SAREE
-
-                </p>
-
-
-                <h2>
-
-                    Festive Saree Collection
-
-                </h2>
-
-
-                <p class="arrival-price">
-
-                    Enquire on WhatsApp
-
-                </p>
-
-
-            </div>
-
-        </article>
-
-
-
-        <!-- =================================================
-             ARRIVAL 006 — SUIT
-        ================================================== -->
-
-        <article class="arrival-card">
-
-
-            <a href="#"
-               class="arrival-image">
-
-                <span class="arrival-badge">
-
-                    NEW
-
-                </span>
-
-
-                <button class="arrival-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/suits/suit-003/suits-003-lifestyle.webp"
-                     alt="New festive women's suit">
-
-            </a>
-
-
-            <div class="arrival-info">
-
-
-                <p class="arrival-category">
-
-                    SUIT
-
-                </p>
-
-
-                <h2>
-
-                    Festive Suit Collection
-
-                </h2>
-
-
-                <p class="arrival-price">
-
-                    Enquire on WhatsApp
-
-                </p>
-
-
-            </div>
-
-        </article>
-
+        </select>
 
     </section>
 
 
-</main>
+    <!-- =====================================================
+         EMPTY STATE
+    ====================================================== -->
 
+    <section class="new-arrivals-empty"
+             id="newArrivalsEmpty">
+
+        <div class="new-arrivals-empty-icon">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+        </div>
+
+        <h3>
+            Your Latest Edit Awaits
+        </h3>
+
+        <p>
+            Select Sarees or Suits above to discover the
+            pieces currently featured in our ShriVatsaDarbar
+            New Arrivals edit.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         RESULTS
+    ====================================================== -->
+
+    <section class="new-arrivals-results"
+             id="newArrivalsResults"
+             aria-live="polite">
+
+
+        <div class="new-arrivals-results-header">
+
+            <p class="new-arrivals-results-label"
+               id="newArrivalsResultsLabel">
+                Curated Styles
+            </p>
+
+            <p class="new-arrivals-results-count"
+               id="newArrivalsResultsCount">
+                3 Styles
+            </p>
+
+        </div>
+
+
+        <div class="new-arrivals-grid"
+             id="newArrivalsGrid">
+
+        </div>
+
+
+        <p class="new-arrivals-end-note">
+            More beautiful pieces will continue to join
+            the ShriVatsaDarbar collection.
+        </p>
+
+    </section>
+
+</main>
 
 
 <!-- =========================================================
      MASTER FOOTER
 ========================================================= -->
 
-<div id="site-footer">
-
-</div>
-
+<div id="site-footer"></div>
 
 
 <!-- =========================================================
-     WHATSAPP FLOAT BUTTON
+     WHATSAPP FLOAT
 ========================================================= -->
 
 <a href="https://wa.me/918826196544"
    target="_blank"
    rel="noopener"
    class="whatsapp-float"
-   aria-label="Chat with ShreevatsaDharwa on WhatsApp">
+   aria-label="Chat with ShriVatsaDarbar on WhatsApp">
 
     <i class="fa-brands fa-whatsapp"></i>
 
 </a>
-
 
 
 <!-- =========================================================
@@ -1290,13 +1420,507 @@
      id="siteToast"
      role="status"
      aria-live="polite">
-
 </div>
 
 
+<!-- =========================================================
+     PRODUCT DATABASE
+========================================================= -->
+
+<script src="products.js"></script>
+
 
 <!-- =========================================================
-     MAIN JAVASCRIPT
+     PAGE LOGIC
+========================================================= -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* ========================================================
+       CURRENT CURATED EDIT
+
+       These are the latest sequentially available products
+       currently represented in the catalogue.
+
+       We present them as an editorial New Arrivals edit,
+       not as a verified inventory-date claim.
+    ======================================================== */
+
+    const NEW_ARRIVAL_IDS = {
+
+        saree: [
+            "saree-012",
+            "saree-013",
+            "saree-014"
+        ],
+
+        suit: [
+            "suit-012",
+            "suit-013",
+            "suit-014"
+        ]
+
+    };
+
+
+    const select =
+        document.getElementById("newArrivalsSelect");
+
+    const emptyState =
+        document.getElementById("newArrivalsEmpty");
+
+    const results =
+        document.getElementById("newArrivalsResults");
+
+    const grid =
+        document.getElementById("newArrivalsGrid");
+
+    const resultsLabel =
+        document.getElementById("newArrivalsResultsLabel");
+
+    const resultsCount =
+        document.getElementById("newArrivalsResultsCount");
+
+
+    /* ========================================================
+       ESCAPE HTML
+    ======================================================== */
+
+    function escapeHtml(value) {
+
+        return String(value || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* ========================================================
+       GET PRODUCTS
+    ======================================================== */
+
+    function getProducts(category) {
+
+        const ids =
+            NEW_ARRIVAL_IDS[category] || [];
+
+        return ids
+            .map(function (id) {
+
+                return window.getSVDProduct
+                    ? window.getSVDProduct(id)
+                    : null;
+
+            })
+            .filter(function (product) {
+
+                return product &&
+                       product.active !== false;
+
+            });
+
+    }
+
+
+    /* ========================================================
+       RENDER PRODUCT CARD
+    ======================================================== */
+
+    function renderCard(product) {
+
+        const categoryLabel =
+            product.category === "saree"
+                ? "Saree"
+                : "Suit";
+
+        const productUrl =
+            "product.html?product=" +
+            encodeURIComponent(product.id);
+
+        const image =
+            product.images &&
+            product.images.lifestyle
+                ? product.images.lifestyle
+                : "";
+
+        const title =
+            product.title || "ShriVatsaDarbar Style";
+
+        const code =
+            product.code || "";
+
+
+        return `
+            <article class="new-arrival-card"
+                     data-product-id="${escapeHtml(product.id)}">
+
+                <div class="new-arrival-image">
+
+                    <span class="new-arrival-badge">
+                        New
+                    </span>
+
+
+                    <button class="new-arrival-wishlist"
+                            type="button"
+                            aria-label="Add ${escapeHtml(title)} to wishlist"
+                            data-wishlist-product="${escapeHtml(product.id)}">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+
+                    <a href="${productUrl}"
+                       aria-label="View ${escapeHtml(title)}">
+
+                        <img src="${escapeHtml(image)}"
+                             alt="${escapeHtml(title)}"
+                             loading="lazy">
+
+                    </a>
+
+                </div>
+
+
+                <div class="new-arrival-info">
+
+                    <p class="new-arrival-category">
+                        ${categoryLabel}
+                    </p>
+
+
+                    <h2 class="new-arrival-title">
+                        ${escapeHtml(title)}
+                    </h2>
+
+
+                    <p class="new-arrival-code">
+                        ${escapeHtml(code)}
+                    </p>
+
+
+                    <div class="new-arrival-actions">
+
+                        <a href="${productUrl}"
+                           class="new-arrival-view">
+
+                            View Details
+                            <i class="fa-solid fa-arrow-right"
+                               style="margin-left:5px;"></i>
+
+                        </a>
+
+
+                        <button type="button"
+                                class="new-arrival-add"
+                                data-add-product="${escapeHtml(product.id)}">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                            Add to Bag
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+        `;
+
+    }
+
+
+    /* ========================================================
+       RENDER CATEGORY
+    ======================================================== */
+
+    function renderCategory(category) {
+
+        const products =
+            getProducts(category);
+
+
+        grid.innerHTML =
+            products.map(renderCard).join("");
+
+
+        const categoryName =
+            category === "saree"
+                ? "Curated Sarees"
+                : "Curated Suits";
+
+
+        resultsLabel.textContent =
+            categoryName;
+
+
+        resultsCount.textContent =
+            products.length + " Styles";
+
+
+        emptyState.style.display =
+            "none";
+
+
+        results.classList.add("is-visible");
+
+
+        bindCardActions();
+
+    }
+
+
+    /* ========================================================
+       RESET
+    ======================================================== */
+
+    function resetResults() {
+
+        grid.innerHTML = "";
+
+        results.classList.remove("is-visible");
+
+        emptyState.style.display = "block";
+
+    }
+
+
+    /* ========================================================
+       ADD TO BAG
+    ======================================================== */
+
+    function addToBag(productId) {
+
+        const product =
+            window.getSVDProduct
+                ? window.getSVDProduct(productId)
+                : null;
+
+
+        if (!product) {
+
+            if (typeof showComingSoon === "function") {
+
+                showComingSoon("Product");
+
+            }
+
+            return;
+
+        }
+
+
+        const storageKey =
+            "shrivatsaDarbarFashionCart";
+
+
+        let cart = [];
+
+
+        try {
+
+            cart =
+                JSON.parse(
+                    localStorage.getItem(storageKey)
+                ) || [];
+
+        } catch (error) {
+
+            cart = [];
+
+        }
+
+
+        const existing =
+            cart.find(function (item) {
+
+                return item.id === product.id;
+
+            });
+
+
+        if (existing) {
+
+            existing.quantity =
+                Number(existing.quantity || 1) + 1;
+
+        } else {
+
+            cart.push({
+
+                id: product.id,
+
+                quantity: 1
+
+            });
+
+        }
+
+
+        localStorage.setItem(
+            storageKey,
+            JSON.stringify(cart)
+        );
+
+
+        if (typeof window.syncBagCount === "function") {
+
+            window.syncBagCount();
+
+        }
+
+
+        if (typeof showToast === "function") {
+
+            showToast(
+                product.title +
+                " added to your bag."
+            );
+
+        } else if (
+            typeof window.showToast === "function"
+        ) {
+
+            window.showToast(
+                product.title +
+                " added to your bag."
+            );
+
+        }
+
+    }
+
+
+    /* ========================================================
+       WISHLIST
+    ======================================================== */
+
+    function bindWishlistButtons() {
+
+        document
+            .querySelectorAll(
+                "[data-wishlist-product]"
+            )
+            .forEach(function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const productId =
+                            button.getAttribute(
+                                "data-wishlist-product"
+                            );
+
+
+                        if (
+                            typeof showComingSoon ===
+                            "function"
+                        ) {
+
+                            showComingSoon(
+                                "Wishlist"
+                            );
+
+                        }
+
+                    }
+                );
+
+            });
+
+    }
+
+
+    /* ========================================================
+       CARD ACTIONS
+    ======================================================== */
+
+    function bindCardActions() {
+
+        document
+            .querySelectorAll(
+                "[data-add-product]"
+            )
+            .forEach(function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const productId =
+                            button.getAttribute(
+                                "data-add-product"
+                            );
+
+
+                        addToBag(productId);
+
+                    }
+                );
+
+            });
+
+
+        bindWishlistButtons();
+
+    }
+
+
+    /* ========================================================
+       SELECTOR
+    ======================================================== */
+
+    if (select) {
+
+        select.addEventListener(
+            "change",
+            function () {
+
+                const category =
+                    select.value;
+
+
+                if (!category) {
+
+                    resetResults();
+
+                    return;
+
+                }
+
+
+                renderCategory(category);
+
+            }
+        );
+
+    }
+
+
+    /* ========================================================
+       INITIAL STATE
+    ======================================================== */
+
+    resetResults();
+
+})();
+
+</script>
+
+
+<!-- =========================================================
+     MAIN SITE SCRIPT
 ========================================================= -->
 
 <script src="script.js"></script>
