@@ -1,1 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Our Story | ShriVatsaDarbar | Sarees & Suits</title>
+
+    <meta name="description"
+          content="Discover the story behind ShriVatsaDarbar — a women’s fashion brand celebrating Indian textiles, timeless sarees, elegant suits and modern grace.">
+
+    <meta name="keywords"
+          content="ShriVatsaDarbar, sarees, suits, women's fashion, Indian ethnic wear, traditional sarees, designer suits">
+
+    <meta name="theme-color"
+          content="#6f1d2a">
+
+    <link rel="canonical"
+          href="our-story.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main Site Styles -->
+    <link rel="stylesheet"
+          href="styles.css">
+
+    <style>
+
+        /* =========================================================
+           SHRI VATSA DARBAR — OUR STORY
+           Women’s Fashion | Sarees & Suits
+           ========================================================= */
+
+        :root {
+            --story-wine: #6f1d2a;
+            --story-deep-wine: #4d111c;
+            --story-gold: #b08a45;
+            --story-light-gold: #d4b878;
+            --story-cream: #fbf7ef;
+            --story-soft: #f4eee4;
+            --story-white: #ffffff;
+            --story-text: #332a29;
+            --story-muted: #746866;
+            --story-border: rgba(176, 138, 69, 0.22);
+            --story-container: 1320px;
+        }
+
+        /* ---------------------------------------------------------
+           GLOBAL
+           --------------------------------------------------------- */
+
+        .story-page {
+            overflow: hidden;
+            background: var(--story-white);
+            color: var(--story-text);
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .story-container {
+            width: min(
+                calc(100% - 48px),
+                var(--story-container)
+            );
+            margin: 0 auto;
+        }
+
+        .story-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+
+            color: var(--story-gold);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .story-eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: var(--story-gold);
+        }
+
+        .story-title {
+            margin: 0;
+
+            color: var(--story-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(44px, 5vw, 72px);
+            font-weight: 500;
+            line-height: 0.98;
+            letter-spacing: -0.02em;
+        }
+
+        .story-copy {
+            color: var(--story-muted);
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.9;
+        }
+
+        /* ---------------------------------------------------------
+           HERO
+           --------------------------------------------------------- */
+
+        .story-hero {
+            position: relative;
+            min-height: 690px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(250, 246, 237, 0.98) 0%,
+                    rgba(250, 246, 237, 0.94) 42%,
+                    rgba(250, 246, 237, 0.62) 65%,
+                    rgba(250, 246, 237, 0.15) 100%
+                ),
+                url("images/sarees/saree-001/sarees-01-lifestyle.webp")
+                center / cover no-repeat;
+        }
+
+        .story-hero-inner {
+            position: relative;
+            z-index: 2;
+
+            width: min(
+                calc(100% - 48px),
+                var(--story-container)
+            );
+
+            margin: 0 auto;
+
+            padding: 100px 0;
+        }
+
+        .story-hero-content {
+            max-width: 650px;
+        }
+
+        .story-hero-content .story-eyebrow {
+            margin-bottom: 20px;
+        }
+
+        .story-hero-title {
+            margin: 0 0 26px;
+
+            color: var(--story-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(54px, 6vw, 88px);
+            font-weight: 500;
+            line-height: 0.94;
+            letter-spacing: -0.025em;
+        }
+
+        .story-hero-title span {
+            display: block;
+            color: var(--story-gold);
+        }
+
+        .story-hero-description {
+            max-width: 590px;
+
+            margin: 0 0 34px;
+
+            color: #665b58;
+
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .story-hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+
+            padding: 14px 25px;
+
+            background: var(--story-wine);
+            color: #fff;
+
+            border: 1px solid var(--story-wine);
+
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            transition:
+                background 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .story-hero-button:hover {
+            background: var(--story-deep-wine);
+            border-color: var(--story-deep-wine);
+            transform: translateY(-2px);
+        }
+
+        .story-hero-button i {
+            font-size: 10px;
+        }
+
+        .story-hero-ornament {
+            width: 90px;
+            height: 1px;
+
+            margin-top: 42px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--story-gold),
+                    transparent
+                );
+        }
+
+        /* ---------------------------------------------------------
+           INTRO
+           --------------------------------------------------------- */
+
+        .story-intro {
+            padding: 120px 0;
+            background: var(--story-white);
+        }
+
+        .story-intro-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .story-intro-heading {
+            max-width: 520px;
+        }
+
+        .story-intro-heading .story-title {
+            margin-bottom: 25px;
+        }
+
+        .story-intro-content {
+            max-width: 650px;
+        }
+
+        .story-intro-content p {
+            margin: 0 0 22px;
+
+            color: var(--story-muted);
+
+            font-size: 16px;
+            line-height: 1.95;
+        }
+
+        .story-intro-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------------------------------------------------------
+           STORY TIMELINE
+           --------------------------------------------------------- */
+
+        .story-journey {
+            padding: 115px 0 125px;
+            background: var(--story-cream);
+        }
+
+        .story-section-heading {
+            max-width: 720px;
+            margin: 0 auto 70px;
+
+            text-align: center;
+        }
+
+        .story-section-heading .story-eyebrow {
+            justify-content: center;
+        }
+
+        .story-section-heading .story-eyebrow::before {
+            display: none;
+        }
+
+        .story-section-heading h2 {
+            margin: 0 0 20px;
+
+            color: var(--story-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(42px, 5vw, 65px);
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .story-section-heading p {
+            margin: 0;
+
+            color: var(--story-muted);
+
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .story-journey-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .story-journey-card {
+            position: relative;
+
+            min-height: 300px;
+            padding: 42px 35px;
+
+            background: var(--story-white);
+
+            border: 1px solid var(--story-border);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .story-journey-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 18px 45px rgba(77, 17, 28, 0.08);
+        }
+
+        .story-journey-number {
+            margin-bottom: 35px;
+
+            color: var(--story-light-gold);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 46px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .story-journey-card h3 {
+            margin: 0 0 15px;
+
+            color: var(--story-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 31px;
+            font-weight: 600;
+        }
+
+        .story-journey-card p {
+            margin: 0;
+
+            color: var(--story-muted);
+
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        /* ---------------------------------------------------------
+           PHILOSOPHY
+           --------------------------------------------------------- */
+
+        .story-philosophy {
+            padding: 125px 0;
+            background: var(--story-white);
+        }
+
+        .story-philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 85px;
+            align-items: center;
+        }
+
+        .story-philosophy-image {
+            position: relative;
+        }
+
+        .story-philosophy-image img {
+            display: block;
+
+            width: 100%;
+            height: 620px;
+
+            object-fit: cover;
+            object-position: center;
+
+            box-shadow:
+                20px 20px 0 var(--story-soft);
+        }
+
+        .story-philosophy-content {
+            max-width: 600px;
+        }
+
+        .story-philosophy-content .story-title {
+            margin-bottom: 28px;
+        }
+
+        .story-philosophy-content p {
+            margin: 0 0 22px;
+
+            color: var(--story-muted);
+
+            font-size: 15px;
+            line-height: 1.95;
+        }
+
+        .story-philosophy-content p:last-of-type {
+            margin-bottom: 35px;
+        }
+
+        .story-signature {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .story-signature-line {
+            width: 48px;
+            height: 1px;
+            background: var(--story-gold);
+        }
+
+        .story-signature-text {
+            color: var(--story-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 25px;
+            font-style: italic;
+        }
+
+        /* ---------------------------------------------------------
+           WHAT WE BELIEVE
+           --------------------------------------------------------- */
+
+        .story-beliefs {
+            padding: 115px 0 120px;
+            background: var(--story-soft);
+        }
+
+        .story-beliefs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .story-belief {
+            padding: 42px 28px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.72);
+
+            border-top: 1px solid var(--story-border);
+            border-bottom: 1px solid var(--story-border);
+        }
+
+        .story-belief-icon {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 24px;
+
+            color: var(--story-gold);
+
+            border: 1px solid var(--story-border);
+            border-radius: 50%;
+
+            font-size: 17px;
+        }
+
+        .story-belief h3 {
+            margin: 0 0 10px;
+
+            color: var(--story-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 27px;
+            font-weight: 600;
+        }
+
+        .story-belief p {
+            margin: 0;
+
+            color: var(--story-muted);
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* ---------------------------------------------------------
+           WOMAN WE DESIGN FOR
+           --------------------------------------------------------- */
+
+        .story-woman {
+            padding: 125px 0;
+            background: var(--story-white);
+        }
+
+        .story-woman-inner {
+            max-width: 900px;
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .story-woman-inner .story-eyebrow {
+            justify-content: center;
+        }
+
+        .story-woman-inner .story-eyebrow::before {
+            display: none;
+        }
+
+        .story-woman-inner h2 {
+            margin: 0 0 28px;
+
+            color: var(--story-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(44px, 5vw, 70px);
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .story-woman-inner p {
+            max-width: 730px;
+
+            margin: 0 auto;
+
+            color: var(--story-muted);
+
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .story-woman-divider {
+            width: 70px;
+            height: 1px;
+
+            margin: 42px auto;
+
+            background: var(--story-gold);
+        }
+
+        /* ---------------------------------------------------------
+           QUOTE
+           --------------------------------------------------------- */
+
+        .story-quote {
+            position: relative;
+
+            padding: 120px 24px;
+
+            background:
+                linear-gradient(
+                    rgba(250, 246, 237, 0.90),
+                    rgba(250, 246, 237, 0.90)
+                ),
+                url("images/sarees/saree-001/sarees-01-close-embroidery.webp")
+                center / cover no-repeat;
+
+            text-align: center;
+        }
+
+        .story-quote-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .story-quote-mark {
+            margin-bottom: 20px;
+
+            color: var(--story-gold);
+
+            font-family: Georgia, serif;
+            font-size: 58px;
+            line-height: 0.5;
+        }
+
+        .story-quote blockquote {
+            margin: 0;
+
+            color: var(--story-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(38px, 5vw, 62px);
+            font-weight: 500;
+            font-style: italic;
+            line-height: 1.1;
+        }
+
+        .story-quote-author {
+            margin-top: 30px;
+
+            color: var(--story-gold);
+
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        /* ---------------------------------------------------------
+           CTA
+           --------------------------------------------------------- */
+
+        .story-cta {
+            padding: 100px 0;
+
+            background: var(--story-deep-wine);
+
+            color: #fff;
+            text-align: center;
+        }
+
+        .story-cta-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-cta-eyebrow {
+            margin-bottom: 18px;
+
+            color: var(--story-light-gold);
+
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .story-cta h2 {
+            margin: 0 0 22px;
+
+            color: #fff;
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(44px, 5vw, 68px);
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .story-cta p {
+            max-width: 620px;
+
+            margin: 0 auto 32px;
+
+            color: rgba(255, 255, 255, 0.72);
+
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .story-cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 13px;
+
+            padding: 14px 27px;
+
+            background: transparent;
+            color: #fff;
+
+            border: 1px solid rgba(212, 184, 120, 0.65);
+
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease;
+        }
+
+        .story-cta-button:hover {
+            background: var(--story-light-gold);
+            color: var(--story-deep-wine);
+        }
+
+        /* ---------------------------------------------------------
+           WHATSAPP FLOAT
+           --------------------------------------------------------- */
+
+        .story-whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 1000;
+
+            width: 54px;
+            height: 54px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #25d366;
+            color: #fff;
+
+            font-size: 25px;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.18);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .story-whatsapp:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.22);
+        }
+
+        /* ---------------------------------------------------------
+           TABLET
+           --------------------------------------------------------- */
+
+        @media (max-width: 1000px) {
+
+            .story-hero {
+                min-height: 620px;
+
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(250, 246, 237, 0.98) 0%,
+                        rgba(250, 246, 237, 0.88) 58%,
+                        rgba(250, 246, 237, 0.45) 100%
+                    ),
+                    url("images/sarees/saree-001/sarees-01-lifestyle.webp")
+                    center / cover no-repeat;
+            }
+
+            .story-intro-grid,
+            .story-philosophy-grid {
+                gap: 55px;
+            }
+
+            .story-journey-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-beliefs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .story-philosophy-image img {
+                height: 520px;
+            }
+        }
+
+        /* ---------------------------------------------------------
+           MOBILE
+           --------------------------------------------------------- */
+
+        @media (max-width: 700px) {
+
+            .story-container,
+            .story-hero-inner {
+                width: min(
+                    calc(100% - 34px),
+                    var(--story-container)
+                );
+            }
+
+            .story-hero {
+                min-height: 650px;
+
+                align-items: flex-end;
+
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(250, 246, 237, 0.18) 0%,
+                        rgba(250, 246, 237, 0.78) 45%,
+                        rgba(250, 246, 237, 0.98) 72%
+                    ),
+                    url("images/sarees/saree-001/sarees-01-lifestyle.webp")
+                    center top / cover no-repeat;
+            }
+
+            .story-hero-inner {
+                padding: 55px 0 65px;
+            }
+
+            .story-hero-content {
+                max-width: 100%;
+            }
+
+            .story-hero-title {
+                font-size: clamp(48px, 14vw, 66px);
+            }
+
+            .story-hero-description {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .story-intro,
+            .story-philosophy,
+            .story-woman {
+                padding: 78px 0;
+            }
+
+            .story-intro-grid,
+            .story-philosophy-grid {
+                grid-template-columns: 1fr;
+                gap: 42px;
+            }
+
+            .story-title {
+                font-size: 48px;
+            }
+
+            .story-intro-content p,
+            .story-philosophy-content p {
+                font-size: 14px;
+                line-height: 1.85;
+            }
+
+            .story-journey {
+                padding: 78px 0 85px;
+            }
+
+            .story-section-heading {
+                margin-bottom: 45px;
+            }
+
+            .story-section-heading h2 {
+                font-size: 46px;
+            }
+
+            .story-journey-card {
+                min-height: auto;
+                padding: 32px 27px;
+            }
+
+            .story-journey-number {
+                margin-bottom: 25px;
+                font-size: 39px;
+            }
+
+            .story-philosophy-image img {
+                height: 440px;
+
+                box-shadow:
+                    12px 12px 0 var(--story-soft);
+            }
+
+            .story-beliefs {
+                padding: 78px 0 82px;
+            }
+
+            .story-beliefs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-belief {
+                padding: 35px 25px;
+            }
+
+            .story-woman-inner h2 {
+                font-size: 47px;
+            }
+
+            .story-woman-inner p {
+                font-size: 14px;
+                line-height: 1.85;
+            }
+
+            .story-quote {
+                padding: 85px 20px;
+            }
+
+            .story-quote blockquote {
+                font-size: 39px;
+            }
+
+            .story-cta {
+                padding: 75px 20px;
+            }
+
+            .story-cta h2 {
+                font-size: 48px;
+            }
+
+            .story-whatsapp {
+                width: 50px;
+                height: 50px;
+
+                right: 16px;
+                bottom: 16px;
+
+                font-size: 23px;
+            }
+        }
+
+        /* ---------------------------------------------------------
+           REDUCED MOTION
+           --------------------------------------------------------- */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .story-page *,
+            .story-page *::before,
+            .story-page *::after {
+                scroll-behavior: auto !important;
+                transition: none !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="story-page">
+
+    <!-- =========================================================
+         ANNOUNCEMENT BAR
+         ========================================================= -->
+
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span>Grace in Every Thread</span>
+
+            <div class="announcement-links">
+                <a href="contact.html">Contact Us</a>
+                <span>|</span>
+                <a href="faq.html">FAQs</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         SHARED SITE HEADER
+         IMPORTANT: Classes/IDs match script.js
+         ========================================================= -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html"
+               class="brand"
+               aria-label="ShriVatsaDarbar Home">
+
+                <img src="images/logos/logo.webp"
+                     alt="ShriVatsaDarbar"
+                     class="brand-logo">
+
+            </a>
+
+
+            <button class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <nav class="main-navigation"
+                 id="mainNavigation"
+                 aria-label="Main navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="sarees.html">
+                    Sarees
+                </a>
+
+                <a href="suits.html">
+                    Suits
+                </a>
+
+                <a href="new-arrivals.html">
+                    New Arrivals
+                </a>
+
+                <a href="best-sellers.html">
+                    Best Sellers
+                </a>
+
+                <a href="our-story.html"
+                   class="active"
+                   aria-current="page">
+                    Our Story
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="reviews.html">
+                    Reviews
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <button class="icon-button"
+                        id="searchButton"
+                        type="button"
+                        aria-label="Search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+
+                <button class="icon-button"
+                        type="button"
+                        aria-label="Wishlist"
+                        onclick="showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <button class="icon-button bag-button"
+                        id="shoppingBagButton"
+                        type="button"
+                        aria-label="Shopping bag">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="bag-count"
+                          id="bagCount">
+                        0
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         SEARCH OVERLAY
+         ========================================================= -->
+
+    <div class="search-overlay"
+         id="searchOverlay"
+         aria-hidden="true">
+
+        <button class="search-close"
+                id="searchClose"
+                type="button"
+                aria-label="Close search">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <div class="search-box">
+
+            <label for="siteSearch">
+                Search ShriVatsaDarbar
+            </label>
+
+            <input type="search"
+                   id="siteSearch"
+                   placeholder="Search sarees, suits..."
+                   autocomplete="off">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
+    <main>
+
+        <section class="story-hero">
+
+            <div class="story-hero-inner">
+
+                <div class="story-hero-content">
+
+                    <div class="story-eyebrow">
+                        OUR STORY
+                    </div>
+
+                    <h1 class="story-hero-title">
+                        Where Indian
+                        <span>Heritage Meets Grace</span>
+                    </h1>
+
+                    <p class="story-hero-description">
+                        ShriVatsaDarbar was born from a simple appreciation
+                        for the beauty of Indian dressing — the stories
+                        woven into every textile, the artistry behind every
+                        detail, and the confidence a beautiful outfit can
+                        bring.
+                    </p>
+
+                    <a href="#the-journey"
+                       class="story-hero-button">
+                        Discover Our Story
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+
+                    <div class="story-hero-ornament"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRO
+             ===================================================== -->
+
+        <section class="story-intro">
+
+            <div class="story-container">
+
+                <div class="story-intro-grid">
+
+                    <div class="story-intro-heading">
+
+                        <div class="story-eyebrow">
+                            THE BEGINNING
+                        </div>
+
+                        <h2 class="story-title">
+                            A Love for
+                            Indian Dressing
+                        </h2>
+
+                    </div>
+
+
+                    <div class="story-intro-content">
+
+                        <p>
+                            Indian fashion has always carried something
+                            more than beauty. A saree, a suit, a weave or
+                            an embroidered detail can carry memories,
+                            traditions and the personality of the woman
+                            who wears it.
+                        </p>
+
+                        <p>
+                            ShriVatsaDarbar grew from this appreciation.
+                            Our vision is to bring together sarees and
+                            suits that feel rooted in Indian heritage while
+                            fitting naturally into the lives of modern
+                            women.
+                        </p>
+
+                        <p>
+                            Rather than simply following every passing
+                            trend, we look for pieces with character —
+                            thoughtful colours, graceful silhouettes,
+                            beautiful detailing and a sense of occasion.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             JOURNEY
+             ===================================================== -->
+
+        <section class="story-journey"
+                 id="the-journey">
+
+            <div class="story-container">
+
+                <div class="story-section-heading">
+
+                    <div class="story-eyebrow">
+                        OUR JOURNEY
+                    </div>
+
+                    <h2>
+                        From Appreciation
+                        to a Brand
+                    </h2>
+
+                    <p>
+                        Every brand begins with an idea. Ours began with
+                        the belief that Indian ethnic wear can remain
+                        deeply connected to tradition while feeling
+                        effortless, elegant and relevant today.
+                    </p>
+
+                </div>
+
+
+                <div class="story-journey-grid">
+
+                    <article class="story-journey-card">
+
+                        <div class="story-journey-number">
+                            01
+                        </div>
+
+                        <h3>
+                            The Inspiration
+                        </h3>
+
+                        <p>
+                            A deep appreciation for Indian textiles,
+                            traditional dressing and the timeless
+                            elegance of sarees and suits became the
+                            foundation for ShriVatsaDarbar.
+                        </p>
+
+                    </article>
+
+
+                    <article class="story-journey-card">
+
+                        <div class="story-journey-number">
+                            02
+                        </div>
+
+                        <h3>
+                            The Curation
+                        </h3>
+
+                        <p>
+                            We began with the idea of carefully selecting
+                            pieces rather than overwhelming women with
+                            endless choices — focusing on designs that
+                            feel beautiful, versatile and special.
+                        </p>
+
+                    </article>
+
+
+                    <article class="story-journey-card">
+
+                        <div class="story-journey-number">
+                            03
+                        </div>
+
+                        <h3>
+                            The Vision
+                        </h3>
+
+                        <p>
+                            ShriVatsaDarbar continues to build a fashion
+                            destination where traditional Indian elegance
+                            meets contemporary sensibility, with every
+                            collection chosen with intention.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PHILOSOPHY
+             ===================================================== -->
+
+        <section class="story-philosophy">
+
+            <div class="story-container">
+
+                <div class="story-philosophy-grid">
+
+                    <div class="story-philosophy-image">
+
+                        <img src="images/sarees/saree-001/sarees-01-close-embroidery.webp"
+                             alt="Detailed Indian textile craftsmanship"
+                             loading="lazy">
+
+                    </div>
+
+
+                    <div class="story-philosophy-content">
+
+                        <div class="story-eyebrow">
+                            OUR PHILOSOPHY
+                        </div>
+
+                        <h2 class="story-title">
+                            Tradition Should
+                            Feel Effortless
+                        </h2>
+
+                        <p>
+                            We believe traditional fashion does not have
+                            to feel distant or overly formal. The right
+                            saree or suit can be graceful without being
+                            complicated, expressive without being
+                            excessive and traditional without losing its
+                            modern character.
+                        </p>
+
+                        <p>
+                            That is why our approach combines an
+                            appreciation for Indian craftsmanship with
+                            contemporary styling and thoughtful
+                            presentation.
+                        </p>
+
+                        <p>
+                            From everyday elegance to celebrations and
+                            meaningful occasions, we want every woman to
+                            find something that feels naturally hers.
+                        </p>
+
+
+                        <div class="story-signature">
+
+                            <span class="story-signature-line"></span>
+
+                            <span class="story-signature-text">
+                                ShriVatsaDarbar
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BELIEFS
+             ===================================================== -->
+
+        <section class="story-beliefs">
+
+            <div class="story-container">
+
+                <div class="story-section-heading">
+
+                    <div class="story-eyebrow">
+                        WHAT WE BELIEVE
+                    </div>
+
+                    <h2>
+                        More Than What You Wear
+                    </h2>
+
+                    <p>
+                        Our philosophy is built around the details that
+                        make fashion meaningful — authenticity, quality,
+                        confidence and the experience of discovering
+                        something that feels right.
+                    </p>
+
+                </div>
+
+
+                <div class="story-beliefs-grid">
+
+                    <div class="story-belief">
+
+                        <div class="story-belief-icon">
+                            <i class="fa-solid fa-feather"></i>
+                        </div>
+
+                        <h3>
+                            Authenticity
+                        </h3>
+
+                        <p>
+                            Respecting the character and heritage of
+                            Indian ethnic fashion.
+                        </p>
+
+                    </div>
+
+
+                    <div class="story-belief">
+
+                        <div class="story-belief-icon">
+                            <i class="fa-regular fa-gem"></i>
+                        </div>
+
+                        <h3>
+                            Quality
+                        </h3>
+
+                        <p>
+                            Looking closely at fabrics, details,
+                            finishing and overall presentation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="story-belief">
+
+                        <div class="story-belief-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+                        <h3>
+                            Confidence
+                        </h3>
+
+                        <p>
+                            Creating a collection that helps women feel
+                            elegant, comfortable and themselves.
+                        </p>
+
+                    </div>
+
+
+                    <div class="story-belief">
+
+                        <div class="story-belief-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <h3>
+                            Delight
+                        </h3>
+
+                        <p>
+                            Making the journey of discovering and
+                            choosing an outfit feel special.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WOMAN
+             ===================================================== -->
+
+        <section class="story-woman">
+
+            <div class="story-container">
+
+                <div class="story-woman-inner">
+
+                    <div class="story-eyebrow">
+                        THE SHRI VATSA DARBAR WOMAN
+                    </div>
+
+                    <h2>
+                        Confident in Tradition.
+                        Comfortable in Today.
+                    </h2>
+
+                    <div class="story-woman-divider"></div>
+
+                    <p>
+                        She may wear a saree for a celebration, a suit
+                        for a gathering, or choose something timeless
+                        simply because it makes her feel beautiful.
+                        She values tradition, but she also has her own
+                        style, her own pace and her own story.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             QUOTE
+             ===================================================== -->
+
+        <section class="story-quote">
+
+            <div class="story-quote-inner">
+
+                <div class="story-quote-mark">
+                    “
+                </div>
+
+                <blockquote>
+                    Grace is not just what you wear,
+                    but how you carry your story.
+                </blockquote>
+
+                <div class="story-quote-author">
+                    — ShriVatsaDarbar —
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+             ===================================================== -->
+
+        <section class="story-cta">
+
+            <div class="story-container">
+
+                <div class="story-cta-inner">
+
+                    <div class="story-cta-eyebrow">
+                        BEGIN YOUR JOURNEY
+                    </div>
+
+                    <h2>
+                        Find Something
+                        That Feels Like You
+                    </h2>
+
+                    <p>
+                        Explore our collection of sarees and suits,
+                        thoughtfully selected for women who appreciate
+                        timeless Indian elegance with a contemporary
+                        spirit.
+                    </p>
+
+                    <a href="collections/collections.html"
+                       class="story-cta-button">
+                        Explore Collections
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         MASTER FOOTER
+         ========================================================= -->
+
+    <footer id="site-footer"></footer>
+
+
+    <!-- =========================================================
+         WHATSAPP
+         ========================================================= -->
+
+    <a class="story-whatsapp"
+       href="https://wa.me/918826196544"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat with ShriVatsaDarbar on WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+</div>
+
+
+<!-- =========================================================
+     SHARED SCRIPT
+     ========================================================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
