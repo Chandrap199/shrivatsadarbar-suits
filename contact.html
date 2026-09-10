@@ -28,7 +28,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css"
+        href="styles.css"
     >
 
 
@@ -1283,8 +1283,82 @@
         }
 
 
-    </style>
+    
 
+        /* =========================================================
+           CONTACT ENHANCEMENTS
+           ========================================================= */
+        .svd-contact-quick-help {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 15px;
+            margin-top: 22px;
+            padding: 18px;
+            border: 1px solid rgba(180,140,70,.20);
+            border-radius: 13px;
+            background: linear-gradient(135deg, #faf3e4, #fffdf9);
+        }
+
+        .svd-contact-quick-icon {
+            width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(180,140,70,.25);
+            border-radius: 50%;
+            background: #fff;
+            color: #9d742d;
+            font-size: 20px;
+        }
+
+        .svd-contact-quick-copy h3 {
+            margin: 0 0 3px;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #3d352e;
+        }
+
+        .svd-contact-quick-copy p {
+            margin: 0;
+            color: #746b63;
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        .svd-contact-quick-help > a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 11px 14px;
+            border-radius: 7px;
+            background: #8f6722;
+            color: #fff;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .svd-contact-quick-help > a:hover {
+            background: #735118;
+        }
+
+        @media (max-width: 700px) {
+            .svd-contact-quick-help {
+                grid-template-columns: auto 1fr;
+            }
+
+            .svd-contact-quick-help > a {
+                grid-column: 1 / -1;
+                width: 100%;
+            }
+        }
+    </style>
 
 </head>
 
@@ -1297,127 +1371,63 @@
          HEADER
     ====================================================== -->
 
-    <header class="svd-contact-header">
-
-        <div class="svd-contact-header-inner">
-
-
-            <!-- LOGO -->
-
-            <a
-                href="index.html"
-                class="svd-contact-logo"
-                aria-label="ShriVatsaDarbar Home"
-            >
-
-                <img
-                    src="images/logos/logo-white.webp"
-                    alt="ShriVatsaDarbar"
-                >
-
+    <!-- =====================================================
+         SHARED HEADER
+    ====================================================== -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand">
+                <img src="images/logos/logo-white.webp"
+                     alt="ShriVatsaDarbar — Sarees & Suits">
             </a>
 
+            <button class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-
-            <!-- NAVIGATION -->
-
-            <nav
-                class="svd-contact-navigation"
-                aria-label="Main Navigation"
-            >
-
-                <a href="index.html">
-                    Home
-                </a>
-
-
-                <a
-                    href="collections/collections.html?category=saree"
-                >
-                    Sarees
-                </a>
-
-
-                <a
-                    href="collections/collections.html?category=suit"
-                >
-                    Suits
-                </a>
-
-
-                <a href="collections/collections.html">
-                    New Arrivals
-                </a>
-
-
-                <a href="collections/collections.html">
-                    Best Sellers
-                </a>
-
-
-                <a href="about.html">
-                    About Us
-                </a>
-
-
-                <a
-                    href="contact.html"
-                    class="active"
-                >
-                    Contact Us
-                </a>
-
+            <nav class="main-navigation" id="mainNavigation" aria-label="Main Navigation">
+                <a href="index.html">Home</a>
+                <a href="collections/collections.html?category=saree">Sarees</a>
+                <a href="collections/collections.html?category=suit">Suits</a>
+                <a href="collections/collections.html">New Arrivals</a>
+                <a href="collections/collections.html">Best Sellers</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html" class="active">Contact Us</a>
             </nav>
 
-
-
-            <!-- ACTIONS -->
-
-            <div class="svd-contact-actions">
-
-                <a
-                    href="#"
-                    aria-label="Search"
-                    onclick="showComingSoon('Search'); return false;"
-                >
+            <div class="header-actions">
+                <button class="icon-button" id="searchButton" type="button" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-
-
-                <a
-                    href="#"
-                    aria-label="Wishlist"
-                    onclick="showComingSoon('Wishlist'); return false;"
-                >
+                </button>
+                <button class="icon-button" type="button" aria-label="Wishlist" onclick="showComingSoon('Wishlist')">
                     <i class="fa-regular fa-heart"></i>
-                </a>
-
-
-                <a
-                    href="#"
-                    aria-label="Account"
-                    onclick="showComingSoon('Account'); return false;"
-                >
+                </button>
+                <button class="icon-button" type="button" aria-label="Account" onclick="showComingSoon('Account')">
                     <i class="fa-regular fa-user"></i>
-                </a>
-
-
-                <a
-                    href="#"
-                    aria-label="Shopping Bag"
-                    onclick="showComingSoon('Shopping Bag'); return false;"
-                >
+                </button>
+                <button class="icon-button bag-button" id="shoppingBagButton" type="button" aria-label="Open shopping bag">
                     <i class="fa-solid fa-bag-shopping"></i>
-                </a>
-
+                    <span class="bag-count" id="bagCount">0</span>
+                </button>
             </div>
-
-
         </div>
-
     </header>
 
-
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="search-close" id="searchClose" type="button" aria-label="Close search">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="search-box">
+            <span>Search our collection</span>
+            <input type="search" id="siteSearch" placeholder="Search sarees, suits..." autocomplete="off">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
 
     <!-- =====================================================
          HERO
@@ -1936,6 +1946,22 @@
 
 
 
+                <!-- QUICK WHATSAPP HELP -->
+                <div class="svd-contact-quick-help">
+                    <div class="svd-contact-quick-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="svd-contact-quick-copy">
+                        <h3>Prefer Quick Help?</h3>
+                        <p>For product questions, availability or order assistance, chat with us directly on WhatsApp.</p>
+                    </div>
+                    <a href="https://wa.me/918826196544"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
                 <!-- MAP -->
 
                 <div class="svd-contact-map">
@@ -1996,7 +2022,7 @@
             </h3>
 
             <p>
-                Every piece is carefully selected for you.
+                Every piece is thoughtfully selected for your wardrobe.
             </p>
 
         </div>
@@ -2012,7 +2038,7 @@
             </h3>
 
             <p>
-                We care about quality, detail and timeless style.
+                We look for quality, detail and timeless style.
             </p>
 
         </div>
@@ -2028,7 +2054,7 @@
             </h3>
 
             <p>
-                We're here to make your shopping experience special.
+                Personal assistance when you need it.
             </p>
 
         </div>
@@ -2044,7 +2070,7 @@
             </h3>
 
             <p>
-                Beautiful products chosen with uncompromising care.
+                Beautiful pieces selected with care and attention.
             </p>
 
         </div>
