@@ -1,1 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | ShriVatsaDarbar — Premium Sarees & Suits</title>
+
+    <meta name="description"
+          content="Discover the story behind ShriVatsaDarbar — a premium Indian fashion destination for thoughtfully curated sarees and suits, where timeless tradition meets contemporary elegance.">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="about.html">
+
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/webp"
+          href="images/logos/logo.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main Site CSS -->
+    <link rel="stylesheet"
+          href="styles.css">
+
+
+    <style>
+
+        /* =========================================================
+           ABOUT PAGE
+           ShriVatsaDarbar Fashion
+        ========================================================= */
+
+        :root {
+            --about-ivory: #fbf8f2;
+            --about-cream: #f4eee4;
+            --about-soft: #eee5d8;
+            --about-gold: #b28a45;
+            --about-gold-light: #d4b477;
+            --about-wine: #641b24;
+            --about-wine-dark: #481018;
+            --about-ink: #302722;
+            --about-muted: #70665d;
+            --about-line: rgba(178, 138, 69, 0.28);
+        }
+
+
+        /* =========================================================
+           ANNOUNCEMENT
+        ========================================================= */
+
+        .about-announcement {
+            background: var(--about-wine-dark);
+            color: #f8f1e6;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-announcement-inner {
+            width: min(1320px, calc(100% - 40px));
+            margin: 0 auto;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .about-announcement-divider {
+            opacity: 0.45;
+        }
+
+        .about-announcement a {
+            color: #f8f1e6;
+            text-decoration: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .about-announcement a:hover {
+            opacity: 0.7;
+        }
+
+
+        /* =========================================================
+           PREMIUM HEADER
+        ========================================================= */
+
+        .about-header {
+            position: relative;
+            z-index: 100;
+            background: rgba(255, 253, 249, 0.98);
+            border-bottom: 1px solid rgba(178, 138, 69, 0.18);
+        }
+
+        .about-header-container {
+            width: min(1320px, calc(100% - 40px));
+            min-height: 104px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 245px 1fr auto;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .about-brand {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .about-brand img {
+            display: block;
+            width: 205px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .about-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(18px, 2vw, 34px);
+        }
+
+        .about-navigation a {
+            position: relative;
+            padding: 10px 0;
+
+            color: var(--about-ink);
+            text-decoration: none;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+
+            letter-spacing: 0.055em;
+            white-space: nowrap;
+
+            transition: color 0.25s ease;
+        }
+
+        .about-navigation a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 2px;
+
+            height: 1px;
+            background: var(--about-gold);
+
+            transition: right 0.3s ease;
+        }
+
+        .about-navigation a:hover,
+        .about-navigation a.active {
+            color: var(--about-wine);
+        }
+
+        .about-navigation a:hover::after,
+        .about-navigation a.active::after {
+            right: 0;
+        }
+
+
+        /* =========================================================
+           HEADER ACTIONS
+        ========================================================= */
+
+        .about-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .about-icon-button {
+            width: 42px;
+            height: 42px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 0;
+            background: transparent;
+            color: var(--about-ink);
+
+            cursor: pointer;
+            font-size: 17px;
+
+            position: relative;
+
+            transition:
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .about-icon-button:hover {
+            color: var(--about-wine);
+            transform: translateY(-1px);
+        }
+
+        .about-bag-count {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+
+            min-width: 17px;
+            height: 17px;
+            padding: 0 4px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--about-wine);
+            color: #fff;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .about-mobile-menu-button {
+            display: none;
+
+            width: 44px;
+            height: 44px;
+
+            border: 0;
+            background: transparent;
+
+            color: var(--about-ink);
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           SEARCH OVERLAY
+        ========================================================= */
+
+        .about-search-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            background: rgba(34, 18, 19, 0.78);
+            backdrop-filter: blur(8px);
+
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+
+            padding-top: 16vh;
+        }
+
+        .about-search-overlay.is-open {
+            display: flex;
+        }
+
+        .about-search-panel {
+            width: min(720px, calc(100% - 36px));
+            padding: 42px;
+
+            background: var(--about-ivory);
+
+            border: 1px solid var(--about-line);
+
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
+        }
+
+        .about-search-eyebrow {
+            margin-bottom: 12px;
+
+            color: var(--about-gold);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .about-search-title {
+            margin: 0 0 24px;
+
+            color: var(--about-ink);
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 42px;
+            font-weight: 500;
+        }
+
+        .about-search-field {
+            display: flex;
+            align-items: center;
+
+            border-bottom: 1px solid var(--about-gold);
+
+            padding-bottom: 12px;
+        }
+
+        .about-search-field input {
+            flex: 1;
+
+            border: 0;
+            outline: 0;
+            background: transparent;
+
+            color: var(--about-ink);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 17px;
+        }
+
+        .about-search-field i {
+            color: var(--about-gold);
+        }
+
+        .about-search-close {
+            position: absolute;
+            top: 28px;
+            right: 30px;
+
+            width: 44px;
+            height: 44px;
+
+            border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 50%;
+
+            background: transparent;
+            color: white;
+
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .about-hero {
+            position: relative;
+            min-height: 650px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            background: var(--about-cream);
+
+            overflow: hidden;
+        }
+
+        .about-hero-image {
+            position: relative;
+            min-height: 650px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(54, 22, 17, 0.04),
+                    rgba(54, 22, 17, 0)
+                );
+        }
+
+        .about-hero-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+            object-position: center;
+
+            filter: saturate(0.92);
+        }
+
+        .about-hero-image::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent 60%,
+                    rgba(244, 238, 228, 0.72) 100%
+                );
+        }
+
+        .about-hero-content {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 70px 8vw 70px 6vw;
+
+            text-align: center;
+        }
+
+        .about-hero-content-inner {
+            max-width: 610px;
+        }
+
+        .about-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 13px;
+
+            margin-bottom: 22px;
+
+            color: var(--about-gold);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+        }
+
+        .about-eyebrow::before,
+        .about-eyebrow::after {
+            content: "";
+
+            width: 30px;
+            height: 1px;
+
+            background: var(--about-gold);
+        }
+
+        .about-hero h1 {
+            margin: 0;
+
+            color: var(--about-ink);
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(54px, 5vw, 78px);
+            line-height: 0.96;
+            font-weight: 500;
+
+            letter-spacing: -0.025em;
+        }
+
+        .about-hero h1 em {
+            display: block;
+
+            color: var(--about-wine);
+
+            font-weight: 400;
+        }
+
+        .about-hero-rule {
+            width: 70px;
+            height: 1px;
+
+            margin: 30px auto;
+
+            background: var(--about-gold);
+        }
+
+        .about-hero-copy {
+            max-width: 530px;
+            margin: 0 auto;
+
+            color: var(--about-muted);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .about-hero-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+
+            margin-top: 32px;
+            padding: 15px 30px;
+
+            background: var(--about-wine);
+            color: white;
+
+            text-decoration: none;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .about-hero-cta:hover {
+            background: var(--about-wine-dark);
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           BRAND INTRO
+        ========================================================= */
+
+        .about-brand-section {
+            padding: 110px 0;
+
+            background: var(--about-ivory);
+        }
+
+        .about-container {
+            width: min(1200px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .about-brand-grid {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .about-section-label {
+            margin-bottom: 17px;
+
+            color: var(--about-gold);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .about-brand-section h2,
+        .about-commitment h2 {
+            margin: 0;
+
+            color: var(--about-ink);
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(44px, 4.3vw, 64px);
+            line-height: 1.02;
+            font-weight: 500;
+        }
+
+        .about-brand-section h2 span,
+        .about-commitment h2 span {
+            color: var(--about-wine);
+        }
+
+        .about-heading-line {
+            width: 58px;
+            height: 1px;
+
+            margin: 26px 0;
+
+            background: var(--about-gold);
+        }
+
+        .about-brand-copy {
+            color: var(--about-muted);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .about-brand-copy + .about-brand-copy {
+            margin-top: 18px;
+        }
+
+
+        /* =========================================================
+           SIGNATURE VALUES
+        ========================================================= */
+
+        .about-signatures {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            border-top: 1px solid var(--about-line);
+            border-bottom: 1px solid var(--about-line);
+        }
+
+        .about-signature {
+            padding: 28px 22px;
+
+            text-align: center;
+
+            position: relative;
+        }
+
+        .about-signature + .about-signature::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 25%;
+            bottom: 25%;
+
+            width: 1px;
+            background: var(--about-line);
+        }
+
+        .about-signature-icon {
+            width: 45px;
+            height: 45px;
+
+            margin: 0 auto 12px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--about-gold);
+
+            font-size: 21px;
+        }
+
+        .about-signature h3 {
+            margin: 0 0 7px;
+
+            color: var(--about-ink);
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 23px;
+            font-weight: 600;
+        }
+
+        .about-signature p {
+            margin: 0;
+
+            color: var(--about-muted);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            line-height: 1.65;
+        }
+
+
+        /* =========================================================
+           COMMITMENT
+        ========================================================= */
+
+        .about-commitment {
+            background: var(--about-soft);
+        }
+
+        .about-commitment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .about-commitment-image {
+            min-height: 560px;
+            overflow: hidden;
+        }
+
+        .about-commitment-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .about-commitment-content {
+            display: flex;
+            align-items: center;
+
+            padding: 80px 8vw 80px 7vw;
+        }
+
+        .about-commitment-content-inner {
+            max-width: 550px;
+        }
+
+        .about-commitment-copy {
+            margin: 26px 0 0;
+
+            color: var(--about-muted);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .about-text-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+
+            margin-top: 28px;
+
+            color: var(--about-wine);
+
+            text-decoration: none;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 0.17em;
+            text-transform: uppercase;
+        }
+
+        .about-text-link i {
+            transition: transform 0.25s ease;
+        }
+
+        .about-text-link:hover i {
+            transform: translateX(5px);
+        }
+
+
+        /* =========================================================
+           VALUES
+        ========================================================= */
+
+        .about-values-section {
+            padding: 100px 0;
+
+            background: var(--about-ivory);
+        }
+
+        .about-centered-heading {
+            text-align: center;
+        }
+
+        .about-centered-heading .about-section-label {
+            margin-bottom: 13px;
+        }
+
+        .about-centered-heading h2 {
+            margin: 0;
+
+            color: var(--about-ink);
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(42px, 4vw, 58px);
+            font-weight: 500;
+        }
+
+        .about-values-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+
+            margin: 22px 0 55px;
+        }
+
+        .about-values-line span {
+            width: 75px;
+            height: 1px;
+            background: var(--about-line);
+        }
+
+        .about-values-line i {
+            color: var(--about-gold);
+            font-size: 10px;
+        }
+
+        .about-values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            border-top: 1px solid var(--about-line);
+            border-bottom: 1px solid var(--about-line);
+        }
+
+        .about-value {
+            padding: 45px 30px;
+
+            text-align: center;
+
+            position: relative;
+        }
+
+        .about-value + .about-value::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 22%;
+            bottom: 22%;
+
+            width: 1px;
+            background: var(--about-line);
+        }
+
+        .about-value-icon {
+            margin-bottom: 17px;
+
+            color: var(--about-gold);
+
+            font-size: 26px;
+        }
+
+        .about-value h3 {
+            margin: 0 0 9px;
+
+            color: var(--about-ink);
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .about-value p {
+            max-width: 190px;
+            margin: 0 auto;
+
+            color: var(--about-muted);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           QUOTE
+        ========================================================= */
+
+        .about-quote {
+            position: relative;
+
+            padding: 105px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(238, 229, 216, 0.90),
+                    rgba(238, 229, 216, 0.90)
+                ),
+                url("images/sarees/saree-001/sarees-01-close-embroidery.webp")
+                center / cover no-repeat;
+
+            text-align: center;
+        }
+
+        .about-quote::before,
+        .about-quote::after {
+            content: "✦";
+
+            position: absolute;
+
+            top: 50%;
+
+            color: rgba(178, 138, 69, 0.30);
+
+            font-size: 55px;
+            transform: translateY(-50%);
+        }
+
+        .about-quote::before {
+            left: 7%;
+        }
+
+        .about-quote::after {
+            right: 7%;
+        }
+
+        .about-quote blockquote {
+            max-width: 760px;
+            margin: 0 auto;
+
+            color: var(--about-ink);
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(34px, 4vw, 51px);
+            line-height: 1.08;
+            font-weight: 500;
+        }
+
+        .about-quote cite {
+            display: block;
+
+            margin-top: 26px;
+
+            color: var(--about-wine);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 600;
+
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           WHATSAPP FLOAT
+        ========================================================= */
+
+        .about-whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+
+            z-index: 900;
+
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #25D366;
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 25px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.18);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .about-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 14px 35px rgba(0, 0, 0, 0.23);
+        }
+
+
+        /* =========================================================
+           MOBILE NAVIGATION
+        ========================================================= */
+
+        @media (max-width: 1080px) {
+
+            .about-header-container {
+                grid-template-columns: 210px 1fr auto;
+                gap: 15px;
+            }
+
+            .about-brand img {
+                width: 185px;
+            }
+
+            .about-navigation {
+                gap: 16px;
+            }
+
+            .about-navigation a {
+                font-size: 11px;
+            }
+
+        }
+
+
+        @media (max-width: 900px) {
+
+            .about-header-container {
+                min-height: 82px;
+                grid-template-columns: auto 1fr auto;
+            }
+
+            .about-brand img {
+                width: 175px;
+            }
+
+            .about-navigation {
+                display: none;
+            }
+
+            .about-mobile-menu-button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .about-brand {
+                grid-column: 2;
+                grid-row: 1;
+
+                justify-content: center;
+            }
+
+            .about-header-actions {
+                grid-column: 3;
+                grid-row: 1;
+            }
+
+            .about-header-actions .about-account-button,
+            .about-header-actions .about-wishlist-button {
+                display: none;
+            }
+
+            .about-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero-image {
+                min-height: 500px;
+            }
+
+            .about-hero-content {
+                min-height: 500px;
+                padding: 70px 30px;
+            }
+
+            .about-brand-grid {
+                grid-template-columns: 1fr;
+                gap: 55px;
+            }
+
+            .about-commitment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-commitment-image {
+                min-height: 470px;
+            }
+
+            .about-commitment-content {
+                padding: 70px 30px;
+            }
+
+            .about-values-grid,
+            .about-signatures {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-value:nth-child(3)::before {
+                display: none;
+            }
+
+            .about-signature:nth-child(3)::before {
+                display: none;
+            }
+
+            .about-value:nth-child(n+3) {
+                border-top: 1px solid var(--about-line);
+            }
+
+            .about-signature:nth-child(n+3) {
+                border-top: 1px solid var(--about-line);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .about-announcement-inner {
+                width: calc(100% - 24px);
+
+                gap: 9px;
+
+                font-size: 8px;
+                letter-spacing: 0.09em;
+
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .about-announcement-divider {
+                display: none;
+            }
+
+            .about-header-container {
+                width: calc(100% - 24px);
+                min-height: 72px;
+            }
+
+            .about-brand img {
+                width: 150px;
+            }
+
+            .about-icon-button {
+                width: 36px;
+                height: 36px;
+
+                font-size: 15px;
+            }
+
+            .about-bag-count {
+                top: 0;
+                right: 0;
+            }
+
+            .about-hero-image {
+                min-height: 390px;
+            }
+
+            .about-hero-content {
+                min-height: auto;
+                padding: 65px 22px 70px;
+            }
+
+            .about-hero h1 {
+                font-size: 52px;
+            }
+
+            .about-hero-copy {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .about-brand-section,
+            .about-values-section {
+                padding: 75px 0;
+            }
+
+            .about-container {
+                width: calc(100% - 32px);
+            }
+
+            .about-brand-section h2,
+            .about-commitment h2 {
+                font-size: 45px;
+            }
+
+            .about-signatures,
+            .about-values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-signature + .about-signature::before,
+            .about-value + .about-value::before {
+                display: none;
+            }
+
+            .about-signature + .about-signature,
+            .about-value + .about-value {
+                border-top: 1px solid var(--about-line);
+            }
+
+            .about-signature {
+                padding: 25px 20px;
+            }
+
+            .about-value {
+                padding: 35px 20px;
+            }
+
+            .about-commitment-image {
+                min-height: 360px;
+            }
+
+            .about-commitment-content {
+                padding: 60px 22px;
+            }
+
+            .about-quote {
+                padding: 80px 25px;
+            }
+
+            .about-quote::before,
+            .about-quote::after {
+                display: none;
+            }
+
+            .about-quote blockquote {
+                font-size: 35px;
+            }
+
+            .about-search-panel {
+                padding: 30px 22px;
+            }
+
+            .about-search-title {
+                font-size: 35px;
+            }
+
+            .about-whatsapp {
+                width: 50px;
+                height: 50px;
+
+                right: 15px;
+                bottom: 15px;
+
+                font-size: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     ANNOUNCEMENT BAR
+========================================================= -->
+
+<div class="about-announcement">
+
+    <div class="about-announcement-inner">
+
+        <span>
+            ShriVatsaDarbar
+        </span>
+
+        <span class="about-announcement-divider">
+            |
+        </span>
+
+        <span>
+            Premium Sarees &amp; Suits
+        </span>
+
+        <span class="about-announcement-divider">
+            |
+        </span>
+
+        <a href="https://wa.me/918826196544"
+           target="_blank"
+           rel="noopener noreferrer">
+            Order on WhatsApp
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="about-header">
+
+    <div class="about-header-container">
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="about-mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- BRAND -->
+
+        <a href="index.html"
+           class="about-brand"
+           aria-label="ShriVatsaDarbar Home">
+
+            <img
+                src="images/logos/logo.webp"
+                alt="ShriVatsaDarbar">
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="about-navigation"
+            id="mainNavigation"
+            aria-label="Main navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="collections/collections.html?category=saree">
+                Sarees
+            </a>
+
+            <a href="collections/collections.html?category=suit">
+                Suits
+            </a>
+
+            <a href="collections/collections.html">
+                New Arrivals
+            </a>
+
+            <a href="collections/collections.html">
+                Best Sellers
+            </a>
+
+            <a href="our-story.html">
+                Our Story
+            </a>
+
+            <a href="about.html"
+               class="active"
+               aria-current="page">
+                About Us
+            </a>
+
+            <a href="reviews.html">
+                Reviews
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="about-header-actions">
+
+            <button
+                class="about-icon-button"
+                id="searchButton"
+                type="button"
+                aria-label="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+
+            <button
+                class="about-icon-button about-wishlist-button"
+                type="button"
+                aria-label="Wishlist"
+                onclick="showComingSoon('Wishlist')">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+
+            <button
+                class="about-icon-button about-account-button"
+                type="button"
+                aria-label="Account"
+                onclick="showComingSoon('Account')">
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+
+            <button
+                class="about-icon-button"
+                id="shoppingBagButton"
+                type="button"
+                aria-label="Open shopping bag">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span
+                    class="about-bag-count"
+                    id="bagCount">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     SEARCH OVERLAY
+========================================================= -->
+
+<div
+    class="about-search-overlay"
+    id="searchOverlay"
+    aria-hidden="true">
+
+    <button
+        class="about-search-close"
+        id="searchClose"
+        type="button"
+        aria-label="Close search">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <div class="about-search-panel">
+
+        <div class="about-search-eyebrow">
+            ShriVatsaDarbar
+        </div>
+
+        <h2 class="about-search-title">
+            Find Something Beautiful
+        </h2>
+
+        <div class="about-search-field">
+
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search sarees, suits..."
+                autocomplete="off"
+                aria-label="Search products">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="about-hero">
+
+
+    <!-- IMAGE -->
+
+    <div class="about-hero-image">
+
+        <img
+            src="images/sarees/saree-001/sarees-01-lifestyle.webp"
+            alt="ShriVatsaDarbar premium saree collection"
+            loading="eager">
+
+    </div>
+
+
+    <!-- CONTENT -->
+
+    <div class="about-hero-content">
+
+        <div class="about-hero-content-inner">
+
+            <div class="about-eyebrow">
+                About Us
+            </div>
+
+
+            <h1>
+                More Than Outfits,
+                <em>A Story of Grace.</em>
+            </h1>
+
+
+            <div class="about-hero-rule"></div>
+
+
+            <p class="about-hero-copy">
+                At ShriVatsaDarbar, we believe Indian fashion is more than
+                what you wear. It is a reflection of heritage, individuality
+                and the moments that become part of your story.
+            </p>
+
+
+            <a
+                href="our-story.html"
+                class="about-hero-cta">
+
+                Discover Our Story
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OUR BRAND
+========================================================= -->
+
+<section class="about-brand-section">
+
+    <div class="about-container">
+
+
+        <div class="about-brand-grid">
+
+
+            <!-- TEXT -->
+
+            <div>
+
+                <div class="about-section-label">
+                    Our Brand
+                </div>
+
+
+                <h2>
+                    Rooted in Tradition,
+                    <span>Designed for Today.</span>
+                </h2>
+
+
+                <div class="about-heading-line"></div>
+
+
+                <p class="about-brand-copy">
+
+                    ShriVatsaDarbar is a celebration of Indian textiles,
+                    graceful silhouettes and the timeless beauty of
+                    traditional dressing.
+
+                </p>
+
+
+                <p class="about-brand-copy">
+
+                    Our sarees and suits are thoughtfully curated for women
+                    who appreciate refined details, elegant design and
+                    clothing that feels special without losing its sense
+                    of authenticity.
+
+                </p>
+
+            </div>
+
+
+            <!-- SIGNATURES -->
+
+            <div>
+
+                <div class="about-signatures">
+
+
+                    <div class="about-signature">
+
+                        <div class="about-signature-icon">
+                            <i class="fa-solid fa-feather-pointed"></i>
+                        </div>
+
+                        <h3>
+                            Curated
+                        </h3>
+
+                        <p>
+                            Thoughtfully selected pieces
+                            with an eye for elegance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-signature">
+
+                        <div class="about-signature-icon">
+                            <i class="fa-regular fa-gem"></i>
+                        </div>
+
+                        <h3>
+                            Refined
+                        </h3>
+
+                        <p>
+                            Details that bring a
+                            sophisticated finish.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-signature">
+
+                        <div class="about-signature-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+                        <h3>
+                            Personal
+                        </h3>
+
+                        <p>
+                            Fashion chosen for
+                            meaningful occasions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-signature">
+
+                        <div class="about-signature-icon">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </div>
+
+                        <h3>
+                            Timeless
+                        </h3>
+
+                        <p>
+                            Styles designed to remain
+                            beautiful beyond a season.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     COMMITMENT
+========================================================= -->
+
+<section class="about-commitment">
+
+    <div class="about-commitment-grid">
+
+
+        <!-- IMAGE -->
+
+        <div class="about-commitment-image">
+
+            <img
+                src="images/sarees/saree-001/sarees-01-close-embroidery.webp"
+                alt="Detailed Indian textile embroidery"
+                loading="lazy">
+
+        </div>
+
+
+        <!-- TEXT -->
+
+        <div class="about-commitment-content">
+
+            <div class="about-commitment-content-inner">
+
+                <div class="about-section-label">
+                    Our Commitment
+                </div>
+
+
+                <h2>
+                    The Beauty Is
+                    <span>In The Details.</span>
+                </h2>
+
+
+                <div class="about-heading-line"></div>
+
+
+                <p class="about-commitment-copy">
+
+                    We look beyond the first impression. From the fall of
+                    a saree to the detailing of an embroidered suit, every
+                    piece we select is considered for the details that make
+                    it feel distinctive.
+
+                </p>
+
+
+                <p class="about-commitment-copy">
+
+                    Our aim is simple: to bring together traditional Indian
+                    aesthetics and a modern sense of elegance, so you can
+                    choose something that feels beautiful, confident and
+                    genuinely yours.
+
+                </p>
+
+
+                <a
+                    href="collections/collections.html"
+                    class="about-text-link">
+
+                    Explore The Collection
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VALUES
+========================================================= -->
+
+<section class="about-values-section">
+
+    <div class="about-container">
+
+
+        <div class="about-centered-heading">
+
+            <div class="about-section-label">
+                Our Values
+            </div>
+
+            <h2>
+                What We Stand For
+            </h2>
+
+        </div>
+
+
+        <div class="about-values-line">
+
+            <span></span>
+
+            <i class="fa-solid fa-diamond"></i>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="about-values-grid">
+
+
+            <article class="about-value">
+
+                <div class="about-value-icon">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <h3>
+                    Authenticity
+                </h3>
+
+                <p>
+                    Staying connected to the beauty
+                    and character of Indian fashion.
+                </p>
+
+            </article>
+
+
+            <article class="about-value">
+
+                <div class="about-value-icon">
+                    <i class="fa-solid fa-hands-holding-circle"></i>
+                </div>
+
+                <h3>
+                    Thoughtfulness
+                </h3>
+
+                <p>
+                    Choosing every piece with
+                    care rather than simply following trends.
+                </p>
+
+            </article>
+
+
+            <article class="about-value">
+
+                <div class="about-value-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h3>
+                    Timelessness
+                </h3>
+
+                <p>
+                    Favouring designs that can
+                    become part of your wardrobe for years.
+                </p>
+
+            </article>
+
+
+            <article class="about-value">
+
+                <div class="about-value-icon">
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <h3>
+                    Customer Delight
+                </h3>
+
+                <p>
+                    Creating a thoughtful experience
+                    from discovery to conversation.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BRAND QUOTE
+========================================================= -->
+
+<section class="about-quote">
+
+    <blockquote>
+        “Grace is not just what you wear,
+        but how you carry your story.”
+    </blockquote>
+
+    <cite>
+        ShriVatsaDarbar
+    </cite>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     MASTER FOOTER
+========================================================= -->
+
+<div id="site-footer"></div>
+
+
+<!-- =========================================================
+     WHATSAPP
+========================================================= -->
+
+<a
+    href="https://wa.me/918826196544"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="about-whatsapp"
+    aria-label="Chat with ShriVatsaDarbar on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<!-- =========================================================
+     SHARED SCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
