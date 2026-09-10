@@ -12,13 +12,12 @@
  *
  * Add/edit products here instead.
  *
- * Current active catalogue migrated from product.html:
+ * Current active catalogue:
  * - 14 sarees
- * - 14 suits
+ * - 22 suits
  *
- * Future suit folders 015–022 can be added here when their
- * final product names/details are confirmed.
- * Suit 020 is currently excluded because its image folder is empty.
+ * Suit 015–022 have been added to support
+ * the New Arrivals catalogue.
  */
 
 window.SVD_PRODUCTS = {
@@ -778,6 +777,222 @@ window.SVD_PRODUCTS = {
 
         subtitle:
             "A beautiful final piece in the ShriVatsaDarbar suit edit.",
+
+        collection:
+            "ShriVatsa Collection"
+    },
+
+
+    /* =====================================================
+       SUIT 015
+    ===================================================== */
+
+    "suit-015": {
+        status: "active",
+
+        category: "Suit",
+
+        title: "Suit 015",
+
+        code: "SVD-SUIT-015",
+
+        images: [
+            "images/suits/suit-015/suits-015-lifestyle.webp",
+            "images/suits/suit-015/suits-015.webp",
+            "images/suits/suit-015/suits-015-close-embroidery.webp"
+        ],
+
+        subtitle:
+            "A new addition to the ShriVatsaDarbar suit collection.",
+
+        collection:
+            "ShriVatsa Collection"
+    },
+
+
+    /* =====================================================
+       SUIT 016
+    ===================================================== */
+
+    "suit-016": {
+        status: "active",
+
+        category: "Suit",
+
+        title: "Suit 016",
+
+        code: "SVD-SUIT-016",
+
+        images: [
+            "images/suits/suit-016/suits-016-lifestyle.webp",
+            "images/suits/suit-016/suits-016.webp",
+            "images/suits/suit-016/suits-016-close-embroidery.webp"
+        ],
+
+        subtitle:
+            "A new addition to the ShriVatsaDarbar suit collection.",
+
+        collection:
+            "ShriVatsa Collection"
+    },
+
+
+    /* =====================================================
+       SUIT 017
+    ===================================================== */
+
+    "suit-017": {
+        status: "active",
+
+        category: "Suit",
+
+        title: "Suit 017",
+
+        code: "SVD-SUIT-017",
+
+        images: [
+            "images/suits/suit-017/suits-017-lifestyle.webp",
+            "images/suits/suit-017/suits-017.webp",
+            "images/suits/suit-017/suits-017-close-embroidery.webp"
+        ],
+
+        subtitle:
+            "A new addition to the ShriVatsaDarbar suit collection.",
+
+        collection:
+            "ShriVatsa Collection"
+    },
+
+
+    /* =====================================================
+       SUIT 018
+    ===================================================== */
+
+    "suit-018": {
+        status: "active",
+
+        category: "Suit",
+
+        title: "Suit 018",
+
+        code: "SVD-SUIT-018",
+
+        images: [
+            "images/suits/suit-018/suits-018-lifestyle.webp",
+            "images/suits/suit-018/suits-018.webp",
+            "images/suits/suit-018/suits-018-close-embroidery.webp"
+        ],
+
+        subtitle:
+            "A new addition to the ShriVatsaDarbar suit collection.",
+
+        collection:
+            "ShriVatsa Collection"
+    },
+
+
+    /* =====================================================
+       SUIT 019
+    ===================================================== */
+
+    "suit-019": {
+        status: "active",
+
+        category: "Suit",
+
+        title: "Suit 019",
+
+        code: "SVD-SUIT-019",
+
+        images: [
+            "images/suits/suit-019/suits-019-lifestyle.webp",
+            "images/suits/suit-019/suits-019.webp",
+            "images/suits/suit-019/suits-019-close-embroidery.webp"
+        ],
+
+        subtitle:
+            "A new addition to the ShriVatsaDarbar suit collection.",
+
+        collection:
+            "ShriVatsa Collection"
+    },
+
+
+    /* =====================================================
+       SUIT 020
+    ===================================================== */
+
+    "suit-020": {
+        status: "active",
+
+        category: "Suit",
+
+        title: "Suit 020",
+
+        code: "SVD-SUIT-020",
+
+        images: [
+            "images/suits/suit-020/suits-020-lifestyle.webp",
+            "images/suits/suit-020/suits-020.webp",
+            "images/suits/suit-020/suits-020-close-embroidery.webp"
+        ],
+
+        subtitle:
+            "A new addition to the ShriVatsaDarbar suit collection.",
+
+        collection:
+            "ShriVatsa Collection"
+    },
+
+
+    /* =====================================================
+       SUIT 021
+    ===================================================== */
+
+    "suit-021": {
+        status: "active",
+
+        category: "Suit",
+
+        title: "Suit 021",
+
+        code: "SVD-SUIT-021",
+
+        images: [
+            "images/suits/suit-021/suits-021-lifestyle.webp",
+            "images/suits/suit-021/suits-021.webp",
+            "images/suits/suit-021/suits-021-close-embroidery.webp"
+        ],
+
+        subtitle:
+            "A new addition to the ShriVatsaDarbar suit collection.",
+
+        collection:
+            "ShriVatsa Collection"
+    },
+
+
+    /* =====================================================
+       SUIT 022
+    ===================================================== */
+
+    "suit-022": {
+        status: "active",
+
+        category: "Suit",
+
+        title: "Suit 022",
+
+        code: "SVD-SUIT-022",
+
+        images: [
+            "images/suits/suit-022/suits-022-lifestyle.webp",
+            "images/suits/suit-022/suits-022.webp",
+            "images/suits/suit-022/suits-022-close-embroidery.webp"
+        ],
+
+        subtitle:
+            "A new addition to the ShriVatsaDarbar suit collection.",
 
         collection:
             "ShriVatsa Collection"
