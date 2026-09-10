@@ -12,13 +12,25 @@
           content="#4b0713">
 
     <meta name="description"
-          content="Explore the best-selling premium sarees and elegant suits at ShreevatsaDharwa. Discover our most loved ethnic wear collections.">
+          content="Explore the ShriVatsaDarbar curated edit of premium sarees and elegant suits, selected for timeless style, graceful detailing and beautiful occasions.">
 
     <meta name="keywords"
-          content="best selling sarees, best selling suits, popular sarees, popular ethnic wear">
+          content="premium sarees, elegant suits, ethnic wear, ShriVatsaDarbar, sarees and suits">
+
+    <meta name="author"
+          content="ShriVatsaDarbar">
+
+    <meta property="og:title"
+          content="Best Sellers | ShriVatsaDarbar">
+
+    <meta property="og:description"
+          content="Discover the ShriVatsaDarbar curated edit of premium sarees and elegant suits.">
+
+    <meta property="og:type"
+          content="website">
 
     <title>
-        Best Sellers | ShreevatsaDharwa
+        Best Sellers | ShriVatsaDarbar
     </title>
 
 
@@ -33,7 +45,7 @@
           href="https://fonts.gstatic.com"
           crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
 
@@ -54,11 +66,10 @@
 
 
     <!-- =========================================================
-         BEST SELLERS PAGE CSS
+         BEST SELLERS PAGE STYLES
     ========================================================= -->
 
     <style>
-
 
         /* =====================================================
            PAGE
@@ -68,15 +79,13 @@
 
             background:
                 radial-gradient(
-                    circle at top,
-                    rgba(194, 151, 72, 0.10),
-                    transparent 35%
+                    circle at top center,
+                    rgba(194, 151, 72, 0.08),
+                    transparent 34%
                 ),
-                #f8f7f4;
+                #fbfaf7;
 
             min-height: 100vh;
-
-            padding-bottom: 80px;
 
         }
 
@@ -89,63 +98,58 @@
 
             text-align: center;
 
-            padding: 90px 20px 60px;
+            padding:
+                88px 20px
+                62px;
+
+            border-bottom:
+                1px solid
+                rgba(181, 140, 65, 0.14);
 
         }
 
 
         .best-sellers-eyebrow {
 
-            font-family: "DM Sans", sans-serif;
+            margin: 0 0 16px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
 
             font-size: 10px;
 
-            font-weight: 600;
+            font-weight: 700;
 
             letter-spacing: 4px;
 
-            color: #9b762e;
+            color: #a47d32;
 
-            margin-bottom: 18px;
+            text-transform: uppercase;
 
         }
 
 
         .best-sellers-hero h1 {
 
-            font-family: "Cormorant Garamond", serif;
+            margin: 0;
 
-            font-size: clamp(42px, 6vw, 70px);
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(46px, 6vw, 72px);
+
+            line-height: 0.98;
 
             font-weight: 500;
 
-            color: #2d2926;
-
-            margin: 0 0 18px;
+            color: #2b2521;
 
         }
 
-
-        .best-sellers-description {
-
-            max-width: 680px;
-
-            margin: auto;
-
-            font-family: "DM Sans", sans-serif;
-
-            font-size: 14px;
-
-            line-height: 1.9;
-
-            color: #6d6863;
-
-        }
-
-
-        /* =====================================================
-           ORNAMENT
-        ===================================================== */
 
         .best-sellers-ornament {
 
@@ -157,18 +161,19 @@
 
             gap: 12px;
 
-            margin: 25px auto;
+            margin: 24px auto;
 
         }
 
 
         .best-sellers-ornament span {
 
-            width: 45px;
+            width: 48px;
 
             height: 1px;
 
-            background: #c5a15a;
+            background:
+                #c5a05a;
 
         }
 
@@ -177,7 +182,88 @@
 
             font-size: 8px;
 
-            color: #b58a37;
+            color: #b88a2d;
+
+        }
+
+
+        .best-sellers-description {
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            color: #716961;
+
+        }
+
+
+        /* =====================================================
+           CURATED NOTE
+        ===================================================== */
+
+        .best-sellers-note {
+
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            padding:
+                42px 25px 0;
+
+            text-align: center;
+
+        }
+
+
+        .best-sellers-note-inner {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            max-width: 760px;
+
+            padding:
+                13px 20px;
+
+            border:
+                1px solid
+                rgba(181, 140, 65, 0.22);
+
+            background:
+                rgba(255,255,255,0.72);
+
+            color: #746b62;
+
+            font-size: 11px;
+
+            line-height: 1.6;
+
+            letter-spacing: .02em;
+
+        }
+
+
+        .best-sellers-note-inner i {
+
+            color: #b88a2d;
+
+            font-size: 13px;
+
+            flex-shrink: 0;
 
         }
 
@@ -190,15 +276,17 @@
 
             max-width: 1250px;
 
-            margin: 0 auto 40px;
+            margin:
+                0 auto;
 
-            padding: 0 25px;
+            padding:
+                45px 25px 22px;
 
             display: flex;
 
-            justify-content: space-between;
-
             align-items: center;
+
+            justify-content: space-between;
 
             gap: 20px;
 
@@ -207,30 +295,85 @@
 
         .best-sellers-count {
 
-            font-family: "DM Sans", sans-serif;
+            margin: 0;
 
-            font-size: 13px;
+            font-family:
+                "DM Sans",
+                sans-serif;
 
-            color: #77716b;
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            color: #847a71;
+
+        }
+
+
+        .best-sellers-filter-wrap {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+        }
+
+
+        .best-sellers-filter-label {
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            color: #887d73;
 
         }
 
 
         .best-sellers-filter {
 
-            border: 1px solid rgba(0, 0, 0, 0.12);
+            min-width: 150px;
+
+            padding:
+                11px 14px;
+
+            border:
+                1px solid
+                #ddd2c5;
 
             background: #ffffff;
 
-            padding: 12px 18px;
+            color: #403832;
 
-            font-family: "DM Sans", sans-serif;
+            font-family:
+                "DM Sans",
+                sans-serif;
 
-            font-size: 12px;
-
-            color: #3b3733;
+            font-size: 11px;
 
             outline: none;
+
+            cursor: pointer;
+
+        }
+
+
+        .best-sellers-filter:focus {
+
+            border-color:
+                #b88a2d;
 
         }
 
@@ -243,16 +386,20 @@
 
             max-width: 1250px;
 
-            margin: auto;
+            margin:
+                0 auto;
 
-            padding: 0 25px;
+            padding:
+                0 25px
+                80px;
 
             display: grid;
 
             grid-template-columns:
                 repeat(3, minmax(0, 1fr));
 
-            gap: 28px;
+            gap:
+                46px 24px;
 
         }
 
@@ -263,22 +410,30 @@
 
         .best-seller-card {
 
-            background: #ffffff;
+            min-width: 0;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid
+                #eee7df;
 
             transition:
-                transform 0.35s ease,
-                box-shadow 0.35s ease;
+                transform .35s ease,
+                box-shadow .35s ease;
 
         }
 
 
         .best-seller-card:hover {
 
-            transform: translateY(-6px);
+            transform:
+                translateY(-5px);
 
             box-shadow:
                 0 18px 45px
-                rgba(0, 0, 0, 0.10);
+                rgba(56, 42, 31, .10);
 
         }
 
@@ -291,13 +446,15 @@
 
             position: relative;
 
-            overflow: hidden;
-
-            aspect-ratio: 0.78;
-
             display: block;
 
-            background: #ece9e5;
+            overflow: hidden;
+
+            aspect-ratio:
+                0.76;
+
+            background:
+                #f3eee7;
 
         }
 
@@ -308,49 +465,60 @@
 
             height: 100%;
 
-            object-fit: cover;
-
             display: block;
 
-            transition: transform 0.6s ease;
+            object-fit: cover;
+
+            transition:
+                transform .7s
+                cubic-bezier(.22,1,.36,1);
 
         }
 
 
-        .best-seller-card:hover .best-seller-image img {
+        .best-seller-card:hover
+        .best-seller-image img {
 
-            transform: scale(1.05);
+            transform:
+                scale(1.045);
 
         }
 
 
         /* =====================================================
-           BEST SELLER BADGE
+           BADGE
         ===================================================== */
 
         .best-seller-badge {
 
             position: absolute;
 
-            top: 15px;
+            left: 14px;
 
-            left: 15px;
+            top: 14px;
 
-            z-index: 2;
+            z-index: 4;
 
-            background: #b58a37;
+            padding:
+                7px 10px;
 
-            color: #ffffff;
+            background:
+                #b88a2d;
 
-            font-family: "DM Sans", sans-serif;
+            color:
+                #ffffff;
 
-            font-size: 9px;
+            font-family:
+                "DM Sans",
+                sans-serif;
 
-            font-weight: 600;
+            font-size: 8px;
 
-            letter-spacing: 1px;
+            font-weight: 700;
 
-            padding: 8px 11px;
+            letter-spacing: 1.4px;
+
+            text-transform: uppercase;
 
         }
 
@@ -363,93 +531,823 @@
 
             position: absolute;
 
-            top: 14px;
+            top: 13px;
 
-            right: 14px;
+            right: 13px;
 
-            z-index: 2;
+            z-index: 5;
 
-            width: 38px;
+            width: 36px;
 
-            height: 38px;
+            height: 36px;
 
-            border: none;
+            border: 0;
 
             border-radius: 50%;
 
-            background: rgba(255, 255, 255, 0.95);
+            background:
+                rgba(255,255,255,.94);
 
-            color: #4b0713;
+            color:
+                #4b0713;
+
+            display: grid;
+
+            place-items: center;
 
             cursor: pointer;
 
-            display: flex;
+            box-shadow:
+                0 5px 18px
+                rgba(0,0,0,.08);
 
-            align-items: center;
+            transition:
+                background .25s ease,
+                color .25s ease,
+                transform .25s ease;
 
-            justify-content: center;
+        }
+
+
+        .best-seller-wishlist:hover {
+
+            background:
+                #4b0713;
+
+            color:
+                #ffffff;
+
+            transform:
+                scale(1.04);
 
         }
 
 
         /* =====================================================
-           PRODUCT INFORMATION
+           PRODUCT INFO
         ===================================================== */
 
         .best-seller-info {
 
-            padding: 20px;
+            padding:
+                20px 18px 21px;
 
-            text-align: center;
+            text-align:
+                center;
 
         }
 
 
         .best-seller-category {
 
-            font-family: "DM Sans", sans-serif;
+            margin:
+                0 0 7px;
 
-            font-size: 9px;
+            color:
+                #a47d32;
 
-            font-weight: 600;
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 8px;
+
+            font-weight: 700;
 
             letter-spacing: 2px;
 
-            color: #a47b31;
-
-            margin-bottom: 9px;
+            text-transform:
+                uppercase;
 
         }
 
 
         .best-seller-info h2 {
 
-            font-family: "Cormorant Garamond", serif;
+            margin:
+                0;
 
-            font-size: 24px;
+            color:
+                #302923;
 
-            font-weight: 600;
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
 
-            color: #2f2a26;
+            font-size:
+                25px;
 
-            margin: 0 0 10px;
+            line-height:
+                1.12;
+
+            font-weight:
+                600;
 
         }
 
 
-        .best-seller-price {
+        .best-seller-description {
 
-            font-family: "DM Sans", sans-serif;
+            margin:
+                9px auto 0;
 
-            font-size: 12px;
+            max-width:
+                290px;
 
-            color: #77716b;
+            color:
+                #81776e;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.6;
 
         }
 
 
         /* =====================================================
-           RESPONSIVE
+           PRODUCT ACTIONS
+        ===================================================== */
+
+        .best-seller-actions {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                8px;
+
+            margin-top:
+                17px;
+
+        }
+
+
+        .best-seller-view,
+        .best-seller-add {
+
+            min-height:
+                42px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                7px;
+
+            padding:
+                9px 10px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size:
+                9px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                .8px;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            cursor:
+                pointer;
+
+            transition:
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease;
+
+        }
+
+
+        .best-seller-view {
+
+            border:
+                1px solid
+                #4b0713;
+
+            background:
+                #ffffff;
+
+            color:
+                #4b0713;
+
+        }
+
+
+        .best-seller-view:hover {
+
+            background:
+                #4b0713;
+
+            color:
+                #ffffff;
+
+        }
+
+
+        .best-seller-add {
+
+            border:
+                1px solid
+                #4b0713;
+
+            background:
+                #4b0713;
+
+            color:
+                #ffffff;
+
+        }
+
+
+        .best-seller-add:hover {
+
+            background:
+                #690b1b;
+
+            border-color:
+                #690b1b;
+
+        }
+
+
+        .best-seller-add.added {
+
+            background:
+                #7b5a1d;
+
+            border-color:
+                #7b5a1d;
+
+        }
+
+
+        /* =====================================================
+           EMPTY / ERROR
+        ===================================================== */
+
+        .best-sellers-empty {
+
+            grid-column:
+                1 / -1;
+
+            padding:
+                70px 20px;
+
+            text-align:
+                center;
+
+            color:
+                #766c63;
+
+        }
+
+
+        .best-sellers-empty strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                8px;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size:
+                30px;
+
+            color:
+                #342b26;
+
+        }
+
+
+        /* =====================================================
+           CART DRAWER SUPPORT
+        ===================================================== */
+
+        .best-sellers-page .cart-drawer {
+
+            position: fixed;
+
+            top: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            z-index: 5000;
+
+            width: min(430px, 100%);
+
+            display: flex;
+
+            flex-direction: column;
+
+            background:
+                #fffdf9;
+
+            box-shadow:
+                -15px 0 45px
+                rgba(0,0,0,.16);
+
+            transform:
+                translateX(105%);
+
+            transition:
+                transform .35s ease;
+
+        }
+
+
+        .best-sellers-page .cart-drawer.active {
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        .best-sellers-page .cart-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 4999;
+
+            background:
+                rgba(30,20,15,.45);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition:
+                opacity .3s ease,
+                visibility .3s ease;
+
+        }
+
+
+        .best-sellers-page .cart-overlay.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+
+        .best-sellers-page .cart-header {
+
+            min-height:
+                72px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            padding:
+                0 25px;
+
+            border-bottom:
+                1px solid
+                #e9e0d5;
+
+        }
+
+
+        .best-sellers-page .cart-header h2 {
+
+            margin: 0;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size:
+                29px;
+
+            font-weight:
+                600;
+
+            color:
+                #302722;
+
+        }
+
+
+        .best-sellers-page .cart-close {
+
+            width:
+                36px;
+
+            height:
+                36px;
+
+            border:
+                1px solid
+                #ddd0c0;
+
+            border-radius:
+                50%;
+
+            background:
+                #ffffff;
+
+            color:
+                #4b0713;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            cursor:
+                pointer;
+
+        }
+
+
+        .best-sellers-page .cart-items {
+
+            flex:
+                1;
+
+            overflow-y:
+                auto;
+
+            padding:
+                10px 25px 20px;
+
+        }
+
+
+        .best-sellers-page .cart-empty {
+
+            padding:
+                75px 20px;
+
+            text-align:
+                center;
+
+            color:
+                #82766d;
+
+        }
+
+
+        .best-sellers-page .cart-empty i {
+
+            display:
+                block;
+
+            margin-bottom:
+                18px;
+
+            color:
+                #b88a2d;
+
+            font-size:
+                38px;
+
+        }
+
+
+        .best-sellers-page .cart-empty strong {
+
+            display:
+                block;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size:
+                26px;
+
+            color:
+                #342b26;
+
+        }
+
+
+        .best-sellers-page .cart-empty span {
+
+            display:
+                block;
+
+            margin-top:
+                8px;
+
+            font-size:
+                12px;
+
+        }
+
+
+        .best-sellers-page .cart-item {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                75px 1fr auto;
+
+            gap:
+                13px;
+
+            padding:
+                15px 0;
+
+            border-bottom:
+                1px solid
+                #eee5db;
+
+        }
+
+
+        .best-sellers-page .cart-item-image {
+
+            width:
+                75px;
+
+            height:
+                90px;
+
+            object-fit:
+                cover;
+
+            background:
+                #f5eee5;
+
+        }
+
+
+        .best-sellers-page .cart-item-details h3 {
+
+            margin:
+                0 0 5px;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size:
+                19px;
+
+            line-height:
+                1.1;
+
+            font-weight:
+                500;
+
+            color:
+                #302722;
+
+        }
+
+
+        .best-sellers-page .cart-item-code {
+
+            font-size:
+                9px;
+
+            color:
+                #988c82;
+
+            letter-spacing:
+                .7px;
+
+        }
+
+
+        .best-sellers-page .cart-item-controls {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            margin-top:
+                12px;
+
+        }
+
+
+        .best-sellers-page .cart-qty-button {
+
+            width:
+                28px;
+
+            height:
+                28px;
+
+            border:
+                1px solid
+                #ddd0c0;
+
+            background:
+                #ffffff;
+
+            color:
+                #4b0713;
+
+            cursor:
+                pointer;
+
+        }
+
+
+        .best-sellers-page .cart-qty-value {
+
+            min-width:
+                30px;
+
+            text-align:
+                center;
+
+            font-size:
+                11px;
+
+        }
+
+
+        .best-sellers-page .cart-remove {
+
+            border:
+                0;
+
+            background:
+                transparent;
+
+            color:
+                #9a8d82;
+
+            cursor:
+                pointer;
+
+        }
+
+
+        .best-sellers-page .cart-footer {
+
+            border-top:
+                1px solid
+                #e9e0d5;
+
+            padding:
+                18px 25px;
+
+        }
+
+
+        .best-sellers-page .cart-footer-note {
+
+            margin:
+                0 0 14px;
+
+            font-size:
+                10px;
+
+            line-height:
+                1.5;
+
+            color:
+                #8b7f75;
+
+            text-align:
+                center;
+
+        }
+
+
+        .best-sellers-page .cart-whatsapp-button {
+
+            width:
+                100%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                9px;
+
+            padding:
+                14px 18px;
+
+            border:
+                0;
+
+            background:
+                #4b0713;
+
+            color:
+                #ffffff;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size:
+                10px;
+
+            font-weight:
+                600;
+
+            letter-spacing:
+                1.3px;
+
+            text-transform:
+                uppercase;
+
+            cursor:
+                pointer;
+
+        }
+
+
+        .best-sellers-page .cart-clear-button {
+
+            width:
+                100%;
+
+            margin-top:
+                8px;
+
+            padding:
+                9px;
+
+            border:
+                0;
+
+            background:
+                transparent;
+
+            color:
+                #8a7c71;
+
+            font-size:
+                9px;
+
+            letter-spacing:
+                1px;
+
+            text-transform:
+                uppercase;
+
+            cursor:
+                pointer;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE — TABLET
         ===================================================== */
 
         @media (max-width: 900px) {
@@ -459,67 +1357,263 @@
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
 
-                gap: 18px;
+                gap:
+                    30px 16px;
 
             }
 
         }
 
+
+        /* =====================================================
+           RESPONSIVE — MOBILE
+        ===================================================== */
 
         @media (max-width: 600px) {
 
             .best-sellers-hero {
 
                 padding:
-                    65px 20px
-                    40px;
+                    62px 18px
+                    44px;
+
+            }
+
+
+            .best-sellers-hero h1 {
+
+                font-size:
+                    49px;
+
+            }
+
+
+            .best-sellers-description {
+
+                font-size:
+                    13px;
+
+                line-height:
+                    1.8;
+
+            }
+
+
+            .best-sellers-note {
+
+                padding:
+                    28px 15px 0;
+
+            }
+
+
+            .best-sellers-note-inner {
+
+                display:
+                    flex;
+
+                text-align:
+                    left;
 
             }
 
 
             .best-sellers-toolbar {
 
-                padding: 0 18px;
+                padding:
+                    34px 15px 18px;
+
+                align-items:
+                    flex-start;
+
+            }
+
+
+            .best-sellers-count {
+
+                font-size:
+                    9px;
+
+            }
+
+
+            .best-sellers-filter-wrap {
+
+                display:
+                    block;
+
+            }
+
+
+            .best-sellers-filter-label {
+
+                display:
+                    none;
+
+            }
+
+
+            .best-sellers-filter {
+
+                min-width:
+                    130px;
+
+                padding:
+                    10px;
+
+                font-size:
+                    10px;
 
             }
 
 
             .best-sellers-grid {
 
-                padding: 0 12px;
+                padding:
+                    0 12px
+                    60px;
 
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
 
-                gap: 12px;
+                gap:
+                    24px 10px;
 
             }
 
 
-            .best-seller-info {
+            .best-seller-badge {
 
-                padding: 14px 8px 18px;
+                left:
+                    8px;
 
-            }
+                top:
+                    8px;
 
+                padding:
+                    6px 7px;
 
-            .best-seller-info h2 {
+                font-size:
+                    7px;
 
-                font-size: 20px;
+                letter-spacing:
+                    1px;
 
             }
 
 
             .best-seller-wishlist {
 
-                width: 34px;
+                top:
+                    7px;
 
-                height: 34px;
+                right:
+                    7px;
+
+                width:
+                    31px;
+
+                height:
+                    31px;
+
+            }
+
+
+            .best-seller-info {
+
+                padding:
+                    14px 7px 14px;
+
+            }
+
+
+            .best-seller-category {
+
+                font-size:
+                    7px;
+
+                letter-spacing:
+                    1.5px;
+
+            }
+
+
+            .best-seller-info h2 {
+
+                font-size:
+                    20px;
+
+            }
+
+
+            .best-seller-description {
+
+                font-size:
+                    9px;
+
+                line-height:
+                    1.5;
+
+            }
+
+
+            .best-seller-actions {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    6px;
+
+                margin-top:
+                    13px;
+
+            }
+
+
+            .best-seller-view,
+            .best-seller-add {
+
+                min-height:
+                    36px;
+
+                padding:
+                    7px 5px;
+
+                font-size:
+                    7.5px;
+
+            }
+
+
+            .best-sellers-page .cart-drawer {
+
+                width:
+                    100%;
 
             }
 
         }
 
+
+        /* =====================================================
+           REDUCED MOTION
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .best-seller-card,
+            .best-seller-image img,
+            .best-seller-wishlist,
+            .best-sellers-page .cart-drawer,
+            .best-sellers-page .cart-overlay {
+
+                transition:
+                    none;
+
+            }
+
+        }
 
     </style>
 
@@ -539,22 +1633,27 @@
 
         <span>
             <i class="fa-solid fa-sparkles"></i>
-            FREE SHIPPING on Prepaid Orders
+            ShriVatsaDarbar
         </span>
 
-        <span class="announcement-divider">|</span>
+        <span class="announcement-divider">
+            |
+        </span>
 
         <span>
             <i class="fa-solid fa-sparkles"></i>
-            Premium Quality Fabrics
+            Premium Sarees &amp; Suits
         </span>
 
-        <span class="announcement-divider">|</span>
+        <span class="announcement-divider">
+            |
+        </span>
 
         <span>
             <i class="fa-solid fa-sparkles"></i>
-            Easy Returns & Exchanges
+            Order on WhatsApp
         </span>
+
 
         <a href="https://wa.me/918826196544"
            target="_blank"
@@ -562,6 +1661,7 @@
            class="announcement-whatsapp">
 
             <i class="fa-brands fa-whatsapp"></i>
+
             Order on WhatsApp
 
         </a>
@@ -573,7 +1673,7 @@
 
 
 <!-- =========================================================
-     HEADER
+     SHARED HEADER
 ========================================================= -->
 
 <header class="site-header">
@@ -584,10 +1684,11 @@
         <!-- LOGO -->
 
         <a href="index.html"
-           class="brand">
+           class="brand"
+           aria-label="ShriVatsaDarbar Home">
 
             <img src="images/logos/logo-white.webp"
-                 alt="ShreevatsaDharwa logo">
+                 alt="ShriVatsaDarbar">
 
         </a>
 
@@ -596,6 +1697,7 @@
 
         <button class="mobile-menu-button"
                 id="mobileMenuButton"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false">
 
@@ -607,27 +1709,24 @@
         <!-- NAVIGATION -->
 
         <nav class="main-navigation"
-             id="mainNavigation">
+             id="mainNavigation"
+             aria-label="Main Navigation">
 
             <a href="index.html">
                 Home
             </a>
 
-
-            <a href="sarees.html">
+            <a href="collections/collections.html?category=saree">
                 Sarees
             </a>
 
-
-            <a href="suits.html">
+            <a href="collections/collections.html?category=suit">
                 Suits
             </a>
-
 
             <a href="new-arrivals.html">
                 New Arrivals
             </a>
-
 
             <a href="best-sellers.html"
                class="active">
@@ -636,11 +1735,9 @@
 
             </a>
 
-
             <a href="about.html">
                 About Us
             </a>
-
 
             <a href="contact.html">
                 Contact Us
@@ -656,6 +1753,7 @@
 
             <button class="icon-button"
                     id="searchButton"
+                    type="button"
                     aria-label="Search">
 
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -664,6 +1762,7 @@
 
 
             <button class="icon-button"
+                    type="button"
                     aria-label="Wishlist"
                     onclick="showComingSoon('Wishlist')">
 
@@ -673,6 +1772,7 @@
 
 
             <button class="icon-button"
+                    type="button"
                     aria-label="Account"
                     onclick="showComingSoon('Account')">
 
@@ -682,12 +1782,14 @@
 
 
             <button class="icon-button bag-button"
-                    aria-label="Shopping bag"
-                    onclick="showComingSoon('Shopping Bag')">
+                    id="shoppingBagButton"
+                    type="button"
+                    aria-label="Shopping bag">
 
                 <i class="fa-solid fa-bag-shopping"></i>
 
-                <span class="bag-count">
+                <span class="bag-count"
+                      id="bagCount">
                     0
                 </span>
 
@@ -707,11 +1809,13 @@
 ========================================================= -->
 
 <div class="search-overlay"
-     id="searchOverlay">
+     id="searchOverlay"
+     aria-hidden="true">
 
 
     <button class="search-close"
             id="searchClose"
+            type="button"
             aria-label="Close search">
 
         <i class="fa-solid fa-xmark"></i>
@@ -741,7 +1845,7 @@
 
 
 <!-- =========================================================
-     MAIN CONTENT
+     MAIN
 ========================================================= -->
 
 <main class="best-sellers-page">
@@ -753,18 +1857,13 @@
 
     <section class="best-sellers-hero">
 
-
         <p class="best-sellers-eyebrow">
-
-            MOST LOVED
-
+            THE SHRI VATSADARBAR EDIT
         </p>
 
 
         <h1>
-
             Best Sellers
-
         </h1>
 
 
@@ -781,14 +1880,36 @@
 
         <p class="best-sellers-description">
 
-            Discover the pieces our customers love the most.
-            A curated selection of beautiful sarees and elegant suits
-            chosen for their timeless appeal and effortless grace.
+            Explore a thoughtfully curated selection of
+            premium sarees and elegant suits, chosen for
+            timeless style, graceful detailing and beautiful
+            occasions.
 
         </p>
 
-
     </section>
+
+
+
+    <!-- =====================================================
+         CURATED NOTE
+    ====================================================== -->
+
+    <div class="best-sellers-note">
+
+        <div class="best-sellers-note-inner">
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            <span>
+                Our current Best Sellers page is an editorially
+                curated edit. As customer purchase data grows,
+                this selection can evolve with the collection.
+            </span>
+
+        </div>
+
+    </div>
 
 
 
@@ -799,333 +1920,141 @@
     <div class="best-sellers-toolbar">
 
 
-        <div class="best-sellers-count">
+        <p class="best-sellers-count"
+           id="bestSellersCount">
 
-            Our Most Loved Styles
+            Curated Styles
+
+        </p>
+
+
+        <div class="best-sellers-filter-wrap">
+
+            <label class="best-sellers-filter-label"
+                   for="bestSellersFilter">
+
+                View
+
+            </label>
+
+
+            <select class="best-sellers-filter"
+                    id="bestSellersFilter"
+                    aria-label="Filter best seller edit">
+
+                <option value="all">
+                    All Styles
+                </option>
+
+                <option value="saree">
+                    Sarees
+                </option>
+
+                <option value="suit">
+                    Suits
+                </option>
+
+            </select>
 
         </div>
-
-
-        <select class="best-sellers-filter"
-                aria-label="Sort best sellers">
-
-            <option>
-                Most Popular
-            </option>
-
-            <option>
-                Featured
-            </option>
-
-            <option>
-                Newest
-            </option>
-
-        </select>
-
 
     </div>
 
 
 
     <!-- =====================================================
-         PRODUCTS
+         PRODUCT GRID
     ====================================================== -->
 
-    <section class="best-sellers-grid">
-
-
-        <!-- PRODUCT 001 -->
-
-        <article class="best-seller-card">
-
-            <a href="#"
-               class="best-seller-image">
-
-                <span class="best-seller-badge">
-                    BEST SELLER
-                </span>
-
-
-                <button class="best-seller-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/sarees/saree-001/sarees-01-lifestyle.webp"
-                     alt="Best selling premium saree">
-
-            </a>
-
-
-            <div class="best-seller-info">
-
-                <p class="best-seller-category">
-                    SAREE
-                </p>
-
-                <h2>
-                    Elegant Saree Collection
-                </h2>
-
-                <p class="best-seller-price">
-                    Enquire on WhatsApp
-                </p>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUCT 002 -->
-
-        <article class="best-seller-card">
-
-            <a href="#"
-               class="best-seller-image">
-
-                <span class="best-seller-badge">
-                    BEST SELLER
-                </span>
-
-
-                <button class="best-seller-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/suits/suit-001/suits-001-lifestyle.webp"
-                     alt="Best selling elegant suit">
-
-            </a>
-
-
-            <div class="best-seller-info">
-
-                <p class="best-seller-category">
-                    SUIT
-                </p>
-
-                <h2>
-                    Elegant Suit Collection
-                </h2>
-
-                <p class="best-seller-price">
-                    Enquire on WhatsApp
-                </p>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUCT 003 -->
-
-        <article class="best-seller-card">
-
-            <a href="#"
-               class="best-seller-image">
-
-                <span class="best-seller-badge">
-                    BEST SELLER
-                </span>
-
-
-                <button class="best-seller-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/sarees/saree-002/sarees-02-lifestyle.webp"
-                     alt="Best selling signature saree">
-
-            </a>
-
-
-            <div class="best-seller-info">
-
-                <p class="best-seller-category">
-                    SAREE
-                </p>
-
-                <h2>
-                    Signature Saree Collection
-                </h2>
-
-                <p class="best-seller-price">
-                    Enquire on WhatsApp
-                </p>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUCT 004 -->
-
-        <article class="best-seller-card">
-
-            <a href="#"
-               class="best-seller-image">
-
-                <span class="best-seller-badge">
-                    BEST SELLER
-                </span>
-
-
-                <button class="best-seller-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/suits/suit-002/suits-002-lifestyle.webp"
-                     alt="Best selling signature suit">
-
-            </a>
-
-
-            <div class="best-seller-info">
-
-                <p class="best-seller-category">
-                    SUIT
-                </p>
-
-                <h2>
-                    Signature Suit Collection
-                </h2>
-
-                <p class="best-seller-price">
-                    Enquire on WhatsApp
-                </p>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUCT 005 -->
-
-        <article class="best-seller-card">
-
-            <a href="#"
-               class="best-seller-image">
-
-                <span class="best-seller-badge">
-                    BEST SELLER
-                </span>
-
-
-                <button class="best-seller-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/sarees/saree-003/sarees-03-lifestyle.webp"
-                     alt="Best selling festive saree">
-
-            </a>
-
-
-            <div class="best-seller-info">
-
-                <p class="best-seller-category">
-                    SAREE
-                </p>
-
-                <h2>
-                    Festive Saree Collection
-                </h2>
-
-                <p class="best-seller-price">
-                    Enquire on WhatsApp
-                </p>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUCT 006 -->
-
-        <article class="best-seller-card">
-
-            <a href="#"
-               class="best-seller-image">
-
-                <span class="best-seller-badge">
-                    BEST SELLER
-                </span>
-
-
-                <button class="best-seller-wishlist"
-                        type="button"
-                        aria-label="Add to wishlist"
-                        onclick="event.preventDefault(); showComingSoon('Wishlist')">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-
-                <img src="images/suits/suit-003/suits-003-lifestyle.webp"
-                     alt="Best selling festive suit">
-
-            </a>
-
-
-            <div class="best-seller-info">
-
-                <p class="best-seller-category">
-                    SUIT
-                </p>
-
-                <h2>
-                    Festive Suit Collection
-                </h2>
-
-                <p class="best-seller-price">
-                    Enquire on WhatsApp
-                </p>
-
-            </div>
-
-        </article>
-
+    <section class="best-sellers-grid"
+             id="bestSellersGrid"
+             aria-label="Best Sellers collection">
 
     </section>
 
 
+
 </main>
+
+
+
+<!-- =========================================================
+     CART OVERLAY
+========================================================= -->
+
+<div class="cart-overlay"
+     id="cartOverlay"
+     aria-hidden="true">
+</div>
+
+
+
+<!-- =========================================================
+     CART DRAWER
+========================================================= -->
+
+<aside class="cart-drawer"
+       id="cartDrawer"
+       aria-label="Shopping bag">
+
+
+    <div class="cart-header">
+
+        <h2>
+            Your Bag
+        </h2>
+
+
+        <button class="cart-close"
+                id="cartClose"
+                type="button"
+                aria-label="Close shopping bag">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="cart-items"
+         id="cartItems">
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <p class="cart-footer-note">
+
+            Prices and final availability will be confirmed
+            with you on WhatsApp.
+
+        </p>
+
+
+        <button class="cart-whatsapp-button"
+                id="cartWhatsappButton"
+                type="button">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Enquire on WhatsApp
+
+        </button>
+
+
+        <button class="cart-clear-button"
+                id="cartClearButton"
+                type="button">
+
+            Clear Bag
+
+        </button>
+
+    </div>
+
+</aside>
 
 
 
@@ -1138,14 +2067,14 @@
 
 
 <!-- =========================================================
-     WHATSAPP FLOAT BUTTON
+     WHATSAPP FLOAT
 ========================================================= -->
 
 <a href="https://wa.me/918826196544"
    target="_blank"
    rel="noopener"
    class="whatsapp-float"
-   aria-label="Chat with ShreevatsaDharwa on WhatsApp">
+   aria-label="Chat with ShriVatsaDarbar on WhatsApp">
 
     <i class="fa-brands fa-whatsapp"></i>
 
@@ -1154,20 +2083,1338 @@
 
 
 <!-- =========================================================
-     SITE TOAST
+     TOAST
 ========================================================= -->
 
 <div class="site-toast"
      id="siteToast"
      role="status"
      aria-live="polite">
-
 </div>
 
 
 
 <!-- =========================================================
-     JAVASCRIPT
+     PRODUCT DATABASE
+========================================================= -->
+
+<script src="products.js"></script>
+
+
+
+<!-- =========================================================
+     BEST SELLERS PAGE CONTROLLER
+========================================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================================
+           CONFIGURATION
+
+           These are an editorially curated selection for now.
+           They are NOT represented as verified sales rankings.
+        ===================================================== */
+
+        const curatedProductIds = [
+
+            "saree-001",
+            "suit-001",
+            "saree-002",
+            "suit-002",
+            "saree-003",
+            "suit-003"
+
+        ];
+
+
+        /* =====================================================
+           ELEMENTS
+        ===================================================== */
+
+        const grid =
+            document.getElementById(
+                "bestSellersGrid"
+            );
+
+
+        const count =
+            document.getElementById(
+                "bestSellersCount"
+            );
+
+
+        const filter =
+            document.getElementById(
+                "bestSellersFilter"
+            );
+
+
+        const bagCount =
+            document.getElementById(
+                "bagCount"
+            );
+
+
+        const cartDrawer =
+            document.getElementById(
+                "cartDrawer"
+            );
+
+
+        const cartOverlay =
+            document.getElementById(
+                "cartOverlay"
+            );
+
+
+        const cartItems =
+            document.getElementById(
+                "cartItems"
+            );
+
+
+        const cartClose =
+            document.getElementById(
+                "cartClose"
+            );
+
+
+        const shoppingBagButton =
+            document.getElementById(
+                "shoppingBagButton"
+            );
+
+
+        const cartWhatsappButton =
+            document.getElementById(
+                "cartWhatsappButton"
+            );
+
+
+        const cartClearButton =
+            document.getElementById(
+                "cartClearButton"
+            );
+
+
+        /* =====================================================
+           PRODUCT DATABASE CHECK
+        ===================================================== */
+
+        if (
+            !window.getSVDProduct
+        ) {
+
+            grid.innerHTML =
+
+                '<div class="best-sellers-empty">' +
+
+                    '<strong>Collection unavailable</strong>' +
+
+                    '<span>Please refresh the page and try again.</span>' +
+
+                '</div>';
+
+            return;
+
+        }
+
+
+        /* =====================================================
+           GET CURATED PRODUCTS
+        ===================================================== */
+
+        const curatedProducts =
+            curatedProductIds
+                .map(
+                    function (id) {
+
+                        return window.getSVDProduct(id);
+
+                    }
+                )
+                .filter(
+                    function (product) {
+
+                        return Boolean(product);
+
+                    }
+                );
+
+
+        /* =====================================================
+           ESCAPE HTML
+        ===================================================== */
+
+        function escapeHtml(value) {
+
+            return String(
+                value || ""
+            )
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
+                .replace(
+                    />/g,
+                    "&gt;"
+                )
+                .replace(
+                    /"/g,
+                    "&quot;"
+                )
+                .replace(
+                    /'/g,
+                    "&#039;"
+                );
+
+        }
+
+
+        /* =====================================================
+           RENDER PRODUCTS
+        ===================================================== */
+
+        function renderProducts(
+            category
+        ) {
+
+
+            const products =
+                curatedProducts.filter(
+                    function (product) {
+
+                        if (
+                            category === "all"
+                        ) {
+
+                            return true;
+
+                        }
+
+
+                        return (
+                            product.category
+                                .toLowerCase() ===
+                            category
+                        );
+
+                    }
+                );
+
+
+            count.textContent =
+                products.length +
+                (
+                    products.length === 1
+                        ? " Curated Style"
+                        : " Curated Styles"
+                );
+
+
+            if (
+                !products.length
+            ) {
+
+                grid.innerHTML =
+
+                    '<div class="best-sellers-empty">' +
+
+                        '<strong>No styles in this edit</strong>' +
+
+                        '<span>Please explore our complete collection.</span>' +
+
+                    '</div>';
+
+                return;
+
+            }
+
+
+            grid.innerHTML =
+                products
+                    .map(
+                        function (
+                            product,
+                            index
+                        ) {
+
+                            const productId =
+                                curatedProductIds[
+                                    curatedProductIds.indexOf(
+                                        Object.keys(
+                                            window.SVD_PRODUCTS || {}
+                                        ).find(
+                                            function (id) {
+
+                                                const item =
+                                                    window.getSVDProduct(id);
+
+                                                return (
+                                                    item &&
+                                                    item.title ===
+                                                    product.title
+                                                );
+
+                                            }
+                                        )
+                                    )
+                                ];
+
+
+                            let resolvedId =
+                                productId;
+
+
+                            if (
+                                !resolvedId
+                            ) {
+
+                                const ids =
+                                    curatedProductIds;
+
+                                for (
+                                    let i = 0;
+                                    i < ids.length;
+                                    i++
+                                ) {
+
+                                    const item =
+                                        window.getSVDProduct(
+                                            ids[i]
+                                        );
+
+                                    if (
+                                        item ===
+                                        product
+                                    ) {
+
+                                        resolvedId =
+                                            ids[i];
+
+                                        break;
+
+                                    }
+
+                                }
+
+                            }
+
+
+                            const safeId =
+                                escapeHtml(
+                                    resolvedId
+                                );
+
+
+                            const image =
+                                product.images &&
+                                product.images.length
+                                    ? product.images[0]
+                                    : "";
+
+
+                            const safeImage =
+                                escapeHtml(
+                                    image
+                                );
+
+
+                            const safeTitle =
+                                escapeHtml(
+                                    product.title
+                                );
+
+
+                            const safeCategory =
+                                escapeHtml(
+                                    product.category
+                                );
+
+
+                            const description =
+                                escapeHtml(
+                                    product.subtitle ||
+                                    "A beautifully curated piece from ShriVatsaDarbar."
+                                );
+
+
+                            return (
+
+                                '<article class="best-seller-card" ' +
+
+                                    'data-category="' +
+                                    safeCategory.toLowerCase() +
+                                    '" ' +
+
+                                    'data-product-id="' +
+                                    safeId +
+                                    '">' +
+
+
+                                    '<a href="product.html?product=' +
+                                    encodeURIComponent(
+                                        resolvedId
+                                    ) +
+                                    '" ' +
+
+                                    'class="best-seller-image">' +
+
+
+                                        '<span class="best-seller-badge">' +
+
+                                            'CURATED EDIT' +
+
+                                        '</span>' +
+
+
+                                        '<button class="best-seller-wishlist" ' +
+
+                                            'type="button" ' +
+
+                                            'aria-label="Add ' +
+                                            safeTitle +
+                                            ' to wishlist" ' +
+
+                                            'onclick="event.preventDefault(); event.stopPropagation(); showComingSoon(\'Wishlist\')">' +
+
+
+                                            '<i class="fa-regular fa-heart"></i>' +
+
+
+                                        '</button>' +
+
+
+                                        '<img src="' +
+                                        safeImage +
+                                        '" ' +
+
+                                            'alt="' +
+                                            safeTitle +
+                                            '" ' +
+
+                                            'loading="' +
+                                            (
+                                                index < 2
+                                                    ? "eager"
+                                                    : "lazy"
+                                            ) +
+                                            '">' +
+
+
+                                    '</a>' +
+
+
+                                    '<div class="best-seller-info">' +
+
+
+                                        '<p class="best-seller-category">' +
+
+                                            safeCategory +
+
+                                        '</p>' +
+
+
+                                        '<h2>' +
+
+                                            safeTitle +
+
+                                        '</h2>' +
+
+
+                                        '<p class="best-seller-description">' +
+
+                                            description +
+
+                                        '</p>' +
+
+
+                                        '<div class="best-seller-actions">' +
+
+
+                                            '<a href="product.html?product=' +
+                                            encodeURIComponent(
+                                                resolvedId
+                                            ) +
+                                            '" ' +
+
+                                                'class="best-seller-view">' +
+
+                                                'View Details ' +
+
+                                                '<i class="fa-solid fa-arrow-right"></i>' +
+
+                                            '</a>' +
+
+
+                                            '<button class="best-seller-add" ' +
+
+                                                'type="button" ' +
+
+                                                'data-add-product="' +
+                                                safeId +
+                                                '">' +
+
+                                                '<i class="fa-solid fa-bag-shopping"></i>' +
+
+                                                'Add to Bag' +
+
+                                            '</button>' +
+
+
+                                        '</div>' +
+
+
+                                    '</div>' +
+
+
+                                '</article>'
+
+                            );
+
+                        }
+                    )
+                    .join("");
+
+
+            bindAddButtons();
+
+        }
+
+
+        /* =====================================================
+           CART
+        ===================================================== */
+
+        const CART_KEY =
+            "shrivatsaDarbarFashionCart";
+
+
+        let cart = [];
+
+
+        try {
+
+            cart =
+                JSON.parse(
+                    localStorage.getItem(
+                        CART_KEY
+                    )
+                ) || [];
+
+        }
+
+        catch (
+            error
+        ) {
+
+            cart = [];
+
+        }
+
+
+        /* =====================================================
+           SAVE CART
+        ===================================================== */
+
+        function saveCart() {
+
+            localStorage.setItem(
+                CART_KEY,
+                JSON.stringify(
+                    cart
+                )
+            );
+
+        }
+
+
+        /* =====================================================
+           CART COUNT
+        ===================================================== */
+
+        function updateCartCount() {
+
+            const total =
+                cart.reduce(
+                    function (
+                        sum,
+                        item
+                    ) {
+
+                        return (
+                            sum +
+                            Number(
+                                item.quantity || 0
+                            )
+                        );
+
+                    },
+                    0
+                );
+
+
+            bagCount.textContent =
+                total > 99
+                    ? "99+"
+                    : total;
+
+        }
+
+
+        /* =====================================================
+           ADD TO CART
+        ===================================================== */
+
+        function addProductToCart(
+            productId,
+            button
+        ) {
+
+
+            const product =
+                window.getSVDProduct(
+                    productId
+                );
+
+
+            if (
+                !product
+            ) {
+
+                return;
+
+            }
+
+
+            const existing =
+                cart.find(
+                    function (item) {
+
+                        return (
+                            item.id ===
+                            productId
+                        );
+
+                    }
+                );
+
+
+            if (
+                existing
+            ) {
+
+                existing.quantity += 1;
+
+            }
+
+            else {
+
+                cart.push({
+
+                    id:
+                        productId,
+
+                    title:
+                        product.title,
+
+                    code:
+                        product.code,
+
+                    category:
+                        product.category,
+
+                    image:
+                        product.images[0],
+
+                    quantity:
+                        1
+
+                });
+
+            }
+
+
+            saveCart();
+
+            updateCartCount();
+
+            renderCart();
+
+
+            button.classList.add(
+                "added"
+            );
+
+
+            button.innerHTML =
+                '<i class="fa-solid fa-check"></i> Added';
+
+
+            showToast(
+                product.title +
+                " added to your bag"
+            );
+
+
+            setTimeout(
+                function () {
+
+                    button.classList.remove(
+                        "added"
+                    );
+
+
+                    button.innerHTML =
+                        '<i class="fa-solid fa-bag-shopping"></i> Add to Bag';
+
+                },
+                1500
+            );
+
+        }
+
+
+        /* =====================================================
+           BIND ADD BUTTONS
+        ===================================================== */
+
+        function bindAddButtons() {
+
+            grid
+                .querySelectorAll(
+                    "[data-add-product]"
+                )
+                .forEach(
+                    function (
+                        button
+                    ) {
+
+                        button.addEventListener(
+                            "click",
+                            function () {
+
+                                addProductToCart(
+                                    this.dataset.addProduct,
+                                    this
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /* =====================================================
+           RENDER CART
+        ===================================================== */
+
+        function renderCart() {
+
+
+            if (
+                !cartItems
+            ) {
+
+                return;
+
+            }
+
+
+            if (
+                !cart.length
+            ) {
+
+                cartItems.innerHTML =
+
+                    '<div class="cart-empty">' +
+
+                        '<i class="fa-solid fa-bag-shopping"></i>' +
+
+                        '<strong>Your bag is empty</strong>' +
+
+                        '<span>Add a beautiful piece to begin your enquiry.</span>' +
+
+                    '</div>';
+
+                return;
+
+            }
+
+
+            cartItems.innerHTML =
+                cart
+                    .map(
+                        function (
+                            item
+                        ) {
+
+                            return (
+
+                                '<article class="cart-item">' +
+
+
+                                    '<img class="cart-item-image" ' +
+
+                                        'src="' +
+                                        escapeHtml(
+                                            item.image
+                                        ) +
+                                        '" ' +
+
+                                        'alt="' +
+                                        escapeHtml(
+                                            item.title
+                                        ) +
+                                        '">' +
+
+
+                                    '<div class="cart-item-details">' +
+
+
+                                        '<h3>' +
+
+                                            escapeHtml(
+                                                item.title
+                                            ) +
+
+                                        '</h3>' +
+
+
+                                        '<div class="cart-item-code">' +
+
+                                            escapeHtml(
+                                                item.code
+                                            ) +
+
+                                        '</div>' +
+
+
+                                        '<div class="cart-item-controls">' +
+
+
+                                            '<button class="cart-qty-button" ' +
+
+                                                'type="button" ' +
+
+                                                'data-action="minus" ' +
+
+                                                'data-id="' +
+                                                escapeHtml(
+                                                    item.id
+                                                ) +
+                                                '">' +
+
+                                                '−' +
+
+                                            '</button>' +
+
+
+                                            '<span class="cart-qty-value">' +
+
+                                                Number(
+                                                    item.quantity || 0
+                                                ) +
+
+                                            '</span>' +
+
+
+                                            '<button class="cart-qty-button" ' +
+
+                                                'type="button" ' +
+
+                                                'data-action="plus" ' +
+
+                                                'data-id="' +
+                                                escapeHtml(
+                                                    item.id
+                                                ) +
+                                                '">' +
+
+                                                '+' +
+
+                                            '</button>' +
+
+
+                                        '</div>' +
+
+
+                                    '</div>' +
+
+
+                                    '<button class="cart-remove" ' +
+
+                                        'type="button" ' +
+
+                                        'data-remove="' +
+                                        escapeHtml(
+                                            item.id
+                                        ) +
+                                        '" ' +
+
+                                        'aria-label="Remove item">' +
+
+                                        '<i class="fa-solid fa-trash"></i>' +
+
+                                    '</button>' +
+
+
+                                '</article>'
+
+                            );
+
+                        }
+                    )
+                    .join("");
+
+
+            cartItems
+                .querySelectorAll(
+                    "[data-action]"
+                )
+                .forEach(
+                    function (
+                        button
+                    ) {
+
+                        button.addEventListener(
+                            "click",
+                            function () {
+
+                                const id =
+                                    this.dataset.id;
+
+
+                                const change =
+                                    this.dataset.action ===
+                                    "plus"
+                                        ? 1
+                                        : -1;
+
+
+                                const item =
+                                    cart.find(
+                                        function (
+                                            product
+                                        ) {
+
+                                            return (
+                                                product.id ===
+                                                id
+                                            );
+
+                                        }
+                                    );
+
+
+                                if (
+                                    !item
+                                ) {
+
+                                    return;
+
+                                }
+
+
+                                item.quantity +=
+                                    change;
+
+
+                                if (
+                                    item.quantity <= 0
+                                ) {
+
+                                    cart =
+                                        cart.filter(
+                                            function (
+                                                product
+                                            ) {
+
+                                                return (
+                                                    product.id !==
+                                                    id
+                                                );
+
+                                            }
+                                        );
+
+                                }
+
+
+                                saveCart();
+
+                                updateCartCount();
+
+                                renderCart();
+
+                            }
+                        );
+
+                    }
+                );
+
+
+            cartItems
+                .querySelectorAll(
+                    "[data-remove]"
+                )
+                .forEach(
+                    function (
+                        button
+                    ) {
+
+                        button.addEventListener(
+                            "click",
+                            function () {
+
+                                const id =
+                                    this.dataset.remove;
+
+
+                                cart =
+                                    cart.filter(
+                                        function (
+                                            item
+                                        ) {
+
+                                            return (
+                                                item.id !==
+                                                id
+                                            );
+
+                                        }
+                                    );
+
+
+                                saveCart();
+
+                                updateCartCount();
+
+                                renderCart();
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /* =====================================================
+           OPEN CART
+        ===================================================== */
+
+        function openCart() {
+
+            cartDrawer.classList.add(
+                "active"
+            );
+
+            cartOverlay.classList.add(
+                "active"
+            );
+
+            document.body.style.overflow =
+                "hidden";
+
+            renderCart();
+
+        }
+
+
+        /* =====================================================
+           CLOSE CART
+        ===================================================== */
+
+        function closeCart() {
+
+            cartDrawer.classList.remove(
+                "active"
+            );
+
+            cartOverlay.classList.remove(
+                "active"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        /* =====================================================
+           CART BUTTON
+        ===================================================== */
+
+        shoppingBagButton.addEventListener(
+            "click",
+            openCart
+        );
+
+
+        cartClose.addEventListener(
+            "click",
+            closeCart
+        );
+
+
+        cartOverlay.addEventListener(
+            "click",
+            closeCart
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (
+                event
+            ) {
+
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
+
+                    closeCart();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           CLEAR CART
+        ===================================================== */
+
+        cartClearButton.addEventListener(
+            "click",
+            function () {
+
+
+                if (
+                    !cart.length
+                ) {
+
+                    return;
+
+                }
+
+
+                cart = [];
+
+
+                saveCart();
+
+                updateCartCount();
+
+                renderCart();
+
+
+                showToast(
+                    "Your bag has been cleared"
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           WHATSAPP CART ENQUIRY
+        ===================================================== */
+
+        function buildWhatsAppUrl() {
+
+
+            if (
+                !cart.length
+            ) {
+
+                return "";
+
+            }
+
+
+            let message =
+                "Hello ShriVatsaDarbar,\n\n";
+
+
+            message +=
+                "I would like to enquire about the following products:\n\n";
+
+
+            cart.forEach(
+                function (
+                    item,
+                    index
+                ) {
+
+                    message +=
+                        (
+                            index + 1
+                        ) +
+                        ". " +
+                        item.title +
+                        " (" +
+                        item.code +
+                        ") × " +
+                        item.quantity +
+                        "\n";
+
+                }
+            );
+
+
+            message +=
+                "\nPlease share the price, availability, size options and final details.\n\nThank you.";
+
+
+            return (
+                "https://wa.me/918826196544?text=" +
+                encodeURIComponent(
+                    message
+                )
+            );
+
+        }
+
+
+        cartWhatsappButton.addEventListener(
+            "click",
+            function () {
+
+
+                if (
+                    !cart.length
+                ) {
+
+                    showToast(
+                        "Your bag is empty"
+                    );
+
+                    return;
+
+                }
+
+
+                const url =
+                    buildWhatsAppUrl();
+
+
+                window.open(
+                    url,
+                    "_blank",
+                    "noopener"
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           TOAST
+        ===================================================== */
+
+        function showToast(
+            message
+        ) {
+
+
+            const toast =
+                document.getElementById(
+                    "siteToast"
+                );
+
+
+            if (
+                !toast
+            ) {
+
+                return;
+
+            }
+
+
+            toast.textContent =
+                message;
+
+
+            toast.classList.add(
+                "active"
+            );
+
+
+            clearTimeout(
+                window.shrivatsaToastTimer
+            );
+
+
+            window.shrivatsaToastTimer =
+                setTimeout(
+                    function () {
+
+                        toast.classList.remove(
+                            "active"
+                        );
+
+                    },
+                    2200
+                );
+
+        }
+
+
+        /* =====================================================
+           FILTER
+        ===================================================== */
+
+        filter.addEventListener(
+            "change",
+            function () {
+
+                renderProducts(
+                    this.value
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           INITIALISE
+        ===================================================== */
+
+        renderProducts(
+            "all"
+        );
+
+
+        updateCartCount();
+
+        renderCart();
+
+    }
+);
+
+</script>
+
+
+
+<!-- =========================================================
+     SHARED SITE JAVASCRIPT
 ========================================================= -->
 
 <script src="script.js"></script>
