@@ -2,407 +2,2810 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Questions | Shri Vatsa Darbar</title>
-    <!-- Google Fonts for Editorial Luxury Look -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Frequently Asked Questions | ShriVatsaDarbar</title>
+
+    <meta name="description"
+          content="Find answers to frequently asked questions about ShriVatsaDarbar sarees, suits, ordering, shipping, returns, exchanges, care and customer support.">
+
+    <meta name="keywords"
+          content="ShriVatsaDarbar FAQ, saree FAQ, suit FAQ, saree ordering, suit ordering, Indian ethnic wear FAQ">
+
+    <meta name="theme-color"
+          content="#6f1d2a">
+
+    <link rel="canonical"
+          href="faq.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main Site Styles -->
+    <link rel="stylesheet"
+          href="styles.css">
+
+
     <style>
-        /* Editorial Luxury Theme matching Reference Layout */
-        .page-header-container {
-            text-align: center;
-            padding: 70px 20px 30px;
-            background-color: var(--bg-cream);
-        }
-        .page-header-container h2 {
-            font-size: 2.8rem;
-            color: #2c1810;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
-        }
-        .page-header-container p {
-            color: #666;
-            font-size: 1.05rem;
-            font-style: italic;
-            font-family: 'Playfair Display', serif;
+
+        /* =========================================================
+           SHRI VATSA DARBAR — PREMIUM FAQ PAGE
+           Women’s Fashion | Sarees & Suits
+           ========================================================= */
+
+        :root {
+            --faq-wine: #6f1d2a;
+            --faq-deep-wine: #4d111c;
+            --faq-gold: #b08a45;
+            --faq-light-gold: #d4b878;
+            --faq-cream: #fbf7ef;
+            --faq-soft: #f4eee4;
+            --faq-white: #ffffff;
+            --faq-text: #342b29;
+            --faq-muted: #746866;
+            --faq-border: rgba(176, 138, 69, 0.22);
+            --faq-container: 1320px;
         }
 
-        /* Two-Column Editorial Grid matching Reference */
-        .faq-editorial-container {
-            max-width: 1200px;
-            margin: 50px auto 100px;
-            padding: 0 25px;
+
+        /* =========================================================
+           PAGE
+           ========================================================= */
+
+        .faq-page {
+            min-height: 100vh;
+            overflow: hidden;
+            background: var(--faq-white);
+            color: var(--faq-text);
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .faq-container {
+            width: min(
+                calc(100% - 48px),
+                var(--faq-container)
+            );
+
+            margin: 0 auto;
+        }
+
+
+        /* =========================================================
+           HERO
+           ========================================================= */
+
+        .faq-hero {
+            position: relative;
+            min-height: 480px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(250, 246, 237, 0.98) 0%,
+                    rgba(250, 246, 237, 0.96) 38%,
+                    rgba(250, 246, 237, 0.72) 60%,
+                    rgba(250, 246, 237, 0.10) 100%
+                ),
+                url("images/sarees/saree-001/sarees-01-lifestyle.webp")
+                center / cover no-repeat;
+        }
+
+        .faq-hero-inner {
+            width: min(
+                calc(100% - 48px),
+                var(--faq-container)
+            );
+
+            margin: 0 auto;
+
+            padding: 80px 0;
+        }
+
+        .faq-hero-content {
+            max-width: 600px;
+        }
+
+        .faq-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 18px;
+
+            color: var(--faq-gold);
+
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .faq-eyebrow::before {
+            content: "";
+
+            width: 34px;
+            height: 1px;
+
+            background: var(--faq-gold);
+        }
+
+        .faq-hero h1 {
+            margin: 0 0 22px;
+
+            color: var(--faq-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(58px, 7vw, 86px);
+            font-weight: 500;
+            line-height: 0.88;
+            letter-spacing: -0.025em;
+        }
+
+        .faq-hero-description {
+            max-width: 540px;
+
+            margin: 0 0 28px;
+
+            color: #665c59;
+
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .faq-search {
+            position: relative;
+
+            max-width: 470px;
+        }
+
+        .faq-search input {
+            width: 100%;
+            height: 52px;
+
+            padding: 0 52px 0 18px;
+
+            border: 1px solid rgba(111, 29, 42, 0.16);
+
+            background: rgba(255, 255, 255, 0.84);
+
+            color: var(--faq-text);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 13px;
+
+            outline: none;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .faq-search input:focus {
+            border-color: var(--faq-gold);
+
+            box-shadow:
+                0 5px 20px rgba(77, 17, 28, 0.06);
+        }
+
+        .faq-search i {
+            position: absolute;
+
+            top: 50%;
+            right: 18px;
+
+            transform: translateY(-50%);
+
+            color: var(--faq-gold);
+
+            font-size: 16px;
+
+            pointer-events: none;
+        }
+
+
+        /* =========================================================
+           FAQ MAIN AREA
+           ========================================================= */
+
+        .faq-main {
+            padding: 72px 0 95px;
+
+            background: var(--faq-white);
+        }
+
+        .faq-layout {
             display: grid;
-            grid-template-columns: 2.3fr 1fr;
-            gap: 60px;
+
+            grid-template-columns:
+                245px
+                minmax(0, 1fr);
+
+            gap: 50px;
+
             align-items: start;
         }
 
-        @media(max-width: 992px) {
-            .faq-editorial-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
 
-        /* Left Content Column (Static, Numbered Layout) */
-        .faq-content-flow {
-            display: flex;
-            flex-direction: column;
-            gap: 45px;
-        }
+        /* =========================================================
+           CATEGORY NAVIGATION
+           ========================================================= */
 
-        .faq-section-block {
-            position: relative;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #ebdcc5;
-        }
-
-        .faq-section-block:last-child {
-            border-bottom: none;
-        }
-
-        .faq-section-block .step-num {
-            font-size: 0.85rem;
-            color: var(--accent);
-            font-weight: 700;
-            letter-spacing: 2px;
-            display: block;
-            margin-bottom: 8px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .faq-section-block h3 {
-            font-size: 1.35rem;
-            color: #2c1810;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 14px;
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .faq-section-block p {
-            color: #555;
-            font-size: 0.98rem;
-            line-height: 1.8;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            margin-bottom: 12px;
-        }
-
-        /* Right Sticky Editorial Sidebar matching Reference Cards */
-        .faq-sidebar-stack {
+        .faq-sidebar {
             position: sticky;
-            top: 110px;
+            top: 105px;
+        }
+
+        .faq-category-list {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+
+            gap: 4px;
         }
 
-        .sidebar-glance-box {
-            background: var(--white);
-            border: 1px solid #ebdcc5;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 20px rgba(44, 24, 16, 0.02);
+        .faq-category-button {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            padding: 15px 14px;
+
+            background: transparent;
+
+            border: 1px solid transparent;
+
+            color: #5e5552;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 13px;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
         }
 
-        .sidebar-glance-box h4 {
-            font-size: 0.75rem;
+        .faq-category-button i {
+            width: 20px;
+
+            color: var(--faq-gold);
+
+            text-align: center;
+        }
+
+        .faq-category-button:hover {
+            color: var(--faq-wine);
+        }
+
+        .faq-category-button.active {
+            background: var(--faq-wine);
+
+            border-color: var(--faq-wine);
+
+            color: #fff;
+        }
+
+        .faq-category-button.active i {
+            color: var(--faq-light-gold);
+        }
+
+        .faq-sidebar-note {
+            margin-top: 38px;
+
+            padding: 22px 12px;
+
+            border-top: 1px solid var(--faq-border);
+
+            color: var(--faq-muted);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.35;
+        }
+
+        .faq-sidebar-note span {
+            display: block;
+
+            margin-top: 9px;
+
+            color: var(--faq-gold);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 9px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
-            color: var(--accent);
-            margin-bottom: 12px;
-            font-weight: 700;
         }
 
-        .sidebar-glance-box h3 {
-            font-size: 1.25rem;
-            color: #2c1810;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 20px;
+
+        /* =========================================================
+           FAQ CONTENT
+           ========================================================= */
+
+        .faq-content {
+            min-width: 0;
+        }
+
+        .faq-content-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 25px;
+
+            margin-bottom: 25px;
+        }
+
+        .faq-content-header h2 {
+            margin: 0;
+
+            color: var(--faq-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .faq-result-count {
+            color: #9a8f8b;
+
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           ACCORDION
+           ========================================================= */
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+        .faq-item {
+            border: 1px solid #e9dfd2;
+
+            background: #fff;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(176, 138, 69, 0.42);
+        }
+
+        .faq-question {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+
+            padding: 19px 20px;
+
+            background: transparent;
+
+            border: 0;
+
+            color: var(--faq-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 23px;
+            font-weight: 500;
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+        .faq-question-icon {
+            flex: 0 0 auto;
+
+            width: 25px;
+            height: 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--faq-gold);
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+
+            transition:
+                transform 0.25s ease;
+        }
+
+        .faq-item.open .faq-question-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            display: grid;
+
+            grid-template-rows: 0fr;
+
+            transition:
+                grid-template-rows 0.3s ease;
+        }
+
+        .faq-answer-inner {
+            overflow: hidden;
+        }
+
+        .faq-answer-content {
+            padding: 0 20px 21px;
+
+            color: var(--faq-muted);
+
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .faq-item.open .faq-answer {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-item.open {
+            border-color: rgba(176, 138, 69, 0.40);
+
+            box-shadow:
+                0 8px 25px rgba(77, 17, 28, 0.035);
+        }
+
+
+        /* =========================================================
+           NO RESULTS
+           ========================================================= */
+
+        .faq-no-results {
+            display: none;
+
+            padding: 55px 20px;
+
+            border: 1px solid #e9dfd2;
+
+            text-align: center;
+        }
+
+        .faq-no-results.show {
+            display: block;
+        }
+
+        .faq-no-results i {
+            margin-bottom: 15px;
+
+            color: var(--faq-gold);
+
+            font-size: 26px;
+        }
+
+        .faq-no-results h3 {
+            margin: 0 0 8px;
+
+            color: var(--faq-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        .faq-no-results p {
+            margin: 0;
+
+            color: var(--faq-muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           HELP SECTION
+           ========================================================= */
+
+        .faq-help {
+            position: relative;
+
+            padding: 60px 0;
+
+            background: var(--faq-cream);
+
+            border-top: 1px solid rgba(176, 138, 69, 0.10);
+            border-bottom: 1px solid rgba(176, 138, 69, 0.10);
+        }
+
+        .faq-help-inner {
+            display: grid;
+
+            grid-template-columns:
+                1.15fr
+                repeat(3, 1fr);
+
+            align-items: center;
+        }
+
+        .faq-help-intro {
+            padding-right: 40px;
+        }
+
+        .faq-help-intro .faq-eyebrow {
+            margin-bottom: 10px;
+        }
+
+        .faq-help-intro h2 {
+            margin: 0 0 8px;
+
+            color: var(--faq-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 42px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .faq-help-intro p {
+            margin: 0 0 20px;
+
+            color: var(--faq-muted);
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .faq-contact-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+
+            padding: 12px 21px;
+
+            background: var(--faq-wine);
+            color: #fff;
+
+            border: 1px solid var(--faq-wine);
+
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .faq-contact-button:hover {
+            background: var(--faq-deep-wine);
+
+            transform: translateY(-2px);
+        }
+
+        .faq-help-card {
+            min-height: 125px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 15px 20px;
+
+            border-left: 1px solid var(--faq-border);
+
+            text-align: center;
+        }
+
+        .faq-help-card i {
+            margin-bottom: 11px;
+
+            color: var(--faq-gold);
+
+            font-size: 22px;
+        }
+
+        .faq-help-card h3 {
+            margin: 0 0 5px;
+
+            color: var(--faq-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 20px;
             font-weight: 600;
         }
 
-        .sidebar-glance-box ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        .faq-help-card p,
+        .faq-help-card a {
+            margin: 0;
+
+            color: var(--faq-muted);
+
+            font-size: 11px;
+            line-height: 1.6;
+
+            text-decoration: none;
         }
 
-        .sidebar-glance-box ul li {
-            font-size: 0.92rem;
-            color: #444;
+        .faq-help-card a:hover {
+            color: var(--faq-wine);
+        }
+
+
+        /* =========================================================
+           VALUE STRIP
+           ========================================================= */
+
+        .faq-values {
+            padding: 45px 0;
+
+            background: #fff;
+        }
+
+        .faq-values-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .faq-value {
             display: flex;
-            align-items: flex-start;
-            gap: 12px;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 10px 25px;
+
+            border-right: 1px solid #e9dfd2;
+
+            text-align: center;
+        }
+
+        .faq-value:last-child {
+            border-right: 0;
+        }
+
+        .faq-value i {
+            margin-bottom: 13px;
+
+            color: var(--faq-gold);
+
+            font-size: 23px;
+        }
+
+        .faq-value h3 {
+            margin: 0 0 5px;
+
+            color: var(--faq-deep-wine);
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        .faq-value p {
+            margin: 0;
+
+            color: var(--faq-muted);
+
+            font-size: 10px;
             line-height: 1.5;
         }
 
-        .sidebar-glance-box ul li i {
-            color: #2e7d32;
-            margin-top: 4px;
-            font-size: 0.9rem;
-        }
 
-        /* Deep Maroon Help Card matching Reference Color Block */
-        .sidebar-help-box {
-            background: #58111a;
-            color: var(--white);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(88, 17, 26, 0.15);
-        }
+        /* =========================================================
+           WHATSAPP FLOAT
+           ========================================================= */
 
-        .sidebar-help-box h4 {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            color: #f3c68f;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+        .faq-whatsapp {
+            position: fixed;
 
-        .sidebar-help-box h3 {
-            font-size: 1.35rem;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
+            right: 22px;
+            bottom: 22px;
 
-        .sidebar-help-box p {
-            font-size: 0.92rem;
-            color: #f0d5d8;
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
+            z-index: 900;
 
-        .help-action-button {
-            display: inline-block;
-            background: var(--white);
-            color: #58111a;
-            padding: 12px 24px;
-            border-radius: 4px;
+            width: 54px;
+            height: 54px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #25d366;
+            color: #fff;
+
+            font-size: 25px;
+
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.18);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
-        .help-action-button:hover {
-            background: #fbf9f5;
-            transform: translateY(-2px);
+        .faq-whatsapp:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.22);
         }
+
+
+        /* =========================================================
+           RESPONSIVE — TABLET
+           ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .faq-hero {
+                min-height: 470px;
+
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(250, 246, 237, 0.98) 0%,
+                        rgba(250, 246, 237, 0.91) 52%,
+                        rgba(250, 246, 237, 0.45) 100%
+                    ),
+                    url("images/sarees/saree-001/sarees-01-lifestyle.webp")
+                    center / cover no-repeat;
+            }
+
+            .faq-layout {
+                grid-template-columns: 200px minmax(0, 1fr);
+
+                gap: 30px;
+            }
+
+            .faq-question {
+                font-size: 21px;
+            }
+
+            .faq-help-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .faq-help-intro {
+                grid-column: 1 / -1;
+
+                padding: 0 0 30px;
+
+                text-align: center;
+            }
+
+            .faq-help-intro .faq-eyebrow {
+                justify-content: center;
+            }
+
+            .faq-help-card {
+                border-top: 1px solid var(--faq-border);
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE — MOBILE
+           ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .faq-container,
+            .faq-hero-inner {
+                width: min(
+                    calc(100% - 34px),
+                    var(--faq-container)
+                );
+            }
+
+            .faq-hero {
+                min-height: 610px;
+
+                align-items: flex-end;
+
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(250, 246, 237, 0.16) 0%,
+                        rgba(250, 246, 237, 0.62) 42%,
+                        rgba(250, 246, 237, 0.98) 72%
+                    ),
+                    url("images/sarees/saree-001/sarees-01-lifestyle.webp")
+                    center top / cover no-repeat;
+            }
+
+            .faq-hero-inner {
+                padding: 55px 0 50px;
+            }
+
+            .faq-hero h1 {
+                font-size: 59px;
+            }
+
+            .faq-hero-description {
+                font-size: 14px;
+                line-height: 1.75;
+            }
+
+            .faq-search {
+                max-width: none;
+            }
+
+            .faq-main {
+                padding: 50px 0 70px;
+            }
+
+            .faq-layout {
+                grid-template-columns: 1fr;
+
+                gap: 38px;
+            }
+
+            .faq-sidebar {
+                position: static;
+            }
+
+            .faq-category-list {
+                display: grid;
+
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 5px;
+            }
+
+            .faq-category-button {
+                padding: 12px 10px;
+
+                font-size: 11px;
+            }
+
+            .faq-category-button i {
+                width: 17px;
+            }
+
+            .faq-sidebar-note {
+                display: none;
+            }
+
+            .faq-content-header {
+                align-items: center;
+            }
+
+            .faq-content-header h2 {
+                font-size: 35px;
+            }
+
+            .faq-result-count {
+                font-size: 9px;
+            }
+
+            .faq-question {
+                padding: 17px 15px;
+
+                font-size: 20px;
+
+                line-height: 1.2;
+            }
+
+            .faq-question-icon {
+                width: 21px;
+                height: 21px;
+            }
+
+            .faq-answer-content {
+                padding: 0 15px 18px;
+
+                font-size: 13px;
+                line-height: 1.8;
+            }
+
+            .faq-help {
+                padding: 55px 0;
+            }
+
+            .faq-help-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-help-intro {
+                grid-column: auto;
+
+                padding-bottom: 28px;
+            }
+
+            .faq-help-intro h2 {
+                font-size: 40px;
+            }
+
+            .faq-help-card {
+                min-height: 110px;
+
+                border-left: 0;
+                border-top: 1px solid var(--faq-border);
+            }
+
+            .faq-values {
+                padding: 25px 0;
+            }
+
+            .faq-values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .faq-value {
+                padding: 20px 12px;
+
+                border-right: 1px solid #e9dfd2;
+                border-bottom: 1px solid #e9dfd2;
+            }
+
+            .faq-value:nth-child(2) {
+                border-right: 0;
+            }
+
+            .faq-value:nth-child(3),
+            .faq-value:nth-child(4) {
+                border-bottom: 0;
+            }
+
+            .faq-value:nth-child(3) {
+                border-right: 1px solid #e9dfd2;
+            }
+
+            .faq-whatsapp {
+                width: 50px;
+                height: 50px;
+
+                right: 16px;
+                bottom: 16px;
+
+                font-size: 23px;
+            }
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+           ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .faq-page *,
+            .faq-page *::before,
+            .faq-page *::after {
+                transition: none !important;
+            }
+        }
+
     </style>
 </head>
+
+
 <body>
 
-    <!-- Announcement Bar -->
+<div class="faq-page">
+
+
+    <!-- =========================================================
+         ANNOUNCEMENT BAR
+         ========================================================= -->
+
     <div class="announcement-bar">
-        Complimentary Shipping on All Prepaid & WhatsApp Orders Across India ✨
+
+        <div class="announcement-content">
+
+            <span>
+                Grace in Every Thread
+            </span>
+
+            <div class="announcement-links">
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <span>|</span>
+
+                <a href="faq.html"
+                   aria-current="page">
+                    FAQs
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <!-- Navigation Header -->
+
+    <!-- =========================================================
+         SHARED HEADER
+         ========================================================= -->
+
     <header class="site-header">
-        <div class="logo">
-            <h1>SHRI VATSA DARBAR</h1>
-            <span>Exquisite Suits & Sarees</span>
-        </div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="collections/collections.html">Collections</a>
-            <a href="about.html">About Us</a>
-            <a href="faq.html" class="active">FAQ</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="header-actions">
-            <button class="cart-btn" onclick="toggleCart()" aria-label="Inquiry Cart">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span id="cart-count">0</span>
+
+        <div class="header-container">
+
+
+            <a href="index.html"
+               class="brand"
+               aria-label="ShriVatsaDarbar Home">
+
+                <img src="images/logos/logo.webp"
+                     alt="ShriVatsaDarbar"
+                     class="brand-logo">
+
+            </a>
+
+
+            <button class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
             </button>
+
+
+            <nav class="main-navigation"
+                 id="mainNavigation"
+                 aria-label="Main navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="sarees.html">
+                    Sarees
+                </a>
+
+                <a href="suits.html">
+                    Suits
+                </a>
+
+                <a href="new-arrivals.html">
+                    New Arrivals
+                </a>
+
+                <a href="best-sellers.html">
+                    Best Sellers
+                </a>
+
+                <a href="our-story.html">
+                    Our Story
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="reviews.html">
+                    Reviews
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <button class="icon-button"
+                        id="searchButton"
+                        type="button"
+                        aria-label="Search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+
+                <button class="icon-button"
+                        type="button"
+                        aria-label="Wishlist"
+                        onclick="showComingSoon('Wishlist')">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <button class="icon-button bag-button"
+                        id="shoppingBagButton"
+                        type="button"
+                        aria-label="Shopping bag">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="bag-count"
+                          id="bagCount">
+                        0
+                    </span>
+
+                </button>
+
+            </div>
+
         </div>
+
     </header>
 
-    <!-- Page Header -->
-    <div class="page-header-container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="divider"></div>
-        <p>Everything you need to know about our handcrafted luxury collection</p>
-    </div>
 
-    <!-- Main Editorial Layout Container -->
-    <div class="faq-editorial-container">
-        
-        <!-- Left Static Numbered Flow (Matching Reference Page Layout) -->
-        <div class="faq-content-flow">
-            
-            <div class="faq-section-block">
-                <span class="step-num">01</span>
-                <h3>Are your Banarasi sarees and readymade suits authentic and handcrafted?</h3>
-                <p>Yes. Every creation at Shri Vatsa Darbar is authentically crafted by master artisans in Varanasi, utilizing genuine zari, pure katan silk, and premium georgette and chiffon fabrics.</p>
-            </div>
+    <!-- =========================================================
+         SEARCH OVERLAY
+         ========================================================= -->
 
-            <div class="faq-section-block">
-                <span class="step-num">02</span>
-                <h3>What sizing options are available for your readymade suits?</h3>
-                <p>Our designer suits are precision-tailored in readymade standard sizes ranging from Small (S) to Double XL (XXL). Each product page features a detailed size guide to ensure a flawless fit.</p>
-            </div>
+    <div class="search-overlay"
+         id="searchOverlay"
+         aria-hidden="true">
 
-            <div class="faq-section-block">
-                <span class="step-num">03</span>
-                <h3>Do you provide custom tailoring or made-to-order services?</h3>
-                <p>We specialize exclusively in ready-to-wear designer suits and handcrafted sarees to maintain our rigorous luxury finish. Custom tailoring services are not offered at this time.</p>
-            </div>
+        <button class="search-close"
+                id="searchClose"
+                type="button"
+                aria-label="Close search">
 
-            <div class="faq-section-block">
-                <span class="step-num">04</span>
-                <h3>How should I care for my Banarasi silk sarees and delicate georgette/chiffon suits?</h3>
-                <p>Due to the delicate nature of pure silk, zari work, and fine chiffon/georgette weaves, we strictly recommend dry clean only. Store your pieces wrapped in muslin cloth in a dry, cool place away from direct sunlight.</p>
-            </div>
+            <i class="fa-solid fa-xmark"></i>
 
-            <div class="faq-section-block">
-                <span class="step-num">05</span>
-                <h3>What is the delivery timeline for orders across India?</h3>
-                <p>Standard dispatch from our Varanasi atelier takes 2–4 business days, and delivery across India typically takes 4–7 business days depending on your destination.</p>
-            </div>
+        </button>
 
-            <div class="faq-section-block">
-                <span class="step-num">06</span>
-                <h3>How does the WhatsApp Inquiry and Checkout process work?</h3>
-                <p>You can browse our masterclass collections, add your preferred items to your Inquiry Cart, and click "Proceed Inquiry via WhatsApp". This instantly shares your exact item selection with our concierge team for immediate order confirmation and shipping updates.</p>
-            </div>
+        <div class="search-box">
 
-            <div class="faq-section-block">
-                <span class="step-num">07</span>
-                <h3>Is an unboxing video required in case of a return or transit issue?</h3>
-                <p>Yes. To ensure a transparent resolution for any rare transit damages or incorrect items, we require a continuous, unedited unboxing video starting from the sealed outer package. Please review our Return & Refund policy for full instructions.</p>
-            </div>
+            <label for="siteSearch">
+                Search ShriVatsaDarbar
+            </label>
+
+            <input type="search"
+                   id="siteSearch"
+                   placeholder="Search sarees, suits..."
+                   autocomplete="off">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
 
         </div>
 
-        <!-- Right Sticky Sidebar Cards (Matching Reference Layout) -->
-        <aside class="faq-sidebar-stack">
-            
-            <!-- At a Glance Card -->
-            <div class="sidebar-glance-box">
-                <h4>Shopping at a Glance</h4>
-                <h3>Fair & Transparent Resolution</h3>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Pure Katan Silk & Authentic Banarasi Weaves</li>
-                    <li><i class="fa-solid fa-check"></i> Readymade Sizes from Small to Double XL</li>
-                    <li><i class="fa-solid fa-check"></i> Complimentary Shipping on Prepaid & WhatsApp Orders</li>
-                    <li><i class="fa-solid fa-check"></i> Direct Concierge Assistance via WhatsApp</li>
-                </ul>
-            </div>
-
-            <!-- Help Box Card (Deep Maroon) -->
-            <div class="sidebar-help-box">
-                <h4>Need Help?</h4>
-                <h3>We're Here to Help</h3>
-                <p>Have an inquiry regarding fabric specifications, sizing, or tracking? Our styling concierge team is ready to assist you.</p>
-                <a href="contact.html" class="help-action-button">Contact Concierge</a>
-            </div>
-
-        </aside>
-
     </div>
 
-    <!-- Professional Footer -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            
-            <!-- Column 1: Brand Info -->
-            <div class="footer-col brand-info">
-                <img src="images/logos/logo-white.webp" alt="ShriVatsaDarbar Logo" class="footer-logo">
-                <p>Curating elite Banarasi katan silk sarees, georgette anarkalis, and heirloom ethnic wear with heritage craftsmanship from Varanasi.</p>
-                <div class="social-icons">
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+
+    <!-- =========================================================
+         FAQ HERO
+         ========================================================= -->
+
+    <section class="faq-hero">
+
+        <div class="faq-hero-inner">
+
+            <div class="faq-hero-content">
+
+                <div class="faq-eyebrow">
+                    Frequently Asked Questions
                 </div>
-            </div>
 
-            <!-- Column 2: Quick Links -->
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="collections/collections.html">Collections</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="our-story.html">Our Story</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+                <h1>
+                    We're Here
+                    <br>
+                    to Help
+                </h1>
 
-            <!-- Column 3: Collections -->
-            <div class="footer-col">
-                <h3>Masterpieces</h3>
-                <ul>
-                    <li><a href="collections/collections.html">Banarasi Katan Silk</a></li>
-                    <li><a href="collections/collections.html">Georgette Anarkali</a></li>
-                    <li><a href="collections/collections.html">Organza Tissue Sarees</a></li>
-                    <li><a href="collections/collections.html">Palazzo Suits</a></li>
-                    <li><a href="collections/collections.html">Heirloom Edit</a></li>
-                </ul>
-            </div>
+                <p class="faq-hero-description">
+                    Find quick answers to common questions about our
+                    sarees, suits, orders, care and more. If you need
+                    further assistance, our team is always happy to help.
+                </p>
 
-            <!-- Column 4: Policies -->
-            <div class="footer-col">
-                <h3>Policies</h3>
-                <ul>
-                    <li><a href="policies/privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="policies/shipping-policy.html">Shipping Policy</a></li>
-                    <li><a href="policies/return-refund.html">Return & Refund</a></li>
-                    <li><a href="policies/cancellation-policy.html">Cancellation Policy</a></li>
-                    <li><a href="policies/terms-conditions.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
 
-            <!-- Column 5: Contact Info -->
-            <div class="footer-col contact-info">
-                <h3>Contact</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Varanasi, Uttar Pradesh, India</p>
-                <p><i class="fas fa-envelope"></i> shrivatsadarbar@gmail.com</p>
-                <p><i class="fas fa-phone-alt"></i> +91 88261 96544</p>
-                <p><i class="fas fa-clock"></i> Support: 10:00 AM – 8:00 PM</p>
+                <div class="faq-search">
+
+                    <input type="search"
+                           id="faqSearch"
+                           placeholder="Search your question..."
+                           aria-label="Search frequently asked questions">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
             </div>
 
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-            <p>&copy; 2026 <strong>ShriVatsaDarbar</strong>. All Rights Reserved.</p>
-            <p>Crafted with devotion and luxury in Varanasi.</p>
-        </div>
-    </footer>
+    </section>
 
-    <!-- Slide-out Inquiry Cart Drawer -->
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h3>Your Selection</h3>
-            <button onclick="toggleCart()" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="cart-items" id="cart-items">
-            <!-- Cart items populated dynamically -->
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Estimated Total:</span>
-                <span id="cart-total-price">₹0</span>
+
+    <!-- =========================================================
+         FAQ CONTENT
+         ========================================================= -->
+
+    <main class="faq-main">
+
+        <div class="faq-container">
+
+            <div class="faq-layout">
+
+
+                <!-- =================================================
+                     CATEGORY SIDEBAR
+                     ================================================= -->
+
+                <aside class="faq-sidebar">
+
+                    <div class="faq-category-list"
+                         role="tablist"
+                         aria-label="FAQ categories">
+
+
+                        <button class="faq-category-button active"
+                                type="button"
+                                data-category="all"
+                                role="tab"
+                                aria-selected="true">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                            <span>
+                                All Questions
+                            </span>
+
+                        </button>
+
+
+                        <button class="faq-category-button"
+                                type="button"
+                                data-category="orders"
+                                role="tab"
+                                aria-selected="false">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                            <span>
+                                Orders & Payments
+                            </span>
+
+                        </button>
+
+
+                        <button class="faq-category-button"
+                                type="button"
+                                data-category="shipping"
+                                role="tab"
+                                aria-selected="false">
+
+                            <i class="fa-solid fa-truck"></i>
+
+                            <span>
+                                Shipping & Delivery
+                            </span>
+
+                        </button>
+
+
+                        <button class="faq-category-button"
+                                type="button"
+                                data-category="returns"
+                                role="tab"
+                                aria-selected="false">
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                            <span>
+                                Returns & Exchanges
+                            </span>
+
+                        </button>
+
+
+                        <button class="faq-category-button"
+                                type="button"
+                                data-category="products"
+                                role="tab"
+                                aria-selected="false">
+
+                            <i class="fa-regular fa-gem"></i>
+
+                            <span>
+                                Products & Quality
+                            </span>
+
+                        </button>
+
+
+                        <button class="faq-category-button"
+                                type="button"
+                                data-category="care"
+                                role="tab"
+                                aria-selected="false">
+
+                            <i class="fa-solid fa-shirt"></i>
+
+                            <span>
+                                Care Instructions
+                            </span>
+
+                        </button>
+
+
+                        <button class="faq-category-button"
+                                type="button"
+                                data-category="sizing"
+                                role="tab"
+                                aria-selected="false">
+
+                            <i class="fa-solid fa-ruler"></i>
+
+                            <span>
+                                Sizing & Fit
+                            </span>
+
+                        </button>
+
+
+                        <button class="faq-category-button"
+                                type="button"
+                                data-category="other"
+                                role="tab"
+                                aria-selected="false">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                            <span>
+                                Offers & Others
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="faq-sidebar-note">
+
+                        Still have a question?
+                        <br>
+                        We're always happy to help.
+
+                        <span>
+                            ShriVatsaDarbar Concierge
+                        </span>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- =================================================
+                     FAQ QUESTIONS
+                     ================================================= -->
+
+                <section class="faq-content"
+                         aria-label="Frequently asked questions">
+
+
+                    <div class="faq-content-header">
+
+                        <h2>
+                            All Questions
+                        </h2>
+
+                        <span class="faq-result-count"
+                              id="faqResultCount">
+                            18 Questions
+                        </span>
+
+                    </div>
+
+
+                    <div class="faq-list"
+                         id="faqList">
+
+
+                        <!-- =========================================
+                             ORDERS
+                             ========================================= -->
+
+                        <article class="faq-item"
+                                 data-category="orders">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="true">
+
+                                <span>
+                                    What types of products do you offer?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        We offer a thoughtfully curated
+                                        collection of women's ethnic wear,
+                                        with a focus on sarees and suits.
+                                        Our collection is selected around
+                                        Indian elegance, beautiful details
+                                        and styles for different occasions.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="orders">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    How do I place an order?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        ShriVatsaDarbar currently accepts
+                                        orders through WhatsApp. Browse
+                                        the collection, choose the product
+                                        you are interested in and contact
+                                        us through WhatsApp. Our team will
+                                        assist you with the order details
+                                        and confirmation process.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="orders">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Can I ask questions about a product before ordering?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Yes. We encourage you to contact
+                                        our team through WhatsApp if you
+                                        would like clarification about a
+                                        product before placing your order.
+                                        Our team can guide you based on the
+                                        information available for that
+                                        product.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="orders">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    How does payment work when ordering through WhatsApp?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        After you select your product,
+                                        our team will guide you through
+                                        the order confirmation and payment
+                                        process on WhatsApp. Please use
+                                        only the payment details shared
+                                        through the official ShriVatsaDarbar
+                                        order conversation.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =========================================
+                             SHIPPING
+                             ========================================= -->
+
+                        <article class="faq-item"
+                                 data-category="shipping">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    How does shipping work?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Once your order has been confirmed,
+                                        the order is prepared for dispatch
+                                        and shipped according to our
+                                        Shipping Policy. Delivery details
+                                        and relevant updates are shared
+                                        through the order communication
+                                        channel.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="shipping">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    How can I get an update about my order?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        You can contact ShriVatsaDarbar
+                                        through WhatsApp using the same
+                                        order conversation. Our team can
+                                        assist with available order and
+                                        dispatch information.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =========================================
+                             RETURNS
+                             ========================================= -->
+
+                        <article class="faq-item"
+                                 data-category="returns">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Can I return a product?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Returns are handled according to
+                                        our Return & Refund Policy. Please
+                                        review the policy before placing
+                                        an order and contact us promptly
+                                        if you believe your order qualifies
+                                        for a return or refund.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="returns">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Can I exchange a product?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Exchanges are subject to the
+                                        applicable Exchange Policy and
+                                        product eligibility. Please review
+                                        the policy for the conditions and
+                                        process before requesting an
+                                        exchange.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="returns">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    What should I do if I receive a damaged or incorrect item?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Please contact us as soon as
+                                        possible and keep the product,
+                                        packaging and order information
+                                        safely preserved. Our Return &
+                                        Refund Policy explains the required
+                                        claim process and supporting
+                                        information.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="returns">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Is an unboxing video required for a return or damage claim?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        For eligible damage, wrong-item or
+                                        related claims, a continuous,
+                                        unedited unboxing video beginning
+                                        with the sealed outer package is
+                                        required as part of the standard
+                                        claim process. Please refer to the
+                                        Return & Refund Policy for complete
+                                        instructions.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =========================================
+                             PRODUCTS
+                             ========================================= -->
+
+                        <article class="faq-item"
+                                 data-category="products">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Are product images representative of the actual products?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Product images are provided to
+                                        help you understand the design,
+                                        colour, detailing and overall
+                                        presentation. Because screens and
+                                        lighting can affect colour
+                                        appearance, slight variations may
+                                        occur.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="products">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Where can I find product-specific details?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Product pages provide the
+                                        available information for each
+                                        listed saree or suit. If you need
+                                        clarification about a particular
+                                        product, please contact our team
+                                        through WhatsApp before ordering.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =========================================
+                             CARE
+                             ========================================= -->
+
+                        <article class="faq-item"
+                                 data-category="care">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    How should I care for my saree or suit?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Care instructions can vary by
+                                        fabric, embroidery, embellishment
+                                        and construction. Follow the
+                                        product-specific care guidance
+                                        provided with your purchase. When
+                                        in doubt, contact us before using
+                                        any cleaning or treatment method.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="care">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    How should I store my saree or suit?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Store your garments clean and dry,
+                                        protected from excessive moisture,
+                                        direct sunlight and unnecessary
+                                        friction. For delicate fabrics or
+                                        embellishments, appropriate garment
+                                        storage helps preserve their
+                                        appearance.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =========================================
+                             SIZING
+                             ========================================= -->
+
+                        <article class="faq-item"
+                                 data-category="sizing">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Do you offer size guidance?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Yes. Please check the sizing
+                                        information available for the
+                                        individual product. If you are
+                                        unsure about a suit size, contact
+                                        us through WhatsApp before placing
+                                        your order so our team can help
+                                        with the available information.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="sizing">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Are sarees available in different sizes?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Sarees are generally presented
+                                        differently from stitched
+                                        garments, while suits may have
+                                        product-specific sizing. Please
+                                        check the individual product
+                                        information or contact us for
+                                        clarification before ordering.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =========================================
+                             OTHER
+                             ========================================= -->
+
+                        <article class="faq-item"
+                                 data-category="other">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Can I cancel my order?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Cancellation requests are handled
+                                        according to our Cancellation
+                                        Policy. If you need to cancel an
+                                        order, contact us as soon as
+                                        possible through the official
+                                        WhatsApp channel.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="other">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    Will sold-out products be restocked?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        Restocking depends on product
+                                        availability and collection
+                                        planning. If you are interested
+                                        in a sold-out piece, contact us
+                                        through WhatsApp and we can advise
+                                        you based on the latest information
+                                        available.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="faq-item"
+                                 data-category="other">
+
+                            <button class="faq-question"
+                                    type="button"
+                                    aria-expanded="false">
+
+                                <span>
+                                    How can I contact ShriVatsaDarbar?
+                                </span>
+
+                                <span class="faq-question-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <div class="faq-answer-content">
+
+                                        You can reach our team through
+                                        WhatsApp at +91 88261 96544 or
+                                        email us at
+                                        shrivatsadarbar@gmail.com.
+                                        Our support hours are
+                                        10:00 AM – 8:00 PM.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+
+                    <div class="faq-no-results"
+                         id="faqNoResults">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <h3>
+                            We couldn't find that question
+                        </h3>
+
+                        <p>
+                            Try another search term or contact our team
+                            for assistance.
+                        </p>
+
+                    </div>
+
+
+                </section>
+
             </div>
-            <button class="whatsapp-checkout-btn" onclick="sendToWhatsApp()">
-                <i class="fa-brands fa-whatsapp"></i> Proceed Inquiry via WhatsApp
-            </button>
-        </div>
-    </div>
-    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
 
-    <script src="script.js"></script>
+        </div>
+
+    </main>
+
+
+    <!-- =========================================================
+         STILL NEED HELP
+         ========================================================= -->
+
+    <section class="faq-help">
+
+        <div class="faq-container">
+
+            <div class="faq-help-inner">
+
+
+                <div class="faq-help-intro">
+
+                    <div class="faq-eyebrow">
+                        Need Assistance?
+                    </div>
+
+                    <h2>
+                        Still Need Help?
+                    </h2>
+
+                    <p>
+                        Our team is here to assist you with your questions
+                        about products, orders and more.
+                    </p>
+
+                    <a href="contact.html"
+                       class="faq-contact-button">
+
+                        Contact Us
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="faq-help-card">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <h3>
+                        Chat on WhatsApp
+                    </h3>
+
+                    <a href="https://wa.me/918826196544"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        +91 88261 96544
+
+                    </a>
+
+                </div>
+
+
+                <div class="faq-help-card">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <h3>
+                        Email Us
+                    </h3>
+
+                    <a href="mailto:shrivatsadarbar@gmail.com">
+
+                        shrivatsadarbar@gmail.com
+
+                    </a>
+
+                </div>
+
+
+                <div class="faq-help-card">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <h3>
+                        Support Hours
+                    </h3>
+
+                    <p>
+                        10:00 AM – 8:00 PM
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         VALUE STRIP
+         ========================================================= -->
+
+    <section class="faq-values">
+
+        <div class="faq-container">
+
+            <div class="faq-values-grid">
+
+
+                <div class="faq-value">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <h3>
+                        Thoughtful Curation
+                    </h3>
+
+                    <p>
+                        Handpicked with care
+                    </p>
+
+                </div>
+
+
+                <div class="faq-value">
+
+                    <i class="fa-regular fa-gem"></i>
+
+                    <h3>
+                        Premium Quality
+                    </h3>
+
+                    <p>
+                        Timeless & elegant
+                    </p>
+
+                </div>
+
+
+                <div class="faq-value">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <h3>
+                        For Every Occasion
+                    </h3>
+
+                    <p>
+                        From everyday to celebrations
+                    </p>
+
+                </div>
+
+
+                <div class="faq-value">
+
+                    <i class="fa-solid fa-people-group"></i>
+
+                    <h3>
+                        A More Conscious Choice
+                    </h3>
+
+                    <p>
+                        Supporting artisans & heritage
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         MASTER FOOTER
+         ========================================================= -->
+
+    <footer id="site-footer"></footer>
+
+
+    <!-- =========================================================
+         WHATSAPP FLOAT
+         ========================================================= -->
+
+    <a class="faq-whatsapp"
+       href="https://wa.me/918826196544"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat with ShriVatsaDarbar on WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+</div>
+
+
+<!-- =============================================================
+     FAQ PAGE JAVASCRIPT
+     Accordion + Category Filter + Search
+     ============================================================= -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    const faqItems =
+        Array.from(
+            document.querySelectorAll(".faq-item")
+        );
+
+
+    const categoryButtons =
+        Array.from(
+            document.querySelectorAll(".faq-category-button")
+        );
+
+
+    const searchInput =
+        document.getElementById("faqSearch");
+
+
+    const resultCount =
+        document.getElementById("faqResultCount");
+
+
+    const noResults =
+        document.getElementById("faqNoResults");
+
+
+    const contentTitle =
+        document.querySelector(".faq-content-header h2");
+
+
+    let activeCategory = "all";
+
+
+    /* =========================================================
+       ACCORDION
+       ========================================================= */
+
+    faqItems.forEach(function (item) {
+
+        const button =
+            item.querySelector(".faq-question");
+
+
+        button.addEventListener("click", function () {
+
+            const isOpen =
+                item.classList.contains("open");
+
+
+            /*
+             * Close every other question.
+             */
+            faqItems.forEach(function (otherItem) {
+
+                otherItem.classList.remove("open");
+
+                const otherButton =
+                    otherItem.querySelector(".faq-question");
+
+                otherButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+
+            /*
+             * Open clicked question if it
+             * wasn't already open.
+             */
+            if (!isOpen) {
+
+                item.classList.add("open");
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+        });
+
+    });
+
+
+    /*
+     * Open first question on initial load.
+     */
+    const firstItem =
+        faqItems[0];
+
+    if (firstItem) {
+
+        firstItem.classList.add("open");
+
+        firstItem
+            .querySelector(".faq-question")
+            .setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+    }
+
+
+    /* =========================================================
+       CATEGORY FILTER
+       ========================================================= */
+
+    categoryButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            activeCategory =
+                button.dataset.category || "all";
+
+
+            categoryButtons.forEach(function (item) {
+
+                const isActive =
+                    item === button;
+
+                item.classList.toggle(
+                    "active",
+                    isActive
+                );
+
+                item.setAttribute(
+                    "aria-selected",
+                    String(isActive)
+                );
+
+            });
+
+
+            /*
+             * Update title.
+             */
+
+            const label =
+                button
+                    .querySelector("span")
+                    ?.textContent
+                    ?.trim() || "All Questions";
+
+
+            contentTitle.textContent =
+                label;
+
+
+            /*
+             * Clear search when category changes.
+             */
+
+            if (searchInput) {
+
+                searchInput.value = "";
+
+            }
+
+
+            filterFAQs();
+
+        });
+
+    });
+
+
+    /* =========================================================
+       SEARCH
+       ========================================================= */
+
+    if (searchInput) {
+
+        searchInput.addEventListener(
+            "input",
+            filterFAQs
+        );
+
+    }
+
+
+    function filterFAQs() {
+
+        const searchTerm =
+            searchInput
+                ? searchInput.value
+                    .trim()
+                    .toLowerCase()
+                : "";
+
+
+        let visibleCount = 0;
+
+
+        faqItems.forEach(function (item) {
+
+            const category =
+                item.dataset.category || "";
+
+
+            const question =
+                item.querySelector(".faq-question")
+                    ?.textContent
+                    ?.toLowerCase() || "";
+
+
+            const answer =
+                item.querySelector(".faq-answer-content")
+                    ?.textContent
+                    ?.toLowerCase() || "";
+
+
+            const matchesCategory =
+                activeCategory === "all" ||
+                category === activeCategory;
+
+
+            const matchesSearch =
+                !searchTerm ||
+                question.includes(searchTerm) ||
+                answer.includes(searchTerm);
+
+
+            const shouldShow =
+                matchesCategory &&
+                matchesSearch;
+
+
+            item.style.display =
+                shouldShow
+                    ? ""
+                    : "none";
+
+
+            if (shouldShow) {
+
+                visibleCount++;
+
+            }
+
+        });
+
+
+        /*
+         * Update result count.
+         */
+
+        resultCount.textContent =
+            visibleCount +
+            (visibleCount === 1
+                ? " Question"
+                : " Questions");
+
+
+        /*
+         * No-results state.
+         */
+
+        if (noResults) {
+
+            noResults.classList.toggle(
+                "show",
+                visibleCount === 0
+            );
+
+        }
+
+
+        /*
+         * Close hidden questions.
+         */
+
+        faqItems.forEach(function (item) {
+
+            if (item.style.display === "none") {
+
+                item.classList.remove("open");
+
+                const button =
+                    item.querySelector(".faq-question");
+
+                if (button) {
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+            }
+
+        });
+
+
+        /*
+         * Open first visible result if
+         * the user is searching/filtering.
+         */
+
+        if (
+            visibleCount > 0 &&
+            (searchTerm || activeCategory !== "all")
+        ) {
+
+            const firstVisible =
+                faqItems.find(function (item) {
+
+                    return item.style.display !== "none";
+
+                });
+
+
+            if (firstVisible) {
+
+                firstVisible.classList.add("open");
+
+                const button =
+                    firstVisible.querySelector(
+                        ".faq-question"
+                    );
+
+                if (button) {
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+})();
+
+</script>
+
+
+<!-- =============================================================
+     SHARED SITE SCRIPT
+     ============================================================= -->
+
+<script src="script.js"></script>
+
+
 </body>
 </html>
