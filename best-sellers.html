@@ -29,9 +29,7 @@
     <meta property="og:type"
           content="website">
 
-    <title>
-        Best Sellers | ShriVatsaDarbar
-    </title>
+    <title>Best Sellers | ShriVatsaDarbar</title>
 
 
     <!-- =========================================================
@@ -58,7 +56,7 @@
 
 
     <!-- =========================================================
-         MAIN CSS
+         MAIN STYLESHEET
     ========================================================= -->
 
     <link rel="stylesheet"
@@ -66,7 +64,7 @@
 
 
     <!-- =========================================================
-         BEST SELLERS PAGE STYLES
+         PAGE-SPECIFIC STYLES
     ========================================================= -->
 
     <style>
@@ -76,6 +74,7 @@
         ===================================================== */
 
         .best-sellers-page {
+            min-height: 100vh;
 
             background:
                 radial-gradient(
@@ -84,9 +83,6 @@
                     transparent 34%
                 ),
                 #fbfaf7;
-
-            min-height: 100vh;
-
         }
 
 
@@ -95,22 +91,17 @@
         ===================================================== */
 
         .best-sellers-hero {
+            padding: 88px 20px 62px;
 
             text-align: center;
-
-            padding:
-                88px 20px
-                62px;
 
             border-bottom:
                 1px solid
                 rgba(181, 140, 65, 0.14);
-
         }
 
 
         .best-sellers-eyebrow {
-
             margin: 0 0 16px;
 
             font-family:
@@ -126,12 +117,10 @@
             color: #a47d32;
 
             text-transform: uppercase;
-
         }
 
 
         .best-sellers-hero h1 {
-
             margin: 0;
 
             font-family:
@@ -142,17 +131,15 @@
             font-size:
                 clamp(46px, 6vw, 72px);
 
-            line-height: 0.98;
+            line-height: .98;
 
             font-weight: 500;
 
             color: #2b2521;
-
         }
 
 
         .best-sellers-ornament {
-
             display: flex;
 
             align-items: center;
@@ -162,33 +149,26 @@
             gap: 12px;
 
             margin: 24px auto;
-
         }
 
 
         .best-sellers-ornament span {
-
             width: 48px;
 
             height: 1px;
 
-            background:
-                #c5a05a;
-
+            background: #c5a05a;
         }
 
 
         .best-sellers-ornament i {
-
             font-size: 8px;
 
             color: #b88a2d;
-
         }
 
 
         .best-sellers-description {
-
             max-width: 700px;
 
             margin: 0 auto;
@@ -202,7 +182,6 @@
             line-height: 1.9;
 
             color: #716961;
-
         }
 
 
@@ -211,21 +190,17 @@
         ===================================================== */
 
         .best-sellers-note {
-
             max-width: 1180px;
 
             margin: 0 auto;
 
-            padding:
-                42px 25px 0;
+            padding: 42px 25px 0;
 
             text-align: center;
-
         }
 
 
         .best-sellers-note-inner {
-
             display: inline-flex;
 
             align-items: center;
@@ -236,35 +211,33 @@
 
             max-width: 760px;
 
-            padding:
-                13px 20px;
+            padding: 13px 20px;
 
             border:
                 1px solid
                 rgba(181, 140, 65, 0.22);
 
             background:
-                rgba(255,255,255,0.72);
+                rgba(255,255,255,.72);
 
             color: #746b62;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
 
             font-size: 11px;
 
             line-height: 1.6;
-
-            letter-spacing: .02em;
-
         }
 
 
         .best-sellers-note-inner i {
+            flex-shrink: 0;
 
             color: #b88a2d;
 
             font-size: 13px;
-
-            flex-shrink: 0;
-
         }
 
 
@@ -273,14 +246,11 @@
         ===================================================== */
 
         .best-sellers-toolbar {
-
             max-width: 1250px;
 
-            margin:
-                0 auto;
+            margin: 0 auto;
 
-            padding:
-                45px 25px 22px;
+            padding: 45px 25px 22px;
 
             display: flex;
 
@@ -289,12 +259,10 @@
             justify-content: space-between;
 
             gap: 20px;
-
         }
 
 
         .best-sellers-count {
-
             margin: 0;
 
             font-family:
@@ -310,23 +278,19 @@
             text-transform: uppercase;
 
             color: #847a71;
-
         }
 
 
         .best-sellers-filter-wrap {
-
             display: flex;
 
             align-items: center;
 
             gap: 9px;
-
         }
 
 
         .best-sellers-filter-label {
-
             font-family:
                 "DM Sans",
                 sans-serif;
@@ -338,22 +302,19 @@
             text-transform: uppercase;
 
             color: #887d73;
-
         }
 
 
         .best-sellers-filter {
-
             min-width: 150px;
 
-            padding:
-                11px 14px;
+            padding: 11px 14px;
 
             border:
                 1px solid
                 #ddd2c5;
 
-            background: #ffffff;
+            background: #fff;
 
             color: #403832;
 
@@ -366,15 +327,11 @@
             outline: none;
 
             cursor: pointer;
-
         }
 
 
         .best-sellers-filter:focus {
-
-            border-color:
-                #b88a2d;
-
+            border-color: #b88a2d;
         }
 
 
@@ -383,24 +340,18 @@
         ===================================================== */
 
         .best-sellers-grid {
-
             max-width: 1250px;
 
-            margin:
-                0 auto;
+            margin: 0 auto;
 
-            padding:
-                0 25px
-                80px;
+            padding: 0 25px 80px;
 
             display: grid;
 
             grid-template-columns:
                 repeat(3, minmax(0, 1fr));
 
-            gap:
-                46px 24px;
-
+            gap: 46px 24px;
         }
 
 
@@ -409,11 +360,11 @@
         ===================================================== */
 
         .best-seller-card {
-
             min-width: 0;
 
-            background:
-                #ffffff;
+            overflow: hidden;
+
+            background: #fff;
 
             border:
                 1px solid
@@ -422,45 +373,45 @@
             transition:
                 transform .35s ease,
                 box-shadow .35s ease;
-
         }
 
 
         .best-seller-card:hover {
-
-            transform:
-                translateY(-5px);
+            transform: translateY(-5px);
 
             box-shadow:
                 0 18px 45px
-                rgba(56, 42, 31, .10);
-
+                rgba(56,42,31,.10);
         }
 
 
         /* =====================================================
-           IMAGE
+           IMAGE AREA
         ===================================================== */
 
-        .best-seller-image {
-
+        .best-seller-image-wrap {
             position: relative;
 
             display: block;
 
             overflow: hidden;
 
-            aspect-ratio:
-                0.76;
+            aspect-ratio: .76;
 
-            background:
-                #f3eee7;
-
+            background: #f3eee7;
         }
 
 
-        .best-seller-image img {
+        .best-seller-image-link {
+            display: block;
 
+            width: 100%;
+
+            height: 100%;
+        }
+
+
+        .best-seller-image-link img {
             width: 100%;
 
             height: 100%;
@@ -472,16 +423,12 @@
             transition:
                 transform .7s
                 cubic-bezier(.22,1,.36,1);
-
         }
 
 
         .best-seller-card:hover
-        .best-seller-image img {
-
-            transform:
-                scale(1.045);
-
+        .best-seller-image-link img {
+            transform: scale(1.045);
         }
 
 
@@ -490,7 +437,6 @@
         ===================================================== */
 
         .best-seller-badge {
-
             position: absolute;
 
             left: 14px;
@@ -499,14 +445,11 @@
 
             z-index: 4;
 
-            padding:
-                7px 10px;
+            padding: 7px 10px;
 
-            background:
-                #b88a2d;
+            background: #b88a2d;
 
-            color:
-                #ffffff;
+            color: #fff;
 
             font-family:
                 "DM Sans",
@@ -519,7 +462,6 @@
             letter-spacing: 1.4px;
 
             text-transform: uppercase;
-
         }
 
 
@@ -528,14 +470,13 @@
         ===================================================== */
 
         .best-seller-wishlist {
-
             position: absolute;
 
             top: 13px;
 
             right: 13px;
 
-            z-index: 5;
+            z-index: 6;
 
             width: 36px;
 
@@ -548,8 +489,7 @@
             background:
                 rgba(255,255,255,.94);
 
-            color:
-                #4b0713;
+            color: #4b0713;
 
             display: grid;
 
@@ -565,21 +505,15 @@
                 background .25s ease,
                 color .25s ease,
                 transform .25s ease;
-
         }
 
 
         .best-seller-wishlist:hover {
+            background: #4b0713;
 
-            background:
-                #4b0713;
+            color: #fff;
 
-            color:
-                #ffffff;
-
-            transform:
-                scale(1.04);
-
+            transform: scale(1.04);
         }
 
 
@@ -588,23 +522,16 @@
         ===================================================== */
 
         .best-seller-info {
+            padding: 20px 18px 21px;
 
-            padding:
-                20px 18px 21px;
-
-            text-align:
-                center;
-
+            text-align: center;
         }
 
 
         .best-seller-category {
+            margin: 0 0 7px;
 
-            margin:
-                0 0 7px;
-
-            color:
-                #a47d32;
+            color: #a47d32;
 
             font-family:
                 "DM Sans",
@@ -616,292 +543,182 @@
 
             letter-spacing: 2px;
 
-            text-transform:
-                uppercase;
-
+            text-transform: uppercase;
         }
 
 
         .best-seller-info h2 {
+            margin: 0;
 
-            margin:
-                0;
-
-            color:
-                #302923;
+            color: #302923;
 
             font-family:
                 "Cormorant Garamond",
                 Georgia,
                 serif;
 
-            font-size:
-                25px;
+            font-size: 25px;
 
-            line-height:
-                1.12;
+            line-height: 1.12;
 
-            font-weight:
-                600;
-
+            font-weight: 600;
         }
 
 
         .best-seller-description {
+            max-width: 290px;
 
-            margin:
-                9px auto 0;
+            margin: 9px auto 0;
 
-            max-width:
-                290px;
-
-            color:
-                #81776e;
+            color: #81776e;
 
             font-family:
                 "DM Sans",
                 sans-serif;
 
-            font-size:
-                11px;
+            font-size: 11px;
 
-            line-height:
-                1.6;
-
+            line-height: 1.6;
         }
 
 
         /* =====================================================
-           PRODUCT ACTIONS
+           ACTIONS
         ===================================================== */
 
         .best-seller-actions {
-
-            display:
-                grid;
+            display: grid;
 
             grid-template-columns:
                 1fr 1fr;
 
-            gap:
-                8px;
+            gap: 8px;
 
-            margin-top:
-                17px;
-
+            margin-top: 17px;
         }
 
 
         .best-seller-view,
         .best-seller-add {
+            min-height: 42px;
 
-            min-height:
-                42px;
+            display: flex;
 
-            display:
-                flex;
+            align-items: center;
 
-            align-items:
-                center;
+            justify-content: center;
 
-            justify-content:
-                center;
+            gap: 7px;
 
-            gap:
-                7px;
-
-            padding:
-                9px 10px;
+            padding: 9px 10px;
 
             font-family:
                 "DM Sans",
                 sans-serif;
 
-            font-size:
-                9px;
+            font-size: 9px;
 
-            font-weight:
-                700;
+            font-weight: 700;
 
-            letter-spacing:
-                .8px;
+            letter-spacing: .8px;
 
-            text-transform:
-                uppercase;
+            text-transform: uppercase;
 
-            text-decoration:
-                none;
+            text-decoration: none;
 
-            cursor:
-                pointer;
+            cursor: pointer;
 
             transition:
                 background .25s ease,
                 color .25s ease,
                 border-color .25s ease;
-
         }
 
 
         .best-seller-view {
-
             border:
                 1px solid
                 #4b0713;
 
-            background:
-                #ffffff;
+            background: #fff;
 
-            color:
-                #4b0713;
-
+            color: #4b0713;
         }
 
 
         .best-seller-view:hover {
+            background: #4b0713;
 
-            background:
-                #4b0713;
-
-            color:
-                #ffffff;
-
+            color: #fff;
         }
 
 
         .best-seller-add {
-
             border:
                 1px solid
                 #4b0713;
 
-            background:
-                #4b0713;
+            background: #4b0713;
 
-            color:
-                #ffffff;
-
+            color: #fff;
         }
 
 
         .best-seller-add:hover {
+            background: #690b1b;
 
-            background:
-                #690b1b;
-
-            border-color:
-                #690b1b;
-
+            border-color: #690b1b;
         }
 
 
         .best-seller-add.added {
+            background: #7b5a1d;
 
-            background:
-                #7b5a1d;
-
-            border-color:
-                #7b5a1d;
-
+            border-color: #7b5a1d;
         }
 
 
         /* =====================================================
-           EMPTY / ERROR
+           EMPTY STATE
         ===================================================== */
 
         .best-sellers-empty {
+            grid-column: 1 / -1;
 
-            grid-column:
-                1 / -1;
+            padding: 70px 20px;
 
-            padding:
-                70px 20px;
+            text-align: center;
 
-            text-align:
-                center;
-
-            color:
-                #766c63;
-
+            color: #766c63;
         }
 
 
         .best-sellers-empty strong {
+            display: block;
 
-            display:
-                block;
-
-            margin-bottom:
-                8px;
+            margin-bottom: 8px;
 
             font-family:
                 "Cormorant Garamond",
                 Georgia,
                 serif;
 
-            font-size:
-                30px;
+            font-size: 30px;
 
-            color:
-                #342b26;
-
+            color: #342b26;
         }
 
 
         /* =====================================================
-           CART DRAWER SUPPORT
+           CART OVERLAY
         ===================================================== */
 
-        .best-sellers-page .cart-drawer {
-
-            position: fixed;
-
-            top: 0;
-
-            right: 0;
-
-            bottom: 0;
-
-            z-index: 5000;
-
-            width: min(430px, 100%);
-
-            display: flex;
-
-            flex-direction: column;
-
-            background:
-                #fffdf9;
-
-            box-shadow:
-                -15px 0 45px
-                rgba(0,0,0,.16);
-
-            transform:
-                translateX(105%);
-
-            transition:
-                transform .35s ease;
-
-        }
-
-
-        .best-sellers-page .cart-drawer.active {
-
-            transform:
-                translateX(0);
-
-        }
-
-
-        .best-sellers-page .cart-overlay {
-
+        .best-sellers-cart-overlay {
             position: fixed;
 
             inset: 0;
 
-            z-index: 4999;
+            z-index: 9998;
 
             background:
                 rgba(30,20,15,.45);
@@ -913,45 +730,80 @@
             transition:
                 opacity .3s ease,
                 visibility .3s ease;
-
         }
 
 
-        .best-sellers-page .cart-overlay.active {
-
+        .best-sellers-cart-overlay.active {
             opacity: 1;
 
             visibility: visible;
-
         }
 
 
-        .best-sellers-page .cart-header {
+        /* =====================================================
+           CART DRAWER
 
-            min-height:
-                72px;
+           IMPORTANT:
+           This is intentionally NOT scoped under
+           .best-sellers-page because the drawer sits outside
+           <main>.
+        ===================================================== */
 
-            display:
-                flex;
+        .best-sellers-cart-drawer {
+            position: fixed;
 
-            align-items:
-                center;
+            top: 0;
 
-            justify-content:
-                space-between;
+            right: 0;
 
-            padding:
-                0 25px;
+            bottom: 0;
+
+            z-index: 9999;
+
+            width:
+                min(430px, 100%);
+
+            display: flex;
+
+            flex-direction: column;
+
+            background: #fffdf9;
+
+            box-shadow:
+                -15px 0 45px
+                rgba(0,0,0,.16);
+
+            transform:
+                translateX(105%);
+
+            transition:
+                transform .35s ease;
+        }
+
+
+        .best-sellers-cart-drawer.active {
+            transform: translateX(0);
+        }
+
+
+        .best-sellers-cart-header {
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 25px;
 
             border-bottom:
                 1px solid
                 #e9e0d5;
-
         }
 
 
-        .best-sellers-page .cart-header h2 {
-
+        .best-sellers-cart-header h2 {
             margin: 0;
 
             font-family:
@@ -959,658 +811,464 @@
                 Georgia,
                 serif;
 
-            font-size:
-                29px;
+            font-size: 29px;
 
-            font-weight:
-                600;
+            font-weight: 600;
 
-            color:
-                #302722;
-
+            color: #302722;
         }
 
 
-        .best-sellers-page .cart-close {
+        .best-sellers-cart-close {
+            width: 36px;
 
-            width:
-                36px;
-
-            height:
-                36px;
+            height: 36px;
 
             border:
                 1px solid
                 #ddd0c0;
 
-            border-radius:
-                50%;
+            border-radius: 50%;
 
-            background:
-                #ffffff;
+            background: #fff;
 
-            color:
-                #4b0713;
+            color: #4b0713;
 
-            display:
-                grid;
+            display: grid;
 
-            place-items:
-                center;
+            place-items: center;
 
-            cursor:
-                pointer;
-
+            cursor: pointer;
         }
 
 
-        .best-sellers-page .cart-items {
+        .best-sellers-cart-items {
+            flex: 1;
 
-            flex:
-                1;
-
-            overflow-y:
-                auto;
+            overflow-y: auto;
 
             padding:
                 10px 25px 20px;
-
         }
 
 
-        .best-sellers-page .cart-empty {
-
+        .best-sellers-cart-empty {
             padding:
                 75px 20px;
 
-            text-align:
-                center;
+            text-align: center;
 
-            color:
-                #82766d;
-
+            color: #82766d;
         }
 
 
-        .best-sellers-page .cart-empty i {
+        .best-sellers-cart-empty i {
+            display: block;
 
-            display:
-                block;
+            margin-bottom: 18px;
 
-            margin-bottom:
-                18px;
+            color: #b88a2d;
 
-            color:
-                #b88a2d;
-
-            font-size:
-                38px;
-
+            font-size: 38px;
         }
 
 
-        .best-sellers-page .cart-empty strong {
-
-            display:
-                block;
+        .best-sellers-cart-empty strong {
+            display: block;
 
             font-family:
                 "Cormorant Garamond",
                 Georgia,
                 serif;
 
-            font-size:
-                26px;
+            font-size: 26px;
 
-            color:
-                #342b26;
-
+            color: #342b26;
         }
 
 
-        .best-sellers-page .cart-empty span {
+        .best-sellers-cart-empty span {
+            display: block;
 
-            display:
-                block;
+            margin-top: 8px;
 
-            margin-top:
-                8px;
-
-            font-size:
-                12px;
-
+            font-size: 12px;
         }
 
 
-        .best-sellers-page .cart-item {
+        /* =====================================================
+           CART ITEM
+        ===================================================== */
 
-            display:
-                grid;
+        .best-sellers-cart-item {
+            display: grid;
 
             grid-template-columns:
                 75px 1fr auto;
 
-            gap:
-                13px;
+            gap: 13px;
 
-            padding:
-                15px 0;
+            padding: 15px 0;
 
             border-bottom:
                 1px solid
                 #eee5db;
-
         }
 
 
-        .best-sellers-page .cart-item-image {
+        .best-sellers-cart-item-image {
+            width: 75px;
 
-            width:
-                75px;
+            height: 90px;
 
-            height:
-                90px;
+            object-fit: cover;
 
-            object-fit:
-                cover;
-
-            background:
-                #f5eee5;
-
+            background: #f5eee5;
         }
 
 
-        .best-sellers-page .cart-item-details h3 {
-
-            margin:
-                0 0 5px;
+        .best-sellers-cart-item-details h3 {
+            margin: 0 0 5px;
 
             font-family:
                 "Cormorant Garamond",
                 Georgia,
                 serif;
 
-            font-size:
-                19px;
+            font-size: 19px;
 
-            line-height:
-                1.1;
+            line-height: 1.1;
 
-            font-weight:
-                500;
+            font-weight: 500;
 
-            color:
-                #302722;
-
+            color: #302722;
         }
 
 
-        .best-sellers-page .cart-item-code {
+        .best-sellers-cart-item-code {
+            font-size: 9px;
 
-            font-size:
-                9px;
+            color: #988c82;
 
-            color:
-                #988c82;
-
-            letter-spacing:
-                .7px;
-
+            letter-spacing: .7px;
         }
 
 
-        .best-sellers-page .cart-item-controls {
+        .best-sellers-cart-controls {
+            display: flex;
 
-            display:
-                flex;
+            align-items: center;
 
-            align-items:
-                center;
-
-            margin-top:
-                12px;
-
+            margin-top: 12px;
         }
 
 
-        .best-sellers-page .cart-qty-button {
+        .best-sellers-cart-qty {
+            width: 28px;
 
-            width:
-                28px;
-
-            height:
-                28px;
+            height: 28px;
 
             border:
                 1px solid
                 #ddd0c0;
 
-            background:
-                #ffffff;
+            background: #fff;
 
-            color:
-                #4b0713;
+            color: #4b0713;
 
-            cursor:
-                pointer;
-
+            cursor: pointer;
         }
 
 
-        .best-sellers-page .cart-qty-value {
+        .best-sellers-cart-qty-value {
+            min-width: 30px;
 
-            min-width:
-                30px;
+            text-align: center;
 
-            text-align:
-                center;
-
-            font-size:
-                11px;
-
+            font-size: 11px;
         }
 
 
-        .best-sellers-page .cart-remove {
+        .best-sellers-cart-remove {
+            border: 0;
 
-            border:
-                0;
+            background: transparent;
 
-            background:
-                transparent;
+            color: #9a8d82;
 
-            color:
-                #9a8d82;
-
-            cursor:
-                pointer;
-
+            cursor: pointer;
         }
 
 
-        .best-sellers-page .cart-footer {
+        /* =====================================================
+           CART FOOTER
+        ===================================================== */
 
+        .best-sellers-cart-footer {
             border-top:
                 1px solid
                 #e9e0d5;
 
             padding:
                 18px 25px;
-
         }
 
 
-        .best-sellers-page .cart-footer-note {
-
+        .best-sellers-cart-note {
             margin:
                 0 0 14px;
-
-            font-size:
-                10px;
-
-            line-height:
-                1.5;
-
-            color:
-                #8b7f75;
-
-            text-align:
-                center;
-
-        }
-
-
-        .best-sellers-page .cart-whatsapp-button {
-
-            width:
-                100%;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            gap:
-                9px;
-
-            padding:
-                14px 18px;
-
-            border:
-                0;
-
-            background:
-                #4b0713;
-
-            color:
-                #ffffff;
 
             font-family:
                 "DM Sans",
                 sans-serif;
 
-            font-size:
-                10px;
+            font-size: 10px;
 
-            font-weight:
-                600;
+            line-height: 1.5;
 
-            letter-spacing:
-                1.3px;
+            color: #8b7f75;
 
-            text-transform:
-                uppercase;
-
-            cursor:
-                pointer;
-
+            text-align: center;
         }
 
 
-        .best-sellers-page .cart-clear-button {
+        .best-sellers-cart-whatsapp {
+            width: 100%;
 
-            width:
-                100%;
+            display: flex;
 
-            margin-top:
-                8px;
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
 
             padding:
-                9px;
+                14px 18px;
 
-            border:
-                0;
+            border: 0;
 
-            background:
-                transparent;
+            background: #4b0713;
 
-            color:
-                #8a7c71;
+            color: #fff;
 
-            font-size:
-                9px;
+            font-family:
+                "DM Sans",
+                sans-serif;
 
-            letter-spacing:
-                1px;
+            font-size: 10px;
 
-            text-transform:
-                uppercase;
+            font-weight: 600;
 
-            cursor:
-                pointer;
+            letter-spacing: 1.3px;
 
+            text-transform: uppercase;
+
+            cursor: pointer;
+        }
+
+
+        .best-sellers-cart-clear {
+            width: 100%;
+
+            margin-top: 8px;
+
+            padding: 9px;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #8a7c71;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            cursor: pointer;
         }
 
 
         /* =====================================================
-           RESPONSIVE — TABLET
+           RESPONSIVE
         ===================================================== */
 
         @media (max-width: 900px) {
 
             .best-sellers-grid {
-
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
 
-                gap:
-                    30px 16px;
-
+                gap: 30px 16px;
             }
 
         }
 
 
-        /* =====================================================
-           RESPONSIVE — MOBILE
-        ===================================================== */
-
         @media (max-width: 600px) {
 
             .best-sellers-hero {
-
                 padding:
-                    62px 18px
-                    44px;
-
+                    62px 18px 44px;
             }
 
 
             .best-sellers-hero h1 {
-
-                font-size:
-                    49px;
-
+                font-size: 49px;
             }
 
 
             .best-sellers-description {
+                font-size: 13px;
 
-                font-size:
-                    13px;
-
-                line-height:
-                    1.8;
-
+                line-height: 1.8;
             }
 
 
             .best-sellers-note {
-
                 padding:
                     28px 15px 0;
-
             }
 
 
             .best-sellers-note-inner {
+                display: flex;
 
-                display:
-                    flex;
-
-                text-align:
-                    left;
-
+                text-align: left;
             }
 
 
             .best-sellers-toolbar {
-
                 padding:
                     34px 15px 18px;
 
-                align-items:
-                    flex-start;
-
+                align-items: flex-start;
             }
 
 
             .best-sellers-count {
-
-                font-size:
-                    9px;
-
+                font-size: 9px;
             }
 
 
             .best-sellers-filter-wrap {
-
-                display:
-                    block;
-
+                display: block;
             }
 
 
             .best-sellers-filter-label {
-
-                display:
-                    none;
-
+                display: none;
             }
 
 
             .best-sellers-filter {
+                min-width: 130px;
 
-                min-width:
-                    130px;
+                padding: 10px;
 
-                padding:
-                    10px;
-
-                font-size:
-                    10px;
-
+                font-size: 10px;
             }
 
 
             .best-sellers-grid {
-
                 padding:
-                    0 12px
-                    60px;
+                    0 12px 60px;
 
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
 
                 gap:
                     24px 10px;
-
             }
 
 
             .best-seller-badge {
+                left: 8px;
 
-                left:
-                    8px;
-
-                top:
-                    8px;
+                top: 8px;
 
                 padding:
                     6px 7px;
 
-                font-size:
-                    7px;
+                font-size: 7px;
 
-                letter-spacing:
-                    1px;
-
+                letter-spacing: 1px;
             }
 
 
             .best-seller-wishlist {
+                top: 7px;
 
-                top:
-                    7px;
+                right: 7px;
 
-                right:
-                    7px;
+                width: 31px;
 
-                width:
-                    31px;
-
-                height:
-                    31px;
-
+                height: 31px;
             }
 
 
             .best-seller-info {
-
                 padding:
                     14px 7px 14px;
-
             }
 
 
             .best-seller-category {
+                font-size: 7px;
 
-                font-size:
-                    7px;
-
-                letter-spacing:
-                    1.5px;
-
+                letter-spacing: 1.5px;
             }
 
 
             .best-seller-info h2 {
-
-                font-size:
-                    20px;
-
+                font-size: 20px;
             }
 
 
             .best-seller-description {
+                font-size: 9px;
 
-                font-size:
-                    9px;
-
-                line-height:
-                    1.5;
-
+                line-height: 1.5;
             }
 
 
             .best-seller-actions {
+                grid-template-columns: 1fr;
 
-                grid-template-columns:
-                    1fr;
+                gap: 6px;
 
-                gap:
-                    6px;
-
-                margin-top:
-                    13px;
-
+                margin-top: 13px;
             }
 
 
             .best-seller-view,
             .best-seller-add {
-
-                min-height:
-                    36px;
+                min-height: 36px;
 
                 padding:
                     7px 5px;
 
-                font-size:
-                    7.5px;
-
+                font-size: 7.5px;
             }
 
 
-            .best-sellers-page .cart-drawer {
-
-                width:
-                    100%;
-
+            .best-sellers-cart-drawer {
+                width: 100%;
             }
 
         }
 
 
-        /* =====================================================
-           REDUCED MOTION
-        ===================================================== */
-
         @media (prefers-reduced-motion: reduce) {
 
             .best-seller-card,
-            .best-seller-image img,
+            .best-seller-image-link img,
             .best-seller-wishlist,
-            .best-sellers-page .cart-drawer,
-            .best-sellers-page .cart-overlay {
-
-                transition:
-                    none;
-
+            .best-sellers-cart-drawer,
+            .best-sellers-cart-overlay {
+                transition: none;
             }
 
         }
@@ -1673,15 +1331,13 @@
 
 
 <!-- =========================================================
-     SHARED HEADER
+     HEADER
 ========================================================= -->
 
 <header class="site-header">
 
     <div class="header-container">
 
-
-        <!-- LOGO -->
 
         <a href="index.html"
            class="brand"
@@ -1693,8 +1349,6 @@
         </a>
 
 
-        <!-- MOBILE MENU -->
-
         <button class="mobile-menu-button"
                 id="mobileMenuButton"
                 type="button"
@@ -1705,8 +1359,6 @@
 
         </button>
 
-
-        <!-- NAVIGATION -->
 
         <nav class="main-navigation"
              id="mainNavigation"
@@ -1745,8 +1397,6 @@
 
         </nav>
 
-
-        <!-- HEADER ACTIONS -->
 
         <div class="header-actions">
 
@@ -1794,7 +1444,6 @@
                 </span>
 
             </button>
-
 
         </div>
 
@@ -1845,7 +1494,7 @@
 
 
 <!-- =========================================================
-     MAIN
+     MAIN CONTENT
 ========================================================= -->
 
 <main class="best-sellers-page">
@@ -1892,7 +1541,7 @@
 
 
     <!-- =====================================================
-         CURATED NOTE
+         EDITORIAL NOTE
     ====================================================== -->
 
     <div class="best-sellers-note">
@@ -1919,7 +1568,6 @@
 
     <div class="best-sellers-toolbar">
 
-
         <p class="best-sellers-count"
            id="bestSellersCount">
 
@@ -1940,7 +1588,7 @@
 
             <select class="best-sellers-filter"
                     id="bestSellersFilter"
-                    aria-label="Filter best seller edit">
+                    aria-label="Filter curated styles">
 
                 <option value="all">
                     All Styles
@@ -1968,10 +1616,9 @@
 
     <section class="best-sellers-grid"
              id="bestSellersGrid"
-             aria-label="Best Sellers collection">
+             aria-label="Curated Best Sellers">
 
     </section>
-
 
 
 </main>
@@ -1982,7 +1629,7 @@
      CART OVERLAY
 ========================================================= -->
 
-<div class="cart-overlay"
+<div class="best-sellers-cart-overlay"
      id="cartOverlay"
      aria-hidden="true">
 </div>
@@ -1993,19 +1640,19 @@
      CART DRAWER
 ========================================================= -->
 
-<aside class="cart-drawer"
+<aside class="best-sellers-cart-drawer"
        id="cartDrawer"
        aria-label="Shopping bag">
 
 
-    <div class="cart-header">
+    <div class="best-sellers-cart-header">
 
         <h2>
             Your Bag
         </h2>
 
 
-        <button class="cart-close"
+        <button class="best-sellers-cart-close"
                 id="cartClose"
                 type="button"
                 aria-label="Close shopping bag">
@@ -2017,15 +1664,15 @@
     </div>
 
 
-    <div class="cart-items"
+    <div class="best-sellers-cart-items"
          id="cartItems">
 
     </div>
 
 
-    <div class="cart-footer">
+    <div class="best-sellers-cart-footer">
 
-        <p class="cart-footer-note">
+        <p class="best-sellers-cart-note">
 
             Prices and final availability will be confirmed
             with you on WhatsApp.
@@ -2033,7 +1680,7 @@
         </p>
 
 
-        <button class="cart-whatsapp-button"
+        <button class="best-sellers-cart-whatsapp"
                 id="cartWhatsappButton"
                 type="button">
 
@@ -2044,7 +1691,7 @@
         </button>
 
 
-        <button class="cart-clear-button"
+        <button class="best-sellers-cart-clear"
                 id="cartClearButton"
                 type="button">
 
@@ -2103,7 +1750,7 @@
 
 
 <!-- =========================================================
-     BEST SELLERS PAGE CONTROLLER
+     BEST SELLERS CONTROLLER
 ========================================================= -->
 
 <script>
@@ -2114,10 +1761,9 @@ document.addEventListener(
 
 
         /* =====================================================
-           CONFIGURATION
+           EDITORIAL CURATED SELECTION
 
-           These are an editorially curated selection for now.
-           They are NOT represented as verified sales rankings.
+           These are curated products, not claimed sales rankings.
         ===================================================== */
 
         const curatedProductIds = [
@@ -2226,7 +1872,7 @@ document.addEventListener(
 
 
         /* =====================================================
-           GET CURATED PRODUCTS
+           LOAD CURATED PRODUCTS
         ===================================================== */
 
         const curatedProducts =
@@ -2234,14 +1880,35 @@ document.addEventListener(
                 .map(
                     function (id) {
 
-                        return window.getSVDProduct(id);
+                        const product =
+                            window.getSVDProduct(
+                                id
+                            );
+
+                        if (
+                            product
+                        ) {
+
+                            return {
+
+                                id:
+                                    id,
+
+                                product:
+                                    product
+
+                            };
+
+                        }
+
+                        return null;
 
                     }
                 )
                 .filter(
-                    function (product) {
+                    function (item) {
 
-                        return Boolean(product);
+                        return Boolean(item);
 
                     }
                 );
@@ -2251,7 +1918,9 @@ document.addEventListener(
            ESCAPE HTML
         ===================================================== */
 
-        function escapeHtml(value) {
+        function escapeHtml(
+            value
+        ) {
 
             return String(
                 value || ""
@@ -2291,7 +1960,7 @@ document.addEventListener(
 
             const products =
                 curatedProducts.filter(
-                    function (product) {
+                    function (item) {
 
                         if (
                             category === "all"
@@ -2303,7 +1972,8 @@ document.addEventListener(
 
 
                         return (
-                            product.category
+                            item.product.category &&
+                            item.product.category
                                 .toLowerCase() ===
                             category
                         );
@@ -2344,76 +2014,17 @@ document.addEventListener(
                 products
                     .map(
                         function (
-                            product,
+                            item,
                             index
                         ) {
 
+
+                            const product =
+                                item.product;
+
+
                             const productId =
-                                curatedProductIds[
-                                    curatedProductIds.indexOf(
-                                        Object.keys(
-                                            window.SVD_PRODUCTS || {}
-                                        ).find(
-                                            function (id) {
-
-                                                const item =
-                                                    window.getSVDProduct(id);
-
-                                                return (
-                                                    item &&
-                                                    item.title ===
-                                                    product.title
-                                                );
-
-                                            }
-                                        )
-                                    )
-                                ];
-
-
-                            let resolvedId =
-                                productId;
-
-
-                            if (
-                                !resolvedId
-                            ) {
-
-                                const ids =
-                                    curatedProductIds;
-
-                                for (
-                                    let i = 0;
-                                    i < ids.length;
-                                    i++
-                                ) {
-
-                                    const item =
-                                        window.getSVDProduct(
-                                            ids[i]
-                                        );
-
-                                    if (
-                                        item ===
-                                        product
-                                    ) {
-
-                                        resolvedId =
-                                            ids[i];
-
-                                        break;
-
-                                    }
-
-                                }
-
-                            }
-
-
-                            const safeId =
-                                escapeHtml(
-                                    resolvedId
-                                );
+                                item.id;
 
 
                             const image =
@@ -2423,19 +2034,13 @@ document.addEventListener(
                                     : "";
 
 
-                            const safeImage =
-                                escapeHtml(
-                                    image
-                                );
-
-
-                            const safeTitle =
+                            const title =
                                 escapeHtml(
                                     product.title
                                 );
 
 
-                            const safeCategory =
+                            const categoryName =
                                 escapeHtml(
                                     product.category
                                 );
@@ -2453,21 +2058,55 @@ document.addEventListener(
                                 '<article class="best-seller-card" ' +
 
                                     'data-category="' +
-                                    safeCategory.toLowerCase() +
-                                    '" ' +
-
-                                    'data-product-id="' +
-                                    safeId +
-                                    '">' +
-
-
-                                    '<a href="product.html?product=' +
-                                    encodeURIComponent(
-                                        resolvedId
+                                    escapeHtml(
+                                        product.category
+                                            .toLowerCase()
                                     ) +
                                     '" ' +
 
-                                    'class="best-seller-image">' +
+                                    'data-product-id="' +
+                                    escapeHtml(
+                                        productId
+                                    ) +
+                                    '">' +
+
+
+                                    '<div class="best-seller-image-wrap">' +
+
+
+                                        '<a href="product.html?product=' +
+                                        encodeURIComponent(
+                                            productId
+                                        ) +
+                                        '" ' +
+
+                                            'class="best-seller-image-link" ' +
+
+                                            'aria-label="View ' +
+                                            title +
+                                            '">' +
+
+
+                                            '<img src="' +
+                                            escapeHtml(
+                                                image
+                                            ) +
+                                            '" ' +
+
+                                                'alt="' +
+                                                title +
+                                                '" ' +
+
+                                                'loading="' +
+                                                (
+                                                    index < 2
+                                                        ? "eager"
+                                                        : "lazy"
+                                                ) +
+                                                '">' +
+
+
+                                        '</a>' +
 
 
                                         '<span class="best-seller-badge">' +
@@ -2482,10 +2121,14 @@ document.addEventListener(
                                             'type="button" ' +
 
                                             'aria-label="Add ' +
-                                            safeTitle +
+                                            title +
                                             ' to wishlist" ' +
 
-                                            'onclick="event.preventDefault(); event.stopPropagation(); showComingSoon(\'Wishlist\')">' +
+                                            'data-wishlist-product="' +
+                                            escapeHtml(
+                                                productId
+                                            ) +
+                                            '">' +
 
 
                                             '<i class="fa-regular fa-heart"></i>' +
@@ -2494,24 +2137,7 @@ document.addEventListener(
                                         '</button>' +
 
 
-                                        '<img src="' +
-                                        safeImage +
-                                        '" ' +
-
-                                            'alt="' +
-                                            safeTitle +
-                                            '" ' +
-
-                                            'loading="' +
-                                            (
-                                                index < 2
-                                                    ? "eager"
-                                                    : "lazy"
-                                            ) +
-                                            '">' +
-
-
-                                    '</a>' +
+                                    '</div>' +
 
 
                                     '<div class="best-seller-info">' +
@@ -2519,14 +2145,14 @@ document.addEventListener(
 
                                         '<p class="best-seller-category">' +
 
-                                            safeCategory +
+                                            categoryName +
 
                                         '</p>' +
 
 
                                         '<h2>' +
 
-                                            safeTitle +
+                                            title +
 
                                         '</h2>' +
 
@@ -2543,7 +2169,7 @@ document.addEventListener(
 
                                             '<a href="product.html?product=' +
                                             encodeURIComponent(
-                                                resolvedId
+                                                productId
                                             ) +
                                             '" ' +
 
@@ -2561,7 +2187,9 @@ document.addEventListener(
                                                 'type="button" ' +
 
                                                 'data-add-product="' +
-                                                safeId +
+                                                escapeHtml(
+                                                    productId
+                                                ) +
                                                 '">' +
 
                                                 '<i class="fa-solid fa-bag-shopping"></i>' +
@@ -2588,11 +2216,13 @@ document.addEventListener(
 
             bindAddButtons();
 
+            bindWishlistButtons();
+
         }
 
 
         /* =====================================================
-           CART
+           CART STORAGE
         ===================================================== */
 
         const CART_KEY =
@@ -2628,12 +2258,27 @@ document.addEventListener(
 
         function saveCart() {
 
-            localStorage.setItem(
-                CART_KEY,
-                JSON.stringify(
-                    cart
-                )
-            );
+            try {
+
+                localStorage.setItem(
+                    CART_KEY,
+                    JSON.stringify(
+                        cart
+                    )
+                );
+
+            }
+
+            catch (
+                error
+            ) {
+
+                console.warn(
+                    "Unable to save shopping bag.",
+                    error
+                );
+
+            }
 
         }
 
@@ -2672,7 +2317,59 @@ document.addEventListener(
 
 
         /* =====================================================
-           ADD TO CART
+           TOAST
+        ===================================================== */
+
+        function showPageToast(
+            message
+        ) {
+
+            const toast =
+                document.getElementById(
+                    "siteToast"
+                );
+
+
+            if (
+                !toast
+            ) {
+
+                return;
+
+            }
+
+
+            toast.textContent =
+                message;
+
+
+            toast.classList.add(
+                "active"
+            );
+
+
+            clearTimeout(
+                window.svdBestSellerToast
+            );
+
+
+            window.svdBestSellerToast =
+                setTimeout(
+                    function () {
+
+                        toast.classList.remove(
+                            "active"
+                        );
+
+                    },
+                    2200
+                );
+
+        }
+
+
+        /* =====================================================
+           ADD PRODUCT
         ===================================================== */
 
         function addProductToCart(
@@ -2690,6 +2387,10 @@ document.addEventListener(
             if (
                 !product
             ) {
+
+                showPageToast(
+                    "Product unavailable"
+                );
 
                 return;
 
@@ -2713,7 +2414,10 @@ document.addEventListener(
                 existing
             ) {
 
-                existing.quantity += 1;
+                existing.quantity =
+                    Number(
+                        existing.quantity || 0
+                    ) + 1;
 
             }
 
@@ -2734,7 +2438,10 @@ document.addEventListener(
                         product.category,
 
                     image:
-                        product.images[0],
+                        product.images &&
+                        product.images.length
+                            ? product.images[0]
+                            : "",
 
                     quantity:
                         1
@@ -2751,41 +2458,47 @@ document.addEventListener(
             renderCart();
 
 
-            button.classList.add(
-                "added"
-            );
+            if (
+                button
+            ) {
+
+                button.classList.add(
+                    "added"
+                );
 
 
-            button.innerHTML =
-                '<i class="fa-solid fa-check"></i> Added';
+                button.innerHTML =
+                    '<i class="fa-solid fa-check"></i> Added';
 
 
-            showToast(
+                setTimeout(
+                    function () {
+
+                        button.classList.remove(
+                            "added"
+                        );
+
+
+                        button.innerHTML =
+                            '<i class="fa-solid fa-bag-shopping"></i> Add to Bag';
+
+                    },
+                    1500
+                );
+
+            }
+
+
+            showPageToast(
                 product.title +
                 " added to your bag"
-            );
-
-
-            setTimeout(
-                function () {
-
-                    button.classList.remove(
-                        "added"
-                    );
-
-
-                    button.innerHTML =
-                        '<i class="fa-solid fa-bag-shopping"></i> Add to Bag';
-
-                },
-                1500
             );
 
         }
 
 
         /* =====================================================
-           BIND ADD BUTTONS
+           ADD BUTTONS
         ===================================================== */
 
         function bindAddButtons() {
@@ -2818,19 +2531,45 @@ document.addEventListener(
 
 
         /* =====================================================
+           WISHLIST BUTTONS
+
+           Wishlist is intentionally still marked as
+           coming soon across the site.
+        ===================================================== */
+
+        function bindWishlistButtons() {
+
+            grid
+                .querySelectorAll(
+                    "[data-wishlist-product]"
+                )
+                .forEach(
+                    function (
+                        button
+                    ) {
+
+                        button.addEventListener(
+                            "click",
+                            function () {
+
+                                showComingSoon(
+                                    "Wishlist"
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /* =====================================================
            RENDER CART
         ===================================================== */
 
         function renderCart() {
-
-
-            if (
-                !cartItems
-            ) {
-
-                return;
-
-            }
 
 
             if (
@@ -2839,7 +2578,7 @@ document.addEventListener(
 
                 cartItems.innerHTML =
 
-                    '<div class="cart-empty">' +
+                    '<div class="best-sellers-cart-empty">' +
 
                         '<i class="fa-solid fa-bag-shopping"></i>' +
 
@@ -2863,10 +2602,10 @@ document.addEventListener(
 
                             return (
 
-                                '<article class="cart-item">' +
+                                '<article class="best-sellers-cart-item">' +
 
 
-                                    '<img class="cart-item-image" ' +
+                                    '<img class="best-sellers-cart-item-image" ' +
 
                                         'src="' +
                                         escapeHtml(
@@ -2881,7 +2620,7 @@ document.addEventListener(
                                         '">' +
 
 
-                                    '<div class="cart-item-details">' +
+                                    '<div class="best-sellers-cart-item-details">' +
 
 
                                         '<h3>' +
@@ -2893,7 +2632,7 @@ document.addEventListener(
                                         '</h3>' +
 
 
-                                        '<div class="cart-item-code">' +
+                                        '<div class="best-sellers-cart-item-code">' +
 
                                             escapeHtml(
                                                 item.code
@@ -2902,27 +2641,27 @@ document.addEventListener(
                                         '</div>' +
 
 
-                                        '<div class="cart-item-controls">' +
+                                        '<div class="best-sellers-cart-controls">' +
 
 
-                                            '<button class="cart-qty-button" ' +
+                                            '<button class="best-sellers-cart-qty" ' +
 
                                                 'type="button" ' +
 
-                                                'data-action="minus" ' +
-
-                                                'data-id="' +
+                                                'data-cart-minus="' +
                                                 escapeHtml(
                                                     item.id
                                                 ) +
-                                                '">' +
+                                                '" ' +
+
+                                                'aria-label="Decrease quantity">' +
 
                                                 '−' +
 
                                             '</button>' +
 
 
-                                            '<span class="cart-qty-value">' +
+                                            '<span class="best-sellers-cart-qty-value">' +
 
                                                 Number(
                                                     item.quantity || 0
@@ -2931,17 +2670,17 @@ document.addEventListener(
                                             '</span>' +
 
 
-                                            '<button class="cart-qty-button" ' +
+                                            '<button class="best-sellers-cart-qty" ' +
 
                                                 'type="button" ' +
 
-                                                'data-action="plus" ' +
-
-                                                'data-id="' +
+                                                'data-cart-plus="' +
                                                 escapeHtml(
                                                     item.id
                                                 ) +
-                                                '">' +
+                                                '" ' +
+
+                                                'aria-label="Increase quantity">' +
 
                                                 '+' +
 
@@ -2954,17 +2693,21 @@ document.addEventListener(
                                     '</div>' +
 
 
-                                    '<button class="cart-remove" ' +
+                                    '<button class="best-sellers-cart-remove" ' +
 
                                         'type="button" ' +
 
-                                        'data-remove="' +
+                                        'data-cart-remove="' +
                                         escapeHtml(
                                             item.id
                                         ) +
                                         '" ' +
 
-                                        'aria-label="Remove item">' +
+                                        'aria-label="Remove ' +
+                                        escapeHtml(
+                                            item.title
+                                        ) +
+                                        '">' +
 
                                         '<i class="fa-solid fa-trash"></i>' +
 
@@ -2980,9 +2723,21 @@ document.addEventListener(
                     .join("");
 
 
+            bindCartControls();
+
+        }
+
+
+        /* =====================================================
+           CART CONTROLS
+        ===================================================== */
+
+        function bindCartControls() {
+
+
             cartItems
                 .querySelectorAll(
-                    "[data-action]"
+                    "[data-cart-minus]"
                 )
                 .forEach(
                     function (
@@ -2993,71 +2748,10 @@ document.addEventListener(
                             "click",
                             function () {
 
-                                const id =
-                                    this.dataset.id;
-
-
-                                const change =
-                                    this.dataset.action ===
-                                    "plus"
-                                        ? 1
-                                        : -1;
-
-
-                                const item =
-                                    cart.find(
-                                        function (
-                                            product
-                                        ) {
-
-                                            return (
-                                                product.id ===
-                                                id
-                                            );
-
-                                        }
-                                    );
-
-
-                                if (
-                                    !item
-                                ) {
-
-                                    return;
-
-                                }
-
-
-                                item.quantity +=
-                                    change;
-
-
-                                if (
-                                    item.quantity <= 0
-                                ) {
-
-                                    cart =
-                                        cart.filter(
-                                            function (
-                                                product
-                                            ) {
-
-                                                return (
-                                                    product.id !==
-                                                    id
-                                                );
-
-                                            }
-                                        );
-
-                                }
-
-
-                                saveCart();
-
-                                updateCartCount();
-
-                                renderCart();
+                                changeCartQuantity(
+                                    this.dataset.cartMinus,
+                                    -1
+                                );
 
                             }
                         );
@@ -3068,7 +2762,7 @@ document.addEventListener(
 
             cartItems
                 .querySelectorAll(
-                    "[data-remove]"
+                    "[data-cart-plus]"
                 )
                 .forEach(
                     function (
@@ -3079,36 +2773,144 @@ document.addEventListener(
                             "click",
                             function () {
 
-                                const id =
-                                    this.dataset.remove;
-
-
-                                cart =
-                                    cart.filter(
-                                        function (
-                                            item
-                                        ) {
-
-                                            return (
-                                                item.id !==
-                                                id
-                                            );
-
-                                        }
-                                    );
-
-
-                                saveCart();
-
-                                updateCartCount();
-
-                                renderCart();
+                                changeCartQuantity(
+                                    this.dataset.cartPlus,
+                                    1
+                                );
 
                             }
                         );
 
                     }
                 );
+
+
+            cartItems
+                .querySelectorAll(
+                    "[data-cart-remove]"
+                )
+                .forEach(
+                    function (
+                        button
+                    ) {
+
+                        button.addEventListener(
+                            "click",
+                            function () {
+
+                                removeCartItem(
+                                    this.dataset.cartRemove
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /* =====================================================
+           CHANGE QUANTITY
+        ===================================================== */
+
+        function changeCartQuantity(
+            productId,
+            amount
+        ) {
+
+
+            const item =
+                cart.find(
+                    function (
+                        cartItem
+                    ) {
+
+                        return (
+                            cartItem.id ===
+                            productId
+                        );
+
+                    }
+                );
+
+
+            if (
+                !item
+            ) {
+
+                return;
+
+            }
+
+
+            item.quantity =
+                Number(
+                    item.quantity || 0
+                ) +
+                amount;
+
+
+            if (
+                item.quantity <= 0
+            ) {
+
+                cart =
+                    cart.filter(
+                        function (
+                            cartItem
+                        ) {
+
+                            return (
+                                cartItem.id !==
+                                productId
+                            );
+
+                        }
+                    );
+
+            }
+
+
+            saveCart();
+
+            updateCartCount();
+
+            renderCart();
+
+        }
+
+
+        /* =====================================================
+           REMOVE ITEM
+        ===================================================== */
+
+        function removeCartItem(
+            productId
+        ) {
+
+
+            cart =
+                cart.filter(
+                    function (
+                        item
+                    ) {
+
+                        return (
+                            item.id !==
+                            productId
+                        );
+
+                    }
+                );
+
+
+            saveCart();
+
+            updateCartCount();
+
+            renderCart();
 
         }
 
@@ -3125,6 +2927,16 @@ document.addEventListener(
 
             cartOverlay.classList.add(
                 "active"
+            );
+
+            cartDrawer.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+            cartOverlay.setAttribute(
+                "aria-hidden",
+                "false"
             );
 
             document.body.style.overflow =
@@ -3149,6 +2961,16 @@ document.addEventListener(
                 "active"
             );
 
+            cartDrawer.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            cartOverlay.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
             document.body.style.overflow =
                 "";
 
@@ -3156,7 +2978,7 @@ document.addEventListener(
 
 
         /* =====================================================
-           CART BUTTON
+           BAG BUTTON
         ===================================================== */
 
         shoppingBagButton.addEventListener(
@@ -3176,6 +2998,10 @@ document.addEventListener(
             closeCart
         );
 
+
+        /* =====================================================
+           ESCAPE
+        ===================================================== */
 
         document.addEventListener(
             "keydown",
@@ -3197,7 +3023,7 @@ document.addEventListener(
 
 
         /* =====================================================
-           CLEAR CART
+           CLEAR BAG
         ===================================================== */
 
         cartClearButton.addEventListener(
@@ -3224,7 +3050,7 @@ document.addEventListener(
                 renderCart();
 
 
-                showToast(
+                showPageToast(
                     "Your bag has been cleared"
                 );
 
@@ -3233,7 +3059,7 @@ document.addEventListener(
 
 
         /* =====================================================
-           WHATSAPP CART ENQUIRY
+           WHATSAPP MESSAGE
         ===================================================== */
 
         function buildWhatsAppUrl() {
@@ -3292,6 +3118,10 @@ document.addEventListener(
         }
 
 
+        /* =====================================================
+           WHATSAPP BUTTON
+        ===================================================== */
+
         cartWhatsappButton.addEventListener(
             "click",
             function () {
@@ -3301,7 +3131,7 @@ document.addEventListener(
                     !cart.length
                 ) {
 
-                    showToast(
+                    showPageToast(
                         "Your bag is empty"
                     );
 
@@ -3322,59 +3152,6 @@ document.addEventListener(
 
             }
         );
-
-
-        /* =====================================================
-           TOAST
-        ===================================================== */
-
-        function showToast(
-            message
-        ) {
-
-
-            const toast =
-                document.getElementById(
-                    "siteToast"
-                );
-
-
-            if (
-                !toast
-            ) {
-
-                return;
-
-            }
-
-
-            toast.textContent =
-                message;
-
-
-            toast.classList.add(
-                "active"
-            );
-
-
-            clearTimeout(
-                window.shrivatsaToastTimer
-            );
-
-
-            window.shrivatsaToastTimer =
-                setTimeout(
-                    function () {
-
-                        toast.classList.remove(
-                            "active"
-                        );
-
-                    },
-                    2200
-                );
-
-        }
 
 
         /* =====================================================
@@ -3407,6 +3184,7 @@ document.addEventListener(
         renderCart();
 
     }
+
 );
 
 </script>
