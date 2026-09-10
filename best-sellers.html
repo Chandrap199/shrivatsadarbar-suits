@@ -12,10 +12,7 @@
           content="#4b0713">
 
     <meta name="description"
-          content="Explore the ShriVatsaDarbar curated edit of premium sarees and elegant suits, selected for timeless style, graceful detailing and beautiful occasions.">
-
-    <meta name="keywords"
-          content="premium sarees, elegant suits, ethnic wear, ShriVatsaDarbar, sarees and suits">
+          content="Discover the ShriVatsaDarbar curated edit of premium sarees and elegant suits. Choose your preferred collection and explore thoughtfully selected styles.">
 
     <meta name="author"
           content="ShriVatsaDarbar">
@@ -24,7 +21,7 @@
           content="Best Sellers | ShriVatsaDarbar">
 
     <meta property="og:description"
-          content="Discover the ShriVatsaDarbar curated edit of premium sarees and elegant suits.">
+          content="Explore the ShriVatsaDarbar curated edit of premium sarees and elegant suits.">
 
     <meta property="og:type"
           content="website">
@@ -56,7 +53,7 @@
 
 
     <!-- =========================================================
-         MAIN STYLESHEET
+         MASTER STYLES
     ========================================================= -->
 
     <link rel="stylesheet"
@@ -64,7 +61,7 @@
 
 
     <!-- =========================================================
-         PAGE-SPECIFIC STYLES
+         BEST SELLERS PAGE STYLES
     ========================================================= -->
 
     <style>
@@ -79,7 +76,7 @@
             background:
                 radial-gradient(
                     circle at top center,
-                    rgba(194, 151, 72, 0.08),
+                    rgba(194, 151, 72, 0.07),
                     transparent 34%
                 ),
                 #fbfaf7;
@@ -91,7 +88,7 @@
         ===================================================== */
 
         .best-sellers-hero {
-            padding: 88px 20px 62px;
+            padding: 88px 20px 64px;
 
             text-align: center;
 
@@ -102,7 +99,7 @@
 
 
         .best-sellers-eyebrow {
-            margin: 0 0 16px;
+            margin: 0 0 15px;
 
             font-family:
                 "DM Sans",
@@ -129,13 +126,13 @@
                 serif;
 
             font-size:
-                clamp(46px, 6vw, 72px);
+                clamp(48px, 6vw, 72px);
 
             line-height: .98;
 
             font-weight: 500;
 
-            color: #2b2521;
+            color: #2d2723;
         }
 
 
@@ -157,19 +154,19 @@
 
             height: 1px;
 
-            background: #c5a05a;
+            background: #c4a05a;
         }
 
 
         .best-sellers-ornament i {
-            font-size: 8px;
-
             color: #b88a2d;
+
+            font-size: 8px;
         }
 
 
         .best-sellers-description {
-            max-width: 700px;
+            max-width: 720px;
 
             margin: 0 auto;
 
@@ -181,7 +178,7 @@
 
             line-height: 1.9;
 
-            color: #716961;
+            color: #746b63;
         }
 
 
@@ -194,24 +191,20 @@
 
             margin: 0 auto;
 
-            padding: 42px 25px 0;
+            padding:
+                38px 25px 0;
 
             text-align: center;
         }
 
 
         .best-sellers-note-inner {
-            display: inline-flex;
+            max-width: 780px;
 
-            align-items: center;
+            margin: 0 auto;
 
-            justify-content: center;
-
-            gap: 12px;
-
-            max-width: 760px;
-
-            padding: 13px 20px;
+            padding:
+                13px 20px;
 
             border:
                 1px solid
@@ -220,7 +213,7 @@
             background:
                 rgba(255,255,255,.72);
 
-            color: #746b62;
+            color: #766c63;
 
             font-family:
                 "DM Sans",
@@ -228,42 +221,94 @@
 
             font-size: 11px;
 
-            line-height: 1.6;
-        }
-
-
-        .best-sellers-note-inner i {
-            flex-shrink: 0;
-
-            color: #b88a2d;
-
-            font-size: 13px;
+            line-height: 1.65;
         }
 
 
         /* =====================================================
-           TOOLBAR
+           CATEGORY SELECTOR
+
+           This is the key Best Sellers interaction.
+           No products are shown until a category is selected.
         ===================================================== */
 
-        .best-sellers-toolbar {
-            max-width: 1250px;
+        .best-sellers-selector-section {
+            max-width: 760px;
 
             margin: 0 auto;
 
-            padding: 45px 25px 22px;
+            padding:
+                48px 25px 36px;
 
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 20px;
+            text-align: center;
         }
 
 
-        .best-sellers-count {
-            margin: 0;
+        .best-sellers-selector-eyebrow {
+            margin: 0 0 8px;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            color: #a47d32;
+        }
+
+
+        .best-sellers-selector-title {
+            margin: 0 0 22px;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 31px;
+
+            line-height: 1.15;
+
+            font-weight: 500;
+
+            color: #342b26;
+        }
+
+
+        .best-sellers-select-wrap {
+            position: relative;
+
+            max-width: 360px;
+
+            margin: 0 auto;
+        }
+
+
+        .best-sellers-select {
+            width: 100%;
+
+            min-height: 52px;
+
+            padding:
+                0 48px 0 18px;
+
+            appearance: none;
+
+            -webkit-appearance: none;
+
+            border:
+                1px solid
+                #cdbb9e;
+
+            background: #fff;
+
+            color: #4b0713;
 
             font-family:
                 "DM Sans",
@@ -273,56 +318,9 @@
 
             font-weight: 600;
 
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-
-            color: #847a71;
-        }
-
-
-        .best-sellers-filter-wrap {
-            display: flex;
-
-            align-items: center;
-
-            gap: 9px;
-        }
-
-
-        .best-sellers-filter-label {
-            font-family:
-                "DM Sans",
-                sans-serif;
-
-            font-size: 10px;
-
             letter-spacing: 1px;
 
             text-transform: uppercase;
-
-            color: #887d73;
-        }
-
-
-        .best-sellers-filter {
-            min-width: 150px;
-
-            padding: 11px 14px;
-
-            border:
-                1px solid
-                #ddd2c5;
-
-            background: #fff;
-
-            color: #403832;
-
-            font-family:
-                "DM Sans",
-                sans-serif;
-
-            font-size: 11px;
 
             outline: none;
 
@@ -330,8 +328,156 @@
         }
 
 
-        .best-sellers-filter:focus {
-            border-color: #b88a2d;
+        .best-sellers-select:hover,
+        .best-sellers-select:focus {
+            border-color: #a47d32;
+        }
+
+
+        .best-sellers-select-icon {
+            position: absolute;
+
+            top: 50%;
+
+            right: 18px;
+
+            transform:
+                translateY(-50%);
+
+            pointer-events: none;
+
+            color: #a47d32;
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           SELECTED CATEGORY HEADING
+        ===================================================== */
+
+        .best-sellers-results-heading {
+            max-width: 1250px;
+
+            margin: 0 auto;
+
+            padding:
+                12px 25px 22px;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .best-sellers-results-heading.visible {
+            display: flex;
+        }
+
+
+        .best-sellers-results-label {
+            margin: 0;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.7px;
+
+            text-transform: uppercase;
+
+            color: #847970;
+        }
+
+
+        .best-sellers-results-count {
+            margin: 0;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 10px;
+
+            color: #9a8e84;
+        }
+
+
+        /* =====================================================
+           INITIAL STATE
+        ===================================================== */
+
+        .best-sellers-start-state {
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            padding:
+                25px 20px 90px;
+
+            text-align: center;
+        }
+
+
+        .best-sellers-start-icon {
+            width: 56px;
+
+            height: 56px;
+
+            margin: 0 auto 18px;
+
+            display: grid;
+
+            place-items: center;
+
+            border:
+                1px solid
+                rgba(181,140,65,.35);
+
+            border-radius: 50%;
+
+            color: #b88a2d;
+
+            font-size: 17px;
+        }
+
+
+        .best-sellers-start-state h2 {
+            margin: 0 0 8px;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 30px;
+
+            font-weight: 500;
+
+            color: #342b26;
+        }
+
+
+        .best-sellers-start-state p {
+            max-width: 500px;
+
+            margin: 0 auto;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            color: #82786f;
         }
 
 
@@ -344,14 +490,16 @@
 
             margin: 0 auto;
 
-            padding: 0 25px 80px;
+            padding:
+                0 25px 85px;
 
             display: grid;
 
             grid-template-columns:
                 repeat(3, minmax(0, 1fr));
 
-            gap: 46px 24px;
+            gap:
+                44px 24px;
         }
 
 
@@ -368,7 +516,7 @@
 
             border:
                 1px solid
-                #eee7df;
+                #eee6dd;
 
             transition:
                 transform .35s ease,
@@ -377,7 +525,8 @@
 
 
         .best-seller-card:hover {
-            transform: translateY(-5px);
+            transform:
+                translateY(-5px);
 
             box-shadow:
                 0 18px 45px
@@ -386,13 +535,11 @@
 
 
         /* =====================================================
-           IMAGE AREA
+           IMAGE
         ===================================================== */
 
         .best-seller-image-wrap {
             position: relative;
-
-            display: block;
 
             overflow: hidden;
 
@@ -412,11 +559,11 @@
 
 
         .best-seller-image-link img {
+            display: block;
+
             width: 100%;
 
             height: 100%;
-
-            display: block;
 
             object-fit: cover;
 
@@ -433,19 +580,20 @@
 
 
         /* =====================================================
-           BADGE
+           CURATED BADGE
         ===================================================== */
 
         .best-seller-badge {
             position: absolute;
 
-            left: 14px;
-
             top: 14px;
 
-            z-index: 4;
+            left: 14px;
 
-            padding: 7px 10px;
+            z-index: 3;
+
+            padding:
+                7px 10px;
 
             background: #b88a2d;
 
@@ -459,7 +607,7 @@
 
             font-weight: 700;
 
-            letter-spacing: 1.4px;
+            letter-spacing: 1.3px;
 
             text-transform: uppercase;
         }
@@ -476,24 +624,24 @@
 
             right: 13px;
 
-            z-index: 6;
+            z-index: 5;
 
             width: 36px;
 
             height: 36px;
+
+            display: grid;
+
+            place-items: center;
 
             border: 0;
 
             border-radius: 50%;
 
             background:
-                rgba(255,255,255,.94);
+                rgba(255,255,255,.95);
 
             color: #4b0713;
-
-            display: grid;
-
-            place-items: center;
 
             cursor: pointer;
 
@@ -522,14 +670,16 @@
         ===================================================== */
 
         .best-seller-info {
-            padding: 20px 18px 21px;
+            padding:
+                20px 18px 21px;
 
             text-align: center;
         }
 
 
         .best-seller-category {
-            margin: 0 0 7px;
+            margin:
+                0 0 7px;
 
             color: #a47d32;
 
@@ -568,7 +718,8 @@
         .best-seller-description {
             max-width: 290px;
 
-            margin: 9px auto 0;
+            margin:
+                9px auto 0;
 
             color: #81776e;
 
@@ -610,7 +761,8 @@
 
             gap: 7px;
 
-            padding: 9px 10px;
+            padding:
+                9px 10px;
 
             font-family:
                 "DM Sans",
@@ -620,7 +772,7 @@
 
             font-weight: 700;
 
-            letter-spacing: .8px;
+            letter-spacing: .7px;
 
             text-transform: uppercase;
 
@@ -679,37 +831,6 @@
 
 
         /* =====================================================
-           EMPTY STATE
-        ===================================================== */
-
-        .best-sellers-empty {
-            grid-column: 1 / -1;
-
-            padding: 70px 20px;
-
-            text-align: center;
-
-            color: #766c63;
-        }
-
-
-        .best-sellers-empty strong {
-            display: block;
-
-            margin-bottom: 8px;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size: 30px;
-
-            color: #342b26;
-        }
-
-
-        /* =====================================================
            CART OVERLAY
         ===================================================== */
 
@@ -742,11 +863,6 @@
 
         /* =====================================================
            CART DRAWER
-
-           IMPORTANT:
-           This is intentionally NOT scoped under
-           .best-sellers-page because the drawer sits outside
-           <main>.
         ===================================================== */
 
         .best-sellers-cart-drawer {
@@ -782,7 +898,8 @@
 
 
         .best-sellers-cart-drawer.active {
-            transform: translateX(0);
+            transform:
+                translateX(0);
         }
 
 
@@ -795,7 +912,8 @@
 
             justify-content: space-between;
 
-            padding: 0 25px;
+            padding:
+                0 25px;
 
             border-bottom:
                 1px solid
@@ -824,6 +942,10 @@
 
             height: 36px;
 
+            display: grid;
+
+            place-items: center;
+
             border:
                 1px solid
                 #ddd0c0;
@@ -833,10 +955,6 @@
             background: #fff;
 
             color: #4b0713;
-
-            display: grid;
-
-            place-items: center;
 
             cursor: pointer;
         }
@@ -908,7 +1026,8 @@
 
             gap: 13px;
 
-            padding: 15px 0;
+            padding:
+                15px 0;
 
             border-bottom:
                 1px solid
@@ -928,7 +1047,8 @@
 
 
         .best-sellers-cart-item-details h3 {
-            margin: 0 0 5px;
+            margin:
+                0 0 5px;
 
             font-family:
                 "Cormorant Garamond",
@@ -1005,12 +1125,12 @@
         ===================================================== */
 
         .best-sellers-cart-footer {
+            padding:
+                18px 25px;
+
             border-top:
                 1px solid
                 #e9e0d5;
-
-            padding:
-                18px 25px;
         }
 
 
@@ -1092,7 +1212,7 @@
 
 
         /* =====================================================
-           RESPONSIVE
+           MOBILE
         ===================================================== */
 
         @media (max-width: 900px) {
@@ -1101,7 +1221,8 @@
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
 
-                gap: 30px 16px;
+                gap:
+                    30px 16px;
             }
 
         }
@@ -1134,41 +1255,24 @@
 
 
             .best-sellers-note-inner {
-                display: flex;
-
-                text-align: left;
-            }
-
-
-            .best-sellers-toolbar {
-                padding:
-                    34px 15px 18px;
-
-                align-items: flex-start;
-            }
-
-
-            .best-sellers-count {
-                font-size: 9px;
-            }
-
-
-            .best-sellers-filter-wrap {
-                display: block;
-            }
-
-
-            .best-sellers-filter-label {
-                display: none;
-            }
-
-
-            .best-sellers-filter {
-                min-width: 130px;
-
-                padding: 10px;
-
                 font-size: 10px;
+            }
+
+
+            .best-sellers-selector-section {
+                padding:
+                    40px 18px 30px;
+            }
+
+
+            .best-sellers-selector-title {
+                font-size: 29px;
+            }
+
+
+            .best-sellers-results-heading {
+                padding:
+                    10px 15px 18px;
             }
 
 
@@ -1185,16 +1289,14 @@
 
 
             .best-seller-badge {
-                left: 8px;
-
                 top: 8px;
+
+                left: 8px;
 
                 padding:
                     6px 7px;
 
                 font-size: 7px;
-
-                letter-spacing: 1px;
             }
 
 
@@ -1364,21 +1466,26 @@
              id="mainNavigation"
              aria-label="Main Navigation">
 
+
             <a href="index.html">
                 Home
             </a>
+
 
             <a href="collections/collections.html?category=saree">
                 Sarees
             </a>
 
+
             <a href="collections/collections.html?category=suit">
                 Suits
             </a>
 
+
             <a href="new-arrivals.html">
                 New Arrivals
             </a>
+
 
             <a href="best-sellers.html"
                class="active">
@@ -1387,13 +1494,16 @@
 
             </a>
 
+
             <a href="about.html">
                 About Us
             </a>
 
+
             <a href="contact.html">
                 Contact Us
             </a>
+
 
         </nav>
 
@@ -1440,10 +1550,13 @@
 
                 <span class="bag-count"
                       id="bagCount">
+
                     0
+
                 </span>
 
             </button>
+
 
         </div>
 
@@ -1494,7 +1607,7 @@
 
 
 <!-- =========================================================
-     MAIN CONTENT
+     MAIN
 ========================================================= -->
 
 <main class="best-sellers-page">
@@ -1544,69 +1657,138 @@
          EDITORIAL NOTE
     ====================================================== -->
 
-    <div class="best-sellers-note">
+    <section class="best-sellers-note">
 
         <div class="best-sellers-note-inner">
 
-            <i class="fa-solid fa-sparkles"></i>
-
-            <span>
-                Our current Best Sellers page is an editorially
-                curated edit. As customer purchase data grows,
-                this selection can evolve with the collection.
-            </span>
+            Our current Best Sellers page is an editorially
+            curated edit. As customer purchase data grows,
+            this selection can evolve with the collection.
 
         </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CATEGORY SELECTOR
+    ====================================================== -->
+
+    <section class="best-sellers-selector-section">
+
+        <p class="best-sellers-selector-eyebrow">
+            EXPLORE THE EDIT
+        </p>
+
+
+        <h2 class="best-sellers-selector-title">
+            Choose Your Collection
+        </h2>
+
+
+        <div class="best-sellers-select-wrap">
+
+
+            <select class="best-sellers-select"
+                    id="bestSellersCategory"
+                    aria-label="Select Best Sellers category">
+
+
+                <option value=""
+                        selected>
+
+                    Select Sarees or Suits
+
+                </option>
+
+
+                <option value="saree">
+                    Sarees
+                </option>
+
+
+                <option value="suit">
+                    Suits
+                </option>
+
+
+            </select>
+
+
+            <span class="best-sellers-select-icon">
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </span>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESULTS HEADING
+    ====================================================== -->
+
+    <div class="best-sellers-results-heading"
+         id="bestSellersResultsHeading">
+
+
+        <p class="best-sellers-results-label"
+           id="bestSellersResultsLabel">
+
+            Curated Sarees
+
+        </p>
+
+
+        <p class="best-sellers-results-count"
+           id="bestSellersResultsCount">
+
+            0 styles
+
+        </p>
+
 
     </div>
 
 
 
     <!-- =====================================================
-         TOOLBAR
+         INITIAL EMPTY STATE
+
+         Products deliberately do not appear until the user
+         selects Sarees or Suits.
     ====================================================== -->
 
-    <div class="best-sellers-toolbar">
-
-        <p class="best-sellers-count"
-           id="bestSellersCount">
-
-            Curated Styles
-
-        </p>
+    <section class="best-sellers-start-state"
+             id="bestSellersStartState">
 
 
-        <div class="best-sellers-filter-wrap">
+        <div class="best-sellers-start-icon">
 
-            <label class="best-sellers-filter-label"
-                   for="bestSellersFilter">
-
-                View
-
-            </label>
-
-
-            <select class="best-sellers-filter"
-                    id="bestSellersFilter"
-                    aria-label="Filter curated styles">
-
-                <option value="all">
-                    All Styles
-                </option>
-
-                <option value="saree">
-                    Sarees
-                </option>
-
-                <option value="suit">
-                    Suits
-                </option>
-
-            </select>
+            <i class="fa-solid fa-layer-group"></i>
 
         </div>
 
-    </div>
+
+        <h2>
+            Your Curated Edit Awaits
+        </h2>
+
+
+        <p>
+
+            Select Sarees or Suits above to discover
+            the pieces currently featured in our
+            ShriVatsaDarbar Best Sellers edit.
+
+        </p>
+
+    </section>
 
 
 
@@ -1616,7 +1798,7 @@
 
     <section class="best-sellers-grid"
              id="bestSellersGrid"
-             aria-label="Curated Best Sellers">
+             aria-label="Best Sellers products">
 
     </section>
 
@@ -1672,6 +1854,7 @@
 
     <div class="best-sellers-cart-footer">
 
+
         <p class="best-sellers-cart-note">
 
             Prices and final availability will be confirmed
@@ -1698,6 +1881,7 @@
             Clear Bag
 
         </button>
+
 
     </div>
 
@@ -1761,26 +1945,44 @@ document.addEventListener(
 
 
         /* =====================================================
-           EDITORIAL CURATED SELECTION
+           CURATED EDIT
 
-           These are curated products, not claimed sales rankings.
+           These are editorial selections, NOT factual
+           sales-ranking claims.
         ===================================================== */
 
-        const curatedProductIds = [
+        const curatedProducts = {
 
-            "saree-001",
-            "suit-001",
-            "saree-002",
-            "suit-002",
-            "saree-003",
-            "suit-003"
+            saree: [
+                "saree-001",
+                "saree-002",
+                "saree-003"
+            ],
 
-        ];
+            suit: [
+                "suit-001",
+                "suit-002",
+                "suit-003"
+            ]
+
+        };
 
 
         /* =====================================================
            ELEMENTS
         ===================================================== */
+
+        const categorySelect =
+            document.getElementById(
+                "bestSellersCategory"
+            );
+
+
+        const startState =
+            document.getElementById(
+                "bestSellersStartState"
+            );
+
 
         const grid =
             document.getElementById(
@@ -1788,15 +1990,21 @@ document.addEventListener(
             );
 
 
-        const count =
+        const resultsHeading =
             document.getElementById(
-                "bestSellersCount"
+                "bestSellersResultsHeading"
             );
 
 
-        const filter =
+        const resultsLabel =
             document.getElementById(
-                "bestSellersFilter"
+                "bestSellersResultsLabel"
+            );
+
+
+        const resultsCount =
+            document.getElementById(
+                "bestSellersResultsCount"
             );
 
 
@@ -1849,69 +2057,28 @@ document.addEventListener(
 
 
         /* =====================================================
-           PRODUCT DATABASE CHECK
+           DATABASE CHECK
         ===================================================== */
 
         if (
             !window.getSVDProduct
         ) {
 
-            grid.innerHTML =
+            startState.innerHTML =
 
-                '<div class="best-sellers-empty">' +
+                '<div class="best-sellers-start-icon">' +
 
-                    '<strong>Collection unavailable</strong>' +
+                    '<i class="fa-solid fa-circle-exclamation"></i>' +
 
-                    '<span>Please refresh the page and try again.</span>' +
+                '</div>' +
 
-                '</div>';
+                '<h2>Collection unavailable</h2>' +
+
+                '<p>Please refresh the page and try again.</p>';
 
             return;
 
         }
-
-
-        /* =====================================================
-           LOAD CURATED PRODUCTS
-        ===================================================== */
-
-        const curatedProducts =
-            curatedProductIds
-                .map(
-                    function (id) {
-
-                        const product =
-                            window.getSVDProduct(
-                                id
-                            );
-
-                        if (
-                            product
-                        ) {
-
-                            return {
-
-                                id:
-                                    id,
-
-                                product:
-                                    product
-
-                            };
-
-                        }
-
-                        return null;
-
-                    }
-                )
-                .filter(
-                    function (item) {
-
-                        return Boolean(item);
-
-                    }
-                );
 
 
         /* =====================================================
@@ -1945,278 +2112,6 @@ document.addEventListener(
                     /'/g,
                     "&#039;"
                 );
-
-        }
-
-
-        /* =====================================================
-           RENDER PRODUCTS
-        ===================================================== */
-
-        function renderProducts(
-            category
-        ) {
-
-
-            const products =
-                curatedProducts.filter(
-                    function (item) {
-
-                        if (
-                            category === "all"
-                        ) {
-
-                            return true;
-
-                        }
-
-
-                        return (
-                            item.product.category &&
-                            item.product.category
-                                .toLowerCase() ===
-                            category
-                        );
-
-                    }
-                );
-
-
-            count.textContent =
-                products.length +
-                (
-                    products.length === 1
-                        ? " Curated Style"
-                        : " Curated Styles"
-                );
-
-
-            if (
-                !products.length
-            ) {
-
-                grid.innerHTML =
-
-                    '<div class="best-sellers-empty">' +
-
-                        '<strong>No styles in this edit</strong>' +
-
-                        '<span>Please explore our complete collection.</span>' +
-
-                    '</div>';
-
-                return;
-
-            }
-
-
-            grid.innerHTML =
-                products
-                    .map(
-                        function (
-                            item,
-                            index
-                        ) {
-
-
-                            const product =
-                                item.product;
-
-
-                            const productId =
-                                item.id;
-
-
-                            const image =
-                                product.images &&
-                                product.images.length
-                                    ? product.images[0]
-                                    : "";
-
-
-                            const title =
-                                escapeHtml(
-                                    product.title
-                                );
-
-
-                            const categoryName =
-                                escapeHtml(
-                                    product.category
-                                );
-
-
-                            const description =
-                                escapeHtml(
-                                    product.subtitle ||
-                                    "A beautifully curated piece from ShriVatsaDarbar."
-                                );
-
-
-                            return (
-
-                                '<article class="best-seller-card" ' +
-
-                                    'data-category="' +
-                                    escapeHtml(
-                                        product.category
-                                            .toLowerCase()
-                                    ) +
-                                    '" ' +
-
-                                    'data-product-id="' +
-                                    escapeHtml(
-                                        productId
-                                    ) +
-                                    '">' +
-
-
-                                    '<div class="best-seller-image-wrap">' +
-
-
-                                        '<a href="product.html?product=' +
-                                        encodeURIComponent(
-                                            productId
-                                        ) +
-                                        '" ' +
-
-                                            'class="best-seller-image-link" ' +
-
-                                            'aria-label="View ' +
-                                            title +
-                                            '">' +
-
-
-                                            '<img src="' +
-                                            escapeHtml(
-                                                image
-                                            ) +
-                                            '" ' +
-
-                                                'alt="' +
-                                                title +
-                                                '" ' +
-
-                                                'loading="' +
-                                                (
-                                                    index < 2
-                                                        ? "eager"
-                                                        : "lazy"
-                                                ) +
-                                                '">' +
-
-
-                                        '</a>' +
-
-
-                                        '<span class="best-seller-badge">' +
-
-                                            'CURATED EDIT' +
-
-                                        '</span>' +
-
-
-                                        '<button class="best-seller-wishlist" ' +
-
-                                            'type="button" ' +
-
-                                            'aria-label="Add ' +
-                                            title +
-                                            ' to wishlist" ' +
-
-                                            'data-wishlist-product="' +
-                                            escapeHtml(
-                                                productId
-                                            ) +
-                                            '">' +
-
-
-                                            '<i class="fa-regular fa-heart"></i>' +
-
-
-                                        '</button>' +
-
-
-                                    '</div>' +
-
-
-                                    '<div class="best-seller-info">' +
-
-
-                                        '<p class="best-seller-category">' +
-
-                                            categoryName +
-
-                                        '</p>' +
-
-
-                                        '<h2>' +
-
-                                            title +
-
-                                        '</h2>' +
-
-
-                                        '<p class="best-seller-description">' +
-
-                                            description +
-
-                                        '</p>' +
-
-
-                                        '<div class="best-seller-actions">' +
-
-
-                                            '<a href="product.html?product=' +
-                                            encodeURIComponent(
-                                                productId
-                                            ) +
-                                            '" ' +
-
-                                                'class="best-seller-view">' +
-
-                                                'View Details ' +
-
-                                                '<i class="fa-solid fa-arrow-right"></i>' +
-
-                                            '</a>' +
-
-
-                                            '<button class="best-seller-add" ' +
-
-                                                'type="button" ' +
-
-                                                'data-add-product="' +
-                                                escapeHtml(
-                                                    productId
-                                                ) +
-                                                '">' +
-
-                                                '<i class="fa-solid fa-bag-shopping"></i>' +
-
-                                                'Add to Bag' +
-
-                                            '</button>' +
-
-
-                                        '</div>' +
-
-
-                                    '</div>' +
-
-
-                                '</article>'
-
-                            );
-
-                        }
-                    )
-                    .join("");
-
-
-            bindAddButtons();
-
-            bindWishlistButtons();
 
         }
 
@@ -2369,7 +2264,375 @@ document.addEventListener(
 
 
         /* =====================================================
-           ADD PRODUCT
+           RENDER PRODUCTS
+        ===================================================== */
+
+        function renderProducts(
+            category
+        ) {
+
+
+            if (
+                !category ||
+                !curatedProducts[category]
+            ) {
+
+                grid.innerHTML = "";
+
+                resultsHeading.classList.remove(
+                    "visible"
+                );
+
+                startState.style.display =
+                    "block";
+
+                return;
+
+            }
+
+
+            const ids =
+                curatedProducts[
+                    category
+                ];
+
+
+            const products =
+                ids
+                    .map(
+                        function (
+                            productId
+                        ) {
+
+                            return window.getSVDProduct(
+                                productId
+                            );
+
+                        }
+                    )
+                    .filter(
+                        Boolean
+                    );
+
+
+            startState.style.display =
+                "none";
+
+
+            resultsHeading.classList.add(
+                "visible"
+            );
+
+
+            resultsLabel.textContent =
+                category === "saree"
+                    ? "Curated Sarees"
+                    : "Curated Suits";
+
+
+            resultsCount.textContent =
+                products.length +
+                (
+                    products.length === 1
+                        ? " Style"
+                        : " Styles"
+                );
+
+
+            if (
+                !products.length
+            ) {
+
+                grid.innerHTML =
+
+                    '<div class="best-sellers-start-state" style="grid-column:1/-1;">' +
+
+                        '<div class="best-sellers-start-icon">' +
+
+                            '<i class="fa-solid fa-box-open"></i>' +
+
+                        '</div>' +
+
+                        '<h2>No styles available</h2>' +
+
+                        '<p>Please explore our complete collection for more pieces.</p>' +
+
+                    '</div>';
+
+                return;
+
+            }
+
+
+            grid.innerHTML =
+                products
+                    .map(
+                        function (
+                            product,
+                            index
+                        ) {
+
+
+                            const image =
+                                product.images &&
+                                product.images.length
+                                    ? product.images[0]
+                                    : "";
+
+
+                            const title =
+                                escapeHtml(
+                                    product.title
+                                );
+
+
+                            const description =
+                                escapeHtml(
+                                    product.subtitle ||
+                                    "A beautifully curated piece from ShriVatsaDarbar."
+                                );
+
+
+                            const productId =
+                                escapeHtml(
+                                    product.id ||
+                                    product.productId ||
+                                    ""
+                                );
+
+
+                            const categoryName =
+                                escapeHtml(
+                                    product.category
+                                );
+
+
+                            return (
+
+                                '<article class="best-seller-card" ' +
+
+                                    'data-product-id="' +
+                                    productId +
+                                    '">' +
+
+
+                                    '<div class="best-seller-image-wrap">' +
+
+
+                                        '<a href="product.html?product=' +
+                                        encodeURIComponent(
+                                            product.id ||
+                                            product.productId ||
+                                            ""
+                                        ) +
+                                        '" ' +
+
+                                            'class="best-seller-image-link" ' +
+
+                                            'aria-label="View ' +
+                                            title +
+                                            '">' +
+
+
+                                            '<img src="' +
+                                            escapeHtml(
+                                                image
+                                            ) +
+                                            '" ' +
+
+                                                'alt="' +
+                                                title +
+                                                '" ' +
+
+                                                'loading="' +
+                                                (
+                                                    index === 0
+                                                        ? "eager"
+                                                        : "lazy"
+                                                ) +
+                                                '">' +
+
+
+                                        '</a>' +
+
+
+                                        '<span class="best-seller-badge">' +
+
+                                            'CURATED EDIT' +
+
+                                        '</span>' +
+
+
+                                        '<button class="best-seller-wishlist" ' +
+
+                                            'type="button" ' +
+
+                                            'aria-label="Add ' +
+                                            title +
+                                            ' to wishlist" ' +
+
+                                            'data-wishlist-product="' +
+                                            productId +
+                                            '">' +
+
+
+                                            '<i class="fa-regular fa-heart"></i>' +
+
+
+                                        '</button>' +
+
+
+                                    '</div>' +
+
+
+                                    '<div class="best-seller-info">' +
+
+
+                                        '<p class="best-seller-category">' +
+
+                                            categoryName +
+
+                                        '</p>' +
+
+
+                                        '<h2>' +
+
+                                            title +
+
+                                        '</h2>' +
+
+
+                                        '<p class="best-seller-description">' +
+
+                                            description +
+
+                                        '</p>' +
+
+
+                                        '<div class="best-seller-actions">' +
+
+
+                                            '<a href="product.html?product=' +
+                                            encodeURIComponent(
+                                                product.id ||
+                                                product.productId ||
+                                                ""
+                                            ) +
+                                            '" ' +
+
+                                                'class="best-seller-view">' +
+
+                                                'View Details ' +
+
+                                                '<i class="fa-solid fa-arrow-right"></i>' +
+
+                                            '</a>' +
+
+
+                                            '<button class="best-seller-add" ' +
+
+                                                'type="button" ' +
+
+                                                'data-add-product="' +
+                                                productId +
+                                                '">' +
+
+                                                '<i class="fa-solid fa-bag-shopping"></i>' +
+
+                                                'Add to Bag' +
+
+                                            '</button>' +
+
+
+                                        '</div>' +
+
+
+                                    '</div>' +
+
+
+                                '</article>'
+
+                            );
+
+                        }
+                    )
+                    .join("");
+
+
+            bindAddButtons();
+
+            bindWishlistButtons();
+
+        }
+
+
+        /* =====================================================
+           ADD BUTTONS
+        ===================================================== */
+
+        function bindAddButtons() {
+
+            grid
+                .querySelectorAll(
+                    "[data-add-product]"
+                )
+                .forEach(
+                    function (
+                        button
+                    ) {
+
+                        button.addEventListener(
+                            "click",
+                            function () {
+
+                                addProductToCart(
+                                    this.dataset.addProduct,
+                                    this
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /* =====================================================
+           WISHLIST
+        ===================================================== */
+
+        function bindWishlistButtons() {
+
+            grid
+                .querySelectorAll(
+                    "[data-wishlist-product]"
+                )
+                .forEach(
+                    function (
+                        button
+                    ) {
+
+                        button.addEventListener(
+                            "click",
+                            function () {
+
+                                showComingSoon(
+                                    "Wishlist"
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /* =====================================================
+           ADD PRODUCT TO CART
         ===================================================== */
 
         function addProductToCart(
@@ -2399,7 +2662,9 @@ document.addEventListener(
 
             const existing =
                 cart.find(
-                    function (item) {
+                    function (
+                        item
+                    ) {
 
                         return (
                             item.id ===
@@ -2498,74 +2763,6 @@ document.addEventListener(
 
 
         /* =====================================================
-           ADD BUTTONS
-        ===================================================== */
-
-        function bindAddButtons() {
-
-            grid
-                .querySelectorAll(
-                    "[data-add-product]"
-                )
-                .forEach(
-                    function (
-                        button
-                    ) {
-
-                        button.addEventListener(
-                            "click",
-                            function () {
-
-                                addProductToCart(
-                                    this.dataset.addProduct,
-                                    this
-                                );
-
-                            }
-                        );
-
-                    }
-                );
-
-        }
-
-
-        /* =====================================================
-           WISHLIST BUTTONS
-
-           Wishlist is intentionally still marked as
-           coming soon across the site.
-        ===================================================== */
-
-        function bindWishlistButtons() {
-
-            grid
-                .querySelectorAll(
-                    "[data-wishlist-product]"
-                )
-                .forEach(
-                    function (
-                        button
-                    ) {
-
-                        button.addEventListener(
-                            "click",
-                            function () {
-
-                                showComingSoon(
-                                    "Wishlist"
-                                );
-
-                            }
-                        );
-
-                    }
-                );
-
-        }
-
-
-        /* =====================================================
            RENDER CART
         ===================================================== */
 
@@ -2652,9 +2849,7 @@ document.addEventListener(
                                                 escapeHtml(
                                                     item.id
                                                 ) +
-                                                '" ' +
-
-                                                'aria-label="Decrease quantity">' +
+                                                '">' +
 
                                                 '−' +
 
@@ -2678,9 +2873,7 @@ document.addEventListener(
                                                 escapeHtml(
                                                     item.id
                                                 ) +
-                                                '" ' +
-
-                                                'aria-label="Increase quantity">' +
+                                                '">' +
 
                                                 '+' +
 
@@ -2703,11 +2896,7 @@ document.addEventListener(
                                         ) +
                                         '" ' +
 
-                                        'aria-label="Remove ' +
-                                        escapeHtml(
-                                            item.title
-                                        ) +
-                                        '">' +
+                                        'aria-label="Remove item">' +
 
                                         '<i class="fa-solid fa-trash"></i>' +
 
@@ -2978,7 +3167,7 @@ document.addEventListener(
 
 
         /* =====================================================
-           BAG BUTTON
+           BAG
         ===================================================== */
 
         shoppingBagButton.addEventListener(
@@ -2998,10 +3187,6 @@ document.addEventListener(
             closeCart
         );
 
-
-        /* =====================================================
-           ESCAPE
-        ===================================================== */
 
         document.addEventListener(
             "keydown",
@@ -3059,67 +3244,7 @@ document.addEventListener(
 
 
         /* =====================================================
-           WHATSAPP MESSAGE
-        ===================================================== */
-
-        function buildWhatsAppUrl() {
-
-
-            if (
-                !cart.length
-            ) {
-
-                return "";
-
-            }
-
-
-            let message =
-                "Hello ShriVatsaDarbar,\n\n";
-
-
-            message +=
-                "I would like to enquire about the following products:\n\n";
-
-
-            cart.forEach(
-                function (
-                    item,
-                    index
-                ) {
-
-                    message +=
-                        (
-                            index + 1
-                        ) +
-                        ". " +
-                        item.title +
-                        " (" +
-                        item.code +
-                        ") × " +
-                        item.quantity +
-                        "\n";
-
-                }
-            );
-
-
-            message +=
-                "\nPlease share the price, availability, size options and final details.\n\nThank you.";
-
-
-            return (
-                "https://wa.me/918826196544?text=" +
-                encodeURIComponent(
-                    message
-                )
-            );
-
-        }
-
-
-        /* =====================================================
-           WHATSAPP BUTTON
+           WHATSAPP
         ===================================================== */
 
         cartWhatsappButton.addEventListener(
@@ -3140,8 +3265,45 @@ document.addEventListener(
                 }
 
 
+                let message =
+                    "Hello ShriVatsaDarbar,\n\n";
+
+
+                message +=
+                    "I would like to enquire about the following products:\n\n";
+
+
+                cart.forEach(
+                    function (
+                        item,
+                        index
+                    ) {
+
+                        message +=
+                            (
+                                index + 1
+                            ) +
+                            ". " +
+                            item.title +
+                            " (" +
+                            item.code +
+                            ") × " +
+                            item.quantity +
+                            "\n";
+
+                    }
+                );
+
+
+                message +=
+                    "\nPlease share the price, availability, size options and final details.\n\nThank you.";
+
+
                 const url =
-                    buildWhatsAppUrl();
+                    "https://wa.me/918826196544?text=" +
+                    encodeURIComponent(
+                        message
+                    );
 
 
                 window.open(
@@ -3155,10 +3317,15 @@ document.addEventListener(
 
 
         /* =====================================================
-           FILTER
+           CATEGORY SELECTION
+
+           This is the key behavior:
+           initial page = no products
+           Sarees selected = 3 sarees
+           Suits selected = 3 suits
         ===================================================== */
 
-        filter.addEventListener(
+        categorySelect.addEventListener(
             "change",
             function () {
 
@@ -3171,17 +3338,16 @@ document.addEventListener(
 
 
         /* =====================================================
-           INITIALISE
+           INITIAL STATE
         ===================================================== */
-
-        renderProducts(
-            "all"
-        );
-
 
         updateCartCount();
 
         renderCart();
+
+        renderProducts(
+            ""
+        );
 
     }
 
