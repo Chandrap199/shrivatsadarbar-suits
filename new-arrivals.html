@@ -20,9 +20,7 @@
     <title>New Arrivals | ShriVatsaDarbar</title>
 
 
-    <!-- =====================================================
-         GOOGLE FONTS
-    ====================================================== -->
+    <!-- GOOGLE FONTS -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -35,25 +33,17 @@
           rel="stylesheet">
 
 
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
+    <!-- FONT AWESOME -->
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <!-- =====================================================
-         MAIN STYLESHEET
-    ====================================================== -->
+    <!-- MAIN CSS -->
 
     <link rel="stylesheet"
           href="styles.css">
 
-
-    <!-- =====================================================
-         PAGE-SPECIFIC STYLES
-    ====================================================== -->
 
     <style>
 
@@ -212,15 +202,13 @@
 
             line-height: 1.7;
 
-            letter-spacing: 0.2px;
-
             color: #77716b;
 
         }
 
 
         /* =====================================================
-           COLLECTION SELECTOR
+           SELECTOR
         ====================================================== */
 
         .new-arrivals-selector {
@@ -280,7 +268,7 @@
 
             height: 48px;
 
-            padding: 0 42px 0 16px;
+            padding: 0 16px;
 
             border: 1px solid rgba(155, 118, 46, 0.40);
 
@@ -391,7 +379,7 @@
 
 
         /* =====================================================
-           RESULTS AREA
+           RESULTS
         ====================================================== */
 
         .new-arrivals-results {
@@ -462,7 +450,7 @@
 
 
         /* =====================================================
-           PRODUCT GRID
+           GRID
         ====================================================== */
 
         .new-arrivals-grid {
@@ -478,7 +466,7 @@
 
 
         /* =====================================================
-           PRODUCT CARD
+           CARD
         ====================================================== */
 
         .new-arrival-card {
@@ -513,13 +501,22 @@
 
             position: relative;
 
-            display: block;
-
             overflow: hidden;
 
             aspect-ratio: 0.78;
 
             background: #ece9e5;
+
+        }
+
+
+        .new-arrival-image a {
+
+            display: block;
+
+            width: 100%;
+
+            height: 100%;
 
         }
 
@@ -549,7 +546,7 @@
 
 
         /* =====================================================
-           NEW BADGE
+           BADGE
         ====================================================== */
 
         .new-arrival-badge {
@@ -593,7 +590,7 @@
 
             right: 13px;
 
-            z-index: 3;
+            z-index: 4;
 
             width: 38px;
 
@@ -615,24 +612,11 @@
 
             cursor: pointer;
 
-            transition:
-                transform 0.25s ease,
-                background 0.25s ease;
-
-        }
-
-
-        .new-arrival-wishlist:hover {
-
-            transform: scale(1.06);
-
-            background: #ffffff;
-
         }
 
 
         /* =====================================================
-           PRODUCT INFO
+           INFO
         ====================================================== */
 
         .new-arrival-info {
@@ -735,11 +719,6 @@
 
             cursor: pointer;
 
-            transition:
-                background 0.25s ease,
-                color 0.25s ease,
-                border-color 0.25s ease;
-
         }
 
 
@@ -750,15 +729,6 @@
             background: #ffffff;
 
             color: #4b0713;
-
-        }
-
-
-        .new-arrival-view:hover {
-
-            background: #f8f3ec;
-
-            border-color: #4b0713;
 
         }
 
@@ -774,13 +744,6 @@
         }
 
 
-        .new-arrival-add:hover {
-
-            background: #650b1a;
-
-        }
-
-
         .new-arrival-add i {
 
             margin-right: 6px;
@@ -791,7 +754,7 @@
 
 
         /* =====================================================
-           FOOTER GAP / FINAL MESSAGE
+           END NOTE
         ====================================================== */
 
         .new-arrivals-end-note {
@@ -1005,15 +968,10 @@
         }
 
 
-        /* =====================================================
-           REDUCED MOTION
-        ====================================================== */
-
         @media (prefers-reduced-motion: reduce) {
 
             .new-arrival-card,
-            .new-arrival-image img,
-            .new-arrival-wishlist {
+            .new-arrival-image img {
 
                 transition: none;
 
@@ -1141,7 +1099,6 @@
 
         <div class="header-actions">
 
-
             <button class="icon-button"
                     id="searchButton"
                     type="button"
@@ -1235,9 +1192,7 @@
 <main class="new-arrivals-page">
 
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
+    <!-- HERO -->
 
     <section class="new-arrivals-hero">
 
@@ -1270,9 +1225,7 @@
     </section>
 
 
-    <!-- =====================================================
-         EDITORIAL NOTE
-    ====================================================== -->
+    <!-- EDITORIAL NOTE -->
 
     <div class="new-arrivals-note">
 
@@ -1287,9 +1240,7 @@
     </div>
 
 
-    <!-- =====================================================
-         COLLECTION SELECTOR
-    ====================================================== -->
+    <!-- SELECTOR -->
 
     <section class="new-arrivals-selector"
              aria-labelledby="newArrivalsSelectorTitle">
@@ -1324,9 +1275,7 @@
     </section>
 
 
-    <!-- =====================================================
-         EMPTY STATE
-    ====================================================== -->
+    <!-- EMPTY STATE -->
 
     <section class="new-arrivals-empty"
              id="newArrivalsEmpty">
@@ -1342,22 +1291,21 @@
         </h3>
 
         <p>
+
             Select Sarees or Suits above to discover the
             pieces currently featured in our ShriVatsaDarbar
             New Arrivals edit.
+
         </p>
 
     </section>
 
 
-    <!-- =====================================================
-         RESULTS
-    ====================================================== -->
+    <!-- RESULTS -->
 
     <section class="new-arrivals-results"
              id="newArrivalsResults"
              aria-live="polite">
-
 
         <div class="new-arrivals-results-header">
 
@@ -1368,7 +1316,7 @@
 
             <p class="new-arrivals-results-count"
                id="newArrivalsResultsCount">
-                3 Styles
+                0 Styles
             </p>
 
         </div>
@@ -1376,13 +1324,14 @@
 
         <div class="new-arrivals-grid"
              id="newArrivalsGrid">
-
         </div>
 
 
         <p class="new-arrivals-end-note">
+
             More beautiful pieces will continue to join
             the ShriVatsaDarbar collection.
+
         </p>
 
     </section>
@@ -1431,7 +1380,7 @@
 
 
 <!-- =========================================================
-     PAGE LOGIC
+     NEW ARRIVALS PAGE LOGIC
 ========================================================= -->
 
 <script>
@@ -1442,13 +1391,7 @@
 
 
     /* ========================================================
-       CURRENT CURATED EDIT
-
-       These are the latest sequentially available products
-       currently represented in the catalogue.
-
-       We present them as an editorial New Arrivals edit,
-       not as a verified inventory-date claim.
+       CURRENT CURATED NEW ARRIVALS EDIT
     ======================================================== */
 
     const NEW_ARRIVAL_IDS = {
@@ -1469,22 +1412,39 @@
 
 
     const select =
-        document.getElementById("newArrivalsSelect");
+        document.getElementById(
+            "newArrivalsSelect"
+        );
+
 
     const emptyState =
-        document.getElementById("newArrivalsEmpty");
+        document.getElementById(
+            "newArrivalsEmpty"
+        );
+
 
     const results =
-        document.getElementById("newArrivalsResults");
+        document.getElementById(
+            "newArrivalsResults"
+        );
+
 
     const grid =
-        document.getElementById("newArrivalsGrid");
+        document.getElementById(
+            "newArrivalsGrid"
+        );
+
 
     const resultsLabel =
-        document.getElementById("newArrivalsResultsLabel");
+        document.getElementById(
+            "newArrivalsResultsLabel"
+        );
+
 
     const resultsCount =
-        document.getElementById("newArrivalsResultsCount");
+        document.getElementById(
+            "newArrivalsResultsCount"
+        );
 
 
     /* ========================================================
@@ -1512,6 +1472,7 @@
         const ids =
             NEW_ARRIVAL_IDS[category] || [];
 
+
         return ids
             .map(function (id) {
 
@@ -1523,7 +1484,7 @@
             .filter(function (product) {
 
                 return product &&
-                       product.active !== false;
+                       product.status !== "inactive";
 
             });
 
@@ -1531,48 +1492,68 @@
 
 
     /* ========================================================
-       RENDER PRODUCT CARD
+       RENDER CARD
     ======================================================== */
 
     function renderCard(product) {
 
+        const normalizedCategory =
+            String(
+                product.category || ""
+            ).toLowerCase();
+
+
         const categoryLabel =
-            product.category === "saree"
+            normalizedCategory === "saree"
                 ? "Saree"
                 : "Suit";
+
+
+        /*
+         * IMPORTANT:
+         * products.js stores images as an array.
+         * The first image is the lifestyle image.
+         */
+
+        const image =
+            Array.isArray(product.images)
+                ? product.images[0]
+                : "";
+
 
         const productUrl =
             "product.html?product=" +
             encodeURIComponent(product.id);
 
-        const image =
-            product.images &&
-            product.images.lifestyle
-                ? product.images.lifestyle
-                : "";
 
         const title =
-            product.title || "ShriVatsaDarbar Style";
+            product.title ||
+            "ShriVatsaDarbar Style";
+
 
         const code =
             product.code || "";
 
 
         return `
+
             <article class="new-arrival-card"
                      data-product-id="${escapeHtml(product.id)}">
 
+
                 <div class="new-arrival-image">
+
 
                     <span class="new-arrival-badge">
                         New
                     </span>
 
 
-                    <button class="new-arrival-wishlist"
-                            type="button"
-                            aria-label="Add ${escapeHtml(title)} to wishlist"
-                            data-wishlist-product="${escapeHtml(product.id)}">
+                    <button
+                        class="new-arrival-wishlist"
+                        type="button"
+                        aria-label="Add ${escapeHtml(title)} to wishlist"
+                        data-wishlist-product="${escapeHtml(product.id)}">
 
                         <i class="fa-regular fa-heart"></i>
 
@@ -1593,36 +1574,47 @@
 
                 <div class="new-arrival-info">
 
+
                     <p class="new-arrival-category">
+
                         ${categoryLabel}
+
                     </p>
 
 
                     <h2 class="new-arrival-title">
+
                         ${escapeHtml(title)}
+
                     </h2>
 
 
                     <p class="new-arrival-code">
+
                         ${escapeHtml(code)}
+
                     </p>
 
 
                     <div class="new-arrival-actions">
 
+
                         <a href="${productUrl}"
                            class="new-arrival-view">
 
                             View Details
+
                             <i class="fa-solid fa-arrow-right"
-                               style="margin-left:5px;"></i>
+                               style="margin-left:5px;">
+                            </i>
 
                         </a>
 
 
-                        <button type="button"
-                                class="new-arrival-add"
-                                data-add-product="${escapeHtml(product.id)}">
+                        <button
+                            type="button"
+                            class="new-arrival-add"
+                            data-add-product="${escapeHtml(product.id)}">
 
                             <i class="fa-solid fa-bag-shopping"></i>
 
@@ -1635,6 +1627,7 @@
                 </div>
 
             </article>
+
         `;
 
     }
@@ -1651,7 +1644,9 @@
 
 
         grid.innerHTML =
-            products.map(renderCard).join("");
+            products
+                .map(renderCard)
+                .join("");
 
 
         const categoryName =
@@ -1665,14 +1660,17 @@
 
 
         resultsCount.textContent =
-            products.length + " Styles";
+            products.length +
+            " Styles";
 
 
         emptyState.style.display =
             "none";
 
 
-        results.classList.add("is-visible");
+        results.classList.add(
+            "is-visible"
+        );
 
 
         bindCardActions();
@@ -1688,9 +1686,12 @@
 
         grid.innerHTML = "";
 
-        results.classList.remove("is-visible");
+        results.classList.remove(
+            "is-visible"
+        );
 
-        emptyState.style.display = "block";
+        emptyState.style.display =
+            "block";
 
     }
 
@@ -1709,7 +1710,10 @@
 
         if (!product) {
 
-            if (typeof showComingSoon === "function") {
+            if (
+                typeof showComingSoon ===
+                "function"
+            ) {
 
                 showComingSoon("Product");
 
@@ -1731,7 +1735,9 @@
 
             cart =
                 JSON.parse(
-                    localStorage.getItem(storageKey)
+                    localStorage.getItem(
+                        storageKey
+                    )
                 ) || [];
 
         } catch (error) {
@@ -1744,7 +1750,8 @@
         const existing =
             cart.find(function (item) {
 
-                return item.id === product.id;
+                return item.id ===
+                       product.id;
 
             });
 
@@ -1752,7 +1759,9 @@
         if (existing) {
 
             existing.quantity =
-                Number(existing.quantity || 1) + 1;
+                Number(
+                    existing.quantity || 1
+                ) + 1;
 
         } else {
 
@@ -1773,25 +1782,36 @@
         );
 
 
-        if (typeof window.syncBagCount === "function") {
+        /*
+         * Keep the shared bag count synchronized.
+         */
+
+        if (
+            typeof window.syncBagCount ===
+            "function"
+        ) {
 
             window.syncBagCount();
 
         }
 
 
-        if (typeof showToast === "function") {
+        if (
+            typeof window.showToast ===
+            "function"
+        ) {
 
-            showToast(
+            window.showToast(
                 product.title +
                 " added to your bag."
             );
 
         } else if (
-            typeof window.showToast === "function"
+            typeof showToast ===
+            "function"
         ) {
 
-            window.showToast(
+            showToast(
                 product.title +
                 " added to your bag."
             );
@@ -1816,12 +1836,6 @@
                 button.addEventListener(
                     "click",
                     function () {
-
-                        const productId =
-                            button.getAttribute(
-                                "data-wishlist-product"
-                            );
-
 
                         if (
                             typeof showComingSoon ===
@@ -1864,7 +1878,9 @@
                             );
 
 
-                        addToBag(productId);
+                        addToBag(
+                            productId
+                        );
 
                     }
                 );
@@ -1900,7 +1916,9 @@
                 }
 
 
-                renderCategory(category);
+                renderCategory(
+                    category
+                );
 
             }
         );
