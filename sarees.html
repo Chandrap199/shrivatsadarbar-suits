@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -15,12 +14,55 @@
         Premium Sarees | ShriVatsaDarbar
     </title>
 
-
     <meta
         name="description"
         content="Discover premium sarees curated with elegance, timeless beauty and graceful craftsmanship at ShriVatsaDarbar."
     >
 
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="sarees.html"
+    >
+
+    <link
+        rel="icon"
+        type="image/webp"
+        href="images/logos/logo-white.webp"
+    >
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <!-- =====================================================
          MAIN WEBSITE CSS
@@ -32,95 +74,78 @@
     >
 
 
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
-
-    <!-- =====================================================
-         SAREES PAGE STYLES
-    ====================================================== -->
-
     <style>
 
+        /* =====================================================
+           SHRI VATSA DARBAR — SAREES LANDING PAGE
 
-        /* =================================================
-           PAGE
-        ================================================= */
+           Architecture:
+           - Shared header classes
+           - Shared navigation IDs
+           - Shared search IDs
+           - Shared bag count
+           - Master footer
+           - No product data duplicated here
+
+           Product data remains in products.js.
+        ====================================================== */
+
+
+        /* =====================================================
+           PAGE FOUNDATION
+        ====================================================== */
 
         .svd-sarees-page {
 
             background:
                 linear-gradient(
                     180deg,
-                    #ffffff 0%,
-                    #fcfaf6 45%,
-                    #f7f1e6 100%
+                    #fffdf9 0%,
+                    #fbf7ef 48%,
+                    #f5eee2 100%
                 );
 
-            color: #2f2924;
+            color: #302923;
 
             overflow-x: hidden;
 
         }
 
 
-        /* =================================================
-           HEADER
-        ================================================= */
+        .svd-sarees-page *,
+        .svd-sarees-page *::before,
+        .svd-sarees-page *::after {
 
-        .svd-sarees-header {
+            box-sizing: border-box;
 
-            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           SHARED HEADER — PAGE-SCOPED REFINEMENT
+        ====================================================== */
+
+        .svd-sarees-page .site-header {
+
+            background:
+                rgba(255, 253, 249, 0.98);
 
             border-bottom:
-                1px solid rgba(180, 140, 70, 0.12);
-
-            position: relative;
-
-            z-index: 100;
+                1px solid rgba(178, 138, 69, 0.14);
 
         }
 
 
-        .svd-sarees-header-inner {
+        .svd-sarees-page .header-container {
 
-            width: min(1440px, 94%);
-
-            margin: auto;
-
-            min-height: 150px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 30px;
+            min-height: 82px;
 
         }
 
 
-        .svd-sarees-logo {
+        .svd-sarees-page .brand img {
 
-            display: flex;
-
-            align-items: center;
-
-            flex-shrink: 0;
-
-        }
-
-
-        .svd-sarees-logo img {
-
-            width: 145px;
+            width: 210px;
 
             height: auto;
 
@@ -129,193 +154,116 @@
         }
 
 
-        .svd-sarees-navigation {
+        .svd-sarees-page .main-navigation a.active {
 
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 28px;
-
-            flex: 1;
+            color: var(--gold);
 
         }
 
 
-        .svd-sarees-navigation a {
+        .svd-sarees-page .main-navigation a.active::after {
 
-            text-decoration: none;
-
-            color: #3c3732;
-
-            font-size: 12px;
-
-            letter-spacing: 0.03em;
-
-            text-transform: uppercase;
-
-            transition: 0.25s ease;
-
-            position: relative;
-
-            padding: 10px 0;
+            transform: scaleX(1);
 
         }
 
 
-        .svd-sarees-navigation a:hover {
+        /* =====================================================
+           SEARCH — SHARED STRUCTURE
+        ====================================================== */
 
-            color: #a57a2b;
+        .svd-sarees-page .search-overlay {
 
-        }
-
-
-        .svd-sarees-navigation a.active {
-
-            color: #a57a2b;
+            z-index: 3000;
 
         }
 
 
-        .svd-sarees-navigation a.active::after {
-
-            content: "";
-
-            position: absolute;
-
-            left: 50%;
-
-            bottom: 0;
-
-            transform: translateX(-50%);
-
-            width: 28px;
-
-            height: 1px;
-
-            background: #b28a3e;
-
-        }
-
-
-        .svd-sarees-actions {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 22px;
-
-        }
-
-
-        .svd-sarees-actions a {
-
-            color: #332f2b;
-
-            text-decoration: none;
-
-            font-size: 16px;
-
-            transition: 0.25s ease;
-
-        }
-
-
-        .svd-sarees-actions a:hover {
-
-            color: #b38a3d;
-
-        }
-
-
-        /* =================================================
+        /* =====================================================
            HERO
-        ================================================= */
+        ====================================================== */
 
         .svd-sarees-hero {
 
             position: relative;
 
-            min-height: 540px;
+            min-height: 570px;
 
             display: flex;
 
             align-items: center;
 
             justify-content: center;
-
-            text-align: center;
 
             padding:
                 90px 20px;
 
             overflow: hidden;
 
+            text-align: center;
+
             background:
 
                 radial-gradient(
-                    circle at 10% 50%,
-                    rgba(191, 148, 70, 0.13),
-                    transparent 30%
+                    circle at 8% 50%,
+                    rgba(181, 139, 64, 0.14),
+                    transparent 28%
                 ),
 
                 radial-gradient(
-                    circle at 90% 50%,
-                    rgba(191, 148, 70, 0.12),
-                    transparent 30%
+                    circle at 92% 50%,
+                    rgba(181, 139, 64, 0.11),
+                    transparent 28%
                 ),
 
                 linear-gradient(
                     135deg,
-                    #faf7f1,
-                    #ffffff,
-                    #f3eadb
+                    #f8f2e8 0%,
+                    #fffdf9 50%,
+                    #f1e7d7 100%
                 );
+
+        }
+
+
+        .svd-sarees-hero::before,
+        .svd-sarees-hero::after {
+
+            position: absolute;
+
+            content: "✦";
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            color:
+                rgba(178, 138, 69, 0.055);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 230px;
+
+            line-height: 1;
+
+            pointer-events: none;
 
         }
 
 
         .svd-sarees-hero::before {
 
-            content: "✦";
-
-            position: absolute;
-
-            left: 6%;
-
-            top: 50%;
-
-            transform: translateY(-50%);
-
-            font-size: 220px;
-
-            color: rgba(180, 138, 61, 0.05);
-
-            pointer-events: none;
+            left: 4%;
 
         }
 
 
         .svd-sarees-hero::after {
 
-            content: "✦";
-
-            position: absolute;
-
-            right: 6%;
-
-            top: 50%;
-
-            transform: translateY(-50%);
-
-            font-size: 220px;
-
-            color: rgba(180, 138, 61, 0.05);
-
-            pointer-events: none;
+            right: 4%;
 
         }
 
@@ -326,14 +274,15 @@
 
             z-index: 2;
 
-            max-width: 850px;
+            width:
+                min(900px, 100%);
 
         }
 
 
         .svd-sarees-eyebrow {
 
-            display: flex;
+            display: inline-flex;
 
             align-items: center;
 
@@ -341,17 +290,21 @@
 
             gap: 14px;
 
-            color: #a77d32;
+            margin-bottom: 24px;
+
+            color: #9f762d;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
 
             font-size: 11px;
 
-            letter-spacing: 0.30em;
+            font-weight: 700;
 
-            font-weight: 600;
+            letter-spacing: 0.28em;
 
             text-transform: uppercase;
-
-            margin-bottom: 24px;
 
         }
 
@@ -361,11 +314,12 @@
 
             content: "";
 
-            width: 50px;
+            width: 52px;
 
             height: 1px;
 
-            background: #c9aa70;
+            background:
+                #c9a866;
 
         }
 
@@ -374,38 +328,41 @@
 
             margin: 0;
 
+            color: #302923;
+
             font-family:
-                Georgia,
-                "Times New Roman",
+                "Cormorant Garamond",
                 serif;
 
-            font-size: clamp(
-                48px,
-                7vw,
-                82px
-            );
+            font-size:
+                clamp(52px, 7vw, 86px);
 
-            font-weight: 400;
+            font-weight: 500;
 
-            line-height: 1.08;
+            line-height: 0.98;
 
-            color: #302923;
+            letter-spacing: -0.025em;
 
         }
 
 
         .svd-sarees-hero p {
 
-            max-width: 680px;
+            width:
+                min(700px, 100%);
 
             margin:
-                25px auto 0;
+                28px auto 0;
 
-            font-size: 17px;
+            color: #6e655d;
 
-            line-height: 1.8;
+            font-family:
+                "DM Sans",
+                sans-serif;
 
-            color: #6c635b;
+            font-size: 16px;
+
+            line-height: 1.85;
 
         }
 
@@ -418,63 +375,69 @@
 
             justify-content: center;
 
-            gap: 10px;
+            gap: 11px;
 
-            margin-top: 35px;
+            margin-top: 36px;
 
             padding:
-                17px 30px;
+                16px 29px;
 
             background:
-                linear-gradient(
-                    135deg,
-                    #9d7328,
-                    #bd9547
-                );
+                #4b1b25;
 
             color: #ffffff;
 
             text-decoration: none;
 
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.11em;
+
             text-transform: uppercase;
 
-            font-size: 12px;
-
-            font-weight: 600;
-
-            letter-spacing: 0.08em;
-
-            border-radius: 5px;
-
-            transition: 0.25s ease;
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
 
         }
 
 
         .svd-sarees-hero-button:hover {
 
+            background:
+                #8e6827;
+
             transform:
                 translateY(-2px);
 
             box-shadow:
-                0 14px 35px
-                rgba(142, 102, 35, 0.22);
+                0 14px 32px
+                rgba(75, 27, 37, 0.16);
 
         }
 
 
-        /* =================================================
+        /* =====================================================
            INTRODUCTION
-        ================================================= */
+        ====================================================== */
 
         .svd-sarees-intro {
 
-            width: min(1100px, 90%);
+            width:
+                min(1000px, calc(100% - 40px));
 
-            margin: auto;
+            margin:
+                0 auto;
 
             padding:
-                95px 0;
+                105px 0 85px;
 
             text-align: center;
 
@@ -483,17 +446,21 @@
 
         .svd-sarees-section-eyebrow {
 
-            color: #a77d32;
+            margin-bottom: 16px;
 
-            font-size: 11px;
+            color: #a17a32;
 
-            letter-spacing: 0.28em;
+            font-family:
+                "DM Sans",
+                sans-serif;
 
-            font-weight: 600;
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.23em;
 
             text-transform: uppercase;
-
-            margin-bottom: 18px;
 
         }
 
@@ -502,79 +469,92 @@
 
             margin: 0;
 
+            color: #4c1d27;
+
             font-family:
-                Georgia,
-                "Times New Roman",
+                "Cormorant Garamond",
                 serif;
 
-            font-size: clamp(
-                34px,
-                4vw,
-                52px
-            );
+            font-size:
+                clamp(42px, 5vw, 62px);
 
-            font-weight: 400;
+            font-weight: 500;
 
-            color: #302923;
+            line-height: 1;
 
         }
 
 
         .svd-sarees-intro p {
 
-            max-width: 780px;
+            width:
+                min(780px, 100%);
 
             margin:
-                25px auto 0;
+                26px auto 0;
 
-            color: #70665d;
+            color: #71675f;
 
-            font-size: 16px;
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 15px;
 
             line-height: 1.9;
 
         }
 
 
-        /* =================================================
+        /* =====================================================
            COLLECTION HIGHLIGHTS
-        ================================================= */
+        ====================================================== */
 
         .svd-sarees-highlights {
 
-            width: min(1320px, 92%);
+            width:
+                min(1200px, calc(100% - 40px));
 
             margin:
-                0 auto 100px;
+                0 auto;
 
-            display: grid;
+            padding:
+                0 0 105px;
+
+            display:
+                grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 24px;
+            gap: 20px;
 
         }
 
 
         .svd-sarees-highlight-card {
 
-            background: #ffffff;
-
-            border:
-                1px solid
-                rgba(180, 140, 70, 0.16);
+            min-height: 285px;
 
             padding:
                 42px 30px;
 
+            background:
+                rgba(255, 255, 255, 0.88);
+
+            border:
+                1px solid
+                rgba(178, 138, 69, 0.18);
+
             text-align: center;
 
-            transition: 0.3s ease;
-
             box-shadow:
-                0 15px 45px
-                rgba(77, 59, 30, 0.04);
+                0 16px 45px
+                rgba(65, 42, 25, 0.045);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
 
         }
 
@@ -582,25 +562,23 @@
         .svd-sarees-highlight-card:hover {
 
             transform:
-                translateY(-7px);
+                translateY(-5px);
 
             box-shadow:
-                0 22px 55px
-                rgba(77, 59, 30, 0.10);
+                0 22px 52px
+                rgba(65, 42, 25, 0.09);
 
         }
 
 
         .svd-sarees-highlight-icon {
 
-            width: 70px;
+            width: 58px;
 
-            height: 70px;
+            height: 58px;
 
-            border-radius: 50%;
-
-            border:
-                1px solid #d4b778;
+            margin:
+                0 auto 22px;
 
             display: flex;
 
@@ -608,12 +586,16 @@
 
             justify-content: center;
 
-            margin:
-                0 auto 22px;
+            border:
+                1px solid
+                #d1b477;
 
-            color: #ae8336;
+            border-radius: 50%;
 
-            font-size: 25px;
+            color:
+                #a77c2d;
+
+            font-size: 18px;
 
         }
 
@@ -621,18 +603,20 @@
         .svd-sarees-highlight-card h3 {
 
             margin:
-                0 0 14px;
+                0 0 13px;
+
+            color:
+                #4b1b25;
 
             font-family:
-                Georgia,
-                "Times New Roman",
+                "Cormorant Garamond",
                 serif;
 
-            font-size: 24px;
+            font-size: 29px;
 
-            font-weight: 400;
+            font-weight: 600;
 
-            color: #342d27;
+            line-height: 1.1;
 
         }
 
@@ -641,40 +625,100 @@
 
             margin: 0;
 
-            color: #746a60;
+            color:
+                #756b63;
 
-            font-size: 14px;
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 13px;
 
             line-height: 1.8;
 
         }
 
 
-        /* =================================================
-           SHOP CTA
-        ================================================= */
+        /* =====================================================
+           COLLECTION CTA
+        ====================================================== */
 
         .svd-sarees-shop-section {
 
+            position: relative;
+
             padding:
-                100px 20px;
+                105px 20px;
+
+            overflow: hidden;
 
             background:
-
                 linear-gradient(
                     135deg,
-                    #f6efe3,
-                    #ffffff,
-                    #f3eadb
+                    #f1e7d8 0%,
+                    #fffdf9 48%,
+                    #f4eadc 100%
                 );
+
+            border-top:
+                1px solid
+                rgba(178, 138, 69, 0.15);
+
+            border-bottom:
+                1px solid
+                rgba(178, 138, 69, 0.15);
 
             text-align: center;
 
-            border-top:
-                1px solid rgba(180, 140, 70, 0.12);
+        }
 
-            border-bottom:
-                1px solid rgba(180, 140, 70, 0.12);
+
+        .svd-sarees-shop-section::before {
+
+            content: "SAREES";
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            color:
+                rgba(111, 78, 27, 0.035);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(100px, 19vw, 250px);
+
+            font-weight: 600;
+
+            letter-spacing:
+                0.08em;
+
+            white-space: nowrap;
+
+            pointer-events: none;
+
+        }
+
+
+        .svd-sarees-shop-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            width:
+                min(760px, 100%);
+
+            margin:
+                0 auto;
 
         }
 
@@ -683,36 +727,41 @@
 
             margin: 0;
 
+            color:
+                #42151f;
+
             font-family:
-                Georgia,
-                "Times New Roman",
+                "Cormorant Garamond",
                 serif;
 
-            font-size: clamp(
-                36px,
-                5vw,
-                58px
-            );
+            font-size:
+                clamp(42px, 5vw, 64px);
 
-            font-weight: 400;
+            font-weight: 500;
 
-            color: #302923;
+            line-height: 1;
 
         }
 
 
         .svd-sarees-shop-section p {
 
-            max-width: 650px;
+            width:
+                min(650px, 100%);
 
             margin:
-                22px auto 32px;
+                24px auto 0;
 
-            color: #70665d;
+            color:
+                #70665d;
 
-            font-size: 16px;
+            font-family:
+                "DM Sans",
+                sans-serif;
 
-            line-height: 1.8;
+            font-size: 15px;
+
+            line-height: 1.85;
 
         }
 
@@ -723,72 +772,121 @@
 
             align-items: center;
 
+            justify-content: center;
+
             gap: 10px;
 
+            margin-top: 32px;
+
             padding:
-                18px 32px;
+                16px 30px;
 
             background:
-                #332b25;
+                #4b1b25;
 
-            color: #ffffff;
+            color:
+                #ffffff;
 
             text-decoration: none;
 
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.11em;
+
             text-transform: uppercase;
 
-            letter-spacing: 0.08em;
-
-            font-size: 12px;
-
-            font-weight: 600;
-
-            transition: 0.25s ease;
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
 
         }
 
 
         .svd-sarees-shop-button:hover {
 
-            background: #a77d32;
+            background:
+                #9a722c;
 
             transform:
                 translateY(-2px);
 
+            box-shadow:
+                0 14px 30px
+                rgba(75, 27, 37, 0.14);
+
         }
 
 
-        /* =================================================
-           RESPONSIVE
-        ================================================= */
+        /* =====================================================
+           WHATSAPP FLOAT
+        ====================================================== */
 
-        @media (max-width: 1050px) {
+        .svd-sarees-whatsapp {
+
+            position: fixed;
+
+            right: 20px;
+
+            bottom: 20px;
+
+            z-index: 1500;
+
+            width: 52px;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                #25d366;
+
+            color:
+                #ffffff !important;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 12px 28px
+                rgba(0, 0, 0, 0.18);
+
+            font-size: 23px;
+
+            transition:
+                transform 0.25s ease;
+
+        }
 
 
-            .svd-sarees-header-inner {
+        .svd-sarees-whatsapp:hover {
 
-                min-height: 120px;
+            transform:
+                translateY(-3px);
 
-            }
-
-
-            .svd-sarees-logo img {
-
-                width: 115px;
-
-            }
+        }
 
 
-            .svd-sarees-navigation {
+        /* =====================================================
+           TABLET
+        ====================================================== */
 
-                gap: 16px;
+        @media (max-width: 900px) {
 
-            }
+            .svd-sarees-page .brand img {
 
-
-            .svd-sarees-navigation a {
-
-                font-size: 10px;
+                width: 180px;
 
             }
 
@@ -796,123 +894,161 @@
             .svd-sarees-highlights {
 
                 grid-template-columns:
-                    1fr;
+                    repeat(2, 1fr);
+
+            }
+
+
+            .svd-sarees-highlight-card:last-child {
+
+                grid-column:
+                    1 / -1;
 
             }
 
         }
 
 
-        @media (max-width: 700px) {
+        /* =====================================================
+           MOBILE
+        ====================================================== */
 
+        @media (max-width: 800px) {
 
-            .svd-sarees-header-inner {
+            .svd-sarees-page .brand img {
 
-                width: 94%;
-
-                min-height: auto;
-
-                padding:
-                    14px 0;
-
-                flex-wrap: wrap;
-
-                justify-content: center;
-
-            }
-
-
-            .svd-sarees-logo {
-
-                width: 100%;
-
-                justify-content: center;
-
-            }
-
-
-            .svd-sarees-logo img {
-
-                width: 120px;
-
-            }
-
-
-            .svd-sarees-navigation {
-
-                width: 100%;
-
-                order: 3;
-
-                gap: 15px;
-
-                overflow-x: auto;
-
-                justify-content: flex-start;
-
-                padding-bottom: 5px;
-
-            }
-
-
-            .svd-sarees-navigation a {
-
-                white-space: nowrap;
-
-                font-size: 9px;
-
-            }
-
-
-            .svd-sarees-actions {
-
-                position: absolute;
-
-                right: 18px;
-
-                top: 28px;
-
-                gap: 15px;
+                width: 180px;
 
             }
 
 
             .svd-sarees-hero {
 
-                min-height: auto;
+                min-height: 525px;
 
                 padding:
-                    80px 18px;
+                    75px 18px;
+
+            }
+
+
+            .svd-sarees-hero::before,
+            .svd-sarees-hero::after {
+
+                font-size: 145px;
+
+            }
+
+
+            .svd-sarees-eyebrow {
+
+                gap: 9px;
+
+                font-size: 9px;
+
+                letter-spacing: 0.20em;
+
+            }
+
+
+            .svd-sarees-eyebrow::before,
+            .svd-sarees-eyebrow::after {
+
+                width: 28px;
 
             }
 
 
             .svd-sarees-hero h1 {
 
-                font-size: 52px;
+                font-size:
+                    clamp(47px, 14vw, 62px);
 
             }
 
 
             .svd-sarees-hero p {
 
-                font-size: 15px;
+                margin-top: 22px;
+
+                font-size: 14px;
+
+                line-height: 1.8;
+
+            }
+
+
+            .svd-sarees-hero-button {
+
+                width:
+                    min(100%, 250px);
 
             }
 
 
             .svd-sarees-intro {
 
+                width:
+                    calc(100% - 34px);
+
                 padding:
-                    70px 0;
+                    75px 0 65px;
+
+            }
+
+
+            .svd-sarees-intro h2 {
+
+                font-size: 45px;
+
+            }
+
+
+            .svd-sarees-intro p {
+
+                font-size: 14px;
+
+            }
+
+
+            .svd-sarees-highlights {
+
+                width:
+                    calc(100% - 30px);
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 13px;
+
+                padding-bottom:
+                    75px;
+
+            }
+
+
+            .svd-sarees-highlight-card:last-child {
+
+                grid-column:
+                    auto;
 
             }
 
 
             .svd-sarees-highlight-card {
 
+                min-height:
+                    auto;
+
                 padding:
-                    35px 22px;
+                    34px 24px;
+
+            }
+
+
+            .svd-sarees-highlight-card h3 {
+
+                font-size: 28px;
 
             }
 
@@ -920,15 +1056,122 @@
             .svd-sarees-shop-section {
 
                 padding:
-                    75px 18px;
+                    78px 18px;
+
+            }
+
+
+            .svd-sarees-shop-section::before {
+
+                font-size:
+                    95px;
+
+            }
+
+
+            .svd-sarees-shop-section h2 {
+
+                font-size:
+                    45px;
+
+            }
+
+
+            .svd-sarees-shop-section p {
+
+                font-size:
+                    14px;
+
+            }
+
+
+            .svd-sarees-shop-button {
+
+                width:
+                    min(100%, 260px);
+
+            }
+
+
+            .svd-sarees-whatsapp {
+
+                right: 16px;
+
+                bottom: 16px;
+
+                width: 50px;
+
+                height: 50px;
+
+                font-size: 22px;
 
             }
 
         }
 
 
-    </style>
+        /* =====================================================
+           SMALL MOBILE
+        ====================================================== */
 
+        @media (max-width: 420px) {
+
+            .svd-sarees-page .brand img {
+
+                width: 165px;
+
+            }
+
+
+            .svd-sarees-hero {
+
+                min-height: 510px;
+
+            }
+
+
+            .svd-sarees-hero h1 {
+
+                font-size: 47px;
+
+            }
+
+
+            .svd-sarees-intro h2 {
+
+                font-size: 42px;
+
+            }
+
+
+            .svd-sarees-shop-section h2 {
+
+                font-size: 42px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ====================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .svd-sarees-page *,
+            .svd-sarees-page *::before,
+            .svd-sarees-page *::after {
+
+                scroll-behavior: auto !important;
+
+                transition: none !important;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -937,17 +1180,65 @@
 
 
     <!-- =====================================================
-         HEADER
+         ANNOUNCEMENT BAR
+
+         Keep this truthful and simple.
+         No unverified shipping/payment claims.
     ====================================================== -->
 
-    <header class="svd-sarees-header">
+    <div class="announcement-bar">
 
-        <div class="svd-sarees-header-inner">
+        <div class="announcement-inner">
 
+            <span>
+                ShriVatsaDarbar
+            </span>
+
+            <span class="announcement-divider">
+                |
+            </span>
+
+            <span>
+                Premium Sarees &amp; Suits
+            </span>
+
+            <span class="announcement-divider">
+                |
+            </span>
+
+            <span>
+                Order on WhatsApp
+            </span>
+
+            <a
+                href="https://wa.me/918826196544"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="announcement-whatsapp"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                Order on WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SHARED HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+
+            <!-- BRAND -->
 
             <a
                 href="index.html"
-                class="svd-sarees-logo"
+                class="brand"
                 aria-label="ShriVatsaDarbar Home"
             >
 
@@ -959,9 +1250,30 @@
             </a>
 
 
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+            >
+
+                <i
+                    class="fa-solid fa-bars"
+                    aria-hidden="true"
+                ></i>
+
+            </button>
+
+
+            <!-- NAVIGATION -->
 
             <nav
-                class="svd-sarees-navigation"
+                class="main-navigation"
+                id="mainNavigation"
                 aria-label="Main Navigation"
             >
 
@@ -969,34 +1281,29 @@
                     Home
                 </a>
 
-
                 <a
-                    href="sarees.html"
+                    href="collections/collections.html?category=saree"
                     class="active"
+                    aria-current="page"
                 >
                     Sarees
                 </a>
 
-
-                <a href="suits.html">
+                <a href="collections/collections.html?category=suit">
                     Suits
                 </a>
 
-
-                <a href="new-arrivals.html">
+                <a href="collections/collections.html">
                     New Arrivals
                 </a>
 
-
-                <a href="best-sellers.html">
+                <a href="collections/collections.html">
                     Best Sellers
                 </a>
-
 
                 <a href="about.html">
                     About Us
                 </a>
-
 
                 <a href="contact.html">
                     Contact Us
@@ -1005,280 +1312,385 @@
             </nav>
 
 
+            <!-- HEADER ACTIONS -->
 
-            <div class="svd-sarees-actions">
+            <div class="header-actions">
 
 
-                <a
-                    href="#"
+                <button
+                    class="icon-button"
+                    id="searchButton"
+                    type="button"
                     aria-label="Search"
-                    onclick="showComingSoon('Search'); return false;"
                 >
 
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i
+                        class="fa-solid fa-magnifying-glass"
+                        aria-hidden="true"
+                    ></i>
 
-                </a>
+                </button>
 
 
-                <a
-                    href="#"
+                <button
+                    class="icon-button"
+                    type="button"
                     aria-label="Wishlist"
-                    onclick="showComingSoon('Wishlist'); return false;"
+                    onclick="showComingSoon('Wishlist')"
                 >
 
-                    <i class="fa-regular fa-heart"></i>
+                    <i
+                        class="fa-regular fa-heart"
+                        aria-hidden="true"
+                    ></i>
 
-                </a>
+                </button>
 
 
-                <a
-                    href="#"
+                <button
+                    class="icon-button"
+                    type="button"
                     aria-label="Account"
-                    onclick="showComingSoon('Account'); return false;"
+                    onclick="showComingSoon('Account')"
                 >
 
-                    <i class="fa-regular fa-user"></i>
+                    <i
+                        class="fa-regular fa-user"
+                        aria-hidden="true"
+                    ></i>
 
-                </a>
+                </button>
 
 
-                <a
-                    href="#"
-                    aria-label="Shopping Bag"
-                    onclick="showComingSoon('Shopping Bag'); return false;"
+                <button
+                    class="icon-button bag-button"
+                    id="shoppingBagButton"
+                    type="button"
+                    aria-label="Open shopping bag"
                 >
 
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <i
+                        class="fa-solid fa-bag-shopping"
+                        aria-hidden="true"
+                    ></i>
 
-                </a>
+                    <span
+                        class="bag-count"
+                        id="bagCount"
+                    >
+                        0
+                    </span>
+
+                </button>
 
 
             </div>
-
 
         </div>
 
     </header>
 
 
-
     <!-- =====================================================
-         HERO
+         SHARED SEARCH OVERLAY
     ====================================================== -->
 
-    <section class="svd-sarees-hero">
-
-
-        <div class="svd-sarees-hero-content">
-
-
-            <div class="svd-sarees-eyebrow">
-
-                Timeless Elegance
-
-            </div>
-
-
-            <h1>
-                Sarees That Tell a Story
-            </h1>
-
-
-            <p>
-
-                Discover a thoughtfully curated collection
-                of beautiful sarees designed to celebrate
-                grace, tradition and timeless elegance.
-
-            </p>
-
-
-            <a
-                href="collections/collections.html?category=saree"
-                class="svd-sarees-hero-button"
-            >
-
-                Explore Sarees
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         INTRODUCTION
-    ====================================================== -->
-
-    <section class="svd-sarees-intro">
-
-
-        <div class="svd-sarees-section-eyebrow">
-
-            The ShriVatsaDarbar Collection
-
-        </div>
-
-
-        <h2>
-            Grace in Every Drape
-        </h2>
-
-
-        <p>
-
-            Every saree at ShriVatsaDarbar is selected
-            with an eye for beauty, quality and timeless style.
-            From elegant everyday pieces to special occasion
-            favourites, discover something that feels
-            beautifully yours.
-
-        </p>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         COLLECTION HIGHLIGHTS
-    ====================================================== -->
-
-    <section class="svd-sarees-highlights">
-
-
-        <article class="svd-sarees-highlight-card">
-
-
-            <div class="svd-sarees-highlight-icon">
-
-                <i class="fa-solid fa-gem"></i>
-
-            </div>
-
-
-            <h3>
-                Timeless Elegance
-            </h3>
-
-
-            <p>
-
-                Beautiful sarees chosen for graceful style
-                that remains elegant beyond changing trends.
-
-            </p>
-
-
-        </article>
-
-
-
-        <article class="svd-sarees-highlight-card">
-
-
-            <div class="svd-sarees-highlight-icon">
-
-                <i class="fa-solid fa-heart"></i>
-
-            </div>
-
-
-            <h3>
-                Curated With Care
-            </h3>
-
-
-            <p>
-
-                Every piece is thoughtfully selected with
-                attention to fabric, detail and overall beauty.
-
-            </p>
-
-
-        </article>
-
-
-
-        <article class="svd-sarees-highlight-card">
-
-
-            <div class="svd-sarees-highlight-icon">
-
-                <i class="fa-solid fa-crown"></i>
-
-            </div>
-
-
-            <h3>
-                Made For Special Moments
-            </h3>
-
-
-            <p>
-
-                Find beautiful styles for celebrations,
-                occasions and the moments you want to remember.
-
-            </p>
-
-
-        </article>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         SHOP CTA
-    ====================================================== -->
-
-    <section class="svd-sarees-shop-section">
-
-
-        <div class="svd-sarees-section-eyebrow">
-
-            Explore The Collection
-
-        </div>
-
-
-        <h2>
-            Find Your Perfect Saree
-        </h2>
-
-
-        <p>
-
-            Explore our growing collection and discover
-            sarees selected to bring elegance, confidence
-            and beauty to every occasion.
-
-        </p>
-
-
-        <a
-            href="collections/collections.html?category=saree"
-            class="svd-sarees-shop-button"
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+        aria-hidden="true"
+    >
+
+        <button
+            class="search-close"
+            id="searchClose"
+            type="button"
+            aria-label="Close search"
         >
 
-            Shop All Sarees
+            <i
+                class="fa-solid fa-xmark"
+                aria-hidden="true"
+            ></i>
 
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
+        </button>
 
 
-    </section>
+        <div class="search-box">
 
+            <span>
+                Search our collection
+            </span>
+
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search sarees, suits..."
+                autocomplete="off"
+                aria-label="Search sarees and suits"
+            >
+
+            <i
+                class="fa-solid fa-magnifying-glass"
+                aria-hidden="true"
+            ></i>
+
+        </div>
+
+    </div>
+
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="svd-sarees-hero">
+
+            <div class="svd-sarees-hero-content">
+
+
+                <div class="svd-sarees-eyebrow">
+
+                    Timeless Elegance
+
+                </div>
+
+
+                <h1>
+
+                    Sarees That<br>
+                    Tell a Story
+
+                </h1>
+
+
+                <p>
+
+                    Discover a thoughtfully curated collection
+                    of beautiful sarees designed to celebrate
+                    grace, tradition and timeless elegance.
+
+                </p>
+
+
+                <a
+                    href="collections/collections.html?category=saree"
+                    class="svd-sarees-hero-button"
+                >
+
+                    Explore Sarees
+
+                    <i
+                        class="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                    ></i>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
+
+        <section class="svd-sarees-intro">
+
+
+            <div class="svd-sarees-section-eyebrow">
+
+                The ShriVatsaDarbar Collection
+
+            </div>
+
+
+            <h2>
+
+                Grace in Every Drape
+
+            </h2>
+
+
+            <p>
+
+                Every saree at ShriVatsaDarbar is selected
+                with an eye for beauty, quality and timeless style.
+                From elegant everyday pieces to special occasion
+                favourites, discover something that feels
+                beautifully yours.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- =================================================
+             COLLECTION HIGHLIGHTS
+        ================================================== -->
+
+        <section
+            class="svd-sarees-highlights"
+            aria-label="Saree collection highlights"
+        >
+
+
+            <article class="svd-sarees-highlight-card">
+
+
+                <div class="svd-sarees-highlight-icon">
+
+                    <i
+                        class="fa-solid fa-gem"
+                        aria-hidden="true"
+                    ></i>
+
+                </div>
+
+
+                <h3>
+
+                    Timeless Elegance
+
+                </h3>
+
+
+                <p>
+
+                    Beautiful sarees chosen for graceful style
+                    that remains elegant beyond changing trends.
+
+                </p>
+
+
+            </article>
+
+
+            <article class="svd-sarees-highlight-card">
+
+
+                <div class="svd-sarees-highlight-icon">
+
+                    <i
+                        class="fa-solid fa-heart"
+                        aria-hidden="true"
+                    ></i>
+
+                </div>
+
+
+                <h3>
+
+                    Curated With Care
+
+                </h3>
+
+
+                <p>
+
+                    Every piece is thoughtfully selected with
+                    attention to fabric, detail and overall beauty.
+
+                </p>
+
+
+            </article>
+
+
+            <article class="svd-sarees-highlight-card">
+
+
+                <div class="svd-sarees-highlight-icon">
+
+                    <i
+                        class="fa-solid fa-crown"
+                        aria-hidden="true"
+                    ></i>
+
+                </div>
+
+
+                <h3>
+
+                    Made For Special Moments
+
+                </h3>
+
+
+                <p>
+
+                    Find beautiful styles for celebrations,
+                    occasions and the moments you want to remember.
+
+                </p>
+
+
+            </article>
+
+
+        </section>
+
+
+        <!-- =================================================
+             COLLECTION CTA
+        ================================================== -->
+
+        <section class="svd-sarees-shop-section">
+
+
+            <div class="svd-sarees-shop-content">
+
+
+                <div class="svd-sarees-section-eyebrow">
+
+                    Explore The Collection
+
+                </div>
+
+
+                <h2>
+
+                    Find Your Perfect Saree
+
+                </h2>
+
+
+                <p>
+
+                    Explore our growing collection and discover
+                    sarees selected to bring elegance, confidence
+                    and beauty to every occasion.
+
+                </p>
+
+
+                <a
+                    href="collections/collections.html?category=saree"
+                    class="svd-sarees-shop-button"
+                >
+
+                    Shop All Sarees
+
+                    <i
+                        class="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                    ></i>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
 
 
     <!-- =====================================================
@@ -1288,9 +1700,29 @@
     <div id="site-footer"></div>
 
 
+    <!-- =====================================================
+         WHATSAPP FLOAT
+    ====================================================== -->
+
+    <a
+        href="https://wa.me/918826196544"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="svd-sarees-whatsapp"
+        aria-label="Chat with ShriVatsaDarbar on WhatsApp"
+        title="Chat on WhatsApp"
+    >
+
+        <i
+            class="fa-brands fa-whatsapp"
+            aria-hidden="true"
+        ></i>
+
+    </a>
+
 
     <!-- =====================================================
-         MASTER JAVASCRIPT
+         SHARED WEBSITE JAVASCRIPT
     ====================================================== -->
 
     <script src="script.js"></script>
