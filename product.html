@@ -3,1366 +3,1233 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color"
-          content="#4b0713">
+<meta name="theme-color"
+      content="#4b0713">
 
-    <meta name="description"
-          id="metaDescription"
-          content="Discover premium sarees and suits curated by ShriVatsaDarbar.">
+<meta name="description"
+      id="metaDescription"
+      content="Discover premium ethnic wear curated by ShriVatsaDarbar.">
 
-    <meta name="author"
-          content="ShriVatsaDarbar">
+<meta name="author"
+      content="ShriVatsaDarbar">
 
-    <meta property="og:title"
-          id="ogTitle"
-          content="ShriVatsaDarbar | Premium Ethnic Wear">
+<meta property="og:title"
+      id="ogTitle"
+      content="ShriVatsaDarbar | Premium Ethnic Wear">
 
-    <meta property="og:description"
-          id="ogDescription"
-          content="Discover premium sarees and suits curated with timeless elegance.">
+<meta property="og:description"
+      id="ogDescription"
+      content="Discover premium sarees and suits curated with timeless elegance.">
 
-    <meta property="og:type"
-          content="product">
+<meta property="og:type"
+      content="product">
 
-    <meta property="og:url"
-          id="ogUrl"
-          content="">
+<meta property="og:url"
+      id="ogUrl"
+      content="https://suit.shrivatsadarbar.com/product.html">
 
-    <link rel="canonical"
-          id="canonicalUrl"
-          href="">
+<link rel="canonical"
+      id="canonicalUrl"
+      href="https://suit.shrivatsadarbar.com/product.html">
 
-    <link rel="icon"
-          type="image/webp"
-          href="images/logos/favicon.webp">
+<link rel="icon"
+      type="image/webp"
+      href="images/logos/favicon.webp">
 
-    <title id="pageTitle">
-        ShriVatsaDarbar | Premium Ethnic Wear
-    </title>
+<title id="pageTitle">
+    ShriVatsaDarbar | Premium Ethnic Wear
+</title>
 
 
-    <!-- =========================================================
-         GOOGLE FONTS
-    ========================================================== -->
+<!-- =========================================================
+     GOOGLE FONTS
+========================================================= -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
-          rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet">
 
 
-    <!-- =========================================================
-         FONT AWESOME
-    ========================================================== -->
+<!-- =========================================================
+     FONT AWESOME
+========================================================= -->
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <!-- =========================================================
-         MAIN WEBSITE CSS
-    ========================================================== -->
+<!-- =========================================================
+     MAIN CSS
+========================================================= -->
 
-    <link rel="stylesheet"
-          href="styles.css">
+<link rel="stylesheet"
+      href="styles.css">
 
 
-    <!-- =========================================================
-         PRODUCT PAGE CSS
-    ========================================================== -->
+<style>
 
-    <style>
+/* =========================================================
+   PRODUCT PAGE
+========================================================= */
 
-        /* =====================================================
-           PRODUCT PAGE VARIABLES
-        ====================================================== */
+.product-page {
+    background: #fff;
+}
 
-        :root {
-            --svd-wine: #4b0713;
-            --svd-wine-dark: #32050c;
-            --svd-gold: #b89552;
-            --svd-gold-dark: #927331;
-            --svd-cream: #faf7f1;
-            --svd-ivory: #fffdf9;
-            --svd-border: #e9dfd1;
-            --svd-text: #302a26;
-            --svd-muted: #7c7269;
-            --svd-white: #ffffff;
-        }
 
+/* =========================================================
+   BREADCRUMB
+========================================================= */
 
-        /* =====================================================
-           PAGE
-        ====================================================== */
-
-        .svd-product-page {
-            background: var(--svd-white);
-            color: var(--svd-text);
-        }
+.product-breadcrumb {
+    padding: 22px 0;
+    background: #faf7f2;
+    border-bottom: 1px solid #eee5d8;
+}
 
+.product-breadcrumb-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
 
-        /* =====================================================
-           BREADCRUMB
-        ====================================================== */
+    font-size: 12px;
+    color: #8c8176;
+}
 
-        .svd-product-breadcrumb {
-            background: var(--svd-cream);
-            border-bottom: 1px solid var(--svd-border);
-        }
+.product-breadcrumb a {
+    color: #9a7a35;
+    text-decoration: none;
+}
 
-        .svd-product-breadcrumb-inner {
-            width: min(1320px, calc(100% - 48px));
-            margin: 0 auto;
-            padding: 18px 0;
+.product-breadcrumb span {
+    margin: 0 10px;
+    color: #b5a99b;
+}
 
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 12px;
-            line-height: 1.5;
-            color: var(--svd-muted);
-        }
+/* =========================================================
+   PRODUCT DETAIL
+========================================================= */
 
-        .svd-product-breadcrumb a {
-            color: var(--svd-gold-dark);
-            text-decoration: none;
-            transition: color .2s ease;
-        }
+.product-detail {
+    max-width: 1200px;
+    margin: 0 auto;
 
-        .svd-product-breadcrumb a:hover {
-            color: var(--svd-wine);
-        }
+    padding: 70px 30px 90px;
 
-        .svd-product-breadcrumb .separator {
-            color: #b9aea2;
-        }
+    display: grid;
 
-        #breadcrumbProduct {
-            max-width: 300px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(360px, .92fr);
 
+    gap: 70px;
 
-        /* =====================================================
-           PRODUCT DETAIL LAYOUT
-        ====================================================== */
+    align-items: start;
+}
 
-        .svd-product-detail {
-            width: min(1320px, calc(100% - 48px));
-            margin: 0 auto;
 
-            padding: 72px 0 92px;
+/* =========================================================
+   GALLERY
+========================================================= */
 
-            display: grid;
-            grid-template-columns:
-                minmax(0, 1.08fr)
-                minmax(360px, .92fr);
+.product-gallery {
+    position: relative;
+}
 
-            gap: 78px;
-            align-items: start;
-        }
+.product-main-image {
+    position: relative;
 
+    background: #f5eee5;
 
-        /* =====================================================
-           GALLERY
-        ====================================================== */
+    overflow: hidden;
+}
 
-        .svd-product-gallery {
-            min-width: 0;
-        }
+.product-main-image img {
+    width: 100%;
 
-        .svd-product-main-image {
-            position: relative;
+    display: block;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #f8f0e6,
-                    #eee3d5
-                );
+    aspect-ratio: 4 / 5;
 
-            overflow: hidden;
-        }
+    object-fit: cover;
 
-        .svd-product-main-image img {
-            display: block;
+    transition:
+        opacity .2s ease,
+        transform .3s ease;
+}
 
-            width: 100%;
-            height: auto;
 
-            aspect-ratio: 4 / 5;
-            object-fit: cover;
+/* =========================================================
+   BADGE
+========================================================= */
 
-            transition:
-                opacity .25s ease,
-                transform .5s ease;
-        }
+.product-gallery-badge {
+    position: absolute;
 
-        .svd-product-main-image:hover img {
-            transform: scale(1.012);
-        }
+    top: 18px;
+    left: 18px;
 
+    z-index: 5;
 
-        /* =====================================================
-           GALLERY BADGE
-        ====================================================== */
+    background: #b88a2d;
+    color: #fff;
 
-        .svd-gallery-badge {
-            position: absolute;
-            top: 18px;
-            left: 18px;
-            z-index: 3;
+    padding: 8px 14px;
 
-            padding: 7px 13px;
+    font:
+        600 10px
+        "DM Sans",
+        sans-serif;
 
-            background: var(--svd-wine);
-            color: var(--svd-white);
+    letter-spacing: 1.5px;
+}
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: .14em;
-            text-transform: uppercase;
-        }
 
+/* =========================================================
+   GALLERY ARROWS
+========================================================= */
 
-        /* =====================================================
-           GALLERY ARROWS
-        ====================================================== */
+.gallery-arrow {
+    position: absolute;
 
-        .svd-gallery-arrow {
-            position: absolute;
-            top: 50%;
-            z-index: 4;
+    top: 50%;
 
-            width: 42px;
-            height: 42px;
+    transform:
+        translateY(-50%);
 
-            display: grid;
-            place-items: center;
+    z-index: 5;
 
-            transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
 
-            border: 1px solid rgba(255,255,255,.65);
-            background: rgba(255,255,255,.88);
+    border: 0;
 
-            color: var(--svd-wine);
+    border-radius: 50%;
 
-            cursor: pointer;
+    background:
+        rgba(255,255,255,.94);
 
-            opacity: 0;
-            transition:
-                opacity .25s ease,
-                background .25s ease,
-                color .25s ease;
-        }
+    color: #4b0713;
 
-        .svd-product-main-image:hover .svd-gallery-arrow,
-        .svd-gallery-arrow:focus-visible {
-            opacity: 1;
-        }
+    display: flex;
 
-        .svd-gallery-arrow:hover {
-            background: var(--svd-wine);
-            color: var(--svd-white);
-        }
+    align-items: center;
+    justify-content: center;
 
-        .svd-gallery-arrow-left {
-            left: 18px;
-        }
+    cursor: pointer;
 
-        .svd-gallery-arrow-right {
-            right: 18px;
-        }
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.08);
+}
 
+.gallery-arrow:hover {
+    background: #4b0713;
+    color: #fff;
+}
 
-        /* =====================================================
-           THUMBNAILS
-        ====================================================== */
+.gallery-arrow-left {
+    left: 15px;
+}
 
-        .svd-product-thumbnails {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
+.gallery-arrow-right {
+    right: 15px;
+}
 
-            margin-top: 14px;
-        }
 
-        .svd-product-thumbnail {
-            position: relative;
+/* =========================================================
+   THUMBNAILS
+========================================================= */
 
-            padding: 0;
+.product-thumbnails {
+    display: grid;
 
-            border: 1px solid var(--svd-border);
-            background: #f7f0e7;
+    grid-template-columns:
+        repeat(3, 1fr);
 
-            cursor: pointer;
+    gap: 10px;
 
-            overflow: hidden;
-        }
+    margin-top: 12px;
+}
 
-        .svd-product-thumbnail img {
-            display: block;
+.product-thumbnail {
+    position: relative;
 
-            width: 100%;
-            aspect-ratio: 1 / 1.12;
+    padding: 0;
 
-            object-fit: cover;
+    border:
+        1px solid #e3d8ca;
 
-            transition: transform .3s ease;
-        }
+    background: #f5eee5;
 
-        .svd-product-thumbnail:hover img {
-            transform: scale(1.03);
-        }
+    cursor: pointer;
 
-        .svd-product-thumbnail.active {
-            border-color: var(--svd-gold);
-            box-shadow:
-                0 0 0 1px var(--svd-gold);
-        }
+    overflow: hidden;
+}
 
-        .svd-thumbnail-label {
-            position: absolute;
-            left: 8px;
-            bottom: 8px;
+.product-thumbnail.active {
+    border-color: #b88a2d;
 
-            padding: 4px 7px;
+    box-shadow:
+        0 0 0 1px #b88a2d;
+}
 
-            background: rgba(255,255,255,.92);
+.product-thumbnail img {
+    width: 100%;
 
-            color: var(--svd-wine);
+    display: block;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 9px;
-            font-weight: 600;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-        }
+    aspect-ratio: 1 / 1.12;
 
+    object-fit: cover;
+}
 
-        /* =====================================================
-           INFORMATION
-        ====================================================== */
+.product-thumbnail-label {
+    position: absolute;
 
-        .svd-product-information {
-            padding-top: 6px;
-        }
+    left: 6px;
+    bottom: 6px;
 
-        .svd-product-category {
-            margin: 0 0 13px;
+    padding: 4px 7px;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: .2em;
-            text-transform: uppercase;
+    background:
+        rgba(75,7,19,.88);
 
-            color: var(--svd-gold-dark);
-        }
+    color: #fff;
 
-        .svd-product-title {
-            margin: 0;
+    font-size: 8px;
 
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(40px, 4vw, 62px);
-            font-weight: 500;
-            line-height: .98;
+    letter-spacing: 1px;
 
-            color: var(--svd-wine);
-        }
+    text-transform: uppercase;
+}
 
-        .svd-product-subtitle {
-            margin: 20px 0 0;
 
-            max-width: 560px;
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 15px;
-            line-height: 1.8;
+.product-information {
+    padding-top: 8px;
+}
 
-            color: var(--svd-muted);
-        }
+.product-category-label {
+    margin: 0 0 12px;
 
+    color: #a47d32;
 
-        /* =====================================================
-           ORNAMENT
-        ====================================================== */
+    font-size: 11px;
 
-        .svd-product-ornament {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+    letter-spacing: 3px;
 
-            margin: 28px 0;
-        }
+    text-transform: uppercase;
+}
 
-        .svd-product-ornament span {
-            width: 52px;
-            height: 1px;
-            background: var(--svd-gold);
-        }
+.product-title {
+    margin: 0;
 
-        .svd-product-ornament i {
-            color: var(--svd-gold);
-            font-size: 9px;
-        }
+    font:
+        500 clamp(40px,5vw,62px)/.98
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
+    color: #201b18;
+}
 
-        /* =====================================================
-           DESCRIPTION
-        ====================================================== */
+.product-subtitle {
+    margin: 18px 0 0;
 
-        .svd-product-description {
-            max-width: 600px;
+    font:
+        20px/1.5
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 14px;
-            line-height: 1.9;
+    color: #776d65;
+}
 
-            color: #5f5750;
-        }
 
+/* =========================================================
+   ORNAMENT
+========================================================= */
 
-        /* =====================================================
-           PRODUCT META
-        ====================================================== */
+.product-ornament {
+    display: flex;
 
-        .svd-product-meta {
-            margin-top: 28px;
+    align-items: center;
 
-            border-top: 1px solid var(--svd-border);
-            border-bottom: 1px solid var(--svd-border);
-        }
+    gap: 10px;
 
-        .svd-product-meta-row {
-            display: grid;
-            grid-template-columns: 145px 1fr;
+    margin: 25px 0;
+}
 
-            gap: 20px;
+.product-ornament span {
+    width: 42px;
+    height: 1px;
 
-            padding: 13px 0;
+    background: #c5a05a;
+}
 
-            border-bottom: 1px solid #eee7de;
+.product-ornament i {
+    font-size: 8px;
+    color: #b88a2d;
+}
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 12px;
-        }
 
-        .svd-product-meta-row:last-child {
-            border-bottom: 0;
-        }
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
-        .svd-product-meta-row strong {
-            color: var(--svd-wine);
-            font-weight: 600;
-        }
+.product-description {
+    max-width: 580px;
 
-        .svd-product-meta-row span {
-            color: var(--svd-muted);
-        }
+    font-size: 15px;
 
+    line-height: 1.8;
 
-        /* =====================================================
-           PURCHASE
-        ====================================================== */
+    color: #625a54;
+}
 
-        .svd-product-purchase {
-            margin-top: 30px;
-        }
 
-        .svd-quantity-heading {
-            margin-bottom: 11px;
+/* =========================================================
+   PRODUCT META
+========================================================= */
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: .14em;
-            text-transform: uppercase;
+.product-meta {
+    margin-top: 30px;
 
-            color: var(--svd-wine);
-        }
+    padding: 22px 0;
 
-        .svd-quantity-row {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+    border-top:
+        1px solid #e9e0d5;
 
-        .svd-quantity-control {
-            display: flex;
-            align-items: center;
+    border-bottom:
+        1px solid #e9e0d5;
+}
 
-            border: 1px solid var(--svd-border);
-        }
+.product-meta-row {
+    display: flex;
 
-        .svd-quantity-button {
-            width: 42px;
-            height: 42px;
+    justify-content: space-between;
 
-            border: 0;
-            background: var(--svd-cream);
+    gap: 20px;
 
-            color: var(--svd-wine);
+    padding: 9px 0;
 
-            font-size: 18px;
-            cursor: pointer;
+    font-size: 13px;
+}
 
-            transition: background .2s ease;
-        }
+.product-meta-row strong {
+    color: #332a25;
 
-        .svd-quantity-button:hover {
-            background: #f0e7db;
-        }
+    font-weight: 600;
+}
 
-        .svd-quantity-value {
-            min-width: 44px;
+.product-meta-row span {
+    color: #766c63;
 
-            text-align: center;
+    text-align: right;
+}
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 13px;
-            font-weight: 600;
 
-            color: var(--svd-text);
-        }
+/* =========================================================
+   PURCHASE
+========================================================= */
 
-        .svd-quantity-reset {
-            border: 0;
-            background: transparent;
+.product-purchase {
+    margin-top: 30px;
+}
 
-            color: var(--svd-muted);
+.quantity-heading {
+    margin-bottom: 9px;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
+    font-size: 10px;
 
-            cursor: pointer;
-        }
+    letter-spacing: 1.5px;
 
-        .svd-quantity-reset:hover {
-            color: var(--svd-wine);
-        }
+    text-transform: uppercase;
 
+    color: #766b62;
+}
 
-        /* =====================================================
-           ACTION BUTTONS
-        ====================================================== */
+.quantity-row {
+    display: flex;
 
-        .svd-product-action-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+    align-items: center;
 
-            gap: 12px;
+    gap: 10px;
+}
 
-            margin-top: 18px;
-        }
+.quantity-control {
+    display: flex;
 
-        .svd-product-action-buttons button {
-            min-height: 54px;
+    align-items: center;
 
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
+    border:
+        1px solid #d8cbbb;
 
-            padding: 13px 18px;
+    background: #fff;
+}
 
-            border: 1px solid var(--svd-wine);
+.quantity-button {
+    width: 43px;
+    height: 43px;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: .07em;
-            text-transform: uppercase;
+    border: 0;
 
-            cursor: pointer;
+    background: transparent;
 
-            transition:
-                background .25s ease,
-                color .25s ease,
-                border-color .25s ease;
-        }
+    color: #4b0713;
 
-        .svd-add-cart-button {
-            background: var(--svd-wine);
-            color: var(--svd-white);
-        }
+    font-size: 16px;
 
-        .svd-add-cart-button:hover {
-            background: var(--svd-wine-dark);
-        }
+    cursor: pointer;
+}
 
-        .svd-whatsapp-button {
-            border-color: #4f765a !important;
-            background: var(--svd-white);
-            color: #315f42;
-        }
+.quantity-value {
+    min-width: 40px;
 
-        .svd-whatsapp-button:hover {
-            background: #315f42;
-            color: var(--svd-white);
-        }
+    text-align: center;
 
-        .svd-order-note {
-            margin: 13px 0 0;
+    font:
+        600 13px
+        "DM Sans",
+        sans-serif;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            line-height: 1.7;
-            text-align: center;
+    color: #332a25;
+}
 
-            color: var(--svd-muted);
-        }
+.quantity-reset {
+    height: 43px;
 
+    padding: 0 15px;
 
-        /* =====================================================
-           TRUST
-        ====================================================== */
+    border:
+        1px solid #d8cbbb;
 
-        .svd-product-trust {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+    background: #fff;
 
-            margin-top: 34px;
+    color: #766b62;
 
-            border-top: 1px solid var(--svd-border);
-            border-bottom: 1px solid var(--svd-border);
-        }
+    font:
+        9px
+        "DM Sans",
+        sans-serif;
 
-        .svd-product-trust-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
+    letter-spacing: 1px;
 
-            padding: 17px 8px 17px 0;
-        }
+    text-transform: uppercase;
 
-        .svd-product-trust-item:nth-child(odd) {
-            border-right: 1px solid var(--svd-border);
-            padding-right: 18px;
-        }
+    cursor: pointer;
+}
 
-        .svd-product-trust-item:nth-child(even) {
-            padding-left: 18px;
-        }
 
-        .svd-product-trust-item:nth-child(-n+2) {
-            border-bottom: 1px solid var(--svd-border);
-        }
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
 
-        .svd-product-trust-icon {
-            flex: 0 0 auto;
+.product-action-buttons {
+    display: grid;
 
-            margin-top: 2px;
+    grid-template-columns:
+        1fr 1fr;
 
-            color: var(--svd-gold);
-            font-size: 15px;
-        }
+    gap: 10px;
 
-        .svd-product-trust-text {
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-        }
+    margin-top: 15px;
+}
 
-        .svd-product-trust-text strong {
-            font-family: "DM Sans", sans-serif;
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: .05em;
-            text-transform: uppercase;
+.product-add-cart-button,
+.product-order-button {
 
-            color: var(--svd-wine);
-        }
+    min-height: 54px;
 
-        .svd-product-trust-text span {
-            font-family: "DM Sans", sans-serif;
-            font-size: 10px;
+    display: flex;
 
-            color: var(--svd-muted);
-        }
+    align-items: center;
+    justify-content: center;
 
+    gap: 10px;
 
-        /* =====================================================
-           PRODUCT STORY
-        ====================================================== */
+    padding: 14px 18px;
 
-        .svd-product-story {
-            background:
-                linear-gradient(
-                    135deg,
-                    #faf6ef 0%,
-                    #f4eadc 100%
-                );
+    text-decoration: none;
 
-            border-top: 1px solid var(--svd-border);
-        }
+    font:
+        600 11px
+        "DM Sans",
+        sans-serif;
 
-        .svd-product-story-inner {
-            width: min(900px, calc(100% - 48px));
-            margin: 0 auto;
+    letter-spacing: 1px;
 
-            padding: 82px 0 88px;
+    text-transform: uppercase;
 
-            text-align: center;
-        }
+    cursor: pointer;
+}
 
-        .svd-product-story-eyebrow {
-            margin: 0 0 14px;
+.product-add-cart-button {
+    border:
+        1px solid #4b0713;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: .22em;
-            text-transform: uppercase;
+    background: #fff;
 
-            color: var(--svd-gold-dark);
-        }
+    color: #4b0713;
+}
 
-        .svd-product-story h2 {
-            margin: 0;
+.product-add-cart-button:hover {
+    background: #4b0713;
+    color: #fff;
+}
 
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(38px, 5vw, 58px);
-            font-weight: 500;
+.product-order-button {
+    border:
+        1px solid #4b0713;
 
-            color: var(--svd-wine);
-        }
+    background: #4b0713;
 
-        .svd-product-story p:last-child {
-            max-width: 700px;
+    color: #fff;
+}
 
-            margin: 22px auto 0;
+.product-order-button:hover {
+    background: #65091a;
+}
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 14px;
-            line-height: 2;
+.product-order-note {
+    margin: 12px 0 0;
 
-            color: #665d55;
-        }
+    text-align: center;
 
+    font-size: 12px;
 
-        /* =====================================================
-           PRODUCT ERROR
-        ====================================================== */
+    color: #8a8077;
+}
 
-        .svd-product-error {
-            width: min(700px, calc(100% - 48px));
-            margin: 0 auto;
 
-            padding: 120px 0;
+/* =========================================================
+   TRUST
+========================================================= */
 
-            text-align: center;
-        }
+.product-trust {
+    margin-top: 35px;
 
-        .svd-product-error h1 {
-            margin: 0;
+    display: grid;
 
-            font-family: "Cormorant Garamond", serif;
-            font-size: 54px;
-            font-weight: 500;
+    grid-template-columns:
+        repeat(2,1fr);
 
-            color: var(--svd-wine);
-        }
+    border-top:
+        1px solid #e9e0d5;
+}
 
-        .svd-product-error p {
-            margin: 14px 0 25px;
+.product-trust-item {
+    display: flex;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 14px;
+    align-items: center;
 
-            color: var(--svd-muted);
-        }
+    gap: 13px;
 
-        .svd-product-error a {
-            display: inline-flex;
+    padding: 18px 12px 18px 0;
 
-            padding: 13px 22px;
+    border-bottom:
+        1px solid #e9e0d5;
+}
 
-            background: var(--svd-wine);
-            color: var(--svd-white);
+.product-trust-item:nth-child(even) {
+    padding-left: 15px;
 
-            text-decoration: none;
+    border-left:
+        1px solid #e9e0d5;
+}
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-        }
+.product-trust-icon {
+    color: #b88a2d;
 
+    font-size: 17px;
 
-        /* =====================================================
-           CART OVERLAY
-        ====================================================== */
+    min-width: 22px;
+}
 
-        .svd-cart-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 9990;
+.product-trust-text strong {
+    display: block;
 
-            background: rgba(38, 18, 20, .46);
+    font:
+        15px
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            opacity: 0;
-            visibility: hidden;
+    color: #352c27;
+}
 
-            transition:
-                opacity .3s ease,
-                visibility .3s ease;
-        }
+.product-trust-text span {
+    display: block;
 
-        .svd-cart-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
+    margin-top: 3px;
 
+    font-size: 11px;
 
-        /* =====================================================
-           CART DRAWER
-        ====================================================== */
+    color: #877d74;
+}
 
-        .svd-cart-drawer {
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 9995;
 
-            width: min(440px, 92vw);
-            height: 100vh;
+/* =========================================================
+   STORY
+========================================================= */
 
-            display: flex;
-            flex-direction: column;
+.product-story {
+    background: #faf6ef;
 
-            background: var(--svd-white);
+    border-top:
+        1px solid #eee4d7;
 
-            box-shadow: -15px 0 45px rgba(50, 20, 25, .16);
+    border-bottom:
+        1px solid #eee4d7;
+}
 
-            transform: translateX(105%);
+.product-story-inner {
+    max-width: 900px;
 
-            transition: transform .35s cubic-bezier(.22,.61,.36,1);
-        }
+    margin: 0 auto;
 
-        .svd-cart-drawer.open {
-            transform: translateX(0);
-        }
+    padding: 75px 30px;
 
-        .svd-cart-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    text-align: center;
+}
 
-            padding: 22px 24px;
+.product-story-eyebrow {
+    margin: 0 0 12px;
 
-            border-bottom: 1px solid var(--svd-border);
-        }
+    font-size: 10px;
 
-        .svd-cart-header h2 {
-            margin: 0;
+    letter-spacing: 3px;
 
-            font-family: "Cormorant Garamond", serif;
-            font-size: 29px;
-            font-weight: 500;
+    color: #a47d32;
+}
 
-            color: var(--svd-wine);
-        }
+.product-story h2 {
+    margin: 0;
 
-        .svd-cart-close {
-            width: 36px;
-            height: 36px;
+    font:
+        500 clamp(34px,5vw,48px)
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            display: grid;
-            place-items: center;
+    color: #241e1a;
+}
 
-            border: 1px solid var(--svd-border);
-            background: var(--svd-cream);
+.product-story p {
+    max-width: 700px;
 
-            color: var(--svd-wine);
+    margin: 22px auto 0;
 
-            cursor: pointer;
-        }
+    font-size: 15px;
 
-        .svd-cart-body {
-            flex: 1;
+    line-height: 1.9;
 
-            padding: 22px;
+    color: #6e655e;
+}
 
-            overflow-y: auto;
-        }
 
-        .svd-empty-cart {
-            padding: 60px 15px;
+/* =========================================================
+   ERROR
+========================================================= */
 
-            text-align: center;
-        }
+.product-error {
+    max-width: 800px;
 
-        .svd-empty-cart i {
-            color: var(--svd-gold);
-            font-size: 34px;
-        }
+    margin: 80px auto;
 
-        .svd-empty-cart h3 {
-            margin: 16px 0 7px;
+    padding: 60px 30px;
 
-            font-family: "Cormorant Garamond", serif;
-            font-size: 27px;
-            font-weight: 500;
+    text-align: center;
+}
 
-            color: var(--svd-wine);
-        }
+.product-error h1 {
+    font:
+        500 48px
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-        .svd-empty-cart p {
-            margin: 0;
+    color: #241e1a;
+}
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 12px;
-            line-height: 1.7;
+.product-error p {
+    color: #756c64;
 
-            color: var(--svd-muted);
-        }
+    margin: 15px 0 30px;
+}
 
+.product-error a {
+    display: inline-block;
 
-        /* =====================================================
-           CART ITEMS
-        ====================================================== */
+    padding: 14px 28px;
 
-        .svd-cart-item {
-            display: grid;
-            grid-template-columns: 78px 1fr auto;
+    background: #4b0713;
 
-            gap: 13px;
+    color: #fff;
 
-            padding: 15px 0;
+    text-decoration: none;
 
-            border-bottom: 1px solid var(--svd-border);
-        }
+    font-size: 12px;
 
-        .svd-cart-item-image {
-            width: 78px;
-            height: 92px;
+    letter-spacing: 1px;
 
-            object-fit: cover;
+    text-transform: uppercase;
+}
 
-            background: #f5eee5;
-        }
 
-        .svd-cart-item-info {
-            min-width: 0;
-        }
+/* =========================================================
+   CART
+========================================================= */
 
-        .svd-cart-item-title {
-            margin: 0;
+.cart-overlay {
+    position: fixed;
 
-            font-family: "Cormorant Garamond", serif;
-            font-size: 21px;
-            line-height: 1.05;
-            font-weight: 500;
+    inset: 0;
 
-            color: var(--svd-wine);
-        }
+    z-index: 9998;
 
-        .svd-cart-item-code {
-            margin: 5px 0 10px;
+    background:
+        rgba(30,20,15,.45);
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 9px;
-            letter-spacing: .08em;
-            text-transform: uppercase;
+    opacity: 0;
 
-            color: var(--svd-muted);
-        }
+    visibility: hidden;
 
-        .svd-cart-item-quantity {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
+    transition: .3s;
+}
 
-        .svd-cart-item-quantity button {
-            width: 25px;
-            height: 25px;
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
 
-            border: 1px solid var(--svd-border);
-            background: var(--svd-cream);
+.cart-drawer {
+    position: fixed;
 
-            color: var(--svd-wine);
+    top: 0;
+    right: 0;
 
-            cursor: pointer;
-        }
+    z-index: 9999;
 
-        .svd-cart-item-quantity span {
-            min-width: 20px;
+    width: min(440px,100%);
 
-            text-align: center;
+    height: 100vh;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-        }
+    background: #fff;
 
-        .svd-cart-item-remove {
-            align-self: start;
+    display: flex;
 
-            border: 0;
-            background: transparent;
+    flex-direction: column;
 
-            color: #9b8f84;
+    transform:
+        translateX(100%);
 
-            cursor: pointer;
-        }
+    transition:
+        transform .35s ease;
 
-        .svd-cart-item-remove:hover {
-            color: var(--svd-wine);
-        }
+    box-shadow:
+        -10px 0 35px rgba(0,0,0,.12);
+}
 
+.cart-drawer.active {
+    transform:
+        translateX(0);
+}
 
-        /* =====================================================
-           CART FOOTER
-        ====================================================== */
+.cart-header {
+    display: flex;
 
-        .svd-cart-footer {
-            padding: 20px 22px 24px;
+    align-items: center;
+    justify-content: space-between;
 
-            border-top: 1px solid var(--svd-border);
-            background: var(--svd-cream);
-        }
+    padding: 22px 25px;
 
-        .svd-cart-summary {
-            display: flex;
-            justify-content: space-between;
+    border-bottom:
+        1px solid #e9e0d5;
+}
 
-            margin-bottom: 15px;
+.cart-header h2 {
+    margin: 0;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 12px;
-        }
+    font:
+        500 30px
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-        .svd-cart-summary span {
-            color: var(--svd-muted);
-        }
+    color: #241e1a;
+}
 
-        .svd-cart-summary strong {
-            color: var(--svd-wine);
-        }
+.cart-close {
+    width: 38px;
+    height: 38px;
 
-        .svd-cart-whatsapp {
-            width: 100%;
-            min-height: 49px;
+    border: 0;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+    background: #faf6ef;
 
-            border: 0;
-            background: #315f42;
-            color: var(--svd-white);
+    color: #4b0713;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: .06em;
-            text-transform: uppercase;
+    border-radius: 50%;
 
-            cursor: pointer;
-        }
+    cursor: pointer;
+}
 
-        .svd-cart-whatsapp:hover {
-            background: #264c34;
-        }
+.cart-body {
+    flex: 1;
 
-        .svd-cart-clear {
-            width: 100%;
+    overflow-y: auto;
 
-            margin-top: 9px;
+    padding: 20px 25px;
+}
 
-            border: 0;
-            background: transparent;
+.cart-empty {
+    text-align: center;
 
-            color: var(--svd-muted);
+    padding: 70px 20px;
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 10px;
+    color: #82766d;
+}
 
-            cursor: pointer;
-        }
+.cart-empty i {
+    display: block;
 
-        .svd-cart-clear:hover {
-            color: var(--svd-wine);
-        }
+    margin-bottom: 18px;
 
+    font-size: 38px;
 
-        /* =====================================================
-           WHATSAPP FLOAT
-        ====================================================== */
+    color: #b88a2d;
+}
 
-        .svd-product-whatsapp-float {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
-            z-index: 9900;
+.cart-empty strong {
+    display: block;
 
-            width: 52px;
-            height: 52px;
+    font:
+        500 26px
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            display: grid;
-            place-items: center;
+    color: #342b26;
+}
 
-            border-radius: 50%;
+.cart-empty span {
+    display: block;
 
-            background: #315f42;
-            color: white;
+    margin-top: 8px;
 
-            box-shadow: 0 8px 25px rgba(0,0,0,.18);
+    font-size: 12px;
+}
 
-            text-decoration: none;
 
-            font-size: 22px;
+/* =========================================================
+   CART ITEMS
+========================================================= */
 
-            transition:
-                transform .25s ease,
-                box-shadow .25s ease;
-        }
+.cart-item {
+    display: grid;
 
-        .svd-product-whatsapp-float:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0,0,0,.22);
-        }
+    grid-template-columns:
+        75px 1fr auto;
 
+    gap: 13px;
 
-        /* =====================================================
-           TOAST
-        ====================================================== */
+    padding: 15px 0;
 
-        .svd-product-toast {
-            position: fixed;
-            left: 50%;
-            bottom: 28px;
-            z-index: 10000;
+    border-bottom:
+        1px solid #eee5db;
+}
 
-            max-width: min(420px, calc(100% - 40px));
+.cart-item-image {
+    width: 75px;
+    height: 90px;
 
-            padding: 13px 18px;
+    object-fit: cover;
 
-            transform:
-                translate(-50%, 25px);
+    background: #f5eee5;
+}
 
-            opacity: 0;
-            visibility: hidden;
+.cart-item-details h3 {
+    margin: 0 0 5px;
 
-            background: var(--svd-wine);
-            color: var(--svd-white);
+    font:
+        500 19px/1.1
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-            box-shadow: 0 10px 30px rgba(50, 10, 20, .2);
+    color: #302722;
+}
 
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            line-height: 1.5;
-            text-align: center;
+.cart-item-code {
+    font-size: 9px;
 
-            transition:
-                opacity .25s ease,
-                transform .25s ease,
-                visibility .25s ease;
-        }
+    color: #988c82;
 
-        .svd-product-toast.show {
-            opacity: 1;
-            visibility: visible;
+    letter-spacing: .7px;
+}
 
-            transform:
-                translate(-50%, 0);
-        }
+.cart-item-controls {
+    display: flex;
 
+    align-items: center;
 
-        /* =====================================================
-           RESPONSIVE — TABLET
-        ====================================================== */
+    margin-top: 12px;
+}
 
-        @media (max-width: 1000px) {
+.cart-qty-button {
+    width: 28px;
+    height: 28px;
 
-            .svd-product-detail {
-                grid-template-columns: 1fr;
+    border:
+        1px solid #ddd0c0;
 
-                gap: 50px;
+    background: #fff;
 
-                padding-top: 55px;
-            }
+    color: #4b0713;
 
-            .svd-product-information {
-                max-width: 760px;
-            }
+    cursor: pointer;
+}
 
-            .svd-product-title {
-                font-size: 52px;
-            }
+.cart-qty-value {
+    min-width: 30px;
 
-        }
+    text-align: center;
 
+    font-size: 11px;
+}
 
-        /* =====================================================
-           RESPONSIVE — MOBILE
-        ====================================================== */
+.cart-remove {
+    border: 0;
 
-        @media (max-width: 700px) {
+    background: transparent;
 
-            .svd-product-breadcrumb-inner,
-            .svd-product-detail,
-            .svd-product-story-inner,
-            .svd-product-error {
-                width: min(100% - 30px, 1320px);
-            }
+    color: #9a8d82;
 
-            .svd-product-breadcrumb-inner {
-                padding: 14px 0;
+    cursor: pointer;
+}
 
-                font-size: 10px;
-            }
 
-            .svd-product-detail {
-                padding: 28px 0 55px;
+/* =========================================================
+   CART FOOTER
+========================================================= */
 
-                gap: 35px;
-            }
+.cart-footer {
+    border-top:
+        1px solid #e9e0d5;
 
-            .svd-gallery-badge {
-                top: 12px;
-                left: 12px;
-            }
+    padding: 18px 25px;
+}
 
-            .svd-gallery-arrow {
-                width: 36px;
-                height: 36px;
+.cart-summary {
+    display: flex;
 
-                opacity: 1;
-            }
+    justify-content: space-between;
 
-            .svd-gallery-arrow-left {
-                left: 10px;
-            }
+    margin-bottom: 14px;
 
-            .svd-gallery-arrow-right {
-                right: 10px;
-            }
+    font-size: 12px;
 
-            .svd-product-thumbnails {
-                gap: 8px;
-            }
+    color: #6f655d;
+}
 
-            .svd-thumbnail-label {
-                display: none;
-            }
+.cart-whatsapp {
+    width: 100%;
 
-            .svd-product-category {
-                font-size: 10px;
-            }
+    padding: 14px;
 
-            .svd-product-title {
-                font-size: 43px;
-            }
+    border: 0;
 
-            .svd-product-subtitle {
-                font-size: 13px;
-                line-height: 1.75;
-            }
+    background: #4b0713;
 
-            .svd-product-ornament {
-                margin: 22px 0;
-            }
+    color: #fff;
 
-            .svd-product-description {
-                font-size: 13px;
-                line-height: 1.8;
-            }
+    font:
+        10px
+        "DM Sans",
+        sans-serif;
 
-            .svd-product-meta-row {
-                grid-template-columns: 115px 1fr;
+    letter-spacing: 1px;
 
-                gap: 12px;
+    text-transform: uppercase;
 
-                font-size: 11px;
-            }
+    cursor: pointer;
+}
 
-            .svd-product-action-buttons {
-                grid-template-columns: 1fr;
-            }
+.cart-clear {
+    width: 100%;
 
-            .svd-product-trust {
-                grid-template-columns: 1fr;
-            }
+    margin-top: 8px;
 
-            .svd-product-trust-item:nth-child(odd) {
-                border-right: 0;
-                padding-right: 8px;
-            }
+    border: 0;
 
-            .svd-product-trust-item:nth-child(even) {
-                padding-left: 0;
-            }
+    background: transparent;
 
-            .svd-product-trust-item:nth-child(-n+2) {
-                border-bottom: 1px solid var(--svd-border);
-            }
+    color: #8a7c71;
 
-            .svd-product-trust-item:nth-child(3) {
-                border-bottom: 1px solid var(--svd-border);
-            }
+    padding: 9px;
 
-            .svd-product-story-inner {
-                padding: 60px 0 65px;
-            }
+    font-size: 9px;
 
-            .svd-product-story h2 {
-                font-size: 42px;
-            }
+    letter-spacing: 1px;
 
-            .svd-product-story p:last-child {
-                font-size: 12px;
-                line-height: 1.85;
-            }
+    text-transform: uppercase;
 
-            .svd-product-whatsapp-float {
-                right: 15px;
-                bottom: 15px;
+    cursor: pointer;
+}
 
-                width: 48px;
-                height: 48px;
 
-                font-size: 20px;
-            }
+/* =========================================================
+   BAG COUNT
+========================================================= */
 
-            .svd-product-toast {
-                bottom: 78px;
-            }
+.bag-button {
+    position: relative;
+}
 
-        }
+.bag-count {
+    position: absolute;
 
+    top: -4px;
+    right: -5px;
 
-        /* =====================================================
-           ACCESSIBILITY
-        ====================================================== */
+    min-width: 17px;
+    height: 17px;
 
-        button:focus-visible,
-        a:focus-visible,
-        input:focus-visible {
-            outline: 2px solid var(--svd-gold);
-            outline-offset: 3px;
-        }
+    padding: 0 4px;
 
-    </style>
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #b88a2d;
+
+    color: #fff;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.site-toast {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    z-index: 10001;
+
+    transform:
+        translate(-50%,20px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    padding: 12px 18px;
+
+    background: #4b0713;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.18);
+
+    transition: .25s;
+}
+
+.site-toast.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translate(-50%,0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .product-detail {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .product-information {
+        padding-top: 0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .product-detail {
+        padding: 45px 15px 60px;
+    }
+
+    .product-breadcrumb-inner {
+        padding: 0 18px;
+    }
+
+    .product-title {
+        font-size: 45px;
+    }
+
+    .product-subtitle {
+        font-size: 18px;
+    }
+
+    .product-action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .product-trust {
+        grid-template-columns: 1fr;
+    }
+
+    .product-trust-item:nth-child(even) {
+        padding-left: 0;
+
+        border-left: 0;
+    }
+
+    .cart-drawer {
+        width: 100%;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -1371,26 +1238,70 @@
 
 
 <!-- =========================================================
+     ANNOUNCEMENT BAR
+========================================================= -->
+
+<div class="announcement-bar">
+
+    <div class="announcement-inner">
+
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            FREE SHIPPING on Prepaid Orders
+        </span>
+
+        <span class="announcement-divider">
+            |
+        </span>
+
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            Premium Quality Fabrics
+        </span>
+
+        <span class="announcement-divider">
+            |
+        </span>
+
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            Easy Returns & Exchanges
+        </span>
+
+        <a href="https://wa.me/918826196544"
+           target="_blank"
+           rel="noopener"
+           class="announcement-whatsapp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            Order on WhatsApp
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
      HEADER
-========================================================== -->
+========================================================= -->
 
 <header class="site-header">
 
     <div class="header-container">
 
         <a href="index.html"
-           class="brand"
-           aria-label="ShriVatsaDarbar Home">
+           class="brand">
 
-            <img src="images/logos/logo.webp"
-                 alt="ShriVatsaDarbar">
+            <img src="images/logos/logo-white.webp"
+                 alt="ShriVatsaDarbar logo">
 
         </a>
 
 
         <button class="mobile-menu-button"
                 id="mobileMenuButton"
-                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false">
 
@@ -1437,7 +1348,6 @@
 
             <button class="icon-button"
                     id="searchButton"
-                    type="button"
                     aria-label="Search">
 
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -1446,7 +1356,6 @@
 
 
             <button class="icon-button"
-                    type="button"
                     aria-label="Wishlist"
                     onclick="showComingSoon('Wishlist')">
 
@@ -1456,7 +1365,6 @@
 
 
             <button class="icon-button"
-                    type="button"
                     aria-label="Account"
                     onclick="showComingSoon('Account')">
 
@@ -1467,14 +1375,16 @@
 
             <button class="icon-button bag-button"
                     id="shoppingBagButton"
-                    type="button"
-                    aria-label="Open shopping bag">
+                    aria-label="Open shopping bag"
+                    type="button">
 
                 <i class="fa-solid fa-bag-shopping"></i>
 
                 <span class="bag-count"
                       id="bagCount">
+
                     0
+
                 </span>
 
             </button>
@@ -1487,21 +1397,19 @@
 
 
 <!-- =========================================================
-     SEARCH OVERLAY
-========================================================== -->
+     SEARCH
+========================================================= -->
 
 <div class="search-overlay"
      id="searchOverlay">
 
     <button class="search-close"
             id="searchClose"
-            type="button"
             aria-label="Close search">
 
         <i class="fa-solid fa-xmark"></i>
 
     </button>
-
 
     <div class="search-box">
 
@@ -1523,24 +1431,26 @@
 
 <!-- =========================================================
      BREADCRUMB
-========================================================== -->
+========================================================= -->
 
-<div class="svd-product-breadcrumb">
+<div class="product-breadcrumb">
 
-    <div class="svd-product-breadcrumb-inner">
+    <div class="product-breadcrumb-inner">
 
         <a href="index.html">
             Home
         </a>
 
-        <span class="separator">/</span>
+        <span>/</span>
 
         <a id="breadcrumbCategoryLink"
            href="collections/collections.html">
+
             Collection
+
         </a>
 
-        <span class="separator">/</span>
+        <span>/</span>
 
         <span id="breadcrumbProduct">
             Product
@@ -1553,31 +1463,31 @@
 
 <!-- =========================================================
      PRODUCT PAGE
-========================================================== -->
+========================================================= -->
 
-<main class="svd-product-page"
+<main class="product-page"
       id="productPage">
 
-    <section class="svd-product-detail">
+    <section class="product-detail">
 
 
         <!-- =================================================
              GALLERY
         ================================================== -->
 
-        <div class="svd-product-gallery">
+        <div class="product-gallery">
 
-            <div class="svd-product-main-image">
+            <div class="product-main-image">
 
-                <span class="svd-gallery-badge">
-                    CURATED
+                <span class="product-gallery-badge">
+                    NEW
                 </span>
 
 
-                <button class="svd-gallery-arrow svd-gallery-arrow-left"
+                <button class="gallery-arrow gallery-arrow-left"
                         id="galleryPrev"
                         type="button"
-                        aria-label="Previous product image">
+                        aria-label="Previous image">
 
                     <i class="fa-solid fa-chevron-left"></i>
 
@@ -1586,14 +1496,13 @@
 
                 <img id="productImage"
                      src=""
-                     alt=""
-                     loading="eager">
+                     alt="">
 
 
-                <button class="svd-gallery-arrow svd-gallery-arrow-right"
+                <button class="gallery-arrow gallery-arrow-right"
                         id="galleryNext"
                         type="button"
-                        aria-label="Next product image">
+                        aria-label="Next image">
 
                     <i class="fa-solid fa-chevron-right"></i>
 
@@ -1602,7 +1511,7 @@
             </div>
 
 
-            <div class="svd-product-thumbnails"
+            <div class="product-thumbnails"
                  id="productThumbnails">
             </div>
 
@@ -1613,27 +1522,30 @@
              INFORMATION
         ================================================== -->
 
-        <div class="svd-product-information">
+        <div class="product-information">
 
-
-            <p class="svd-product-category"
+            <p class="product-category-label"
                id="productCategory">
+
                 SAREE
+
             </p>
 
 
-            <h1 class="svd-product-title"
+            <h1 class="product-title"
                 id="productTitle">
+
                 Product
+
             </h1>
 
 
-            <p class="svd-product-subtitle"
+            <p class="product-subtitle"
                id="productSubtitle">
             </p>
 
 
-            <div class="svd-product-ornament">
+            <div class="product-ornament">
 
                 <span></span>
 
@@ -1644,17 +1556,14 @@
             </div>
 
 
-            <div class="svd-product-description"
+            <div class="product-description"
                  id="productDescription">
             </div>
 
 
-            <!-- PRODUCT META -->
+            <div class="product-meta">
 
-            <div class="svd-product-meta">
-
-
-                <div class="svd-product-meta-row">
+                <div class="product-meta-row">
 
                     <strong>
                         Collection
@@ -1667,7 +1576,7 @@
                 </div>
 
 
-                <div class="svd-product-meta-row">
+                <div class="product-meta-row">
 
                     <strong>
                         Category
@@ -1679,7 +1588,7 @@
                 </div>
 
 
-                <div class="svd-product-meta-row">
+                <div class="product-meta-row">
 
                     <strong>
                         Product Code
@@ -1691,7 +1600,7 @@
                 </div>
 
 
-                <div class="svd-product-meta-row">
+                <div class="product-meta-row">
 
                     <strong>
                         Availability
@@ -1703,7 +1612,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -1711,56 +1619,61 @@
                  PURCHASE
             ================================================== -->
 
-            <div class="svd-product-purchase">
+            <div class="product-purchase">
 
-
-                <div class="svd-quantity-heading">
+                <div class="quantity-heading">
                     Quantity
                 </div>
 
 
-                <div class="svd-quantity-row">
+                <div class="quantity-row">
 
+                    <div class="quantity-control">
 
-                    <div class="svd-quantity-control">
-
-                        <button class="svd-quantity-button"
+                        <button class="quantity-button"
                                 id="quantityMinus"
                                 type="button"
                                 aria-label="Decrease quantity">
+
                             −
+
                         </button>
 
 
-                        <span class="svd-quantity-value"
+                        <span class="quantity-value"
                               id="quantityValue">
+
                             1
+
                         </span>
 
 
-                        <button class="svd-quantity-button"
+                        <button class="quantity-button"
                                 id="quantityPlus"
                                 type="button"
                                 aria-label="Increase quantity">
+
                             +
+
                         </button>
 
                     </div>
 
 
-                    <button class="svd-quantity-reset"
+                    <button class="quantity-reset"
                             id="quantityReset"
                             type="button">
+
                         Reset
+
                     </button>
 
                 </div>
 
 
-                <div class="svd-product-action-buttons">
+                <div class="product-action-buttons">
 
-
-                    <button class="svd-add-cart-button"
+                    <button class="product-add-cart-button"
                             id="addToCartButton"
                             type="button">
 
@@ -1771,7 +1684,7 @@
                     </button>
 
 
-                    <button class="svd-whatsapp-button"
+                    <button class="product-order-button"
                             id="whatsappProductButton"
                             type="button">
 
@@ -1784,7 +1697,7 @@
                 </div>
 
 
-                <p class="svd-order-note">
+                <p class="product-order-note">
 
                     Our team will share price,
                     availability and complete product details.
@@ -1798,21 +1711,20 @@
                  TRUST
             ================================================== -->
 
-            <div class="svd-product-trust">
+            <div class="product-trust">
 
+                <div class="product-trust-item">
 
-                <div class="svd-product-trust-item">
+                    <i class="fa-solid fa-gem product-trust-icon"></i>
 
-                    <i class="fa-solid fa-gem svd-product-trust-icon"></i>
-
-                    <div class="svd-product-trust-text">
+                    <div class="product-trust-text">
 
                         <strong>
-                            Curated Quality
+                            Premium Quality
                         </strong>
 
                         <span>
-                            Carefully selected pieces
+                            Carefully selected fabrics
                         </span>
 
                     </div>
@@ -1820,18 +1732,18 @@
                 </div>
 
 
-                <div class="svd-product-trust-item">
+                <div class="product-trust-item">
 
-                    <i class="fa-solid fa-heart svd-product-trust-icon"></i>
+                    <i class="fa-solid fa-heart product-trust-icon"></i>
 
-                    <div class="svd-product-trust-text">
+                    <div class="product-trust-text">
 
                         <strong>
                             Handpicked With Love
                         </strong>
 
                         <span>
-                            Selected for timeless style
+                            Curated for you
                         </span>
 
                     </div>
@@ -1839,18 +1751,18 @@
                 </div>
 
 
-                <div class="svd-product-trust-item">
+                <div class="product-trust-item">
 
-                    <i class="fa-solid fa-headset svd-product-trust-icon"></i>
+                    <i class="fa-solid fa-truck-fast product-trust-icon"></i>
 
-                    <div class="svd-product-trust-text">
+                    <div class="product-trust-text">
 
                         <strong>
-                            Personal Assistance
+                            Fast Shipping
                         </strong>
 
                         <span>
-                            Product help on WhatsApp
+                            Delivered with care
                         </span>
 
                     </div>
@@ -1858,24 +1770,23 @@
                 </div>
 
 
-                <div class="svd-product-trust-item">
+                <div class="product-trust-item">
 
-                    <i class="fa-brands fa-whatsapp svd-product-trust-icon"></i>
+                    <i class="fa-solid fa-rotate-left product-trust-icon"></i>
 
-                    <div class="svd-product-trust-text">
+                    <div class="product-trust-text">
 
                         <strong>
-                            Easy Enquiry
+                            Easy Returns
                         </strong>
 
                         <span>
-                            Connect directly with us
+                            Hassle-free returns
                         </span>
 
                     </div>
 
                 </div>
-
 
             </div>
 
@@ -1888,19 +1799,17 @@
          STORY
     ====================================================== -->
 
-    <section class="svd-product-story">
+    <section class="product-story">
 
-        <div class="svd-product-story-inner">
+        <div class="product-story-inner">
 
-            <p class="svd-product-story-eyebrow">
+            <p class="product-story-eyebrow">
                 SHRI VATSA COLLECTION
             </p>
-
 
             <h2>
                 Grace in Every Thread
             </h2>
-
 
             <p id="productStory">
 
@@ -1910,8 +1819,8 @@
 
                 <br><br>
 
-                We believe ethnic wear should not simply be worn —
-                it should make you feel beautiful, confident
+                We believe ethnic wear should not simply be worn
+                — it should make you feel beautiful, confident
                 and effortlessly yourself.
 
             </p>
@@ -1925,9 +1834,9 @@
 
 <!-- =========================================================
      PRODUCT ERROR
-========================================================== -->
+========================================================= -->
 
-<section class="svd-product-error"
+<section class="product-error"
          id="productError"
          style="display:none">
 
@@ -1948,33 +1857,31 @@
 
 <!-- =========================================================
      CART OVERLAY
-========================================================== -->
+========================================================= -->
 
-<div class="svd-cart-overlay"
+<div class="cart-overlay"
      id="cartOverlay">
 </div>
 
 
 <!-- =========================================================
      CART DRAWER
-========================================================== -->
+========================================================= -->
 
-<aside class="svd-cart-drawer"
+<aside class="cart-drawer"
        id="cartDrawer"
-       aria-label="Shopping bag">
+       aria-label="Shopping cart">
 
-
-    <div class="svd-cart-header">
+    <div class="cart-header">
 
         <h2>
             Your Collection
         </h2>
 
-
-        <button class="svd-cart-close"
+        <button class="cart-close"
                 id="cartClose"
                 type="button"
-                aria-label="Close shopping bag">
+                aria-label="Close cart">
 
             <i class="fa-solid fa-xmark"></i>
 
@@ -1983,15 +1890,15 @@
     </div>
 
 
-    <div class="svd-cart-body"
+    <div class="cart-body"
          id="cartBody">
     </div>
 
 
-    <div class="svd-cart-footer"
+    <div class="cart-footer"
          id="cartFooter">
 
-        <div class="svd-cart-summary">
+        <div class="cart-summary">
 
             <span>
                 Items
@@ -2004,7 +1911,7 @@
         </div>
 
 
-        <button class="svd-cart-whatsapp"
+        <button class="cart-whatsapp"
                 id="cartWhatsapp"
                 type="button">
 
@@ -2015,11 +1922,11 @@
         </button>
 
 
-        <button class="svd-cart-clear"
+        <button class="cart-clear"
                 id="cartClear"
                 type="button">
 
-            Clear Collection
+            Clear Cart
 
         </button>
 
@@ -2029,21 +1936,225 @@
 
 
 <!-- =========================================================
-     MASTER FOOTER
-========================================================== -->
+     FOOTER
+========================================================= -->
 
-<div id="site-footer">
-</div>
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a href="index.html"
+               class="footer-logo">
+
+                <img src="images/logos/logo.webp"
+                     alt="ShriVatsaDarbar">
+
+            </a>
+
+            <p>
+                Premium sarees and suits curated
+                with timeless elegance, quality
+                and grace in every thread.
+            </p>
+
+
+            <div class="footer-socials">
+
+                <a href="#"
+                   aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="#"
+                   aria-label="Facebook">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#"
+                   aria-label="Pinterest">
+
+                    <i class="fa-brands fa-pinterest-p"></i>
+
+                </a>
+
+                <a href="#"
+                   aria-label="YouTube">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHOP -->
+
+        <div class="footer-column">
+
+            <h3>
+                SHOP
+            </h3>
+
+            <a href="collections/collections.html?category=saree">
+                Sarees
+            </a>
+
+            <a href="collections/collections.html?category=suit">
+                Suits
+            </a>
+
+            <a href="collections/collections.html">
+                New Arrivals
+            </a>
+
+            <a href="collections/collections.html">
+                Best Sellers
+            </a>
+
+            <a href="collections/collections.html">
+                All Collections
+            </a>
+
+        </div>
+
+
+        <!-- CUSTOMER CARE -->
+
+        <div class="footer-column">
+
+            <h3>
+                CUSTOMER CARE
+            </h3>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <a href="policies/shipping-policy.html">
+                Shipping Policy
+            </a>
+
+            <a href="policies/return-refund-policy.html">
+                Return & Refund
+            </a>
+
+            <a href="faq.html">
+                FAQs
+            </a>
+
+            <a href="contact.html">
+                Size Guide
+            </a>
+
+        </div>
+
+
+        <!-- ABOUT -->
+
+        <div class="footer-column">
+
+            <h3>
+                ABOUT US
+            </h3>
+
+            <a href="our-story.html">
+                Our Story
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="policies/privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            <a href="policies/terms-conditions.html">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column footer-contact">
+
+            <h3>
+                CONTACT US
+            </h3>
+
+            <a href="tel:+918826196544">
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 88261 96544
+
+            </a>
+
+            <a href="mailto:shrivatsadarbar@gmail.com">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                shrivatsadarbar@gmail.com
+
+            </a>
+
+            <span>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Bhola and Prabha Niwas,
+                Ratanpur, Padao,
+                Varanasi, Uttar Pradesh
+                221008
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container footer-bottom-inner">
+
+            <p>
+                © 2026 ShriVatsaDarbar.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Grace in Every Thread
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
 
 
 <!-- =========================================================
      WHATSAPP FLOAT
-========================================================== -->
+========================================================= -->
 
 <a href="https://wa.me/918826196544"
    target="_blank"
    rel="noopener"
-   class="svd-product-whatsapp-float"
+   class="whatsapp-float"
    aria-label="Chat with ShriVatsaDarbar on WhatsApp">
 
     <i class="fa-brands fa-whatsapp"></i>
@@ -2053,9 +2164,9 @@
 
 <!-- =========================================================
      TOAST
-========================================================== -->
+========================================================= -->
 
-<div class="svd-product-toast"
+<div class="site-toast"
      id="siteToast"
      role="status"
      aria-live="polite">
@@ -2063,826 +2174,1252 @@
 
 
 <!-- =========================================================
-     PRODUCT DATA
-     
-     IMPORTANT:
-     This file contains NO product database.
-     All products come from products.js.
-========================================================== -->
+     PRODUCT + CART JAVASCRIPT
+========================================================= -->
 
 <script src="products.js"></script>
 
-
-<!-- =========================================================
-     SHARED WEBSITE SCRIPT
-========================================================== -->
-
-<script src="script.js"></script>
-
-
-<!-- =========================================================
-     PRODUCT PAGE CONTROLLER
-========================================================== -->
-
 <script>
 
-(function () {
+/* =========================================================
+   SHARED PRODUCT DATABASE
 
-    "use strict";
+   The single source of truth is products.js.
+   This page intentionally does not maintain a second
+   embedded product database.
+========================================================= */
 
-
-    /* =========================================================
-       CONSTANTS
-    ========================================================== */
-
-    const CART_KEY =
-        "shrivatsaDarbarFashionCart";
-
-    const WHATSAPP_NUMBER =
-        "918826196544";
+const products = window.SVD_PRODUCTS || {};
 
 
-    /* =========================================================
-       PAGE STATE
-    ========================================================== */
+/* =========================================================
+   PRODUCT KEY RESOLUTION
 
-    let currentProduct = null;
-    let currentProductKey = null;
+   Accept the canonical product ID and common legacy variants
+   so product links remain resilient while the catalog evolves.
+========================================================= */
 
-    let currentGalleryIndex = 0;
+function resolveProductKey(value) {
 
-    let quantity = 1;
+    const raw = String(value || "").trim();
 
-    let cart = [];
-
-
-    /* =========================================================
-       HELPERS
-    ========================================================== */
-
-    function $(id) {
-        return document.getElementById(id);
+    if (!raw) {
+        return null;
     }
 
+    const normalized = raw.toLowerCase();
 
-    function setText(id, value) {
+    if (products[normalized]) {
+        return normalized;
+    }
 
-        const element = $(id);
+    const compact = normalized.replace(/\s+/g, "");
 
-        if (element) {
-            element.textContent =
-                value == null ? "" : value;
+    if (products[compact]) {
+        return compact;
+    }
+
+    const codeMatch = compact.match(/^svd-(saree|suit)-0*(\d+)$/);
+
+    if (codeMatch) {
+
+        const category = codeMatch[1];
+        const number = String(parseInt(codeMatch[2], 10));
+        const paddedNumber = number.padStart(3, "0");
+        const canonical = category + "-" + paddedNumber;
+
+        if (products[canonical]) {
+            return canonical;
         }
-
     }
 
+    const idMatch = compact.match(/^(saree|suit)-0*(\d+)$/);
 
-    function escapeHtml(value) {
+    if (idMatch) {
 
-        return String(value || "")
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
+        const category = idMatch[1];
+        const number = String(parseInt(idMatch[2], 10));
+        const canonical = category + "-" + number.padStart(3, "0");
 
-    }
-
-
-    function showToast(message) {
-
-        const toast = $("siteToast");
-
-        if (!toast) {
-            return;
+        if (products[canonical]) {
+            return canonical;
         }
+    }
 
-        toast.textContent = message;
+    return null;
+}
 
-        toast.classList.add("show");
 
-        clearTimeout(
-            window.svdProductToastTimer
+/* =========================================================
+   PAGE VARIABLES
+========================================================= */
+
+let currentGalleryIndex = 0;
+
+let currentProduct = null;
+
+let currentProductKey = null;
+
+let quantity = 1;
+
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const requestedProductKey =
+    params.get("product");
+
+const productKey =
+    resolveProductKey(requestedProductKey);
+
+
+/* =========================================================
+   PRODUCT ERROR
+========================================================= */
+
+function showProductError() {
+
+    document.getElementById(
+        "productPage"
+    ).style.display = "none";
+
+    document.getElementById(
+        "productError"
+    ).style.display = "block";
+
+}
+
+
+/* =========================================================
+   SET TEXT
+========================================================= */
+
+function setText(id, value) {
+
+    const element =
+        document.getElementById(id);
+
+    if (element) {
+
+        element.textContent =
+            value || "";
+
+    }
+
+}
+
+
+/* =========================================================
+   LOAD PRODUCT
+========================================================= */
+
+function loadProduct() {
+
+    if (
+        !productKey ||
+        !products[productKey]
+    ) {
+
+        showProductError();
+
+        return;
+
+    }
+
+
+    currentProductKey =
+        productKey;
+
+    currentProduct =
+        products[productKey];
+
+
+    document.title =
+        currentProduct.title +
+        " | ShriVatsaDarbar";
+
+
+    setText(
+        "productCategory",
+        currentProduct.category.toUpperCase()
+    );
+
+
+    setText(
+        "productTitle",
+        currentProduct.title
+    );
+
+
+    setText(
+        "productSubtitle",
+        currentProduct.subtitle
+    );
+
+
+    setText(
+        "productCollection",
+        currentProduct.collection
+    );
+
+
+    setText(
+        "productMetaCategory",
+        currentProduct.category
+    );
+
+
+    setText(
+        "productCode",
+        currentProduct.code
+    );
+
+
+    setText(
+        "breadcrumbProduct",
+        currentProduct.title
+    );
+
+
+    const categoryLink =
+        document.getElementById(
+            "breadcrumbCategoryLink"
         );
 
-        window.svdProductToastTimer =
-            setTimeout(function () {
 
-                toast.classList.remove("show");
+    categoryLink.textContent =
+        currentProduct.category + "s";
 
-            }, 2600);
+
+    categoryLink.href =
+        "collections/collections.html?category=" +
+        currentProduct.category.toLowerCase();
+
+
+    document.getElementById(
+        "productDescription"
+    ).innerHTML =
+
+        "Discover the refined charm of ShriVatsaDarbar. " +
+        "This beautifully curated " +
+        currentProduct.category.toLowerCase() +
+        " has been selected for its graceful character, " +
+        "refined detailing and timeless appeal." +
+        "<br><br>" +
+        currentProduct.subtitle;
+
+
+    const canonical =
+        "https://suit.shrivatsadarbar.com/product.html?product=" +
+        encodeURIComponent(productKey);
+
+
+    document.getElementById(
+        "canonicalUrl"
+    ).href =
+        canonical;
+
+
+    document.getElementById(
+        "ogUrl"
+    ).content =
+        canonical;
+
+
+    document.getElementById(
+        "metaDescription"
+    ).content =
+        currentProduct.subtitle;
+
+
+    document.getElementById(
+        "ogTitle"
+    ).content =
+        currentProduct.title +
+        " | ShriVatsaDarbar";
+
+
+    document.getElementById(
+        "ogDescription"
+    ).content =
+        currentProduct.subtitle;
+
+
+    currentGalleryIndex = 0;
+
+    renderGallery();
+
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+function renderGallery() {
+
+    if (!currentProduct) {
+
+        return;
 
     }
 
 
-    /* =========================================================
-       PRODUCT ID
-    ========================================================== */
+    const mainImage =
+        document.getElementById(
+            "productImage"
+        );
 
-    function getProductIdFromUrl() {
 
-        const params =
-            new URLSearchParams(
-                window.location.search
+    const thumbnails =
+        document.getElementById(
+            "productThumbnails"
+        );
+
+
+    const images =
+        currentProduct.images;
+
+
+    if (!images.length) {
+
+        return;
+
+    }
+
+
+    mainImage.style.opacity = "1";
+
+
+    mainImage.onerror = function () {
+
+        this.onerror = null;
+
+        this.style.opacity = "0";
+
+    };
+
+
+    mainImage.onload = function () {
+
+        this.style.opacity = "1";
+
+    };
+
+
+    mainImage.src =
+        images[currentGalleryIndex];
+
+
+    mainImage.alt =
+        currentProduct.title;
+
+
+    thumbnails.innerHTML =
+        "";
+
+
+    images.forEach(
+        function (src, index) {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.type =
+                "button";
+
+
+            button.className =
+                "product-thumbnail" +
+                (
+                    index === currentGalleryIndex
+                        ? " active"
+                        : ""
+                );
+
+
+            button.setAttribute(
+                "aria-label",
+                "View " +
+                currentProduct.title +
+                " image " +
+                (index + 1)
             );
 
-        return (
-            params.get("product") ||
-            params.get("id") ||
-            ""
-        ).trim();
 
-    }
-
-
-    /* =========================================================
-       LOAD PRODUCT
-    ========================================================== */
-
-    function loadProduct() {
-
-        const productId =
-            getProductIdFromUrl();
-
-        if (
-            !productId ||
-            !window.SVD_PRODUCTS ||
-            !window.SVD_PRODUCTS[productId]
-        ) {
-
-            showProductError();
-
-            return;
-
-        }
-
-
-        currentProductKey =
-            productId;
-
-        currentProduct =
-            window.SVD_PRODUCTS[productId];
-
-
-        /* -----------------------------------------------------
-           PAGE TITLE
-        ----------------------------------------------------- */
-
-        document.title =
-            currentProduct.title +
-            " | ShriVatsaDarbar";
-
-
-        /* -----------------------------------------------------
-           BASIC INFORMATION
-        ----------------------------------------------------- */
-
-        setText(
-            "productCategory",
-            String(
-                currentProduct.category || ""
-            ).toUpperCase()
-        );
-
-
-        setText(
-            "productTitle",
-            currentProduct.title
-        );
-
-
-        setText(
-            "productSubtitle",
-            currentProduct.subtitle
-        );
-
-
-        setText(
-            "productCollection",
-            currentProduct.collection
-        );
-
-
-        setText(
-            "productMetaCategory",
-            currentProduct.category
-        );
-
-
-        setText(
-            "productCode",
-            currentProduct.code
-        );
-
-
-        setText(
-            "breadcrumbProduct",
-            currentProduct.title
-        );
-
-
-        /* -----------------------------------------------------
-           BREADCRUMB
-        ----------------------------------------------------- */
-
-        const category =
-            String(
-                currentProduct.category || ""
-            ).toLowerCase();
-
-
-        const categoryLink =
-            $("breadcrumbCategoryLink");
-
-
-        if (categoryLink) {
-
-            categoryLink.textContent =
-                currentProduct.category + "s";
-
-            categoryLink.href =
-                "collections/collections.html?category=" +
-                encodeURIComponent(category);
-
-        }
-
-
-        /* -----------------------------------------------------
-           DESCRIPTION
-        ----------------------------------------------------- */
-
-        const description =
-            $("productDescription");
-
-
-        if (description) {
-
-            description.innerHTML =
-
-                "Discover the refined charm of ShriVatsaDarbar. " +
-
-                "This beautifully curated " +
-
-                escapeHtml(category) +
-
-                " has been selected for its graceful character, " +
-
-                "refined detailing and timeless appeal." +
-
-                "<br><br>" +
-
-                escapeHtml(
-                    currentProduct.subtitle || ""
+            const image =
+                document.createElement(
+                    "img"
                 );
 
-        }
+
+            image.src =
+                src;
 
 
-        /* -----------------------------------------------------
-           SEO
-        ----------------------------------------------------- */
-
-        const currentUrl =
-            window.location.href;
-
-
-        const metaDescription =
-            $("metaDescription");
-
-        if (metaDescription) {
-
-            metaDescription.content =
-                currentProduct.subtitle ||
-                "Discover premium ethnic wear curated by ShriVatsaDarbar.";
-
-        }
-
-
-        const ogTitle =
-            $("ogTitle");
-
-        if (ogTitle) {
-
-            ogTitle.content =
+            image.alt =
                 currentProduct.title +
-                " | ShriVatsaDarbar";
+                " view " +
+                (index + 1);
 
-        }
 
+            image.loading =
+                "lazy";
 
-        const ogDescription =
-            $("ogDescription");
 
-        if (ogDescription) {
+            image.onerror =
+                function () {
 
-            ogDescription.content =
-                currentProduct.subtitle ||
-                "";
+                    this.onerror = null;
 
-        }
+                    this.style.visibility =
+                        "hidden";
 
+                };
 
-        const canonical =
-            $("canonicalUrl");
 
-        if (canonical) {
-            canonical.href = currentUrl;
-        }
-
-
-        const ogUrl =
-            $("ogUrl");
-
-        if (ogUrl) {
-            ogUrl.content = currentUrl;
-        }
-
-
-        /* -----------------------------------------------------
-           RESET
-        ----------------------------------------------------- */
-
-        currentGalleryIndex = 0;
-
-        quantity = 1;
-
-        updateQuantityDisplay();
-
-        renderGallery();
-
-    }
-
-
-    /* =========================================================
-       PRODUCT ERROR
-    ========================================================== */
-
-    function showProductError() {
-
-        const page =
-            $("productPage");
-
-        const error =
-            $("productError");
-
-
-        if (page) {
-            page.style.display = "none";
-        }
-
-
-        if (error) {
-            error.style.display = "block";
-        }
-
-    }
-
-
-    /* =========================================================
-       GALLERY
-    ========================================================== */
-
-    function renderGallery() {
-
-        if (
-            !currentProduct ||
-            !Array.isArray(currentProduct.images) ||
-            !currentProduct.images.length
-        ) {
-            return;
-        }
-
-
-        const images =
-            currentProduct.images;
-
-
-        if (
-            currentGalleryIndex < 0
-        ) {
-            currentGalleryIndex =
-                images.length - 1;
-        }
-
-
-        if (
-            currentGalleryIndex >= images.length
-        ) {
-            currentGalleryIndex = 0;
-        }
-
-
-        const mainImage =
-            $("productImage");
-
-
-        if (!mainImage) {
-            return;
-        }
-
-
-        mainImage.style.opacity = "0";
-
-
-        const newImage =
-            new Image();
-
-
-        newImage.onload =
-            function () {
-
-                mainImage.src =
-                    images[currentGalleryIndex];
-
-                mainImage.alt =
-                    currentProduct.title +
-                    " — ShriVatsaDarbar";
-
-                mainImage.style.opacity = "1";
-
-            };
-
-
-        newImage.onerror =
-            function () {
-
-                mainImage.src =
-                    images[currentGalleryIndex];
-
-                mainImage.alt =
-                    currentProduct.title || "Product";
-
-                mainImage.style.opacity = "1";
-
-            };
-
-
-        newImage.src =
-            images[currentGalleryIndex];
-
-
-        renderThumbnails();
-
-    }
-
-
-    /* =========================================================
-       THUMBNAILS
-    ========================================================== */
-
-    function renderThumbnails() {
-
-        const container =
-            $("productThumbnails");
-
-
-        if (
-            !container ||
-            !currentProduct
-        ) {
-            return;
-        }
-
-
-        container.innerHTML = "";
-
-
-        const labels = [
-            "Lifestyle",
-            "Product",
-            "Detail"
-        ];
-
-
-        currentProduct.images.forEach(
-            function (image, index) {
-
-                const button =
-                    document.createElement("button");
-
-
-                button.type = "button";
-
-                button.className =
-                    "svd-product-thumbnail" +
-                    (
-                        index === currentGalleryIndex
-                            ? " active"
-                            : ""
-                    );
-
-
-                button.setAttribute(
-                    "aria-label",
-                    "View " +
-                    (
-                        labels[index] ||
-                        "Image " + (index + 1)
-                    )
+            const label =
+                document.createElement(
+                    "span"
                 );
 
 
-                const img =
-                    document.createElement("img");
+            label.className =
+                "product-thumbnail-label";
 
 
-                img.src = image;
-
-                img.alt =
-                    currentProduct.title +
-                    " " +
-                    (
-                        labels[index] ||
-                        "image"
-                    );
-
-
-                img.loading =
-                    index === 0
-                        ? "eager"
-                        : "lazy";
-
-
-                const label =
-                    document.createElement("span");
-
-
-                label.className =
-                    "svd-thumbnail-label";
-
+            if (index === 0) {
 
                 label.textContent =
-                    labels[index] ||
-                    "Image " + (index + 1);
-
-
-                button.appendChild(img);
-
-                button.appendChild(label);
-
-
-                button.addEventListener(
-                    "click",
-                    function () {
-
-                        currentGalleryIndex =
-                            index;
-
-                        renderGallery();
-
-                    }
-                );
-
-
-                container.appendChild(button);
+                    "Lifestyle";
 
             }
-        );
 
-    }
+            else if (index === 1) {
 
+                label.textContent =
+                    "View";
 
-    /* =========================================================
-       GALLERY NAVIGATION
-    ========================================================== */
+            }
 
-    function nextImage() {
+            else {
 
-        if (
-            !currentProduct ||
-            !currentProduct.images.length
-        ) {
-            return;
-        }
-
-
-        currentGalleryIndex++;
-
-        if (
-            currentGalleryIndex >=
-            currentProduct.images.length
-        ) {
-            currentGalleryIndex = 0;
-        }
-
-
-        renderGallery();
-
-    }
-
-
-    function previousImage() {
-
-        if (
-            !currentProduct ||
-            !currentProduct.images.length
-        ) {
-            return;
-        }
-
-
-        currentGalleryIndex--;
-
-        if (
-            currentGalleryIndex < 0
-        ) {
-            currentGalleryIndex =
-                currentProduct.images.length - 1;
-        }
-
-
-        renderGallery();
-
-    }
-
-
-    /* =========================================================
-       QUANTITY
-    ========================================================== */
-
-    function updateQuantityDisplay() {
-
-        setText(
-            "quantityValue",
-            quantity
-        );
-
-    }
-
-
-    function increaseQuantity() {
-
-        quantity =
-            Math.min(
-                quantity + 1,
-                99
-            );
-
-        updateQuantityDisplay();
-
-    }
-
-
-    function decreaseQuantity() {
-
-        quantity =
-            Math.max(
-                quantity - 1,
-                1
-            );
-
-        updateQuantityDisplay();
-
-    }
-
-
-    function resetQuantity() {
-
-        quantity = 1;
-
-        updateQuantityDisplay();
-
-    }
-
-
-    /* =========================================================
-       CART STORAGE
-    ========================================================== */
-
-    function loadCart() {
-
-        try {
-
-            const stored =
-                localStorage.getItem(
-                    CART_KEY
-                );
-
-
-            if (!stored) {
-
-                cart = [];
-
-                return;
+                label.textContent =
+                    "Detail";
 
             }
 
 
-            const parsed =
-                JSON.parse(stored);
-
-
-            cart =
-                Array.isArray(parsed)
-                    ? parsed
-                    : [];
-
-        }
-
-        catch (error) {
-
-            cart = [];
-
-        }
-
-    }
-
-
-    function saveCart() {
-
-        try {
-
-            localStorage.setItem(
-                CART_KEY,
-                JSON.stringify(cart)
+            button.appendChild(
+                image
             );
 
-        }
 
-        catch (error) {
-
-            console.warn(
-                "Unable to save cart.",
-                error
+            button.appendChild(
+                label
             );
 
-        }
 
-    }
+            button.addEventListener(
+                "click",
+                function () {
 
+                    currentGalleryIndex =
+                        index;
 
-    /* =========================================================
-       CART COUNT
-    ========================================================== */
-
-    function getCartItemCount() {
-
-        return cart.reduce(
-            function (total, item) {
-
-                return total +
-                    Number(item.quantity || 0);
-
-            },
-            0
-        );
-
-    }
-
-
-    function updateBagCount() {
-
-        const count =
-            $("bagCount");
-
-
-        if (!count) {
-            return;
-        }
-
-
-        count.textContent =
-            getCartItemCount();
-
-    }
-
-
-    /* =========================================================
-       ADD TO CART
-    ========================================================== */
-
-    function addCurrentProductToCart() {
-
-        if (!currentProduct) {
-            return;
-        }
-
-
-        const existing =
-            cart.find(
-                function (item) {
-
-                    return item.id ===
-                        currentProductKey;
+                    renderGallery();
 
                 }
             );
 
 
-        if (existing) {
+            thumbnails.appendChild(
+                button
+            );
 
-            existing.quantity =
-                Number(existing.quantity || 0) +
-                quantity;
+        }
+    );
+
+}
+
+
+/* =========================================================
+   GALLERY NAVIGATION
+========================================================= */
+
+function moveGallery(direction) {
+
+    if (!currentProduct) {
+
+        return;
+
+    }
+
+
+    const count =
+        currentProduct.images.length;
+
+
+    currentGalleryIndex =
+        (
+            currentGalleryIndex +
+            direction +
+            count
+        ) % count;
+
+
+    renderGallery();
+
+}
+
+
+document.getElementById(
+    "galleryPrev"
+).addEventListener(
+    "click",
+    function () {
+
+        moveGallery(-1);
+
+    }
+);
+
+
+document.getElementById(
+    "galleryNext"
+).addEventListener(
+    "click",
+    function () {
+
+        moveGallery(1);
+
+    }
+);
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+function updateQuantityDisplay() {
+
+    document.getElementById(
+        "quantityValue"
+    ).textContent =
+        quantity;
+
+}
+
+
+document.getElementById(
+    "quantityMinus"
+).addEventListener(
+    "click",
+    function () {
+
+        if (quantity > 1) {
+
+            quantity--;
+
+            updateQuantityDisplay();
 
         }
 
-        else {
+    }
+);
 
-            cart.push({
 
-                id:
-                    currentProductKey,
+document.getElementById(
+    "quantityPlus"
+).addEventListener(
+    "click",
+    function () {
+
+        if (quantity < 99) {
+
+            quantity++;
+
+            updateQuantityDisplay();
+
+        }
+
+    }
+);
+
+
+document.getElementById(
+    "quantityReset"
+).addEventListener(
+    "click",
+    function () {
+
+        quantity = 1;
+
+        updateQuantityDisplay();
+
+    }
+);
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+const CART_STORAGE_KEY =
+    "shrivatsaDarbarFashionCart";
+
+
+let cart = [];
+
+
+try {
+
+    cart =
+        JSON.parse(
+            localStorage.getItem(
+                CART_STORAGE_KEY
+            )
+        ) || [];
+
+}
+
+catch (error) {
+
+    cart = [];
+
+}
+
+
+/* =========================================================
+   SAVE CART
+========================================================= */
+
+function saveCart() {
+
+    localStorage.setItem(
+        CART_STORAGE_KEY,
+        JSON.stringify(cart)
+    );
+
+}
+
+
+/* =========================================================
+   CART COUNT
+========================================================= */
+
+function getCartItemCount() {
+
+    return cart.reduce(
+        function (total, item) {
+
+            return total +
+                Number(
+                    item.quantity || 0
+                );
+
+        },
+        0
+    );
+
+}
+
+
+function updateCartCount() {
+
+    const count =
+        getCartItemCount();
+
+
+    document.getElementById(
+        "bagCount"
+    ).textContent =
+        count > 99
+            ? "99+"
+            : count;
+
+}
+
+
+/* =========================================================
+   ADD PRODUCT TO CART
+========================================================= */
+
+function addCurrentProductToCart() {
+
+    if (
+        !currentProduct ||
+        !currentProductKey
+    ) {
+
+        return;
+
+    }
+
+
+    const existing =
+        cart.find(
+            function (item) {
+
+                return item.id ===
+                    currentProductKey;
+
+            }
+        );
+
+
+    if (existing) {
+
+        existing.quantity +=
+            quantity;
+
+    }
+
+    else {
+
+        cart.push({
+
+            id:
+                currentProductKey,
+
+            title:
+                currentProduct.title,
+
+            code:
+                currentProduct.code,
+
+            category:
+                currentProduct.category,
+
+            image:
+                currentProduct.images[0],
+
+            quantity:
+                quantity
+
+        });
+
+    }
+
+
+    saveCart();
+
+    updateCartCount();
+
+    renderCart();
+
+    openCart();
+
+
+    quantity = 1;
+
+    updateQuantityDisplay();
+
+
+    showToast(
+        "Product added to your collection"
+    );
+
+}
+
+
+document.getElementById(
+    "addToCartButton"
+).addEventListener(
+    "click",
+    addCurrentProductToCart
+);
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHtml(value) {
+
+    return String(value || "")
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================================================
+   RENDER CART
+========================================================= */
+
+function renderCart() {
+
+    const body =
+        document.getElementById(
+            "cartBody"
+        );
+
+
+    const footer =
+        document.getElementById(
+            "cartFooter"
+        );
+
+
+    const total =
+        document.getElementById(
+            "cartTotalItems"
+        );
+
+
+    total.textContent =
+        getCartItemCount();
+
+
+    if (!cart.length) {
+
+        body.innerHTML = `
+
+            <div class="cart-empty">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <strong>
+                    Your collection is empty
+                </strong>
+
+                <span>
+                    Add beautiful pieces to your collection.
+                </span>
+
+            </div>
+
+        `;
+
+
+        footer.style.display =
+            "none";
+
+
+        return;
+
+    }
+
+
+    footer.style.display =
+        "block";
+
+
+    body.innerHTML =
+        "";
+
+
+    cart.forEach(
+        function (item) {
+
+            const article =
+                document.createElement(
+                    "article"
+                );
+
+
+            article.className =
+                "cart-item";
+
+
+            article.innerHTML = `
+
+                <img
+                    class="cart-item-image"
+                    src="${escapeHtml(item.image)}"
+                    alt="${escapeHtml(item.title)}"
+                >
+
+                <div class="cart-item-details">
+
+                    <h3>
+                        ${escapeHtml(item.title)}
+                    </h3>
+
+                    <div class="cart-item-code">
+                        ${escapeHtml(item.code)}
+                    </div>
+
+                    <div class="cart-item-controls">
+
+                        <button
+                            class="cart-qty-button"
+                            type="button"
+                            data-action="minus"
+                            data-id="${escapeHtml(item.id)}">
+
+                            −
+
+                        </button>
+
+                        <span class="cart-qty-value">
+
+                            ${item.quantity}
+
+                        </span>
+
+                        <button
+                            class="cart-qty-button"
+                            type="button"
+                            data-action="plus"
+                            data-id="${escapeHtml(item.id)}">
+
+                            +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="cart-remove"
+                    type="button"
+                    data-remove="${escapeHtml(item.id)}"
+                    aria-label="Remove item">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                </button>
+
+            `;
+
+
+            body.appendChild(
+                article
+            );
+
+        }
+    );
+
+
+    body.querySelectorAll(
+        "[data-action]"
+    ).forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const id =
+                        this.dataset.id;
+
+
+                    const change =
+                        this.dataset.action ===
+                        "plus"
+                            ? 1
+                            : -1;
+
+
+                    const item =
+                        cart.find(
+                            function (product) {
+
+                                return product.id ===
+                                    id;
+
+                            }
+                        );
+
+
+                    if (!item) {
+
+                        return;
+
+                    }
+
+
+                    item.quantity +=
+                        change;
+
+
+                    if (
+                        item.quantity <= 0
+                    ) {
+
+                        cart =
+                            cart.filter(
+                                function (product) {
+
+                                    return product.id !==
+                                        id;
+
+                                }
+                            );
+
+                    }
+
+
+                    saveCart();
+
+                    updateCartCount();
+
+                    renderCart();
+
+                }
+            );
+
+        }
+    );
+
+
+    body.querySelectorAll(
+        "[data-remove]"
+    ).forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const id =
+                        this.dataset.remove;
+
+
+                    cart =
+                        cart.filter(
+                            function (item) {
+
+                                return item.id !==
+                                    id;
+
+                            }
+                        );
+
+
+                    saveCart();
+
+                    updateCartCount();
+
+                    renderCart();
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CART DRAWER
+========================================================= */
+
+function openCart() {
+
+    document.getElementById(
+        "cartDrawer"
+    ).classList.add(
+        "active"
+    );
+
+
+    document.getElementById(
+        "cartOverlay"
+    ).classList.add(
+        "active"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+
+    renderCart();
+
+}
+
+
+function closeCart() {
+
+    document.getElementById(
+        "cartDrawer"
+    ).classList.remove(
+        "active"
+    );
+
+
+    document.getElementById(
+        "cartOverlay"
+    ).classList.remove(
+        "active"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+document.getElementById(
+    "shoppingBagButton"
+).addEventListener(
+    "click",
+    openCart
+);
+
+
+document.getElementById(
+    "cartClose"
+).addEventListener(
+    "click",
+    closeCart
+);
+
+
+document.getElementById(
+    "cartOverlay"
+).addEventListener(
+    "click",
+    closeCart
+);
+
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+            closeCart();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CLEAR CART
+========================================================= */
+
+document.getElementById(
+    "cartClear"
+).addEventListener(
+    "click",
+    function () {
+
+        if (!cart.length) {
+
+            return;
+
+        }
+
+
+        cart = [];
+
+
+        saveCart();
+
+        updateCartCount();
+
+        renderCart();
+
+
+        showToast(
+            "Your collection has been cleared"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+function buildWhatsAppUrl(items) {
+
+    let message =
+        "Hello ShriVatsaDarbar,\n\n";
+
+
+    message +=
+        "I would like to enquire about the following products:\n\n";
+
+
+    items.forEach(
+        function (item, index) {
+
+            message +=
+                (index + 1) +
+                ". " +
+                item.title +
+                " (" +
+                item.code +
+                ") × " +
+                item.quantity +
+                "\n";
+
+        }
+    );
+
+
+    message +=
+        "\nPlease share the price, availability, size options and final details.\n\nThank you.";
+
+
+    return (
+        "https://wa.me/918826196544?text=" +
+        encodeURIComponent(message)
+    );
+
+}
+
+
+document.getElementById(
+    "whatsappProductButton"
+).addEventListener(
+    "click",
+    function () {
+
+        if (!currentProduct) {
+
+            return;
+
+        }
+
+
+        const item = [
+
+            {
 
                 title:
                     currentProduct.title,
@@ -2890,443 +3427,34 @@
                 code:
                     currentProduct.code,
 
-                category:
-                    currentProduct.category,
-
-                image:
-                    currentProduct.images &&
-                    currentProduct.images[1]
-                        ? currentProduct.images[1]
-                        : currentProduct.images[0],
-
                 quantity:
                     quantity
 
-            });
-
-        }
-
-
-        saveCart();
-
-        updateBagCount();
-
-        renderCart();
-
-
-        showToast(
-            quantity +
-            " × " +
-            currentProduct.title +
-            " added to your collection."
-        );
-
-
-        openCart();
-
-    }
-
-
-    /* =========================================================
-       CART DRAWER
-    ========================================================== */
-
-    function openCart() {
-
-        const drawer =
-            $("cartDrawer");
-
-        const overlay =
-            $("cartOverlay");
-
-
-        if (drawer) {
-            drawer.classList.add("open");
-        }
-
-
-        if (overlay) {
-            overlay.classList.add("open");
-        }
-
-
-        document.body.classList.add(
-            "svd-cart-open"
-        );
-
-    }
-
-
-    function closeCart() {
-
-        const drawer =
-            $("cartDrawer");
-
-        const overlay =
-            $("cartOverlay");
-
-
-        if (drawer) {
-            drawer.classList.remove("open");
-        }
-
-
-        if (overlay) {
-            overlay.classList.remove("open");
-        }
-
-
-        document.body.classList.remove(
-            "svd-cart-open"
-        );
-
-    }
-
-
-    /* =========================================================
-       RENDER CART
-    ========================================================== */
-
-    function renderCart() {
-
-        const body =
-            $("cartBody");
-
-
-        const totalItems =
-            $("cartTotalItems");
-
-
-        if (totalItems) {
-
-            totalItems.textContent =
-                getCartItemCount();
-
-        }
-
-
-        if (!body) {
-            return;
-        }
-
-
-        if (!cart.length) {
-
-            body.innerHTML =
-
-                '<div class="svd-empty-cart">' +
-
-                    '<i class="fa-solid fa-bag-shopping"></i>' +
-
-                    '<h3>Your collection is empty</h3>' +
-
-                    '<p>' +
-
-                        'Add pieces you love and enquire ' +
-                        'with ShriVatsaDarbar on WhatsApp.' +
-
-                    '</p>' +
-
-                '</div>';
-
-            return;
-
-        }
-
-
-        body.innerHTML = "";
-
-
-        cart.forEach(
-            function (item, index) {
-
-                const quantityValue =
-                    Number(item.quantity || 1);
-
-
-                const wrapper =
-                    document.createElement("div");
-
-
-                wrapper.className =
-                    "svd-cart-item";
-
-
-                wrapper.innerHTML =
-
-                    '<img class="svd-cart-item-image" ' +
-
-                        'src="' +
-                        escapeHtml(item.image) +
-                        '" ' +
-
-                        'alt="' +
-                        escapeHtml(item.title) +
-                        '">' +
-
-
-                    '<div class="svd-cart-item-info">' +
-
-                        '<h3 class="svd-cart-item-title">' +
-
-                            escapeHtml(item.title) +
-
-                        '</h3>' +
-
-
-                        '<p class="svd-cart-item-code">' +
-
-                            escapeHtml(item.code) +
-
-                        '</p>' +
-
-
-                        '<div class="svd-cart-item-quantity">' +
-
-                            '<button type="button" ' +
-                            'data-cart-action="decrease" ' +
-                            'data-cart-index="' +
-                            index +
-                            '" ' +
-                            'aria-label="Decrease quantity">' +
-
-                                '−' +
-
-                            '</button>' +
-
-
-                            '<span>' +
-
-                                quantityValue +
-
-                            '</span>' +
-
-
-                            '<button type="button" ' +
-                            'data-cart-action="increase" ' +
-                            'data-cart-index="' +
-                            index +
-                            '" ' +
-                            'aria-label="Increase quantity">' +
-
-                                '+' +
-
-                            '</button>' +
-
-                        '</div>' +
-
-                    '</div>' +
-
-
-                    '<button class="svd-cart-item-remove" ' +
-                    'type="button" ' +
-                    'data-cart-action="remove" ' +
-                    'data-cart-index="' +
-                    index +
-                    '" ' +
-                    'aria-label="Remove ' +
-                    escapeHtml(item.title) +
-                    '">' +
-
-                        '<i class="fa-solid fa-trash-can"></i>' +
-
-                    '</button>';
-
-
-                body.appendChild(wrapper);
-
-            }
-        );
-
-    }
-
-
-    /* =========================================================
-       CART ACTIONS
-    ========================================================== */
-
-    function handleCartAction(event) {
-
-        const button =
-            event.target.closest(
-                "[data-cart-action]"
-            );
-
-
-        if (!button) {
-            return;
-        }
-
-
-        const action =
-            button.getAttribute(
-                "data-cart-action"
-            );
-
-
-        const index =
-            Number(
-                button.getAttribute(
-                    "data-cart-index"
-                )
-            );
-
-
-        if (
-            Number.isNaN(index) ||
-            !cart[index]
-        ) {
-            return;
-        }
-
-
-        if (
-            action === "increase"
-        ) {
-
-            cart[index].quantity =
-                Math.min(
-                    Number(cart[index].quantity || 1) + 1,
-                    99
-                );
-
-        }
-
-
-        if (
-            action === "decrease"
-        ) {
-
-            cart[index].quantity =
-                Number(cart[index].quantity || 1) - 1;
-
-
-            if (
-                cart[index].quantity <= 0
-            ) {
-
-                cart.splice(index, 1);
-
             }
 
-        }
-
-
-        if (
-            action === "remove"
-        ) {
-
-            cart.splice(index, 1);
-
-        }
-
-
-        saveCart();
-
-        updateBagCount();
-
-        renderCart();
-
-    }
-
-
-    /* =========================================================
-       CLEAR CART
-    ========================================================== */
-
-    function clearCart() {
-
-        if (!cart.length) {
-            return;
-        }
-
-
-        cart = [];
-
-        saveCart();
-
-        updateBagCount();
-
-        renderCart();
-
-        showToast(
-            "Your collection has been cleared."
-        );
-
-    }
-
-
-    /* =========================================================
-       WHATSAPP — PRODUCT
-    ========================================================== */
-
-    function enquireCurrentProduct() {
-
-        if (!currentProduct) {
-            return;
-        }
-
-
-        const message =
-
-            "Hello ShriVatsaDarbar,%0A%0A" +
-
-            "I am interested in this product:%0A%0A" +
-
-            "Product: " +
-            encodeURIComponent(
-                currentProduct.title
-            ) +
-
-            "%0A" +
-
-            "Product Code: " +
-            encodeURIComponent(
-                currentProduct.code
-            ) +
-
-            "%0A" +
-
-            "Category: " +
-            encodeURIComponent(
-                currentProduct.category
-            ) +
-
-            "%0A" +
-
-            "Quantity: " +
-            quantity +
-
-            "%0A%0A" +
-
-            "Please share the price, availability, " +
-            "size/options and complete product details.%0A%0A" +
-
-            "Thank you.";
+        ];
 
 
         window.open(
-            "https://wa.me/" +
-            WHATSAPP_NUMBER +
-            "?text=" +
-            message,
+            buildWhatsAppUrl(item),
             "_blank",
             "noopener"
         );
 
     }
+);
 
 
-    /* =========================================================
-       WHATSAPP — CART
-    ========================================================== */
-
-    function enquireCart() {
+document.getElementById(
+    "cartWhatsapp"
+).addEventListener(
+    "click",
+    function () {
 
         if (!cart.length) {
 
             showToast(
-                "Your collection is empty."
+                "Your collection is empty"
             );
 
             return;
@@ -3334,575 +3462,75 @@
         }
 
 
-        let message =
-            "Hello ShriVatsaDarbar,%0A%0A" +
-
-            "I would like to enquire about " +
-            "the following products:%0A%0A";
-
-
-        cart.forEach(
-            function (item, index) {
-
-                message +=
-
-                    (index + 1) +
-                    ". " +
-
-                    encodeURIComponent(
-                        item.title
-                    ) +
-
-                    " — " +
-
-                    encodeURIComponent(
-                        item.code
-                    ) +
-
-                    " — Qty: " +
-
-                    item.quantity +
-
-                    "%0A";
-
-            }
-        );
-
-
-        message +=
-
-            "%0APlease share the price, " +
-            "availability and complete details " +
-            "for these products.%0A%0A" +
-
-            "Thank you.";
-
-
         window.open(
-            "https://wa.me/" +
-            WHATSAPP_NUMBER +
-            "?text=" +
-            message,
+            buildWhatsAppUrl(cart),
             "_blank",
             "noopener"
         );
 
     }
+);
 
 
-    /* =========================================================
-       SEARCH
-       
-       Provides product-aware search from this page.
-    ========================================================== */
+/* =========================================================
+   TOAST
+========================================================= */
 
-    function initProductSearch() {
+function showToast(message) {
 
-        const input =
-            $("siteSearch");
-
-
-        if (!input) {
-            return;
-        }
-
-
-        input.addEventListener(
-            "keydown",
-            function (event) {
-
-                if (
-                    event.key !== "Enter"
-                ) {
-                    return;
-                }
-
-
-                const query =
-                    input.value
-                        .trim()
-                        .toLowerCase();
-
-
-                if (!query) {
-                    return;
-                }
-
-
-                if (
-                    !window.SVD_PRODUCT_LIST
-                ) {
-                    return;
-                }
-
-
-                const match =
-                    window.SVD_PRODUCT_LIST.find(
-                        function (product) {
-
-                            return (
-
-                                String(
-                                    product.title || ""
-                                ).toLowerCase().includes(query)
-
-                                ||
-
-                                String(
-                                    product.code || ""
-                                ).toLowerCase().includes(query)
-
-                                ||
-
-                                String(
-                                    product.category || ""
-                                ).toLowerCase().includes(query)
-
-                            );
-
-                        }
-                    );
-
-
-                if (match) {
-
-                    window.location.href =
-                        "product.html?product=" +
-                        encodeURIComponent(
-                            match.id
-                        );
-
-                }
-
-                else {
-
-                    window.location.href =
-                        "collections/collections.html";
-
-                }
-
-            }
+    const toast =
+        document.getElementById(
+            "siteToast"
         );
 
-    }
+
+    toast.textContent =
+        message;
 
 
-    /* =========================================================
-       KEYBOARD GALLERY
-    ========================================================== */
-
-    function initKeyboardGallery() {
-
-        document.addEventListener(
-            "keydown",
-            function (event) {
-
-                if (
-                    event.target.matches(
-                        "input, textarea, select"
-                    )
-                ) {
-                    return;
-                }
+    toast.classList.add(
+        "active"
+    );
 
 
-                if (
-                    event.key === "ArrowLeft"
-                ) {
-
-                    previousImage();
-
-                }
+    clearTimeout(
+        window.shrivatsaToastTimer
+    );
 
 
-                if (
-                    event.key === "ArrowRight"
-                ) {
+    window.shrivatsaToastTimer =
+        setTimeout(
+            function () {
 
-                    nextImage();
-
-                }
-
-
-                if (
-                    event.key === "Escape"
-                ) {
-
-                    closeCart();
-
-                }
-
-            }
-        );
-
-    }
-
-
-    /* =========================================================
-       TOUCH GALLERY
-    ========================================================== */
-
-    function initTouchGallery() {
-
-        const gallery =
-            document.querySelector(
-                ".svd-product-main-image"
-            );
-
-
-        if (!gallery) {
-            return;
-        }
-
-
-        let startX = 0;
-
-        let startY = 0;
-
-
-        gallery.addEventListener(
-            "touchstart",
-            function (event) {
-
-                if (
-                    !event.touches ||
-                    !event.touches.length
-                ) {
-                    return;
-                }
-
-
-                startX =
-                    event.touches[0].clientX;
-
-                startY =
-                    event.touches[0].clientY;
+                toast.classList.remove(
+                    "active"
+                );
 
             },
-            { passive: true }
+            2200
         );
 
+}
 
-        gallery.addEventListener(
-            "touchend",
-            function (event) {
 
-                if (
-                    !event.changedTouches ||
-                    !event.changedTouches.length
-                ) {
-                    return;
-                }
+/* =========================================================
+   INITIALISATION
+========================================================= */
 
+loadProduct();
 
-                const endX =
-                    event.changedTouches[0].clientX;
+updateCartCount();
 
-                const endY =
-                    event.changedTouches[0].clientY;
-
-
-                const deltaX =
-                    endX - startX;
-
-                const deltaY =
-                    endY - startY;
-
-
-                if (
-                    Math.abs(deltaX) <
-                    45
-                ) {
-                    return;
-                }
-
-
-                if (
-                    Math.abs(deltaX) <=
-                    Math.abs(deltaY)
-                ) {
-                    return;
-                }
-
-
-                if (
-                    deltaX < 0
-                ) {
-
-                    nextImage();
-
-                }
-
-                else {
-
-                    previousImage();
-
-                }
-
-            },
-            { passive: true }
-        );
-
-    }
-
-
-    /* =========================================================
-       CART BUTTONS
-    ========================================================== */
-
-    function initCart() {
-
-        const bagButton =
-            $("shoppingBagButton");
-
-
-        if (bagButton) {
-
-            bagButton.addEventListener(
-                "click",
-                function () {
-
-                    renderCart();
-
-                    openCart();
-
-                }
-            );
-
-        }
-
-
-        const closeButton =
-            $("cartClose");
-
-
-        if (closeButton) {
-
-            closeButton.addEventListener(
-                "click",
-                closeCart
-            );
-
-        }
-
-
-        const overlay =
-            $("cartOverlay");
-
-
-        if (overlay) {
-
-            overlay.addEventListener(
-                "click",
-                closeCart
-            );
-
-        }
-
-
-        const clearButton =
-            $("cartClear");
-
-
-        if (clearButton) {
-
-            clearButton.addEventListener(
-                "click",
-                clearCart
-            );
-
-        }
-
-
-        const whatsappButton =
-            $("cartWhatsapp");
-
-
-        if (whatsappButton) {
-
-            whatsappButton.addEventListener(
-                "click",
-                enquireCart
-            );
-
-        }
-
-
-        const cartBody =
-            $("cartBody");
-
-
-        if (cartBody) {
-
-            cartBody.addEventListener(
-                "click",
-                handleCartAction
-            );
-
-        }
-
-
-        loadCart();
-
-        updateBagCount();
-
-        renderCart();
-
-    }
-
-
-    /* =========================================================
-       PRODUCT CONTROLS
-    ========================================================== */
-
-    function initProductControls() {
-
-        const previous =
-            $("galleryPrev");
-
-
-        const next =
-            $("galleryNext");
-
-
-        const minus =
-            $("quantityMinus");
-
-
-        const plus =
-            $("quantityPlus");
-
-
-        const reset =
-            $("quantityReset");
-
-
-        const add =
-            $("addToCartButton");
-
-
-        const whatsapp =
-            $("whatsappProductButton");
-
-
-        if (previous) {
-
-            previous.addEventListener(
-                "click",
-                previousImage
-            );
-
-        }
-
-
-        if (next) {
-
-            next.addEventListener(
-                "click",
-                nextImage
-            );
-
-        }
-
-
-        if (minus) {
-
-            minus.addEventListener(
-                "click",
-                decreaseQuantity
-            );
-
-        }
-
-
-        if (plus) {
-
-            plus.addEventListener(
-                "click",
-                increaseQuantity
-            );
-
-        }
-
-
-        if (reset) {
-
-            reset.addEventListener(
-                "click",
-                resetQuantity
-            );
-
-        }
-
-
-        if (add) {
-
-            add.addEventListener(
-                "click",
-                addCurrentProductToCart
-            );
-
-        }
-
-
-        if (whatsapp) {
-
-            whatsapp.addEventListener(
-                "click",
-                enquireCurrentProduct
-            );
-
-        }
-
-    }
-
-
-    /* =========================================================
-       INIT
-    ========================================================== */
-
-    function init() {
-
-        loadProduct();
-
-        initProductControls();
-
-        initCart();
-
-        initProductSearch();
-
-        initKeyboardGallery();
-
-        initTouchGallery();
-
-    }
-
-
-    /* =========================================================
-       START
-    ========================================================== */
-
-    if (
-        document.readyState === "loading"
-    ) {
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            init
-        );
-
-    }
-
-    else {
-
-        init();
-
-    }
-
-
-})();
+renderCart();
 
 </script>
+
+
+<!-- =========================================================
+     MAIN JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
 
 
 </body>
