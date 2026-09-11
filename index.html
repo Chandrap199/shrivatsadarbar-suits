@@ -74,6 +74,173 @@
     <link rel="stylesheet"
           href="styles.css">
 
+
+    <!-- =========================================================
+         HOMEPAGE ENHANCEMENTS
+         ---------------------------------------------------------
+         Only new functionality styling.
+         Existing site design remains controlled by styles.css.
+    ========================================================= -->
+
+    <style>
+
+        /* =====================================================
+           STAY CONNECTED
+        ===================================================== */
+
+        .stay-connected-section {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fbf7ef 0%,
+                    #fffdf9 50%,
+                    #f7efe2 100%
+                );
+            border-top: 1px solid rgba(180, 140, 70, 0.14);
+            border-bottom: 1px solid rgba(180, 140, 70, 0.14);
+        }
+
+        .stay-connected-handle {
+            margin: 4px 0 0;
+            color: #8f6722;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .stay-connected-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(5, minmax(0, 1fr));
+            gap: 18px;
+            max-width: 1050px;
+            margin: 38px auto 0;
+        }
+
+        .stay-connected-link {
+            min-height: 145px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            padding: 24px 15px;
+            border: 1px solid rgba(180, 140, 70, 0.20);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.78);
+            color: #4b0713;
+            text-decoration: none;
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .stay-connected-link:hover {
+            transform: translateY(-5px);
+            border-color: rgba(180, 140, 70, 0.55);
+            box-shadow: 0 12px 30px rgba(75, 7, 19, 0.10);
+        }
+
+        .stay-connected-link i {
+            font-size: 38px;
+            line-height: 1;
+            color: #9d742d;
+        }
+
+        .stay-connected-link span {
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .stay-connected-link small {
+            margin-top: -8px;
+            color: #756b62;
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           EMAIL UPDATE BOX
+        ===================================================== */
+
+        .email-update-note {
+            display: block;
+            margin-top: 8px;
+            color: #746b63;
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+
+        /* =====================================================
+           WISHLIST PREPARATION
+           -----------------------------------------------------
+           script.js will attach the actual shared functionality.
+        ===================================================== */
+
+        .product-wishlist.is-wishlisted i,
+        .icon-button.is-wishlisted i {
+            font-weight: 900;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .stay-connected-grid {
+                grid-template-columns:
+                    repeat(3, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .stay-connected-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                margin-top: 28px;
+            }
+
+            .stay-connected-link {
+                min-height: 125px;
+                padding: 18px 10px;
+                gap: 11px;
+            }
+
+            .stay-connected-link i {
+                font-size: 32px;
+            }
+
+            .stay-connected-link span {
+                font-size: 18px;
+            }
+
+            .stay-connected-link small {
+                font-size: 9px;
+            }
+
+            .stay-connected-link:last-child {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -92,7 +259,7 @@
 
             <i class="fa-solid fa-sparkles"></i>
 
-            FREE SHIPPING on Prepaid Orders
+            Premium Ethnic Wear
 
         </span>
 
@@ -108,7 +275,7 @@
 
             <i class="fa-solid fa-sparkles"></i>
 
-            Premium Quality Fabrics
+            Curated With Care
 
         </span>
 
@@ -124,7 +291,7 @@
 
             <i class="fa-solid fa-sparkles"></i>
 
-            Easy Returns & Exchanges
+            Sarees & Suits
 
         </span>
 
@@ -155,9 +322,7 @@
     <div class="header-container">
 
 
-        <!-- =====================================================
-             BRAND LOGO
-        ====================================================== -->
+        <!-- BRAND LOGO -->
 
         <a href="index.html"
            class="brand">
@@ -169,12 +334,11 @@
 
 
 
-        <!-- =====================================================
-             MOBILE MENU BUTTON
-        ====================================================== -->
+        <!-- MOBILE MENU -->
 
         <button class="mobile-menu-button"
                 id="mobileMenuButton"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false">
 
@@ -184,9 +348,7 @@
 
 
 
-        <!-- =====================================================
-             MAIN NAVIGATION
-        ====================================================== -->
+        <!-- MAIN NAVIGATION -->
 
         <nav class="main-navigation"
              id="mainNavigation">
@@ -244,9 +406,7 @@
 
 
 
-        <!-- =====================================================
-             HEADER ACTIONS
-        ====================================================== -->
+        <!-- HEADER ACTIONS -->
 
         <div class="header-actions">
 
@@ -255,6 +415,7 @@
 
             <button class="icon-button"
                     id="searchButton"
+                    type="button"
                     aria-label="Search">
 
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -266,8 +427,9 @@
             <!-- WISHLIST -->
 
             <button class="icon-button"
-                    aria-label="Wishlist"
-                    onclick="showComingSoon('Wishlist')">
+                    id="wishlistButton"
+                    type="button"
+                    aria-label="Open Wishlist">
 
                 <i class="fa-regular fa-heart"></i>
 
@@ -278,6 +440,7 @@
             <!-- ACCOUNT -->
 
             <button class="icon-button"
+                    type="button"
                     aria-label="Account"
                     onclick="showComingSoon('Account')">
 
@@ -290,8 +453,9 @@
             <!-- SHOPPING BAG -->
 
             <button class="icon-button bag-button"
-                    aria-label="Shopping bag"
-                    onclick="showComingSoon('Shopping Bag')">
+                    id="shoppingBagButton"
+                    type="button"
+                    aria-label="Shopping bag">
 
                 <i class="fa-solid fa-bag-shopping"></i>
 
@@ -321,6 +485,7 @@
 
     <button class="search-close"
             id="searchClose"
+            type="button"
             aria-label="Close search">
 
         <i class="fa-solid fa-xmark"></i>
@@ -725,6 +890,7 @@
 
         <button class="slider-arrow slider-prev"
                 id="sliderPrev"
+                type="button"
                 aria-label="Previous slide">
 
             <i class="fa-solid fa-chevron-left"></i>
@@ -737,6 +903,7 @@
 
         <button class="slider-arrow slider-next"
                 id="sliderNext"
+                type="button"
                 aria-label="Next slide">
 
             <i class="fa-solid fa-chevron-right"></i>
@@ -766,6 +933,7 @@
 
     <div class="container trust-grid">
 
+
         <div class="trust-item">
 
             <div class="trust-icon">
@@ -776,13 +944,14 @@
 
             <div>
 
-                <strong>Premium Quality Fabrics</strong>
+                <strong>Premium Quality</strong>
 
-                <span>Finest materials</span>
+                <span>Carefully selected fabrics</span>
 
             </div>
 
         </div>
+
 
 
         <div class="trust-item">
@@ -797,68 +966,72 @@
 
                 <strong>Elegant Designs</strong>
 
-                <span>Curated with love</span>
+                <span>Curated with care</span>
 
             </div>
 
         </div>
+
 
 
         <div class="trust-item">
 
             <div class="trust-icon">
 
-                <i class="fa-solid fa-lock"></i>
+                <i class="fa-brands fa-whatsapp"></i>
 
             </div>
 
             <div>
 
-                <strong>Secure Payments</strong>
+                <strong>Personal Assistance</strong>
 
-                <span>100% safe & secure</span>
+                <span>Order on WhatsApp</span>
 
             </div>
 
         </div>
+
 
 
         <div class="trust-item">
 
             <div class="trust-icon">
 
-                <i class="fa-solid fa-rotate-left"></i>
+                <i class="fa-solid fa-shield-heart"></i>
 
             </div>
 
             <div>
 
-                <strong>Easy Returns</strong>
+                <strong>Carefully Packed</strong>
 
-                <span>Hassle-free returns</span>
+                <span>Prepared with attention</span>
 
             </div>
 
         </div>
+
 
 
         <div class="trust-item">
 
             <div class="trust-icon">
 
-                <i class="fa-solid fa-truck-fast"></i>
+                <i class="fa-solid fa-heart"></i>
 
             </div>
 
             <div>
 
-                <strong>Fast Shipping</strong>
+                <strong>Customer First</strong>
 
-                <span>Delivered with care</span>
+                <span>Here to help you</span>
 
             </div>
 
         </div>
+
 
     </div>
 
@@ -874,6 +1047,7 @@
 
     <div class="container">
 
+
         <div class="section-heading">
 
             <p class="section-eyebrow">
@@ -882,11 +1056,13 @@
 
             </p>
 
+
             <h2>
 
                 Shop by Category
 
             </h2>
+
 
             <div class="heading-ornament">
 
@@ -1033,26 +1209,32 @@
 
 
 
-        <!-- PRODUCT GRID -->
-
         <div class="product-grid">
 
 
+            <!-- SAREE 001 -->
+
             <article class="product-card">
 
-                <a href="sarees.html"
+                <a href="product.html?product=saree-001"
                    class="product-image">
 
-                    <span class="product-badge">NEW</span>
+                    <span class="product-badge">
+
+                        NEW
+
+                    </span>
+
 
                     <button class="product-wishlist"
                             type="button"
-                            aria-label="Add to wishlist"
-                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+                            data-wishlist-product="saree-001"
+                            aria-label="Add Saree 001 to wishlist">
 
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/sarees/saree-001/sarees-01-lifestyle.webp"
                          alt="Premium Saree 001">
@@ -1062,9 +1244,19 @@
 
                 <div class="product-info">
 
-                    <p class="product-category">SAREE</p>
+                    <p class="product-category">
 
-                    <h3>Elegant Saree Collection</h3>
+                        SAREE
+
+                    </p>
+
+
+                    <h3>
+
+                        Elegant Saree Collection
+
+                    </h3>
+
 
                     <p class="product-price">
 
@@ -1078,21 +1270,29 @@
 
 
 
+            <!-- SUIT 001 -->
+
             <article class="product-card">
 
-                <a href="suits.html"
+                <a href="product.html?product=suit-001"
                    class="product-image">
 
-                    <span class="product-badge">NEW</span>
+                    <span class="product-badge">
+
+                        NEW
+
+                    </span>
+
 
                     <button class="product-wishlist"
                             type="button"
-                            aria-label="Add to wishlist"
-                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+                            data-wishlist-product="suit-001"
+                            aria-label="Add Suit 001 to wishlist">
 
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/suits/suit-001/suits-001-lifestyle.webp"
                          alt="Premium Suit 001">
@@ -1102,9 +1302,19 @@
 
                 <div class="product-info">
 
-                    <p class="product-category">SUIT</p>
+                    <p class="product-category">
 
-                    <h3>Elegant Suit Collection</h3>
+                        SUIT
+
+                    </p>
+
+
+                    <h3>
+
+                        Elegant Suit Collection
+
+                    </h3>
+
 
                     <p class="product-price">
 
@@ -1118,21 +1328,29 @@
 
 
 
+            <!-- SAREE 002 -->
+
             <article class="product-card">
 
-                <a href="sarees.html"
+                <a href="product.html?product=saree-002"
                    class="product-image">
 
-                    <span class="product-badge">NEW</span>
+                    <span class="product-badge">
+
+                        NEW
+
+                    </span>
+
 
                     <button class="product-wishlist"
                             type="button"
-                            aria-label="Add to wishlist"
-                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+                            data-wishlist-product="saree-002"
+                            aria-label="Add Saree 002 to wishlist">
 
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/sarees/saree-002/sarees-02-lifestyle.webp"
                          alt="Premium Saree 002">
@@ -1142,9 +1360,19 @@
 
                 <div class="product-info">
 
-                    <p class="product-category">SAREE</p>
+                    <p class="product-category">
 
-                    <h3>Signature Saree Collection</h3>
+                        SAREE
+
+                    </p>
+
+
+                    <h3>
+
+                        Signature Saree Collection
+
+                    </h3>
+
 
                     <p class="product-price">
 
@@ -1158,21 +1386,29 @@
 
 
 
+            <!-- SUIT 002 -->
+
             <article class="product-card">
 
-                <a href="suits.html"
+                <a href="product.html?product=suit-002"
                    class="product-image">
 
-                    <span class="product-badge">NEW</span>
+                    <span class="product-badge">
+
+                        NEW
+
+                    </span>
+
 
                     <button class="product-wishlist"
                             type="button"
-                            aria-label="Add to wishlist"
-                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+                            data-wishlist-product="suit-002"
+                            aria-label="Add Suit 002 to wishlist">
 
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/suits/suit-002/suits-002-lifestyle.webp"
                          alt="Premium Suit 002">
@@ -1182,9 +1418,19 @@
 
                 <div class="product-info">
 
-                    <p class="product-category">SUIT</p>
+                    <p class="product-category">
 
-                    <h3>Signature Suit Collection</h3>
+                        SUIT
+
+                    </p>
+
+
+                    <h3>
+
+                        Signature Suit Collection
+
+                    </h3>
+
 
                     <p class="product-price">
 
@@ -1198,21 +1444,29 @@
 
 
 
+            <!-- SAREE 003 -->
+
             <article class="product-card">
 
-                <a href="sarees.html"
+                <a href="product.html?product=saree-003"
                    class="product-image">
 
-                    <span class="product-badge">NEW</span>
+                    <span class="product-badge">
+
+                        NEW
+
+                    </span>
+
 
                     <button class="product-wishlist"
                             type="button"
-                            aria-label="Add to wishlist"
-                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+                            data-wishlist-product="saree-003"
+                            aria-label="Add Saree 003 to wishlist">
 
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/sarees/saree-003/sarees-03-lifestyle.webp"
                          alt="Premium Saree 003">
@@ -1222,9 +1476,19 @@
 
                 <div class="product-info">
 
-                    <p class="product-category">SAREE</p>
+                    <p class="product-category">
 
-                    <h3>Festive Saree Collection</h3>
+                        SAREE
+
+                    </p>
+
+
+                    <h3>
+
+                        Festive Saree Collection
+
+                    </h3>
+
 
                     <p class="product-price">
 
@@ -1238,21 +1502,29 @@
 
 
 
+            <!-- SUIT 003 -->
+
             <article class="product-card">
 
-                <a href="suits.html"
+                <a href="product.html?product=suit-003"
                    class="product-image">
 
-                    <span class="product-badge">NEW</span>
+                    <span class="product-badge">
+
+                        NEW
+
+                    </span>
+
 
                     <button class="product-wishlist"
                             type="button"
-                            aria-label="Add to wishlist"
-                            onclick="event.preventDefault(); showComingSoon('Wishlist')">
+                            data-wishlist-product="suit-003"
+                            aria-label="Add Suit 003 to wishlist">
 
                         <i class="fa-regular fa-heart"></i>
 
                     </button>
+
 
                     <img src="images/suits/suit-003/suits-003-lifestyle.webp"
                          alt="Premium Suit 003">
@@ -1262,9 +1534,19 @@
 
                 <div class="product-info">
 
-                    <p class="product-category">SUIT</p>
+                    <p class="product-category">
 
-                    <h3>Festive Suit Collection</h3>
+                        SUIT
+
+                    </p>
+
+
+                    <h3>
+
+                        Festive Suit Collection
+
+                    </h3>
+
 
                     <p class="product-price">
 
@@ -1302,7 +1584,12 @@
 
             <div class="campaign-content">
 
-                <p>FESTIVE COLLECTION</p>
+                <p>
+
+                    FESTIVE COLLECTION
+
+                </p>
+
 
                 <h2>
 
@@ -1315,6 +1602,7 @@
                     </span>
 
                 </h2>
+
 
                 <a href="new-arrivals.html"
                    class="button button-gold">
@@ -1350,7 +1638,13 @@
 
             </div>
 
-            <h3>Handpicked With Love</h3>
+
+            <h3>
+
+                Handpicked With Love
+
+            </h3>
+
 
             <p>
 
@@ -1371,7 +1665,13 @@
 
             </div>
 
-            <h3>Thoughtfully Curated</h3>
+
+            <h3>
+
+                Thoughtfully Curated
+
+            </h3>
+
 
             <p>
 
@@ -1392,7 +1692,13 @@
 
             </div>
 
-            <h3>Customer First</h3>
+
+            <h3>
+
+                Customer First
+
+            </h3>
+
 
             <p>
 
@@ -1413,7 +1719,13 @@
 
             </div>
 
-            <h3>Premium Quality</h3>
+
+            <h3>
+
+                Premium Quality
+
+            </h3>
+
 
             <p>
 
@@ -1448,17 +1760,20 @@
 
             </p>
 
+
             <h2>
 
                 Follow Us on Instagram
 
             </h2>
 
+
             <p class="instagram-handle">
 
                 @shrivatsadarbar
 
             </p>
+
 
             <div class="heading-ornament">
 
@@ -1476,52 +1791,72 @@
 
         <div class="instagram-grid">
 
-            <div>
+
+            <a href="https://www.instagram.com/shrivatsadarbar"
+               target="_blank"
+               rel="noopener"
+               aria-label="Visit ShriVatsaDarbar on Instagram">
 
                 <img src="images/sarees/saree-001/sarees-01-lifestyle.webp"
-                     alt="ShreevatsaDharwa Instagram fashion">
+                     alt="ShreevatsaDharwa saree">
 
-            </div>
+            </a>
 
 
-            <div>
+            <a href="https://www.instagram.com/shrivatsadarbar"
+               target="_blank"
+               rel="noopener"
+               aria-label="Visit ShriVatsaDarbar on Instagram">
 
                 <img src="images/suits/suit-001/suits-001-lifestyle.webp"
-                     alt="ShreevatsaDharwa Instagram suit">
+                     alt="ShreevatsaDharwa suit">
 
-            </div>
+            </a>
 
 
-            <div>
+            <a href="https://www.instagram.com/shrivatsadarbar"
+               target="_blank"
+               rel="noopener"
+               aria-label="Visit ShriVatsaDarbar on Instagram">
 
                 <img src="images/sarees/saree-002/sarees-02-lifestyle.webp"
-                     alt="ShreevatsaDharwa Instagram saree">
+                     alt="ShreevatsaDharwa saree collection">
 
-            </div>
+            </a>
 
 
-            <div>
+            <a href="https://www.instagram.com/shrivatsadarbar"
+               target="_blank"
+               rel="noopener"
+               aria-label="Visit ShriVatsaDarbar on Instagram">
 
                 <img src="images/suits/suit-002/suits-002-lifestyle.webp"
-                     alt="ShreevatsaDharwa Instagram suit">
+                     alt="ShreevatsaDharwa suit collection">
 
-            </div>
+            </a>
 
 
-            <div>
+            <a href="https://www.instagram.com/shrivatsadarbar"
+               target="_blank"
+               rel="noopener"
+               aria-label="Visit ShriVatsaDarbar on Instagram">
 
                 <img src="images/sarees/saree-003/sarees-03-lifestyle.webp"
-                     alt="ShreevatsaDharwa Instagram collection">
+                     alt="ShreevatsaDharwa saree edit">
 
-            </div>
+            </a>
 
 
-            <div>
+            <a href="https://www.instagram.com/shrivatsadarbar"
+               target="_blank"
+               rel="noopener"
+               aria-label="Visit ShriVatsaDarbar on Instagram">
 
                 <img src="images/suits/suit-003/suits-003-lifestyle.webp"
-                     alt="ShreevatsaDharwa Instagram collection">
+                     alt="ShreevatsaDharwa suit edit">
 
-            </div>
+            </a>
+
 
         </div>
 
@@ -1532,7 +1867,193 @@
 
 
 <!-- =========================================================
-     NEWSLETTER
+     STAY CONNECTED
+========================================================= -->
+
+<section class="stay-connected-section section-padding">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <p class="section-eyebrow">
+
+                STAY CONNECTED
+
+            </p>
+
+
+            <h2>
+
+                Follow ShriVatsaDarbar
+
+            </h2>
+
+
+            <p class="stay-connected-handle">
+
+                @shrivatsadarbar
+
+            </p>
+
+
+            <div class="heading-ornament">
+
+                <span></span>
+
+                <i class="fa-solid fa-diamond"></i>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stay-connected-grid">
+
+
+            <!-- INSTAGRAM -->
+
+            <a href="https://www.instagram.com/shrivatsadarbar"
+               class="stay-connected-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+                <span>
+
+                    Instagram
+
+                </span>
+
+                <small>
+
+                    Follow us
+
+                </small>
+
+            </a>
+
+
+
+            <!-- FACEBOOK -->
+
+            <a href="https://www.facebook.com/share/19o17fr2zR/"
+               class="stay-connected-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+                <span>
+
+                    Facebook
+
+                </span>
+
+                <small>
+
+                    Visit page
+
+                </small>
+
+            </a>
+
+
+
+            <!-- YOUTUBE -->
+
+            <a href="https://youtube.com/@shrivatsadarbar?si=XMA8aC8R2yVA4N_l"
+               class="stay-connected-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="YouTube">
+
+                <i class="fa-brands fa-youtube"></i>
+
+                <span>
+
+                    YouTube
+
+                </span>
+
+                <small>
+
+                    Watch us
+
+                </small>
+
+            </a>
+
+
+
+            <!-- PINTEREST -->
+
+            <a href="https://pin.it/378nhVA9c"
+               class="stay-connected-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Pinterest">
+
+                <i class="fa-brands fa-pinterest-p"></i>
+
+                <span>
+
+                    Pinterest
+
+                </span>
+
+                <small>
+
+                    Explore ideas
+
+                </small>
+
+            </a>
+
+
+
+            <!-- WHATSAPP -->
+
+            <a href="https://wa.me/918826196544"
+               class="stay-connected-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="WhatsApp">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span>
+
+                    WhatsApp
+
+                </span>
+
+                <small>
+
+                    Order & enquire
+
+                </small>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EMAIL UPDATES
 ========================================================= -->
 
 <section class="newsletter-section">
@@ -1552,7 +2073,12 @@
 
             <div class="newsletter-copy">
 
-                <p>STAY UPDATED</p>
+                <p>
+
+                    STAY UPDATED
+
+                </p>
+
 
                 <h2>
 
@@ -1560,24 +2086,36 @@
 
                 </h2>
 
+
                 <span>
 
-                    New arrivals, curated collections and
-                    special offers — delivered occasionally.
+                    Share your email with us for new arrivals,
+                    curated collections and special updates.
 
                 </span>
+
+
+                <small class="email-update-note">
+
+                    Your email will be sent to our team for
+                    update-list requests.
+
+                </small>
 
             </div>
 
 
 
             <form class="newsletter-form"
-                  onsubmit="handleNewsletter(event)">
+                  id="newsletterForm">
 
                 <input type="email"
                        id="newsletterEmail"
+                       name="email"
                        placeholder="Enter your email address"
+                       autocomplete="email"
                        required>
+
 
                 <button type="submit">
 
@@ -1592,6 +2130,7 @@
     </div>
 
 </section>
+
 
 
 </main>
