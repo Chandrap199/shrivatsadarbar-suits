@@ -1016,7 +1016,16 @@ window.SVD_PRODUCT_LIST = Object.keys(window.SVD_PRODUCTS).map(function (id) {
 
 
 window.getSVDProduct = function (productId) {
-    return window.SVD_PRODUCTS[productId] || null;
+    var product = window.SVD_PRODUCTS[productId];
+
+    if (!product) {
+        return null;
+    }
+
+    return Object.assign(
+        { id: productId },
+        product
+    );
 };
 
 
