@@ -2,30 +2,26 @@
    ShriVatsaDarbar Fashion
    SHARED SITE CONTROLLER
    ---------------------------------------------------------
-   Responsibilities:
-   - Master footer loading
-   - GitHub Pages path handling
+   Handles:
+   - GitHub Pages paths
+   - Master footer
    - Mobile navigation
-   - Search overlay
+   - Search
    - Hero slider
+   - Wishlist
+   - Newsletter email request
+   - Shared bag count
    - Toast notifications
-   - Shared bag-count synchronization
-   - Safe page initialization
-
-   Product data lives ONLY in products.js
    ========================================================= */
 
 (function () {
+
     "use strict";
 
-    /* =========================================================
-       SITE BASE PATH
-       ---------------------------------------------------------
-       script.js lives at repository root.
 
-       We derive the repository root from the actual script URL
-       instead of assuming "/" so GitHub Pages project URLs work.
-       ========================================================= */
+    /* =========================================================
+       SITE ROOT
+    ========================================================= */
 
     var scriptElement = document.currentScript;
 
@@ -36,35 +32,8 @@
     var siteRoot = new URL("./", scriptUrl);
 
 
-    /* =========================================================
-       UTILITY — DOM READY
-       ========================================================= */
-
-    function onReady(callback) {
-        if (document.readyState === "loading") {
-            document.addEventListener(
-                "DOMContentLoaded",
-                callback,
-                { once: true }
-            );
-        } else {
-            callback();
-        }
-    }
-
-
-    /* =========================================================
-       UTILITY — SITE URL
-       ---------------------------------------------------------
-       Converts repository-relative paths into working URLs.
-
-       Example:
-       /images/logo.webp
-       becomes:
-       https://username.github.io/repository/images/logo.webp
-       ========================================================= */
-
     function resolveSiteUrl(value) {
+
         if (!value) {
             return value;
         }
@@ -90,85 +59,96 @@
             return trimmed;
         }
 
-        if (trimmed.startsWith("/")) {
-            trimmed = trimmed.replace(/^\/+/, "");
-        }
+        trimmed = trimmed.replace(/^\/+/, "");
 
         return new URL(trimmed, siteRoot).href;
     }
 
 
+    window.SVD_SITE = window.SVD_SITE || {};
+
+    window.SVD_SITE.root = siteRoot.href;
+
+    window.SVD_SITE.resolveUrl = resolveSiteUrl;
+
+
+
+    /* =========================================================
+       DOM READY
+    ========================================================= */
+
+    function onReady(callback) {
+
+        if (document.readyState === "loading") {
+
+            document.addEventListener(
+                "DOMContentLoaded",
+                callback,
+                { once: true }
+            );
+
+        } else {
+
+            callback();
+
+        }
+    }
+
+
+
     /* =========================================================
        MASTER FOOTER
-       ========================================================= */
+    ========================================================= */
 
     function normalizeFooterPaths(container) {
+
         if (!container) {
             return;
         }
 
-        /* -----------------------------------------------------
-           Links
-           ----------------------------------------------------- */
 
-        var links = container.querySelectorAll("a[href]");
+        container
+            .querySelectorAll("a[href]")
+            .forEach(function (link) {
 
-        links.forEach(function (link) {
-            var href = link.getAttribute("href");
+                var href =
+                    link.getAttribute("href");
 
-            if (!href) {
-                return;
-            }
+                if (!href) {
+                    return;
+                }
 
-            link.setAttribute(
-                "href",
-                resolveSiteUrl(href)
-            );
-        });
+                link.setAttribute(
+                    "href",
+                    resolveSiteUrl(href)
+                );
 
-
-        /* -----------------------------------------------------
-           Images
-           ----------------------------------------------------- */
-
-        var images = container.querySelectorAll("img[src]");
-
-        images.forEach(function (image) {
-            var src = image.getAttribute("src");
-
-            if (!src) {
-                return;
-            }
-
-            image.setAttribute(
-                "src",
-                resolveSiteUrl(src)
-            );
-        });
+            });
 
 
-        /* -----------------------------------------------------
-           Form actions, if ever added to footer
-           ----------------------------------------------------- */
+        container
+            .querySelectorAll("img[src]")
+            .forEach(function (image) {
 
-        var forms = container.querySelectorAll("form[action]");
+                var src =
+                    image.getAttribute("src");
 
-        forms.forEach(function (form) {
-            var action = form.getAttribute("action");
+                if (!src) {
+                    return;
+                }
 
-            if (!action) {
-                return;
-            }
+                image.setAttribute(
+                    "src",
+                    resolveSiteUrl(src)
+                );
 
-            form.setAttribute(
-                "action",
-                resolveSiteUrl(action)
-            );
-        });
+            });
+
     }
 
 
     async function loadMasterFooter() {
+
         var placeholder =
             document.getElementById("site-footer");
 
@@ -178,10 +158,6 @@
             );
 
 
-        /* -----------------------------------------------------
-           Prevent duplicate loading
-           ----------------------------------------------------- */
-
         if (
             placeholder &&
             placeholder.dataset.svdFooterLoaded === "true"
@@ -190,21 +166,14 @@
         }
 
 
-        /* -----------------------------------------------------
-           Determine where the footer should go
-           ----------------------------------------------------- */
+        var target =
+            placeholder || existingFooter;
 
-        var target = placeholder || existingFooter;
 
         if (!target) {
             return;
         }
 
-
-        /* -----------------------------------------------------
-           Do not replace a footer if this page has already
-           received the master footer.
-           ----------------------------------------------------- */
 
         if (
             target.dataset &&
@@ -214,10 +183,6 @@
         }
 
 
-        /* -----------------------------------------------------
-           footer.html is located beside script.js at root.
-           ----------------------------------------------------- */
-
         var footerUrl =
             new URL(
                 "footer.html",
@@ -226,6 +191,7 @@
 
 
         try {
+
             var response =
                 await fetch(
                     footerUrl,
@@ -234,6 +200,7 @@
                     }
                 );
 
+
             if (!response.ok) {
                 throw new Error(
                     "Footer request failed: " +
@@ -241,16 +208,14 @@
                 );
             }
 
+
             var html =
                 await response.text();
 
 
-            /* -------------------------------------------------
-               Parse the fetched footer safely
-               ------------------------------------------------- */
-
             var parser =
                 new DOMParser();
+
 
             var footerDocument =
                 parser.parseFromString(
@@ -258,36 +223,24 @@
                     "text/html"
                 );
 
+
             var fetchedFooter =
                 footerDocument.querySelector(
                     "footer"
                 );
 
+
             if (!fetchedFooter) {
                 throw new Error(
-                    "No footer element found in footer.html"
+                    "Footer element not found"
                 );
             }
 
-
-            /* -------------------------------------------------
-               Normalize all internal footer paths so the same
-               footer works on:
-
-               /
-               /collections/
-               /policies/
-               GitHub Pages project URLs
-               ------------------------------------------------- */
 
             normalizeFooterPaths(
                 fetchedFooter
             );
 
-
-            /* -------------------------------------------------
-               Insert the master footer
-               ------------------------------------------------- */
 
             if (placeholder) {
 
@@ -320,24 +273,23 @@
                     "true";
             }
 
+
         } catch (error) {
 
             console.error(
-                "ShriVatsaDarbar footer loading error:",
+                "ShriVatsaDarbar footer error:",
                 error
             );
 
-            /*
-             * Do not destroy an existing footer if loading fails.
-             * This gives us graceful degradation.
-             */
         }
+
     }
 
 
+
     /* =========================================================
-       MOBILE NAVIGATION
-       ========================================================= */
+       MOBILE MENU
+    ========================================================= */
 
     function initMobileMenu() {
 
@@ -351,6 +303,7 @@
                 "mainNavigation"
             );
 
+
         if (!button || !navigation) {
             return;
         }
@@ -358,9 +311,7 @@
 
         function closeMenu() {
 
-            navigation.classList.remove(
-                "open"
-            );
+            navigation.classList.remove("open");
 
             button.setAttribute(
                 "aria-expanded",
@@ -380,6 +331,7 @@
             var icon =
                 button.querySelector("i");
 
+
             if (icon) {
 
                 icon.classList.remove(
@@ -389,15 +341,15 @@
                 icon.classList.add(
                     "fa-bars"
                 );
+
             }
+
         }
 
 
         function openMenu() {
 
-            navigation.classList.add(
-                "open"
-            );
+            navigation.classList.add("open");
 
             button.setAttribute(
                 "aria-expanded",
@@ -417,6 +369,7 @@
             var icon =
                 button.querySelector("i");
 
+
             if (icon) {
 
                 icon.classList.remove(
@@ -426,7 +379,9 @@
                 icon.classList.add(
                     "fa-xmark"
                 );
+
             }
+
         }
 
 
@@ -434,23 +389,23 @@
             "click",
             function () {
 
-                var isOpen =
+                if (
                     navigation.classList.contains(
                         "open"
-                    );
+                    )
+                ) {
 
-                if (isOpen) {
                     closeMenu();
+
                 } else {
+
                     openMenu();
+
                 }
+
             }
         );
 
-
-        /* -----------------------------------------------------
-           Close after navigation link click
-           ----------------------------------------------------- */
 
         navigation
             .querySelectorAll("a")
@@ -458,16 +413,11 @@
 
                 link.addEventListener(
                     "click",
-                    function () {
-                        closeMenu();
-                    }
+                    closeMenu
                 );
+
             });
 
-
-        /* -----------------------------------------------------
-           Escape closes menu
-           ----------------------------------------------------- */
 
         document.addEventListener(
             "keydown",
@@ -479,17 +429,14 @@
                         "open"
                     )
                 ) {
+
                     closeMenu();
 
-                    button.focus();
                 }
+
             }
         );
 
-
-        /* -----------------------------------------------------
-           Clicking outside closes menu
-           ----------------------------------------------------- */
 
         document.addEventListener(
             "click",
@@ -503,6 +450,7 @@
                     return;
                 }
 
+
                 if (
                     navigation.contains(
                         event.target
@@ -514,32 +462,31 @@
                     return;
                 }
 
+
                 closeMenu();
+
             }
         );
 
-
-        /* -----------------------------------------------------
-           Resize safety
-           ----------------------------------------------------- */
 
         window.addEventListener(
             "resize",
             function () {
 
-                if (
-                    window.innerWidth > 900
-                ) {
+                if (window.innerWidth > 900) {
                     closeMenu();
                 }
+
             }
         );
+
     }
 
 
+
     /* =========================================================
-       SEARCH OVERLAY
-       ========================================================= */
+       SEARCH
+    ========================================================= */
 
     function initSearch() {
 
@@ -579,15 +526,18 @@
                 "search-open"
             );
 
+
             if (input) {
 
-                window.setTimeout(
+                setTimeout(
                     function () {
                         input.focus();
                     },
                     80
                 );
+
             }
+
         }
 
 
@@ -600,6 +550,7 @@
             document.body.classList.remove(
                 "search-open"
             );
+
         }
 
 
@@ -615,12 +566,9 @@
                 "click",
                 closeSearch
             );
+
         }
 
-
-        /* -----------------------------------------------------
-           Clicking the dark/empty overlay closes it
-           ----------------------------------------------------- */
 
         overlay.addEventListener(
             "click",
@@ -629,15 +577,14 @@
                 if (
                     event.target === overlay
                 ) {
+
                     closeSearch();
+
                 }
+
             }
         );
 
-
-        /* -----------------------------------------------------
-           Escape closes search
-           ----------------------------------------------------- */
 
         document.addEventListener(
             "keydown",
@@ -649,18 +596,14 @@
                         "active"
                     )
                 ) {
+
                     closeSearch();
+
                 }
+
             }
         );
 
-
-        /* -----------------------------------------------------
-           Product page already has its own product-search
-           behaviour. We therefore only provide the shared
-           behaviour on pages where a product page controller
-           is not present.
-           ----------------------------------------------------- */
 
         if (
             input &&
@@ -679,18 +622,15 @@
                         return;
                     }
 
+
                     var query =
                         input.value.trim();
+
 
                     if (!query) {
                         return;
                     }
 
-
-                    /*
-                     * If the central product database is loaded,
-                     * find an exact/partial product match.
-                     */
 
                     if (
                         Array.isArray(
@@ -701,18 +641,22 @@
                         var normalized =
                             query.toLowerCase();
 
+
                         var match =
                             window.SVD_PRODUCT_LIST.find(
                                 function (product) {
 
                                     return (
+
                                         String(
                                             product.title || ""
                                         )
                                             .toLowerCase()
                                             .includes(
                                                 normalized
-                                            ) ||
+                                            )
+
+                                        ||
 
                                         String(
                                             product.code || ""
@@ -720,7 +664,9 @@
                                             .toLowerCase()
                                             .includes(
                                                 normalized
-                                            ) ||
+                                            )
+
+                                        ||
 
                                         String(
                                             product.category || ""
@@ -729,7 +675,9 @@
                                             .includes(
                                                 normalized
                                             )
+
                                     );
+
                                 }
                             );
 
@@ -746,30 +694,35 @@
 
                             return;
                         }
+
                     }
 
-
-                    /*
-                     * No exact product match.
-                     *
-                     * Send the visitor to the central
-                     * collection rather than pretending a
-                     * search result exists.
-                     */
 
                     window.location.href =
                         resolveSiteUrl(
                             "collections/collections.html"
                         );
+
                 }
             );
+
         }
+
     }
+
 
 
     /* =========================================================
        HERO SLIDER
-       ========================================================= */
+       ---------------------------------------------------------
+       Supports BOTH:
+       heroPrev / heroNext / heroDots
+       AND:
+       sliderPrev / sliderNext / sliderDots
+
+       This makes the controller compatible with
+       the current homepage without changing its design.
+    ========================================================= */
 
     function initHeroSlider() {
 
@@ -777,6 +730,7 @@
             document.querySelector(
                 ".hero-slider"
             );
+
 
         if (!slider) {
             return;
@@ -788,6 +742,7 @@
                 ".hero-slide"
             );
 
+
         if (!slides.length) {
             return;
         }
@@ -796,16 +751,27 @@
         var nextButton =
             document.getElementById(
                 "heroNext"
+            ) ||
+            document.getElementById(
+                "sliderNext"
             );
+
 
         var previousButton =
             document.getElementById(
                 "heroPrev"
+            ) ||
+            document.getElementById(
+                "sliderPrev"
             );
+
 
         var dotsContainer =
             document.getElementById(
                 "heroDots"
+            ) ||
+            document.getElementById(
+                "sliderDots"
             );
 
 
@@ -818,13 +784,15 @@
         var touchEndX = 0;
 
 
+
         /* -----------------------------------------------------
-           Dots
-           ----------------------------------------------------- */
+           CREATE DOTS
+        ----------------------------------------------------- */
 
         if (dotsContainer) {
 
             dotsContainer.innerHTML = "";
+
 
             slides.forEach(
                 function (slide, index) {
@@ -834,11 +802,12 @@
                             "button"
                         );
 
-                    dot.type =
-                        "button";
+
+                    dot.type = "button";
 
                     dot.className =
                         "hero-dot";
+
 
                     dot.setAttribute(
                         "aria-label",
@@ -846,22 +815,28 @@
                         (index + 1)
                     );
 
+
                     dot.addEventListener(
                         "click",
                         function () {
 
-                            showSlide(
-                                index
-                            );
+                            showSlide(index);
+
+                            restartAutoplay();
+
                         }
                     );
+
 
                     dotsContainer.appendChild(
                         dot
                     );
+
                 }
             );
+
         }
+
 
 
         function updateDots() {
@@ -870,28 +845,32 @@
                 return;
             }
 
-            var dots =
-                dotsContainer.querySelectorAll(
+
+            dotsContainer
+                .querySelectorAll(
                     ".hero-dot"
+                )
+                .forEach(
+                    function (dot, index) {
+
+                        dot.classList.toggle(
+                            "active",
+                            index === currentIndex
+                        );
+
+
+                        dot.setAttribute(
+                            "aria-current",
+                            index === currentIndex
+                                ? "true"
+                                : "false"
+                        );
+
+                    }
                 );
 
-            dots.forEach(
-                function (dot, index) {
-
-                    dot.classList.toggle(
-                        "active",
-                        index === currentIndex
-                    );
-
-                    dot.setAttribute(
-                        "aria-current",
-                        index === currentIndex
-                            ? "true"
-                            : "false"
-                    );
-                }
-            );
         }
+
 
 
         function showSlide(index) {
@@ -908,11 +887,15 @@
                         "active",
                         slideIndex === currentIndex
                     );
+
                 }
             );
 
+
             updateDots();
+
         }
+
 
 
         function nextSlide() {
@@ -920,7 +903,9 @@
             showSlide(
                 currentIndex + 1
             );
+
         }
+
 
 
         function previousSlide() {
@@ -928,15 +913,24 @@
             showSlide(
                 currentIndex - 1
             );
+
         }
+
 
 
         if (nextButton) {
 
             nextButton.addEventListener(
                 "click",
-                nextSlide
+                function () {
+
+                    nextSlide();
+
+                    restartAutoplay();
+
+                }
             );
+
         }
 
 
@@ -944,14 +938,22 @@
 
             previousButton.addEventListener(
                 "click",
-                previousSlide
+                function () {
+
+                    previousSlide();
+
+                    restartAutoplay();
+
+                }
             );
+
         }
 
 
+
         /* -----------------------------------------------------
-           Keyboard controls
-           ----------------------------------------------------- */
+           KEYBOARD
+        ----------------------------------------------------- */
 
         document.addEventListener(
             "keydown",
@@ -960,21 +962,32 @@
                 if (
                     event.key === "ArrowRight"
                 ) {
+
                     nextSlide();
+
+                    restartAutoplay();
+
                 }
+
 
                 if (
                     event.key === "ArrowLeft"
                 ) {
+
                     previousSlide();
+
+                    restartAutoplay();
+
                 }
+
             }
         );
 
 
+
         /* -----------------------------------------------------
-           Touch / swipe
-           ----------------------------------------------------- */
+           MOBILE SWIPE
+        ----------------------------------------------------- */
 
         slider.addEventListener(
             "touchstart",
@@ -987,10 +1000,14 @@
                     return;
                 }
 
+
                 touchStartX =
                     event.touches[0].clientX;
+
             },
-            { passive: true }
+            {
+                passive: true
+            }
         );
 
 
@@ -1005,12 +1022,15 @@
                     return;
                 }
 
+
                 touchEndX =
                     event.changedTouches[0].clientX;
+
 
                 var distance =
                     touchStartX -
                     touchEndX;
+
 
                 if (
                     Math.abs(distance) < 50
@@ -1018,19 +1038,31 @@
                     return;
                 }
 
+
                 if (distance > 0) {
+
                     nextSlide();
+
                 } else {
+
                     previousSlide();
+
                 }
+
+
+                restartAutoplay();
+
             },
-            { passive: true }
+            {
+                passive: true
+            }
         );
 
 
+
         /* -----------------------------------------------------
-           Autoplay
-           ----------------------------------------------------- */
+           AUTOPLAY
+        ----------------------------------------------------- */
 
         function stopAutoplay() {
 
@@ -1041,7 +1073,9 @@
                 );
 
                 autoplayTimer = null;
+
             }
+
         }
 
 
@@ -1049,15 +1083,25 @@
 
             stopAutoplay();
 
+
             if (slides.length <= 1) {
                 return;
             }
 
+
             autoplayTimer =
                 setInterval(
                     nextSlide,
-                    5500
+                    5000
                 );
+
+        }
+
+
+        function restartAutoplay() {
+
+            startAutoplay();
+
         }
 
 
@@ -1077,30 +1121,31 @@
             "visibilitychange",
             function () {
 
-                if (
-                    document.hidden
-                ) {
+                if (document.hidden) {
+
                     stopAutoplay();
+
                 } else {
+
                     startAutoplay();
+
                 }
+
             }
         );
 
 
-        /* -----------------------------------------------------
-           Initial state
-           ----------------------------------------------------- */
-
         showSlide(0);
 
         startAutoplay();
+
     }
 
 
+
     /* =========================================================
-       TOAST SYSTEM
-       ========================================================= */
+       TOAST
+    ========================================================= */
 
     function showToast(message) {
 
@@ -1108,6 +1153,7 @@
             document.getElementById(
                 "siteToast"
             );
+
 
         if (!toast) {
 
@@ -1122,6 +1168,7 @@
 
         toast.textContent =
             message;
+
 
         toast.classList.add(
             "active"
@@ -1142,8 +1189,9 @@
                     );
 
                 },
-                2400
+                2600
             );
+
     }
 
 
@@ -1151,24 +1199,1326 @@
         showToast;
 
 
+
+    /* =========================================================
+       WISHLIST
+       ---------------------------------------------------------
+       Shared across the entire site.
+    ========================================================= */
+
+    var WISHLIST_STORAGE_KEY =
+        "shrivatsaDarbarWishlist";
+
+
+    function getWishlist() {
+
+        try {
+
+            var raw =
+                localStorage.getItem(
+                    WISHLIST_STORAGE_KEY
+                );
+
+
+            if (!raw) {
+                return [];
+            }
+
+
+            var parsed =
+                JSON.parse(raw);
+
+
+            if (!Array.isArray(parsed)) {
+                return [];
+            }
+
+
+            return parsed.filter(
+                function (id) {
+                    return (
+                        typeof id === "string" &&
+                        id.trim() !== ""
+                    );
+                }
+            );
+
+
+        } catch (error) {
+
+            console.warn(
+                "Unable to read wishlist:",
+                error
+            );
+
+
+            return [];
+
+        }
+
+    }
+
+
+
+    function saveWishlist(items) {
+
+        try {
+
+            localStorage.setItem(
+                WISHLIST_STORAGE_KEY,
+                JSON.stringify(items)
+            );
+
+
+            window.dispatchEvent(
+                new CustomEvent(
+                    "svd:wishlist-updated"
+                )
+            );
+
+
+        } catch (error) {
+
+            console.warn(
+                "Unable to save wishlist:",
+                error
+            );
+
+        }
+
+    }
+
+
+
+    function isInWishlist(productId) {
+
+        return getWishlist().includes(
+            String(productId)
+        );
+
+    }
+
+
+
+    function addToWishlist(productId) {
+
+        var id =
+            String(productId || "").trim();
+
+
+        if (!id) {
+            return false;
+        }
+
+
+        var wishlist =
+            getWishlist();
+
+
+        if (
+            !wishlist.includes(id)
+        ) {
+
+            wishlist.push(id);
+
+            saveWishlist(wishlist);
+
+        }
+
+
+        return true;
+
+    }
+
+
+
+    function removeFromWishlist(productId) {
+
+        var id =
+            String(productId || "").trim();
+
+
+        var wishlist =
+            getWishlist().filter(
+                function (item) {
+                    return item !== id;
+                }
+            );
+
+
+        saveWishlist(wishlist);
+
+    }
+
+
+
+    function toggleWishlist(productId) {
+
+        var id =
+            String(productId || "").trim();
+
+
+        if (!id) {
+
+            showToast(
+                "This product could not be added to your wishlist."
+            );
+
+            return;
+
+        }
+
+
+        if (isInWishlist(id)) {
+
+            removeFromWishlist(id);
+
+            showToast(
+                "Removed from your wishlist."
+            );
+
+        } else {
+
+            addToWishlist(id);
+
+            showToast(
+                "Added to your wishlist."
+            );
+
+        }
+
+
+        updateWishlistButtons();
+
+        updateWishlistCount();
+
+    }
+
+
+
+    window.getSVDWishlist =
+        getWishlist;
+
+
+    window.isSVDWishlisted =
+        isInWishlist;
+
+
+    window.toggleSVDWishlist =
+        toggleWishlist;
+
+
+    window.removeSVDWishlist =
+        removeFromWishlist;
+
+
+
+    /* =========================================================
+       FIND PRODUCT ID FROM A WISHLIST BUTTON
+    ========================================================= */
+
+    function getWishlistProductId(button) {
+
+        if (!button) {
+            return "";
+        }
+
+
+        var id =
+            button.getAttribute(
+                "data-wishlist-product"
+            );
+
+
+        if (id) {
+            return id;
+        }
+
+
+        var card =
+            button.closest(
+                "[data-product-id]"
+            );
+
+
+        if (card) {
+
+            id =
+                card.getAttribute(
+                    "data-product-id"
+                );
+
+
+            if (id) {
+                return id;
+            }
+
+        }
+
+
+        var link =
+            button.closest(
+                ".product-card, .collection-card, article"
+            );
+
+
+        if (link) {
+
+            var productLink =
+                link.querySelector(
+                    'a[href*="product.html?product="]'
+                );
+
+
+            if (productLink) {
+
+                var href =
+                    productLink.getAttribute(
+                        "href"
+                    );
+
+
+                var match =
+                    href &&
+                    href.match(
+                        /product=([^&]+)/i
+                    );
+
+
+                if (match) {
+
+                    return decodeURIComponent(
+                        match[1]
+                    );
+
+                }
+
+            }
+
+        }
+
+
+        return "";
+
+    }
+
+
+
+    /* =========================================================
+       UPDATE HEART STATES
+    ========================================================= */
+
+    function updateWishlistButtons() {
+
+        var wishlist =
+            getWishlist();
+
+
+        document
+            .querySelectorAll(
+                ".product-wishlist, .collection-wishlist, .best-seller-wishlist, [data-wishlist-product]"
+            )
+            .forEach(
+                function (button) {
+
+                    var id =
+                        getWishlistProductId(
+                            button
+                        );
+
+
+                    var active =
+                        id &&
+                        wishlist.includes(id);
+
+
+                    button.classList.toggle(
+                        "is-wishlisted",
+                        !!active
+                    );
+
+
+                    var icon =
+                        button.querySelector(
+                            "i"
+                        );
+
+
+                    if (icon) {
+
+                        icon.classList.toggle(
+                            "fa-regular",
+                            !active
+                        );
+
+
+                        icon.classList.toggle(
+                            "fa-solid",
+                            !!active
+                        );
+
+
+                        icon.classList.toggle(
+                            "fa-heart",
+                            true
+                        );
+
+                    }
+
+
+                    button.setAttribute(
+                        "aria-pressed",
+                        active
+                            ? "true"
+                            : "false"
+                    );
+
+                }
+            );
+
+
+
+        var headerButton =
+            document.querySelector(
+                "#wishlistButton, .icon-button[aria-label='Wishlist'], .icon-button[aria-label='Open Wishlist']"
+            );
+
+
+        if (headerButton) {
+
+            var headerIcon =
+                headerButton.querySelector(
+                    "i"
+                );
+
+
+            var hasItems =
+                wishlist.length > 0;
+
+
+            headerButton.classList.toggle(
+                "is-wishlisted",
+                hasItems
+            );
+
+
+            if (headerIcon) {
+
+                headerIcon.classList.toggle(
+                    "fa-regular",
+                    !hasItems
+                );
+
+
+                headerIcon.classList.toggle(
+                    "fa-solid",
+                    hasItems
+                );
+
+            }
+
+        }
+
+    }
+
+
+
+    /* =========================================================
+       PRODUCT DATA
+       ---------------------------------------------------------
+       Loads products.js when needed for wishlist rendering.
+    ========================================================= */
+
+    function loadProductsData() {
+
+        return new Promise(
+            function (resolve) {
+
+                if (
+                    window.SVD_PRODUCTS ||
+                    window.SVD_PRODUCT_LIST
+                ) {
+
+                    resolve();
+
+                    return;
+
+                }
+
+
+                var existing =
+                    document.querySelector(
+                        'script[src*="products.js"]'
+                    );
+
+
+                if (existing) {
+
+                    existing.addEventListener(
+                        "load",
+                        function () {
+                            resolve();
+                        },
+                        {
+                            once: true
+                        }
+                    );
+
+
+                    setTimeout(
+                        resolve,
+                        1200
+                    );
+
+
+                    return;
+
+                }
+
+
+                var script =
+                    document.createElement(
+                        "script"
+                    );
+
+
+                script.src =
+                    resolveSiteUrl(
+                        "products.js"
+                    );
+
+
+                script.onload =
+                    function () {
+                        resolve();
+                    };
+
+
+                script.onerror =
+                    function () {
+                        resolve();
+                    };
+
+
+                document.head.appendChild(
+                    script
+                );
+
+            }
+        );
+
+    }
+
+
+
+    function getWishlistProduct(productId) {
+
+        var id =
+            String(productId || "");
+
+
+        if (
+            window.SVD_PRODUCTS &&
+            window.SVD_PRODUCTS[id]
+        ) {
+
+            var product =
+                window.SVD_PRODUCTS[id];
+
+
+            return Object.assign(
+                {
+                    id: id
+                },
+                product
+            );
+
+        }
+
+
+        return {
+            id: id,
+
+            title:
+                id
+                    .replace(
+                        /^saree-/i,
+                        "Saree "
+                    )
+                    .replace(
+                        /^suit-/i,
+                        "Suit "
+                    ),
+
+            category:
+                id.startsWith("saree-")
+                    ? "Saree"
+                    : "Suit",
+
+            code:
+                id.toUpperCase(),
+
+            images: []
+
+        };
+
+    }
+
+
+
+    /* =========================================================
+       WISHLIST DRAWER
+    ========================================================= */
+
+    function ensureWishlistStyles() {
+
+        if (
+            document.getElementById(
+                "svdWishlistStyles"
+            )
+        ) {
+            return;
+        }
+
+
+        var style =
+            document.createElement(
+                "style"
+            );
+
+
+        style.id =
+            "svdWishlistStyles";
+
+
+        style.textContent = `
+
+            .svd-wishlist-overlay {
+                position: fixed;
+                inset: 0;
+                background: rgba(35, 5, 10, .48);
+                z-index: 99990;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .25s ease,
+                            visibility .25s ease;
+            }
+
+            .svd-wishlist-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .svd-wishlist-drawer {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: min(430px, 94vw);
+                height: 100vh;
+                background: #fffdf9;
+                z-index: 99991;
+                transform: translateX(105%);
+                transition: transform .3s ease;
+                box-shadow: -12px 0 40px rgba(50, 5, 15, .18);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .svd-wishlist-drawer.active {
+                transform: translateX(0);
+            }
+
+            .svd-wishlist-header {
+                padding: 24px 22px;
+                background: #4b0713;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .svd-wishlist-header h2 {
+                margin: 0;
+                font-family: Georgia, serif;
+                font-size: 27px;
+                font-weight: 500;
+            }
+
+            .svd-wishlist-close {
+                width: 40px;
+                height: 40px;
+                border: 1px solid rgba(255,255,255,.35);
+                border-radius: 50%;
+                background: transparent;
+                color: #fff;
+                cursor: pointer;
+                font-size: 18px;
+            }
+
+            .svd-wishlist-body {
+                flex: 1;
+                overflow-y: auto;
+                padding: 18px;
+            }
+
+            .svd-wishlist-empty {
+                min-height: 280px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: #71665f;
+            }
+
+            .svd-wishlist-empty i {
+                font-size: 46px;
+                color: #a4772d;
+                margin-bottom: 18px;
+            }
+
+            .svd-wishlist-empty h3 {
+                margin: 0 0 8px;
+                color: #4b0713;
+                font-family: Georgia, serif;
+                font-size: 24px;
+            }
+
+            .svd-wishlist-item {
+                display: grid;
+                grid-template-columns: 82px 1fr 36px;
+                gap: 13px;
+                align-items: center;
+                padding: 12px 0;
+                border-bottom: 1px solid #eadfce;
+            }
+
+            .svd-wishlist-image {
+                width: 82px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 8px;
+                background: #f2eadf;
+            }
+
+            .svd-wishlist-info h3 {
+                margin: 0 0 5px;
+                color: #4b0713;
+                font-family: Georgia, serif;
+                font-size: 18px;
+                line-height: 1.2;
+            }
+
+            .svd-wishlist-info p {
+                margin: 0 0 8px;
+                color: #766d65;
+                font-size: 12px;
+            }
+
+            .svd-wishlist-view {
+                color: #9b7129;
+                font-size: 12px;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+            .svd-wishlist-remove {
+                border: 0;
+                background: transparent;
+                color: #7a2635;
+                cursor: pointer;
+                font-size: 17px;
+            }
+
+            .svd-wishlist-footer {
+                padding: 16px 20px 20px;
+                border-top: 1px solid #eadfce;
+                background: #fbf6ee;
+            }
+
+            .svd-wishlist-footer p {
+                margin: 0;
+                color: #766d65;
+                font-size: 12px;
+                line-height: 1.5;
+            }
+
+            @media (max-width: 480px) {
+                .svd-wishlist-drawer {
+                    width: 100vw;
+                }
+            }
+
+        `;
+
+
+        document.head.appendChild(
+            style
+        );
+
+    }
+
+
+
+    function ensureWishlistDrawer() {
+
+        if (
+            document.getElementById(
+                "svdWishlistDrawer"
+            )
+        ) {
+            return;
+        }
+
+
+        ensureWishlistStyles();
+
+
+        var overlay =
+            document.createElement(
+                "div"
+            );
+
+
+        overlay.id =
+            "svdWishlistOverlay";
+
+
+        overlay.className =
+            "svd-wishlist-overlay";
+
+
+        var drawer =
+            document.createElement(
+                "aside"
+            );
+
+
+        drawer.id =
+            "svdWishlistDrawer";
+
+
+        drawer.className =
+            "svd-wishlist-drawer";
+
+
+        drawer.setAttribute(
+            "aria-label",
+            "Wishlist"
+        );
+
+
+        drawer.innerHTML = `
+
+            <div class="svd-wishlist-header">
+
+                <h2>
+                    My Wishlist
+                </h2>
+
+                <button
+                    type="button"
+                    class="svd-wishlist-close"
+                    aria-label="Close wishlist">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+            <div
+                class="svd-wishlist-body"
+                id="svdWishlistBody">
+            </div>
+
+            <div class="svd-wishlist-footer">
+
+                <p>
+                    Your wishlist is saved on this device
+                    so you can return to your favourite pieces.
+                </p>
+
+            </div>
+
+        `;
+
+
+        document.body.appendChild(
+            overlay
+        );
+
+
+        document.body.appendChild(
+            drawer
+        );
+
+
+        overlay.addEventListener(
+            "click",
+            closeWishlist
+        );
+
+
+        drawer
+            .querySelector(
+                ".svd-wishlist-close"
+            )
+            .addEventListener(
+                "click",
+                closeWishlist
+            );
+
+
+        drawer.addEventListener(
+            "click",
+            function (event) {
+
+                var removeButton =
+                    event.target.closest(
+                        "[data-wishlist-remove]"
+                    );
+
+
+                if (removeButton) {
+
+                    removeFromWishlist(
+                        removeButton.getAttribute(
+                            "data-wishlist-remove"
+                        )
+                    );
+
+
+                    renderWishlist();
+
+                    updateWishlistButtons();
+
+                    updateWishlistCount();
+
+                    return;
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    async function renderWishlist() {
+
+        ensureWishlistDrawer();
+
+
+        var body =
+            document.getElementById(
+                "svdWishlistBody"
+            );
+
+
+        if (!body) {
+            return;
+        }
+
+
+        var wishlist =
+            getWishlist();
+
+
+        if (!wishlist.length) {
+
+            body.innerHTML = `
+
+                <div class="svd-wishlist-empty">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <h3>
+                        Your wishlist is empty
+                    </h3>
+
+                    <p>
+                        Tap the heart on any product
+                        you love to save it here.
+                    </p>
+
+                </div>
+
+            `;
+
+
+            return;
+
+        }
+
+
+        await loadProductsData();
+
+
+        body.innerHTML = "";
+
+
+        wishlist.forEach(
+            function (id) {
+
+                var product =
+                    getWishlistProduct(id);
+
+
+                var image =
+                    product.images &&
+                    product.images.length
+                        ? product.images[0]
+                        : "";
+
+
+                var imageUrl =
+                    image
+                        ? resolveSiteUrl(image)
+                        : "";
+
+
+                var item =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                item.className =
+                    "svd-wishlist-item";
+
+
+                item.innerHTML = `
+
+                    ${
+                        imageUrl
+                            ? `
+                                <img
+                                    class="svd-wishlist-image"
+                                    src="${imageUrl}"
+                                    alt="${escapeHtml(
+                                        product.title || id
+                                    )}">
+                              `
+                            : `
+                                <div
+                                    class="svd-wishlist-image">
+                                </div>
+                              `
+                    }
+
+
+                    <div class="svd-wishlist-info">
+
+                        <h3>
+                            ${escapeHtml(
+                                product.title || id
+                            )}
+                        </h3>
+
+                        <p>
+                            ${escapeHtml(
+                                product.code ||
+                                product.category ||
+                                ""
+                            )}
+                        </p>
+
+                        <a
+                            class="svd-wishlist-view"
+                            href="${resolveSiteUrl(
+                                "product.html?product=" +
+                                encodeURIComponent(id)
+                            )}">
+
+                            View Product
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="svd-wishlist-remove"
+                        data-wishlist-remove="${escapeHtml(id)}"
+                        aria-label="Remove from wishlist">
+
+                        <i class="fa-solid fa-trash-can"></i>
+
+                    </button>
+
+                `;
+
+
+                body.appendChild(
+                    item
+                );
+
+            }
+        );
+
+    }
+
+
+
+    function escapeHtml(value) {
+
+        return String(value || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+
+    async function openWishlist() {
+
+        ensureWishlistDrawer();
+
+
+        var overlay =
+            document.getElementById(
+                "svdWishlistOverlay"
+            );
+
+
+        var drawer =
+            document.getElementById(
+                "svdWishlistDrawer"
+            );
+
+
+        await renderWishlist();
+
+
+        overlay.classList.add(
+            "active"
+        );
+
+
+        drawer.classList.add(
+            "active"
+        );
+
+
+        document.body.classList.add(
+            "svd-wishlist-open"
+        );
+
+    }
+
+
+
+    function closeWishlist() {
+
+        var overlay =
+            document.getElementById(
+                "svdWishlistOverlay"
+            );
+
+
+        var drawer =
+            document.getElementById(
+                "svdWishlistDrawer"
+            );
+
+
+        if (overlay) {
+
+            overlay.classList.remove(
+                "active"
+            );
+
+        }
+
+
+        if (drawer) {
+
+            drawer.classList.remove(
+                "active"
+            );
+
+        }
+
+
+        document.body.classList.remove(
+            "svd-wishlist-open"
+        );
+
+    }
+
+
+
+    window.openWishlist =
+        openWishlist;
+
+
+    window.closeWishlist =
+        closeWishlist;
+
+
+
+    /* =========================================================
+       WISHLIST COUNT
+    ========================================================= */
+
+    function updateWishlistCount() {
+
+        var count =
+            getWishlist().length;
+
+
+        document
+            .querySelectorAll(
+                ".wishlist-count"
+            )
+            .forEach(
+                function (element) {
+
+                    element.textContent =
+                        String(count);
+
+                }
+            );
+
+    }
+
+
+
+    /* =========================================================
+       WISHLIST CLICK CONTROLLER
+       ---------------------------------------------------------
+       Capture phase deliberately intercepts old page-specific
+       "showComingSoon('Wishlist')" handlers.
+    ========================================================= */
+
+    function initWishlistController() {
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                var button =
+                    event.target.closest(
+                        ".product-wishlist, .collection-wishlist, .best-seller-wishlist, [data-wishlist-product]"
+                    );
+
+
+                if (button) {
+
+                    event.preventDefault();
+
+                    event.stopImmediatePropagation();
+
+
+                    var id =
+                        getWishlistProductId(
+                            button
+                        );
+
+
+                    if (id) {
+
+                        toggleWishlist(id);
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                var headerWishlist =
+                    event.target.closest(
+                        "#wishlistButton, .icon-button[aria-label='Wishlist'], .icon-button[aria-label='Open Wishlist']"
+                    );
+
+
+                if (headerWishlist) {
+
+                    event.preventDefault();
+
+                    event.stopImmediatePropagation();
+
+                    openWishlist();
+
+                }
+
+            },
+            true
+        );
+
+
+        window.addEventListener(
+            "svd:wishlist-updated",
+            function () {
+
+                updateWishlistButtons();
+
+                updateWishlistCount();
+
+            }
+        );
+
+
+        window.addEventListener(
+            "storage",
+            function (event) {
+
+                if (
+                    event.key ===
+                    WISHLIST_STORAGE_KEY
+                ) {
+
+                    updateWishlistButtons();
+
+                    updateWishlistCount();
+
+                }
+
+            }
+        );
+
+    }
+
+
+
     /* =========================================================
        COMING SOON
        ---------------------------------------------------------
-       Existing pages use:
-       showComingSoon("Wishlist")
-       showComingSoon("Account")
-       etc.
-       ========================================================= */
+       Wishlist is NO LONGER coming soon.
+    ========================================================= */
 
     function showComingSoon(feature) {
 
+        if (
+            String(feature || "")
+                .toLowerCase() ===
+            "wishlist"
+        ) {
+
+            openWishlist();
+
+            return;
+
+        }
+
+
         var name =
-            feature || "This feature";
+            feature ||
+            "This feature";
+
 
         showToast(
             name +
             " will be available soon."
         );
+
     }
 
 
@@ -1176,12 +2526,13 @@
         showComingSoon;
 
 
+
     /* =========================================================
-       NEWSLETTER HANDLER
+       NEWSLETTER
        ---------------------------------------------------------
-       Kept for compatibility with the current homepage.
-       This does NOT pretend to create a real subscription.
-       ========================================================= */
+       Static GitHub Pages site:
+       creates a real email request using mailto.
+    ========================================================= */
 
     function handleNewsletter(event) {
 
@@ -1189,22 +2540,85 @@
             event.preventDefault();
         }
 
+
         var form =
             event &&
             event.target
                 ? event.target
-                : null;
+                : document.getElementById(
+                    "newsletterForm"
+                );
+
+
+        if (!form) {
+            return false;
+        }
+
+
+        var input =
+            form.querySelector(
+                'input[type="email"]'
+            );
+
+
+        if (!input) {
+            return false;
+        }
+
+
+        var email =
+            input.value.trim();
+
+
+        if (!email) {
+
+            showToast(
+                "Please enter your email address."
+            );
+
+            input.focus();
+
+            return false;
+
+        }
+
+
+        var subject =
+            encodeURIComponent(
+                "ShriVatsaDarbar Email Updates Subscription"
+            );
+
+
+        var body =
+            encodeURIComponent(
+                "Hello ShriVatsaDarbar Team,\n\n" +
+                "I would like to receive ShriVatsaDarbar " +
+                "new-arrival and collection updates.\n\n" +
+                "My email address is:\n" +
+                email +
+                "\n\nThank you."
+            );
+
+
+        var mailto =
+            "mailto:shrivatsadarbar@gmail.com" +
+            "?subject=" +
+            subject +
+            "&body=" +
+            body;
+
+
+        window.location.href =
+            mailto;
+
 
         showToast(
-            "Thank you for your interest in ShriVatsaDarbar."
+            "Your email app is opening to send the subscription request."
         );
 
 
-        if (form) {
-            form.reset();
-        }
-
         return false;
+
     }
 
 
@@ -1212,16 +2626,10 @@
         handleNewsletter;
 
 
+
     /* =========================================================
        BAG COUNT
-       ---------------------------------------------------------
-       The product and collection pages currently own their
-       respective cart drawers.
-
-       This shared controller therefore synchronizes ONLY the
-       visible bag count and does not attach duplicate drawer
-       handlers.
-       ========================================================= */
+    ========================================================= */
 
     var CART_STORAGE_KEY =
         "shrivatsaDarbarFashionCart";
@@ -1236,33 +2644,42 @@
                     CART_STORAGE_KEY
                 );
 
+
             if (!raw) {
                 return [];
             }
 
+
             var parsed =
                 JSON.parse(raw);
+
 
             return Array.isArray(parsed)
                 ? parsed
                 : [];
 
+
         } catch (error) {
 
             console.warn(
-                "Unable to read ShriVatsaDarbar cart:",
+                "Unable to read cart:",
                 error
             );
 
+
             return [];
+
         }
+
     }
+
 
 
     function getCartItemCount() {
 
         var cart =
             getStoredCart();
+
 
         return cart.reduce(
             function (total, item) {
@@ -1272,21 +2689,27 @@
                         item.quantity
                     );
 
+
                 if (
                     !Number.isFinite(
                         quantity
                     ) ||
                     quantity < 0
                 ) {
+
                     return total;
+
                 }
+
 
                 return total + quantity;
 
             },
             0
         );
+
     }
+
 
 
     function updateBagCount() {
@@ -1295,19 +2718,19 @@
             getCartItemCount();
 
 
-        var counters =
-            document.querySelectorAll(
+        document
+            .querySelectorAll(
                 "#bagCount, .bag-count"
+            )
+            .forEach(
+                function (counter) {
+
+                    counter.textContent =
+                        String(count);
+
+                }
             );
 
-
-        counters.forEach(
-            function (counter) {
-
-                counter.textContent =
-                    String(count);
-            }
-        );
     }
 
 
@@ -1315,10 +2738,6 @@
         updateBagCount;
 
 
-    /* ---------------------------------------------------------
-       Keep count synchronized if another page/controller
-       changes localStorage.
-       --------------------------------------------------------- */
 
     window.addEventListener(
         "storage",
@@ -1328,33 +2747,25 @@
                 event.key ===
                 CART_STORAGE_KEY
             ) {
+
                 updateBagCount();
+
             }
+
         }
     );
 
-
-    /* ---------------------------------------------------------
-       Custom event support for same-page cart controllers
-       --------------------------------------------------------- */
 
     window.addEventListener(
         "svd:cart-updated",
-        function () {
-            updateBagCount();
-        }
+        updateBagCount
     );
+
 
 
     /* =========================================================
        GENERIC BAG BUTTON
-       ---------------------------------------------------------
-       If the current page has a cart drawer, its page-specific
-       controller owns the button.
-
-       If no cart drawer exists, do not create a fake checkout.
-       Show a clear message instead.
-       ========================================================= */
+    ========================================================= */
 
     function initGenericBagButton() {
 
@@ -1363,20 +2774,17 @@
                 "shoppingBagButton"
             );
 
+
         if (!button) {
             return;
         }
 
 
-        /*
-         * Product and collection pages have their own
-         * #cartDrawer controller.
-         */
-
         var cartDrawer =
             document.getElementById(
                 "cartDrawer"
             );
+
 
         if (cartDrawer) {
             return;
@@ -1392,7 +2800,7 @@
                 ) {
 
                     showToast(
-                        "Your collection is ready. Please open a product to manage it."
+                        "Your collection is ready. Open a product to manage it."
                     );
 
                 } else {
@@ -1400,62 +2808,24 @@
                     showToast(
                         "Your collection is currently empty."
                     );
+
                 }
+
             }
         );
+
     }
 
-
-    /* =========================================================
-       ACCESSIBILITY — PREVENT BACKGROUND SCROLL
-       ---------------------------------------------------------
-       The CSS may already handle this, but this controller keeps
-       the body state synchronized.
-       ========================================================= */
-
-    function syncBodyStates() {
-
-        var menuOpen =
-            document.querySelector(
-                ".main-navigation.open"
-            );
-
-        var searchOpen =
-            document.querySelector(
-                ".search-overlay.active"
-            );
-
-
-        document.body.classList.toggle(
-            "menu-open",
-            !!menuOpen
-        );
-
-        document.body.classList.toggle(
-            "search-open",
-            !!searchOpen
-        );
-    }
 
 
     /* =========================================================
        INITIALIZATION
-       ========================================================= */
+    ========================================================= */
 
     onReady(
         function () {
 
-            /*
-             * Footer is intentionally loaded first.
-             * It is independent of the other controllers.
-             */
-
             loadMasterFooter();
-
-
-            /*
-             * Shared UI
-             */
 
             initMobileMenu();
 
@@ -1463,43 +2833,24 @@
 
             initHeroSlider();
 
+            initWishlistController();
+
             initGenericBagButton();
-
-
-            /*
-             * Shared state
-             */
 
             updateBagCount();
 
-            syncBodyStates();
+            updateWishlistButtons();
 
+            updateWishlistCount();
 
-            /*
-             * Allow other scripts/controllers to refresh
-             * the bag count after their own initialization.
-             */
 
             window.dispatchEvent(
                 new CustomEvent(
                     "svd:shared-ready"
                 )
             );
+
         }
     );
-
-
-    /* =========================================================
-       DEBUG / PUBLIC SITE CONFIG
-       ========================================================= */
-
-    window.SVD_SITE =
-        window.SVD_SITE || {};
-
-    window.SVD_SITE.root =
-        siteRoot.href;
-
-    window.SVD_SITE.resolveUrl =
-        resolveSiteUrl;
 
 })();
