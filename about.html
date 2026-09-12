@@ -10,14 +10,23 @@
         name="description"
         content="Discover ShriVatsaDarbar — a premium saree and suit brand inspired by Indian tradition, refined craftsmanship and timeless elegance."
     >
+
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="about.html">
 
-    <link rel="icon" type="image/webp" href="images/logos/logo-white.webp">
+    <link
+        rel="icon"
+        type="image/webp"
+        href="images/logos/logo-white.webp"
+    >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
@@ -31,12 +40,18 @@
 
     <link rel="stylesheet" href="styles.css">
 
+
     <style>
+
         /* =========================================================
-           SHREEVATSA DARBAR — ABOUT US
+           SHRI VATSA DARBAR — ABOUT US
            Page-scoped styling only.
-           Shared site architecture is handled by styles.css/script.js.
+
+           IMPORTANT:
+           Header, announcement bar and search overlay are handled
+           by the shared header.html + styles.css + script.js system.
         ========================================================= */
+
 
         :root {
             --about-wine: #651f2b;
@@ -51,11 +66,17 @@
             --about-shadow: 0 18px 50px rgba(50, 25, 30, 0.08);
         }
 
+
+        /* =========================================================
+           ABOUT PAGE BASE
+        ========================================================= */
+
         .svd-about-page {
             background: var(--about-ivory);
             color: var(--about-text);
             overflow-x: hidden;
         }
+
 
         .svd-about-page *,
         .svd-about-page *::before,
@@ -63,241 +84,11 @@
             box-sizing: border-box;
         }
 
+
         .svd-about-page a {
             color: inherit;
         }
 
-        /* =========================================================
-           ANNOUNCEMENT BAR
-        ========================================================= */
-
-        .svd-about-page .announcement-bar {
-            background: var(--about-wine);
-            color: #fff;
-            min-height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8px 18px;
-            text-align: center;
-            font-family: "DM Sans", sans-serif;
-            font-size: 12px;
-            letter-spacing: 0.08em;
-        }
-
-        /* =========================================================
-           SHARED HEADER — USING THE STANDARD SITE CLASSES
-        ========================================================= */
-
-        .svd-about-page .site-header {
-            position: relative;
-            z-index: 1000;
-            background: rgba(255, 253, 248, 0.98);
-            border-bottom: 1px solid rgba(178, 138, 69, 0.15);
-        }
-
-        .svd-about-page .header-container {
-            width: min(1320px, calc(100% - 48px));
-            min-height: 88px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .svd-about-page .brand {
-            display: inline-flex;
-            align-items: center;
-            flex-shrink: 0;
-            text-decoration: none;
-        }
-
-        .svd-about-page .brand img {
-            display: block;
-            width: auto;
-            height: 68px;
-            object-fit: contain;
-        }
-
-        .svd-about-page .main-navigation {
-            margin-left: auto;
-        }
-
-        .svd-about-page .main-navigation ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
-
-        .svd-about-page .main-navigation a {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            min-height: 42px;
-            text-decoration: none;
-            color: var(--about-deep-wine);
-            font-family: "DM Sans", sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            transition: color 0.25s ease;
-        }
-
-        .svd-about-page .main-navigation a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 4px;
-            width: 0;
-            height: 1px;
-            background: var(--about-gold);
-            transition: width 0.25s ease;
-        }
-
-        .svd-about-page .main-navigation a:hover,
-        .svd-about-page .main-navigation a:focus-visible {
-            color: var(--about-gold);
-        }
-
-        .svd-about-page .main-navigation a:hover::after,
-        .svd-about-page .main-navigation a:focus-visible::after {
-            width: 100%;
-        }
-
-        .svd-about-page .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .svd-about-page .icon-button,
-        .svd-about-page .mobile-menu-button {
-            border: 0;
-            background: transparent;
-            color: var(--about-deep-wine);
-            cursor: pointer;
-            font: inherit;
-        }
-
-        .svd-about-page .icon-button {
-            position: relative;
-            width: 42px;
-            height: 42px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition:
-                background 0.25s ease,
-                color 0.25s ease;
-        }
-
-        .svd-about-page .icon-button:hover,
-        .svd-about-page .icon-button:focus-visible {
-            background: rgba(178, 138, 69, 0.09);
-            color: var(--about-gold);
-        }
-
-        .svd-about-page .bag-button {
-            position: relative;
-        }
-
-        .svd-about-page .bag-count {
-            position: absolute;
-            top: 2px;
-            right: 1px;
-            min-width: 17px;
-            height: 17px;
-            padding: 0 4px;
-            border-radius: 50px;
-            background: var(--about-wine);
-            color: #fff;
-            font-family: "DM Sans", sans-serif;
-            font-size: 9px;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
-        }
-
-        .svd-about-page .mobile-menu-button {
-            display: none;
-            width: 44px;
-            height: 44px;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-
-        /* =========================================================
-           SEARCH OVERLAY — STANDARD IDs/CLASSES
-        ========================================================= */
-
-        .svd-about-page .search-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 3000;
-            display: none;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 120px 24px 40px;
-            background: rgba(31, 15, 19, 0.72);
-            backdrop-filter: blur(8px);
-        }
-
-        .svd-about-page .search-overlay.active,
-        .svd-about-page .search-overlay.open {
-            display: flex;
-        }
-
-        .svd-about-page .search-box {
-            position: relative;
-            width: min(760px, 100%);
-            background: var(--about-ivory);
-            border: 1px solid var(--about-border);
-            padding: 34px;
-            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
-        }
-
-        .svd-about-page .search-box label {
-            display: block;
-            margin-bottom: 12px;
-            color: var(--about-wine);
-            font-family: "DM Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-        }
-
-        .svd-about-page .search-box input {
-            width: 100%;
-            border: 0;
-            border-bottom: 1px solid var(--about-border);
-            background: transparent;
-            padding: 12px 0;
-            outline: none;
-            color: var(--about-text);
-            font-family: "Cormorant Garamond", serif;
-            font-size: 30px;
-        }
-
-        .svd-about-page .search-close {
-            position: absolute;
-            top: 12px;
-            right: 14px;
-            width: 38px;
-            height: 38px;
-            border: 0;
-            background: transparent;
-            color: var(--about-wine);
-            cursor: pointer;
-            font-size: 18px;
-        }
 
         /* =========================================================
            HERO
@@ -305,10 +96,15 @@
 
         .about-hero {
             position: relative;
-            min-height: min(640px, 72vh);
+
+            min-height:
+                min(640px, 72vh);
+
             display: flex;
             align-items: center;
+
             isolation: isolate;
+
             background:
                 linear-gradient(
                     90deg,
@@ -317,70 +113,133 @@
                     rgba(44, 13, 20, 0.15) 75%,
                     rgba(44, 13, 20, 0.05) 100%
                 ),
-                url("images/sarees/saree-001/sarees-01-lifestyle.webp")
+                url(
+                    "images/sarees/saree-001/sarees-01-lifestyle.webp"
+                )
                 center center / cover no-repeat;
         }
 
+
         .about-hero::after {
             content: "";
+
             position: absolute;
             inset: 0;
+
             z-index: -1;
-            background: linear-gradient(
-                180deg,
-                rgba(20, 8, 11, 0.08),
-                rgba(20, 8, 11, 0.18)
-            );
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(20, 8, 11, 0.08),
+                    rgba(20, 8, 11, 0.18)
+                );
         }
 
+
         .about-hero-inner {
-            width: min(1320px, calc(100% - 48px));
+            width:
+                min(
+                    1320px,
+                    calc(100% - 48px)
+                );
+
             margin: 0 auto;
+
             padding: 100px 0;
         }
 
+
         .about-hero-content {
-            width: min(650px, 100%);
+            width:
+                min(
+                    650px,
+                    100%
+                );
+
             color: #fff;
         }
 
+
         .about-eyebrow {
             display: inline-flex;
+
             align-items: center;
+
             gap: 12px;
+
             margin-bottom: 20px;
+
             color: var(--about-soft-gold);
-            font-family: "DM Sans", sans-serif;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 11px;
+
             font-weight: 700;
+
             letter-spacing: 0.18em;
+
             text-transform: uppercase;
         }
 
+
         .about-eyebrow::before {
             content: "";
+
             width: 42px;
             height: 1px;
+
             background: currentColor;
         }
 
+
         .about-hero h1 {
             margin: 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(52px, 7vw, 88px);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(
+                    52px,
+                    7vw,
+                    88px
+                );
+
             font-weight: 500;
+
             line-height: 0.94;
+
             letter-spacing: -0.025em;
         }
 
+
         .about-hero p {
             max-width: 560px;
+
             margin: 28px 0 0;
-            color: rgba(255, 255, 255, 0.9);
-            font-family: "DM Sans", sans-serif;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.9
+                );
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 16px;
+
             line-height: 1.8;
         }
+
 
         /* =========================================================
            INTRODUCTION
@@ -388,103 +247,211 @@
 
         .about-intro {
             padding: 105px 24px;
-            background: var(--about-ivory);
+
+            background:
+                var(--about-ivory);
         }
 
+
         .about-intro-inner {
-            width: min(1020px, 100%);
+            width:
+                min(
+                    1020px,
+                    100%
+                );
+
             margin: 0 auto;
+
             text-align: center;
         }
 
+
         .about-section-label {
             margin-bottom: 16px;
-            color: var(--about-gold);
-            font-family: "DM Sans", sans-serif;
+
+            color:
+                var(--about-gold);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 11px;
+
             font-weight: 700;
+
             letter-spacing: 0.18em;
+
             text-transform: uppercase;
         }
+
 
         .about-intro h2,
         .about-commitment h2,
         .about-values-heading h2 {
             margin: 0;
-            color: var(--about-deep-wine);
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(40px, 5vw, 64px);
+
+            color:
+                var(--about-deep-wine);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(
+                    40px,
+                    5vw,
+                    64px
+                );
+
             font-weight: 500;
+
             line-height: 1;
         }
 
+
         .about-intro .about-lead {
             max-width: 800px;
+
             margin: 28px auto 0;
-            color: var(--about-text);
-            font-family: "DM Sans", sans-serif;
+
+            color:
+                var(--about-text);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 17px;
+
             line-height: 1.9;
         }
 
+
         .about-intro .about-copy {
             max-width: 760px;
+
             margin: 22px auto 0;
-            color: var(--about-muted);
-            font-family: "DM Sans", sans-serif;
+
+            color:
+                var(--about-muted);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 15px;
+
             line-height: 1.9;
         }
+
 
         /* =========================================================
            SIGNATURE VALUES
         ========================================================= */
 
         .about-signature {
-            padding: 0 24px 110px;
-            background: var(--about-ivory);
+            padding:
+                0
+                24px
+                110px;
+
+            background:
+                var(--about-ivory);
         }
 
+
         .about-signature-grid {
-            width: min(1180px, 100%);
+            width:
+                min(
+                    1180px,
+                    100%
+                );
+
             margin: 0 auto;
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border-top: 1px solid var(--about-border);
-            border-bottom: 1px solid var(--about-border);
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
+            border-top:
+                1px solid
+                var(--about-border);
+
+            border-bottom:
+                1px solid
+                var(--about-border);
         }
+
 
         .about-signature-item {
             padding: 42px 28px;
+
             text-align: center;
         }
 
-        .about-signature-item + .about-signature-item {
-            border-left: 1px solid var(--about-border);
+
+        .about-signature-item
+        + .about-signature-item {
+            border-left:
+                1px solid
+                var(--about-border);
         }
+
 
         .about-signature-number {
             margin-bottom: 12px;
-            color: var(--about-gold);
-            font-family: "Cormorant Garamond", serif;
+
+            color:
+                var(--about-gold);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
             font-size: 22px;
         }
 
+
         .about-signature-item h3 {
-            margin: 0 0 10px;
-            color: var(--about-deep-wine);
-            font-family: "Cormorant Garamond", serif;
+            margin:
+                0
+                0
+                10px;
+
+            color:
+                var(--about-deep-wine);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
             font-size: 28px;
+
             font-weight: 600;
         }
 
+
         .about-signature-item p {
             margin: 0;
-            color: var(--about-muted);
-            font-family: "DM Sans", sans-serif;
+
+            color:
+                var(--about-muted);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 13px;
+
             line-height: 1.7;
         }
+
 
         /* =========================================================
            COMMITMENT / IMAGE SECTION
@@ -492,66 +459,133 @@
 
         .about-commitment {
             padding: 110px 24px;
-            background: var(--about-cream);
+
+            background:
+                var(--about-cream);
         }
 
+
         .about-commitment-inner {
-            width: min(1240px, 100%);
+            width:
+                min(
+                    1240px,
+                    100%
+                );
+
             margin: 0 auto;
+
             display: grid;
-            grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+
+            grid-template-columns:
+                minmax(0, 0.95fr)
+                minmax(0, 1.05fr);
+
             gap: 76px;
+
             align-items: center;
         }
+
 
         .about-commitment-image {
             position: relative;
         }
 
+
         .about-commitment-image::before {
             content: "";
+
             position: absolute;
-            inset: 22px -22px -22px 22px;
-            border: 1px solid var(--about-border);
+
+            inset:
+                22px
+                -22px
+                -22px
+                22px;
+
+            border:
+                1px solid
+                var(--about-border);
+
             z-index: 0;
         }
 
+
         .about-commitment-image img {
             position: relative;
+
             z-index: 1;
+
             display: block;
+
             width: 100%;
+
             aspect-ratio: 1 / 1;
+
             object-fit: cover;
         }
+
 
         .about-commitment-copy {
             padding: 20px 0;
         }
 
-        .about-commitment-copy .about-section-label {
+
+        .about-commitment-copy
+        .about-section-label {
             margin-bottom: 18px;
         }
 
+
         .about-commitment-copy p {
             margin: 24px 0 0;
-            color: var(--about-muted);
-            font-family: "DM Sans", sans-serif;
+
+            color:
+                var(--about-muted);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 15px;
+
             line-height: 1.9;
         }
 
+
         .about-commitment-quote {
             position: relative;
+
             margin: 34px 0 0;
-            padding: 24px 0 0 26px;
-            border-left: 2px solid var(--about-gold);
-            color: var(--about-deep-wine);
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(25px, 3vw, 34px);
+
+            padding:
+                24px
+                0
+                0
+                26px;
+
+            border-left:
+                2px solid
+                var(--about-gold);
+
+            color:
+                var(--about-deep-wine);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(
+                    25px,
+                    3vw,
+                    34px
+                );
+
             line-height: 1.25;
+
             font-style: italic;
         }
+
 
         /* =========================================================
            VALUES
@@ -559,75 +593,154 @@
 
         .about-values {
             padding: 110px 24px;
-            background: var(--about-ivory);
+
+            background:
+                var(--about-ivory);
         }
 
+
         .about-values-heading {
-            width: min(760px, 100%);
-            margin: 0 auto 58px;
+            width:
+                min(
+                    760px,
+                    100%
+                );
+
+            margin:
+                0
+                auto
+                58px;
+
             text-align: center;
         }
+
 
         .about-values-heading p {
             margin: 22px 0 0;
-            color: var(--about-muted);
-            font-family: "DM Sans", sans-serif;
+
+            color:
+                var(--about-muted);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 15px;
+
             line-height: 1.8;
         }
 
+
         .about-values-grid {
-            width: min(1160px, 100%);
+            width:
+                min(
+                    1160px,
+                    100%
+                );
+
             margin: 0 auto;
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
             gap: 20px;
         }
 
+
         .about-value-card {
             min-height: 230px;
+
             padding: 34px 28px;
+
             background: #fff;
-            border: 1px solid var(--about-border);
+
+            border:
+                1px solid
+                var(--about-border);
+
             text-align: center;
+
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
         }
 
+
         .about-value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--about-shadow);
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                var(--about-shadow);
         }
+
 
         .about-value-icon {
             width: 48px;
             height: 48px;
-            margin: 0 auto 20px;
+
+            margin:
+                0
+                auto
+                20px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
-            color: var(--about-gold);
-            border: 1px solid var(--about-border);
+
+            color:
+                var(--about-gold);
+
+            border:
+                1px solid
+                var(--about-border);
+
             border-radius: 50%;
+
             font-size: 16px;
         }
 
+
         .about-value-card h3 {
-            margin: 0 0 12px;
-            color: var(--about-deep-wine);
-            font-family: "Cormorant Garamond", serif;
+            margin:
+                0
+                0
+                12px;
+
+            color:
+                var(--about-deep-wine);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
             font-size: 28px;
+
             font-weight: 600;
         }
 
+
         .about-value-card p {
             margin: 0;
-            color: var(--about-muted);
-            font-family: "DM Sans", sans-serif;
+
+            color:
+                var(--about-muted);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 13px;
+
             line-height: 1.75;
         }
+
 
         /* =========================================================
            CLOSING STATEMENT
@@ -635,47 +748,97 @@
 
         .about-closing {
             position: relative;
+
             padding: 115px 24px;
+
             background:
                 linear-gradient(
                     rgba(55, 15, 24, 0.9),
                     rgba(55, 15, 24, 0.9)
                 ),
-                url("images/sarees/saree-001/sarees-01-lifestyle.webp")
+                url(
+                    "images/sarees/saree-001/sarees-01-lifestyle.webp"
+                )
                 center / cover no-repeat;
+
             color: #fff;
+
             text-align: center;
         }
 
+
         .about-closing-inner {
-            width: min(850px, 100%);
+            width:
+                min(
+                    850px,
+                    100%
+                );
+
             margin: 0 auto;
         }
 
+
         .about-closing-mark {
             margin-bottom: 20px;
-            color: var(--about-soft-gold);
-            font-family: "Cormorant Garamond", serif;
+
+            color:
+                var(--about-soft-gold);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
             font-size: 38px;
         }
 
+
         .about-closing h2 {
             margin: 0;
+
             color: #fff;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(38px, 5vw, 62px);
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(
+                    38px,
+                    5vw,
+                    62px
+                );
+
             font-weight: 500;
+
             line-height: 1.05;
         }
 
+
         .about-closing p {
             max-width: 690px;
-            margin: 26px auto 0;
-            color: rgba(255, 255, 255, 0.82);
-            font-family: "DM Sans", sans-serif;
+
+            margin:
+                26px
+                auto
+                0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.82
+                );
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
             font-size: 15px;
+
             line-height: 1.8;
         }
+
 
         /* =========================================================
            WHATSAPP FLOAT
@@ -683,208 +846,217 @@
 
         .about-whatsapp {
             position: fixed;
+
             right: 22px;
             bottom: 22px;
+
             z-index: 1500;
+
             width: 54px;
             height: 54px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             border-radius: 50%;
+
             background: #25d366;
+
             color: #fff !important;
+
             text-decoration: none;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+            box-shadow:
+                0
+                12px
+                30px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.18
+                );
+
             font-size: 24px;
+
             transition:
                 transform 0.25s ease,
                 box-shadow 0.25s ease;
         }
 
+
         .about-whatsapp:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0
+                16px
+                34px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.22
+                );
         }
 
+
         /* =========================================================
-           MOBILE
+           MOBILE — ABOUT CONTENT ONLY
+           
+           IMPORTANT:
+           No header rules here.
+           Shared header is controlled by styles.css.
         ========================================================= */
 
         @media (max-width: 980px) {
-            .svd-about-page .header-container {
-                width: min(100% - 32px, 1320px);
-                min-height: 78px;
-            }
-
-            .svd-about-page .brand img {
-                height: 58px;
-            }
-
-            .svd-about-page .main-navigation {
-                display: none;
-            }
-
-            .svd-about-page .mobile-menu-button {
-                display: inline-flex;
-                order: 3;
-                margin-left: 2px;
-            }
-
-            .svd-about-page .header-actions {
-                margin-left: auto;
-            }
-
-            .svd-about-page .header-actions .icon-button:nth-child(2),
-            .svd-about-page .header-actions .icon-button:nth-child(3) {
-                display: none;
-            }
-
-            .svd-about-page .main-navigation.open,
-            .svd-about-page .main-navigation.active,
-            .svd-about-page .main-navigation.is-open {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                display: block;
-                margin: 0;
-                padding: 12px 20px 22px;
-                background: var(--about-ivory);
-                border-bottom: 1px solid var(--about-border);
-                box-shadow: 0 18px 35px rgba(40, 15, 20, 0.08);
-            }
-
-            .svd-about-page .main-navigation.open ul,
-            .svd-about-page .main-navigation.active ul,
-            .svd-about-page .main-navigation.is-open ul {
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-            }
-
-            .svd-about-page .main-navigation.open a,
-            .svd-about-page .main-navigation.active a,
-            .svd-about-page .main-navigation.is-open a {
-                min-height: 48px;
-                justify-content: center;
-                border-bottom: 1px solid rgba(178, 138, 69, 0.12);
-            }
 
             .about-hero {
                 min-height: 600px;
-                background-position: 62% center;
+
+                background-position:
+                    62% center;
             }
 
+
             .about-hero-inner {
-                width: min(100% - 36px, 1320px);
+                width:
+                    min(
+                        100% - 36px,
+                        1320px
+                    );
+
                 padding: 80px 0;
             }
 
+
             .about-signature-grid,
             .about-values-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
             }
+
 
             .about-signature-item:nth-child(3) {
                 border-left: 0;
-                border-top: 1px solid var(--about-border);
+
+                border-top:
+                    1px solid
+                    var(--about-border);
             }
 
+
             .about-signature-item:nth-child(4) {
-                border-top: 1px solid var(--about-border);
+                border-top:
+                    1px solid
+                    var(--about-border);
             }
+
 
             .about-commitment-inner {
                 grid-template-columns: 1fr;
+
                 gap: 55px;
             }
 
+
             .about-commitment-image {
-                width: min(680px, 100%);
+                width:
+                    min(
+                        680px,
+                        100%
+                    );
+
                 margin: 0 auto;
             }
+
         }
 
+
+        /* =========================================================
+           SMALL MOBILE — ABOUT CONTENT ONLY
+        ========================================================= */
+
         @media (max-width: 640px) {
-            .svd-about-page .announcement-bar {
-                min-height: 34px;
-                padding: 7px 12px;
-                font-size: 10px;
-                letter-spacing: 0.06em;
-            }
-
-            .svd-about-page .header-container {
-                width: calc(100% - 24px);
-                min-height: 70px;
-                gap: 8px;
-            }
-
-            .svd-about-page .brand img {
-                height: 50px;
-                max-width: 185px;
-            }
-
-            .svd-about-page .header-actions {
-                gap: 2px;
-            }
-
-            .svd-about-page .icon-button,
-            .svd-about-page .mobile-menu-button {
-                width: 38px;
-                height: 38px;
-            }
-
-            .svd-about-page .search-overlay {
-                padding: 88px 14px 25px;
-            }
-
-            .svd-about-page .search-box {
-                padding: 28px 22px;
-            }
-
-            .svd-about-page .search-box input {
-                font-size: 25px;
-            }
 
             .about-hero {
                 min-height: 540px;
+
                 background:
                     linear-gradient(
                         90deg,
-                        rgba(44, 13, 20, 0.78),
-                        rgba(44, 13, 20, 0.42)
+                        rgba(
+                            44,
+                            13,
+                            20,
+                            0.78
+                        ),
+                        rgba(
+                            44,
+                            13,
+                            20,
+                            0.42
+                        )
                     ),
-                    url("images/sarees/saree-001/sarees-01-lifestyle.webp")
+                    url(
+                        "images/sarees/saree-001/sarees-01-lifestyle.webp"
+                    )
                     58% center / cover no-repeat;
             }
 
+
             .about-hero-inner {
-                width: calc(100% - 32px);
+                width:
+                    calc(
+                        100% - 32px
+                    );
+
                 padding: 65px 0;
             }
 
+
             .about-hero h1 {
-                font-size: clamp(46px, 15vw, 64px);
+                font-size:
+                    clamp(
+                        46px,
+                        15vw,
+                        64px
+                    );
             }
+
 
             .about-hero p {
                 margin-top: 22px;
+
                 font-size: 14px;
+
                 line-height: 1.75;
             }
+
 
             .about-intro,
             .about-commitment,
             .about-values,
             .about-closing {
-                padding: 78px 18px;
+                padding:
+                    78px
+                    18px;
             }
 
+
             .about-signature {
-                padding: 0 18px 78px;
+                padding:
+                    0
+                    18px
+                    78px;
             }
+
 
             .about-intro h2,
             .about-commitment h2,
@@ -892,231 +1064,125 @@
                 font-size: 43px;
             }
 
+
             .about-intro .about-lead {
                 font-size: 15px;
+
                 line-height: 1.8;
             }
+
 
             .about-intro .about-copy,
             .about-commitment-copy p {
                 font-size: 14px;
+
                 line-height: 1.8;
             }
+
 
             .about-signature-grid,
             .about-values-grid {
                 grid-template-columns: 1fr;
             }
 
+
             .about-signature-item {
                 padding: 30px 20px;
             }
 
-            .about-signature-item + .about-signature-item {
+
+            .about-signature-item
+            + .about-signature-item {
                 border-left: 0;
-                border-top: 1px solid var(--about-border);
+
+                border-top:
+                    1px solid
+                    var(--about-border);
             }
 
+
             .about-commitment-image::before {
-                inset: 12px -12px -12px 12px;
+                inset:
+                    12px
+                    -12px
+                    -12px
+                    12px;
             }
+
 
             .about-commitment-inner {
                 gap: 42px;
             }
 
+
             .about-value-card {
                 min-height: auto;
+
                 padding: 30px 24px;
             }
 
+
             .about-closing {
-                padding: 82px 20px;
+                padding:
+                    82px
+                    20px;
             }
+
 
             .about-closing h2 {
                 font-size: 43px;
             }
 
+
             .about-closing p {
                 font-size: 14px;
             }
 
+
             .about-whatsapp {
                 right: 16px;
                 bottom: 16px;
+
                 width: 50px;
                 height: 50px;
+
                 font-size: 22px;
             }
+
         }
 
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
         @media (prefers-reduced-motion: reduce) {
+
             .svd-about-page *,
             .svd-about-page *::before,
             .svd-about-page *::after {
                 scroll-behavior: auto !important;
-                transition: none !important;
+
+                transition:
+                    none !important;
             }
+
         }
+
     </style>
 </head>
 
+
 <body class="svd-about-page">
-
-    <!-- =========================================================
-         ANNOUNCEMENT
-    ========================================================== -->
-    <div class="announcement-bar">
-        ShriVatsaDarbar&nbsp; | &nbsp;Premium Sarees &amp; Suits&nbsp; | &nbsp;Order on WhatsApp
-    </div>
-
-
-<!-- =========================================================
-     SHARED HEADER
-     IMPORTANT: Standard classes/IDs used by script.js
-========================================================= -->
-<header class="site-header">
-    <div class="header-container">
-
-        <!-- LOGO -->
-        <a href="index.html"
-           class="brand"
-           aria-label="ShriVatsaDarbar Home">
-            <img
-                src="images/logos/logo-white.webp"
-                alt="ShriVatsaDarbar"
-            >
-        </a>
-
-        <!-- NAVIGATION -->
-        <nav
-            class="main-navigation"
-            id="mainNavigation"
-            aria-label="Main navigation"
-        >
-            <a href="index.html">Home</a>
-            <a href="sarees.html">Sarees</a>
-            <a href="suits.html">Suits</a>
-            <a href="new-arrivals.html">New Arrivals</a>
-            <a href="best-sellers.html">Best Sellers</a>
-            <a href="about.html" aria-current="page">About Us</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-
-        <!-- HEADER ACTIONS -->
-        <div class="header-actions">
-
-            <!-- SEARCH -->
-            <button
-                class="icon-button"
-                id="searchButton"
-                type="button"
-                aria-label="Search"
-            >
-                <i
-                    class="fa-solid fa-magnifying-glass"
-                    aria-hidden="true"
-                ></i>
-            </button>
-
-            <!-- WISHLIST -->
-            <button
-                class="icon-button"
-                type="button"
-                aria-label="Wishlist"
-                onclick="showComingSoon('Wishlist')"
-            >
-                <i
-                    class="fa-regular fa-heart"
-                    aria-hidden="true"
-                ></i>
-            </button>
-
-            <!-- ACCOUNT -->
-            <button
-                class="icon-button"
-                type="button"
-                aria-label="Account"
-                onclick="showComingSoon('Account')"
-            >
-                <i
-                    class="fa-regular fa-user"
-                    aria-hidden="true"
-                ></i>
-            </button>
-
-            <!-- SHOPPING BAG -->
-            <button
-                class="icon-button bag-button"
-                id="shoppingBagButton"
-                type="button"
-                aria-label="Shopping bag"
-            >
-                <i
-                    class="fa-solid fa-bag-shopping"
-                    aria-hidden="true"
-                ></i>
-                <span class="bag-count">0</span>
-            </button>
-
-        </div>
-
-        <!-- MOBILE MENU -->
-        <button
-            class="mobile-menu-button"
-            id="mobileMenuButton"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-controls="mainNavigation"
-            aria-expanded="false"
-        >
-            <i
-                class="fa-solid fa-bars"
-                aria-hidden="true"
-            ></i>
-        </button>
-
-    </div>
-</header>
-
-    <!-- =========================================================
-         SHARED SEARCH OVERLAY
-    ========================================================== -->
-    <div
-        class="search-overlay"
-        id="searchOverlay"
-        aria-hidden="true"
-    >
-        <div class="search-box">
-
-            <button
-                class="search-close"
-                id="searchClose"
-                type="button"
-                aria-label="Close search"
-            >
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
-
-            <label for="siteSearch">Search ShriVatsaDarbar</label>
-
-            <input
-                id="siteSearch"
-                type="search"
-                placeholder="Search sarees, suits..."
-                autocomplete="off"
-            >
-
-        </div>
-    </div>
 
 
     <main>
 
+
         <!-- =====================================================
              HERO
         ====================================================== -->
+
         <section class="about-hero">
 
             <div class="about-hero-inner">
@@ -1127,10 +1193,12 @@
                         About ShriVatsaDarbar
                     </div>
 
+
                     <h1>
                         More Than Outfits,<br>
                         A Story of Grace.
                     </h1>
+
 
                     <p>
                         We believe what you wear should feel personal —
@@ -1148,6 +1216,7 @@
         <!-- =====================================================
              INTRO
         ====================================================== -->
+
         <section class="about-intro">
 
             <div class="about-intro-inner">
@@ -1156,15 +1225,18 @@
                     Our Philosophy
                 </div>
 
+
                 <h2>
                     Rooted in Tradition,<br>
                     Designed for Today.
                 </h2>
 
+
                 <p class="about-lead">
                     ShriVatsaDarbar is built around a simple belief:
                     timeless Indian elegance never goes out of style.
                 </p>
+
 
                 <p class="about-copy">
                     From graceful sarees to thoughtfully designed suits,
@@ -1181,45 +1253,83 @@
         <!-- =====================================================
              SIGNATURE VALUES
         ====================================================== -->
+
         <section class="about-signature">
 
             <div class="about-signature-grid">
 
+
                 <article class="about-signature-item">
-                    <div class="about-signature-number">01</div>
-                    <h3>Curated</h3>
+
+                    <div class="about-signature-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Curated
+                    </h3>
+
                     <p>
                         Collections chosen with intention,
                         not simply filled with options.
                     </p>
+
                 </article>
 
+
                 <article class="about-signature-item">
-                    <div class="about-signature-number">02</div>
-                    <h3>Refined</h3>
+
+                    <div class="about-signature-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Refined
+                    </h3>
+
                     <p>
                         Details, textures and finishes selected
                         to create an elevated look.
                     </p>
+
                 </article>
 
+
                 <article class="about-signature-item">
-                    <div class="about-signature-number">03</div>
-                    <h3>Personal</h3>
+
+                    <div class="about-signature-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Personal
+                    </h3>
+
                     <p>
                         Pieces that can become part of your
                         own style and your own story.
                     </p>
+
                 </article>
 
+
                 <article class="about-signature-item">
-                    <div class="about-signature-number">04</div>
-                    <h3>Timeless</h3>
+
+                    <div class="about-signature-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Timeless
+                    </h3>
+
                     <p>
                         Designs intended to remain beautiful
                         beyond a single season.
                     </p>
+
                 </article>
+
 
             </div>
 
@@ -1229,9 +1339,11 @@
         <!-- =====================================================
              COMMITMENT
         ====================================================== -->
+
         <section class="about-commitment">
 
             <div class="about-commitment-inner">
+
 
                 <div class="about-commitment-image">
 
@@ -1243,16 +1355,19 @@
 
                 </div>
 
+
                 <div class="about-commitment-copy">
 
                     <div class="about-section-label">
                         Our Commitment
                     </div>
 
+
                     <h2>
                         The Beauty Is<br>
                         In The Details.
                     </h2>
+
 
                     <p>
                         We pay attention to the details that make an
@@ -1261,12 +1376,14 @@
                         of colour and the way every element comes together.
                     </p>
 
+
                     <p>
                         Our approach is deliberately thoughtful.
                         Instead of chasing every passing trend, we look
                         for pieces that combine contemporary appeal with
                         the richness and character of Indian fashion.
                     </p>
+
 
                     <div class="about-commitment-quote">
                         Elegance is found in the details that make
@@ -1283,7 +1400,9 @@
         <!-- =====================================================
              VALUES
         ====================================================== -->
+
         <section class="about-values">
+
 
             <div class="about-values-heading">
 
@@ -1291,10 +1410,12 @@
                     What Guides Us
                 </div>
 
+
                 <h2>
                     Values Behind<br>
                     Every Choice.
                 </h2>
+
 
                 <p>
                     The principles that shape how we curate our
@@ -1303,15 +1424,26 @@
 
             </div>
 
+
             <div class="about-values-grid">
+
 
                 <article class="about-value-card">
 
                     <div class="about-value-icon">
-                        <i class="fa-solid fa-gem" aria-hidden="true"></i>
+
+                        <i
+                            class="fa-solid fa-gem"
+                            aria-hidden="true"
+                        ></i>
+
                     </div>
 
-                    <h3>Authenticity</h3>
+
+                    <h3>
+                        Authenticity
+                    </h3>
+
 
                     <p>
                         We value genuine craftsmanship, meaningful
@@ -1325,10 +1457,19 @@
                 <article class="about-value-card">
 
                     <div class="about-value-icon">
-                        <i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>
+
+                        <i
+                            class="fa-solid fa-feather-pointed"
+                            aria-hidden="true"
+                        ></i>
+
                     </div>
 
-                    <h3>Thoughtfulness</h3>
+
+                    <h3>
+                        Thoughtfulness
+                    </h3>
+
 
                     <p>
                         Every collection and every customer interaction
@@ -1341,10 +1482,19 @@
                 <article class="about-value-card">
 
                     <div class="about-value-icon">
-                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+
+                        <i
+                            class="fa-regular fa-clock"
+                            aria-hidden="true"
+                        ></i>
+
                     </div>
 
-                    <h3>Timelessness</h3>
+
+                    <h3>
+                        Timelessness
+                    </h3>
+
 
                     <p>
                         We seek styles that remain relevant, elegant
@@ -1357,10 +1507,19 @@
                 <article class="about-value-card">
 
                     <div class="about-value-icon">
-                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+
+                        <i
+                            class="fa-regular fa-heart"
+                            aria-hidden="true"
+                        ></i>
+
                     </div>
 
-                    <h3>Customer Delight</h3>
+
+                    <h3>
+                        Customer Delight
+                    </h3>
+
 
                     <p>
                         From discovery to enquiry and purchase,
@@ -1370,6 +1529,7 @@
 
                 </article>
 
+
             </div>
 
         </section>
@@ -1378,18 +1538,22 @@
         <!-- =====================================================
              CLOSING
         ====================================================== -->
+
         <section class="about-closing">
 
             <div class="about-closing-inner">
+
 
                 <div class="about-closing-mark">
                     ✦
                 </div>
 
+
                 <h2>
                     Grace is not just what you wear,
                     but how you carry your story.
                 </h2>
+
 
                 <p>
                     At ShriVatsaDarbar, we are creating a fashion
@@ -1401,18 +1565,21 @@
 
         </section>
 
+
     </main>
 
 
     <!-- =========================================================
          MASTER FOOTER
     ========================================================== -->
+
     <div id="site-footer"></div>
 
 
     <!-- =========================================================
          WHATSAPP
     ========================================================== -->
+
     <a
         class="about-whatsapp"
         href="https://wa.me/918826196544"
@@ -1421,13 +1588,17 @@
         aria-label="Chat with ShriVatsaDarbar on WhatsApp"
         title="Chat on WhatsApp"
     >
-        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        <i
+            class="fa-brands fa-whatsapp"
+            aria-hidden="true"
+        ></i>
     </a>
 
 
     <!-- =========================================================
          SHARED SCRIPT
     ========================================================== -->
+
     <script src="script.js"></script>
 
 </body>
