@@ -1,1 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Page Not Found | ShriVatsaDarbar</title>
+
+    <meta
+        name="description"
+        content="The page you are looking for could not be found. Explore ShriVatsaDarbar's premium sarees and suits."
+    >
+
+    <meta
+        name="robots"
+        content="noindex, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://chandrap199.github.io/shrivatsadarbar-suits/404.html"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main stylesheet -->
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           404 PAGE
+           ===================================================== */
+
+        .svd-404-page {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    rgba(215, 180, 106, 0.10),
+                    transparent 42%
+                ),
+                var(--ivory);
+        }
+
+
+        /* =====================================================
+           404 HEADER
+           ===================================================== */
+
+        .svd-404-header {
+            background: var(--wine);
+
+            border-bottom:
+                1px solid rgba(215, 180, 106, 0.35);
+
+            padding: 18px 25px;
+        }
+
+
+        .svd-404-header-inner {
+            width: min(
+                calc(100% - 30px),
+                1320px
+            );
+
+            margin-inline: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .svd-404-logo {
+            width: 190px;
+            height: auto;
+        }
+
+
+        /* =====================================================
+           404 CONTENT
+           ===================================================== */
+
+        .svd-404-main {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding:
+                90px 25px 100px;
+        }
+
+
+        .svd-404-content {
+            width: min(
+                100%,
+                760px
+            );
+
+            margin-inline: auto;
+
+            text-align: center;
+        }
+
+
+        .svd-404-eyebrow {
+            display: inline-block;
+
+            margin-bottom: 16px;
+
+            color: var(--gold);
+
+            font-family: var(--sans);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 0.24em;
+
+            text-transform: uppercase;
+        }
+
+
+        .svd-404-number {
+            color: var(--gold);
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                110px,
+                18vw,
+                210px
+            );
+
+            font-weight: 600;
+
+            line-height: 0.78;
+
+            letter-spacing: -0.045em;
+
+            text-shadow:
+                0 12px 30px
+                rgba(75, 7, 19, 0.08);
+        }
+
+
+        .svd-404-title {
+            margin-top: 38px;
+
+            color: var(--text);
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                38px,
+                5vw,
+                62px
+            );
+
+            font-weight: 600;
+
+            line-height: 1;
+        }
+
+
+        .svd-404-ornament {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            margin: 20px 0 24px;
+        }
+
+
+        .svd-404-ornament span {
+            width: 52px;
+            height: 1px;
+
+            background: var(--gold);
+        }
+
+
+        .svd-404-ornament i {
+            color: var(--gold);
+
+            font-size: 7px;
+        }
+
+
+        .svd-404-description {
+            width: min(
+                100%,
+                570px
+            );
+
+            margin-inline: auto;
+
+            color: var(--text-soft);
+
+            font-family: var(--serif);
+
+            font-size: 20px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           404 ACTIONS
+           ===================================================== */
+
+        .svd-404-actions {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            margin-top: 35px;
+        }
+
+
+        .svd-404-button {
+            min-width: 175px;
+
+            min-height: 48px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding:
+                13px 24px;
+
+            border:
+                1px solid var(--gold);
+
+            font-family: var(--sans);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 0.10em;
+
+            text-transform: uppercase;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .svd-404-button-primary {
+            background: var(--gold);
+
+            color: #ffffff;
+        }
+
+
+        .svd-404-button-primary:hover {
+            background: var(--wine);
+
+            border-color: var(--wine);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .svd-404-button-secondary {
+            background:
+                rgba(255, 255, 255, 0.70);
+
+            color: var(--wine);
+        }
+
+
+        .svd-404-button-secondary:hover {
+            background: var(--wine);
+
+            border-color: var(--wine);
+
+            color: #ffffff;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =====================================================
+           404 DECORATIVE CARD
+           ===================================================== */
+
+        .svd-404-note {
+            width: min(
+                100%,
+                620px
+            );
+
+            margin:
+                55px auto 0;
+
+            padding:
+                20px 24px;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                rgba(255, 255, 255, 0.55);
+
+            color: var(--text-soft);
+
+            font-size: 12px;
+
+            letter-spacing: 0.03em;
+        }
+
+
+        .svd-404-note i {
+            margin-right: 7px;
+
+            color: var(--gold);
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .svd-404-header {
+                padding:
+                    14px 18px;
+            }
+
+
+            .svd-404-logo {
+                width: 155px;
+            }
+
+
+            .svd-404-main {
+                padding:
+                    65px 20px 75px;
+            }
+
+
+            .svd-404-number {
+                font-size:
+                    clamp(
+                        100px,
+                        32vw,
+                        155px
+                    );
+            }
+
+
+            .svd-404-title {
+                margin-top: 30px;
+
+                font-size:
+                    clamp(
+                        34px,
+                        9vw,
+                        48px
+                    );
+            }
+
+
+            .svd-404-description {
+                font-size: 18px;
+            }
+
+
+            .svd-404-actions {
+                flex-direction: column;
+
+                width: 100%;
+            }
+
+
+            .svd-404-button {
+                width: min(
+                    100%,
+                    300px
+                );
+            }
+
+
+            .svd-404-note {
+                margin-top: 40px;
+
+                font-size: 11px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="svd-404-page">
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <header class="svd-404-header">
+
+            <div class="svd-404-header-inner">
+
+                <a
+                    href="index.html"
+                    aria-label="ShriVatsaDarbar Home"
+                >
+
+                    <img
+                        src="images/logos/logo-white.webp"
+                        alt="ShriVatsaDarbar"
+                        class="svd-404-logo"
+                    >
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             MAIN 404 CONTENT
+             ================================================= -->
+
+        <main class="svd-404-main">
+
+            <section
+                class="svd-404-content"
+                aria-labelledby="page-not-found-title"
+            >
+
+                <span class="svd-404-eyebrow">
+                    ShriVatsaDarbar
+                </span>
+
+
+                <div
+                    class="svd-404-number"
+                    aria-hidden="true"
+                >
+                    404
+                </div>
+
+
+                <h1
+                    id="page-not-found-title"
+                    class="svd-404-title"
+                >
+                    Page Not Found
+                </h1>
+
+
+                <div
+                    class="svd-404-ornament"
+                    aria-hidden="true"
+                >
+
+                    <span></span>
+
+                    <i class="fa-solid fa-diamond"></i>
+
+                    <span></span>
+
+                </div>
+
+
+                <p class="svd-404-description">
+
+                    The page you're looking for may have moved,
+                    changed, or is no longer available.
+                    Let us help you find your way back.
+
+                </p>
+
+
+                <!-- =================================================
+                     ACTIONS
+                     ================================================= -->
+
+                <div class="svd-404-actions">
+
+                    <a
+                        href="index.html"
+                        class="svd-404-button svd-404-button-primary"
+                    >
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Back to Home
+
+                    </a>
+
+
+                    <a
+                        href="collections/collections.html"
+                        class="svd-404-button svd-404-button-secondary"
+                    >
+
+                        Explore Collections
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     SUPPORT NOTE
+                     ================================================= -->
+
+                <div class="svd-404-note">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    Discover elegant sarees and suits,
+                    thoughtfully curated by ShriVatsaDarbar.
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =================================================
+             MASTER FOOTER
+             ================================================= -->
+
+        <div id="site-footer"></div>
+
+
+    </div>
+
+
+    <!-- Shared site controller -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
