@@ -96,6 +96,243 @@
 
 
 
+
+   /* =========================================================
+   MASTER HEADER
+   ---------------------------------------------------------
+   Loads the shared announcement bar, header navigation,
+   header actions and search overlay from header.html.
+   ========================================================= */
+
+function normalizeHeaderPaths(container) {
+
+    if (!container) {
+        return;
+    }
+
+
+    container
+        .querySelectorAll("a[href]")
+        .forEach(function (link) {
+
+            var href =
+                link.getAttribute("href");
+
+            if (!href) {
+                return;
+            }
+
+            link.setAttribute(
+                "href",
+                resolveSiteUrl(href)
+            );
+
+        });
+
+
+    container
+        .querySelectorAll("img[src]")
+        .forEach(function (image) {
+
+            var src =
+                image.getAttribute("src");
+
+            if (!src) {
+                return;
+            }
+
+            image.setAttribute(
+                "src",
+                resolveSiteUrl(src)
+            );
+
+        });
+
+}
+
+
+async function loadMasterHeader() {
+
+    var headerUrl =
+        new URL(
+            "header.html",
+            siteRoot
+        ).href;
+
+
+    try {
+
+        var response =
+            await fetch(
+                headerUrl,
+                {
+                    cache: "no-cache"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Header request failed: " +
+                response.status
+            );
+
+        }
+
+
+        var html =
+            await response.text();
+
+
+        var parser =
+            new DOMParser();
+
+
+        var headerDocument =
+            parser.parseFromString(
+                html,
+                "text/html"
+            );
+
+
+        var fetchedAnnouncement =
+            headerDocument.querySelector(
+                ".announcement-bar"
+            );
+
+
+        var fetchedHeader =
+            headerDocument.querySelector(
+                "header.site-header"
+            );
+
+
+        var fetchedSearch =
+            headerDocument.querySelector(
+                "#searchOverlay"
+            );
+
+
+        if (!fetchedHeader) {
+
+            throw new Error(
+                "Master header element not found"
+            );
+
+        }
+
+
+        normalizeHeaderPaths(
+            headerDocument
+        );
+
+
+        /*
+         * -----------------------------------------------------
+         * ANNOUNCEMENT BAR
+         * -----------------------------------------------------
+         */
+
+        var existingAnnouncement =
+            document.querySelector(
+                ".announcement-bar"
+            );
+
+
+        if (
+            existingAnnouncement &&
+            fetchedAnnouncement
+        ) {
+
+            existingAnnouncement.replaceWith(
+                fetchedAnnouncement
+            );
+
+        } else if (
+            fetchedAnnouncement &&
+            !existingAnnouncement
+        ) {
+
+            document.body.prepend(
+                fetchedAnnouncement
+            );
+
+        }
+
+
+        /*
+         * -----------------------------------------------------
+         * MAIN HEADER
+         * -----------------------------------------------------
+         */
+
+        var existingHeader =
+            document.querySelector(
+                "header.site-header"
+            );
+
+
+        if (existingHeader) {
+
+            existingHeader.replaceWith(
+                fetchedHeader
+            );
+
+        } else {
+
+            document.body.prepend(
+                fetchedHeader
+            );
+
+        }
+
+
+        /*
+         * -----------------------------------------------------
+         * SEARCH OVERLAY
+         * -----------------------------------------------------
+         */
+
+        var existingSearch =
+            document.getElementById(
+                "searchOverlay"
+            );
+
+
+        if (existingSearch) {
+
+            if (fetchedSearch) {
+
+                existingSearch.replaceWith(
+                    fetchedSearch
+                );
+
+            }
+
+        } else if (fetchedSearch) {
+
+            document.body.appendChild(
+                fetchedSearch
+            );
+
+        }
+
+
+    } catch (error) {
+
+        console.error(
+            "ShriVatsaDarbar header error:",
+            error
+        );
+
+    }
+
+}
+
+   
+
+
     /* =========================================================
        MASTER FOOTER
     ========================================================= */
@@ -2823,34 +3060,57 @@
     ========================================================= */
 
     onReady(
-        function () {
+    async function () {
 
-            loadMasterFooter();
+        /*
+         * Load the Master Header first.
+         * Header controls must exist before their
+         * JavaScript controllers are initialized.
+         */
 
-            initMobileMenu();
-
-            initSearch();
-
-            initHeroSlider();
-
-            initWishlistController();
-
-            initGenericBagButton();
-
-            updateBagCount();
-
-            updateWishlistButtons();
-
-            updateWishlistCount();
+        await loadMasterHeader();
 
 
-            window.dispatchEvent(
-                new CustomEvent(
-                    "svd:shared-ready"
-                )
-            );
+        /*
+         * Load the Master Footer.
+         */
 
-        }
-    );
+        await loadMasterFooter();
+
+
+        /*
+         * Initialize shared site functionality.
+         */
+
+        initMobileMenu();
+
+        initSearch();
+
+        initHeroSlider();
+
+        initWishlistController();
+
+        initGenericBagButton();
+
+        updateBagCount();
+
+        updateWishlistButtons();
+
+        updateWishlistCount();
+
+
+        /*
+         * Tell page-level scripts that the shared
+         * site components are ready.
+         */
+
+        window.dispatchEvent(
+            new CustomEvent(
+                "svd:shared-ready"
+            )
+        );
+
+    }
+);
 
 })();
