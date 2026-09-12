@@ -6402,3 +6402,124 @@ button {
     }
 
 }
+
+
+
+
+
+
+
+/* =========================================================
+   HERO DOTS — MOBILE TOUCH ENHANCEMENT
+   ---------------------------------------------------------
+   The shared hero controller creates .hero-dot buttons.
+   This gives each dot a generous touch target while
+   keeping the visible indicator small and premium.
+   ========================================================= */
+
+.hero-dot {
+    position: relative;
+
+    width: 44px;
+    height: 44px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: grid;
+    place-items: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+
+    touch-action: manipulation;
+}
+
+
+/* Visible dot */
+.hero-dot::before {
+    content: "";
+
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border:
+        1px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    transition:
+        width .25s ease,
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+
+/* Active visible dot */
+.hero-dot.active::before {
+    width: 25px;
+
+    border-radius: 5px;
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+}
+
+
+/* Comfortable touch/hover feedback */
+.hero-dot:hover::before,
+.hero-dot:focus-visible::before {
+    transform: scale(1.12);
+}
+
+
+/* Keep the slider dot group compact but finger-friendly */
+.slider-dots {
+    gap: 2px;
+}
+
+
+/* Extra mobile spacing and positioning */
+@media (max-width: 900px) {
+
+    .slider-dots {
+        bottom: 18px;
+
+        gap: 1px;
+    }
+
+    .hero-dot {
+        width: 46px;
+        height: 46px;
+    }
+
+}
+
+
+/* Very small phones */
+@media (max-width: 480px) {
+
+    .slider-dots {
+        bottom: 16px;
+
+        gap: 0;
+    }
+
+    .hero-dot {
+        width: 48px;
+        height: 48px;
+    }
+
+}
