@@ -1,1 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Track Your Order | ShriVatsaDarbar</title>
+
+    <meta name="description"
+          content="Track your ShriVatsaDarbar order using your AWB or tracking number. Track shipments from Blue Dart, Delhivery, DTDC and other supported courier partners.">
+
+    <meta name="keywords"
+          content="ShriVatsaDarbar order tracking, track order, AWB tracking, parcel tracking, courier tracking">
+
+    <meta name="author"
+          content="ShriVatsaDarbar">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- Main Website Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================================================
+           TRACK ORDER PAGE
+        ========================================================= */
+
+        .track-order-page {
+            background: #faf8f3;
+            color: #2c1b1b;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .track-order-hero {
+            position: relative;
+            width: 100%;
+            min-height: 360px;
+
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(45, 15, 18, 0.72) 0%,
+                    rgba(45, 15, 18, 0.42) 48%,
+                    rgba(45, 15, 18, 0.18) 100%
+                ),
+                url("images/banners/shrivatsadarbar-track-order-banner.webp");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .track-order-hero-content {
+            width: min(1200px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 70px 0;
+            color: #ffffff;
+        }
+
+        .track-order-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 18px;
+
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            color: #e7c98c;
+        }
+
+        .track-order-eyebrow::before {
+            content: "";
+            width: 38px;
+            height: 1px;
+            background: #e7c98c;
+        }
+
+        .track-order-hero h1 {
+            max-width: 620px;
+            margin: 0 0 18px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 0.98;
+            font-weight: 600;
+
+            color: #ffffff;
+        }
+
+        .track-order-hero p {
+            max-width: 560px;
+            margin: 0;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        /* =========================================================
+           TRACKING CARD
+        ========================================================= */
+
+        .track-order-section {
+            position: relative;
+            margin-top: -48px;
+            padding: 0 20px 80px;
+
+            z-index: 2;
+        }
+
+        .track-order-card {
+            width: min(1100px, 100%);
+            margin: 0 auto;
+
+            padding: 48px 55px;
+
+            background: #ffffff;
+
+            border: 1px solid rgba(160, 117, 53, 0.22);
+            border-radius: 16px;
+
+            box-shadow:
+                0 20px 55px rgba(42, 19, 19, 0.10);
+        }
+
+        .track-order-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .track-order-heading-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 12px;
+
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            color: #a77a35;
+        }
+
+        .track-order-heading-label::before,
+        .track-order-heading-label::after {
+            content: "";
+            width: 30px;
+            height: 1px;
+            background: #c49a52;
+        }
+
+        .track-order-heading h2 {
+            margin: 0 0 10px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(34px, 4vw, 48px);
+            line-height: 1.1;
+
+            color: #321a1b;
+        }
+
+        .track-order-heading p {
+            max-width: 700px;
+            margin: 0 auto;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+
+            color: #6f6560;
+        }
+
+        /* =========================================================
+           17TRACK AREA
+        ========================================================= */
+
+        .tracking-widget-wrapper {
+            margin-top: 32px;
+
+            padding: 28px;
+
+            background: #fbf8f2;
+
+            border: 1px solid rgba(160, 117, 53, 0.18);
+            border-radius: 12px;
+        }
+
+        /*
+         * 17TRACK's official widget is loaded below.
+         * The widget automatically detects the carrier.
+         */
+
+        #YQContainer {
+            width: 100%;
+            min-height: 100px;
+        }
+
+        /* =========================================================
+           INFORMATION STRIP
+        ========================================================= */
+
+        .tracking-info-strip {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto 80px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            border-top: 1px solid rgba(160, 117, 53, 0.18);
+            border-bottom: 1px solid rgba(160, 117, 53, 0.18);
+        }
+
+        .tracking-info-item {
+            padding: 28px 20px;
+
+            text-align: center;
+
+            border-right: 1px solid rgba(160, 117, 53, 0.18);
+        }
+
+        .tracking-info-item:last-child {
+            border-right: none;
+        }
+
+        .tracking-info-icon {
+            width: 52px;
+            height: 52px;
+
+            margin: 0 auto 14px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid rgba(160, 117, 53, 0.35);
+            border-radius: 50%;
+
+            color: #9b6e2f;
+            font-size: 19px;
+        }
+
+        .tracking-info-item h3 {
+            margin: 0 0 7px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 21px;
+
+            color: #321a1b;
+        }
+
+        .tracking-info-item p {
+            margin: 0;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            line-height: 1.6;
+
+            color: #716964;
+        }
+
+        /* =========================================================
+           HELP SECTION
+        ========================================================= */
+
+        .tracking-help {
+            width: min(1000px, calc(100% - 40px));
+            margin: 0 auto 90px;
+
+            text-align: center;
+        }
+
+        .tracking-help-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 12px;
+
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            color: #a77a35;
+        }
+
+        .tracking-help-label::before,
+        .tracking-help-label::after {
+            content: "";
+            width: 30px;
+            height: 1px;
+            background: #c49a52;
+        }
+
+        .tracking-help h2 {
+            margin: 0 0 35px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(36px, 4vw, 50px);
+
+            color: #321a1b;
+        }
+
+        .tracking-faq-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+
+            text-align: left;
+        }
+
+        .tracking-faq {
+            padding: 24px;
+
+            background: #ffffff;
+
+            border: 1px solid rgba(160, 117, 53, 0.16);
+            border-radius: 10px;
+        }
+
+        .tracking-faq h3 {
+            margin: 0 0 10px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 22px;
+
+            color: #321a1b;
+        }
+
+        .tracking-faq p {
+            margin: 0;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            line-height: 1.7;
+
+            color: #716964;
+        }
+
+        /* =========================================================
+           WHATSAPP SUPPORT
+        ========================================================= */
+
+        .tracking-support {
+            width: min(850px, calc(100% - 40px));
+            margin: 0 auto 90px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            background: #f5eee2;
+
+            border: 1px solid rgba(160, 117, 53, 0.18);
+            border-radius: 12px;
+        }
+
+        .tracking-support h2 {
+            margin: 0 0 10px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 32px;
+
+            color: #321a1b;
+        }
+
+        .tracking-support p {
+            margin: 0 auto 22px;
+
+            max-width: 600px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            line-height: 1.7;
+
+            color: #716964;
+        }
+
+        .tracking-whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
+            padding: 13px 25px;
+
+            border-radius: 4px;
+
+            background: #6b1020;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            transition: all 0.25s ease;
+        }
+
+        .tracking-whatsapp-button:hover {
+            background: #4d0b17;
+            transform: translateY(-1px);
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .tracking-info-strip {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tracking-info-item:nth-child(2) {
+                border-right: none;
+            }
+
+            .tracking-info-item:nth-child(-n+2) {
+                border-bottom: 1px solid rgba(160, 117, 53, 0.18);
+            }
+
+            .tracking-faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .track-order-hero {
+                min-height: 330px;
+                background-position: center;
+            }
+
+            .track-order-hero-content {
+                width: calc(100% - 30px);
+                padding: 55px 0;
+            }
+
+            .track-order-hero h1 {
+                font-size: 50px;
+            }
+
+            .track-order-hero p {
+                font-size: 14px;
+            }
+
+            .track-order-section {
+                margin-top: -30px;
+                padding: 0 12px 55px;
+            }
+
+            .track-order-card {
+                padding: 32px 18px;
+                border-radius: 12px;
+            }
+
+            .track-order-heading h2 {
+                font-size: 34px;
+            }
+
+            .tracking-widget-wrapper {
+                padding: 16px;
+            }
+
+            .tracking-info-strip {
+                width: calc(100% - 24px);
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .tracking-info-item {
+                padding: 22px 10px;
+            }
+
+            .tracking-info-item h3 {
+                font-size: 18px;
+            }
+
+            .tracking-info-item p {
+                font-size: 11px;
+            }
+
+            .tracking-help {
+                width: calc(100% - 30px);
+            }
+
+            .tracking-support {
+                width: calc(100% - 30px);
+                padding: 28px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .track-order-hero {
+                min-height: 310px;
+            }
+
+            .track-order-hero h1 {
+                font-size: 43px;
+            }
+
+            .track-order-eyebrow {
+                font-size: 10px;
+                letter-spacing: 2px;
+            }
+
+            .tracking-info-item {
+                padding: 20px 7px;
+            }
+
+            .tracking-info-icon {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="track-order-page">
+
+    <!--
+        MASTER HEADER
+        Loaded automatically by script.js
+    -->
+
+    <main>
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="track-order-hero">
+
+            <div class="track-order-hero-content">
+
+                <div class="track-order-eyebrow">
+                    Track Your Order
+                </div>
+
+                <h1>
+                    Your Style<br>
+                    Is On Its Way.
+                </h1>
+
+                <p>
+                    Enter your AWB or tracking number to check
+                    the latest status of your shipment.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TRACKING SECTION
+        ====================================================== -->
+
+        <section class="track-order-section">
+
+            <div class="track-order-card">
+
+                <div class="track-order-heading">
+
+                    <div class="track-order-heading-label">
+                        Track Your Order
+                    </div>
+
+                    <h2>
+                        Enter Your AWB / Tracking Number
+                    </h2>
+
+                    <p>
+                        Track your parcel across supported courier
+                        partners including Blue Dart, Delhivery,
+                        DTDC, India Post, DHL, FedEx and many more.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     17TRACK WIDGET
+                ================================================== -->
+
+                <div class="tracking-widget-wrapper">
+
+                    <div id="YQContainer"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BENEFITS
+        ====================================================== -->
+
+        <section class="tracking-info-strip">
+
+            <div class="tracking-info-item">
+
+                <div class="tracking-info-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+
+                <h3>
+                    Multi-Courier
+                </h3>
+
+                <p>
+                    Track shipments from supported courier partners.
+                </p>
+
+            </div>
+
+
+            <div class="tracking-info-item">
+
+                <div class="tracking-info-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>
+                    Automatic Detection
+                </h3>
+
+                <p>
+                    Your courier can be identified automatically.
+                </p>
+
+            </div>
+
+
+            <div class="tracking-info-item">
+
+                <div class="tracking-info-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <h3>
+                    Reliable Tracking
+                </h3>
+
+                <p>
+                    View the latest available shipment information.
+                </p>
+
+            </div>
+
+
+            <div class="tracking-info-item">
+
+                <div class="tracking-info-icon">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <h3>
+                    Easy to Use
+                </h3>
+
+                <p>
+                    No ShriVatsaDarbar account is required.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section class="tracking-help">
+
+            <div class="tracking-help-label">
+                Need Help?
+            </div>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+
+            <div class="tracking-faq-grid">
+
+                <article class="tracking-faq">
+
+                    <h3>
+                        Where can I find my AWB number?
+                    </h3>
+
+                    <p>
+                        Your AWB or tracking number is provided
+                        after your shipment has been created.
+                    </p>
+
+                </article>
+
+
+                <article class="tracking-faq">
+
+                    <h3>
+                        When can I track my order?
+                    </h3>
+
+                    <p>
+                        Tracking information normally becomes
+                        available after the courier receives the shipment.
+                    </p>
+
+                </article>
+
+
+                <article class="tracking-faq">
+
+                    <h3>
+                        My tracking is not updating.
+                    </h3>
+
+                    <p>
+                        Courier systems can take some time to update.
+                        If you need assistance, contact us on WhatsApp.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SUPPORT
+        ====================================================== -->
+
+        <section class="tracking-support">
+
+            <h2>
+                Need Help With Your Shipment?
+            </h2>
+
+            <p>
+                If you have received your AWB number but cannot
+                find an update, our team will be happy to help.
+            </p>
+
+            <a
+                href="https://wa.me/919818928825"
+                class="tracking-whatsapp-button"
+                target="_blank"
+                rel="noopener"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                Contact Us on WhatsApp
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         MASTER FOOTER
+         Loaded automatically by script.js
+    ========================================================== -->
+
+    <div id="site-footer"></div>
+
+
+    <!-- =========================================================
+         17TRACK OFFICIAL TRACKING WIDGET
+    ========================================================== -->
+
+    <script
+        type="text/javascript"
+        src="//www.17track.net/externalcall.js">
+    </script>
+
+    <script>
+
+        /*
+         * 17TRACK Multi-Carrier Tracking Widget
+         *
+         * Carrier selection:
+         * YQ_Fc: "0"
+         *
+         * "0" means automatic carrier identification.
+         */
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            if (
+                typeof YQV5 !== "undefined" &&
+                typeof YQV5.trackMulti === "function"
+            ) {
+
+                YQV5.trackMulti({
+
+                    YQ_ContainerId: "YQContainer",
+
+                    YQ_Height: 560,
+
+                    YQ_Lang: "en"
+
+                });
+
+            }
+
+        });
+
+    </script>
+
+
+    <!-- =========================================================
+         MAIN WEBSITE SCRIPT
+    ========================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
