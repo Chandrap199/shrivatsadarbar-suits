@@ -171,6 +171,78 @@
 }
 
 
+
+
+/* =========================================================
+   PRODUCT IMAGE ZOOM
+========================================================= */
+
+.product-main-image img {
+    transform: scale(1);
+    transform-origin: center center;
+    cursor: zoom-in;
+}
+
+.product-main-image.zoomed img {
+    cursor: zoom-out;
+}
+
+.product-zoom-controls {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    z-index: 10;
+}
+
+.product-zoom-controls button {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #d8cbbb;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.96);
+    color: #4b0713;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,.10);
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.product-zoom-controls button:hover {
+    background: #4b0713;
+    color: #fff;
+
+    transform: scale(1.05);
+}
+
+.product-zoom-controls .zoom-reset {
+    font-size: 9px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+
+
+      
+
 /* =========================================================
    BADGE
 ========================================================= */
@@ -1495,11 +1567,36 @@
 
 
                 <img id="productImage"
-                     src=""
-                     alt="">
+     src=""
+     alt="">
 
+<div class="product-zoom-controls">
 
-                <button class="gallery-arrow gallery-arrow-right"
+    <button
+        type="button"
+        id="zoomIn"
+        aria-label="Zoom in">
+        +
+    </button>
+
+    <button
+        type="button"
+        id="zoomOut"
+        aria-label="Zoom out">
+        −
+    </button>
+
+    <button
+        type="button"
+        id="zoomReset"
+        class="zoom-reset"
+        aria-label="Reset zoom">
+        Reset
+    </button>
+
+</div>
+
+<button class="gallery-arrow gallery-arrow-right"
                         id="galleryNext"
                         type="button"
                         aria-label="Next image">
