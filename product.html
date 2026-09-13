@@ -2744,7 +2744,97 @@ function renderGallery() {
     );
 
 }
+/* =========================================================
+   PRODUCT IMAGE ZOOM
+========================================================= */
 
+let productZoomLevel = 1;
+
+const PRODUCT_ZOOM_STEP = 0.25;
+const PRODUCT_ZOOM_MIN = 1;
+const PRODUCT_ZOOM_MAX = 2.5;
+
+function applyProductZoom() {
+
+    const mainImage =
+        document.getElementById("productImage");
+
+    const mainImageContainer =
+        document.querySelector(".product-main-image");
+
+    if (!mainImage || !mainImageContainer) {
+        return;
+    }
+
+    mainImage.style.transform =
+        "scale(" + productZoomLevel + ")";
+
+    if (productZoomLevel > PRODUCT_ZOOM_MIN) {
+        mainImageContainer.classList.add("zoomed");
+    } else {
+        mainImageContainer.classList.remove("zoomed");
+    }
+}
+
+function zoomIn() {
+
+    productZoomLevel =
+        Math.min(
+            productZoomLevel + PRODUCT_ZOOM_STEP,
+            PRODUCT_ZOOM_MAX
+        );
+
+    applyProductZoom();
+}
+
+function zoomOut() {
+
+    productZoomLevel =
+        Math.max(
+            productZoomLevel - PRODUCT_ZOOM_STEP,
+            PRODUCT_ZOOM_MIN
+        );
+
+    applyProductZoom();
+}
+
+function resetProductZoom() {
+
+    productZoomLevel =
+        PRODUCT_ZOOM_MIN;
+
+    applyProductZoom();
+}
+
+const zoomInButton =
+    document.getElementById("zoomIn");
+
+const zoomOutButton =
+    document.getElementById("zoomOut");
+
+const zoomResetButton =
+    document.getElementById("zoomReset");
+
+if (zoomInButton) {
+    zoomInButton.addEventListener(
+        "click",
+        zoomIn
+    );
+}
+
+if (zoomOutButton) {
+    zoomOutButton.addEventListener(
+        "click",
+        zoomOut
+    );
+}
+
+if (zoomResetButton) {
+    zoomResetButton.addEventListener(
+        "click",
+        resetProductZoom
+    );
+}
 
 /* =========================================================
    GALLERY NAVIGATION
