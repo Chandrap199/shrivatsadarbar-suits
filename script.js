@@ -3001,20 +3001,619 @@ async function loadMasterHeader() {
 
 
     /* =========================================================
-    /* =========================================================
    SHARED CART
    ---------------------------------------------------------
-   Loads the shared cart drawer and opens it from the
-   master header shopping-bag button.
+   Shared cart drawer for the entire website.
 ========================================================= */
+
+function escapeCartHtml(value) {
+
+    return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+function saveSharedCart(cart) {
+
+    try {
+
+        localStorage.setItem(
+            CART_STORAGE_KEY,
+            JSON.stringify(cart)
+        );
+
+    } catch (error) {
+
+        console.warn(
+            "Unable to save cart:",
+            error
+        );
+
+    }
+
+
+    updateBagCount();
+
+
+    window.dispatchEvent(
+        new CustomEvent(
+            "svd:cart-updated"
+        )
+    );
+
+}
+
+
+function renderSharedCart() {
+
+    var body =
+        document.getElementById(
+            "cartBody"
+        );
+
+    var footer =
+        document.getElementById(
+            "cartFooter"
+        );
+
+    var total =
+        document.getElementById(
+            "cartTotalItems"
+        );
+
+
+    if (!body || !footer || !total) {
+        return;
+    }
+
+
+    var cart =
+        getStoredCart();
+
+
+    total.textContent =
+        String(
+            getCartItemCount()
+        );
+
+
+    if (!cart.length) {
+
+        body.innerHTML = `
+            <div class="cart-empty">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <strong>
+                    Your collection is empty
+                </strong>
+
+                <span>
+                    Add beautiful pieces to your collection.
+                </span>
+
+            </div>
+        `;
+
+
+        footer.style.display =
+            "none";
+
+
+        return;
+
+    }
+
+
+    footer.style.display =
+        "block";
+
+
+    body.innerHTML =
+        "";
+
+
+    cart.forEach(
+        function (item) {
+
+            var article =
+                document.createElement(
+                    "article"
+                );
+
+
+            article.className =
+                "cart-item";
+
+
+            article.innerHTML = `
+
+                <img
+                    class="cart-item-image"
+                    src="${escapeCartHtml(
+                        resolveSiteUrl(
+                            item.image || ""
+                        )
+                    )}"
+                    alt="${escapeCartHtml(
+                        item.title || ""
+                    )}"
+                >
+
+
+                <div class="cart-item-details">
+
+                    <h3>
+                        ${escapeCartHtml(
+                            item.title || ""
+                        )}
+                    </h3>
+
+
+                    <div class="cart-item-code">
+                        ${escapeCartHtml(
+                            item.code || ""
+                        )}
+                    </div>
+
+
+                    <div class="cart-item-controls">
+
+                        <button
+                            class="cart-qty-button"
+                            type="button"
+                            data-action="minus"
+                            data-id="${escapeCartHtml(
+                                item.id || ""
+                            )}">
+
+                            −
+
+                        </button>
+
+
+                        <span class="cart-qty-value">
+
+                            ${Number(
+                                item.quantity || 0
+                            )}
+
+                        </span>
+
+
+                        <button
+                            class="cart-qty-button"
+                            type="button"
+                            data-action="plus"
+                            data-id="${escapeCartHtml(
+                                item.id || ""
+                            )}">
+
+                            +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="cart-remove"
+                    type="button"
+                    data-remove="${escapeCartHtml(
+                        item.id || ""
+                    )}"
+                    aria-label="Remove item">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                </button>
+
+            `;
+
+
+            body.appendChild(
+                article
+            );
+
+        }
+    );
+
+
+    body.querySelectorAll(
+        "[data-action]"
+    ).forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    var id =
+                        this.dataset.id;
+
+
+                    var change =
+                        this.dataset.action ===
+                        "plus"
+                            ? 1
+                            : -1;
+
+
+                    var cart =
+                        getStoredCart();
+
+
+                    var item =
+                        cart.find(
+                            function (product) {
+
+                                return (
+                                    product.id ===
+                                    id
+                                );
+
+                            }
+                        );
+
+
+                    if (!item) {
+                        return;
+                    }
+
+
+                    item.quantity =
+                        Number(
+                            item.quantity || 0
+                        ) +
+                        change;
+
+
+                    if (
+                        item.quantity <= 0
+                    ) {
+
+                        cart =
+                            cart.filter(
+                                function (product) {
+
+                                    return (
+                                        product.id !==
+                                        id
+                                    );
+
+                                }
+                            );
+
+                    }
+
+
+                    saveSharedCart(
+                        cart
+                    );
+
+
+                    renderSharedCart();
+
+                }
+            );
+
+        }
+    );
+
+
+    body.querySelectorAll(
+        "[data-remove]"
+    ).forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    var id =
+                        this.dataset.remove;
+
+
+                    var cart =
+                        getStoredCart();
+
+
+                    cart =
+                        cart.filter(
+                            function (item) {
+
+                                return (
+                                    item.id !==
+                                    id
+                                );
+
+                            }
+                        );
+
+
+                    saveSharedCart(
+                        cart
+                    );
+
+
+                    renderSharedCart();
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+function openSharedCart() {
+
+    var drawer =
+        document.getElementById(
+            "cartDrawer"
+        );
+
+    var overlay =
+        document.getElementById(
+            "cartOverlay"
+        );
+
+
+    if (!drawer || !overlay) {
+        return;
+    }
+
+
+    renderSharedCart();
+
+
+    drawer.classList.add(
+        "active"
+    );
+
+
+    overlay.classList.add(
+        "active"
+    );
+
+
+    drawer.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+function closeSharedCart() {
+
+    var drawer =
+        document.getElementById(
+            "cartDrawer"
+        );
+
+    var overlay =
+        document.getElementById(
+            "cartOverlay"
+        );
+
+
+    if (drawer) {
+
+        drawer.classList.remove(
+            "active"
+        );
+
+
+        drawer.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+    }
+
+
+    if (overlay) {
+
+        overlay.classList.remove(
+            "active"
+        );
+
+    }
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+function initSharedCartControls() {
+
+    var closeButton =
+        document.getElementById(
+            "cartClose"
+        );
+
+    var overlay =
+        document.getElementById(
+            "cartOverlay"
+        );
+
+    var clearButton =
+        document.getElementById(
+            "cartClear"
+        );
+
+    var whatsappButton =
+        document.getElementById(
+            "cartWhatsapp"
+        );
+
+
+    if (closeButton) {
+
+        closeButton.addEventListener(
+            "click",
+            closeSharedCart
+        );
+
+    }
+
+
+    if (overlay) {
+
+        overlay.addEventListener(
+            "click",
+            closeSharedCart
+        );
+
+    }
+
+
+    if (clearButton) {
+
+        clearButton.addEventListener(
+            "click",
+            function () {
+
+                var cart =
+                    getStoredCart();
+
+
+                if (!cart.length) {
+                    return;
+                }
+
+
+                saveSharedCart(
+                    []
+                );
+
+
+                renderSharedCart();
+
+
+                showToast(
+                    "Your collection has been cleared"
+                );
+
+            }
+        );
+
+    }
+
+
+    if (whatsappButton) {
+
+        whatsappButton.addEventListener(
+            "click",
+            function () {
+
+                var cart =
+                    getStoredCart();
+
+
+                if (!cart.length) {
+
+                    showToast(
+                        "Your collection is empty"
+                    );
+
+                    return;
+
+                }
+
+
+                var message =
+                    "Hello ShriVatsaDarbar,\n\n" +
+                    "I would like to enquire about the following products:\n\n";
+
+
+                cart.forEach(
+                    function (item, index) {
+
+                        message +=
+                            (index + 1) +
+                            ". " +
+                            item.title +
+                            " (" +
+                            item.code +
+                            ") × " +
+                            item.quantity +
+                            "\n";
+
+                    }
+                );
+
+
+                message +=
+                    "\nPlease share the price, availability, size options and final details.\n\nThank you.";
+
+
+                window.open(
+                    "https://wa.me/918826196544?text=" +
+                    encodeURIComponent(
+                        message
+                    ),
+                    "_blank",
+                    "noopener"
+                );
+
+            }
+        );
+
+    }
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key ===
+                "Escape"
+            ) {
+
+                closeSharedCart();
+
+            }
+
+        }
+    );
+
+}
+
 
 async function loadSharedCart() {
 
     var existingCart =
-        document.getElementById("cartDrawer");
+        document.getElementById(
+            "cartDrawer"
+        );
 
+
+    /*
+     * product.html already contains the
+     * original cart drawer. Leave that page's
+     * existing cart controller untouched.
+     */
     if (existingCart) {
+
         return true;
+
     }
 
 
@@ -3066,7 +3665,6 @@ async function loadSharedCart() {
                 "cartDrawer"
             );
 
-
         var cartOverlay =
             cartDocument.getElementById(
                 "cartOverlay"
@@ -3094,6 +3692,9 @@ async function loadSharedCart() {
         document.body.appendChild(
             cartDrawer
         );
+
+
+        initSharedCartControls();
 
 
         return true;
@@ -3146,50 +3747,29 @@ async function initGenericBagButton() {
             }
 
 
-            var cartDrawer =
+            /*
+             * On product.html the original cart
+             * controller handles the drawer.
+             */
+            if (
                 document.getElementById(
-                    "cartDrawer"
-                );
+                    "productPage"
+                )
+            ) {
 
-
-            var cartOverlay =
-                document.getElementById(
-                    "cartOverlay"
-                );
-
-
-            if (cartOverlay) {
-
-                cartOverlay.classList.add(
-                    "active"
-                );
+                return;
 
             }
 
 
-            if (cartDrawer) {
-
-                cartDrawer.classList.add(
-                    "active"
-                );
-
-                cartDrawer.setAttribute(
-                    "aria-hidden",
-                    "false"
-                );
-
-            }
-
-
-            document.body.classList.add(
-                "cart-open"
-            );
+            openSharedCart();
 
         }
     );
 
 }
 
+        
 
     /* =========================================================
        INITIALIZATION
