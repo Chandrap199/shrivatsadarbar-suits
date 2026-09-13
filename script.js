@@ -725,227 +725,241 @@ async function loadMasterHeader() {
        SEARCH
     ========================================================= */
 
-    function initSearch() {
+    
+            
+         function initSearch() {
 
-        var button =
-            document.getElementById(
-                "searchButton"
-            );
+    var button =
+        document.getElementById(
+            "searchButton"
+        );
 
-        var overlay =
-            document.getElementById(
-                "searchOverlay"
-            );
+    var overlay =
+        document.getElementById(
+            "searchOverlay"
+        );
 
-        var closeButton =
-            document.getElementById(
-                "searchClose"
-            );
+    var closeButton =
+        document.getElementById(
+            "searchClose"
+        );
 
-        var input =
-            document.getElementById(
-                "siteSearch"
-            );
-
-
-        if (!button || !overlay) {
-            return;
-        }
-
-
-        function openSearch() {
-
-            overlay.classList.add(
-                "active"
-            );
-
-            document.body.classList.add(
-                "search-open"
-            );
-
-
-            if (input) {
-
-                setTimeout(
-                    function () {
-                        input.focus();
-                    },
-                    80
-                );
-
-            }
-
-        }
-
-
-        function closeSearch() {
-
-            overlay.classList.remove(
-                "active"
-            );
-
-            document.body.classList.remove(
-                "search-open"
-            );
-
-        }
-
-
-        button.addEventListener(
-            "click",
-            openSearch
+    var input =
+        document.getElementById(
+            "siteSearch"
         );
 
 
-        if (closeButton) {
-
-            closeButton.addEventListener(
-                "click",
-                closeSearch
-            );
-
-        }
+    if (!button || !overlay) {
+        return;
+    }
 
 
-        overlay.addEventListener(
-            "click",
-            function (event) {
+    function openSearch() {
 
-                if (
-                    event.target === overlay
-                ) {
+        overlay.classList.add(
+            "open"
+        );
 
-                    closeSearch();
+        overlay.setAttribute(
+            "aria-hidden",
+            "false"
+        );
 
-                }
-
-            }
+        document.body.classList.add(
+            "search-open"
         );
 
 
-        document.addEventListener(
-            "keydown",
-            function (event) {
+        if (input) {
 
-                if (
-                    event.key === "Escape" &&
-                    overlay.classList.contains(
-                        "active"
-                    )
-                ) {
+            setTimeout(
+                function () {
 
-                    closeSearch();
+                    input.focus();
 
-                }
-
-            }
-        );
-
-
-        if (
-            input &&
-            !document.getElementById(
-                "productPage"
-            )
-        ) {
-
-            input.addEventListener(
-                "keydown",
-                function (event) {
-
-                    if (
-                        event.key !== "Enter"
-                    ) {
-                        return;
-                    }
-
-
-                    var query =
-                        input.value.trim();
-
-
-                    if (!query) {
-                        return;
-                    }
-
-
-                    if (
-                        Array.isArray(
-                            window.SVD_PRODUCT_LIST
-                        )
-                    ) {
-
-                        var normalized =
-                            query.toLowerCase();
-
-
-                        var match =
-                            window.SVD_PRODUCT_LIST.find(
-                                function (product) {
-
-                                    return (
-
-                                        String(
-                                            product.title || ""
-                                        )
-                                            .toLowerCase()
-                                            .includes(
-                                                normalized
-                                            )
-
-                                        ||
-
-                                        String(
-                                            product.code || ""
-                                        )
-                                            .toLowerCase()
-                                            .includes(
-                                                normalized
-                                            )
-
-                                        ||
-
-                                        String(
-                                            product.category || ""
-                                        )
-                                            .toLowerCase()
-                                            .includes(
-                                                normalized
-                                            )
-
-                                    );
-
-                                }
-                            );
-
-
-                        if (match) {
-
-                            window.location.href =
-                                resolveSiteUrl(
-                                    "product.html?product=" +
-                                    encodeURIComponent(
-                                        match.id
-                                    )
-                                );
-
-                            return;
-                        }
-
-                    }
-
-
-                    window.location.href =
-                        resolveSiteUrl(
-                            "collections/collections.html"
-                        );
-
-                }
+                },
+                80
             );
 
         }
 
     }
+
+
+    function closeSearch() {
+
+        overlay.classList.remove(
+            "open"
+        );
+
+        overlay.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.classList.remove(
+            "search-open"
+        );
+
+    }
+
+
+    button.addEventListener(
+        "click",
+        openSearch
+    );
+
+
+    if (closeButton) {
+
+        closeButton.addEventListener(
+            "click",
+            closeSearch
+        );
+
+    }
+
+
+    overlay.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === overlay
+            ) {
+
+                closeSearch();
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                overlay.classList.contains(
+                    "open"
+                )
+            ) {
+
+                closeSearch();
+
+            }
+
+        }
+    );
+
+
+    if (input) {
+
+        input.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key !== "Enter"
+                ) {
+
+                    return;
+
+                }
+
+
+                var query =
+                    input.value.trim();
+
+
+                if (!query) {
+
+                    return;
+
+                }
+
+
+                if (
+                    Array.isArray(
+                        window.SVD_PRODUCT_LIST
+                    )
+                ) {
+
+                    var normalized =
+                        query.toLowerCase();
+
+
+                    var match =
+                        window.SVD_PRODUCT_LIST.find(
+                            function (product) {
+
+                                return (
+
+                                    String(
+                                        product.title || ""
+                                    )
+                                        .toLowerCase()
+                                        .includes(
+                                            normalized
+                                        )
+
+                                    ||
+
+                                    String(
+                                        product.code || ""
+                                    )
+                                        .toLowerCase()
+                                        .includes(
+                                            normalized
+                                        )
+
+                                    ||
+
+                                    String(
+                                        product.category || ""
+                                    )
+                                        .toLowerCase()
+                                        .includes(
+                                            normalized
+                                        )
+
+                                );
+
+                            }
+                        );
+
+
+                    if (match) {
+
+                        window.location.href =
+                            resolveSiteUrl(
+                                "product.html?product=" +
+                                encodeURIComponent(
+                                    match.id
+                                )
+                            );
+
+                        return;
+
+                    }
+
+                }
+
+
+                window.location.href =
+                    resolveSiteUrl(
+                        "collections/collections.html"
+                    );
+
+            }
+        );
+
+    }
+
+}                               
 
 
 
