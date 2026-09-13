@@ -726,8 +726,7 @@ async function loadMasterHeader() {
     ========================================================= */
 
     
-            
-         function initSearch() {
+            function initSearch() {
 
     var button =
         document.getElementById(
@@ -805,6 +804,282 @@ async function loadMasterHeader() {
     }
 
 
+    function loadProductDatabase() {
+
+        if (
+            Array.isArray(
+                window.SVD_PRODUCT_LIST
+            )
+        ) {
+
+            return Promise.resolve();
+
+        }
+
+
+        return new Promise(
+            function (resolve) {
+
+                var existingScript =
+                    document.querySelector(
+                        'script[src*="products.js"]'
+                    );
+
+
+                if (existingScript) {
+
+                    var waitForProducts =
+                        setInterval(
+                            function () {
+
+                                if (
+                                    Array.isArray(
+                                        window.SVD_PRODUCT_LIST
+                                    )
+                                ) {
+
+                                    clearInterval(
+                                        waitForProducts
+                                    );
+
+                                    resolve();
+
+                                }
+
+                            },
+                            50
+                        );
+
+
+                    setTimeout(
+                        function () {
+
+                            clearInterval(
+                                waitForProducts
+                            );
+
+                            resolve();
+
+                        },
+                        3000
+                    );
+
+
+                    return;
+
+                }
+
+
+                var script =
+                    document.createElement(
+                        "script"
+                    );
+
+                script.src =
+                    resolveSiteUrl(
+                        "products.js"
+                    );
+
+                script.onload =
+                    function () {
+
+                        resolve();
+
+                    };
+
+                script.onerror =
+                    function () {
+
+                        resolve();
+
+                    };
+
+                document.head.appendChild(
+                    script
+                );
+
+            }
+        );
+
+    }
+
+
+    function performSearch() {
+
+        if (!input) {
+            return;
+        }
+
+
+        var query =
+            input.value.trim();
+
+
+        if (!query) {
+            return;
+        }
+
+
+        loadProductDatabase()
+            .then(
+                function () {
+
+                    var normalized =
+                        query.toLowerCase();
+
+
+                    var products =
+                        Array.isArray(
+                            window.SVD_PRODUCT_LIST
+                        )
+                            ? window.SVD_PRODUCT_LIST
+                            : [];
+
+
+                    /*
+                     * CATEGORY SEARCH
+                     *
+                     * "saree" / "sarees"
+                     * "suit" / "suits"
+                     */
+                    if (
+                        normalized === "saree" ||
+                        normalized === "sarees"
+                    ) {
+
+                        window.location.href =
+                            resolveSiteUrl(
+                                "collections/collections.html?category=saree"
+                            );
+
+                        return;
+
+                    }
+
+
+                    if (
+                        normalized === "suit" ||
+                        normalized === "suits"
+                    ) {
+
+                        window.location.href =
+                            resolveSiteUrl(
+                                "collections/collections.html?category=suit"
+                            );
+
+                        return;
+
+                    }
+
+
+                    /*
+                     * PRODUCT SEARCH
+                     *
+                     * Search title,
+                     * product code,
+                     * category,
+                     * subtitle,
+                     * collection,
+                     * product ID.
+                     */
+                    var match =
+                        products.find(
+                            function (product) {
+
+                                var title =
+                                    String(
+                                        product.title || ""
+                                    ).toLowerCase();
+
+                                var code =
+                                    String(
+                                        product.code || ""
+                                    ).toLowerCase();
+
+                                var category =
+                                    String(
+                                        product.category || ""
+                                    ).toLowerCase();
+
+                                var subtitle =
+                                    String(
+                                        product.subtitle || ""
+                                    ).toLowerCase();
+
+                                var collection =
+                                    String(
+                                        product.collection || ""
+                                    ).toLowerCase();
+
+                                var id =
+                                    String(
+                                        product.id || ""
+                                    ).toLowerCase();
+
+
+                                return (
+                                    title.includes(
+                                        normalized
+                                    ) ||
+
+                                    code.includes(
+                                        normalized
+                                    ) ||
+
+                                    category.includes(
+                                        normalized
+                                    ) ||
+
+                                    subtitle.includes(
+                                        normalized
+                                    ) ||
+
+                                    collection.includes(
+                                        normalized
+                                    ) ||
+
+                                    id.includes(
+                                        normalized
+                                    )
+                                );
+
+                            }
+                        );
+
+
+                    if (match) {
+
+                        window.location.href =
+                            resolveSiteUrl(
+                                "product.html?product=" +
+                                encodeURIComponent(
+                                    match.id
+                                )
+                            );
+
+                        return;
+
+                    }
+
+
+                    /*
+                     * NO EXACT PRODUCT MATCH
+                     *
+                     * Send the customer to
+                     * the complete collection
+                     * instead of doing nothing.
+                     */
+                    window.location.href =
+                        resolveSiteUrl(
+                            "collections/collections.html"
+                        );
+
+                }
+            );
+
+    }
+
+
     button.addEventListener(
         "click",
         openSearch
@@ -863,103 +1138,22 @@ async function loadMasterHeader() {
             function (event) {
 
                 if (
-                    event.key !== "Enter"
+                    event.key === "Enter"
                 ) {
 
-                    return;
+                    event.preventDefault();
+
+                    performSearch();
 
                 }
-
-
-                var query =
-                    input.value.trim();
-
-
-                if (!query) {
-
-                    return;
-
-                }
-
-
-                if (
-                    Array.isArray(
-                        window.SVD_PRODUCT_LIST
-                    )
-                ) {
-
-                    var normalized =
-                        query.toLowerCase();
-
-
-                    var match =
-                        window.SVD_PRODUCT_LIST.find(
-                            function (product) {
-
-                                return (
-
-                                    String(
-                                        product.title || ""
-                                    )
-                                        .toLowerCase()
-                                        .includes(
-                                            normalized
-                                        )
-
-                                    ||
-
-                                    String(
-                                        product.code || ""
-                                    )
-                                        .toLowerCase()
-                                        .includes(
-                                            normalized
-                                        )
-
-                                    ||
-
-                                    String(
-                                        product.category || ""
-                                    )
-                                        .toLowerCase()
-                                        .includes(
-                                            normalized
-                                        )
-
-                                );
-
-                            }
-                        );
-
-
-                    if (match) {
-
-                        window.location.href =
-                            resolveSiteUrl(
-                                "product.html?product=" +
-                                encodeURIComponent(
-                                    match.id
-                                )
-                            );
-
-                        return;
-
-                    }
-
-                }
-
-
-                window.location.href =
-                    resolveSiteUrl(
-                        "collections/collections.html"
-                    );
 
             }
         );
 
     }
 
-}                               
+}
+         
 
 
 
