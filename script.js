@@ -3001,58 +3001,194 @@ async function loadMasterHeader() {
 
 
     /* =========================================================
-       GENERIC BAG BUTTON
-    ========================================================= */
+    /* =========================================================
+   SHARED CART
+   ---------------------------------------------------------
+   Loads the shared cart drawer and opens it from the
+   master header shopping-bag button.
+========================================================= */
 
-    function initGenericBagButton() {
+async function loadSharedCart() {
 
-        var button =
-            document.getElementById(
-                "shoppingBagButton"
+    var existingCart =
+        document.getElementById("cartDrawer");
+
+    if (existingCart) {
+        return true;
+    }
+
+
+    var cartUrl =
+        new URL(
+            "cart.html",
+            siteRoot
+        ).href;
+
+
+    try {
+
+        var response =
+            await fetch(
+                cartUrl,
+                {
+                    cache: "no-cache"
+                }
             );
 
 
-        if (!button) {
-            return;
+        if (!response.ok) {
+
+            throw new Error(
+                "Cart request failed: " +
+                response.status
+            );
+
         }
 
 
+        var html =
+            await response.text();
+
+
+        var parser =
+            new DOMParser();
+
+
+        var cartDocument =
+            parser.parseFromString(
+                html,
+                "text/html"
+            );
+
+
         var cartDrawer =
-            document.getElementById(
+            cartDocument.getElementById(
                 "cartDrawer"
             );
 
 
-        if (cartDrawer) {
-            return;
+        var cartOverlay =
+            cartDocument.getElementById(
+                "cartOverlay"
+            );
+
+
+        if (!cartDrawer) {
+
+            throw new Error(
+                "Cart drawer not found"
+            );
+
         }
 
 
-        button.addEventListener(
-            "click",
-            function () {
+        if (cartOverlay) {
 
-                if (
-                    getCartItemCount() > 0
-                ) {
+            document.body.appendChild(
+                cartOverlay
+            );
 
-                    showToast(
-                        "Your collection is ready. Open a product to manage it."
-                    );
+        }
 
-                } else {
 
-                    showToast(
-                        "Your collection is currently empty."
-                    );
-
-                }
-
-            }
+        document.body.appendChild(
+            cartDrawer
         );
+
+
+        return true;
+
+
+    } catch (error) {
+
+        console.error(
+            "ShriVatsaDarbar cart error:",
+            error
+        );
+
+
+        return false;
 
     }
 
+}
+
+
+async function initGenericBagButton() {
+
+    var button =
+        document.getElementById(
+            "shoppingBagButton"
+        );
+
+
+    if (!button) {
+        return;
+    }
+
+
+    button.addEventListener(
+        "click",
+        async function () {
+
+            var loaded =
+                await loadSharedCart();
+
+
+            if (!loaded) {
+
+                showToast(
+                    "Unable to open your collection. Please try again."
+                );
+
+                return;
+
+            }
+
+
+            var cartDrawer =
+                document.getElementById(
+                    "cartDrawer"
+                );
+
+
+            var cartOverlay =
+                document.getElementById(
+                    "cartOverlay"
+                );
+
+
+            if (cartOverlay) {
+
+                cartOverlay.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            if (cartDrawer) {
+
+                cartDrawer.classList.add(
+                    "active"
+                );
+
+                cartDrawer.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+            }
+
+
+            document.body.classList.add(
+                "cart-open"
+            );
+
+        }
+    );
+
+}
 
 
     /* =========================================================
