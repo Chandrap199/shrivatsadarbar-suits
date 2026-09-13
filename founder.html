@@ -1,1 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Our Founder’s Story | ShriVatsaDarbar</title>
+
+    <meta name="description"
+          content="Discover the story, vision and values behind ShriVatsaDarbar — a premium ethnic wear brand built around timeless elegance, thoughtful curation and the beauty of Indian craftsmanship.">
+
+    <link rel="icon"
+          type="image/png"
+          href="images/favicon.png">
+
+    <link rel="stylesheet"
+          href="styles.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+/* =========================================================
+   FOUNDER STORY PAGE
+========================================================= */
+
+.founder-page {
+    background: #fbf7ef;
+    color: #3f352d;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.founder-hero {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #e8dccd;
+}
+
+.founder-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founder-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(40, 24, 18, .72) 0%,
+            rgba(40, 24, 18, .48) 42%,
+            rgba(40, 24, 18, .12) 78%,
+            rgba(40, 24, 18, .04) 100%
+        );
+}
+
+.founder-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding: 90px 45px;
+
+    color: #fffdf8;
+}
+
+.founder-eyebrow {
+    margin: 0 0 18px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #e2bd73;
+}
+
+.founder-hero h1 {
+    max-width: 650px;
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(58px, 7vw, 92px);
+    font-weight: 500;
+    line-height: .95;
+
+    color: #fffdf8;
+}
+
+.founder-hero h1 span {
+    display: block;
+    color: #e4c27b;
+}
+
+.founder-hero-text {
+    max-width: 540px;
+    margin: 28px 0 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.88);
+}
+
+.founder-hero-ornament {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+.founder-hero-ornament span {
+    width: 55px;
+    height: 1px;
+    background: #d9b56c;
+}
+
+.founder-hero-ornament i {
+    font-style: normal;
+    color: #d9b56c;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.founder-intro {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    padding: 105px 30px 95px;
+
+    text-align: center;
+}
+
+.founder-eyebrow-dark {
+    margin-bottom: 14px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #a17a35;
+}
+
+.founder-intro h2,
+.founder-story-copy h2,
+.founder-values h2,
+.founder-journey h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+
+    color: #4b0713;
+}
+
+.founder-intro h2 {
+    font-size: clamp(42px, 5vw, 62px);
+}
+
+.founder-intro p {
+    max-width: 760px;
+    margin: 24px auto 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 1.95;
+
+    color: #6d6258;
+}
+
+.founder-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin: 28px 0;
+}
+
+.founder-divider span {
+    width: 55px;
+    height: 1px;
+    background: #caa45d;
+}
+
+.founder-divider i {
+    font-style: normal;
+    font-size: 12px;
+    color: #b48736;
+}
+
+
+/* =========================================================
+   THE BEGINNING
+========================================================= */
+
+.founder-story {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    padding: 20px 30px 110px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 75px;
+
+    align-items: center;
+}
+
+.founder-story-image {
+    position: relative;
+}
+
+.founder-story-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    left: -18px;
+    top: 18px;
+
+    border: 1px solid #caa45d;
+
+    z-index: 0;
+}
+
+.founder-story-image img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: 560px;
+
+    object-fit: cover;
+}
+
+.founder-story-copy {
+    padding: 15px 0;
+}
+
+.founder-story-copy h2 {
+    font-size: clamp(42px, 5vw, 58px);
+}
+
+.founder-story-copy .founder-divider {
+    justify-content: flex-start;
+}
+
+.founder-story-copy p {
+    margin: 0 0 20px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.95;
+
+    color: #6d6258;
+}
+
+
+/* =========================================================
+   FOUNDER PHILOSOPHY
+========================================================= */
+
+.founder-philosophy {
+    background: #f1e7d8;
+
+    padding: 105px 30px;
+}
+
+.founder-philosophy-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.founder-philosophy blockquote {
+    margin: 30px auto 0;
+
+    max-width: 850px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #4b0713;
+}
+
+.founder-philosophy p {
+    max-width: 700px;
+    margin: 25px auto 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.9;
+
+    color: #6d6258;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.founder-values {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    padding: 105px 30px;
+}
+
+.founder-values-heading {
+    text-align: center;
+}
+
+.founder-values-heading h2 {
+    font-size: clamp(42px, 5vw, 60px);
+}
+
+.founder-values-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-top: 55px;
+}
+
+.founder-value-card {
+    padding: 40px 30px;
+
+    background: #fffdf9;
+
+    border: 1px solid rgba(181, 140, 65, .22);
+
+    text-align: center;
+}
+
+.founder-value-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #caa45d;
+    border-radius: 50%;
+
+    color: #a17a35;
+}
+
+.founder-value-card h3 {
+    margin: 0 0 12px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+
+    color: #4b0713;
+}
+
+.founder-value-card p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: #6d6258;
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.founder-journey {
+    background: #fffdf9;
+
+    padding: 105px 30px;
+}
+
+.founder-journey-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.founder-journey-heading {
+    text-align: center;
+}
+
+.founder-journey-heading h2 {
+    font-size: clamp(42px, 5vw, 60px);
+}
+
+.founder-timeline {
+    position: relative;
+
+    margin-top: 65px;
+}
+
+.founder-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background: rgba(181, 140, 65, .35);
+
+    transform: translateX(-50%);
+}
+
+.founder-timeline-item {
+    position: relative;
+
+    width: 50%;
+
+    padding: 0 50px 55px;
+}
+
+.founder-timeline-item:nth-child(even) {
+    margin-left: 50%;
+}
+
+.founder-timeline-dot {
+    position: absolute;
+
+    top: 5px;
+    right: -7px;
+
+    width: 14px;
+    height: 14px;
+
+    border: 3px solid #fbf7ef;
+
+    background: #b48736;
+
+    border-radius: 50%;
+}
+
+.founder-timeline-item:nth-child(even)
+.founder-timeline-dot {
+    left: -7px;
+    right: auto;
+}
+
+.founder-timeline-year {
+    margin-bottom: 8px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #a17a35;
+}
+
+.founder-timeline-item h3 {
+    margin: 0 0 10px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+
+    color: #4b0713;
+}
+
+.founder-timeline-item p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: #6d6258;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.founder-cta {
+    position: relative;
+
+    padding: 105px 30px;
+
+    background:
+        linear-gradient(
+            rgba(57, 9, 18, .93),
+            rgba(57, 9, 18, .93)
+        );
+}
+
+.founder-cta-inner {
+    max-width: 850px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.founder-cta h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(44px, 5vw, 64px);
+    font-weight: 500;
+
+    color: #fffdf8;
+}
+
+.founder-cta p {
+    max-width: 650px;
+    margin: 20px auto 30px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.78);
+}
+
+.founder-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 30px;
+
+    border: 1px solid #d8b56c;
+
+    color: #fffdf8;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    transition: .25s ease;
+}
+
+.founder-cta-button:hover {
+    background: #d8b56c;
+    color: #4b0713;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .founder-hero {
+        min-height: 560px;
+    }
+
+    .founder-hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(40, 24, 18, .78),
+                rgba(40, 24, 18, .40)
+            );
+    }
+
+    .founder-hero-content {
+        padding: 75px 24px;
+    }
+
+    .founder-hero h1 {
+        font-size: 58px;
+    }
+
+    .founder-hero-text {
+        font-size: 13px;
+    }
+
+    .founder-intro {
+        padding: 75px 22px;
+    }
+
+    .founder-story {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding:
+            0 22px 80px;
+    }
+
+    .founder-story-image::before {
+        left: -10px;
+        top: 10px;
+    }
+
+    .founder-story-image img {
+        height: 420px;
+    }
+
+    .founder-story-copy {
+        padding: 0;
+    }
+
+    .founder-values {
+        padding: 80px 22px;
+    }
+
+    .founder-values-grid {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+
+    .founder-philosophy {
+        padding: 80px 22px;
+    }
+
+    .founder-journey {
+        padding: 80px 22px;
+    }
+
+    .founder-timeline::before {
+        left: 8px;
+    }
+
+    .founder-timeline-item,
+    .founder-timeline-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+
+        padding:
+            0 0 45px 35px;
+    }
+
+    .founder-timeline-dot,
+    .founder-timeline-item:nth-child(even)
+    .founder-timeline-dot {
+        left: 1px;
+        right: auto;
+    }
+
+    .founder-cta {
+        padding: 80px 22px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .founder-hero h1 {
+        font-size: 48px;
+    }
+
+    .founder-hero-text {
+        font-size: 12px;
+    }
+
+    .founder-story-image img {
+        height: 350px;
+    }
+
+}
+
+    </style>
+
+</head>
+
+
+<body class="founder-page">
+
+
+<!-- =========================================================
+     MASTER HEADER
+========================================================= -->
+
+<div id="site-header"></div>
+
+
+<!-- =========================================================
+     FOUNDER HERO
+========================================================= -->
+
+<section class="founder-hero">
+
+    <img
+        class="founder-hero-image"
+        src="images/banners/founder-hero-banner.webp"
+        alt="ShriVatsaDarbar textile atelier">
+
+    <div class="founder-hero-overlay"></div>
+
+    <div class="founder-hero-content">
+
+        <p class="founder-eyebrow">
+            A JOURNEY OF FAITH, FASHION AND YOU
+        </p>
+
+        <h1>
+            Our Founder’s
+            <span>Story</span>
+        </h1>
+
+        <p class="founder-hero-text">
+            A vision shaped by timeless Indian elegance,
+            thoughtful curation and a belief that what we wear
+            should always feel beautifully our own.
+        </p>
+
+        <div class="founder-hero-ornament">
+            <span></span>
+            <i>✦</i>
+            <span></span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="founder-intro">
+
+    <p class="founder-eyebrow-dark">
+        THE HEART BEHIND THE BRAND
+    </p>
+
+    <h2>
+        More Than What We Wear
+    </h2>
+
+    <div class="founder-divider">
+        <span></span>
+        <i>✦</i>
+        <span></span>
+    </div>
+
+    <p>
+        ShriVatsaDarbar was created from a simple belief:
+        beautiful ethnic wear should feel personal, graceful
+        and timeless.
+
+        Every saree and suit we curate is chosen with the
+        intention of bringing together traditional Indian
+        craftsmanship and the individuality of the woman
+        who wears it.
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     THE BEGINNING
+========================================================= -->
+
+<section class="founder-story">
+
+    <div class="founder-story-image">
+
+        <img
+            src="images/banners/founder-story-fabric-textures.webp"
+            alt="Beautifully embroidered Indian textiles">
+
+    </div>
+
+
+    <div class="founder-story-copy">
+
+        <p class="founder-eyebrow-dark">
+            THE BEGINNING
+        </p>
+
+        <h2>
+            A Love for Beautiful Details
+        </h2>
+
+        <div class="founder-divider">
+            <span></span>
+            <i>✦</i>
+            <span></span>
+        </div>
+
+        <p>
+            The idea behind ShriVatsaDarbar began with an
+            appreciation for the beauty found in Indian
+            textiles — the richness of fabric, the detail
+            of embroidery and the quiet elegance of a
+            beautifully finished piece.
+        </p>
+
+        <p>
+            Over time, that appreciation became a vision:
+            to create a carefully curated destination where
+            women could discover sarees and suits that feel
+            elegant without feeling complicated.
+        </p>
+
+        <p>
+            Rather than simply filling a catalogue, the goal
+            is to select pieces with character — designs
+            that can become part of celebrations, occasions
+            and everyday moments.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOUNDER PHILOSOPHY
+========================================================= -->
+
+<section class="founder-philosophy">
+
+    <div class="founder-philosophy-inner">
+
+        <p class="founder-eyebrow-dark">
+            THE FOUNDER'S PHILOSOPHY
+        </p>
+
+        <blockquote>
+            “Elegance is not about following every trend.
+            It is about finding something that feels
+            beautifully, authentically yours.”
+        </blockquote>
+
+        <p>
+            That belief shapes every part of ShriVatsaDarbar —
+            from the fabrics we look for to the details we
+            notice and the way we want every customer to feel
+            when choosing something from our collection.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VALUES
+========================================================= -->
+
+<section class="founder-values">
+
+    <div class="founder-values-heading">
+
+        <p class="founder-eyebrow-dark">
+            WHAT WE BELIEVE
+        </p>
+
+        <h2>
+            The Values Behind Every Choice
+        </h2>
+
+        <div class="founder-divider">
+            <span></span>
+            <i>✦</i>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <div class="founder-values-grid">
+
+
+        <article class="founder-value-card">
+
+            <div class="founder-value-icon">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <h3>
+                Curated With Care
+            </h3>
+
+            <p>
+                Every piece is thoughtfully selected
+                with attention to fabric, detail,
+                colour and overall elegance.
+            </p>
+
+        </article>
+
+
+        <article class="founder-value-card">
+
+            <div class="founder-value-icon">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <h3>
+                Timeless Elegance
+            </h3>
+
+            <p>
+                We look beyond fleeting trends for
+                pieces that can remain beautiful
+                season after season.
+            </p>
+
+        </article>
+
+
+        <article class="founder-value-card">
+
+            <div class="founder-value-icon">
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <h3>
+                Personal Connection
+            </h3>
+
+            <p>
+                Fashion should feel personal. Our
+                collections are chosen for women
+                who want to express their own style.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     JOURNEY
+========================================================= -->
+
+<section class="founder-journey">
+
+    <div class="founder-journey-inner">
+
+        <div class="founder-journey-heading">
+
+            <p class="founder-eyebrow-dark">
+                THE JOURNEY
+            </p>
+
+            <h2>
+                From Vision to ShriVatsaDarbar
+            </h2>
+
+            <div class="founder-divider">
+                <span></span>
+                <i>✦</i>
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <div class="founder-timeline">
+
+
+            <div class="founder-timeline-item">
+
+                <div class="founder-timeline-dot"></div>
+
+                <p class="founder-timeline-year">
+                    THE IDEA
+                </p>
+
+                <h3>
+                    A Love for Indian Craft
+                </h3>
+
+                <p>
+                    An appreciation for fabrics, embroidery
+                    and the timeless beauty of Indian
+                    ethnic wear became the foundation
+                    of the vision.
+                </p>
+
+            </div>
+
+
+            <div class="founder-timeline-item">
+
+                <div class="founder-timeline-dot"></div>
+
+                <p class="founder-timeline-year">
+                    THE VISION
+                </p>
+
+                <h3>
+                    Thoughtful Curation
+                </h3>
+
+                <p>
+                    The focus became clear: select pieces
+                    that combine quality, elegance and
+                    individuality rather than simply
+                    following trends.
+                </p>
+
+            </div>
+
+
+            <div class="founder-timeline-item">
+
+                <div class="founder-timeline-dot"></div>
+
+                <p class="founder-timeline-year">
+                    SHRI VATSADARBAR
+                </p>
+
+                <h3>
+                    Building the Collection
+                </h3>
+
+                <p>
+                    Sarees and suits became the beginning
+                    of a growing collection created for
+                    celebrations, occasions and beautiful
+                    everyday moments.
+                </p>
+
+            </div>
+
+
+            <div class="founder-timeline-item">
+
+                <div class="founder-timeline-dot"></div>
+
+                <p class="founder-timeline-year">
+                    THE FUTURE
+                </p>
+
+                <h3>
+                    Growing With You
+                </h3>
+
+                <p>
+                    The journey continues with the same
+                    commitment to thoughtful selection,
+                    premium presentation and a customer
+                    experience built around care.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="founder-cta">
+
+    <div class="founder-cta-inner">
+
+        <h2>
+            Grace in Every Thread
+        </h2>
+
+        <p>
+            Discover the ShriVatsaDarbar collection —
+            thoughtfully selected for women who appreciate
+            tradition, elegance and their own individuality.
+        </p>
+
+        <a
+            href="collections/collections.html"
+            class="founder-cta-button">
+
+            Explore the Collection
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MASTER FOOTER
+========================================================= -->
+
+<div id="site-footer"></div>
+
+
+<!-- =========================================================
+     WHATSAPP FLOAT
+========================================================= -->
+
+<a
+    href="https://wa.me/918826196544"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Chat with ShriVatsaDarbar on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<!-- =========================================================
+     SITE TOAST
+========================================================= -->
+
+<div
+    class="site-toast"
+    id="siteToast"
+    role="status"
+    aria-live="polite">
+</div>
+
+
+<!-- =========================================================
+     MASTER JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
