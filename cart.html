@@ -1,1 +1,49 @@
+<!-- =========================================================
+     SHARED CART
+========================================================= -->
 
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+
+        <button
+            type="button"
+            class="cart-close"
+            id="cartClose"
+            aria-label="Close cart">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div class="cart-body" id="cartBody">
+        <!-- Cart items are rendered by script.js -->
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-summary">
+            <span>Total Items</span>
+            <strong id="cartTotalItems">0</strong>
+        </div>
+
+        <button
+            type="button"
+            class="cart-whatsapp"
+            id="cartWhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            &nbsp; Enquire on WhatsApp
+        </button>
+
+        <button
+            type="button"
+            class="cart-clear"
+            id="cartClear">
+            Clear Cart
+        </button>
+
+    </div>
+
+</aside>
