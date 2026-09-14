@@ -971,6 +971,26 @@
             color: #8b7e80;
         }
 
+/* =========================================================
+   IMAGE CROP FIX — REMOVE BLACK STRIP
+   ========================================================= */
+
+.suit-image,
+.measurement-image {
+    overflow: hidden;
+}
+
+.suit-image img {
+    transform: scale(1.12);
+    transform-origin: center center;
+}
+
+.measurement-image img {
+    transform: scale(1.10);
+    transform-origin: center center;
+}
+
+        
         /* =========================================================
            MOBILE
            ========================================================= */
