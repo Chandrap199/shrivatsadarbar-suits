@@ -110,42 +110,42 @@
 
         .size-hero {
 
-    position:
-        relative;
+            position:
+                relative;
 
-    min-height:
-        500px;
+            min-height:
+                500px;
 
-    display:
-        flex;
+            display:
+                flex;
 
-    align-items:
-        center;
+            align-items:
+                center;
 
-    justify-content:
-        center;
+            justify-content:
+                center;
 
-    text-align:
-        center;
+            text-align:
+                center;
 
-    padding:
-        90px 24px;
+            padding:
+                90px 24px;
 
-    background:
-        linear-gradient(
-            rgba(55, 12, 18, 0.48),
-            rgba(55, 12, 18, 0.58)
-        ),
-        url("images/banners/size-guide-hero-banner.webp")
-        center center / cover no-repeat;
+            background:
+                linear-gradient(
+                    rgba(55, 12, 18, 0.48),
+                    rgba(55, 12, 18, 0.58)
+                ),
+                url("images/banners/size-guide-hero-banner.webp")
+                center center / cover no-repeat;
 
-    color:
-        #ffffff;
+            color:
+                #ffffff;
 
-    overflow:
-        hidden;
+            overflow:
+                hidden;
 
-}
+        }
 
 
         .size-hero::before {
@@ -895,58 +895,58 @@
 
         .measurement-grid {
 
-    display:
-        grid;
+            display:
+                grid;
 
-    grid-template-columns:
-        minmax(320px, 0.9fr)
-        minmax(0, 1.1fr);
+            grid-template-columns:
+                minmax(320px, 0.9fr)
+                minmax(0, 1.1fr);
 
-    grid-template-rows:
-        repeat(3, auto);
+            grid-template-rows:
+                repeat(3, auto);
 
-    gap:
-        24px;
+            gap:
+                24px;
 
-    width:
-        min(
-            1080px,
-            100%
-        );
+            width:
+                min(
+                    1080px,
+                    100%
+                );
 
-    margin:
-        0 auto;
+            margin:
+                0 auto;
 
-}
+        }
 
 
-.measurement-grid::before {
+        .measurement-grid::before {
 
-    content:
-        "";
+            content:
+                "";
 
-    grid-column:
-        1;
+            grid-column:
+                1;
 
-    grid-row:
-        1 / 4;
+            grid-row:
+                1 / 4;
 
-    min-height:
-        680px;
+            min-height:
+                680px;
 
-    background:
-        url("images/banners/size-guide-measurements.webp")
-        center center / cover no-repeat;
+            background:
+                url("images/banners/size-guide-measurements.webp")
+                center center / cover no-repeat;
 
-    border:
-        1px solid
-        #e1d5c7;
+            border:
+                1px solid
+                #e1d5c7;
 
-    box-shadow:
-        0 15px 45px
-        rgba(63,32,15,.08);
+            box-shadow:
+                0 15px 45px
+                rgba(63,32,15,.08);
 
-}
+        }
 
 
         .measurement-step {
@@ -1376,10 +1376,52 @@
             }
 
 
+            /* =====================================================
+               MOBILE MEASUREMENT SECTION
+               ===================================================== */
+
             .measurement-grid {
 
                 grid-template-columns:
                     1fr;
+
+                grid-template-rows:
+                    auto;
+
+                gap:
+                    18px;
+
+            }
+
+
+            .measurement-grid::before {
+
+                grid-column:
+                    1;
+
+                grid-row:
+                    auto;
+
+                width:
+                    100%;
+
+                height:
+                    420px;
+
+                min-height:
+                    0;
+
+                background:
+                    url("images/banners/size-guide-measurements.webp")
+                    center center / cover no-repeat;
+
+            }
+
+
+            .measurement-step {
+
+                padding:
+                    32px 24px;
 
             }
 
@@ -1448,6 +1490,22 @@
 
                 padding:
                     14px 11px;
+
+            }
+
+
+            .measurement-grid::before {
+
+                height:
+                    360px;
+
+            }
+
+
+            .measurement-step {
+
+                padding:
+                    30px 20px;
 
             }
 
