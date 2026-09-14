@@ -1,135 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Size Guide | ShriVatsaDarbar — Premium Sarees & Suits
-    </title>
+    <meta name="description"
+          content="ShriVatsaDarbar Size Guide — Find your perfect fit for premium sarees and suits with our easy measurement and sizing guide.">
 
-    <meta
-        name="description"
-        content="Find your perfect fit with the ShriVatsaDarbar size guide for sarees and suits."
-    >
+    <meta name="keywords"
+          content="ShriVatsaDarbar size guide, saree size guide, suit size chart, women's suit measurements, saree fit guide">
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
+    <meta name="author"
+          content="ShriVatsaDarbar">
 
-    <link
-        rel="canonical"
-        href="size-guide.html"
-    >
+    <title>Size Guide | ShriVatsaDarbar</title>
 
-    <link
-        rel="icon"
-        type="image/webp"
-        href="images/logos/logo-white.webp"
-    >
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- FONT AWESOME -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
-
-    <!-- MASTER STYLES -->
-
-    <link
-        rel="stylesheet"
-        href="styles.css"
-    >
-
+    <!-- Main Website CSS -->
+    <link rel="stylesheet"
+          href="styles.css">
 
     <style>
 
         /* =========================================================
-           SHRI VATSA DARBAR
-           SIZE GUIDE
-           Page-scoped styling only
-        ========================================================= */
+           SHRI VATSADARBAR
+           PREMIUM SIZE GUIDE
+           ========================================================= */
 
-
-        .svd-size-page {
-
-            background:
-                #fbf8f3;
-
-            color:
-                #30272a;
-
-            overflow-x:
-                hidden;
-
+        :root {
+            --sg-burgundy: #5a0b18;
+            --sg-deep-burgundy: #3d0710;
+            --sg-cream: #faf7f1;
+            --sg-soft-cream: #f5efe5;
+            --sg-white: #ffffff;
+            --sg-gold: #b78327;
+            --sg-gold-light: #d7b56b;
+            --sg-text: #34272a;
+            --sg-muted: #75676a;
+            --sg-border: rgba(120, 83, 32, 0.18);
         }
 
-
-        .svd-size-page *,
-        .svd-size-page *::before,
-        .svd-size-page *::after {
-
-            box-sizing:
-                border-box;
-
+        /* Prevent horizontal overflow */
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
+        body {
+            background: var(--sg-cream);
+            color: var(--sg-text);
+        }
+
+        /* =========================================================
+           PAGE WRAPPER
+           ========================================================= */
+
+        .size-guide-page {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .size-guide-container {
+            width: min(1180px, calc(100% - 48px));
+            margin: 0 auto;
+        }
 
         /* =========================================================
            HERO
-        ========================================================= */
+           ========================================================= */
 
         .size-hero {
+            position: relative;
+            min-height: 500px;
 
-            position:
-                relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            min-height:
-                500px;
+            text-align: center;
 
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            text-align:
-                center;
-
-            padding:
-                90px 24px;
+            padding: 90px 24px;
 
             background:
                 linear-gradient(
@@ -139,1405 +106,1064 @@
                 url("images/banners/size-guide-hero-banner.webp")
                 center center / cover no-repeat;
 
-            color:
-                #ffffff;
-
-            overflow:
-                hidden;
-
+            color: #ffffff;
+            overflow: hidden;
         }
-
-
-        .size-hero::before {
-
-            content:
-                "";
-
-            position:
-                absolute;
-
-            width:
-                420px;
-
-            height:
-                420px;
-
-            border:
-                1px solid
-                rgba(215,180,106,.22);
-
-            border-radius:
-                50%;
-
-            top:
-                -210px;
-
-            right:
-                -80px;
-
-        }
-
 
         .size-hero::after {
+            content: "";
+            position: absolute;
+            inset: 22px;
 
-            content:
-                "";
+            border: 1px solid rgba(255,255,255,0.28);
 
-            position:
-                absolute;
-
-            width:
-                320px;
-
-            height:
-                320px;
-
-            border:
-                1px solid
-                rgba(215,180,106,.16);
-
-            border-radius:
-                50%;
-
-            bottom:
-                -180px;
-
-            left:
-                -90px;
-
+            pointer-events: none;
         }
 
+        .size-hero-content {
+            position: relative;
+            z-index: 2;
 
-        .size-hero-inner {
-
-            position:
-                relative;
-
-            z-index:
-                2;
-
-            width:
-                min(850px, 100%);
-
+            width: min(760px, 100%);
         }
 
+        .size-hero-eyebrow {
+            margin-bottom: 12px;
 
-        .size-eyebrow {
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
 
-            display:
-                inline-flex;
+            letter-spacing: 4px;
+            text-transform: uppercase;
 
-            align-items:
-                center;
-
-            gap:
-                12px;
-
-            margin-bottom:
-                18px;
-
-            color:
-                #d7b46a;
-
-            font-family:
-                "DM Sans",
-                sans-serif;
-
-            font-size:
-                11px;
-
-            font-weight:
-                700;
-
-            letter-spacing:
-                .2em;
-
-            text-transform:
-                uppercase;
-
+            color: #ead09a;
         }
-
-
-        .size-eyebrow::before,
-        .size-eyebrow::after {
-
-            content:
-                "";
-
-            width:
-                38px;
-
-            height:
-                1px;
-
-            background:
-                currentColor;
-
-        }
-
 
         .size-hero h1 {
+            margin: 0;
 
-            margin:
-                0;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(54px, 7vw, 86px);
+            font-weight: 500;
 
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
+            line-height: 0.92;
 
-            font-size:
-                clamp(
-                    52px,
-                    7vw,
-                    82px
-                );
+            letter-spacing: -1px;
 
-            font-weight:
-                500;
-
-            line-height:
-                .95;
-
-            letter-spacing:
-                -.025em;
-
+            color: #ffffff;
         }
 
+        .size-hero h1::after {
+            content: "";
+            display: block;
 
-        .size-hero p {
+            width: 72px;
+            height: 1px;
 
-            max-width:
-                620px;
+            margin: 25px auto 20px;
 
-            margin:
-                25px auto 0;
-
-            color:
-                rgba(255,255,255,.86);
-
-            font-family:
-                "DM Sans",
-                sans-serif;
-
-            font-size:
-                15px;
-
-            line-height:
-                1.8;
-
+            background: #d7b56b;
         }
 
+        .size-hero-text {
+            max-width: 560px;
+            margin: 0 auto;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+
+            line-height: 1.8;
+
+            color: rgba(255,255,255,0.92);
+        }
 
         /* =========================================================
-           INTRO
-        ========================================================= */
+           TRUST STRIP
+           ========================================================= */
 
-        .size-intro {
-
-            padding:
-                95px 24px 70px;
-
-            background:
-                #fffdf8;
-
-            text-align:
-                center;
-
+        .size-trust-strip {
+            background: #fffdf9;
+            border-bottom: 1px solid var(--sg-border);
         }
 
-
-        .size-container {
-
-            width:
-                min(
-                    1180px,
-                    100%
-                );
-
-            margin:
-                0 auto;
-
+        .size-trust-inner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
         }
 
+        .size-trust-item {
+            min-height: 82px;
 
-        .size-section-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
 
-            margin-bottom:
-                14px;
+            padding: 15px 20px;
 
-            color:
-                #b88932;
-
-            font-family:
-                "DM Sans",
-                sans-serif;
-
-            font-size:
-                11px;
-
-            font-weight:
-                700;
-
-            letter-spacing:
-                .18em;
-
-            text-transform:
-                uppercase;
-
+            border-right: 1px solid var(--sg-border);
         }
 
-
-        .size-intro h2 {
-
-            margin:
-                0;
-
-            color:
-                #4b0713;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size:
-                clamp(
-                    40px,
-                    5vw,
-                    62px
-                );
-
-            font-weight:
-                500;
-
-            line-height:
-                1;
-
+        .size-trust-item:last-child {
+            border-right: 0;
         }
 
+        .size-trust-icon {
+            width: 34px;
+            height: 34px;
 
-        .size-intro p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            max-width:
-                760px;
+            color: var(--sg-gold);
 
-            margin:
-                24px auto 0;
-
-            color:
-                #665d58;
-
-            font-family:
-                "DM Sans",
-                sans-serif;
-
-            font-size:
-                15px;
-
-            line-height:
-                1.85;
-
+            font-size: 20px;
         }
 
+        .size-trust-copy strong {
+            display: block;
+
+            margin-bottom: 3px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+
+            color: var(--sg-gold);
+        }
+
+        .size-trust-copy span {
+            display: block;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+
+            color: var(--sg-muted);
+        }
 
         /* =========================================================
-           QUICK NAV
-        ========================================================= */
-
-        .size-guide-nav {
-
-            display:
-                flex;
-
-            justify-content:
-                center;
-
-            flex-wrap:
-                wrap;
-
-            gap:
-                12px;
-
-            margin:
-                30px auto 0;
-
-        }
-
-
-        .size-guide-nav a {
-
-            display:
-                inline-flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            min-width:
-                150px;
-
-            padding:
-                12px 22px;
-
-            border:
-                1px solid
-                #d7b46a;
-
-            color:
-                #4b0713;
-
-            font-family:
-                "DM Sans",
-                sans-serif;
-
-            font-size:
-                11px;
-
-            font-weight:
-                700;
-
-            letter-spacing:
-                .08em;
-
-            text-transform:
-                uppercase;
-
-            transition:
-                .3s ease;
-
-        }
-
-
-        .size-guide-nav a:hover {
-
-            background:
-                #b88932;
-
-            color:
-                #ffffff;
-
-        }
-
-
-        /* =========================================================
-           GUIDE SECTIONS
-        ========================================================= */
+           SECTION COMMON
+           ========================================================= */
 
         .size-section {
-
-            padding:
-                95px 24px;
-
+            padding: 82px 0;
         }
 
-
-        .size-section.alt {
-
-            background:
-                #f5efe7;
-
+        .size-section.soft {
+            background: #f5efe5;
         }
 
-
-        .size-heading {
-
-            max-width:
-                760px;
-
-            margin:
-                0 auto 45px;
-
-            text-align:
-                center;
-
+        .size-section.white {
+            background: #fffdf9;
         }
 
+        .size-section-label {
+            margin-bottom: 7px;
 
-        .size-heading h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            font-weight: 600;
 
-            margin:
-                0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
 
-            color:
-                #4b0713;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size:
-                clamp(
-                    38px,
-                    5vw,
-                    58px
-                );
-
-            font-weight:
-                500;
-
-            line-height:
-                1;
-
+            color: var(--sg-gold);
         }
 
+        .size-section-title {
+            position: relative;
 
-        .size-heading p {
+            margin: 0 0 15px;
 
-            margin:
-                18px auto 0;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(40px, 5vw, 58px);
+            font-weight: 500;
 
-            color:
-                #756b66;
+            line-height: 0.98;
 
-            font-size:
-                14px;
-
-            line-height:
-                1.8;
-
+            color: var(--sg-burgundy);
         }
 
+        .size-section-title::after {
+            content: "";
+
+            display: inline-block;
+
+            width: 55px;
+            height: 1px;
+
+            margin-left: 17px;
+
+            vertical-align: middle;
+
+            background: var(--sg-gold);
+        }
+
+        .size-section-intro {
+            max-width: 670px;
+
+            margin: 0 0 28px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+
+            line-height: 1.75;
+
+            color: var(--sg-muted);
+        }
 
         /* =========================================================
-           CARDS
-        ========================================================= */
+           PREMIUM IMAGE FRAME
+           ========================================================= */
 
-        .size-card-grid {
+        .size-image-frame {
+            position: relative;
 
-            display:
-                grid;
+            padding: 0;
+
+            background: #ffffff;
+        }
+
+        .size-image-frame::before {
+            content: "";
+
+            position: absolute;
+
+            top: -13px;
+            left: -13px;
+
+            width: 90px;
+            height: 90px;
+
+            border-top: 1px solid var(--sg-gold);
+            border-left: 1px solid var(--sg-gold);
+
+            z-index: 2;
+
+            pointer-events: none;
+        }
+
+        .size-image-frame::after {
+            content: "";
+
+            position: absolute;
+
+            right: -13px;
+            bottom: -13px;
+
+            width: 90px;
+            height: 90px;
+
+            border-right: 1px solid var(--sg-gold);
+            border-bottom: 1px solid var(--sg-gold);
+
+            z-index: 2;
+
+            pointer-events: none;
+        }
+
+        .size-image-frame img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        /* =========================================================
+           SUIT SECTION
+           ========================================================= */
+
+        .suit-size-layout {
+            display: grid;
 
             grid-template-columns:
-                repeat(
-                    2,
-                    minmax(0, 1fr)
-                );
+                minmax(350px, 0.88fr)
+                minmax(0, 1.45fr);
 
-            gap:
-                28px;
+            gap: 55px;
 
-            width:
-                min(
-                    1080px,
-                    100%
-                );
-
-            margin:
-                0 auto;
-
+            align-items: center;
         }
 
-
-        .size-card {
-
-            padding:
-                42px;
-
-            background:
-                #fffdf8;
-
-            border:
-                1px solid
-                #e7ddd1;
-
-            box-shadow:
-                0 15px 45px
-                rgba(63,32,15,.06);
-
+        .suit-image {
+            height: 500px;
         }
 
-
-        .size-card-icon {
-
-            width:
-                52px;
-
-            height:
-                52px;
-
-            display:
-                grid;
-
-            place-items:
-                center;
-
-            margin-bottom:
-                22px;
-
-            border:
-                1px solid
-                #d7b46a;
-
-            border-radius:
-                50%;
-
-            color:
-                #b88932;
-
-            font-size:
-                18px;
-
+        .suit-chart-area {
+            min-width: 0;
         }
-
-
-        .size-card h3 {
-
-            margin:
-                0 0 13px;
-
-            color:
-                #4b0713;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size:
-                31px;
-
-            font-weight:
-                600;
-
-        }
-
-
-        .size-card p {
-
-            margin:
-                0;
-
-            color:
-                #665d58;
-
-            font-size:
-                14px;
-
-            line-height:
-                1.8;
-
-        }
-
-
-        .size-card ul {
-
-            margin:
-                18px 0 0;
-
-            padding-left:
-                20px;
-
-            color:
-                #665d58;
-
-            font-size:
-                14px;
-
-            line-height:
-                1.9;
-
-        }
-
-
-        /* =========================================================
-           SIZE TABLE
-        ========================================================= */
 
         .size-table-wrap {
+            width: 100%;
 
-            width:
-                min(
-                    1080px,
-                    100%
-                );
+            overflow-x: auto;
 
-            margin:
-                0 auto;
+            background: #ffffff;
 
-            overflow-x:
-                auto;
-
-            background:
-                #fffdf8;
-
-            border:
-                1px solid
-                #e1d5c7;
+            border: 1px solid var(--sg-border);
+            border-radius: 2px;
 
             box-shadow:
-                0 15px 45px
-                rgba(63,32,15,.06);
-
+                0 10px 35px rgba(60, 20, 25, 0.06);
         }
-
 
         .size-table {
+            width: 100%;
 
-            width:
-                100%;
+            border-collapse: collapse;
 
-            min-width:
-                760px;
+            min-width: 600px;
 
-            border-collapse:
-                collapse;
-
+            font-family: "Montserrat", sans-serif;
         }
-
 
         .size-table th {
+            padding: 12px 10px;
 
-            padding:
-                17px 16px;
+            background: var(--sg-burgundy);
 
-            background:
-                #4b0713;
+            color: #ffffff;
 
-            color:
-                #ffffff;
+            font-size: 11px;
+            font-weight: 600;
 
-            font-family:
-                "DM Sans",
-                sans-serif;
-
-            font-size:
-                11px;
-
-            font-weight:
-                700;
-
-            letter-spacing:
-                .08em;
-
-            text-transform:
-                uppercase;
-
-            text-align:
-                center;
-
+            letter-spacing: 0.5px;
         }
-
-
-        .size-table th:first-child {
-
-            text-align:
-                left;
-
-        }
-
 
         .size-table td {
+            padding: 10px;
 
-            padding:
-                17px 16px;
+            text-align: center;
 
-            border-bottom:
-                1px solid
-                #e7ddd1;
+            border-right: 1px solid var(--sg-border);
+            border-bottom: 1px solid var(--sg-border);
 
-            color:
-                #514943;
+            font-size: 11px;
 
-            font-size:
-                14px;
-
-            text-align:
-                center;
-
+            color: #4f4446;
         }
-
 
         .size-table td:first-child {
-
-            color:
-                #4b0713;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size:
-                19px;
-
-            font-weight:
-                600;
-
-            text-align:
-                left;
-
+            font-weight: 600;
+            color: var(--sg-burgundy);
         }
-
-
-        .size-table tr:last-child td {
-
-            border-bottom:
-                0;
-
-        }
-
 
         .size-table tr:nth-child(even) td {
-
-            background:
-                #fbf8f3;
-
+            background: #fbf8f2;
         }
 
+        .size-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .fit-tip {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+
+            margin-top: 13px;
+            padding: 16px 18px;
+
+            background: #f6eee0;
+
+            border-left: 2px solid var(--sg-gold);
+        }
+
+        .fit-tip-icon {
+            flex: 0 0 30px;
+
+            color: var(--sg-gold);
+
+            font-size: 22px;
+
+            text-align: center;
+        }
+
+        .fit-tip h4 {
+            margin: 0 0 4px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 18px;
+            font-weight: 600;
+
+            color: var(--sg-burgundy);
+        }
+
+        .fit-tip p {
+            margin: 0;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+
+            line-height: 1.65;
+
+            color: var(--sg-muted);
+        }
 
         /* =========================================================
-           MEASUREMENT STEPS
-        ========================================================= */
+           SAREE SECTION
+           ========================================================= */
 
-        .measurement-grid {
-
-            display:
-                grid;
+        .saree-size-layout {
+            display: grid;
 
             grid-template-columns:
-                minmax(320px, 0.9fr)
-                minmax(0, 1.1fr);
+                minmax(0, 1.1fr)
+                minmax(340px, 0.85fr);
 
-            grid-template-rows:
-                repeat(3, auto);
+            gap: 55px;
 
-            gap:
-                24px;
-
-            width:
-                min(
-                    1080px,
-                    100%
-                );
-
-            margin:
-                0 auto;
-
+            align-items: center;
         }
 
-
-        .measurement-grid::before {
-
-            content:
-                "";
-
-            grid-column:
-                1;
-
-            grid-row:
-                1 / 4;
-
-            min-height:
-                680px;
-
-            background:
-                url("images/banners/size-guide-measurements.webp")
-                center center / cover no-repeat;
-
-            border:
-                1px solid
-                #e1d5c7;
-
-            box-shadow:
-                0 15px 45px
-                rgba(63,32,15,.08);
-
+        .saree-copy {
+            min-width: 0;
         }
 
-
-        .measurement-step {
-
-            position:
-                relative;
-
-            padding:
-                38px 30px;
-
-            background:
-                #fffdf8;
-
-            border:
-                1px solid
-                #e7ddd1;
-
-            text-align:
-                center;
-
+        .saree-image {
+            height: 440px;
         }
 
+        .saree-guide-grid {
+            display: grid;
 
-        .measurement-number {
+            grid-template-columns: repeat(2, 1fr);
 
-            width:
-                42px;
+            gap: 12px;
 
-            height:
-                42px;
-
-            display:
-                grid;
-
-            place-items:
-                center;
-
-            margin:
-                0 auto 20px;
-
-            border:
-                1px solid
-                #d7b46a;
-
-            border-radius:
-                50%;
-
-            color:
-                #b88932;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size:
-                20px;
-
+            margin-top: 28px;
         }
 
+        .saree-guide-card {
+            padding: 22px;
 
-        .measurement-step h3 {
+            background: rgba(255,255,255,0.8);
 
-            margin:
-                0 0 10px;
+            border: 1px solid var(--sg-border);
 
-            color:
-                #4b0713;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size:
-                26px;
-
-            font-weight:
-                600;
-
+            min-height: 145px;
         }
 
+        .saree-guide-icon {
+            margin-bottom: 12px;
 
-        .measurement-step p {
+            font-size: 22px;
 
-            margin:
-                0;
-
-            color:
-                #756b66;
-
-            font-size:
-                13px;
-
-            line-height:
-                1.8;
-
+            color: var(--sg-gold);
         }
 
+        .saree-guide-card h3 {
+            margin: 0 0 7px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 20px;
+            font-weight: 600;
+
+            color: var(--sg-burgundy);
+        }
+
+        .saree-guide-card p {
+            margin: 0;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+
+            line-height: 1.65;
+
+            color: var(--sg-muted);
+        }
+
+        .saree-note {
+            margin-top: 14px;
+            padding: 17px 18px;
+
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+
+            background: #f0e7d6;
+
+            border-left: 2px solid var(--sg-gold);
+        }
+
+        .saree-note-icon {
+            color: var(--sg-gold);
+
+            font-size: 20px;
+        }
+
+        .saree-note strong {
+            display: block;
+
+            margin-bottom: 4px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 18px;
+
+            color: var(--sg-burgundy);
+        }
+
+        .saree-note p {
+            margin: 0;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+
+            line-height: 1.65;
+
+            color: var(--sg-muted);
+        }
 
         /* =========================================================
-           NOTES
-        ========================================================= */
+           MEASUREMENTS SECTION
+           ========================================================= */
 
-        .size-notes {
+        .measurement-layout {
+            display: grid;
 
-            width:
-                min(
-                    920px,
-                    100%
-                );
+            grid-template-columns:
+                minmax(350px, 0.82fr)
+                minmax(0, 1.35fr);
 
-            margin:
-                50px auto 0;
+            gap: 55px;
 
-            padding:
-                30px 34px;
-
-            border-left:
-                3px solid
-                #b88932;
-
-            background:
-                rgba(255,255,255,.55);
-
+            align-items: center;
         }
 
-
-        .size-notes h3 {
-
-            margin:
-                0 0 10px;
-
-            color:
-                #4b0713;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size:
-                27px;
-
-            font-weight:
-                600;
-
+        .measurement-image {
+            height: 520px;
         }
 
-
-        .size-notes p {
-
-            margin:
-                0;
-
-            color:
-                #665d58;
-
-            font-size:
-                13px;
-
-            line-height:
-                1.8;
-
+        .measurement-copy {
+            min-width: 0;
         }
 
+        .measurement-grid {
+            display: grid;
 
-        /* =========================================================
-           WHATSAPP / HELP
-        ========================================================= */
+            grid-template-columns: repeat(3, 1fr);
 
-        .size-help {
+            gap: 10px;
 
-            padding:
-                100px 24px;
-
-            background:
-                #4b0713;
-
-            color:
-                #ffffff;
-
-            text-align:
-                center;
-
+            margin-top: 25px;
         }
 
+        .measurement-card {
+            min-height: 155px;
 
-        .size-help-inner {
+            padding: 18px;
 
-            width:
-                min(
-                    760px,
-                    100%
-                );
+            background: #ffffff;
 
-            margin:
-                0 auto;
-
-        }
-
-
-        .size-help .size-section-label {
-
-            color:
-                #d7b46a;
-
-        }
-
-
-        .size-help h2 {
-
-            margin:
-                0;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size:
-                clamp(
-                    40px,
-                    5vw,
-                    60px
-                );
-
-            font-weight:
-                500;
-
-            line-height:
-                1;
-
-        }
-
-
-        .size-help p {
-
-            max-width:
-                620px;
-
-            margin:
-                22px auto 0;
-
-            color:
-                rgba(255,255,255,.8);
-
-            font-size:
-                14px;
-
-            line-height:
-                1.8;
-
-        }
-
-
-        .size-help-button {
-
-            display:
-                inline-flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            gap:
-                10px;
-
-            margin-top:
-                30px;
-
-            padding:
-                14px 27px;
-
-            border:
-                1px solid
-                #d7b46a;
-
-            background:
-                #b88932;
-
-            color:
-                #ffffff;
-
-            font-size:
-                11px;
-
-            font-weight:
-                700;
-
-            letter-spacing:
-                .1em;
-
-            text-transform:
-                uppercase;
+            border: 1px solid var(--sg-border);
 
             transition:
-                .3s ease;
-
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
-
-        .size-help-button:hover {
-
-            background:
-                #ffffff;
-
-            color:
-                #4b0713;
-
-        }
-
-
-        /* =========================================================
-           WHATSAPP FLOAT
-        ========================================================= */
-
-        .size-whatsapp {
-
-            position:
-                fixed;
-
-            right:
-                22px;
-
-            bottom:
-                22px;
-
-            z-index:
-                900;
-
-            width:
-                54px;
-
-            height:
-                54px;
-
-            display:
-                grid;
-
-            place-items:
-                center;
-
-            border-radius:
-                50%;
-
-            background:
-                #25d366;
-
-            color:
-                #ffffff;
-
-            font-size:
-                25px;
+        .measurement-card:hover {
+            transform: translateY(-3px);
 
             box-shadow:
-                0 10px 30px
-                rgba(0,0,0,.16);
-
+                0 10px 28px rgba(60, 20, 25, 0.07);
         }
 
+        .measurement-number {
+            width: 35px;
+            height: 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 12px;
+
+            border: 1px solid var(--sg-gold);
+
+            border-radius: 50%;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+
+            color: var(--sg-gold);
+        }
+
+        .measurement-card h3 {
+            margin: 0 0 6px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 19px;
+            font-weight: 600;
+
+            color: var(--sg-burgundy);
+        }
+
+        .measurement-card p {
+            margin: 0;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 9px;
+
+            line-height: 1.65;
+
+            color: var(--sg-muted);
+        }
+
+        /* =========================================================
+           BEFORE YOU ORDER
+           ========================================================= */
+
+        .before-order-layout {
+            display: grid;
+
+            grid-template-columns: 1.15fr 0.85fr;
+
+            gap: 55px;
+
+            align-items: stretch;
+        }
+
+        .before-order-content {
+            padding-top: 5px;
+        }
+
+        .before-order-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .before-card {
+            padding: 21px;
+
+            background: #ffffff;
+
+            border: 1px solid var(--sg-border);
+        }
+
+        .before-card-icon {
+            margin-bottom: 10px;
+
+            color: var(--sg-gold);
+
+            font-size: 22px;
+        }
+
+        .before-card h3 {
+            margin: 0 0 5px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 19px;
+
+            color: var(--sg-burgundy);
+        }
+
+        .before-card p {
+            margin: 0;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+
+            line-height: 1.65;
+
+            color: var(--sg-muted);
+        }
+
+        .remember-note {
+            grid-column: 1 / -1;
+
+            padding: 18px 20px;
+
+            background: #f4ecde;
+
+            border-left: 2px solid var(--sg-gold);
+        }
+
+        .remember-note strong {
+            display: block;
+
+            margin-bottom: 4px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 18px;
+
+            color: var(--sg-burgundy);
+        }
+
+        .remember-note p {
+            margin: 0;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+
+            line-height: 1.65;
+
+            color: var(--sg-muted);
+        }
+
+        /* =========================================================
+           WHATSAPP ASSISTANCE
+           ========================================================= */
+
+        .size-assistance {
+            position: relative;
+
+            min-height: 100%;
+
+            display: flex;
+            align-items: center;
+
+            padding: 50px 45px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #4b0713,
+                    #690d1d
+                );
+
+            color: #ffffff;
+
+            overflow: hidden;
+        }
+
+        .size-assistance::before {
+            content: "";
+
+            position: absolute;
+
+            right: -70px;
+            bottom: -80px;
+
+            width: 250px;
+            height: 250px;
+
+            border: 1px solid rgba(215,181,107,0.35);
+
+            border-radius: 50%;
+        }
+
+        .size-assistance::after {
+            content: "";
+
+            position: absolute;
+
+            right: 30px;
+            bottom: 30px;
+
+            width: 110px;
+            height: 110px;
+
+            border-right: 1px solid rgba(215,181,107,0.5);
+            border-bottom: 1px solid rgba(215,181,107,0.5);
+
+            transform: rotate(25deg);
+        }
+
+        .size-assistance-content {
+            position: relative;
+            z-index: 2;
+
+            max-width: 390px;
+        }
+
+        .assistance-label {
+            margin-bottom: 10px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #e0c78d;
+        }
+
+        .size-assistance h2 {
+            margin: 0 0 15px;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(37px, 4vw, 50px);
+            font-weight: 500;
+
+            line-height: 0.98;
+
+            color: #ffffff;
+        }
+
+        .size-assistance p {
+            margin: 0 0 25px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+
+            line-height: 1.75;
+
+            color: rgba(255,255,255,0.82);
+        }
+
+        .whatsapp-size-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            padding: 13px 22px;
+
+            background: #c4973f;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .whatsapp-size-button:hover {
+            background: #b3832e;
+
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           SMALL DISCLAIMER
+           ========================================================= */
+
+        .size-disclaimer {
+            padding: 28px 0 5px;
+
+            text-align: center;
+        }
+
+        .size-disclaimer p {
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 9px;
+
+            line-height: 1.7;
+
+            color: #8b7e80;
+        }
 
         /* =========================================================
            MOBILE
-        ========================================================= */
+           ========================================================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
 
-            .size-hero {
-
-                min-height:
-                    360px;
-
-                padding:
-                    70px 20px;
-
+            .size-guide-container {
+                width: min(100% - 32px, 700px);
             }
-
-
-            .size-hero h1 {
-
-                font-size:
-                    50px;
-
-            }
-
-
-            .size-hero p {
-
-                font-size:
-                    14px;
-
-            }
-
-
-            .size-intro {
-
-                padding:
-                    70px 20px 50px;
-
-            }
-
 
             .size-section {
-
-                padding:
-                    70px 20px;
-
+                padding: 65px 0;
             }
 
+            .suit-size-layout,
+            .saree-size-layout,
+            .measurement-layout,
+            .before-order-layout {
+                grid-template-columns: 1fr;
 
-            .size-card-grid {
-
-                grid-template-columns:
-                    1fr;
-
+                gap: 38px;
             }
 
-
-            .size-card {
-
-                padding:
-                    30px 24px;
-
+            .suit-image,
+            .saree-image,
+            .measurement-image {
+                height: auto;
+                aspect-ratio: 1 / 1;
             }
 
+            .measurement-image {
+                aspect-ratio: 4 / 3;
+            }
 
-            /* =====================================================
-               MOBILE MEASUREMENT SECTION
-               ===================================================== */
+            .before-order-layout {
+                gap: 30px;
+            }
+
+            .size-assistance {
+                min-height: 380px;
+            }
 
             .measurement-grid {
-
-                grid-template-columns:
-                    1fr;
-
-                grid-template-rows:
-                    auto;
-
-                gap:
-                    18px;
-
+                grid-template-columns: repeat(2, 1fr);
             }
-
-
-            .measurement-grid::before {
-
-                grid-column:
-                    1;
-
-                grid-row:
-                    auto;
-
-                width:
-                    100%;
-
-                height:
-                    420px;
-
-                min-height:
-                    0;
-
-                background:
-                    url("images/banners/size-guide-measurements.webp")
-                    center center / cover no-repeat;
-
-            }
-
-
-            .measurement-step {
-
-                padding:
-                    32px 24px;
-
-            }
-
-
-            .size-notes {
-
-                padding:
-                    25px 22px;
-
-            }
-
-
-            .size-help {
-
-                padding:
-                    75px 20px;
-
-            }
-
-
-            .size-whatsapp {
-
-                right:
-                    16px;
-
-                bottom:
-                    16px;
-
-                width:
-                    50px;
-
-                height:
-                    50px;
-
-                font-size:
-                    22px;
-
-            }
-
         }
 
+        @media (max-width: 650px) {
 
-        @media (max-width: 520px) {
-
-            .size-guide-nav {
-
-                flex-direction:
-                    column;
-
-                align-items:
-                    stretch;
-
+            .size-guide-container {
+                width: calc(100% - 28px);
             }
 
+            .size-hero {
+                min-height: 470px;
 
-            .size-guide-nav a {
-
-                width:
-                    100%;
-
+                padding: 75px 20px;
             }
 
-
-            .size-table th,
-            .size-table td {
-
-                padding:
-                    14px 11px;
-
+            .size-hero::after {
+                inset: 13px;
             }
 
+            .size-hero h1 {
+                font-size: 58px;
 
-            .measurement-grid::before {
-
-                height:
-                    360px;
-
+                letter-spacing: -0.5px;
             }
 
+            .size-hero-text {
+                max-width: 330px;
 
-            .measurement-step {
-
-                padding:
-                    30px 20px;
-
+                font-size: 12px;
+                line-height: 1.7;
             }
 
+            .size-trust-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .size-trust-item {
+                min-height: 68px;
+
+                justify-content: flex-start;
+
+                padding-left: 25px;
+
+                border-right: 0;
+                border-bottom: 1px solid var(--sg-border);
+            }
+
+            .size-trust-item:last-child {
+                border-bottom: 0;
+            }
+
+            .size-section {
+                padding: 52px 0;
+            }
+
+            .size-section-title {
+                font-size: 43px;
+            }
+
+            .size-section-title::after {
+                display: block;
+
+                margin: 15px 0 0;
+            }
+
+            .size-section-intro {
+                font-size: 11px;
+            }
+
+            .suit-image {
+                aspect-ratio: 4 / 5;
+            }
+
+            .saree-image {
+                aspect-ratio: 4 / 3;
+            }
+
+            .measurement-image {
+                aspect-ratio: 4 / 3;
+            }
+
+            .saree-guide-grid,
+            .before-order-grid,
+            .measurement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .saree-guide-card {
+                min-height: auto;
+
+                padding: 20px;
+            }
+
+            .measurement-card {
+                min-height: auto;
+            }
+
+            .remember-note {
+                grid-column: auto;
+            }
+
+            .size-assistance {
+                padding: 40px 28px;
+            }
+
+            .size-assistance h2 {
+                font-size: 42px;
+            }
+
+            .size-image-frame::before {
+                top: -8px;
+                left: -8px;
+
+                width: 55px;
+                height: 55px;
+            }
+
+            .size-image-frame::after {
+                right: -8px;
+                bottom: -8px;
+
+                width: 55px;
+                height: 55px;
+            }
         }
 
     </style>
-
 </head>
 
-
-<body class="svd-size-page">
-
+<body>
 
     <!-- =========================================================
          MASTER HEADER
-    ========================================================== -->
+         ========================================================= -->
 
     <div id="site-header"></div>
 
 
-    <main>
-
+    <main class="size-guide-page">
 
         <!-- =====================================================
              HERO
-        ====================================================== -->
+             ===================================================== -->
 
         <section class="size-hero">
 
-            <div class="size-hero-inner">
+            <div class="size-hero-content">
 
-                <div class="size-eyebrow">
+                <div class="size-hero-eyebrow">
                     ShriVatsaDarbar
                 </div>
 
@@ -1546,7 +1172,7 @@
                     Perfect Fit
                 </h1>
 
-                <p>
+                <p class="size-hero-text">
                     A simple guide to help you choose your
                     comfortable size before placing your order.
                 </p>
@@ -1557,43 +1183,51 @@
 
 
         <!-- =====================================================
-             INTRO
-        ====================================================== -->
+             TRUST STRIP
+             ===================================================== -->
 
-        <section class="size-intro">
+        <section class="size-trust-strip">
 
-            <div class="size-container">
+            <div class="size-trust-inner">
 
-                <div class="size-section-label">
-                    Size Guide
+                <div class="size-trust-item">
+
+                    <div class="size-trust-icon">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <div class="size-trust-copy">
+                        <strong>Pan India Shipping</strong>
+                        <span>Safe &amp; Reliable Delivery</span>
+                    </div>
+
                 </div>
 
-                <h2>
-                    Designed to Help You<br>
-                    Choose With Confidence.
-                </h2>
 
-                <p>
-                    Every woman has her own unique fit and comfort
-                    preference. Use the measurements below as a
-                    helpful reference when selecting your ShriVatsaDarbar
-                    suit or planning your saree blouse fit.
-                </p>
+                <div class="size-trust-item">
+
+                    <div class="size-trust-icon">
+                        <i class="fa-regular fa-gem"></i>
+                    </div>
+
+                    <div class="size-trust-copy">
+                        <strong>Premium Quality</strong>
+                        <span>For Every Occasion</span>
+                    </div>
+
+                </div>
 
 
-                <div class="size-guide-nav">
+                <div class="size-trust-item">
 
-                    <a href="#suit-sizes">
-                        Suit Sizes
-                    </a>
+                    <div class="size-trust-icon">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
 
-                    <a href="#saree-guide">
-                        Saree Guide
-                    </a>
-
-                    <a href="#measure">
-                        How to Measure
-                    </a>
+                    <div class="size-trust-copy">
+                        <strong>Trusted by 10,000+</strong>
+                        <span>Happy Customers</span>
+                    </div>
 
                 </div>
 
@@ -1603,286 +1237,149 @@
 
 
         <!-- =====================================================
-             SUIT SIZE GUIDE
-        ====================================================== -->
+             SUIT SIZE CHART
+             ===================================================== -->
 
-        <section
-            class="size-section alt"
-            id="suit-sizes"
-        >
+        <section class="size-section white">
 
-            <div class="size-heading">
+            <div class="size-guide-container">
 
-                <div class="size-section-label">
-                    Suits
+                <div class="suit-size-layout">
+
+                    <!-- IMAGE -->
+
+                    <div class="size-image-frame suit-image">
+
+                        <img
+                            src="images/banners/size-guide-fit-studio.webp"
+                            alt="Premium suit fit and sizing reference"
+                            loading="lazy">
+
+                    </div>
+
+
+                    <!-- CONTENT -->
+
+                    <div class="suit-chart-area">
+
+                        <div class="size-section-label">
+                            Suits
+                        </div>
+
+                        <h2 class="size-section-title">
+                            Suit Size Chart
+                        </h2>
+
+                        <p class="size-section-intro">
+                            Use your body measurements to find the
+                            closest reference size. For the best fit,
+                            compare these measurements with the
+                            individual product details whenever they
+                            are provided.
+                        </p>
+
+
+                        <div class="size-table-wrap">
+
+                            <table class="size-table">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Bust</th>
+                                        <th>Waist</th>
+                                        <th>Hip</th>
+                                        <th>Shoulder</th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>S</td>
+                                        <td>34″ (86 cm)</td>
+                                        <td>28″ (71 cm)</td>
+                                        <td>36″ (91 cm)</td>
+                                        <td>14″ (36 cm)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>M</td>
+                                        <td>36″ (91 cm)</td>
+                                        <td>30″ (76 cm)</td>
+                                        <td>38″ (97 cm)</td>
+                                        <td>14.5″ (37 cm)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>L</td>
+                                        <td>38″ (97 cm)</td>
+                                        <td>32″ (81 cm)</td>
+                                        <td>40″ (102 cm)</td>
+                                        <td>15″ (38 cm)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>XL</td>
+                                        <td>40″ (102 cm)</td>
+                                        <td>34″ (86 cm)</td>
+                                        <td>42″ (107 cm)</td>
+                                        <td>15.5″ (39 cm)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>XXL</td>
+                                        <td>42″ (107 cm)</td>
+                                        <td>36″ (91 cm)</td>
+                                        <td>44″ (112 cm)</td>
+                                        <td>16″ (41 cm)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3XL</td>
+                                        <td>44″ (112 cm)</td>
+                                        <td>38″ (97 cm)</td>
+                                        <td>46″ (117 cm)</td>
+                                        <td>16.5″ (42 cm)</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+
+                        <div class="fit-tip">
+
+                            <div class="fit-tip-icon">
+                                <i class="fa-regular fa-lightbulb"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    A Small Fit Tip
+                                </h4>
+
+                                <p>
+                                    If your measurements fall between two
+                                    sizes, consider your preferred fit.
+                                    Choose the larger size for a more relaxed
+                                    feel and the smaller size when you prefer
+                                    a closer fit, subject to the construction
+                                    and cut of the individual garment.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-
-                <h2>
-                    Suit Size Chart
-                </h2>
-
-                <p>
-                    Use your body measurements to find the closest
-                    reference size. For the best fit, compare these
-                    measurements with the individual product details
-                    whenever they are provided.
-                </p>
-
-            </div>
-
-
-            <div class="size-table-wrap">
-
-                <table class="size-table">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                Size
-                            </th>
-
-                            <th>
-                                Bust
-                            </th>
-
-                            <th>
-                                Waist
-                            </th>
-
-                            <th>
-                                Hip
-                            </th>
-
-                            <th>
-                                Shoulder
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody>
-
-                        <tr>
-
-                            <td>
-                                S
-                            </td>
-
-                            <td>
-                                34"
-                                <br>
-                                86 cm
-                            </td>
-
-                            <td>
-                                28"
-                                <br>
-                                71 cm
-                            </td>
-
-                            <td>
-                                36"
-                                <br>
-                                91 cm
-                            </td>
-
-                            <td>
-                                14"
-                                <br>
-                                36 cm
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                M
-                            </td>
-
-                            <td>
-                                36"
-                                <br>
-                                91 cm
-                            </td>
-
-                            <td>
-                                30"
-                                <br>
-                                76 cm
-                            </td>
-
-                            <td>
-                                38"
-                                <br>
-                                97 cm
-                            </td>
-
-                            <td>
-                                14.5"
-                                <br>
-                                37 cm
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                L
-                            </td>
-
-                            <td>
-                                38"
-                                <br>
-                                97 cm
-                            </td>
-
-                            <td>
-                                32"
-                                <br>
-                                81 cm
-                            </td>
-
-                            <td>
-                                40"
-                                <br>
-                                102 cm
-                            </td>
-
-                            <td>
-                                15"
-                                <br>
-                                38 cm
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                XL
-                            </td>
-
-                            <td>
-                                40"
-                                <br>
-                                102 cm
-                            </td>
-
-                            <td>
-                                34"
-                                <br>
-                                86 cm
-                            </td>
-
-                            <td>
-                                42"
-                                <br>
-                                107 cm
-                            </td>
-
-                            <td>
-                                15.5"
-                                <br>
-                                39 cm
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                XXL
-                            </td>
-
-                            <td>
-                                42"
-                                <br>
-                                107 cm
-                            </td>
-
-                            <td>
-                                36"
-                                <br>
-                                91 cm
-                            </td>
-
-                            <td>
-                                44"
-                                <br>
-                                112 cm
-                            </td>
-
-                            <td>
-                                16"
-                                <br>
-                                41 cm
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                3XL
-                            </td>
-
-                            <td>
-                                44"
-                                <br>
-                                112 cm
-                            </td>
-
-                            <td>
-                                38"
-                                <br>
-                                97 cm
-                            </td>
-
-                            <td>
-                                46"
-                                <br>
-                                117 cm
-                            </td>
-
-                            <td>
-                                16.5"
-                                <br>
-                                42 cm
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-
-            <div class="size-notes">
-
-                <h3>
-                    A Small Fit Tip
-                </h3>
-
-                <p>
-                    If your measurements fall between two sizes,
-                    consider your preferred fit. Choose the larger
-                    size for a more relaxed feel and the smaller size
-                    when you prefer a closer fit, subject to the
-                    construction and cut of the individual garment.
-                </p>
 
             </div>
 
@@ -1890,150 +1387,156 @@
 
 
         <!-- =====================================================
-             SAREE GUIDE
-        ====================================================== -->
+             SAREE FIT GUIDE
+             ===================================================== -->
 
-        <section
-            class="size-section"
-            id="saree-guide"
-        >
+        <section class="size-section soft">
 
-            <div class="size-heading">
+            <div class="size-guide-container">
 
-                <div class="size-section-label">
-                    Sarees
+                <div class="saree-size-layout">
+
+                    <!-- CONTENT -->
+
+                    <div class="saree-copy">
+
+                        <div class="size-section-label">
+                            Sarees
+                        </div>
+
+                        <h2 class="size-section-title">
+                            Saree Fit Guide
+                        </h2>
+
+                        <p class="size-section-intro">
+                            Sarees are generally flexible in sizing because
+                            the drape can be adjusted to your preferred fit
+                            and styling.
+                        </p>
+
+
+                        <div class="saree-guide-grid">
+
+                            <article class="saree-guide-card">
+
+                                <div class="saree-guide-icon">
+                                    <i class="fa-solid fa-ruler-combined"></i>
+                                </div>
+
+                                <h3>
+                                    Saree Length
+                                </h3>
+
+                                <p>
+                                    A standard saree is commonly around
+                                    5.5 metres in length, with the blouse
+                                    piece supplied separately where
+                                    applicable.
+                                </p>
+
+                            </article>
+
+
+                            <article class="saree-guide-card">
+
+                                <div class="saree-guide-icon">
+                                    <i class="fa-solid fa-shirt"></i>
+                                </div>
+
+                                <h3>
+                                    Blouse Fit
+                                </h3>
+
+                                <p>
+                                    The blouse is where your personal
+                                    measurements matter most. Measure your
+                                    bust, underbust and shoulder area
+                                    carefully.
+                                </p>
+
+                            </article>
+
+
+                            <article class="saree-guide-card">
+
+                                <div class="saree-guide-icon">
+                                    <i class="fa-solid fa-feather"></i>
+                                </div>
+
+                                <h3>
+                                    Drape Comfort
+                                </h3>
+
+                                <p>
+                                    Style your saree with a looser or more
+                                    structured drape depending on your
+                                    comfort, occasion and preferred look.
+                                </p>
+
+                            </article>
+
+
+                            <article class="saree-guide-card">
+
+                                <div class="saree-guide-icon">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                                <h3>
+                                    Your Personal Fit
+                                </h3>
+
+                                <p>
+                                    Height, body proportions and the way
+                                    you prefer to drape your saree can all
+                                    influence how the finished look feels.
+                                </p>
+
+                            </article>
+
+                        </div>
+
+
+                        <div class="saree-note">
+
+                            <div class="saree-note-icon">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Important Saree Note
+                                </strong>
+
+                                <p>
+                                    Saree sizing is different from ready-to-
+                                    wear garments. The saree itself is
+                                    generally not selected by S, M, L or XL.
+                                    The blouse, when included, is the part
+                                    that should be checked against the
+                                    relevant product information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- IMAGE -->
+
+                    <div class="size-image-frame saree-image">
+
+                        <img
+                            src="images/banners/size-guide-fabric-details.webp"
+                            alt="Premium saree fabric and embroidery details"
+                            loading="lazy">
+
+                    </div>
+
                 </div>
-
-                <h2>
-                    Saree Fit Guide
-                </h2>
-
-                <p>
-                    Sarees are generally flexible in sizing because
-                    the drape can be adjusted to your preferred fit
-                    and styling.
-                </p>
-
-            </div>
-
-
-            <div class="size-card-grid">
-
-
-                <article class="size-card">
-
-                    <div class="size-card-icon">
-
-                        <i
-                            class="fa-solid fa-ruler-horizontal"
-                            aria-hidden="true"
-                        ></i>
-
-                    </div>
-
-                    <h3>
-                        Saree Length
-                    </h3>
-
-                    <p>
-                        A standard saree is commonly around
-                        5.5 metres in length, with the blouse piece
-                        generally supplied separately within the
-                        saree fabric where applicable.
-                    </p>
-
-                </article>
-
-
-                <article class="size-card">
-
-                    <div class="size-card-icon">
-
-                        <i
-                            class="fa-solid fa-shirt"
-                            aria-hidden="true"
-                        ></i>
-
-                    </div>
-
-                    <h3>
-                        Blouse Fit
-                    </h3>
-
-                    <p>
-                        The blouse is the part where your personal
-                        measurements matter most. Measure your bust,
-                        underbust and shoulder area carefully before
-                        selecting or tailoring your blouse.
-                    </p>
-
-                </article>
-
-
-                <article class="size-card">
-
-                    <div class="size-card-icon">
-
-                        <i
-                            class="fa-solid fa-arrows-left-right"
-                            aria-hidden="true"
-                        ></i>
-
-                    </div>
-
-                    <h3>
-                        Drape Comfort
-                    </h3>
-
-                    <p>
-                        Your saree can be styled with a looser or
-                        more structured drape depending on your
-                        comfort, occasion and preferred look.
-                    </p>
-
-                </article>
-
-
-                <article class="size-card">
-
-                    <div class="size-card-icon">
-
-                        <i
-                            class="fa-solid fa-heart"
-                            aria-hidden="true"
-                        ></i>
-
-                    </div>
-
-                    <h3>
-                        Your Personal Fit
-                    </h3>
-
-                    <p>
-                        Height, body proportions and the way you
-                        prefer to drape your saree can all influence
-                        how the finished look feels.
-                    </p>
-
-                </article>
-
-
-            </div>
-
-
-            <div class="size-notes">
-
-                <h3>
-                    Important Saree Note
-                </h3>
-
-                <p>
-                    Saree sizing is different from ready-to-wear
-                    garments. The saree itself is generally not
-                    selected by S, M, L or XL. The blouse, when
-                    included, is the part that should be checked
-                    against the relevant product information.
-                </p>
 
             </div>
 
@@ -2042,144 +1545,163 @@
 
         <!-- =====================================================
              HOW TO MEASURE
-        ====================================================== -->
+             ===================================================== -->
 
-        <section
-            class="size-section alt"
-            id="measure"
-        >
+        <section class="size-section white">
 
-            <div class="size-heading">
+            <div class="size-guide-container">
 
-                <div class="size-section-label">
-                    Measure Correctly
+                <div class="measurement-layout">
+
+                    <!-- IMAGE -->
+
+                    <div class="size-image-frame measurement-image">
+
+                        <img
+                            src="images/banners/size-guide-measurements.webp"
+                            alt="How to take accurate clothing measurements"
+                            loading="lazy">
+
+                    </div>
+
+
+                    <!-- CONTENT -->
+
+                    <div class="measurement-copy">
+
+                        <div class="size-section-label">
+                            Measure Correctly
+                        </div>
+
+                        <h2 class="size-section-title">
+                            How to Take Your Measurements
+                        </h2>
+
+                        <p class="size-section-intro">
+                            Use a soft measuring tape and keep the tape
+                            comfortably against your body without pulling
+                            it too tightly.
+                        </p>
+
+
+                        <div class="measurement-grid">
+
+                            <article class="measurement-card">
+
+                                <div class="measurement-number">
+                                    01
+                                </div>
+
+                                <h3>
+                                    Bust
+                                </h3>
+
+                                <p>
+                                    Measure around the fullest part of
+                                    your bust, keeping the tape level
+                                    across your back.
+                                </p>
+
+                            </article>
+
+
+                            <article class="measurement-card">
+
+                                <div class="measurement-number">
+                                    02
+                                </div>
+
+                                <h3>
+                                    Waist
+                                </h3>
+
+                                <p>
+                                    Measure around your natural waist
+                                    without pulling the tape tightly.
+                                </p>
+
+                            </article>
+
+
+                            <article class="measurement-card">
+
+                                <div class="measurement-number">
+                                    03
+                                </div>
+
+                                <h3>
+                                    Hip
+                                </h3>
+
+                                <p>
+                                    Measure around the fullest part of
+                                    your hips, keeping the measuring tape
+                                    horizontal.
+                                </p>
+
+                            </article>
+
+
+                            <article class="measurement-card">
+
+                                <div class="measurement-number">
+                                    04
+                                </div>
+
+                                <h3>
+                                    Shoulder
+                                </h3>
+
+                                <p>
+                                    Measure from one shoulder point to
+                                    the other across the back.
+                                </p>
+
+                            </article>
+
+
+                            <article class="measurement-card">
+
+                                <div class="measurement-number">
+                                    05
+                                </div>
+
+                                <h3>
+                                    Sleeve
+                                </h3>
+
+                                <p>
+                                    If required for your garment, measure
+                                    from the shoulder point to your
+                                    preferred sleeve length.
+                                </p>
+
+                            </article>
+
+
+                            <article class="measurement-card">
+
+                                <div class="measurement-number">
+                                    06
+                                </div>
+
+                                <h3>
+                                    Length
+                                </h3>
+
+                                <p>
+                                    For suits and dresses, measure from
+                                    the shoulder down to your preferred
+                                    finished garment length.
+                                </p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
                 </div>
-
-                <h2>
-                    How to Take Your Measurements
-                </h2>
-
-                <p>
-                    Use a soft measuring tape and keep the tape
-                    comfortably against your body without pulling
-                    it too tightly.
-                </p>
-
-            </div>
-
-
-            <div class="measurement-grid">
-
-
-                <article class="measurement-step">
-
-                    <div class="measurement-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Bust
-                    </h3>
-
-                    <p>
-                        Measure around the fullest part of your bust,
-                        keeping the tape level across your back.
-                    </p>
-
-                </article>
-
-
-                <article class="measurement-step">
-
-                    <div class="measurement-number">
-                        02
-                    </div>
-
-                    <h3>
-                        Waist
-                    </h3>
-
-                    <p>
-                        Measure around your natural waist without
-                        pulling the tape tightly.
-                    </p>
-
-                </article>
-
-
-                <article class="measurement-step">
-
-                    <div class="measurement-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Hip
-                    </h3>
-
-                    <p>
-                        Measure around the fullest part of your hips,
-                        keeping the measuring tape horizontal.
-                    </p>
-
-                </article>
-
-
-                <article class="measurement-step">
-
-                    <div class="measurement-number">
-                        04
-                    </div>
-
-                    <h3>
-                        Shoulder
-                    </h3>
-
-                    <p>
-                        Measure from one shoulder point to the other
-                        across the back.
-                    </p>
-
-                </article>
-
-
-                <article class="measurement-step">
-
-                    <div class="measurement-number">
-                        05
-                    </div>
-
-                    <h3>
-                        Sleeve
-                    </h3>
-
-                    <p>
-                        If required for your garment, measure from
-                        the shoulder point to your preferred sleeve
-                        length.
-                    </p>
-
-                </article>
-
-
-                <article class="measurement-step">
-
-                    <div class="measurement-number">
-                        06
-                    </div>
-
-                    <h3>
-                        Length
-                    </h3>
-
-                    <p>
-                        For suits and dresses, measure from the
-                        shoulder down to your preferred finished
-                        garment length.
-                    </p>
-
-                </article>
-
 
             </div>
 
@@ -2187,181 +1709,177 @@
 
 
         <!-- =====================================================
-             FIT NOTES
-        ====================================================== -->
+             BEFORE YOU ORDER + WHATSAPP
+             ===================================================== -->
 
-        <section class="size-section">
+        <section class="size-section soft">
 
-            <div class="size-heading">
+            <div class="size-guide-container">
 
-                <div class="size-section-label">
-                    Before You Order
+                <div class="before-order-layout">
+
+                    <!-- LEFT -->
+
+                    <div class="before-order-content">
+
+                        <div class="size-section-label">
+                            Before You Order
+                        </div>
+
+                        <h2 class="size-section-title">
+                            A Few Things to Keep in Mind
+                        </h2>
+
+
+                        <div class="before-order-grid">
+
+                            <article class="before-card">
+
+                                <div class="before-card-icon">
+                                    <i class="fa-solid fa-ruler"></i>
+                                </div>
+
+                                <h3>
+                                    Measure Yourself First
+                                </h3>
+
+                                <p>
+                                    Your current body measurements are more
+                                    useful than relying only on the size
+                                    you usually wear from another brand.
+                                </p>
+
+                            </article>
+
+
+                            <article class="before-card">
+
+                                <div class="before-card-icon">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+
+                                <h3>
+                                    Product Details Matter
+                                </h3>
+
+                                <p>
+                                    Different designs can have different
+                                    cuts, silhouettes and construction.
+                                    Always check the individual product
+                                    information.
+                                </p>
+
+                            </article>
+
+
+                            <div class="remember-note">
+
+                                <strong>
+                                    Please Remember
+                                </strong>
+
+                                <p>
+                                    This guide is intended as a general
+                                    sizing reference. Fit can vary depending
+                                    on fabric, design, construction, tailoring
+                                    and personal preference. If you are unsure
+                                    between sizes, please contact
+                                    ShriVatsaDarbar before ordering.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT -->
+
+                    <aside class="size-assistance">
+
+                        <div class="size-assistance-content">
+
+                            <div class="assistance-label">
+                                Need Assistance?
+                            </div>
+
+                            <h2>
+                                Not Sure Which Size<br>
+                                Is Right For You?
+                            </h2>
+
+                            <p>
+                                We're happy to help you choose. Share your
+                                measurements or the product you're interested
+                                in, and our team can guide you before you order.
+                            </p>
+
+                            <a
+                                class="whatsapp-size-button"
+                                href="https://wa.me/918826196544"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                Chat on WhatsApp
+
+                            </a>
+
+                        </div>
+
+                    </aside>
+
                 </div>
 
-                <h2>
-                    A Few Things to Keep in Mind
-                </h2>
 
-            </div>
-
-
-            <div class="size-card-grid">
-
-
-                <article class="size-card">
-
-                    <div class="size-card-icon">
-
-                        <i
-                            class="fa-solid fa-ruler"
-                            aria-hidden="true"
-                        ></i>
-
-                    </div>
-
-                    <h3>
-                        Measure Yourself First
-                    </h3>
+                <div class="size-disclaimer">
 
                     <p>
-                        Your current body measurements are more useful
-                        than relying only on the size you usually wear
-                        from another brand.
+                        Size references are intended as a general guide.
+                        Please always refer to the individual product details
+                        where available. Measurements and fit may vary based
+                        on fabric, construction, tailoring and design.
                     </p>
 
-                </article>
-
-
-                <article class="size-card">
-
-                    <div class="size-card-icon">
-
-                        <i
-                            class="fa-solid fa-circle-info"
-                            aria-hidden="true"
-                        ></i>
-
-                    </div>
-
-                    <h3>
-                        Product Details Matter
-                    </h3>
-
-                    <p>
-                        Different designs can have different cuts,
-                        silhouettes and construction. Always check
-                        the individual product information where
-                        available.
-                    </p>
-
-                </article>
-
-
-            </div>
-
-
-            <div class="size-notes">
-
-                <h3>
-                    Please Remember
-                </h3>
-
-                <p>
-                    This guide is intended as a general sizing
-                    reference. Fit can vary depending on fabric,
-                    design, construction, tailoring and personal
-                    preference. If you are unsure between sizes,
-                    please contact ShriVatsaDarbar before ordering.
-                </p>
+                </div>
 
             </div>
 
         </section>
-
-
-        <!-- =====================================================
-             HELP / WHATSAPP
-        ====================================================== -->
-
-        <section class="size-help">
-
-            <div class="size-help-inner">
-
-                <div class="size-section-label">
-                    Need Assistance?
-                </div>
-
-                <h2>
-                    Not Sure Which Size<br>
-                    Is Right For You?
-                </h2>
-
-                <p>
-                    We're happy to help you choose. Share your
-                    measurements or the product you're interested
-                    in, and our team can guide you before you order.
-                </p>
-
-
-                <a
-                    class="size-help-button"
-                    href="https://wa.me/918826196544"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <i
-                        class="fa-brands fa-whatsapp"
-                        aria-hidden="true"
-                    ></i>
-
-                    Chat on WhatsApp
-
-                </a>
-
-            </div>
-
-        </section>
-
 
     </main>
 
 
     <!-- =========================================================
          MASTER FOOTER
-    ========================================================== -->
+         ========================================================= -->
 
     <div id="site-footer"></div>
 
 
     <!-- =========================================================
-         FLOATING WHATSAPP
-    ========================================================== -->
+         WHATSAPP FLOAT
+         ========================================================= -->
 
     <a
-        class="size-whatsapp"
         href="https://wa.me/918826196544"
+        class="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with ShriVatsaDarbar on WhatsApp"
-        title="Chat on WhatsApp"
-    >
+        aria-label="Chat with ShriVatsaDarbar on WhatsApp">
 
-        <i
-            class="fa-brands fa-whatsapp"
-            aria-hidden="true"
-        ></i>
+        <i class="fa-brands fa-whatsapp"></i>
 
     </a>
 
 
     <!-- =========================================================
-         SHARED SCRIPT
-    ========================================================== -->
+         MAIN WEBSITE SCRIPT
+         ========================================================= -->
 
     <script src="script.js"></script>
 
-
 </body>
-
 </html>
