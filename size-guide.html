@@ -895,28 +895,58 @@
 
         .measurement-grid {
 
-            display:
-                grid;
+    display:
+        grid;
 
-            grid-template-columns:
-                repeat(
-                    3,
-                    1fr
-                );
+    grid-template-columns:
+        minmax(320px, 0.9fr)
+        minmax(0, 1.1fr);
 
-            gap:
-                24px;
+    grid-template-rows:
+        repeat(3, auto);
 
-            width:
-                min(
-                    1080px,
-                    100%
-                );
+    gap:
+        24px;
 
-            margin:
-                0 auto;
+    width:
+        min(
+            1080px,
+            100%
+        );
 
-        }
+    margin:
+        0 auto;
+
+}
+
+
+.measurement-grid::before {
+
+    content:
+        "";
+
+    grid-column:
+        1;
+
+    grid-row:
+        1 / 4;
+
+    min-height:
+        680px;
+
+    background:
+        url("images/banners/size-guide-measurements.webp")
+        center center / cover no-repeat;
+
+    border:
+        1px solid
+        #e1d5c7;
+
+    box-shadow:
+        0 15px 45px
+        rgba(63,32,15,.08);
+
+}
 
 
         .measurement-step {
