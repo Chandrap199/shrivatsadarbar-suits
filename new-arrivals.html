@@ -1477,10 +1477,15 @@
         return ids
             .map(function (id) {
 
-                return window.getSVDProduct
-                    ? window.getSVDProduct(id)
-                    : null;
+                const product =
+                    window.getSVDProduct
+                        ? window.getSVDProduct(id)
+                        : null;
 
+                /* Keep the curated ID authoritative for navigation. */
+                return product
+                    ? Object.assign({ id: id }, product)
+                    : null;
             })
             .filter(function (product) {
 
