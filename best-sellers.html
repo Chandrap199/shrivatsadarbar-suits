@@ -2304,9 +2304,18 @@ document.addEventListener(
                             productId
                         ) {
 
-                            return window.getSVDProduct(
-                                productId
-                            );
+                            const product =
+                                window.getSVDProduct(
+                                    productId
+                                );
+
+                            /* Keep the curated ID authoritative for navigation. */
+                            return product
+                                ? Object.assign(
+                                    { id: productId },
+                                    product
+                                )
+                                : null;
 
                         }
                     )
