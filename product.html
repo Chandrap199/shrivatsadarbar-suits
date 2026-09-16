@@ -171,78 +171,6 @@
 }
 
 
-
-
-/* =========================================================
-   PRODUCT IMAGE ZOOM
-========================================================= */
-
-.product-main-image img {
-    transform: scale(1);
-    transform-origin: center center;
-    cursor: zoom-in;
-}
-
-.product-main-image.zoomed img {
-    cursor: zoom-out;
-}
-
-.product-zoom-controls {
-    position: absolute;
-    right: 18px;
-    bottom: 18px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-
-    z-index: 10;
-}
-
-.product-zoom-controls button {
-    width: 38px;
-    height: 38px;
-
-    border: 1px solid #d8cbbb;
-    border-radius: 50%;
-
-    background: rgba(255,255,255,.96);
-    color: #4b0713;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 15px;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 4px 14px rgba(0,0,0,.10);
-
-    transition:
-        background .2s ease,
-        color .2s ease,
-        transform .2s ease;
-}
-
-.product-zoom-controls button:hover {
-    background: #4b0713;
-    color: #fff;
-
-    transform: scale(1.05);
-}
-
-.product-zoom-controls .zoom-reset {
-    font-size: 9px;
-    letter-spacing: .5px;
-    text-transform: uppercase;
-}
-
-
-
-      
-
 /* =========================================================
    BADGE
 ========================================================= */
@@ -1301,6 +1229,116 @@
 
 }
 
+
+/* =========================================================
+   PREMIUM PRODUCT COMMERCE DETAILS
+========================================================= */
+
+.product-price-block {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.product-price-current {
+    font: 600 30px/1 "DM Sans", Arial, sans-serif;
+    color: #4b0713;
+}
+
+.product-price-mrp {
+    font-size: 14px;
+    color: #9a8d82;
+    text-decoration: line-through;
+}
+
+.product-price-save {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 9px;
+    background: #f6efe3;
+    color: #8b681f;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.product-price-label {
+    width: 100%;
+    margin-top: -4px;
+    color: #8b8178;
+    font-size: 10px;
+    letter-spacing: .7px;
+}
+
+.product-detail-panel {
+    margin-top: 30px;
+    border-top: 1px solid #e9e0d5;
+    border-bottom: 1px solid #e9e0d5;
+}
+
+.product-detail-heading {
+    margin: 0;
+    padding: 22px 0 14px;
+    font: 500 25px/1.1 "Cormorant Garamond", Georgia, serif;
+    color: #2b2420;
+}
+
+.product-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid #eee6dc;
+}
+
+.product-detail-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee6dc;
+}
+
+.product-detail-item:nth-child(odd) { padding-right: 22px; }
+.product-detail-item:nth-child(even) {
+    padding-left: 22px;
+    border-left: 1px solid #eee6dc;
+}
+
+.product-detail-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #8c8076;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.product-detail-value {
+    display: block;
+    color: #403732;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.product-detail-note {
+    margin: 0;
+    padding: 14px 0 18px;
+    color: #8b8178;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .product-price-current { font-size: 27px; }
+    .product-detail-grid { grid-template-columns: 1fr; }
+    .product-detail-item:nth-child(odd),
+    .product-detail-item:nth-child(even) {
+        padding-left: 0;
+        padding-right: 0;
+        border-left: 0;
+    }
+}
+
 </style>
 
 </head>
@@ -1567,36 +1605,11 @@
 
 
                 <img id="productImage"
-     src=""
-     alt="">
+                     src=""
+                     alt="">
 
-<div class="product-zoom-controls">
 
-    <button
-        type="button"
-        id="zoomIn"
-        aria-label="Zoom in">
-        +
-    </button>
-
-    <button
-        type="button"
-        id="zoomOut"
-        aria-label="Zoom out">
-        −
-    </button>
-
-    <button
-        type="button"
-        id="zoomReset"
-        class="zoom-reset"
-        aria-label="Reset zoom">
-        Reset
-    </button>
-
-</div>
-
-<button class="gallery-arrow gallery-arrow-right"
+                <button class="gallery-arrow gallery-arrow-right"
                         id="galleryNext"
                         type="button"
                         aria-label="Next image">
@@ -1640,6 +1653,26 @@
             <p class="product-subtitle"
                id="productSubtitle">
             </p>
+
+
+            <div class="product-price-block"
+                 id="productPriceBlock"
+                 aria-label="Product price">
+
+                <span class="product-price-current"
+                      id="productPrice"></span>
+
+                <span class="product-price-mrp"
+                      id="productMrp"></span>
+
+                <span class="product-price-save"
+                      id="productSavings"></span>
+
+                <span class="product-price-label">
+                    Listed product price · Availability confirmed on enquiry
+                </span>
+
+            </div>
 
 
             <div class="product-ornament">
@@ -1710,6 +1743,25 @@
                 </div>
 
             </div>
+
+
+            <section class="product-detail-panel"
+                     id="productDetailPanel"
+                     aria-label="Product details">
+
+                <h2 class="product-detail-heading">
+                    Product Details
+                </h2>
+
+                <div class="product-detail-grid"
+                     id="productDetailGrid">
+                </div>
+
+                <p class="product-detail-note"
+                   id="productColourNote">
+                </p>
+
+            </section>
 
 
             <!-- =================================================
@@ -2279,72 +2331,37 @@
 <script>
 
 /* =========================================================
-   SHARED PRODUCT DATABASE
+   PRODUCT DATABASE
 
-   The single source of truth is products.js.
-   This page intentionally does not maintain a second
-   embedded product database.
+   IMPORTANT IMAGE NAMING RULE
+
+   SAREES 001–010:
+   The folder uses three digits, but the filename uses
+   TWO digits.
+
+   Example:
+   images/sarees/saree-001/sarees-01-lifestyle.webp
+
+   SAREES 011–014:
+   The folder AND filename use THREE digits.
+
+   Example:
+   images/sarees/saree-011/sarees-011-lifestyle.webp
+
+   SUITS 001–014:
+   The folder AND filename use THREE digits.
+
+   Example:
+   images/suits/suit-001/suits-001-lifestyle.webp
+
+   THERE IS NO:
+   - hero.webp
+   - detail.webp
+   - favicon fallback
 ========================================================= */
+
 
 const products = window.SVD_PRODUCTS || {};
-
-
-/* =========================================================
-   PRODUCT KEY RESOLUTION
-
-   Accept the canonical product ID and common legacy variants
-   so product links remain resilient while the catalog evolves.
-========================================================= */
-
-function resolveProductKey(value) {
-
-    const raw = String(value || "").trim();
-
-    if (!raw) {
-        return null;
-    }
-
-    const normalized = raw.toLowerCase();
-
-    if (products[normalized]) {
-        return normalized;
-    }
-
-    const compact = normalized.replace(/\s+/g, "");
-
-    if (products[compact]) {
-        return compact;
-    }
-
-    const codeMatch = compact.match(/^svd-(saree|suit)-0*(\d+)$/);
-
-    if (codeMatch) {
-
-        const category = codeMatch[1];
-        const number = String(parseInt(codeMatch[2], 10));
-        const paddedNumber = number.padStart(3, "0");
-        const canonical = category + "-" + paddedNumber;
-
-        if (products[canonical]) {
-            return canonical;
-        }
-    }
-
-    const idMatch = compact.match(/^(saree|suit)-0*(\d+)$/);
-
-    if (idMatch) {
-
-        const category = idMatch[1];
-        const number = String(parseInt(idMatch[2], 10));
-        const canonical = category + "-" + number.padStart(3, "0");
-
-        if (products[canonical]) {
-            return canonical;
-        }
-    }
-
-    return null;
-}
 
 
 /* =========================================================
@@ -2366,11 +2383,8 @@ const params =
     );
 
 
-const requestedProductKey =
-    params.get("product");
-
 const productKey =
-    resolveProductKey(requestedProductKey);
+    params.get("product");
 
 
 /* =========================================================
@@ -2406,6 +2420,86 @@ function setText(id, value) {
 
     }
 
+}
+
+
+/* =========================================================
+   PREMIUM COMMERCE INFORMATION
+========================================================= */
+
+function formatCurrency(value) {
+    if (value === null || value === undefined || value === "") return "";
+    return "₹" + Number(value).toLocaleString("en-IN");
+}
+
+function getProductFormat(product) {
+    if (product.productFormat) return product.productFormat;
+
+    const type = String(product.pieceType || "").toLowerCase();
+    if (type.includes("3-piece")) return "3-Piece Suit Set";
+    if (type.includes("2-piece")) return "2-Piece Suit Set";
+    if (type.includes("1-piece")) return "Long Kurti";
+    return product.category === "Saree" ? "Saree" : "Suit";
+}
+
+function getProductComponents(product) {
+    if (product.components) return product.components;
+    if (product.pieceType) return product.pieceType;
+    return product.whatsIncluded || "";
+}
+
+function renderPremiumCommerceDetails(product) {
+    const price = document.getElementById("productPrice");
+    const mrp = document.getElementById("productMrp");
+    const savings = document.getElementById("productSavings");
+    const grid = document.getElementById("productDetailGrid");
+    const colourNote = document.getElementById("productColourNote");
+
+    if (price) price.textContent = formatCurrency(product.price);
+
+    if (mrp) {
+        mrp.textContent = product.mrp ? formatCurrency(product.mrp) : "";
+        mrp.style.display = product.mrp ? "inline" : "none";
+    }
+
+    if (savings) {
+        if (product.mrp && product.price) {
+            savings.textContent = "Save " + formatCurrency(Number(product.mrp) - Number(product.price));
+            savings.style.display = "inline-flex";
+        } else {
+            savings.textContent = "";
+            savings.style.display = "none";
+        }
+    }
+
+    if (!grid) return;
+
+    const details = [
+        { label: "Product Format", value: getProductFormat(product) },
+        { label: product.category === "Suit" ? "Set Includes" : "Includes", value: getProductComponents(product) }
+    ];
+
+    if (product.colour) details.push({ label: "Colour", value: product.colour });
+    if (product.fabric) details.push({ label: "Fabric", value: product.fabric });
+    if (product.pattern) details.push({ label: "Pattern / Print", value: product.pattern });
+    if (product.borderAndPallu) details.push({ label: "Border & Pallu", value: product.borderAndPallu });
+    if (product.silhouette) details.push({ label: "Silhouette", value: product.silhouette });
+    if (product.designHighlights) details.push({ label: "Design Details", value: product.designHighlights });
+    if (product.occasion) details.push({ label: "Occasion", value: product.occasion });
+    if (product.sizeNote) details.push({ label: "Sizing", value: product.sizeNote });
+    if (product.care) details.push({ label: "Care", value: product.care });
+
+    grid.innerHTML = details.map(function (item) {
+        return '<div class="product-detail-item">' +
+            '<span class="product-detail-label">' + item.label + '</span>' +
+            '<span class="product-detail-value">' + item.value + '</span>' +
+            '</div>';
+    }).join("");
+
+    if (colourNote) {
+        colourNote.textContent = product.colourNote ||
+            "Colours may appear slightly different depending on lighting, photography, screen settings and device display.";
+    }
 }
 
 
@@ -2475,6 +2569,11 @@ function loadProduct() {
     );
 
 
+    renderPremiumCommerceDetails(
+        currentProduct
+    );
+
+
     setText(
         "breadcrumbProduct",
         currentProduct.title
@@ -2499,14 +2598,11 @@ function loadProduct() {
     document.getElementById(
         "productDescription"
     ).innerHTML =
-
-        "Discover the refined charm of ShriVatsaDarbar. " +
-        "This beautifully curated " +
-        currentProduct.category.toLowerCase() +
-        " has been selected for its graceful character, " +
-        "refined detailing and timeless appeal." +
-        "<br><br>" +
-        currentProduct.subtitle;
+        "<strong>About this piece</strong><br>" +
+        (currentProduct.overview || currentProduct.subtitle || "") +
+        (currentProduct.whyYoullLove
+            ? "<br><br><strong>Why you'll love it</strong><br>" + currentProduct.whyYoullLove
+            : "");
 
 
     const canonical =
@@ -2609,7 +2705,7 @@ function renderGallery() {
 
     mainImage.src =
         images[currentGalleryIndex];
-    resetProductZoom();
+
 
     mainImage.alt =
         currentProduct.title;
@@ -2744,97 +2840,7 @@ function renderGallery() {
     );
 
 }
-/* =========================================================
-   PRODUCT IMAGE ZOOM
-========================================================= */
 
-let productZoomLevel = 1;
-
-const PRODUCT_ZOOM_STEP = 0.25;
-const PRODUCT_ZOOM_MIN = 1;
-const PRODUCT_ZOOM_MAX = 2.5;
-
-function applyProductZoom() {
-
-    const mainImage =
-        document.getElementById("productImage");
-
-    const mainImageContainer =
-        document.querySelector(".product-main-image");
-
-    if (!mainImage || !mainImageContainer) {
-        return;
-    }
-
-    mainImage.style.transform =
-        "scale(" + productZoomLevel + ")";
-
-    if (productZoomLevel > PRODUCT_ZOOM_MIN) {
-        mainImageContainer.classList.add("zoomed");
-    } else {
-        mainImageContainer.classList.remove("zoomed");
-    }
-}
-
-function zoomIn() {
-
-    productZoomLevel =
-        Math.min(
-            productZoomLevel + PRODUCT_ZOOM_STEP,
-            PRODUCT_ZOOM_MAX
-        );
-
-    applyProductZoom();
-}
-
-function zoomOut() {
-
-    productZoomLevel =
-        Math.max(
-            productZoomLevel - PRODUCT_ZOOM_STEP,
-            PRODUCT_ZOOM_MIN
-        );
-
-    applyProductZoom();
-}
-
-function resetProductZoom() {
-
-    productZoomLevel =
-        PRODUCT_ZOOM_MIN;
-
-    applyProductZoom();
-}
-
-const zoomInButton =
-    document.getElementById("zoomIn");
-
-const zoomOutButton =
-    document.getElementById("zoomOut");
-
-const zoomResetButton =
-    document.getElementById("zoomReset");
-
-if (zoomInButton) {
-    zoomInButton.addEventListener(
-        "click",
-        zoomIn
-    );
-}
-
-if (zoomOutButton) {
-    zoomOutButton.addEventListener(
-        "click",
-        zoomOut
-    );
-}
-
-if (zoomResetButton) {
-    zoomResetButton.addEventListener(
-        "click",
-        resetProductZoom
-    );
-}
 
 /* =========================================================
    GALLERY NAVIGATION
