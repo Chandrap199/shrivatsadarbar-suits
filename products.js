@@ -34,7 +34,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-002": {
@@ -61,7 +61,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-003": {
@@ -88,7 +88,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-004": {
@@ -115,7 +115,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-005": {
@@ -142,7 +142,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-006": {
@@ -169,7 +169,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-007": {
@@ -196,7 +196,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-008": {
@@ -223,7 +223,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-009": {
@@ -250,7 +250,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-010": {
@@ -277,7 +277,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-011": {
@@ -304,7 +304,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-012": {
@@ -331,7 +331,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-013": {
@@ -358,7 +358,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "saree-014": {
@@ -385,7 +385,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for detailed or embellished pieces.",
         whatsIncluded: "1 Saree with blouse piece, where included with the product.",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-001": {
@@ -414,7 +414,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "2-piece — Kurti + Pant",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-002": {
@@ -443,7 +443,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "2-piece — Kurti + Pant",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-003": {
@@ -472,7 +472,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "2-piece — Kurti + Pant",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-004": {
@@ -501,7 +501,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "3-piece — Kurti + Pant + Dupatta",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-005": {
@@ -530,7 +530,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "3-piece — Kurti + Pant + Dupatta",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-006": {
@@ -559,7 +559,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "2-piece — A-line Kurti + Semi-Plazzo",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-007": {
@@ -588,7 +588,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "2-piece — Kurti + Pant",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-008": {
@@ -617,7 +617,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-009": {
@@ -646,7 +646,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-010": {
@@ -675,7 +675,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-011": {
@@ -704,7 +704,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-012": {
@@ -733,7 +733,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-013": {
@@ -762,7 +762,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-014": {
@@ -791,7 +791,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-015": {
@@ -820,7 +820,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-016": {
@@ -849,7 +849,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "3-piece — Kurti + Dupatta + Pant",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-017": {
@@ -878,7 +878,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-018": {
@@ -907,7 +907,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "3-piece — Kurti + Dupatta + Pant",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-019": {
@@ -936,7 +936,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "3-piece — Kurti + Dupatta + Pant",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-021": {
@@ -965,7 +965,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "3-piece — Kurti + Dupatta + Pant",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     },
 
     "suit-022": {
@@ -994,7 +994,7 @@ window.SVD_PRODUCTS = {
         care: "Follow the care instructions supplied with the garment. When in doubt, choose gentle professional care for printed, embroidered or detailed pieces.",
         whatsIncluded: "1-piece — Long Kurti Only",
         colourNote: "Colours may appear slightly different depending on lighting, photography, screen settings and device display.",
-        collection: "ShriVatsa Collection"
+        collection: "ShriVatsaDarbar Collection"
     }
 
 };
